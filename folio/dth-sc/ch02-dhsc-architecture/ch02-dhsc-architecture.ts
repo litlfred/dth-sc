@@ -28,7 +28,21 @@ export default chapter({
     section({
       title: "Illustrative architectural approaches and governance options",
       label: "sec:ch02-illustrative-architectural-approaches-an",
-      blocks: ["p-ch02-page-036", "f-ch02-fig-15", "p-ch02-page-037", "f-ch02-fig-16", "p-ch02-page-038", "f-ch02-fig-17", "p-ch02-page-039", "f-ch02-fig-18", "p-ch02-page-040", "f-ch02-fig-19", "p-ch02-page-041", "f-ch02-fig-20"],
+      blocks: [
+        "p-ch02-page-036",
+        "f-ch02-fig-15",
+        "p-ch02-page-037",
+        "f-ch02-fig-16",
+        "p-ch02-page-038",
+        "f-ch02-fig-17",
+        "p-ch02-page-039",
+        "f-ch02-fig-18",
+        "p-ch02-page-040",
+        "f-ch02-fig-19",
+        "dt-sc-dt-01-scismm-architecture-selection",
+        "p-ch02-page-041",
+        "f-ch02-fig-20",
+      ],
     }),
     section({
       title: "Step 3. Identify implementation activities and map them to strategic goals",

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+             id="Definitions_Decision_SC_DT_01"
+             name="SCISMM maturity level and target DHSC architectural approach selection (SC-DT-01)"
+             namespace="https://litlfred.github.io/dth-sc/dmn">
+  <decision id="Decision_SC_DT_01" name="SCISMM maturity level and target DHSC architectural approach selection (SC-DT-01)">
+    <decisionTable id="DecisionTable_Decision_SC_DT_01" hitPolicy="FIRST">
+      <input id="Input_DT01_Maturity" label="Current SCISMM maturity level (Ch 2 Fig. 12)">
+        <inputExpression id="Input_DT01_Maturity_expr" typeRef="string">
+          <text>currentScismmLevel</text>
+        </inputExpression>
+        <inputValues>
+          <text>&quot;level-1-reporting-based&quot;, &quot;level-2-transactional&quot;, &quot;level-3-advanced-digitalization&quot;, &quot;level-4-end-to-end-visibility&quot;, &quot;level-5-digital-ecosystem&quot;</text>
+        </inputValues>
+      </input>
+      <input id="Input_DT01_Governance" label="Supply chain management &amp; replenishment governance (Ch 2 Figs. 17–19)">
+        <inputExpression id="Input_DT01_Governance_expr" typeRef="string">
+          <text>supplyChainGovernance</text>
+        </inputExpression>
+        <inputValues>
+          <text>&quot;centralized-push&quot;, &quot;decentralized-central-procurement-facility-pull&quot;, &quot;decentralized-district-autonomous-procurement&quot;</text>
+        </inputValues>
+      </input>
+      <input id="Input_DT01_Ecosystem" label="Cross-ecosystem &amp; global platform integration scope (Ch 2 Figs. 15–16)">
+        <inputExpression id="Input_DT01_Ecosystem_expr" typeRef="string">
+          <text>crossEcosystemIntegration</text>
+        </inputExpression>
+        <inputValues>
+          <text>&quot;within-supply-chain-only&quot;, &quot;multi-ecosystem-and-global-platforms&quot;</text>
+        </inputValues>
+      </input>
+      <output id="Output_DT01_TargetLevel" label="Target SCISMM maturity level" name="targetScismmLevel" typeRef="string">
+        <outputValues>
+          <text>&quot;level-3-advanced-digitalization&quot;, &quot;level-4-end-to-end-visibility&quot;, &quot;level-5-digital-ecosystem&quot;</text>
+        </outputValues>
+      </output>
+      <output id="Output_DT01_Approach" label="Target DHSC architectural approach" name="targetArchitectureApproach" typeRef="string">
+        <outputValues>
+          <text>&quot;foundational-hscis-digitalization-and-registries&quot;, &quot;maturity-level-3-to-4-interoperability-layer&quot;, &quot;maturity-level-4-to-5-collaborative-ecosystem&quot;, &quot;supply-chain-design-centralized-management&quot;, &quot;supply-chain-design-decentralized-option-a&quot;, &quot;supply-chain-design-decentralized-option-b&quot;</text>
+        </outputValues>
+      </output>
+      <output id="Output_DT01_Figure" label="Handbook illustrative architecture figure" name="illustrativeFigure" typeRef="string">
+        <outputValues>
+          <text>&quot;Fig. 12&quot;, &quot;Fig. 15&quot;, &quot;Fig. 16&quot;, &quot;Fig. 17&quot;, &quot;Fig. 18&quot;, &quot;Fig. 19&quot;</text>
+        </outputValues>
+      </output>
+      <rule id="Rule_DT01_01">
+        <description>Countries at SCISMM Level 1 (manual/reporting-based) or Level 2 (siloed transactional systems) first digitalize core HSCIS functions and establish foundational product, facility, and supplier registries to reach Level 3 (Ch 2 Step 1, Fig. 12, PDF p. 31).</description>
+        <inputEntry id="Rule_DT01_01_in_1">
+          <text>&quot;level-1-reporting-based&quot;, &quot;level-2-transactional&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_01_in_2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_01_in_3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="Rule_DT01_01_out_1">
+          <text>&quot;level-3-advanced-digitalization&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_01_out_2">
+          <text>&quot;foundational-hscis-digitalization-and-registries&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_01_out_3">
+          <text>&quot;Fig. 12&quot;</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_DT01_02">
+        <description>Maturity-based architecture moving from SCISMM Level 3 to Level 4: replace point-to-point integrations with standards-based information exchange via an interoperability layer and foundational registries across HSCISs (Ch 2 Fig. 15, PDF p. 36).</description>
+        <inputEntry id="Rule_DT01_02_in_1">
+          <text>&quot;level-3-advanced-digitalization&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_02_in_2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_02_in_3">
+          <text>&quot;within-supply-chain-only&quot;</text>
+        </inputEntry>
+        <outputEntry id="Rule_DT01_02_out_1">
+          <text>&quot;level-4-end-to-end-visibility&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_02_out_2">
+          <text>&quot;maturity-level-3-to-4-interoperability-layer&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_02_out_3">
+          <text>&quot;Fig. 15&quot;</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_DT01_03">
+        <description>Countries advancing to SCISMM Level 5 with centrally managed supply chain services (central warehouse push replenishment across all tiers) and integration with external systems and digital ecosystems adopt the centralized management architecture (Ch 2 Figs. 16–17, PDF pp. 37–38).</description>
+        <inputEntry id="Rule_DT01_03_in_1">
+          <text>&quot;level-3-advanced-digitalization&quot;, &quot;level-4-end-to-end-visibility&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_03_in_2">
+          <text>&quot;centralized-push&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_03_in_3">
+          <text>&quot;multi-ecosystem-and-global-platforms&quot;</text>
+        </inputEntry>
+        <outputEntry id="Rule_DT01_03_out_1">
+          <text>&quot;level-5-digital-ecosystem&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_03_out_2">
+          <text>&quot;supply-chain-design-centralized-management&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_03_out_3">
+          <text>&quot;Fig. 17&quot;</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_DT01_04">
+        <description>Architecture based on supply chain design — decentralized management (option A): forecasting, procurement, and supplier management are central, while downstream facilities manage their own inventory/dispensing services and pull replenishments (Ch 2 Fig. 18, PDF p. 39).</description>
+        <inputEntry id="Rule_DT01_04_in_1">
+          <text>&quot;level-4-end-to-end-visibility&quot;, &quot;level-5-digital-ecosystem&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_04_in_2">
+          <text>&quot;decentralized-central-procurement-facility-pull&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_04_in_3">
+          <text>&quot;multi-ecosystem-and-global-platforms&quot;</text>
+        </inputEntry>
+        <outputEntry id="Rule_DT01_04_out_1">
+          <text>&quot;level-5-digital-ecosystem&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_04_out_2">
+          <text>&quot;supply-chain-design-decentralized-option-a&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_04_out_3">
+          <text>&quot;Fig. 18&quot;</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_DT01_05">
+        <description>Architecture based on supply chain design — decentralized management (option B): district-level supply chain organizations can procure from sources other than central warehouses and maintain a district procurement system separate from the national level (Ch 2 Fig. 19, PDF p. 40).</description>
+        <inputEntry id="Rule_DT01_05_in_1">
+          <text>&quot;level-4-end-to-end-visibility&quot;, &quot;level-5-digital-ecosystem&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_05_in_2">
+          <text>&quot;decentralized-district-autonomous-procurement&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_05_in_3">
+          <text>&quot;multi-ecosystem-and-global-platforms&quot;</text>
+        </inputEntry>
+        <outputEntry id="Rule_DT01_05_out_1">
+          <text>&quot;level-5-digital-ecosystem&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_05_out_2">
+          <text>&quot;supply-chain-design-decentralized-option-b&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_05_out_3">
+          <text>&quot;Fig. 19&quot;</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_DT01_06">
+        <description>General maturity-based progression from SCISMM Level 4 (exchanged architecture) to Level 5 (collaborative digital ecosystem interoperating with HIS, finance/insurance, regulatory, manufacturer, and global donor platforms) (Ch 2 Fig. 16, PDF p. 37).</description>
+        <inputEntry id="Rule_DT01_06_in_1">
+          <text>&quot;level-4-end-to-end-visibility&quot;, &quot;level-5-digital-ecosystem&quot;</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_06_in_2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_06_in_3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="Rule_DT01_06_out_1">
+          <text>&quot;level-5-digital-ecosystem&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_06_out_2">
+          <text>&quot;maturity-level-4-to-5-collaborative-ecosystem&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_06_out_3">
+          <text>&quot;Fig. 16&quot;</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

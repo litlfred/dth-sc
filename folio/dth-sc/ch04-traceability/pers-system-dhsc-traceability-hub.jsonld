@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "smart-base": "https://litlfred.github.io/smart-base/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/pers-system-dhsc-traceability-hub",
+  "@type": [
+    "smart-base:Persona"
+  ],
+  "label": "pers:system-dhsc-traceability-hub",
+  "kind": "persona",
+  "title": "DHSC interoperability layer and traceability services hub (system)",
+  "uses": [
+    "papers/dth-sc/blocks/prose-ch02-page-034",
+    "papers/dth-sc/blocks/prose-ch04-page-055",
+    "papers/dth-sc/blocks/fig-ch04-fig-24",
+    "papers/dth-sc/blocks/prose-ch04-page-056",
+    "papers/dth-sc/blocks/fig-ch04-fig-25"
+  ],
+  "text": "pers-system-dhsc-traceability-hub.md",
+  "meta": {
+    "title": "DHSC interoperability layer and traceability services hub (system)",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-055",
+      "file": "who-iris/library/9789240101197-eng/sections/page-055.md",
+      "pdfPage": 55,
+      "method": "l1-outline-seed",
+      "issue": "litlfred/dth-sc#2"
+    },
+    "roleId": "SC-R-16",
+    "personaType": "system",
+    "bpmnLanes": [
+      {
+        "process": "bp:sc-bp-03-centralized-track-and-trace",
+        "processId": "SC_BP_03",
+        "laneId": "Lane_BP03_DHSCTraceabilityHub",
+        "bpmnFile": "folio/dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.bpmn"
+      }
+    ],
+    "archimate": {
+      "model": "smart-ra 0.3.0-draft.1",
+      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
+      "elements": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3398a2d96e915055bf5e7aef22f9fbf8.jsonld",
+          "name": "Interoperability Layer",
+          "type": "ApplicationComponent"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3c5d846710034c4595e206e748d65e36.jsonld",
+          "name": "DPI-F Information Mediator",
+          "type": "ApplicationComponent"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-2158ff0de2f95b2cbe005c3bf6fc9c01.jsonld",
+          "name": "Data Warehouse",
+          "type": "ApplicationComponent"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-fdce32337758449aab42701096622582.jsonld",
+          "name": "Traceability Services",
+          "type": "ApplicationService"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-975c5567001151299672c0341a733111.jsonld",
+          "name": "Product Verification",
+          "type": "ApplicationService"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-bc68171ed2615dad80e6f7d8199f4057.jsonld",
+          "name": "Track and Trace",
+          "type": "ApplicationService"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-5dc77dae1bce5d11b288830795b31bdf.jsonld",
+          "name": "Traceability Event",
+          "type": "DataObject"
+        }
+      ],
+      "views": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld",
+          "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-bea56e01c8345fbc803dee47a17ccfd3.jsonld",
+          "name": "Track and Trace through DHSC Components (DTH SC Fig. 24)"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-8c5dd12b8d4e425184f6003d0513d569.jsonld",
+          "name": "Interoperability Layer"
+        }
+      ]
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+        "prefLabel": "Traceability"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/centralized-traceability-model",
+        "prefLabel": "Centralized Traceability Model"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability",
+        "prefLabel": "Interoperability"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-information-exchange",
+        "prefLabel": "Health Information Exchange"
+      }
+    ],
+    "glossaryTerms": [
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/centralized-traceability-model",
+      "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability",
+      "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-information-exchange"
+    ],
+    "relatedBlocks": [
+      "bp:sc-bp-03-centralized-track-and-trace",
+      "dt:sc-dt-02-traceability-model-selection",
+      "fig:ch02-fig-14",
+      "fig:ch04-fig-24",
+      "fig:ch04-fig-25"
+    ]
+  },
+  "provenance": "authored"
+}

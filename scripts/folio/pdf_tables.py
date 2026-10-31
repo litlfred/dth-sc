@@ -34,7 +34,9 @@ TABLES = {
     18: dict(label="tbl:1", caption="Table 1. Summary of chapters 1–4"),
     46: dict(label="tbl:2", caption="Table 2. Illustrative implementation considerations for the DHSC"),
     50: dict(label="tbl:3", caption="Table 3. Illustrative cost drivers of DHSC implementation"),
+    67: dict(label="tbl:annex-2", caption="Annex 2. Steering committee example structure"),
     68: dict(label="tbl:annex-3", caption="Annex 3. Template for prioritizing DHSC challenges to address"),
+    69: dict(label="tbl:annex-4", caption="Annex 4. Illustrative template that maps today's challenges to future outcomes"),
     70: dict(label="tbl:annex-5", caption="Annex 5. Template for listing health supply chain information systems (with the handbook's illustrative entries)"),
     71: dict(label="tbl:annex-6", caption="Annex 6. Risk register template"),
     72: dict(label="tbl:annex-7", caption="Annex 7. Resource matrix for DHSC implementation", pages=[72, 73, 74, 75, 76]),
@@ -107,6 +109,128 @@ def _grouped(page, n, header):
     return rows, t.bbox
 
 
+def _annex_2(page):
+    rows = [
+        ["Governance tier / topic area", "Data", "Process", "Technology", "Risk"],
+        ["Executive chairperson", "MOH", "", "", ""],
+        ["Secretariat", "Secretariat", "", "", ""],
+        ["Technical representatives", "Information technology authority", "Central warehouse", "Others", "Regulatory"],
+        ["Partner organizations", "Funders", "Implementing partners", "Others (academia, etc.)", "Private sector"],
+        [
+            "Technical working group – governance topics",
+            "• Data needs identification<br>• Data quality reviews<br>• Data exchange policies",
+            "• Process formulation and reviews<br>• Regulatory compliance<br>• Process improvements",
+            "• Enterprise architecture reviews<br>• Digitalization policies<br>• Technology audits",
+            "• Risk management<br>• Risk identification and mitigation<br>• Risk monitoring and reporting",
+        ],
+    ]
+    return rows, (36, 150, page.width - 36, 780)
+
+
+def _annex_3(page):
+    rows = [
+        [
+            "Bottleneck",
+            "1. How much impact does this bottleneck have on the process? (1–3)",
+            "2. What is the likelihood of overcoming this bottleneck? (1–3)",
+            "3. Is this important to a wide range of stakeholders? (1–3)",
+            "Score",
+            "Prioritized ranking",
+        ],
+        [
+            "Example: Unavailability of timely consumption data results in inaccurate forecasts and frequent stockouts.",
+            "Low (1)",
+            "High (3)",
+            "Yes (3)",
+            "1+3+3=7",
+            "HIGHEST",
+        ],
+        [
+            "Example: Aggregating data from paper forms is burdensome and rarely done correctly.",
+            "Medium (2)",
+            "Medium (2)",
+            "Some (2)",
+            "2+2+2=6",
+            "MEDIUM",
+        ],
+        [
+            "Example: Inability to track and trace health products using serial numbers.",
+            "Low (1)",
+            "Low (1)",
+            "Some (2)",
+            "1+1+2=4",
+            "LOW",
+        ],
+    ]
+    t = _largest(page)
+    return rows, t.bbox if t else (36, 200, page.width - 36, 650)
+
+
+def _annex_4(page):
+    rows = [
+        ["Supply chain partner / process", "Today (challenge)", "Illustrative metric", "Future (outcome)"],
+        [
+            "Forecasting and planning",
+            "Unavailability of consumption data affects availability of medicines to patients",
+            "20% Error",
+            "Availability of timely consumption data increases forecasting accuracy, ensuring availability of medicines",
+        ],
+        [
+            "Procurement",
+            "High procurement processing time affects timely availability of medicines",
+            "3–4 weeks",
+            "Automated procurement workflows and integrated systems reduce lead time",
+        ],
+        [
+            "Central warehouse",
+            "Stock expiries and wastages per month",
+            "15%",
+            "Seamless data exchange and monitoring across systems help optimize distribution and minimize wastages",
+        ],
+        [
+            "Regional warehouses",
+            "Frequent stockouts of lifesaving medicines",
+            "23%",
+            "Availability of timely data through exchanged architecture improves supply planning and eliminates stockouts",
+        ],
+        [
+            "Health facilities",
+            "Health care workers burdened with duplicative data entry across health and supply chain systems",
+            "30–50 hours",
+            "Interoperable health and supply chain systems with automation eliminate manual and duplicative data processes",
+        ],
+        [
+            "Patients",
+            "Lack of trust in the medicines or vaccines administered",
+            "",
+            "Aggregated supply chain data enables traceability and verification capabilities, instilling patient confidence in medicines",
+        ],
+    ]
+    return rows, (36, 170, page.width - 36, 780)
+
+
+def _annex_6(page):
+    rows = [
+        ["#", "Risk title", "Description", "Priority", "Impact", "Probability", "Status", "Mitigation steps", "Owner", "Raised", "Reviewed", "Closed"],
+        [
+            "001",
+            "Inadequate training",
+            "IF system training is not delivered with appropriate content for the audience, THEN the adoption and use of the system may fail.",
+            "Low",
+            "Major",
+            "Medium",
+            "Mitigate",
+            "• Perform a skills assessment for each user before completing the training plan.<br>• Complete a training needs assessment before conducting training.<br>• Target and adapt training to meet the needs of the training audience.",
+            "",
+            "2018-01-28",
+            "2019-08-16",
+            "",
+        ],
+    ]
+    t = _largest(page)
+    return rows, t.bbox if t else (36, 160, page.width - 36, 650)
+
+
 def _annex_7(pdf, pages):
     rows = None
     for n in pages:
@@ -140,6 +264,14 @@ def table_rows(pdf, n):
         return _grouped(page, n, ["Area", "Factor", "What is the current state?", "What is needed?"])
     if n == 50:
         return _grouped(page, n, ["Cost type", "Cost category", "Cost drivers"])
+    if n == 67:
+        return _annex_2(page)
+    if n == 68:
+        return _annex_3(page)
+    if n == 69:
+        return _annex_4(page)
+    if n == 71:
+        return _annex_6(page)
     if n == 72:
         return _annex_7(pdf, spec["pages"])
     t = _largest(page)

@@ -1,0 +1,10 @@
+*Leadership / technical role.* Technical, system, enterprise, or solution architect responsible for assessing current HSCIS maturity, designing the target DHSC architecture and interoperability blueprint, and aligning software solutions to standards (Table 1, Ch 2, Annex 7).
+
+| Attribute | Description | Handbook basis |
+| --- | --- | --- |
+| **Role ID** | `SC-R-12` (`pers:solution-architect`, `person`) | Table 1 (PDF p. 18), Ch 2 Steps 1–3 (PDF pp. 30–43), Annex 7 Solution architect (PDF p. 72) |
+| **Goals** | Establish a modular, standards-based, interoperable DHSC architecture that eliminates data silos and supports end-to-end supply chain visibility and traceability. | Table 1 (PDF p. 18), Ch 2 Steps 1–3 (PDF pp. 30–43), Annex 7 Solution architect (PDF p. 72) |
+| **Tasks and responsibilities** | Assess current HSCIS landscape (Annex 5) and SCISMM maturity level (Ch 2 Step 1, `dt:sc-dt-01-scismm-architecture-selection`); design the target DHSC architecture and select the governance/maturity variant (Ch 2 Step 2, Figs. 14–19); map implementation activities to strategic goals (Ch 2 Step 3) and oversee technical design (Annex 7 Solution architect). | Table 1 (PDF p. 18), Ch 2 Steps 1–3 (PDF pp. 30–43), Annex 7 Solution architect (PDF p. 72) |
+| **Challenges and bottlenecks** | Point-to-point custom integrations, lack of shared foundational registries (Product, Facility, Supplier), and legacy systems that do not support open standards such as HL7 FHIR or GS1 (Ch 1 Fig. 9, Ch 2 p. 28). | Table 1 (PDF p. 18), Ch 2 Steps 1–3 (PDF pp. 30–43), Annex 7 Solution architect (PDF p. 72) |
+| **BPMN lane(s)** | `Lane_BP01_Architect` (`bp:sc-bp-01-stepwise-dhsc-transformation`) | Table 1 (PDF p. 18), Ch 2 Steps 1–3 (PDF pp. 30–43), Annex 7 Solution architect (PDF p. 72) |
+| **ArchiMate alignment (`dpi-h-ra` `0.3.0-draft.1`)** | `Interoperability Layer` (`id-3398a2d96e915055bf5e7aef22f9fbf8`), `Health Supply Chain Information Systems` (`id-ef2ed03c5fd958cbae67247b253bcba0`), `Foundational Components` (`id-dada45a5bc1c59a186fc4acd813ab7b8`), `Data Services` (`id-a461611e13595520aa843143ef10622b`) | `smart-ra#147` |

@@ -1,24 +1,22 @@
 #!/usr/bin/env bun
 /**
- * Validate this folio's glossary schemes against the platform's
- * folio-glossary/v1 schema, and check that every link resolves:
- *
- * - every `related` and `broader` reference in this instance's scheme names a
- *   term (or scheme) that exists here or in a mounted instance;
- * - every SKOS match (`exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`)
- *   into a MOUNTED instance's namespace (such as dpi-h-ra, litlfred/smart-ra)
- *   names a term in that instance's glossary (dth-hrh#47, dth-sc#2 SC2b);
- * - every glossary concept a block names in `meta.glossary` exists in this
- *   instance's glossary or a mounted instance's glossary (dth-sc#2 SC4);
- * - every ArchiMate element or view a block names in `meta.archimate` exists
- *   in the mounted dpi-h-ra model (dth-hrh#47, dth-sc#2 SC4).
- *
- *   bun run scripts/glossary/validate.ts
+ * Validate dth-sc's glossary, table blocks (SC1b), personas, BPMN 2.0
+ * business processes, DMN decision tables, and cross-instance links to
+ * dpi-h-ra (smart-ra).
  */
 import { existsSync, readdirSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { GlossarySchema } from "../../folio-assistant-core/schemas/glossary.ts";
 import { instanceNs } from "../../folio-assistant-core/scripts/glossary-page.ts";
+import {
+  checkDakBpmnHasProcess,
+  checkDakCompanionPresent,
+  checkDakDmnHasDecisionTable,
+} from "../../smart-base/pipeline/qa-checkers-dak.ts";
+import {
+  loadDecisionTable,
+  unreadableExpressions,
+} from "../../cat-harness-tools/src/workflow/decision-table.ts";
 
 const MATCHES = ["exactMatch", "closeMatch", "broadMatch", "narrowMatch"] as const;
 
@@ -48,8 +46,8 @@ function glossaryIris(inst: Instance): {
     const g = GlossarySchema.parse(JSON.parse(readFileSync(join(dir, f), "utf-8")));
     known.add(`${inst.ns}glossary/${g.id}`);
     for (const t of g.terms) {
-      known.add(t.iri ?? `${inst.ns}glossary/${g.id}/${t.id}`);
       bareIds.add(t.id);
+      known.add(t.iri ?? `${inst.ns}glossary/${g.id}/${t.id}`);
     }
     docs.push({ f, g });
   }
@@ -113,6 +111,13 @@ for (const { f, g } of here.docs) {
   console.log(`✓ ${f}: ${g.terms.length} terms (${authored} authored, ${linked} matched to another scheme)`);
 }
 
+const walk = (dir: string): string[] =>
+  readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory() ? walk(join(dir, e.name)) : e.name.endsWith(".ts") ? [join(dir, e.name)] : [],
+  );
+
+const allTsFiles = walk("folio/dth-sc");
+
 // ── Glossary and ArchiMate links in block manifests ────────────────
 const ra = mounted.find((m) => m.name === "dpi-h-ra");
 if (ra) {
@@ -134,13 +139,9 @@ if (ra) {
   let figMappings = 0;
   let glosBlocks = 0;
   let glosLinks = 0;
-  const walk = (dir: string): string[] =>
-    readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
-      e.isDirectory() ? walk(join(dir, e.name)) : e.name.endsWith(".ts") ? [join(dir, e.name)] : [],
-    );
-  for (const file of walk("folio/dth-sc")) {
+  for (const file of allTsFiles) {
     const src = readFileSync(file, "utf-8");
-    if (!src.includes('"archimate"') && !src.includes('"glossary"')) continue;
+    if (!src.includes('"archimate"') && !src.includes('"glossary"') && !src.includes('"glossaryTerms"')) continue;
     const m = src.match(/meta: (\{.*\}),\n/);
     if (!m) {
       console.error(`✗ ${file}: names "archimate" or "glossary" but its meta is not one line of JSON`);
@@ -153,6 +154,11 @@ if (ra) {
       for (const gEntry of meta.glossary) {
         glosLinks++;
         checkTermRef(`${file} meta.glossary`, String(gEntry.iri));
+      }
+    }
+    if (Array.isArray(meta.glossaryTerms) && meta.glossaryTerms.length > 0) {
+      for (const iri of meta.glossaryTerms) {
+        checkTermRef(`${file} meta.glossaryTerms`, String(iri));
       }
     }
     const a = meta.archimate;
@@ -187,4 +193,152 @@ if (ra) {
 } else {
   console.log("· dpi-h-ra is not mounted: ArchiMate and cross-instance glossary links not checked");
 }
+
+// ── SC1b Table blocks, Personas, BPMN Business Processes, and DMN Decision Tables ──
+let tableCount = 0;
+let tableRowCount = 0;
+const personaLabels = new Set<string>();
+let personaCount = 0;
+
+for (const file of allTsFiles) {
+  const src = readFileSync(file, "utf-8");
+  const metaMatch = src.match(/meta: (\{.*\}),\n/);
+  const meta = metaMatch ? JSON.parse(metaMatch[1]) : undefined;
+
+  if (src.includes("export default table(")) {
+    tableCount++;
+    const mdPath = file.replace(/\.ts$/, ".md");
+    if (!existsSync(mdPath)) {
+      console.error(`✗ ${file}: missing companion ${mdPath}`);
+      bad++;
+    } else {
+      const md = readFileSync(mdPath, "utf-8");
+      const rows = md.split("\n").filter((l) => l.startsWith("|"));
+      tableRowCount += Math.max(0, rows.length - 2);
+      if (rows.length < 3) {
+        console.error(`✗ ${mdPath}: table has fewer than 1 data row`);
+        bad++;
+      }
+    }
+    if (!meta?.source?.library || !meta?.source?.section) {
+      console.error(`✗ ${file}: table is missing meta.source.library or meta.source.section`);
+      bad++;
+    }
+  }
+
+  if (src.includes("export default persona(")) {
+    personaCount++;
+    const labelMatch = src.match(/label:\s*"([^"]+)"/);
+    const label = labelMatch?.[1];
+    if (label) personaLabels.add(label);
+
+    if (!meta?.roleId || !Array.isArray(meta?.bpmnLanes) || meta.bpmnLanes.length === 0) {
+      console.error(`✗ ${file}: persona is missing roleId or bpmnLanes`);
+      bad++;
+    }
+    if (!Array.isArray(meta?.archimate?.elements) || meta.archimate.elements.length === 0) {
+      console.error(`✗ ${file}: persona is missing meta.archimate.elements`);
+      bad++;
+    }
+    if (!Array.isArray(meta?.glossaryTerms) || meta.glossaryTerms.length === 0) {
+      console.error(`✗ ${file}: persona is missing meta.glossaryTerms`);
+      bad++;
+    }
+    for (const lane of meta?.bpmnLanes ?? []) {
+      if (!existsSync(lane.bpmnFile)) {
+        console.error(`✗ ${file}: bpmnFile ${lane.bpmnFile} does not exist`);
+        bad++;
+        continue;
+      }
+      const bpmnXml = readFileSync(lane.bpmnFile, "utf-8");
+      if (!bpmnXml.includes(`id="${lane.laneId}"`) || !bpmnXml.includes(`partitionElementRef="${label}"`)) {
+        console.error(`✗ ${file}: lane ${lane.laneId} with partitionElementRef="${label}" not found in ${lane.bpmnFile}`);
+        bad++;
+      }
+    }
+  }
+}
+
+console.log(`✓ Tables (SC1b): ${tableCount} structured table block(s) with ${tableRowCount} data row(s) traced to L1 sections checked`);
+console.log(`✓ Personas: ${personaCount} persona block(s) linked to BPMN lanes, ArchiMate elements, and glossary terms checked`);
+
+let bpCount = 0;
+let laneCount = 0;
+let dtCount = 0;
+let dtRuleCount = 0;
+
+for (const file of allTsFiles) {
+  const src = readFileSync(file, "utf-8");
+  const dir = dirname(file);
+  const label = src.match(/label:\s*"([^"]+)"/)?.[1] ?? file;
+
+  if (src.includes("export default businessProcess(")) {
+    bpCount++;
+    const c1 = checkDakCompanionPresent(dir, { kind: "business-process", label, sourceFile: file });
+    const c2 = checkDakBpmnHasProcess(dir, { kind: "business-process", label, sourceFile: file });
+    for (const c of [c1, c2]) {
+      if (c && c.result !== "pass") {
+        console.error(`✗ ${file} (${c.id}): ${c.evidence}`);
+        bad++;
+      }
+    }
+    const bpmnPath = file.replace(/\.ts$/, ".bpmn");
+    const bpmnXml = readFileSync(bpmnPath, "utf-8");
+    const lanes = [...bpmnXml.matchAll(/<bpmn:lane\s+([^>]+)>/g)];
+    if (lanes.length === 0) {
+      console.error(`✗ ${bpmnPath}: has no <bpmn:lane> elements`);
+      bad++;
+    }
+    for (const l of lanes) {
+      laneCount++;
+      const roleRef = l[1].match(/partitionElementRef="([^"]+)"/)?.[1];
+      if (!roleRef || !personaLabels.has(roleRef)) {
+        console.error(`✗ ${bpmnPath}: lane missing partitionElementRef or persona "${roleRef}" not declared`);
+        bad++;
+      }
+    }
+    const metaMatch = src.match(/meta: (\{.*\}),\n/);
+    const meta = metaMatch ? JSON.parse(metaMatch[1]) : undefined;
+    const svgPath = meta?.svgFile ? join("folio/dth-sc", meta.svgFile) : "";
+    if (!svgPath || !existsSync(svgPath)) {
+      console.error(`✗ ${file}: rendered SVG ${svgPath} is missing`);
+      bad++;
+    }
+  }
+
+  if (src.includes("export default decisionTable(")) {
+    dtCount++;
+    const c1 = checkDakCompanionPresent(dir, { kind: "decision-table", label, sourceFile: file });
+    const c2 = checkDakDmnHasDecisionTable(dir, { kind: "decision-table", label, sourceFile: file });
+    for (const c of [c1, c2]) {
+      if (c && c.result !== "pass") {
+        console.error(`✗ ${file} (${c.id}): ${c.evidence}`);
+        bad++;
+      }
+    }
+    const decisionId = src.match(/decisionId:\s*"([^"]+)"/)?.[1];
+    const dmnPath = file.replace(/\.ts$/, ".dmn");
+    if (!decisionId) {
+      console.error(`✗ ${file}: missing decisionId`);
+      bad++;
+    } else {
+      try {
+        const table = await loadDecisionTable(dmnPath, decisionId);
+        dtRuleCount += table.rules.length;
+        const unreadable = unreadableExpressions(table);
+        if (unreadable.length > 0) {
+          console.error(`✗ ${dmnPath}: ${unreadable.length} unreadable FEEL expression(s):`, unreadable);
+          bad++;
+        }
+      } catch (e) {
+        console.error(`✗ ${dmnPath}: failed to load decision table:`, e);
+        bad++;
+      }
+    }
+  }
+}
+
+console.log(`✓ Business processes: ${bpCount} BPMN 2.0 process(es) with ${laneCount} role-bound lane(s) and rendered SVGs checked`);
+console.log(`✓ Decision tables: ${dtCount} DMN table(s) with ${dtRuleCount} rule(s) checked against dak-dmn-has-decision-table and FEEL evaluator`);
+
 process.exit(bad ? 1 : 0);

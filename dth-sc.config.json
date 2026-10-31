@@ -27,12 +27,18 @@
   "site": {
     "build": {
       "sourceSteps": [
-        "site:document"
+        "site:document",
+        "site:library",
+        "site:glossary"
       ],
       "siteSteps": [
         "site:node-kinds"
       ],
-      "pre": [],
+      "pre": [
+        "check:dth-glossary",
+        "check:kg-blocks",
+        "check:library-kg"
+      ],
       "keep": [
         "ns"
       ]

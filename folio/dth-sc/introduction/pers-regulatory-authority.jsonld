@@ -1,0 +1,118 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "smart-base": "https://litlfred.github.io/smart-base/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/pers-regulatory-authority",
+  "@type": [
+    "smart-base:Persona"
+  ],
+  "label": "pers:regulatory-authority",
+  "kind": "persona",
+  "title": "National regulatory authority",
+  "uses": [
+    "papers/dth-sc/blocks/prose-introduction-page-011",
+    "papers/dth-sc/blocks/prose-introduction-page-012",
+    "papers/dth-sc/blocks/tbl-1",
+    "papers/dth-sc/blocks/prose-ch04-page-055"
+  ],
+  "text": "pers-regulatory-authority.md",
+  "meta": {
+    "title": "National regulatory authority",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-011",
+      "file": "who-iris/library/9789240101197-eng/sections/page-011.md",
+      "pdfPage": 11,
+      "method": "l1-outline-seed",
+      "issue": "litlfred/dth-sc#2"
+    },
+    "roleId": "SC-R-04",
+    "personaType": "person",
+    "bpmnLanes": [
+      {
+        "process": "bp:sc-bp-02-end-to-end-supply-chain-processes",
+        "processId": "SC_BP_02",
+        "laneId": "Lane_BP02_Regulatory",
+        "bpmnFile": "folio/dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.bpmn"
+      },
+      {
+        "process": "bp:sc-bp-03-centralized-track-and-trace",
+        "processId": "SC_BP_03",
+        "laneId": "Lane_BP03_Regulatory",
+        "bpmnFile": "folio/dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.bpmn"
+      }
+    ],
+    "archimate": {
+      "model": "smart-ra 0.3.0-draft.1",
+      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
+      "elements": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-8e67c8e9e1195cdc857b03a2c640e7fe.jsonld",
+          "name": "National Regulatory Authority",
+          "type": "BusinessRole"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-22eff58eae365a4f8d0e0368d8c3497e.jsonld",
+          "name": "Regulatory Systems",
+          "type": "ApplicationComponent"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-59c26d672a4248e0bb83cf4d26cba10c.jsonld",
+          "name": "Product Registry",
+          "type": "ApplicationComponent"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-975c5567001151299672c0341a733111.jsonld",
+          "name": "Product Verification",
+          "type": "ApplicationService"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-a9c92f8fa2924d4180e8f5512b0d0097.jsonld",
+          "name": "Recall",
+          "type": "BusinessProcess"
+        }
+      ],
+      "views": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-bea56e01c8345fbc803dee47a17ccfd3.jsonld",
+          "name": "Track and Trace through DHSC Components (DTH SC Fig. 24)"
+        }
+      ]
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+        "prefLabel": "Traceability"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/registry",
+        "prefLabel": "Registry"
+      }
+    ],
+    "glossaryTerms": [
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+      "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/registry"
+    ],
+    "relatedBlocks": [
+      "bp:sc-bp-02-end-to-end-supply-chain-processes",
+      "bp:sc-bp-03-centralized-track-and-trace",
+      "tbl:1",
+      "tbl:annex-5",
+      "fig:ch04-fig-24"
+    ]
+  },
+  "provenance": "authored"
+}

@@ -20,7 +20,7 @@ export default paper({
     isbn: "9789240101197",
     source: { library: "9789240101197-eng", repository: "litlfred/who-iris" },
     licence: "CC BY-NC-SA 3.0 IGO",
-    status: "seeded from L1; linked to dth-sc and dpi-h-ra glossaries and dpi-h-ra ArchiMate 0.3.0-draft.1 views and elements (SC2b, SC4)",
+    status: "seeded from L1; structured tables (SC1b), 16 personas, 3 BPMN 2.0 business processes, 2 DMN 1.3 decision tables, and links to dth-sc / dpi-h-ra glossaries and dpi-h-ra ArchiMate 0.3.0-draft.1 views and elements (SC1b, SC2b, SC4, dth-sc#2)",
     figureViews: [
       { figure: "Figure 1", block: "folio/dth-sc/introduction/p-introduction-page-011.md", model: "0.3.0-draft.1", view: "id-2d524cffba25509e82684f47d624cc42", viewName: "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)" },
       { figure: "Figure 3", block: "folio/dth-sc/introduction/p-introduction-page-012.md", model: "0.3.0-draft.1", view: "id-2d524cffba25509e82684f47d624cc42", viewName: "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)" },

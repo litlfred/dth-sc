@@ -96,6 +96,21 @@ The 17 supply chain goals already in smart-ra are not from this handbook's text;
 - Figs 14-19 and 24 render from their smart-ra views; the original PDF figure stays as the L1 provenance image next to it.
 - l1-coverage reaches 100 %: every normative sentence is either captured in a block or listed as excluded with a reason.
 
+## 6b. Structured tables (SC1b), personas, BPMN 2.0 processes, and DMN 1.3 decision tables (`dth-sc#2`)
+
+- **SC1b structured `table` blocks (10 tables, 99 rows):** `t-front-matter-abbreviations` (`tbl:abbreviations`), `t-ch01-table-1` (`tbl:1`), `t-ch03-table-2` (`tbl:2`), `t-ch03-table-3` (`tbl:3`), and `t-annexes-annex-2` through `t-annexes-annex-7` (`tbl:annex-2`..`tbl:annex-7`), each traced to `who-iris/library/9789240101197-eng` and linked to `dth-sc` / `dpi-h-ra` glossary terms and ArchiMate 0.3.0-draft.1 elements.
+- **Structured roles (`persona` blocks, 16 personas):**
+  - 10 supply chain partner roles (`folio/dth-sc/introduction/`): `pers-ministry-of-health`, `pers-procurer`, `pers-manufacturer-distributor`, `pers-regulatory-authority`, `pers-central-warehouse`, `pers-regional-district-warehouse`, `pers-logistics-provider`, `pers-health-facility`, `pers-community-health-worker`, `pers-health-service-user`.
+  - 5 implementation & governance roles (`folio/dth-sc/annexes/`): `pers-steering-committee-sponsor`, `pers-project-manager-ba`, `pers-solution-architect`, `pers-developer-integrator`, `pers-system-administrator-support`.
+  - 1 system persona (`folio/dth-sc/ch04-traceability/`): `pers-system-dhsc-traceability-hub`.
+- **BPMN 2.0 business processes (`business-process` blocks + `.bpmn` + rendered SVGs in `folio/dth-sc/media/`):**
+  - `SC-BP-01` (`bp-sc-bp-01-stepwise-dhsc-transformation`, `folio/dth-sc/introduction/`): Stepwise DHSC transformation method (Introduction Fig. 4, Ch 1 Steps 1-4, Ch 2 Steps 1-3, Ch 3 Steps 1-4, Annexes 2-7).
+  - `SC-BP-02` (`bp-sc-bp-02-end-to-end-supply-chain-processes`, `folio/dth-sc/introduction/`): End-to-end health supply chain core processes and information flow across all 10 partner roles (Introduction Figs. 1-3).
+  - `SC-BP-03` (`bp-sc-bp-03-centralized-track-and-trace`, `folio/dth-sc/ch04-traceability/`): Centralized medical product track-and-trace, verification, and recall workflow (Ch 4 Figs. 24-25).
+- **DMN 1.3 decision tables (`decision-table` blocks + `.dmn` companions):**
+  - `SC-DT-01` (`dt-sc-dt-01-scismm-architecture-selection`, `folio/dth-sc/ch02-dhsc-architecture/`): SCISMM maturity level and target DHSC architecture variant selection (Ch 2 Fig. 12, Figs. 15-19).
+  - `SC-DT-02` (`dt-sc-dt-02-traceability-model-selection`, `folio/dth-sc/ch04-traceability/`): Traceability model selection (Ch 4 centralized, semi-centralized, or distributed model).
+
 ## 7. Work order (after the dth-hrh pilot and S1-S4)
 
 | step | where | what | depends on |
