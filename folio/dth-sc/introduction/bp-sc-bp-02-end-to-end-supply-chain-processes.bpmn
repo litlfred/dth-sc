@@ -207,9 +207,7 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gw_BP02_Channel_di" bpmnElement="Gw_BP02_Channel" isMarkerVisible="true">
         <dc:Bounds x="790" y="715" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="775" y="690" width="80" height="22" />
-        </bpmndi:BPMNLabel>
+        <bpmndi:BPMNLabel><dc:Bounds x="844" y="748" width="80" height="17" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP02_10_di" bpmnElement="Task_BP02_10">
         <dc:Bounds x="940" y="703" width="210" height="74" />
@@ -223,7 +221,7 @@
       <bpmndi:BPMNShape id="End_BP02_di" bpmnElement="End_BP02">
         <dc:Bounds x="1435" y="898" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1415" y="852" width="85" height="36" />
+          <dc:Bounds x="1403" y="875" width="100" height="18" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_BP02_01_di" bpmnElement="Flow_BP02_01">
