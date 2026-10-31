@@ -13,7 +13,7 @@ export default chapter({
     section({
       title: "Why is a strategy necessary?",
       label: "sec:ch01-why-is-a-strategy-necessary",
-      blocks: ["p-ch01-page-020", "p-ch01-page-021"],
+      blocks: ["p-ch01-page-020", "f-ch01-fig-8", "p-ch01-page-021", "f-ch01-fig-9"],
     }),
     section({
       title: "Step 1. Identify and engage all relevant stakeholders",

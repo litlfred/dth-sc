@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/fig-7",
+  "@type": [
+    "folio-assistant-core:Figure",
+    "doco:Figure"
+  ],
+  "label": "fig:7",
+  "kind": "figure",
+  "text": "f-introduction-fig-7.md",
+  "meta": {
+    "title": "Alignment with WHO's SMART Guidelines",
+    "source": {
+      "library": "9789240101197-eng",
+      "file": "who-iris/library/9789240101197-eng/figures/vfig-p017.png",
+      "page": 17,
+      "method": "l1-vector-figure"
+    }
+  },
+  "provenance": "authored"
+}

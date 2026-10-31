@@ -112,10 +112,19 @@ OUTLINE = [
 LAST_PAGE = 76  # 77 is blank, 78 the back cover
 
 # The figures the L1 entry renders from the PDF's vector layer
-# (figures/vfig-pNNN.png), with the handbook's own numbers and titles. Figs 1-4
-# and 6-9 have no rendering in the L1 entry yet; vfig-p032 is the Step 2 box
-# (a layout panel, not a figure) and is left out.
+# (figures/vfig-pNNN.png), with the handbook's own numbers and titles.
+# vfig-p032 is the Step 2 box (a layout panel, not a figure) and is left out.
+# Figs 1-4 and 6-9 were rendered later (who-iris#147, the caption pattern
+# "Fig 1." with no dot); add_figures.py placed them into the edited folio.
 FIGURES = {
+    11: [(1, "Public health supply chain partners and processes")],
+    12: [(2, "Information flow across supply chain processes")],
+    13: [(3, "Digital health supply chain")],
+    14: [(4, "The stepwise approach used in this handbook")],
+    16: [(6, "WHO SMART Guidelines approach")],
+    17: [(7, "Sample workflow for an antenatal care business, with connections to the supply chain")],
+    20: [(8, "Alignment of national strategies")],
+    21: [(9, "Inconsistent use of standardized product nomenclature across the supply chain")],
     15: [(5, "DIIG process for planning and implementing a digital health enterprise")],
     26: [(10, "Example of outputs from this chapter")],
     29: [(11, "Health supply chain end-to-end visibility and traceability")],
