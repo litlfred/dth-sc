@@ -65,7 +65,9 @@
           "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
         }
       ]
-    }
+    },
+    "l1CoverageCategory": "source-example",
+    "country": "Ethiopia"
   },
   "provenance": "authored"
 }

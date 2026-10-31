@@ -13,6 +13,9 @@
   ],
   "label": "prose:ch03-page-051",
   "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/tbl-annex-7"
+  ],
   "text": "p-ch03-page-051.md",
   "meta": {
     "title": "Step 4. Implement each DHSC intervention",

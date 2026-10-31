@@ -13,6 +13,9 @@
   ],
   "label": "prose:ch01-page-022",
   "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/tbl-annex-2"
+  ],
   "text": "p-ch01-page-022.md",
   "meta": {
     "title": "Step 1. Identify and engage all relevant stakeholders",

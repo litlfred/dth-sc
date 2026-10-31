@@ -54,6 +54,17 @@
           "type": "ApplicationService"
         }
       ]
+    },
+    "tableKind": "template",
+    "l1CoverageCategory": "source-example",
+    "usedBySteps": [
+      "prose:ch01-page-023",
+      "bp:sc-bp-01-stepwise-dhsc-transformation"
+    ],
+    "exampleRows": {
+      "category": "source-example",
+      "count": 3,
+      "description": "3 hypothetical bottleneck scoring rows (unavailability of timely consumption data = 7 HIGHEST; aggregating data from paper forms = 6 MEDIUM; inability to track and trace using serial numbers = 4 LOW)"
     }
   },
   "provenance": "authored"

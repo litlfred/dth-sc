@@ -174,6 +174,18 @@
           "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
         }
       ]
+    },
+    "tableKind": "template",
+    "l1CoverageCategory": "source-example",
+    "usedBySteps": [
+      "prose:ch02-page-030",
+      "bp:sc-bp-01-stepwise-dhsc-transformation",
+      "bp:sc-bp-02-end-to-end-supply-chain-processes"
+    ],
+    "exampleRows": {
+      "category": "source-example",
+      "count": 12,
+      "description": "12 HSCIS functional rows across 7 supply chain partner columns with illustrative system entries (Planning system, OpenLMIS, ERP, RapidSMS, OpenClinic, Health analytics platform, NPC mobile app, NPC, Registration system)"
     }
   },
   "provenance": "authored"

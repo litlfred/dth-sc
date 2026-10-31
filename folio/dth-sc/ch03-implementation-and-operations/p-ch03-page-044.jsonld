@@ -13,6 +13,9 @@
   ],
   "label": "prose:ch03-page-044",
   "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/prose-annexes-page-066"
+  ],
   "text": "p-ch03-page-044.md",
   "meta": {
     "title": "Guiding principles",

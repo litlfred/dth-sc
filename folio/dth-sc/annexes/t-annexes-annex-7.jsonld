@@ -90,7 +90,104 @@
           "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
         }
       ]
-    }
+    },
+    "tableKind": "resource-matrix",
+    "l1CoverageCategory": "captured",
+    "usedBySteps": [
+      "prose:ch03-page-051",
+      "pers:steering-committee-sponsor",
+      "pers:solution-architect",
+      "pers:project-manager-ba",
+      "pers:developer-integrator",
+      "pers:system-administrator-support",
+      "bp:sc-bp-01-stepwise-dhsc-transformation"
+    ],
+    "roleMappings": [
+      {
+        "row": 1,
+        "role": "Chief technology officer / chief information officer / chief digital officer",
+        "persona": "pers:steering-committee-sponsor",
+        "dthHrhCounterpart": "pers:registry-governance-body"
+      },
+      {
+        "row": 2,
+        "role": "IT manager",
+        "persona": "pers:steering-committee-sponsor",
+        "dthHrhCounterpart": "pers:registry-governance-body"
+      },
+      {
+        "row": 3,
+        "role": "Project manager",
+        "persona": "pers:project-manager-ba",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 4,
+        "role": "Solution architect",
+        "persona": "pers:solution-architect",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 5,
+        "role": "Business analyst",
+        "persona": "pers:project-manager-ba",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 6,
+        "role": "Developer/ programmer",
+        "persona": "pers:developer-integrator",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 7,
+        "role": "Integration specialist",
+        "persona": "pers:developer-integrator",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 8,
+        "role": "Database administrator",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      },
+      {
+        "row": 9,
+        "role": "Infrastructure specialist",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      },
+      {
+        "row": 10,
+        "role": "QA/test manager",
+        "persona": "pers:developer-integrator",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 11,
+        "role": "Test analyst",
+        "persona": "pers:developer-integrator",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 12,
+        "role": "System administrator",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      },
+      {
+        "row": 13,
+        "role": "Support engineer",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      },
+      {
+        "row": 14,
+        "role": "Superuser/ trainer",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      }
+    ]
   },
   "provenance": "authored"
 }

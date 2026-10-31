@@ -89,7 +89,9 @@
           "name": "National Product Catalogue (DTH PC Fig. 2, Ch. 2-3)"
         }
       ]
-    }
+    },
+    "l1CoverageCategory": "source-example",
+    "country": "Malawi"
   },
   "provenance": "authored"
 }

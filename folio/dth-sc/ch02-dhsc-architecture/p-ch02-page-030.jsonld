@@ -13,6 +13,9 @@
   ],
   "label": "prose:ch02-page-030",
   "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/tbl-annex-5"
+  ],
   "text": "p-ch02-page-030.md",
   "meta": {
     "title": "Step 1. Assess the current state of HSCISs",

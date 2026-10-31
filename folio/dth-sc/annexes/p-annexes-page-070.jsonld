@@ -13,6 +13,9 @@
   ],
   "label": "prose:annexes-page-070",
   "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/tbl-annex-5"
+  ],
   "text": "p-annexes-page-070.md",
   "meta": {
     "title": "Annex 5. Template for listing health supply chain information systems",
@@ -116,7 +119,8 @@
           "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
         }
       ]
-    }
+    },
+    "l1CoverageCategory": "captured"
   },
   "provenance": "authored"
 }
