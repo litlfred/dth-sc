@@ -13,7 +13,7 @@
   ],
   "label": "dt:sc-dt-01-scismm-architecture-selection",
   "kind": "decision-table",
-  "title": "SCISMM maturity level and target DHSC architectural approach selection (SC-DT-01)",
+  "title": "Target SCISMM maturity level and DHSC architectural approach (SC-DT-01)",
   "uses": [
     "papers/dth-sc/blocks/prose-ch02-page-031",
     "papers/dth-sc/blocks/prose-ch02-page-036",
@@ -29,7 +29,7 @@
   ],
   "text": "dt-sc-dt-01-scismm-architecture-selection.md",
   "meta": {
-    "title": "SCISMM maturity level and target DHSC architectural approach selection (SC-DT-01)",
+    "title": "Target SCISMM maturity level and DHSC architectural approach (SC-DT-01)",
     "source": {
       "library": "9789240101197-eng",
       "section": "page-036",

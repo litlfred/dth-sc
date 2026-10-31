@@ -3,9 +3,9 @@
              xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
              xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
              id="Definitions_Decision_SC_DT_01"
-             name="SCISMM maturity level and target DHSC architectural approach selection (SC-DT-01)"
+             name="Target SCISMM maturity level and DHSC architectural approach (SC-DT-01)"
              namespace="https://litlfred.github.io/dth-sc/dmn">
-  <decision id="Decision_SC_DT_01" name="SCISMM maturity level and target DHSC architectural approach selection (SC-DT-01)">
+  <decision id="Decision_SC_DT_01" name="Target SCISMM maturity level and DHSC architectural approach (SC-DT-01)">
     <decisionTable id="DecisionTable_Decision_SC_DT_01" hitPolicy="FIRST">
       <input id="Input_DT01_Maturity" label="Current SCISMM maturity level (Ch 2 Fig. 12)">
         <inputExpression id="Input_DT01_Maturity_expr" typeRef="string">

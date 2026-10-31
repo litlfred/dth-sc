@@ -3,9 +3,9 @@
              xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
              xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
              id="Definitions_Decision_SC_DT_02"
-             name="Health supply chain traceability model and query architecture selection (SC-DT-02)"
+             name="Health supply chain traceability model and query architecture (SC-DT-02)"
              namespace="https://litlfred.github.io/dth-sc/dmn">
-  <decision id="Decision_SC_DT_02" name="Health supply chain traceability model and query architecture selection (SC-DT-02)">
+  <decision id="Decision_SC_DT_02" name="Health supply chain traceability model and query architecture (SC-DT-02)">
     <decisionTable id="DecisionTable_Decision_SC_DT_02" hitPolicy="FIRST">
       <input id="Input_DT02_Storage" label="Traceability data storage and aggregation topology (Ch 4 PDF pp. 54–55)">
         <inputExpression id="Input_DT02_Storage_expr" typeRef="string">

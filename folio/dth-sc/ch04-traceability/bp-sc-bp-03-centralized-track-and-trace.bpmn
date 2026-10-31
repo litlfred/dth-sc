@@ -15,10 +15,10 @@
   <bpmn:resource id="pers:health-service-user" name="Individual (health service user / patient)"/>
 
   <bpmn:collaboration id="Collab_SC_BP_03">
-    <bpmn:participant id="Pool_SC_BP_03" name="SC-BP-03 Centralized medical product track-and-trace, verification and recall workflow (SC-BP-03)" processRef="SC_BP_03"/>
+    <bpmn:participant id="Pool_SC_BP_03" name="SC-BP-03: Centralized medical product track-and-trace, verification and recall workflow" processRef="SC_BP_03"/>
   </bpmn:collaboration>
 
-  <bpmn:process id="SC_BP_03" name="Centralized medical product track-and-trace, verification and recall workflow (SC-BP-03) (SC-BP-03)" isExecutable="false">
+  <bpmn:process id="SC_BP_03" name="SC-BP-03: Centralized medical product track-and-trace, verification and recall workflow" isExecutable="false">
     <bpmn:documentation>Models end-to-end medical product serialization, traceability event capture (what: product identifier, batch, serial; when: timestamp; where: location; why: receive, ship, dispense, discard), central aggregation via the DHSC interoperability layer and data warehouse, point-of-dispense verification, and regulatory anomaly/recall investigation in the centralized traceability model (Chapter 4 Figures 24–25).</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_SC_BP_03">
       <bpmn:lane id="Lane_BP03_Manufacturer" name="Manufacturer and distributor" partitionElementRef="pers:manufacturer-distributor">
@@ -113,132 +113,134 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_SC_BP_03">
     <bpmndi:BPMNPlane id="BPMNPlane_SC_BP_03" bpmnElement="Collab_SC_BP_03">
       <bpmndi:BPMNShape id="Pool_SC_BP_03_di" bpmnElement="Pool_SC_BP_03" isHorizontal="true">
-        <dc:Bounds x="120" y="80" width="2470" height="1050"/>
+        <dc:Bounds x="120" y="80" width="2596" height="1288" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP03_Manufacturer_di" bpmnElement="Lane_BP03_Manufacturer" isHorizontal="true">
-        <dc:Bounds x="150" y="80" width="2440" height="150"/>
+        <dc:Bounds x="150" y="80" width="2566" height="154" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP03_CentralWarehouse_di" bpmnElement="Lane_BP03_CentralWarehouse" isHorizontal="true">
-        <dc:Bounds x="150" y="230" width="2440" height="150"/>
+        <dc:Bounds x="150" y="809" width="2566" height="150" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP03_RegionalWarehouse_di" bpmnElement="Lane_BP03_RegionalWarehouse" isHorizontal="true">
-        <dc:Bounds x="150" y="380" width="2440" height="150"/>
+        <dc:Bounds x="150" y="959" width="2566" height="259" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP03_HealthFacility_di" bpmnElement="Lane_BP03_HealthFacility" isHorizontal="true">
-        <dc:Bounds x="150" y="530" width="2440" height="150"/>
+        <dc:Bounds x="150" y="1218" width="2566" height="150" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP03_DHSCTraceabilityHub_di" bpmnElement="Lane_BP03_DHSCTraceabilityHub" isHorizontal="true">
-        <dc:Bounds x="150" y="680" width="2440" height="150"/>
+        <dc:Bounds x="150" y="384" width="2566" height="275" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP03_Regulatory_di" bpmnElement="Lane_BP03_Regulatory" isHorizontal="true">
-        <dc:Bounds x="150" y="830" width="2440" height="150"/>
+        <dc:Bounds x="150" y="234" width="2566" height="150" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP03_Individual_di" bpmnElement="Lane_BP03_Individual" isHorizontal="true">
-        <dc:Bounds x="150" y="980" width="2440" height="150"/>
+        <dc:Bounds x="150" y="659" width="2566" height="150" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Start_BP03_di" bpmnElement="Start_BP03">
-        <dc:Bounds x="242" y="137" width="36" height="36"/>
+        <dc:Bounds x="242" y="137" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_01_di" bpmnElement="Task_BP03_01">
-        <dc:Bounds x="387" y="121" width="136" height="68"/>
+        <dc:Bounds x="367" y="92" width="176" height="130" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_02_di" bpmnElement="Task_BP03_02">
-        <dc:Bounds x="582" y="721" width="136" height="68"/>
+        <dc:Bounds x="583" y="466.5" width="176" height="110" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_03_di" bpmnElement="Task_BP03_03">
-        <dc:Bounds x="777" y="271" width="136" height="68"/>
+        <dc:Bounds x="799" y="829" width="176" height="110" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_04_di" bpmnElement="Task_BP03_04">
-        <dc:Bounds x="972" y="421" width="136" height="68"/>
+        <dc:Bounds x="1015" y="1024" width="176" height="129" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_05_di" bpmnElement="Task_BP03_05">
-        <dc:Bounds x="1167" y="571" width="136" height="68"/>
+        <dc:Bounds x="1231" y="1238" width="176" height="110" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_06_di" bpmnElement="Task_BP03_06">
-        <dc:Bounds x="1362" y="1021" width="136" height="68"/>
+        <dc:Bounds x="1447" y="678.5" width="176" height="111" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_07_di" bpmnElement="Task_BP03_07">
-        <dc:Bounds x="1557" y="721" width="136" height="68"/>
+        <dc:Bounds x="1663" y="466" width="176" height="111" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gw_BP03_Authentic_di" bpmnElement="Gw_BP03_Authentic" isMarkerVisible="true">
-        <dc:Bounds x="1795" y="730" width="50" height="50"/>
+        <dc:Bounds x="1921" y="496.5" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_08_di" bpmnElement="Task_BP03_08">
-        <dc:Bounds x="1947" y="1021" width="136" height="68"/>
+        <dc:Bounds x="2053" y="678.5" width="176" height="111" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP03_09_di" bpmnElement="Task_BP03_09">
-        <dc:Bounds x="1947" y="871" width="136" height="68"/>
+        <dc:Bounds x="2053" y="263.5" width="176" height="91" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="End_BP03_di" bpmnElement="End_BP03">
-        <dc:Bounds x="2192" y="737" width="36" height="36"/>
+        <dc:Bounds x="2318" y="503.5" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_BP03_01_di" bpmnElement="Flow_BP03_01">
-        <di:waypoint x="278" y="155"/>
-        <di:waypoint x="387" y="155"/>
+        <di:waypoint x="278" y="155" />
+        <di:waypoint x="322.5" y="155" />
+        <di:waypoint x="322.5" y="157" />
+        <di:waypoint x="367" y="157" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_02_di" bpmnElement="Flow_BP03_02">
-        <di:waypoint x="523" y="155"/>
-        <di:waypoint x="552" y="155"/>
-        <di:waypoint x="552" y="755"/>
-        <di:waypoint x="582" y="755"/>
+        <di:waypoint x="543" y="157" />
+        <di:waypoint x="563" y="157" />
+        <di:waypoint x="563" y="521.5" />
+        <di:waypoint x="583" y="521.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_03_di" bpmnElement="Flow_BP03_03">
-        <di:waypoint x="718" y="755"/>
-        <di:waypoint x="747" y="755"/>
-        <di:waypoint x="747" y="305"/>
-        <di:waypoint x="777" y="305"/>
+        <di:waypoint x="759" y="521.5" />
+        <di:waypoint x="779" y="521.5" />
+        <di:waypoint x="779" y="884" />
+        <di:waypoint x="799" y="884" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_04_di" bpmnElement="Flow_BP03_04">
-        <di:waypoint x="913" y="305"/>
-        <di:waypoint x="942" y="305"/>
-        <di:waypoint x="942" y="455"/>
-        <di:waypoint x="972" y="455"/>
+        <di:waypoint x="975" y="884" />
+        <di:waypoint x="995" y="884" />
+        <di:waypoint x="995" y="1088.5" />
+        <di:waypoint x="1015" y="1088.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_05_di" bpmnElement="Flow_BP03_05">
-        <di:waypoint x="1108" y="455"/>
-        <di:waypoint x="1137" y="455"/>
-        <di:waypoint x="1137" y="605"/>
-        <di:waypoint x="1167" y="605"/>
+        <di:waypoint x="1191" y="1088.5" />
+        <di:waypoint x="1211" y="1088.5" />
+        <di:waypoint x="1211" y="1293" />
+        <di:waypoint x="1231" y="1293" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_06_di" bpmnElement="Flow_BP03_06">
-        <di:waypoint x="1303" y="605"/>
-        <di:waypoint x="1332" y="605"/>
-        <di:waypoint x="1332" y="1055"/>
-        <di:waypoint x="1362" y="1055"/>
+        <di:waypoint x="1407" y="1293" />
+        <di:waypoint x="1427" y="1293" />
+        <di:waypoint x="1427" y="734" />
+        <di:waypoint x="1447" y="734" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_07_di" bpmnElement="Flow_BP03_07">
-        <di:waypoint x="1498" y="1055"/>
-        <di:waypoint x="1527" y="1055"/>
-        <di:waypoint x="1527" y="755"/>
-        <di:waypoint x="1557" y="755"/>
+        <di:waypoint x="1623" y="734" />
+        <di:waypoint x="1643" y="734" />
+        <di:waypoint x="1643" y="521.5" />
+        <di:waypoint x="1663" y="521.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_08_di" bpmnElement="Flow_BP03_08">
-        <di:waypoint x="1693" y="755"/>
-        <di:waypoint x="1795" y="755"/>
+        <di:waypoint x="1839" y="521.5" />
+        <di:waypoint x="1921" y="521.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_09_di" bpmnElement="Flow_BP03_09">
-        <di:waypoint x="1845" y="755"/>
-        <di:waypoint x="1896" y="755"/>
-        <di:waypoint x="1896" y="1055"/>
-        <di:waypoint x="1947" y="1055"/>
+        <di:waypoint x="1971" y="521.5" />
+        <di:waypoint x="2012" y="521.5" />
+        <di:waypoint x="2012" y="734" />
+        <di:waypoint x="2053" y="734" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_10_di" bpmnElement="Flow_BP03_10">
-        <di:waypoint x="1845" y="755"/>
-        <di:waypoint x="1896" y="755"/>
-        <di:waypoint x="1896" y="905"/>
-        <di:waypoint x="1947" y="905"/>
+        <di:waypoint x="1971" y="521.5" />
+        <di:waypoint x="2012" y="521.5" />
+        <di:waypoint x="2012" y="309" />
+        <di:waypoint x="2053" y="309" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_11_di" bpmnElement="Flow_BP03_11">
-        <di:waypoint x="2083" y="1055"/>
-        <di:waypoint x="2137" y="1055"/>
-        <di:waypoint x="2137" y="755"/>
-        <di:waypoint x="2192" y="755"/>
+        <di:waypoint x="2229" y="734" />
+        <di:waypoint x="2273.5" y="734" />
+        <di:waypoint x="2273.5" y="521.5" />
+        <di:waypoint x="2318" y="521.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP03_12_di" bpmnElement="Flow_BP03_12">
-        <di:waypoint x="2083" y="905"/>
-        <di:waypoint x="2137" y="905"/>
-        <di:waypoint x="2137" y="755"/>
-        <di:waypoint x="2192" y="755"/>
+        <di:waypoint x="2229" y="309" />
+        <di:waypoint x="2273.5" y="309" />
+        <di:waypoint x="2273.5" y="521.5" />
+        <di:waypoint x="2318" y="521.5" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

@@ -21,6 +21,124 @@
       "file": "who-iris/library/9789240101197-eng/figures/vfig-p011.png",
       "page": 11,
       "method": "l1-vector-figure"
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management",
+        "prefLabel": "Order Management"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/stakeholder",
+        "prefLabel": "Stakeholder"
+      }
+    ],
+    "archimate": {
+      "model": "smart-ra 0.3.0-draft.1",
+      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC4, smart-ra#147)",
+      "elements": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-c8e57d8e75cd53108a5b2025ebb2a78b.jsonld",
+          "name": "Public Health Supply Chain Partners"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-13c797002a665825a4b5714349580da7.jsonld",
+          "name": "Health Supply Chain Processes"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-1c5c0bc9234e4282b654dbc71b9da706.jsonld",
+          "name": "Ministry of Health"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-2bfebc1bb917583cbc21e7d1bfac3164.jsonld",
+          "name": "Procurer"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-66d0f91175c154b48413d57e9f952a34.jsonld",
+          "name": "Manufacturer / Distributor"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-8e67c8e9e1195cdc857b03a2c640e7fe.jsonld",
+          "name": "National Regulatory Authority"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ca8d3a5f0b3b50999c9f51cb0d652700.jsonld",
+          "name": "Central Warehouse"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-d5c5639801335abeb3485ebd944f378b.jsonld",
+          "name": "Regional Warehouse"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-158e2821549e588ca4fe4bb2a839547a.jsonld",
+          "name": "Logistics Provider"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-9cecae7a982548e1960a36ed41713a7c.jsonld",
+          "name": "Health Facility"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-2bdc635e575f5ec59bb5d6cbff12de78.jsonld",
+          "name": "Community Health"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-03e28af10b8f5b099e271461c8a99f21.jsonld",
+          "name": "Individual"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-e92ce8265c9751e39557d6169d69cceb.jsonld",
+          "name": "Private Sector"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-e53b31972646454384c78f3380f5c40e.jsonld",
+          "name": "Forecasting & Planning"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f3331a72444d4cc49391c25e0f7745fd.jsonld",
+          "name": "Supplier & Contracts Management"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-9825f8c281d74fa5a9ec0171e246fb27.jsonld",
+          "name": "Procurement Management"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f9c2f2cd09fd4799ac06f33ed88bb61c.jsonld",
+          "name": "Order Management"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-2d603034c4194b058762690fd6415ff0.jsonld",
+          "name": "Warehouse / Inventory Management"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-b37bf4947ec9430197f9056d283eb5b0.jsonld",
+          "name": "Transportation Management"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f9f30d3e83e24a8daa3393eebb0838eb.jsonld",
+          "name": "Dispensing"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-e88f6d077d31407bb1af5f2ecfd3b48a.jsonld",
+          "name": "Traceability"
+        }
+      ],
+      "views": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
+        }
+      ],
+      "figures": [
+        {
+          "figure": "Figure 1",
+          "model": "0.3.0-draft.1",
+          "view": "id-2d524cffba25509e82684f47d624cc42",
+          "basis": "modelled in smart-ra#147 (tools/archimate-dth/dth_sc.py)"
+        }
+      ]
     }
   },
   "provenance": "authored"

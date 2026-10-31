@@ -13,7 +13,7 @@
   ],
   "label": "dt:sc-dt-02-traceability-model-selection",
   "kind": "decision-table",
-  "title": "Health supply chain traceability model and query architecture selection (SC-DT-02)",
+  "title": "Health supply chain traceability model and query architecture (SC-DT-02)",
   "uses": [
     "papers/dth-sc/blocks/prose-ch04-page-054",
     "papers/dth-sc/blocks/prose-ch04-page-055",
@@ -22,7 +22,7 @@
   ],
   "text": "dt-sc-dt-02-traceability-model-selection.md",
   "meta": {
-    "title": "Health supply chain traceability model and query architecture selection (SC-DT-02)",
+    "title": "Health supply chain traceability model and query architecture (SC-DT-02)",
     "source": {
       "library": "9789240101197-eng",
       "section": "page-054",

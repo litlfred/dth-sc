@@ -21,7 +21,21 @@
       "file": "who-iris/library/9789240101197-eng/figures/vfig-p026.png",
       "page": 26,
       "method": "l1-vector-figure"
-    }
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/goal",
+        "prefLabel": "Goal"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/outcome",
+        "prefLabel": "Outcome"
+      }
+    ]
   },
   "provenance": "authored"
 }
