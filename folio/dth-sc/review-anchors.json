@@ -1,0 +1,1829 @@
+{
+ "$schema": "folio-review-anchors/v1",
+ "document": "dth-sc",
+ "library": "9789240101197-eng",
+ "sourceLabel": "the WHO handbook (2024, ISBN 9789240101197) it was seeded from",
+ "source": {
+  "docx": {
+   "file": "who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf",
+   "sha256": "cd157b40eef513c13129ea10b286db75a7fbcda405716a44cc06775f75aa9ad2"
+  },
+  "pdf": {
+   "file": "",
+   "sha256": "",
+   "pages": 0
+  }
+ },
+ "note": "Generated from the working document by folio-assistant-core/scripts/review-anchors-from-folio.ts (no frozen review version yet).",
+ "chapters": [
+  {
+   "dir": "front-matter",
+   "title": "Front matter",
+   "label": "chap:front-matter"
+  },
+  {
+   "dir": "introduction",
+   "title": "Introduction",
+   "label": "chap:introduction"
+  },
+  {
+   "dir": "ch01-dhsc-strategy",
+   "title": "Chapter 1. Defining a holistic DHSC strategy",
+   "number": 1,
+   "label": "chap:ch01-dhsc-strategy"
+  },
+  {
+   "dir": "ch02-dhsc-architecture",
+   "title": "Chapter 2. Defining the DHSC architecture",
+   "number": 2,
+   "label": "chap:ch02-dhsc-architecture"
+  },
+  {
+   "dir": "ch03-implementation-and-operations",
+   "title": "Chapter 3. Planning for scalable implementation and sustainable operations",
+   "number": 3,
+   "label": "chap:ch03-implementation-and-operations"
+  },
+  {
+   "dir": "ch04-traceability",
+   "title": "Chapter 4. Using the DHSC to implement traceability",
+   "number": 4,
+   "label": "chap:ch04-traceability"
+  },
+  {
+   "dir": "ch05-country-examples",
+   "title": "Chapter 5. Country examples",
+   "number": 5,
+   "label": "chap:ch05-country-examples"
+  },
+  {
+   "dir": "references",
+   "title": "References",
+   "label": "chap:references"
+  },
+  {
+   "dir": "annexes",
+   "title": "Annexes",
+   "label": "chap:annexes"
+  }
+ ],
+ "sections": [
+  {
+   "label": "sec:front-acknowledgements",
+   "title": "Acknowledgements",
+   "chapter": "front-matter"
+  },
+  {
+   "label": "sec:front-abbreviations-and-acronyms",
+   "title": "Abbreviations and acronyms",
+   "chapter": "front-matter"
+  },
+  {
+   "label": "sec:front-glossary",
+   "title": "Glossary",
+   "chapter": "front-matter"
+  },
+  {
+   "label": "sec:introduction-introduction",
+   "title": "Introduction",
+   "chapter": "introduction"
+  },
+  {
+   "label": "sec:introduction-digital-health-and-the-dhsc",
+   "title": "Digital health and the DHSC",
+   "chapter": "introduction"
+  },
+  {
+   "label": "sec:introduction-what-this-handbook-covers",
+   "title": "What this handbook covers",
+   "chapter": "introduction"
+  },
+  {
+   "label": "sec:introduction-how-to-use-this-handbook",
+   "title": "How to use this handbook",
+   "chapter": "introduction"
+  },
+  {
+   "label": "sec:introduction-alignment-with-the-diig",
+   "title": "Alignment with the DIIG",
+   "chapter": "introduction"
+  },
+  {
+   "label": "sec:introduction-alignment-with-whos-smart-guidelines",
+   "title": "Alignment with WHO's SMART Guidelines",
+   "chapter": "introduction"
+  },
+  {
+   "label": "sec:ch01-guiding-principles",
+   "title": "Guiding principles",
+   "chapter": "ch01-dhsc-strategy"
+  },
+  {
+   "label": "sec:ch01-why-is-a-strategy-necessary",
+   "title": "Why is a strategy necessary?",
+   "chapter": "ch01-dhsc-strategy"
+  },
+  {
+   "label": "sec:ch01-step-1-identify-and-engage-all-relevant",
+   "title": "Step 1. Identify and engage all relevant stakeholders",
+   "chapter": "ch01-dhsc-strategy"
+  },
+  {
+   "label": "sec:ch01-step-2-analyse-the-current-state-of-hsci",
+   "title": "Step 2. Analyse the current state of HSCISs",
+   "chapter": "ch01-dhsc-strategy"
+  },
+  {
+   "label": "sec:ch01-step-3-define-the-dhsc-vision-and-strate",
+   "title": "Step 3. Define the DHSC vision and strategic goals and objectives",
+   "chapter": "ch01-dhsc-strategy"
+  },
+  {
+   "label": "sec:ch01-step-4-define-a-strategic-roadmap-and-pe",
+   "title": "Step 4. Define a strategic roadmap and performance indicators",
+   "chapter": "ch01-dhsc-strategy"
+  },
+  {
+   "label": "sec:ch02-chapter-overview",
+   "title": "Chapter overview",
+   "chapter": "ch02-dhsc-architecture"
+  },
+  {
+   "label": "sec:ch02-is-a-dhsc-architecture-necessary-what-ar",
+   "title": "Is a DHSC architecture necessary? What are the risks of forgoing one?",
+   "chapter": "ch02-dhsc-architecture"
+  },
+  {
+   "label": "sec:ch02-step-1-assess-the-current-state-of-hscis",
+   "title": "Step 1. Assess the current state of HSCISs",
+   "chapter": "ch02-dhsc-architecture"
+  },
+  {
+   "label": "sec:ch02-step-2-define-a-target-dhsc-architecture",
+   "title": "Step 2. Define a target DHSC architecture; DHSC architecture framework",
+   "chapter": "ch02-dhsc-architecture"
+  },
+  {
+   "label": "sec:ch02-illustrative-architectural-approaches-an",
+   "title": "Illustrative architectural approaches and governance options",
+   "chapter": "ch02-dhsc-architecture"
+  },
+  {
+   "label": "sec:ch02-step-3-identify-implementation-activitie",
+   "title": "Step 3. Identify implementation activities and map them to strategic goals",
+   "chapter": "ch02-dhsc-architecture"
+  },
+  {
+   "label": "sec:ch03-guiding-principles",
+   "title": "Guiding principles",
+   "chapter": "ch03-implementation-and-operations"
+  },
+  {
+   "label": "sec:ch03-building-blocks-and-implementation-consi",
+   "title": "Building blocks and implementation considerations",
+   "chapter": "ch03-implementation-and-operations"
+  },
+  {
+   "label": "sec:ch03-step-1-plan-the-implementation-of-each-d",
+   "title": "Step 1. Plan the implementation of each DHSC intervention",
+   "chapter": "ch03-implementation-and-operations"
+  },
+  {
+   "label": "sec:ch03-step-2-develop-an-operational-plan-for-e",
+   "title": "Step 2. Develop an operational plan for each DHSC intervention",
+   "chapter": "ch03-implementation-and-operations"
+  },
+  {
+   "label": "sec:ch03-step-3-develop-a-budget-for-each-dhsc-in",
+   "title": "Step 3. Develop a budget for each DHSC intervention",
+   "chapter": "ch03-implementation-and-operations"
+  },
+  {
+   "label": "sec:ch03-step-4-implement-each-dhsc-intervention",
+   "title": "Step 4. Implement each DHSC intervention",
+   "chapter": "ch03-implementation-and-operations"
+  },
+  {
+   "label": "sec:ch04-chapter-overview",
+   "title": "Chapter overview",
+   "chapter": "ch04-traceability"
+  },
+  {
+   "label": "sec:ch04-what-is-traceability-why-is-it-important",
+   "title": "What is traceability? Why is it important? Traceability models",
+   "chapter": "ch04-traceability"
+  },
+  {
+   "label": "sec:ch05-chapter-overview",
+   "title": "Chapter overview",
+   "chapter": "ch05-country-examples"
+  },
+  {
+   "label": "sec:ch05-ethiopias-dhsc-initiative",
+   "title": "Ethiopia's DHSC initiative",
+   "chapter": "ch05-country-examples"
+  },
+  {
+   "label": "sec:ch05-malawis-dhsc-initiative",
+   "title": "Malawi's DHSC initiative",
+   "chapter": "ch05-country-examples"
+  },
+  {
+   "label": "sec:ch05-rwandas-dhsc-initiative",
+   "title": "Rwanda's DHSC initiative",
+   "chapter": "ch05-country-examples"
+  },
+  {
+   "label": "sec:references-references",
+   "title": "References",
+   "chapter": "references"
+  },
+  {
+   "label": "sec:annexes-annex-1-principles-for-digital-developme",
+   "title": "Annex 1. Principles for digital development",
+   "chapter": "annexes"
+  },
+  {
+   "label": "sec:annexes-annex-2-steering-committee-example-struc",
+   "title": "Annex 2. Steering committee example structure",
+   "chapter": "annexes"
+  },
+  {
+   "label": "sec:annexes-annex-3-template-for-prioritizing-dhsc-c",
+   "title": "Annex 3. Template for prioritizing DHSC challenges to address",
+   "chapter": "annexes"
+  },
+  {
+   "label": "sec:annexes-annex-4-illustrative-template-that-maps",
+   "title": "Annex 4. Illustrative template that maps today's challenges to future outcomes",
+   "chapter": "annexes"
+  },
+  {
+   "label": "sec:annexes-annex-5-template-for-listing-health-supp",
+   "title": "Annex 5. Template for listing health supply chain information systems",
+   "chapter": "annexes"
+  },
+  {
+   "label": "sec:annexes-annex-6-risk-register-template",
+   "title": "Annex 6. Risk register template",
+   "chapter": "annexes"
+  },
+  {
+   "label": "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme",
+   "title": "Annex 7. Resource matrix for DHSC implementation",
+   "chapter": "annexes"
+  }
+ ],
+ "blocks": [
+  {
+   "label": "prose:front-page-006",
+   "kind": "prose",
+   "chapter": "front-matter",
+   "root": "p-front-page-006",
+   "sections": [
+    "sec:front-acknowledgements"
+   ],
+   "hash": "e5c4c8d3a60e",
+   "excerpt": "Acknowledgements The World Health Organization (WHO) is grateful for the contributions of many individuals and organizations in the development of this handbook",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:abbreviations",
+   "kind": "table",
+   "chapter": "front-matter",
+   "root": "t-front-abbreviations",
+   "sections": [
+    "sec:front-abbreviations-and-acronyms"
+   ],
+   "caption": "Abbreviations and acronyms",
+   "hash": "59826620f6b8",
+   "excerpt": "Abbreviations and acronyms Abbreviation Meaning --- --- DH&I WG Digital Health and Interoperability Working Group DHSC digital health supply chain DIIG Digital ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:front-page-008",
+   "kind": "prose",
+   "chapter": "front-matter",
+   "root": "p-front-page-008",
+   "sections": [
+    "sec:front-glossary"
+   ],
+   "hash": "a230e196810b",
+   "excerpt": "Glossary deployment Making a software system available for use beyond testing purposes. digital health The systematic application of information and communicati",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:front-page-009",
+   "kind": "prose",
+   "chapter": "front-matter",
+   "root": "p-front-page-009",
+   "sections": [
+    "sec:front-glossary"
+   ],
+   "hash": "154917cf4bd0",
+   "excerpt": "open standards Standards that are documented and made freely available to the public. Open standards are developed, approved and maintained via a collaborative ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:introduction-page-011",
+   "kind": "prose",
+   "chapter": "introduction",
+   "root": "p-introduction-page-011",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "898ff5331b3d",
+   "excerpt": "Introduction Health supply chain processes, which ensure that medicines and other health products are available for delivery to individuals, are integral to the",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:1",
+   "kind": "figure",
+   "chapter": "introduction",
+   "root": "f-introduction-fig-1",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "caption": "Fig. 1. Public health supply chain partners and processes",
+   "hash": "1bb8478f2990",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 11; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:ministry-of-health",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-ministry-of-health",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "4ba28fcbf16b",
+   "excerpt": "Organization / leadership role. National health authority responsible for health supply chain stewardship, policy, product selection, national forecasting and s",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:procurer",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-procurer",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "5d24d6313789",
+   "excerpt": "Supply chain partner role. Public or partner procurement agency responsible for sourcing health products, managing tenders (RFP/RFQ), awarding supplier contract",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:manufacturer-distributor",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-manufacturer-distributor",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "8b91e60526d7",
+   "excerpt": "Supply chain partner role. Pharmaceutical or health product manufacturer and wholesale distributor that produces, labels, serializes, and ships health products ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:regulatory-authority",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-regulatory-authority",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "c505aca15bcb",
+   "excerpt": "Supply chain partner role. National medicines regulatory authority responsible for product registration, licensing, market surveillance, pharmacovigilance, and ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:central-warehouse",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-central-warehouse",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "d7b4bbdb356d",
+   "excerpt": "Supply chain partner role. National central medical store responsible for receiving procured health products, managing national inventory and cold chain storage",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:regional-district-warehouse",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-regional-district-warehouse",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "421701593893",
+   "excerpt": "Supply chain partner role. Subnational (regional, provincial, or district/branch) warehouse that holds intermediate stock, aggregates or fulfils facility requis",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:logistics-provider",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-logistics-provider",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "1da41843dfe9",
+   "excerpt": "Supply chain partner role. Public fleet or third-party logistics (3PL) operator responsible for freight forwarding, customs clearance, route optimization, cold ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:health-facility",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-health-facility",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "2495d8469242",
+   "excerpt": "Supply chain partner role. Hospital, clinic, health centre, or pharmacy (service delivery point) that stores facility stock, submits replenishment requisitions,",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:community-health-worker",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-community-health-worker",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "a8358393ddc8",
+   "excerpt": "Supply chain partner role. Frontline community health provider delivering last-mile health products and services outside fixed facilities and reporting communit",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:health-service-user",
+   "kind": "persona",
+   "chapter": "introduction",
+   "root": "pers-health-service-user",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "71365bb15b61",
+   "excerpt": "Supply chain beneficiary / end-user role. Patient or member of the public who receives dispensed medicines or vaccines and can verify product authenticity at th",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "bp:sc-bp-02-end-to-end-supply-chain-processes",
+   "kind": "business-process",
+   "chapter": "introduction",
+   "root": "bp-sc-bp-02-end-to-end-supply-chain-processes",
+   "sections": [
+    "sec:introduction-introduction"
+   ],
+   "hash": "17702208a437",
+   "excerpt": "Models the nine core health supply chain processes (product selection, forecasting and supply planning, procurement, port/customs clearance, warehousing and inv",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:introduction-page-012",
+   "kind": "prose",
+   "chapter": "introduction",
+   "root": "p-introduction-page-012",
+   "sections": [
+    "sec:introduction-digital-health-and-the-dhsc"
+   ],
+   "hash": "deb0a60c0a52",
+   "excerpt": "Vital information such as order details, shipping details and inventory data must be exchanged among partners in the supply chain to enable seamless movement of",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:2",
+   "kind": "figure",
+   "chapter": "introduction",
+   "root": "f-introduction-fig-2",
+   "sections": [
+    "sec:introduction-digital-health-and-the-dhsc"
+   ],
+   "caption": "Fig. 2. Information flow across supply chain processes",
+   "hash": "46b4b9a5c94c",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 12; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:introduction-page-013",
+   "kind": "prose",
+   "chapter": "introduction",
+   "root": "p-introduction-page-013",
+   "sections": [
+    "sec:introduction-what-this-handbook-covers"
+   ],
+   "hash": "95425afa0fd4",
+   "excerpt": "What this handbook covers Several low- and middle-income countries have undertaken initiatives to digitalize their health supply chain, but until now, no compre",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:3",
+   "kind": "figure",
+   "chapter": "introduction",
+   "root": "f-introduction-fig-3",
+   "sections": [
+    "sec:introduction-what-this-handbook-covers"
+   ],
+   "caption": "Fig. 3. Digital health supply chain",
+   "hash": "bd6d0f5dac37",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 13; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:introduction-page-014",
+   "kind": "prose",
+   "chapter": "introduction",
+   "root": "p-introduction-page-014",
+   "sections": [
+    "sec:introduction-how-to-use-this-handbook"
+   ],
+   "hash": "18be008a1b30",
+   "excerpt": "How to use this handbook This handbook provides a stepwise approach to digitalizing the health supply chain, as depicted in Fig. 4. - Chapter 1 provides guidanc",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:4",
+   "kind": "figure",
+   "chapter": "introduction",
+   "root": "f-introduction-fig-4",
+   "sections": [
+    "sec:introduction-how-to-use-this-handbook"
+   ],
+   "caption": "Fig. 4. The stepwise approach used in this handbook",
+   "hash": "22bcfb0bbee1",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 14; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "bp:sc-bp-01-stepwise-dhsc-transformation",
+   "kind": "business-process",
+   "chapter": "introduction",
+   "root": "bp-sc-bp-01-stepwise-dhsc-transformation",
+   "sections": [
+    "sec:introduction-how-to-use-this-handbook"
+   ],
+   "hash": "0ddf76d41b01",
+   "excerpt": "Formalizes the handbook's stepwise method (Introduction Fig. 4 and Table 1) across Chapter 1 (Defining a holistic DHSC strategy, Steps 1–4), Chapter 2 (Defining",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:introduction-page-015",
+   "kind": "prose",
+   "chapter": "introduction",
+   "root": "p-introduction-page-015",
+   "sections": [
+    "sec:introduction-alignment-with-the-diig"
+   ],
+   "hash": "27f791d08b0a",
+   "excerpt": "Fig 5. DIIG process for planning and implementing a digital health enterprise Fig. Alignment with the DIIG This handbook uses the framework and approaches set f",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:5",
+   "kind": "figure",
+   "chapter": "introduction",
+   "root": "f-introduction-fig-5",
+   "sections": [
+    "sec:introduction-alignment-with-the-diig"
+   ],
+   "caption": "Fig. 5. DIIG process for planning and implementing a digital health enterprise",
+   "hash": "55d704d55a63",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 15; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:introduction-page-016",
+   "kind": "prose",
+   "chapter": "introduction",
+   "root": "p-introduction-page-016",
+   "sections": [
+    "sec:introduction-alignment-with-whos-smart-guidelines"
+   ],
+   "hash": "eaba9d36f6c2",
+   "excerpt": "Alignment with WHO’s SMART Guidelines This handbook aligns with WHO’s SMART Guidelines initiative by offering guidance on DHSC implementations that synchronize ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:6",
+   "kind": "figure",
+   "chapter": "introduction",
+   "root": "f-introduction-fig-6",
+   "sections": [
+    "sec:introduction-alignment-with-whos-smart-guidelines"
+   ],
+   "caption": "Fig. 6. WHO SMART Guidelines approach",
+   "hash": "1fb62f289869",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 16; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:introduction-page-017",
+   "kind": "prose",
+   "chapter": "introduction",
+   "root": "p-introduction-page-017",
+   "sections": [
+    "sec:introduction-alignment-with-whos-smart-guidelines"
+   ],
+   "hash": "3e77421c87ba",
+   "excerpt": "This handbook aligns with the L1 Narrative layer by providing guidelines for digital transformation of health supply chains. The SMART Guidelines focus primaril",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:7",
+   "kind": "figure",
+   "chapter": "introduction",
+   "root": "f-introduction-fig-7",
+   "sections": [
+    "sec:introduction-alignment-with-whos-smart-guidelines"
+   ],
+   "caption": "Fig. 7. Sample workflow for an antenatal care business, with connections to the supply chain",
+   "hash": "3d744aa6c82a",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 17; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:introduction-page-018",
+   "kind": "prose",
+   "chapter": "introduction",
+   "root": "p-introduction-page-018",
+   "sections": [
+    "sec:introduction-alignment-with-whos-smart-guidelines"
+   ],
+   "hash": "859ce4266d6b",
+   "excerpt": "- Meetings of a DHSC small working group created under the Digital Health and Interoperability Working Group (DH&I WG) (2), a volunteer community of practice de",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:1",
+   "kind": "table",
+   "chapter": "introduction",
+   "root": "t-introduction-table-1",
+   "sections": [
+    "sec:introduction-alignment-with-whos-smart-guidelines"
+   ],
+   "caption": "Table 1. Summary of chapters 1–4",
+   "hash": "0127e576bf29",
+   "excerpt": "Table 1. Summary of chapters 1–4 Chapter Illustrative target organizations Illustrative target user teams and roles Purpose of the chapter --- --- --- --- Chapt",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch01-page-019",
+   "kind": "prose",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "p-ch01-page-019",
+   "sections": [
+    "sec:ch01-guiding-principles"
+   ],
+   "hash": "4b682c763d11",
+   "excerpt": "Guiding principles 1. Defining a holistic DHSC strategy 2. Defining the DHSC architecture Chapter Defining a holistic DHSC strategy 3. Planning for scalable imp",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch01-page-020",
+   "kind": "prose",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "p-ch01-page-020",
+   "sections": [
+    "sec:ch01-why-is-a-strategy-necessary"
+   ],
+   "hash": "0ff41dc3d776",
+   "excerpt": "Defining a holistic DHSC strategy Implementation of tools and technologies to digitally transform the health supply chain cannot happen in isolation. The DHSC s",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:8",
+   "kind": "figure",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "f-ch01-fig-8",
+   "sections": [
+    "sec:ch01-why-is-a-strategy-necessary"
+   ],
+   "caption": "Fig. 8. Alignment of national strategies",
+   "hash": "5926b5f55990",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 20; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch01-page-021",
+   "kind": "prose",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "p-ch01-page-021",
+   "sections": [
+    "sec:ch01-why-is-a-strategy-necessary"
+   ],
+   "hash": "7abda229ec98",
+   "excerpt": "The risks of forgoing a guiding DHSC vision and strategy are significant and include the following: - fragmented or disconnected implementation of digital tools",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:9",
+   "kind": "figure",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "f-ch01-fig-9",
+   "sections": [
+    "sec:ch01-why-is-a-strategy-necessary"
+   ],
+   "caption": "Fig. 9. Inconsistent use of standardized product nomenclature across the supply chain",
+   "hash": "1ab594727dcb",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 21; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch01-page-022",
+   "kind": "prose",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "p-ch01-page-022",
+   "sections": [
+    "sec:ch01-step-1-identify-and-engage-all-relevant"
+   ],
+   "hash": "aa9ce174becd",
+   "excerpt": "INPUTS TASKS OUTPUTS - National health strategy and priorities (e.g., patient safety, universal health access, availability of medicines and health products) - ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch01-page-023",
+   "kind": "prose",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "p-ch01-page-023",
+   "sections": [
+    "sec:ch01-step-2-analyse-the-current-state-of-hsci"
+   ],
+   "hash": "6437d9596b59",
+   "excerpt": "Analyse the current state of HSCISs Step BEST PRACTICE - To ensure a comprehensive assessment of the current health supply chain, consider all factors that affe",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch01-page-024",
+   "kind": "prose",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "p-ch01-page-024",
+   "sections": [
+    "sec:ch01-step-3-define-the-dhsc-vision-and-strate"
+   ],
+   "hash": "c5a3e903ba8b",
+   "excerpt": "INPUTS TASKS OUTPUTS - National supply chain strategy - National health strategy - National digital health strategy - National medicines and health product poli",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch01-page-025",
+   "kind": "prose",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "p-ch01-page-025",
+   "sections": [
+    "sec:ch01-step-4-define-a-strategic-roadmap-and-pe"
+   ],
+   "hash": "3dce8c27afbb",
+   "excerpt": "BEST PRACTICE - Capture baseline performance for comparison with improvements after implementation and to help assess return on investment, value and impact. Po",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch01-page-026",
+   "kind": "prose",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "p-ch01-page-026",
+   "sections": [
+    "sec:ch01-step-4-define-a-strategic-roadmap-and-pe"
+   ],
+   "hash": "3459188e1841",
+   "excerpt": "The steps outlined in this chapter will result in the following outputs (Fig. 10): - DHSC vision - DHSC strategic goals - DHSC strategic objectives - DHSC strat",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:10",
+   "kind": "figure",
+   "chapter": "ch01-dhsc-strategy",
+   "root": "f-ch01-fig-10",
+   "sections": [
+    "sec:ch01-step-4-define-a-strategic-roadmap-and-pe"
+   ],
+   "caption": "Fig. 10. Example of outputs from this chapter",
+   "hash": "9898da8684fe",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 26; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-027",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-027",
+   "sections": [
+    "sec:ch02-chapter-overview"
+   ],
+   "hash": "18355d48ac6c",
+   "excerpt": "1. Defining a holistic DHSC strategy 2. Defining the DHSC architecture Defining the DHSC architecture 3. Planning for scalable implementation and sustainable op",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-028",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-028",
+   "sections": [
+    "sec:ch02-is-a-dhsc-architecture-necessary-what-ar"
+   ],
+   "hash": "69c27aa59589",
+   "excerpt": "Defining the DHSC architecture The application architecture, which is a component of the broader enterprise architecture, serves as a blueprint for the core sys",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-029",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-029",
+   "sections": [
+    "sec:ch02-is-a-dhsc-architecture-necessary-what-ar"
+   ],
+   "hash": "f484dbfb5129",
+   "excerpt": "The following sections detail the steps to defining an overarching DHSC architecture. They also illustrate various architectural approaches that countries can a",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:11",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-11",
+   "sections": [
+    "sec:ch02-is-a-dhsc-architecture-necessary-what-ar"
+   ],
+   "caption": "Fig. 11. Health supply chain end-to-end visibility and traceability",
+   "hash": "1e5c39a788e7",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 29; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-030",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-030",
+   "sections": [
+    "sec:ch02-step-1-assess-the-current-state-of-hscis"
+   ],
+   "hash": "7d7dbb321964",
+   "excerpt": "Assess the current state of HSCISs Step Assessing the current state of HSCISs involves a thorough evaluation of their capabilities, utilization, technical chall",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-031",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-031",
+   "sections": [
+    "sec:ch02-step-1-assess-the-current-state-of-hscis"
+   ],
+   "hash": "e5d8648c1235",
+   "excerpt": "- Manually driven processes using paper based or stand- alone reporting based tools ➢ E.g. - Manual order data entry into spreadsheets or basic systems on month",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-fig-12-third-party",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-fig-12-third-party",
+   "sections": [
+    "sec:ch02-step-1-assess-the-current-state-of-hscis"
+   ],
+   "hash": "3059fbbcf75a",
+   "excerpt": "Fig. 12. SCISMM maturity levels for HSCISs: reproduced in the handbook by permission of the publisher, Digital Square (SCISMM, reference 16). It is third-party ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-032",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-032",
+   "sections": [
+    "sec:ch02-step-2-define-a-target-dhsc-architecture"
+   ],
+   "hash": "2b9e7cd21423",
+   "excerpt": "DHSC architecture framework The DIIG outlines the components of a digital health enterprise architecture (Fig. 13). DHSC architectural components relate to the ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-033",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-033",
+   "sections": [
+    "sec:ch02-step-2-define-a-target-dhsc-architecture"
+   ],
+   "hash": "b9a075f0358f",
+   "excerpt": "Fig 13. DIIG digital health enterprise architecture framework Fig. SHARED SERVICES DATA SERVICES DATA SOURCES Institution-based health info. system and data sou",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:13",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-13",
+   "sections": [
+    "sec:ch02-step-2-define-a-target-dhsc-architecture"
+   ],
+   "caption": "Fig. 13. DIIG digital health enterprise architecture framework",
+   "hash": "b2377196e693",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 33; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-034",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-034",
+   "sections": [
+    "sec:ch02-step-2-define-a-target-dhsc-architecture"
+   ],
+   "hash": "14efe966f0f1",
+   "excerpt": "Fig 14. DHSC architecture framework Fig. INTER- OPERABILITY LAYER Enabling components Authentication Orchestration Encryption Validation Transformation Translat",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:14",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-14",
+   "sections": [
+    "sec:ch02-step-2-define-a-target-dhsc-architecture"
+   ],
+   "caption": "Fig. 14. DHSC architecture framework",
+   "hash": "4ab4fc5b55b3",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 34; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-035",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-035",
+   "sections": [
+    "sec:ch02-step-2-define-a-target-dhsc-architecture"
+   ],
+   "hash": "0f3dc4f798e1",
+   "excerpt": "The key components are as follows. - Foundational components. These components provide system capabilities for organizing and managing master data such as produ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-036",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-036",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "hash": "cbd527f79016",
+   "excerpt": "- Maturity-based architecture: moving from SCISMM Level 3 to Level 4. This architectural approach helps countries advance their supply chain systems from advanc",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:15",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-15",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "caption": "Fig. 15. Maturity-based architecture: moving from SCISMM Level 3 to Level 4",
+   "hash": "d2a2dd24fa2a",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 36; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-037",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-037",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "hash": "0b0a7c20d189",
+   "excerpt": "INTER- OPERABILITY LAYER Enabling components HEALTH SUPPLY CHAIN INFORMATION SYSTEMS Forecasting and planning Procurement Order management Supplier and contract",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:16",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-16",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "caption": "Fig. 16. Maturity-based architecture: moving from SCISMM Level 4 to Level 5",
+   "hash": "7136717357be",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 37; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-038",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-038",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "hash": "8a19aaf8bac3",
+   "excerpt": "INTER- OPERABILITY LAYER Enabling components HEALTH SUPPLY CHAIN INFORMATION SYSTEMS Forecasting and planning Procurement Order management Supplier and contract",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:17",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-17",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "caption": "Fig. 17. Architecture based on supply chain design: centralized management",
+   "hash": "0fbd62e99e22",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 38; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-039",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-039",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "hash": "1530d6e0eda7",
+   "excerpt": "INTER- OPERABILITY LAYER Enabling components HSCISs National level HSCISs Facility level Forecasting and planning Procurement Order management Supplier and cont",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:18",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-18",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "caption": "Fig. 18. Architecture based on supply chain design: decentralized management (option A)",
+   "hash": "215471fc436a",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 39; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-040",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-040",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "hash": "fec68673aed7",
+   "excerpt": "INTER- OPERABILITY LAYER Enabling components HSCISs National level HSCISs Forecasting and planning Procurement District level Facility level Procurement Supplie",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:19",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-19",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "caption": "Fig. 19. Architecture based on supply chain design: decentralized management (option B)",
+   "hash": "e878bc49bbea",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 40; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "dt:sc-dt-01-scismm-architecture-selection",
+   "kind": "decision-table",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "dt-sc-dt-01-scismm-architecture-selection",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "hash": "92edad63aae9",
+   "excerpt": "Decision table SC-DT-01 ( Decision SC DT 01 , hit policy FIRST ) formalizes the conditional selection of a country's target Supply Chain Information System Matu",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-041",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-041",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "hash": "ed2563b47e69",
+   "excerpt": "INTEROPERABILITY LAYER DATA SERVICES Analytics Data warehouse Supply chain reports Transactional data from systems relevant to the supply chain Analytics servic",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:20",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-20",
+   "sections": [
+    "sec:ch02-illustrative-architectural-approaches-an"
+   ],
+   "caption": "Fig. 20. Benefits of cross-enterprise analytics services",
+   "hash": "b5986e97b20b",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 41; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-042",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-042",
+   "sections": [
+    "sec:ch02-step-3-identify-implementation-activitie"
+   ],
+   "hash": "ca30616b11d2",
+   "excerpt": "Identify implementation activities and map them to strategic goals Step This step focuses on translating the identified DHSC architectural interventions into im",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch02-page-043",
+   "kind": "prose",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "p-ch02-page-043",
+   "sections": [
+    "sec:ch02-step-3-identify-implementation-activitie"
+   ],
+   "hash": "cdd38bb58b02",
+   "excerpt": "The steps outlined in this chapter will result in the following outputs (Fig. 21): - current state of HSCISs - future-state DHSC architecture - list of DHSC imp",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:21",
+   "kind": "figure",
+   "chapter": "ch02-dhsc-architecture",
+   "root": "f-ch02-fig-21",
+   "sections": [
+    "sec:ch02-step-3-identify-implementation-activitie"
+   ],
+   "caption": "Fig. 21. Example of outputs from this chapter",
+   "hash": "d7d9a473fb38",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 43; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-044",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-044",
+   "sections": [
+    "sec:ch03-guiding-principles"
+   ],
+   "hash": "1d621f978366",
+   "excerpt": "Chapter Planning for scalable implementation and sustainable operations Plan the implementation of each intervention Develop an operational plan for each interv",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-045",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-045",
+   "sections": [
+    "sec:ch03-building-blocks-and-implementation-consi"
+   ],
+   "hash": "98a264985813",
+   "excerpt": "Fig 22. Building blocks of digital health and DHSC implementation Fig. Planning for scalable implementation and sustainable operations The previous chapters hel",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:22",
+   "kind": "figure",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "f-ch03-fig-22",
+   "sections": [
+    "sec:ch03-building-blocks-and-implementation-consi"
+   ],
+   "caption": "Fig. 22. Building blocks of digital health and DHSC implementation",
+   "hash": "7e11fbb2372a",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 45; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-046",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-046",
+   "sections": [
+    "sec:ch03-building-blocks-and-implementation-consi"
+   ],
+   "hash": "2c44ad109447",
+   "excerpt": "Table 2. Illustrative implementation considerations for the DHSC Sources: adapted from the 2012 WHO-ITU National eHealth Strategy Toolkit (19) and the 2015 WHO ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:2",
+   "kind": "table",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "t-ch03-table-2",
+   "sections": [
+    "sec:ch03-building-blocks-and-implementation-consi"
+   ],
+   "caption": "Table 2. Illustrative implementation considerations for the DHSC",
+   "hash": "780323c396df",
+   "excerpt": "Table 2. Illustrative implementation considerations for the DHSC Area Factor What is the current state? What is needed? --- --- --- --- Enabling environment Lea",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-047",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-047",
+   "sections": [
+    "sec:ch03-step-1-plan-the-implementation-of-each-d"
+   ],
+   "hash": "f1e65bf53882",
+   "excerpt": "The project charter should include details about the following: - scope - stakeholders - timeline - budget - risks - deliverables - quality criteria - governanc",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-048",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-048",
+   "sections": [
+    "sec:ch03-step-2-develop-an-operational-plan-for-e"
+   ],
+   "hash": "adc833081b62",
+   "excerpt": "The operations and sustainability plan should include the following: - details of stakeholders who will own and maintain the DHSC system/application; - required",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-049",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-049",
+   "sections": [
+    "sec:ch03-step-3-develop-a-budget-for-each-dhsc-in"
+   ],
+   "hash": "cc84a900f94f",
+   "excerpt": "Fig 23. Cost components to determine the total cost of ownership Source: adapted from the 2020 WHO Digital Implementation Investment Guide (1). RFP = request fo",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:23",
+   "kind": "figure",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "f-ch03-fig-23",
+   "sections": [
+    "sec:ch03-step-3-develop-a-budget-for-each-dhsc-in"
+   ],
+   "caption": "Fig. 23. Cost components to determine the total cost of ownership",
+   "hash": "aeb118f5ce12",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 49; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-050",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-050",
+   "sections": [
+    "sec:ch03-step-3-develop-a-budget-for-each-dhsc-in"
+   ],
+   "hash": "1048bd5e1da5",
+   "excerpt": "Table 3. Illustrative cost drivers of DHSC implementation Source: adapted from Digital Impact Alliance’s Principles for Digital Development (https://digitalprin",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:3",
+   "kind": "table",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "t-ch03-table-3",
+   "sections": [
+    "sec:ch03-step-3-develop-a-budget-for-each-dhsc-in"
+   ],
+   "caption": "Table 3. Illustrative cost drivers of DHSC implementation",
+   "hash": "de319396e55b",
+   "excerpt": "Table 3. Illustrative cost drivers of DHSC implementation Cost type Cost category Cost drivers --- --- --- Ongoing costs Management • Complexity of intervention",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-051",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-051",
+   "sections": [
+    "sec:ch03-step-4-implement-each-dhsc-intervention"
+   ],
+   "hash": "32f663c20411",
+   "excerpt": "Implement each DHSC intervention Step This step encompasses several tasks needed to implement the identified DHSC interventions, including vendor selection, sys",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch03-page-052",
+   "kind": "prose",
+   "chapter": "ch03-implementation-and-operations",
+   "root": "p-ch03-page-052",
+   "sections": [
+    "sec:ch03-step-4-implement-each-dhsc-intervention"
+   ],
+   "hash": "774a638ba490",
+   "excerpt": "Potential risks Mitigation strategies - Saturation of existing digital tools and HSCISs due to lack of acceptance of emerging technology and enhancements - Cond",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch04-page-053",
+   "kind": "prose",
+   "chapter": "ch04-traceability",
+   "root": "p-ch04-page-053",
+   "sections": [
+    "sec:ch04-chapter-overview"
+   ],
+   "hash": "f147a304f248",
+   "excerpt": "Chapter Using the DHSC to implement traceability 1. Defining a holistic DHSC strategy 2. Defining the DHSC architecture 3. Planning for scalable implementation ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch04-page-054",
+   "kind": "prose",
+   "chapter": "ch04-traceability",
+   "root": "p-ch04-page-054",
+   "sections": [
+    "sec:ch04-what-is-traceability-why-is-it-important"
+   ],
+   "hash": "a249cd6d0992",
+   "excerpt": "Using the DHSC to implement traceability One key benefit of the DHSC architecture is the ability to track, trace and verify health products. Traceability of hea",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "dt:sc-dt-02-traceability-model-selection",
+   "kind": "decision-table",
+   "chapter": "ch04-traceability",
+   "root": "dt-sc-dt-02-traceability-model-selection",
+   "sections": [
+    "sec:ch04-what-is-traceability-why-is-it-important"
+   ],
+   "hash": "6d202bd629a3",
+   "excerpt": "Decision table SC-DT-02 ( Decision SC DT 02 , hit policy FIRST ) formalizes the selection among the three medical product traceability models — centralized ( ce",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch04-page-055",
+   "kind": "prose",
+   "chapter": "ch04-traceability",
+   "root": "p-ch04-page-055",
+   "sections": [
+    "sec:ch04-what-is-traceability-why-is-it-important"
+   ],
+   "hash": "f1b612889591",
+   "excerpt": "For a centralized traceability model, the following technology components are essential. Note that many of the components required for enabling tracking, tracin",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:24",
+   "kind": "figure",
+   "chapter": "ch04-traceability",
+   "root": "f-ch04-fig-24",
+   "sections": [
+    "sec:ch04-what-is-traceability-why-is-it-important"
+   ],
+   "caption": "Fig. 24. Achieving track and trace capabilities through DHSC architecture components",
+   "hash": "ebd7312c4bed",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 55; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch04-page-056",
+   "kind": "prose",
+   "chapter": "ch04-traceability",
+   "root": "p-ch04-page-056",
+   "sections": [
+    "sec:ch04-what-is-traceability-why-is-it-important"
+   ],
+   "hash": "5d601b4fbe69",
+   "excerpt": "The following are some factors to consider. - While the institutionalization of traceability could be a drawn-out, intensive process, the use of existing techno",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:25",
+   "kind": "figure",
+   "chapter": "ch04-traceability",
+   "root": "f-ch04-fig-25",
+   "sections": [
+    "sec:ch04-what-is-traceability-why-is-it-important"
+   ],
+   "caption": "Fig. 25. Illustrative example of a traceability service interface",
+   "hash": "ad983190dc45",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 56; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:system-dhsc-traceability-hub",
+   "kind": "persona",
+   "chapter": "ch04-traceability",
+   "root": "pers-system-dhsc-traceability-hub",
+   "sections": [
+    "sec:ch04-what-is-traceability-why-is-it-important"
+   ],
+   "hash": "0822300ab201",
+   "excerpt": "System persona. The shared DHSC architecture platform comprising the interoperability layer (authentication, orchestration, encryption, validation, transformati",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "bp:sc-bp-03-centralized-track-and-trace",
+   "kind": "business-process",
+   "chapter": "ch04-traceability",
+   "root": "bp-sc-bp-03-centralized-track-and-trace",
+   "sections": [
+    "sec:ch04-what-is-traceability-why-is-it-important"
+   ],
+   "hash": "b29321275dd8",
+   "excerpt": "Models end-to-end medical product serialization, traceability event capture (what: product identifier, batch, serial; when: timestamp; where: location; why: rec",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch05-page-057",
+   "kind": "prose",
+   "chapter": "ch05-country-examples",
+   "root": "p-ch05-page-057",
+   "sections": [
+    "sec:ch05-chapter-overview"
+   ],
+   "hash": "2b4f2bbd2ac1",
+   "excerpt": "Chapter Country examples Ethiopia Malawi Rwanda",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch05-page-058",
+   "kind": "prose",
+   "chapter": "ch05-country-examples",
+   "root": "p-ch05-page-058",
+   "sections": [
+    "sec:ch05-ethiopias-dhsc-initiative"
+   ],
+   "hash": "ae42425e10d3",
+   "excerpt": "Ethiopia’s DHSC initiative Status The Government of Ethiopia issued its Information Revolution Roadmap in April 2016, which recognized digital health projects a",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch05-page-059",
+   "kind": "prose",
+   "chapter": "ch05-country-examples",
+   "root": "p-ch05-page-059",
+   "sections": [
+    "sec:ch05-ethiopias-dhsc-initiative"
+   ],
+   "hash": "f4250aeb8f93",
+   "excerpt": "Investment in new software Software under development Investment in strengthening software Future investment in new software Fully functional software Investmen",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:26-27",
+   "kind": "figure",
+   "chapter": "ch05-country-examples",
+   "root": "f-ch05-fig-26-27",
+   "sections": [
+    "sec:ch05-ethiopias-dhsc-initiative"
+   ],
+   "caption": "Fig. 26. Current-state supply chain systems in Ethiopia; Fig. 27. Future-state supply chain systems in Ethiopia",
+   "hash": "fc3fbeac2ed2",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 59; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch05-page-060",
+   "kind": "prose",
+   "chapter": "ch05-country-examples",
+   "root": "p-ch05-page-060",
+   "sections": [
+    "sec:ch05-malawis-dhsc-initiative"
+   ],
+   "hash": "161719cdfc57",
+   "excerpt": "Malawi’s DHSC initiative Status The country’s Supply Chain Systems Architecture (SCSA) was collaboratively developed in 2021 under the leadership of the Health ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch05-page-061",
+   "kind": "prose",
+   "chapter": "ch05-country-examples",
+   "root": "p-ch05-page-061",
+   "sections": [
+    "sec:ch05-malawis-dhsc-initiative"
+   ],
+   "hash": "4e6897be0d09",
+   "excerpt": "Investment in new software Software under development Investment in strengthening software Future investment in new software Fully functional software Investmen",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:28-29",
+   "kind": "figure",
+   "chapter": "ch05-country-examples",
+   "root": "f-ch05-fig-28-29",
+   "sections": [
+    "sec:ch05-malawis-dhsc-initiative"
+   ],
+   "caption": "Fig. 28. Current-state supply chain systems in Malawi; Fig. 29. Future-state supply chain systems in Malawi",
+   "hash": "1dcdd56a2d78",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 61; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch05-page-062",
+   "kind": "prose",
+   "chapter": "ch05-country-examples",
+   "root": "p-ch05-page-062",
+   "sections": [
+    "sec:ch05-malawis-dhsc-initiative"
+   ],
+   "hash": "55eeb66561d8",
+   "excerpt": "Regulatory National Supply Chain Information Systems (NSCIS) Foundational Components Analytics & Business Intelligence Data Warehouse Forecasting & Planning (QA",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:30",
+   "kind": "figure",
+   "chapter": "ch05-country-examples",
+   "root": "f-ch05-fig-30",
+   "sections": [
+    "sec:ch05-malawis-dhsc-initiative"
+   ],
+   "caption": "Fig. 30. Visualization of future-state architecture from Malawi's SCSA",
+   "hash": "153448923a20",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 62; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch05-page-063",
+   "kind": "prose",
+   "chapter": "ch05-country-examples",
+   "root": "p-ch05-page-063",
+   "sections": [
+    "sec:ch05-rwandas-dhsc-initiative"
+   ],
+   "hash": "218e60f549fe",
+   "excerpt": "Rwanda’s DHSC initiative Status Rwanda’s Digital Supply Chain (DSC) Strategy and Architecture was collaboratively drafted in 2022 under the leadership of the MO",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:ch05-page-064",
+   "kind": "prose",
+   "chapter": "ch05-country-examples",
+   "root": "p-ch05-page-064",
+   "sections": [
+    "sec:ch05-rwandas-dhsc-initiative"
+   ],
+   "hash": "944158448d51",
+   "excerpt": "Investment in new software Software under development Investment in strengthening software Future investment in new software Fully functional software Investmen",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "fig:31-32",
+   "kind": "figure",
+   "chapter": "ch05-country-examples",
+   "root": "f-ch05-fig-31-32",
+   "sections": [
+    "sec:ch05-rwandas-dhsc-initiative"
+   ],
+   "caption": "Fig. 31. Current-state supply chain systems in Rwanda; Fig. 32. Future-state supply chain systems in Rwanda",
+   "hash": "ca60a342f166",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 64; rendered from the PDF's vector layer in the L1 entry.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:references-page-065",
+   "kind": "prose",
+   "chapter": "references",
+   "root": "p-references-page-065",
+   "sections": [
+    "sec:references-references"
+   ],
+   "hash": "c8a5ca1a81c4",
+   "excerpt": "2 All linked references were accessed on 15 October 2024. References 1. Digital implementation investment guide (DIIG): integrating digital interventions into h",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:annexes-page-066",
+   "kind": "prose",
+   "chapter": "annexes",
+   "root": "p-annexes-page-066",
+   "sections": [
+    "sec:annexes-annex-1-principles-for-digital-developme"
+   ],
+   "hash": "80545c582cca",
+   "excerpt": "Annex 1. Principles for digital development Understand the existing ecosystem Trust starts with a thorough understanding of the dynamic cultural, social and eco",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:annexes-page-067",
+   "kind": "prose",
+   "chapter": "annexes",
+   "root": "p-annexes-page-067",
+   "sections": [
+    "sec:annexes-annex-2-steering-committee-example-struc"
+   ],
+   "hash": "0e42a09c0e8e",
+   "excerpt": "Annex 2. Steering committee example structure The following diagram illustrates an example organizational structure of a DHSC steering committee.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:annex-2",
+   "kind": "table",
+   "chapter": "annexes",
+   "root": "t-annexes-annex-2",
+   "sections": [
+    "sec:annexes-annex-2-steering-committee-example-struc"
+   ],
+   "caption": "Annex 2. Steering committee example structure",
+   "hash": "8e502da0bb87",
+   "excerpt": "Annex 2. Steering committee example structure Governance tier / topic area Data Process Technology Risk --- --- --- --- --- Executive chairperson MOH Secretaria",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:annexes-page-068",
+   "kind": "prose",
+   "chapter": "annexes",
+   "root": "p-annexes-page-068",
+   "sections": [
+    "sec:annexes-annex-3-template-for-prioritizing-dhsc-c"
+   ],
+   "hash": "05a763b71239",
+   "excerpt": "Annex 3. Template for prioritizing DHSC challenges to address The following table offers some considerations for ranking supply chain challenges and bottlenecks",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:annex-3",
+   "kind": "table",
+   "chapter": "annexes",
+   "root": "t-annexes-annex-3",
+   "sections": [
+    "sec:annexes-annex-3-template-for-prioritizing-dhsc-c"
+   ],
+   "caption": "Annex 3. Template for prioritizing DHSC challenges to address",
+   "hash": "65378e46e854",
+   "excerpt": "Annex 3. Template for prioritizing DHSC challenges to address Bottleneck 1. How much impact does this bottleneck have on the process? (1–3) 2. What is the likel",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:annexes-page-069",
+   "kind": "prose",
+   "chapter": "annexes",
+   "root": "p-annexes-page-069",
+   "sections": [
+    "sec:annexes-annex-4-illustrative-template-that-maps"
+   ],
+   "hash": "59c03aaffa37",
+   "excerpt": "Annex 4. Illustrative template that maps today’s challenges to future outcomes This type of template can be used to map the transition from current critical cha",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:annex-4",
+   "kind": "table",
+   "chapter": "annexes",
+   "root": "t-annexes-annex-4",
+   "sections": [
+    "sec:annexes-annex-4-illustrative-template-that-maps"
+   ],
+   "caption": "Annex 4. Illustrative template that maps today's challenges to future outcomes",
+   "hash": "7279d22ef3a7",
+   "excerpt": "Annex 4. Illustrative template that maps today's challenges to future outcomes Supply chain partner / process Today (challenge) Illustrative metric Future (outc",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:annexes-page-070",
+   "kind": "prose",
+   "chapter": "annexes",
+   "root": "p-annexes-page-070",
+   "sections": [
+    "sec:annexes-annex-5-template-for-listing-health-supp"
+   ],
+   "hash": "d4b7c124007b",
+   "excerpt": "Annex 5. Template for listing health supply chain information systems The following table is a template for assessing the current landscape of HSCISs and identi",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:annex-5",
+   "kind": "table",
+   "chapter": "annexes",
+   "root": "t-annexes-annex-5",
+   "sections": [
+    "sec:annexes-annex-5-template-for-listing-health-supp"
+   ],
+   "caption": "Annex 5. Template for listing health supply chain information systems (with the handbook's illustrative entries)",
+   "hash": "2b0a0e7ced15",
+   "excerpt": "Annex 5. Template for listing health supply chain information systems (with the handbook's illustrative entries) MOH Regulatory authority Central warehouse Bran",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:annexes-page-071",
+   "kind": "prose",
+   "chapter": "annexes",
+   "root": "p-annexes-page-071",
+   "sections": [
+    "sec:annexes-annex-6-risk-register-template"
+   ],
+   "hash": "a4985cebde6b",
+   "excerpt": "Annex 6. Risk register template The following table is a template for ranking risks and identifying mitigation steps.",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:annex-6",
+   "kind": "table",
+   "chapter": "annexes",
+   "root": "t-annexes-annex-6",
+   "sections": [
+    "sec:annexes-annex-6-risk-register-template"
+   ],
+   "caption": "Annex 6. Risk register template",
+   "hash": "d4eabe2241fc",
+   "excerpt": "Annex 6. Risk register template Risk title Description Priority Impact Probability Status Mitigation steps Owner Raised Reviewed Closed --- --- --- --- --- --- ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:annexes-page-072",
+   "kind": "prose",
+   "chapter": "annexes",
+   "root": "p-annexes-page-072",
+   "sections": [
+    "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme"
+   ],
+   "hash": "b583d0aad5f5",
+   "excerpt": "Annex 7. Resource matrix for DHSC implementation The table below illustrates the technical roles needed for DHSC implementation. The following resources on huma",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:annex-7",
+   "kind": "table",
+   "chapter": "annexes",
+   "root": "t-annexes-annex-7",
+   "sections": [
+    "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme"
+   ],
+   "caption": "Annex 7. Resource matrix for DHSC implementation",
+   "hash": "02eb15738cbb",
+   "excerpt": "Annex 7. Resource matrix for DHSC implementation Role category Role Needed in deployment Needed in operation Position type Skill sets Responsibilities --- --- -",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:steering-committee-sponsor",
+   "kind": "persona",
+   "chapter": "annexes",
+   "root": "pers-steering-committee-sponsor",
+   "sections": [
+    "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme"
+   ],
+   "hash": "fb6376d10536",
+   "excerpt": "Leadership and governance role. Senior executive leadership (CTO/CIO/CDO, project sponsor, and multi-stakeholder DHSC steering committee with Data, Process, Tec",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:solution-architect",
+   "kind": "persona",
+   "chapter": "annexes",
+   "root": "pers-solution-architect",
+   "sections": [
+    "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme"
+   ],
+   "hash": "114639c2bd60",
+   "excerpt": "Leadership / technical role. Technical, system, enterprise, or solution architect responsible for assessing current HSCIS maturity, designing the target DHSC ar",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:project-manager-ba",
+   "kind": "persona",
+   "chapter": "annexes",
+   "root": "pers-project-manager-ba",
+   "sections": [
+    "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme"
+   ],
+   "hash": "6f059f5f4819",
+   "excerpt": "Management and business analysis role. IT manager, project manager, and business analyst who translate supply chain business processes into functional/nonfuncti",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:developer-integrator",
+   "kind": "persona",
+   "chapter": "annexes",
+   "root": "pers-developer-integrator",
+   "sections": [
+    "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme"
+   ],
+   "hash": "863b27c7a1fd",
+   "excerpt": "Technical implementation role. Software developer/programmer, integration specialist, QA/test manager, and test analyst responsible for configuring and customiz",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "pers:system-administrator-support",
+   "kind": "persona",
+   "chapter": "annexes",
+   "root": "pers-system-administrator-support",
+   "sections": [
+    "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme"
+   ],
+   "hash": "effaeab1abbe",
+   "excerpt": "Technical operations and support role. Permanent operational staff—database administrator, infrastructure specialist, system administrator, support engineer, an",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:annexes-page-076",
+   "kind": "prose",
+   "chapter": "annexes",
+   "root": "p-annexes-page-076",
+   "sections": [
+    "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme"
+   ],
+   "hash": "4bc8255bb048",
+   "excerpt": "References 1. Building human resources for supply chain management theory of change [website]. People that Deliver; 2024 (https://peoplethatdeliver. org/buildin",
+   "method": "folio-snapshot"
+  }
+ ]
+}
