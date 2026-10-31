@@ -4,7 +4,7 @@
   "title": "Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture",
   "description": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140, #183). Every term is a candidate: only a person adopts a definition. Each term links via SKOS broadMatch/closeMatch/related to the dpi-h-ra concept it narrows or relates to (smart-ra#133 S1, dth-sc#2 SC2b). Concept labels are Capitalized (owner ruling, 2026-10-31, relayed from the dth-pc thread). Trade Item and Product Master Data are defined in dth-pc, not here (smart-ra#142).",
   "modified": "2026-10-31",
-  "source": "who-iris/library/9789240101197-eng",
+  "source": "folio/dth-sc",
   "license": "CC-BY-NC-SA-3.0-IGO",
   "terms": [
     {
