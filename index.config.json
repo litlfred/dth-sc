@@ -14,7 +14,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "bdadee3d159a27d58834133872e20ec631665f6c",
+          "ref": "d755e9c3062e61f1d54c0ee439e38834310697ce",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -39,8 +39,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-31",
-              "ref": "bdadee3d159a27d58834133872e20ec631665f6c",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "ref": "d755e9c3062e61f1d54c0ee439e38834310697ce",
+              "evidence": "who-iris moved to main d755e9c, past who-iris#147 (the dth-sc figure renders the Figs 1-4 and 6-9 blocks of c92a29c place). Asked by the figure thread, merge-and-repin window (coordinator, 2026-10-31 10:45Z, to ~19:00Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
             }
           }
         }

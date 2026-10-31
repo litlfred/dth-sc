@@ -4,7 +4,7 @@
     {
       "harness": "who-iris",
       "repository": "litlfred/who-iris",
-      "ref": "bdadee3d159a27d58834133872e20ec631665f6c"
+      "ref": "d755e9c3062e61f1d54c0ee439e38834310697ce"
     },
     {
       "harness": "smart-base",
@@ -451,29 +451,29 @@
     {
       "instance": "who-iris",
       "repository": "litlfred/who-iris",
-      "sha": "bdadee3d159a27d58834133872e20ec631665f6c",
+      "sha": "d755e9c3062e61f1d54c0ee439e38834310697ce",
       "upstreamRoot": "",
       "path": "who-iris",
       "via": "who-iris",
       "pinnedBy": "declared",
       "declaration": {
         "file": "who-iris.json",
-        "sha256": "359145386a10691835dc86537dd2a17627183810931727de4a558c7de750c02d"
+        "sha256": "1d4522a08435eb0bd85e3f939976724c4596f8dae81d28135db2dcb721b1c5bc"
       },
       "directories": [
         {
           "id": "*",
           "path": "who-iris",
           "upstreamPath": ".",
-          "treeDigest": "832b59355f6bb4da4405417e9b8e4563607a3af55fce3bad63fba20f07b439c4",
-          "files": 5621
+          "treeDigest": "1cfbc1b0c5fccf336b361c7745d01f5d8abae0c49737ed8e43539c78cc3f81b0",
+          "files": 6600
         }
       ],
       "trust": {
         "basis": "consent",
         "by": "litlfred",
         "on": "2026-10-31",
-        "ref": "bdadee3d159a27d58834133872e20ec631665f6c",
+        "ref": "d755e9c3062e61f1d54c0ee439e38834310697ce",
         "approver": "unverified"
       }
     }
