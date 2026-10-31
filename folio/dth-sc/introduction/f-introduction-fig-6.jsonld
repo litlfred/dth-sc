@@ -23,9 +23,9 @@
       "method": "generated",
       "generated": {
         "repo": "https://github.com/litlfred/who-iris",
-        "commit": "3ecd60367222d7cc8eb0960061bcc06eb7a985dd",
-        "data": "https://github.com/litlfred/who-iris/blob/3ecd60367222d7cc8eb0960061bcc06eb7a985dd/library/9789240116191-eng/figure-data/fig-5-smart-guidelines-approach.json",
-        "generator": "https://github.com/litlfred/folio-assistant-core/blob/aeef4ea569c25cff8649d7365e69554eadab6027/scripts/smart-approach-svg.ts",
+        "commit": "7314adf11291a1e66db31a0b9e8e484094f0183e",
+        "data": "https://github.com/litlfred/who-iris/blob/7314adf11291a1e66db31a0b9e8e484094f0183e/library/9789240116191-eng/figure-data/fig-5-smart-guidelines-approach.json",
+        "generator": "https://github.com/litlfred/folio-assistant-core/blob/da0599282fc0cb3f054e187fac5c80ddbf682999/scripts/smart-approach-svg.ts",
         "tool": "smart-approach-svg",
         "pr": [
           "https://github.com/litlfred/who-iris/pull/149",
