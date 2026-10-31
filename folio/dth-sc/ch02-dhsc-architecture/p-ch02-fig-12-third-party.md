@@ -1,0 +1,1 @@
+Fig. 12. SCISMM maturity levels for HSCISs: reproduced in the handbook by permission of the publisher, Digital Square (SCISMM, reference 16). It is third-party material outside the handbook's CC BY-NC-SA 3.0 IGO licence, so it is not copied here; see the handbook, PDF page 31.

@@ -13,7 +13,7 @@ export default chapter({
     section({
       title: "Building blocks and implementation considerations",
       label: "sec:ch03-building-blocks-and-implementation-consi",
-      blocks: ["p-ch03-page-045", "p-ch03-page-046", "t-ch03-table-2"],
+      blocks: ["p-ch03-page-045", "f-ch03-fig-22", "p-ch03-page-046", "t-ch03-table-2"],
     }),
     section({
       title: "Step 1. Plan the implementation of each DHSC intervention",
@@ -28,7 +28,7 @@ export default chapter({
     section({
       title: "Step 3. Develop a budget for each DHSC intervention",
       label: "sec:ch03-step-3-develop-a-budget-for-each-dhsc-in",
-      blocks: ["p-ch03-page-049", "p-ch03-page-050", "t-ch03-table-3"],
+      blocks: ["p-ch03-page-049", "f-ch03-fig-23", "p-ch03-page-050", "t-ch03-table-3"],
     }),
     section({
       title: "Step 4. Implement each DHSC intervention",

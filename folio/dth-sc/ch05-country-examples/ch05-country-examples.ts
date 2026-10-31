@@ -13,17 +13,17 @@ export default chapter({
     section({
       title: "Ethiopia's DHSC initiative",
       label: "sec:ch05-ethiopias-dhsc-initiative",
-      blocks: ["p-ch05-page-058", "p-ch05-page-059"],
+      blocks: ["p-ch05-page-058", "p-ch05-page-059", "f-ch05-fig-26-27"],
     }),
     section({
       title: "Malawi's DHSC initiative",
       label: "sec:ch05-malawis-dhsc-initiative",
-      blocks: ["p-ch05-page-060", "p-ch05-page-061", "p-ch05-page-062"],
+      blocks: ["p-ch05-page-060", "p-ch05-page-061", "f-ch05-fig-28-29", "p-ch05-page-062", "f-ch05-fig-30"],
     }),
     section({
       title: "Rwanda's DHSC initiative",
       label: "sec:ch05-rwandas-dhsc-initiative",
-      blocks: ["p-ch05-page-063", "p-ch05-page-064"],
+      blocks: ["p-ch05-page-063", "p-ch05-page-064", "f-ch05-fig-31-32"],
     }),
   ],
 });

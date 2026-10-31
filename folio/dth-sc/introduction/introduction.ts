@@ -27,7 +27,7 @@ export default chapter({
     section({
       title: "Alignment with the DIIG",
       label: "sec:introduction-alignment-with-the-diig",
-      blocks: ["p-introduction-page-015"],
+      blocks: ["p-introduction-page-015", "f-introduction-fig-5"],
     }),
     section({
       title: "Alignment with WHO's SMART Guidelines",

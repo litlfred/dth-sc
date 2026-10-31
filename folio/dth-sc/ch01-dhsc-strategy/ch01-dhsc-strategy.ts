@@ -33,7 +33,7 @@ export default chapter({
     section({
       title: "Step 4. Define a strategic roadmap and performance indicators",
       label: "sec:ch01-step-4-define-a-strategic-roadmap-and-pe",
-      blocks: ["p-ch01-page-025", "p-ch01-page-026"],
+      blocks: ["p-ch01-page-025", "p-ch01-page-026", "f-ch01-fig-10"],
     }),
   ],
 });

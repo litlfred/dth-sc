@@ -13,7 +13,7 @@ export default chapter({
     section({
       title: "What is traceability? Why is it important? Traceability models",
       label: "sec:ch04-what-is-traceability-why-is-it-important",
-      blocks: ["p-ch04-page-054", "p-ch04-page-055", "p-ch04-page-056"],
+      blocks: ["p-ch04-page-054", "p-ch04-page-055", "f-ch04-fig-24", "p-ch04-page-056", "f-ch04-fig-25"],
     }),
   ],
 });

@@ -23,7 +23,10 @@ This is a ONE-TIME SEED. After it, the folio is the working document and is
 edited by hand. The script refuses to overwrite folio/dth-sc/ unless --force
 is given, and --force discards hand edits.
 
-What it does not do yet (workplan, section 6): figures are not yet placed; no block links to the
+Figures: each page the L1 entry renders a figure for (FIGURES) gets a
+figure block after its prose, with the PNG copied into folio/dth-sc/media/.
+
+What it does not do yet (workplan, section 6): no block links to the
 glossary or to smart-ra ArchiMate elements yet.
 """
 
@@ -108,6 +111,38 @@ OUTLINE = [
 ]
 LAST_PAGE = 76  # 77 is blank, 78 the back cover
 
+# The figures the L1 entry renders from the PDF's vector layer
+# (figures/vfig-pNNN.png), with the handbook's own numbers and titles. Figs 1-4
+# and 6-9 have no rendering in the L1 entry yet; vfig-p032 is the Step 2 box
+# (a layout panel, not a figure) and is left out.
+FIGURES = {
+    15: [(5, "DIIG process for planning and implementing a digital health enterprise")],
+    26: [(10, "Example of outputs from this chapter")],
+    29: [(11, "Health supply chain end-to-end visibility and traceability")],
+    31: [(12, "SCISMM maturity levels for HSCISs")],
+    33: [(13, "DIIG digital health enterprise architecture framework")],
+    34: [(14, "DHSC architecture framework")],
+    36: [(15, "Maturity-based architecture: moving from SCISMM Level 3 to Level 4")],
+    37: [(16, "Maturity-based architecture: moving from SCISMM Level 4 to Level 5")],
+    38: [(17, "Architecture based on supply chain design: centralized management")],
+    39: [(18, "Architecture based on supply chain design: decentralized management (option A)")],
+    40: [(19, "Architecture based on supply chain design: decentralized management (option B)")],
+    41: [(20, "Benefits of cross-enterprise analytics services")],
+    43: [(21, "Example of outputs from this chapter")],
+    45: [(22, "Building blocks of digital health and DHSC implementation")],
+    49: [(23, "Cost components to determine the total cost of ownership")],
+    55: [(24, "Achieving track and trace capabilities through DHSC architecture components")],
+    56: [(25, "Illustrative example of a traceability service interface")],
+    59: [(26, "Current-state supply chain systems in Ethiopia"), (27, "Future-state supply chain systems in Ethiopia")],
+    61: [(28, "Current-state supply chain systems in Malawi"), (29, "Future-state supply chain systems in Malawi")],
+    62: [(30, "Visualization of future-state architecture from Malawi's SCSA")],
+    64: [(31, "Current-state supply chain systems in Rwanda"), (32, "Future-state supply chain systems in Rwanda")],
+}
+
+# Third-party figures the handbook reproduces by permission: not covered by
+# its CC licence, so the image is not copied here; a note points to the page.
+THIRD_PARTY = {31: "reproduced in the handbook by permission of the publisher, Digital Square (SCISMM, reference 16)"}
+
 # Chapter 5 is country reporting: kept as cited source text, never formalized.
 SOURCE_ONLY = {"ch05-country-examples"}
 
@@ -185,6 +220,59 @@ def write_table(d, ch_dir, n, spec, pdf, sec_title):
         "export default table({\n"
         f"  label: {ts_str(spec['label'])},\n"
         f"  caption: {ts_str(spec['caption'])},\n"
+        f"  meta: {json.dumps(meta, ensure_ascii=False)},\n"
+        "});\n", encoding="utf-8")
+    return [root]
+
+
+def write_figure(d, ch_dir, n, l1, sec_title, source_only):
+    """Copy the L1 rendering of page n's figure(s) into media/ and write one figure block."""
+    figs = FIGURES[n]
+    if n in THIRD_PARTY:
+        k, t = figs[0]
+        root = f"p-{ch_dir.split('-')[0]}-fig-{k}-third-party"
+        (d / f"{root}.md").write_text(
+            f"Fig. {k}. {t}: {THIRD_PARTY[n]}. It is third-party material outside the handbook's "
+            f"CC BY-NC-SA 3.0 IGO licence, so it is not copied here; see the handbook, PDF page {n}.\n",
+            encoding="utf-8")
+        meta = {"title": sec_title, "source": {"library": L1_ID, "section": f"page-{n:03d}", "pdfPage": n,
+                                                "method": "third-party-figure-note"}}
+        (d / f"{root}.ts").write_text(
+            'import { prose } from "../../schema/builders";\n\n'
+            "export default prose({\n"
+            f"  label: {ts_str('prose:' + root[2:])},\n"
+            "  uses: [],\n"
+            f"  meta: {json.dumps(meta, ensure_ascii=False)},\n"
+            "});\n", encoding="utf-8")
+        return [root]
+    src = l1 / "figures" / f"vfig-p{n:03d}.png"
+    media = FOLIO / "media"
+    media.mkdir(exist_ok=True)
+    shutil.copyfile(src, media / src.name)
+    nums = "-".join(str(k) for k, _ in figs)
+    root = f"f-{ch_dir.split('-')[0]}-fig-{nums}"
+    caption = "; ".join(f"Fig. {k}. {t}" for k, t in figs)
+    meta = {
+        "title": sec_title,
+        "source": {
+            "library": L1_ID,
+            "file": f"who-iris/library/{L1_ID}/figures/{src.name}",
+            "page": n,
+            "method": "l1-vector-figure",
+        },
+    }
+    if source_only:
+        meta["sourceOnly"] = "country reporting: cited source figure, not formal content"
+    (d / f"{root}.md").write_text(
+        f"![{caption}](media/{src.name})\n\n*Source: WHO, Digital transformation handbook for health supply chain "
+        f"architecture, 2024, PDF page {n}; rendered from the PDF's vector layer in the L1 entry.*\n", encoding="utf-8")
+    (d / f"{root}.ts").write_text(
+        'import { figure } from "../../schema/builders";\n\n'
+        "export default figure({\n"
+        f"  label: {ts_str('fig:' + nums)},\n"
+        f"  file: {ts_str('media/' + src.name)},\n"
+        f"  caption: {ts_str(caption)},\n"
+        f"  page: {n},\n"
         f"  meta: {json.dumps(meta, ensure_ascii=False)},\n"
         "});\n", encoding="utf-8")
     return [root]
@@ -269,6 +357,8 @@ def main(argv):
                     f"  meta: {json.dumps(meta, ensure_ascii=False)},\n"
                     "});\n", encoding="utf-8")
                 blocks.append(root)
+                if n in FIGURES:
+                    blocks += write_figure(d, ch_dir, n, l1, sec_title, ch_dir in SOURCE_ONLY)
                 if table:
                     blocks += write_table(d, ch_dir, n, table, pdf, sec_title)
             if not blocks:
