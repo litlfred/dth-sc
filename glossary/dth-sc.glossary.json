@@ -2,14 +2,14 @@
   "$schema": "folio-glossary/v1",
   "id": "dth-sc",
   "title": "Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture",
-  "description": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140). Every term is a candidate: only a person adopts a definition. When the smart-ra scheme exists (smart-ra#133 S1), each term gains closeMatch/broadMatch links to the smart-ra concept it narrows.",
+  "description": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140). Every term is a candidate: only a person adopts a definition. When the smart-ra scheme exists (smart-ra#133 S1), each term gains closeMatch/broadMatch links to the smart-ra concept it narrows. Concept labels are Capitalized (owner ruling, 2026-10-31, relayed from the dth-pc thread). Trade Item and Product Master Data are defined in dth-pc, not here (smart-ra#142).",
   "modified": "2026-10-31",
   "source": "who-iris/library/9789240101197-eng",
   "license": "CC-BY-NC-SA-3.0-IGO",
   "terms": [
     {
       "id": "digital-health-supply-chain",
-      "prefLabel": "Digital health supply chain",
+      "prefLabel": "Digital Health Supply Chain",
       "altLabel": [
         "DHSC"
       ],
@@ -20,7 +20,7 @@
     },
     {
       "id": "digital-health-supply-chain-intervention",
-      "prefLabel": "Digital health supply chain intervention",
+      "prefLabel": "Digital Health Supply Chain Intervention",
       "definition": "An intervention that involves the use of digital technologies to improve the management and operation of health supply chains. It aims to enhance the efficiency and effectiveness of health supply chain processes such as planning, procurement, distribution and warehouse management.",
       "broader": [
         "digital-health-supply-chain"
@@ -31,7 +31,7 @@
     },
     {
       "id": "health-supply-chain-information-system",
-      "prefLabel": "Health supply chain information system",
+      "prefLabel": "Health Supply Chain Information System",
       "altLabel": [
         "HSCIS",
         "electronic logistics management information system"
@@ -43,7 +43,7 @@
     },
     {
       "id": "order-management",
-      "prefLabel": "Order management",
+      "prefLabel": "Order Management",
       "definition": "The planning, directing, monitoring and controlling of the processes related to customer or requisition orders. Order management includes order promising; order entry; order pick, pack and ship; billing; and reconciliation of the customer account.",
       "scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook cites its reference 11 for this definition.",
       "source": "who-iris/library/9789240101197-eng/sections/page-009.md",
@@ -51,7 +51,7 @@
     },
     {
       "id": "order-management-system",
-      "prefLabel": "Order management system",
+      "prefLabel": "Order Management System",
       "definition": "A paper-based or software tool that supports the processes for fulfilling requisition orders (e.g., a software tool that supports entry and processing of requisition orders from health facilities to regional or central warehouses to replenish inventory).",
       "broader": [
         "health-supply-chain-information-system"
@@ -65,7 +65,7 @@
     },
     {
       "id": "warehouse-management-system",
-      "prefLabel": "Warehouse management system",
+      "prefLabel": "Warehouse Management System",
       "altLabel": [
         "WMS"
       ],
@@ -79,7 +79,7 @@
     },
     {
       "id": "governance-health-supply-chain",
-      "prefLabel": "Governance (health supply chain)",
+      "prefLabel": "Governance (Health Supply Chain)",
       "definition": "In the context of the health supply chain, the process of establishing and implementing policies, procedures and mechanisms to ensure that the supply chain processes and the systems to manage those processes are managed effectively, ethically and in alignment with established objectives and stakeholders' interests.",
       "scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Boxed definition in Chapter 3 (PDF 45). Differs substantively from the draft RA's 'governance'; both are recorded as alternatives in litlfred/smart-ra#140.",
       "source": "who-iris/library/9789240101197-eng/sections/page-045.md",
@@ -95,7 +95,7 @@
     },
     {
       "id": "traceability-model",
-      "prefLabel": "Traceability model",
+      "prefLabel": "Traceability Model",
       "definition": "One of the three main models for implementing traceability (centralized, semi-centralized, distributed), which differ mostly in how they store traceability data and share them with the relevant health authority and across actors in the supply chain.",
       "related": [
         "traceability"
@@ -106,7 +106,7 @@
     },
     {
       "id": "centralized-traceability-model",
-      "prefLabel": "Centralized traceability model",
+      "prefLabel": "Centralized Traceability Model",
       "definition": "A traceability model that involves a single database or repository for storing all traceability data.",
       "broader": [
         "traceability-model"
@@ -117,7 +117,7 @@
     },
     {
       "id": "semi-centralized-traceability-model",
-      "prefLabel": "Semi-centralized traceability model",
+      "prefLabel": "Semi-Centralized Traceability Model",
       "definition": "A traceability model in which the traceability data are spread across multiple databases or repositories.",
       "broader": [
         "traceability-model"
@@ -128,7 +128,7 @@
     },
     {
       "id": "distributed-traceability-model",
-      "prefLabel": "Distributed traceability model",
+      "prefLabel": "Distributed Traceability Model",
       "definition": "A traceability model in which traceability data are maintained separately by each supply chain partner.",
       "broader": [
         "traceability-model"
