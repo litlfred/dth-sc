@@ -13,6 +13,10 @@
   ],
   "label": "prose:ch01-page-023",
   "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/tbl-annex-3",
+    "papers/dth-sc/blocks/tbl-annex-4"
+  ],
   "text": "p-ch01-page-023.md",
   "meta": {
     "title": "Step 2. Analyse the current state of HSCISs",

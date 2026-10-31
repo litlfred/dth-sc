@@ -4,7 +4,7 @@
 **L1 source:** `litlfred/who-iris/library/9789240101197-eng` (frozen, mounted read-only).
 **Target repo:** `litlfred/dth-sc` (fork of WorldHealthOrganization/dth-sc; today only a README). No WHO repo is touched.
 **Builds on:** workplans.md (project files, dth-l2-ingest-2026-10-31/) (split rule, shared steps S1-S4), smart-ra#133, smart-base#242, dth-hrh#47 (pilot).
-**Status:** approved by the owner 2026-10-31 00:45Z ("create issue and work on dth-sc"). Steps SC0, SC1a, SC1b, SC2a, SC2b, SC3 (`smart-ra#147`), SC4, and S4 (`dpi-h-ra` mount and `needs: ["smart-base", "dpi-h-ra"]`) are implemented on `#1`. dth-pc and dth-sfp depend on dth-sc. Definition conflicts with smart-ra are raised on smart-ra (litlfred/smart-ra#140, #183).
+**Status:** approved by the owner 2026-10-31 00:45Z ("create issue and work on dth-sc"). Steps SC0, SC1a, SC1b, SC2a, SC2b, SC3 (`smart-ra#147`), SC4, S4 (`dpi-h-ra` mount and `needs: ["smart-base", "dpi-h-ra"]`), and SC5 (`l1-coverage` at 100 % accounted-for in `folio/dth-sc/l1-coverage.json` + `docs/l1-coverage.md`, `check:l1-coverage`, and Chapter 5 / Annexes 1–7 wired as source, template, and resource-matrix blocks) are implemented on `#1`. dth-pc and dth-sfp depend on dth-sc. Definition conflicts with smart-ra are raised on smart-ra (litlfred/smart-ra#140, #183).
 
 ## 1. What the L1 entry holds
 
@@ -110,6 +110,8 @@ The 17 supply chain goals already in smart-ra are not from this handbook's text;
 - **DMN 1.3 decision tables (`decision-table` blocks + `.dmn` companions):**
   - `SC-DT-01` (`dt-sc-dt-01-scismm-architecture-selection`, `folio/dth-sc/ch02-dhsc-architecture/`): SCISMM maturity level and target DHSC architecture variant selection (Ch 2 Fig. 12, Figs. 15-19).
   - `SC-DT-02` (`dt-sc-dt-02-traceability-model-selection`, `folio/dth-sc/ch04-traceability/`): Traceability model selection (Ch 4 centralized, semi-centralized, or distributed model).
+
+- **L1 normative coverage (SC5, `folio/dth-sc/l1-coverage.json` + `docs/l1-coverage.md`):** 100.0 % accounted-for across all 47 normative sentences and 78 pages of `who-iris/library/9789240101197-eng` (41/47 [87.23 %] captured verbatim in `folio/dth-sc/` blocks + 6/47 [12.77 %] signed-off `editorial` exclusions on PDF p. 4 CC BY-NC-SA 3.0 IGO licence/imprint; 0 unaccounted), with Chapter 5 country examples (12 blocks) and Annexes 2–6 filled template rows (27 rows) classified as `source-example` and Annex 7 (14 role rows) mapped to the 5 implementation personas (`SC-R-11`..`SC-R-15`) and `dth-hrh` counterparts. Verified by `bun run check:l1-coverage` (`scripts/folio/check-l1-coverage.ts`).
 
 ## 7. Work order (after the dth-hrh pilot and S1-S4)
 

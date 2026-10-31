@@ -17,6 +17,7 @@ import {
   loadDecisionTable,
   unreadableExpressions,
 } from "../../cat-harness-tools/src/workflow/decision-table.ts";
+import { verifyL1Coverage } from "../folio/check-l1-coverage.ts";
 
 const MATCHES = ["exactMatch", "closeMatch", "broadMatch", "narrowMatch"] as const;
 
@@ -340,5 +341,13 @@ for (const file of allTsFiles) {
 
 console.log(`✓ Business processes: ${bpCount} BPMN 2.0 process(es) with ${laneCount} role-bound lane(s) and rendered SVGs checked`);
 console.log(`✓ Decision tables: ${dtCount} DMN table(s) with ${dtRuleCount} rule(s) checked against dak-dmn-has-decision-table and FEEL evaluator`);
+
+const l1Res = verifyL1Coverage();
+if (!l1Res.ok) {
+  for (const err of l1Res.errors) console.error(`✗ ${err}`);
+  bad += l1Res.errors.length;
+} else {
+  console.log(l1Res.summary);
+}
 
 process.exit(bad ? 1 : 0);

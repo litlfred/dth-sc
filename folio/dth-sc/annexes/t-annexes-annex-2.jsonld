@@ -79,6 +79,18 @@
           "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
         }
       ]
+    },
+    "tableKind": "template",
+    "l1CoverageCategory": "source-example",
+    "usedBySteps": [
+      "prose:ch01-page-022",
+      "pers:steering-committee-sponsor",
+      "bp:sc-bp-01-stepwise-dhsc-transformation"
+    ],
+    "exampleRows": {
+      "category": "source-example",
+      "count": 5,
+      "description": "5 illustrative steering-committee governance tier rows (Executive chairperson, Secretariat, Technical representatives, Partner organizations, Technical working group – governance topics across Data, Process, Technology, and Risk)"
     }
   },
   "provenance": "authored"

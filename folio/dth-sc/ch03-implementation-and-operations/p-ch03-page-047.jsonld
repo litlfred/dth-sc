@@ -13,6 +13,9 @@
   ],
   "label": "prose:ch03-page-047",
   "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/tbl-annex-6"
+  ],
   "text": "p-ch03-page-047.md",
   "meta": {
     "title": "Step 1. Plan the implementation of each DHSC intervention",

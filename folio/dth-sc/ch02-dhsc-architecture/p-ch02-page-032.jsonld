@@ -13,6 +13,9 @@
   ],
   "label": "prose:ch02-page-032",
   "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/prose-annexes-page-066"
+  ],
   "text": "p-ch02-page-032.md",
   "meta": {
     "title": "Step 2. Define a target DHSC architecture; DHSC architecture framework",

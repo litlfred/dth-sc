@@ -90,6 +90,17 @@
           "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
         }
       ]
+    },
+    "tableKind": "template",
+    "l1CoverageCategory": "source-example",
+    "usedBySteps": [
+      "prose:ch01-page-023",
+      "bp:sc-bp-01-stepwise-dhsc-transformation"
+    ],
+    "exampleRows": {
+      "category": "source-example",
+      "count": 6,
+      "description": "6 illustrative challenge-to-outcome rows (Forecasting and planning 20% error; Procurement 3-4 weeks; Central warehouse 15% expiry/wastage; Regional warehouses 23% stockouts; Health facilities 30-50 hours manual entry; Patients lack of trust)"
     }
   },
   "provenance": "authored"

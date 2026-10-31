@@ -45,6 +45,18 @@
           "type": "Capability"
         }
       ]
+    },
+    "tableKind": "template",
+    "l1CoverageCategory": "source-example",
+    "usedBySteps": [
+      "prose:ch03-page-047",
+      "pers:project-manager-ba",
+      "bp:sc-bp-01-stepwise-dhsc-transformation"
+    ],
+    "exampleRows": {
+      "category": "source-example",
+      "count": 1,
+      "description": "1 illustrative risk register row (#001 Inadequate training: Low priority, Low impact, Medium probability, Open status, with mitigation steps)"
     }
   },
   "provenance": "authored"
