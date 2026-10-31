@@ -148,7 +148,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "9846173bf309393cc2394d3d4ebc1d5e0d123d0e",
+          "ref": "6789d7fe072a5831fecf95d7a0fe321178fa8ddd",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -164,8 +164,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-31",
-              "ref": "9846173bf309393cc2394d3d4ebc1d5e0d123d0e",
-              "evidence": "litlfred, 2026-10-31 21:01:15Z, decision card Q-IRIS1 in thread on dth-pc/dth-sc figures: 'A. Yes, merge on green' (merge who-iris#149, then re-pin dth-hrh#68 and dth-pc); window 20:59:38Z 'merge when green and ready +3hrs'. who-iris 7314adf = #149 (DIIG figure data); core, cat-harness and cat-harness-tools re-pinned to main together to avoid skew."
+              "ref": "6789d7fe072a5831fecf95d7a0fe321178fa8ddd",
+              "evidence": "litlfred, 2026-10-31 21:43:07Z: '+3hrs merge+repin' (merge when green and re-pin until 00:43Z). cat-harness 6789d7f = #877 (diagram labels/markers); cat-harness-tools 6417b9d = #1198 (kg:audit:check computes mounted test runs; fixes #1191)."
             }
           }
         }
@@ -176,7 +176,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "2ea402ee20c55d22d755137935a9f2e3a48caa54",
+          "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -189,8 +189,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-31",
-              "ref": "2ea402ee20c55d22d755137935a9f2e3a48caa54",
-              "evidence": "litlfred, 2026-10-31 21:01:15Z, decision card Q-IRIS1 in thread on dth-pc/dth-sc figures: 'A. Yes, merge on green' (merge who-iris#149, then re-pin dth-hrh#68 and dth-pc); window 20:59:38Z 'merge when green and ready +3hrs'. who-iris 7314adf = #149 (DIIG figure data); core, cat-harness and cat-harness-tools re-pinned to main together to avoid skew."
+              "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
+              "evidence": "litlfred, 2026-10-31 21:43:07Z: '+3hrs merge+repin' (merge when green and re-pin until 00:43Z). cat-harness-tools 6417b9d = #1198 (kg:audit:check computes mounted test runs; fixes #1191)."
             }
           }
         }
