@@ -2,7 +2,7 @@
   "$schema": "folio-glossary/v1",
   "id": "dth-sc",
   "title": "Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture",
-  "description": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140, #183). Every term is a candidate: only a person adopts a definition. Each term links via SKOS broadMatch/closeMatch/related to the dpi-h-ra concept it narrows or relates to (smart-ra#133 S1, dth-sc#2 SC2b). Concept labels are Capitalized (owner ruling, 2026-10-31, relayed from the dth-pc thread). Trade Item and Product Master Data are defined in dth-pc, not here (smart-ra#142).",
+  "description": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140, #183). Every term is a candidate: only a person adopts a definition. Each term links via SKOS broadMatch/closeMatch/related to the dpi-h-ra concept it narrows or relates to (smart-ra#133 S1, dth-sc#2 SC2b). Concept labels are Capitalized (owner ruling, 2026-10-31, relayed from the dth-pc thread). Trade Item and Product Master Data are defined in dth-pc, not here (smart-ra#142). Acronyms (owner, 2026-10-31): every acronym the handbook uses is a term here with the acronym as notation, unless smart-ra already holds it (FHIR). Organizations several handbooks name live once in smart-ra's organizations scheme and are listed under members; organizations only this handbook names (DH&I WG, DHI, USAID GHSC-PSM, HTSS, IHE, ICMRA, PtD, ASCM, BUFMAR, DAI) are terms here with a foaf:focus to a W3C ORG organization (litlfred/folio-assistant-core#411).",
   "modified": "2026-10-31",
   "source": "folio/dth-sc",
   "license": "CC-BY-NC-SA-3.0-IGO",
@@ -23,7 +23,8 @@
       "related": [
         "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-digital-public-infrastructure",
         "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture"
-      ]
+      ],
+      "notation": "DHSC"
     },
     {
       "id": "digital-health-supply-chain-intervention",
@@ -60,7 +61,8 @@
       "related": [
         "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application",
         "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/point-of-service-applications"
-      ]
+      ],
+      "notation": "HSCIS"
     },
     {
       "id": "order-management",
@@ -89,7 +91,11 @@
       "status": "candidate",
       "broadMatch": [
         "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
-      ]
+      ],
+      "altLabel": [
+        "OMS"
+      ],
+      "notation": "OMS"
     },
     {
       "id": "warehouse-management-system",
@@ -109,7 +115,8 @@
       ],
       "related": [
         "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application"
-      ]
+      ],
+      "notation": "WMS"
     },
     {
       "id": "governance-health-supply-chain",
@@ -210,6 +217,849 @@
         "traceability",
         "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
       ]
+    },
+    {
+      "id": "digital-implementation-investment-guide",
+      "prefLabel": "Digital Implementation Investment Guide",
+      "altLabel": [
+        "DIIG"
+      ],
+      "notation": "DIIG",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "electronic-regulatory-information-system",
+      "prefLabel": "Electronic Regulatory Information System",
+      "altLabel": [
+        "eRIS"
+      ],
+      "notation": "eRIS",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "enterprise-resource-planning",
+      "prefLabel": "Enterprise Resource Planning",
+      "altLabel": [
+        "ERP"
+      ],
+      "notation": "ERP",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "full-time-equivalent",
+      "prefLabel": "Full-Time Equivalent",
+      "altLabel": [
+        "FTE"
+      ],
+      "notation": "FTE",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "global-family-planning-visibility-and-analytics-network",
+      "prefLabel": "Global Family Planning Visibility and Analytics Network",
+      "altLabel": [
+        "GFPVAN"
+      ],
+      "notation": "GFPVAN",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "information-and-communications-technology",
+      "prefLabel": "Information and Communications Technology",
+      "altLabel": [
+        "ICT"
+      ],
+      "notation": "ICT",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "information-technology",
+      "prefLabel": "Information Technology",
+      "altLabel": [
+        "IT"
+      ],
+      "notation": "IT",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "key-performance-indicator",
+      "prefLabel": "Key Performance Indicator",
+      "altLabel": [
+        "KPI"
+      ],
+      "notation": "KPI",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "ministry-of-health",
+      "prefLabel": "Ministry of Health",
+      "altLabel": [
+        "MOH",
+        "MoH"
+      ],
+      "notation": "MOH",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. A kind of organization (each country has one), so it has no focus.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "national-product-catalog",
+      "prefLabel": "National Product Catalog",
+      "altLabel": [
+        "NPC"
+      ],
+      "notation": "NPC",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "national-supply-chain-assessment",
+      "prefLabel": "National Supply Chain Assessment",
+      "altLabel": [
+        "NSCA"
+      ],
+      "notation": "NSCA",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "quality-assurance",
+      "prefLabel": "Quality Assurance",
+      "altLabel": [
+        "QA"
+      ],
+      "notation": "QA",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "request-for-proposal",
+      "prefLabel": "Request for Proposal",
+      "altLabel": [
+        "RFP"
+      ],
+      "notation": "RFP",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "request-for-quotation",
+      "prefLabel": "Request for Quotation",
+      "altLabel": [
+        "RFQ"
+      ],
+      "notation": "RFQ",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "supply-chain-information-system-maturity-model",
+      "prefLabel": "Supply Chain Information System Maturity Model",
+      "altLabel": [
+        "SCISMM"
+      ],
+      "notation": "SCISMM",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "supply-chain-systems-architecture",
+      "prefLabel": "Supply Chain Systems Architecture",
+      "altLabel": [
+        "SCSA"
+      ],
+      "notation": "SCSA",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Malawi's national health supply chain architecture (Chapter 5, page 60).",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "smart",
+      "prefLabel": "Standards-based, Machine-readable, Adaptive, Requirements-based and Testable",
+      "altLabel": [
+        "SMART"
+      ],
+      "notation": "SMART",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "related": [
+        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/smart-guidelines"
+      ],
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "togaf",
+      "prefLabel": "The Open Group Architecture Framework",
+      "altLabel": [
+        "TOGAF"
+      ],
+      "notation": "TOGAF",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "target-software-standards",
+      "prefLabel": "Target Software Standards",
+      "altLabel": [
+        "TSS"
+      ],
+      "notation": "TSS",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "technical-working-group",
+      "prefLabel": "Technical Working Group",
+      "altLabel": [
+        "TWG"
+      ],
+      "notation": "TWG",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate"
+    },
+    {
+      "id": "declaration-of-interests",
+      "prefLabel": "Declaration of Interests",
+      "altLabel": [
+        "DOI"
+      ],
+      "notation": "DOI",
+      "scopeNote": "Expanded in the acknowledgements ('WHO Declaration of Interests (DOI) form'). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-006.md",
+      "status": "candidate"
+    },
+    {
+      "id": "monitoring-and-evaluation",
+      "prefLabel": "Monitoring and Evaluation",
+      "altLabel": [
+        "M&E"
+      ],
+      "notation": "M&E",
+      "scopeNote": "Expanded in the Figure 5 legend. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-015.md",
+      "status": "candidate"
+    },
+    {
+      "id": "antenatal-care",
+      "prefLabel": "Antenatal Care",
+      "altLabel": [
+        "ANC"
+      ],
+      "notation": "ANC",
+      "scopeNote": "Expanded in Figure 6. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-017.md",
+      "status": "candidate"
+    },
+    {
+      "id": "rapid-assessment-and-management",
+      "prefLabel": "Rapid Assessment and Management",
+      "altLabel": [
+        "RAM"
+      ],
+      "notation": "RAM",
+      "scopeNote": "Expanded in Figure 6 ('Rapid assessment and management (RAM)', in the ANC clinical workflow). Note: in dth-sc RAM expands to Rapid Assessment and Management, not Responsibility Assignment Matrix as in dth-pc. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-017.md",
+      "status": "candidate"
+    },
+    {
+      "id": "raci",
+      "prefLabel": "Responsible, Accountable, Consulted, and Informed",
+      "altLabel": [
+        "RACI"
+      ],
+      "notation": "RACI",
+      "scopeNote": "Expanded in the text ('a RACI matrix – responsible, accountable, consulted, informed'). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-047.md",
+      "status": "candidate"
+    },
+    {
+      "id": "request-for-information",
+      "prefLabel": "Request for Information",
+      "altLabel": [
+        "RFI"
+      ],
+      "notation": "RFI",
+      "scopeNote": "Expanded in the Figure 23 legend. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-049.md",
+      "status": "candidate"
+    },
+    {
+      "id": "national-supply-chain-information-systems",
+      "prefLabel": "National Supply Chain Information Systems",
+      "altLabel": [
+        "NSCIS"
+      ],
+      "notation": "NSCIS",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "Expanded in Figure 30 (Malawi SCSA future-state architecture). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-062.md",
+      "status": "candidate"
+    },
+    {
+      "id": "facilities-supply-chain-information-systems",
+      "prefLabel": "Facilities' Supply Chain Information Systems",
+      "altLabel": [
+        "FSCIS"
+      ],
+      "notation": "FSCIS",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "Expanded in Figure 30 (Malawi SCSA future-state architecture). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-062.md",
+      "status": "candidate"
+    },
+    {
+      "id": "digital-supply-chain",
+      "prefLabel": "Digital Supply Chain",
+      "altLabel": [
+        "DSC"
+      ],
+      "notation": "DSC",
+      "scopeNote": "Expanded in the Rwanda country experience ('Rwanda's Digital Supply Chain (DSC) Strategy and Architecture'). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-063.md",
+      "status": "candidate",
+      "related": [
+        "digital-health-supply-chain"
+      ]
+    },
+    {
+      "id": "ihe-pharmacy",
+      "prefLabel": "IHE Pharmacy",
+      "altLabel": [
+        "PHARM"
+      ],
+      "notation": "PHARM",
+      "related": [
+        "integrating-the-healthcare-enterprise"
+      ],
+      "scopeNote": "Expanded in Reference 23 ('IHE Pharmacy (PHARM) white paper: supply of products for healthcare'). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-065.md",
+      "status": "candidate"
+    },
+    {
+      "id": "chief-technology-officer",
+      "prefLabel": "Chief Technology Officer",
+      "altLabel": [
+        "CTO"
+      ],
+      "notation": "CTO",
+      "scopeNote": "Written out in Annex 7 (page 72) and abbreviated CTO in the folio's persona blocks. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "status": "candidate"
+    },
+    {
+      "id": "chief-information-officer",
+      "prefLabel": "Chief Information Officer",
+      "altLabel": [
+        "CIO"
+      ],
+      "notation": "CIO",
+      "scopeNote": "Written out in Annex 7 (page 72) and abbreviated CIO in the folio's persona blocks. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "status": "candidate"
+    },
+    {
+      "id": "chief-digital-officer",
+      "prefLabel": "Chief Digital Officer",
+      "altLabel": [
+        "CDO"
+      ],
+      "notation": "CDO",
+      "scopeNote": "Written out in Annex 7 (page 72) and abbreviated CDO in the folio's persona blocks. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "status": "candidate"
+    },
+    {
+      "id": "user-acceptance-testing",
+      "prefLabel": "User Acceptance Testing",
+      "altLabel": [
+        "UAT"
+      ],
+      "notation": "UAT",
+      "scopeNote": "Written out in Annex 7 (page 75) and abbreviated UAT in the folio's business process blocks. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-075.md",
+      "status": "candidate"
+    },
+    {
+      "id": "total-cost-of-ownership",
+      "prefLabel": "Total Cost of Ownership",
+      "altLabel": [
+        "TCO"
+      ],
+      "notation": "TCO",
+      "scopeNote": "Written out in Figure 5 (page 15) and Chapter 3 (page 50), and abbreviated TCO in the folio's persona blocks. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-015.md",
+      "status": "candidate"
+    },
+    {
+      "id": "transportation-management-system",
+      "prefLabel": "Transportation Management System",
+      "altLabel": [
+        "TMS"
+      ],
+      "notation": "TMS",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "Named as a health supply chain information system category in Figure 14 (page 34) and abbreviated TMS in the folio's business process blocks. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-034.md",
+      "status": "candidate"
+    },
+    {
+      "id": "community-health-worker",
+      "prefLabel": "Community Health Worker",
+      "altLabel": [
+        "CHW"
+      ],
+      "notation": "CHW",
+      "scopeNote": "Written out in the Introduction (page 11) and Annex 5 (page 70), and abbreviated CHW in the folio's business process blocks. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-011.md",
+      "status": "candidate"
+    },
+    {
+      "id": "health-facility-logistics-management-system",
+      "prefLabel": "Health Facility Logistics Management System",
+      "altLabel": [
+        "HFLMS"
+      ],
+      "notation": "HFLMS",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "Written out in Figure 1 (page 11) and abbreviated HFLMS in the folio's business process blocks. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-011.md",
+      "status": "candidate"
+    },
+    {
+      "id": "electronic-logistics-management-information-system",
+      "prefLabel": "Electronic Logistics Management Information System",
+      "altLabel": [
+        "eLMIS"
+      ],
+      "notation": "eLMIS",
+      "scopeNote": "The handbook's glossary defines Health Supply Chain Information System as 'also commonly referred to as electronic logistics management information systems' (page 8), and Figures 9, 26, 27 and 31 use the acronym eLMIS without listing it in the abbreviations table. Linked as related to health-supply-chain-information-system. A candidate: no separate definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-021.md",
+      "status": "candidate",
+      "related": [
+        "health-supply-chain-information-system"
+      ]
+    },
+    {
+      "id": "openlmis",
+      "prefLabel": "Open Logistics Management Information System",
+      "altLabel": [
+        "OpenLMIS"
+      ],
+      "notation": "OpenLMIS",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "The handbook uses the acronym without expanding it (Figures 28–30 and Annex 5). The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "status": "candidate"
+    },
+    {
+      "id": "dhis2",
+      "prefLabel": "District Health Information Software 2",
+      "altLabel": [
+        "DHIS2"
+      ],
+      "notation": "DHIS2",
+      "scopeNote": "The handbook uses the acronym without expanding it (Figures 26–32). The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "status": "candidate"
+    },
+    {
+      "id": "electronic-medical-record",
+      "prefLabel": "Electronic Medical Record",
+      "altLabel": [
+        "EMR"
+      ],
+      "notation": "EMR",
+      "scopeNote": "The handbook uses the acronym without expanding it (Figures 26–29, 31–32). The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "status": "candidate"
+    },
+    {
+      "id": "openhim",
+      "prefLabel": "Open Health Information Mediator",
+      "altLabel": [
+        "OpenHIM"
+      ],
+      "notation": "OpenHIM",
+      "scopeNote": "The handbook uses the acronym without expanding it (page 34 and Figures 26–32). The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-034.md",
+      "status": "candidate"
+    },
+    {
+      "id": "quantification-analytics-tool",
+      "prefLabel": "Quantification Analytics Tool",
+      "altLabel": [
+        "QAT"
+      ],
+      "notation": "QAT",
+      "scopeNote": "The handbook uses the acronym without expanding it (Figures 28–32). The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "status": "candidate"
+    },
+    {
+      "id": "dagu",
+      "prefLabel": "Dagu",
+      "altLabel": [
+        "DAGU"
+      ],
+      "notation": "DAGU",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "Named in Figures 26 and 27 (Ethiopia facility-level logistics management system) without expansion. A candidate: check in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "status": "candidate"
+    },
+    {
+      "id": "electronic-government-procurement",
+      "prefLabel": "Electronic Government Procurement",
+      "altLabel": [
+        "e-GP",
+        "E-GP"
+      ],
+      "notation": "e-GP",
+      "scopeNote": "The handbook uses the acronym (written E-GP in Figure 29 and e-GP in Figure 30) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "status": "candidate"
+    },
+    {
+      "id": "electronic-health-information-network",
+      "prefLabel": "Electronic Health Information Network",
+      "altLabel": [
+        "eHIN"
+      ],
+      "notation": "eHIN",
+      "scopeNote": "The handbook uses the acronym in Figures 28–30 (Malawi dispensing system) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "status": "candidate"
+    },
+    {
+      "id": "health-information-system",
+      "prefLabel": "Health Information System",
+      "altLabel": [
+        "HIS"
+      ],
+      "notation": "HIS",
+      "scopeNote": "The handbook uses the acronym without expanding it (Figure 5 and page 31). The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-015.md",
+      "status": "candidate"
+    },
+    {
+      "id": "quantb",
+      "prefLabel": "QuanTB",
+      "notation": "QuanTB",
+      "scopeNote": "Named in Figures 28–30 (Malawi forecasting and planning tool) without expansion. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "status": "candidate"
+    },
+    {
+      "id": "vitas",
+      "prefLabel": "VITAS",
+      "notation": "VITAS",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "Named in Figures 26 and 27 (Ethiopia warehouse and inventory management system) without expansion. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "status": "candidate"
+    },
+    {
+      "id": "eapts",
+      "prefLabel": "Electronic Auditable Pharmaceutical Transactions and Services",
+      "altLabel": [
+        "eAPTs"
+      ],
+      "notation": "eAPTs",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "The handbook uses the acronym in Figures 26 and 27 (Ethiopia dispensing system) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "status": "candidate"
+    },
+    {
+      "id": "fanos",
+      "prefLabel": "FANOS",
+      "notation": "FANOS",
+      "broader": [
+        "health-supply-chain-information-system"
+      ],
+      "scopeNote": "Named in Figures 26 and 27 (Ethiopia supply chain system) without expansion. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "status": "candidate"
+    },
+    {
+      "id": "rapidsms",
+      "prefLabel": "RapidSMS",
+      "notation": "RapidSMS",
+      "scopeNote": "Named in Annex 5 (page 70) without expansion. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-070.md",
+      "status": "candidate"
+    },
+    {
+      "id": "sage",
+      "prefLabel": "Sage",
+      "altLabel": [
+        "SAGE"
+      ],
+      "notation": "SAGE",
+      "scopeNote": "Named in Figure 31 (Rwanda current-state supply chain systems) without expansion. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-064.md",
+      "status": "candidate"
+    },
+    {
+      "id": "geographic-information-system",
+      "prefLabel": "Geographic Information System",
+      "altLabel": [
+        "GIS"
+      ],
+      "notation": "GIS",
+      "scopeNote": "The handbook uses the acronym in Figure 13 (page 33) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-033.md",
+      "status": "candidate"
+    },
+    {
+      "id": "sustainable-development-goal",
+      "prefLabel": "Sustainable Development Goal",
+      "altLabel": [
+        "SDG"
+      ],
+      "notation": "SDG",
+      "scopeNote": "The handbook uses the acronym in Figure 5 (page 15) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-015.md",
+      "status": "candidate"
+    },
+    {
+      "id": "global-trade-item-number",
+      "prefLabel": "Global Trade Item Number",
+      "altLabel": [
+        "GTIN"
+      ],
+      "notation": "GTIN",
+      "related": [
+        "traceability"
+      ],
+      "scopeNote": "Used in the folio's traceability hub persona without expansion in the handbook. The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "status": "candidate"
+    },
+    {
+      "id": "global-location-number",
+      "prefLabel": "Global Location Number",
+      "altLabel": [
+        "GLN"
+      ],
+      "notation": "GLN",
+      "related": [
+        "traceability"
+      ],
+      "scopeNote": "Used in the folio's traceability hub persona without expansion in the handbook. The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "status": "candidate"
+    },
+    {
+      "id": "digital-health-and-interoperability-working-group",
+      "prefLabel": "Digital Health and Interoperability Working Group",
+      "altLabel": [
+        "DH&I WG",
+        "DH&I"
+      ],
+      "notation": "DH&I WG",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel, and cited in Reference 2. A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate",
+      "focus": {
+        "type": "OrganizationalCollaboration",
+        "homepage": "https://wiki.digitalsquare.io/index.php/Digital_Health_%26_Interoperability_Working_Group"
+      }
+    },
+    {
+      "id": "who-department-of-digital-health-and-innovations",
+      "prefLabel": "Department of Digital Health and Innovations",
+      "altLabel": [
+        "DHI",
+        "WHO Department of Digital Health and Innovations"
+      ],
+      "notation": "DHI",
+      "scopeNote": "Expanded in the acknowledgements ('WHO Department of Digital Health and Innovations (DHI)'). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-006.md",
+      "status": "candidate",
+      "focus": {
+        "type": "OrganizationalUnit",
+        "subOrganizationOf": [
+          "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/who/_focus"
+        ]
+      }
+    },
+    {
+      "id": "usaid-ghsc-psm",
+      "prefLabel": "USAID Global Health Supply Chain Program–Procurement and Supply Management",
+      "altLabel": [
+        "GHSC-PSM",
+        "USAID GHSC-PSM",
+        "Global Health Supply Chain Program–Procurement and Supply Management"
+      ],
+      "notation": "GHSC-PSM",
+      "scopeNote": "Named in the handbook's acknowledgements (page 6) and abbreviations table (page 7). A candidate: no definition has been written. A USAID programme.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate",
+      "focus": {
+        "type": "OrganizationalUnit",
+        "subOrganizationOf": [
+          "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/usaid/_focus"
+        ]
+      }
+    },
+    {
+      "id": "health-technical-support-services",
+      "prefLabel": "Health Technical Support Services",
+      "altLabel": [
+        "HTSS"
+      ],
+      "notation": "HTSS",
+      "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A division of the Ministry of Health of Malawi (page 60). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "status": "candidate",
+      "focus": {
+        "type": "OrganizationalUnit"
+      }
+    },
+    {
+      "id": "integrating-the-healthcare-enterprise",
+      "prefLabel": "Integrating the Healthcare Enterprise",
+      "altLabel": [
+        "IHE",
+        "IHE International"
+      ],
+      "notation": "IHE",
+      "scopeNote": "Named on page 35 and expanded in Reference 23 (page 65). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-035.md",
+      "status": "candidate",
+      "focus": {
+        "type": "FormalOrganization",
+        "homepage": "https://www.ihe.net/"
+      }
+    },
+    {
+      "id": "icmra",
+      "prefLabel": "International Coalition of Medicines Regulatory Authorities",
+      "altLabel": [
+        "ICMRA"
+      ],
+      "notation": "ICMRA",
+      "scopeNote": "Expanded in Chapter 4 (page 54) and Reference 26 (page 65). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "status": "candidate",
+      "focus": {
+        "type": "OrganizationalCollaboration",
+        "homepage": "https://www.icmra.info/"
+      }
+    },
+    {
+      "id": "people-that-deliver",
+      "prefLabel": "People that Deliver",
+      "altLabel": [
+        "PtD"
+      ],
+      "notation": "PtD",
+      "scopeNote": "Expanded in Annex 7 (page 72). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "status": "candidate",
+      "focus": {
+        "type": "OrganizationalCollaboration",
+        "homepage": "https://peoplethatdeliver.org/"
+      }
+    },
+    {
+      "id": "association-for-supply-chain-management",
+      "prefLabel": "Association for Supply Chain Management",
+      "altLabel": [
+        "ASCM"
+      ],
+      "notation": "ASCM",
+      "scopeNote": "Expanded in Reference 11 (page 65). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-065.md",
+      "status": "candidate",
+      "focus": {
+        "type": "FormalOrganization",
+        "homepage": "https://www.ascm.org/"
+      }
+    },
+    {
+      "id": "bufmar",
+      "prefLabel": "Bureau des Formations Médicales Agréées du Rwanda",
+      "altLabel": [
+        "BUFMAR"
+      ],
+      "notation": "BUFMAR",
+      "scopeNote": "The handbook uses the acronym in Figure 31 (page 64, Rwanda current-state supply chain systems) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-064.md",
+      "status": "candidate",
+      "focus": {
+        "type": "FormalOrganization"
+      }
+    },
+    {
+      "id": "dai",
+      "prefLabel": "DAI",
+      "notation": "DAI",
+      "scopeNote": "Named in the acknowledgements (page 6). A candidate: no definition has been written.",
+      "source": "who-iris/library/9789240101197-eng/sections/page-006.md",
+      "status": "candidate",
+      "focus": {
+        "type": "FormalOrganization"
+      }
     }
+  ],
+  "members": [
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/un",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/who",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/paho",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/unicef",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/unido",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/itu",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/hl7",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/gs1",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/usaid",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/global-fund",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/gavi",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/giz",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/path",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/openhie",
+    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/gates-foundation"
   ]
 }
