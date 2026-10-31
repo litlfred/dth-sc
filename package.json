@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "cat": "bun cat-harness-tools/scripts/run-script.ts",
-    "site:document": "bun run folio-assistant-core/scripts/build-document-site.ts --landing-layout default --document-layout default --out",
+    "site:document": "bun run folio-assistant-core/scripts/build-document-site.ts --landing-layout default --document-layout default --link-terms --out",
     "site:library": "bun run folio-assistant-core/scripts/build-library-site.ts --out",
     "site:node-kinds": "bun run cat-harness-tools/scripts/gen-node-kind-pages.ts --root . --out",
     "kg:blocks": "bun run cat-harness-tools/pipeline/gen-block-jsonld.ts --paper dth-sc",
