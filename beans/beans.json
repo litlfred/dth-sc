@@ -1,0 +1,13 @@
+{
+  "name": "dth-sc",
+  "directories": [
+    {
+      "id": "defs",
+      "path": "defs",
+      "graphTypologies": [
+        "bean-defs"
+      ],
+      "description": "Work items \u2014 one Markdown file each, in the layout the `beans` CLI reads (`.beans.yml`)."
+    }
+  ]
+}

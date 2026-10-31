@@ -1,0 +1,12 @@
+{
+  "$schema": "state-manifest/v1",
+  "authoritative": true,
+  "subgraph": "beans",
+  "keyedBy": "tip",
+  "graphs": [
+    {
+      "path": "beans"
+    }
+  ],
+  "note": "The beans subgraph of this instance, kept off main from its first commit (folio_init, bean hp54)."
+}

@@ -1,0 +1,115 @@
+{
+  "$schema": "folio-workflow-instance/v1",
+  "instanceId": "editing--fig-5",
+  "processId": "Process_EditingValidation",
+  "bpmnPath": "cat-harness/processes/content/editing-hci-validation.bpmn",
+  "subject": "fig:5",
+  "createdAt": "2026-10-31T21:15:10.000Z",
+  "updatedAt": "2026-10-31T21:15:20.000Z",
+  "status": "completed",
+  "currentActivity": "EndEvent_Accepted",
+  "variables": {
+    "blockLabel": "fig:5",
+    "manifestPath": "folio/dth-sc/introduction/f-introduction-fig-5.ts",
+    "structuralResult": "pass",
+    "needsHumanReview": false,
+    "allGreen": true
+  },
+  "history": [
+    {
+      "step": 1,
+      "elementId": "StartEvent_BlockChanged",
+      "elementName": "Block created or modified",
+      "timestamp": "2026-10-31T21:15:10.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 2,
+      "elementId": "Task_SelectBlock",
+      "elementName": "Select block via block_select",
+      "timestamp": "2026-10-31T21:15:11.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 3,
+      "elementId": "Task_StructuralCheck",
+      "elementName": "Run structural validation via content_validate",
+      "timestamp": "2026-10-31T21:15:12.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 4,
+      "elementId": "Gateway_StructuralResult",
+      "elementName": "Structural check passes?",
+      "timestamp": "2026-10-31T21:15:13.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 5,
+      "elementId": "Task_ExecuteJudge",
+      "elementName": "Execute LLM judge criteria via qa_judge_criteria",
+      "timestamp": "2026-10-31T21:15:14.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 6,
+      "elementId": "Gateway_NeedsHumanReview",
+      "elementName": "Any needs-human-review criteria?",
+      "timestamp": "2026-10-31T21:15:15.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 7,
+      "elementId": "Task_RecordSignoff",
+      "elementName": "Record verdict via qa_record_verdict",
+      "timestamp": "2026-10-31T21:15:16.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 8,
+      "elementId": "Gateway_AllGreen",
+      "elementName": "All criteria pass?",
+      "timestamp": "2026-10-31T21:15:17.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 9,
+      "elementId": "Task_Commit",
+      "elementName": "Commit block and QA witness together",
+      "timestamp": "2026-10-31T21:15:18.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    },
+    {
+      "step": 10,
+      "elementId": "EndEvent_Accepted",
+      "elementName": "Block accepted into corpus",
+      "timestamp": "2026-10-31T21:15:19.000Z",
+      "actor": "agent",
+      "action": "completed",
+      "note": "Completed for fig:5 (folio/dth-sc/introduction/f-introduction-fig-5.ts)"
+    }
+  ],
+  "witness": {
+    "historyDigest": "87d4ee727ee81f97",
+    "stepCount": 10,
+    "completedAt": "2026-10-31T21:15:20.000Z"
+  }
+}
