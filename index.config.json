@@ -176,7 +176,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "f2e2a2ab08e262ec7227539b20ef7eed827ab642",
+          "ref": "f62a1d9417a60f71b3c96835a33afdc572b957e3",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -189,8 +189,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-31",
-              "ref": "f2e2a2ab08e262ec7227539b20ef7eed827ab642",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "ref": "f62a1d9417a60f71b3c96835a33afdc572b957e3",
+              "evidence": "cat-harness-tools moved to main f62a1d9, past #1123 (9b3f7be, figure numbers in figure headings), asked by the coordinator via the supply chain thread. Merge-and-repin window (coordinator, 2026-10-31 10:45Z, to ~19:00Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
             }
           }
         }
