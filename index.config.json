@@ -120,7 +120,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "aea7652a99ef5c77b9a4c604aea83b9e3749f039",
+          "ref": "093e95b3711201ca6756257fd967f453880cf31d",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -136,8 +136,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-31",
-              "ref": "aea7652a99ef5c77b9a4c604aea83b9e3749f039",
-              "evidence": "folio-assistant-core moved to main aea7652 = #398 (glossary term links, --link-terms; also review-anchors-from-folio.ts). litlfred, 2026-10-31 12:39Z, thread 'Plan product catalogue handbook KG': chose 'A. Merge and rebuild' for #398; repin asked by the supply chain thread. Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "ref": "093e95b3711201ca6756257fd967f453880cf31d",
+              "evidence": "folio-assistant-core moved to main 093e95b, past #412 (6cd0644, glossary organizations + acronym check) and #405 (093e95b, DIIG phases & SMART approach charts). Merge-and-repin window (coordinator, 2026-10-31). Prior: folio-assistant-core moved to main aea7652 = #398 (glossary term links, --link-terms; also review-anchors-from-folio.ts). litlfred, 2026-10-31 12:39Z, thread 'Plan product catalogue handbook KG': chose 'A. Merge and rebuild' for #398; repin asked by the supply chain thread. Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
             }
           }
         }
@@ -248,7 +248,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-ra",
-          "ref": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28",
+          "ref": "7aaec92b0ec4afafdf95aa6504e32550e3e6aa6d",
           "overrides": {
             "dpi-h-ra": {
               "directories": [
@@ -285,8 +285,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-31",
-              "ref": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'; plan option A for L2 DTHs on smart-ra, 2026-10-31 00:26Z, thread 'Prepare DTH ingests as L2 on smart-ra' (dth-hrh#47, dth-sc#2). main tip 2c01ca033 = #147 (supply chain ArchiMate views 0.3.0-draft.1) on #148 (RA glossary as SKOS)."
+              "ref": "7aaec92b0ec4afafdf95aa6504e32550e3e6aa6d",
+              "evidence": "litlfred, 2026-10-31 14:26Z: '+3 hrs merge window' (to 17:26Z). Re-pin dpi-h-ra to smart-ra main 7aaec92 (smart-ra#198: shared organizations glossary). Prior: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'; plan option A for L2 DTHs on smart-ra, 2026-10-31 00:26Z, thread 'Prepare DTH ingests as L2 on smart-ra' (dth-hrh#47, dth-sc#2). main tip 2c01ca033 = #147 (supply chain ArchiMate views 0.3.0-draft.1) on #148 (RA glossary as SKOS)."
             }
           }
         }
