@@ -51,7 +51,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-base",
-          "ref": "07a4c1ec0f8fbd645c74badc0a44ccbd4fdfb863",
+          "ref": "49178a48d460bb53acf6e90d8c0aee3f0146d8f7",
           "overrides": {
             "smart-base": {
               "path": "smart-base",
@@ -86,8 +86,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-31",
-              "ref": "07a4c1ec0f8fbd645c74badc0a44ccbd4fdfb863",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "ref": "49178a48d460bb53acf6e90d8c0aee3f0146d8f7",
+              "evidence": "smart-base moved to main 49178a4, past smart-base#233 (L1 extraction out of library/, who-iris#107), whose stale library copies fail check:l1-complete beside who-iris (same repin as dth-pc, 2026-10-31). Merge-and-repin window (coordinator relay, 11:07Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
             }
           }
         }
