@@ -2,7 +2,12 @@
 """Seed the working document folio from the handbook's L1 entry.
 
 Usage:
-    python3 -I scripts/folio/seed_from_l1.py [<l1-entry-dir>] [--force]
+    python3 -I scripts/folio/seed_from_l1.py [<l1-entry-dir>] [--pdf <pdf>] [--force]
+
+With --pdf (who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf, the
+PDF the L1 entry was made from; its hash is checked), the handbook's tables
+are rebuilt as `table` blocks (pdf_tables.py) and the prose of a page with a
+table no longer repeats the table's words. Needs `pip install pdfplumber`.
 
 The L1 entry is who-iris/library/9789240101197-eng (mounted at who-iris/).
 It is split by PDF page and has no outline, so this script carries the
@@ -18,17 +23,17 @@ This is a ONE-TIME SEED. After it, the folio is the working document and is
 edited by hand. The script refuses to overwrite folio/dth-sc/ unless --force
 is given, and --force discards hand edits.
 
-What it does not do yet (workplan sc-workplan.md, gaps G2 and section 6):
-tables and annex templates arrive as flattened text and are rebuilt by hand
-as `table` blocks; figures are not yet placed; no block links to the
+What it does not do yet (workplan, section 6): figures are not yet placed; no block links to the
 glossary or to smart-ra ArchiMate elements yet.
 """
 
 import json
+from pathlib import Path
 import re
 import shutil
 import sys
-from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # pdf_tables.py, beside this script
 
 DOC = "dth-sc"
 FOLIO = Path("folio") / DOC
@@ -110,7 +115,11 @@ NAV_TABS = {"INTRODUCTION", "IMPLEMENTATION", "STRATEGY", "TRACEABILITY",
             "ARCHITECTURE", "ANNEXES", "COUNTRY EXAMPLES"}
 FOOTER = re.compile(
     r"^\s*(?:[ivx]+|\d+)?\s*Digital transformation handbook for health supply chain architecture\s*(?:[ivx]+|\d+)?\s*$"
-    r"|^\s*[ivx]+\s*$|^\s*\d{1,3}\s*$")
+    r"|^\s*[ivx]+\s*$|^\s*\d{1,3}\s*$"
+    # running chapter footers, e.g. "Defining the DHSC architecture 21", "Annexes 61"
+    r"|^\s*(?:\d{1,3}\s+)?(?:Introduction|Annexes|References|Country examples|Defining a holistic DHSC strategy"
+    r"|Defining the DHSC architecture|Planning for scalable implementation and sustainable operations"
+    r"|Using the DHSC to implement traceability)\s+\d{1,3}\s*$")
 
 
 def slug(s, n=40):
@@ -118,18 +127,19 @@ def slug(s, n=40):
     return s[:n].rstrip("-")
 
 
-def page_text(l1, n):
-    """The body text of PDF page n, without front matter, tabs or footer."""
-    p = l1 / "sections" / f"page-{n:03d}.md"
-    raw = p.read_text(encoding="utf-8")
-    parts = raw.split("---\n", 2)
-    body = parts[2] if len(parts) == 3 else raw
-    if "_(no text on this page)_" in body:
-        return ""
+def body_text(body):
+    """Clean a page's text: no navigation tabs, no running footer, bullets as list items."""
     lines = []
     for line in body.splitlines():
         t = line.strip()
         if not t or t in NAV_TABS or FOOTER.match(t):
+            continue
+        # pdfplumber can put several tab labels on one line
+        # (and, when a page is read in two columns, a tab label split in two)
+        tabs = "INTRODUCTION IMPLEMENTATION STRATEGY TRACEABILITY ARCHITECTURE ANNEXES COUNTRY EXAMPLES"
+        words = t.split()
+        if (all(w.isupper() and len(w) > 2 and w in tabs for w in words)
+                and any(w in tabs.split() for w in words)):
             continue
         lines.append(t.replace("\t", " "))
     text = " ".join(lines)
@@ -137,7 +147,47 @@ def page_text(l1, n):
     # Bullet markers the PDF uses: → (list), » (sub-list), ▶ (outputs), Ð (best practice), • (figure text).
     text = re.sub(r"\s*(?:→|»|▶|•)\s*", "\n- ", text)
     text = re.sub(r"\s*Ð\s*", "\n- ", text)
-    return text.strip() + "\n"
+    text = text.strip()
+    return text + "\n" if text else ""
+
+
+def page_text(l1, n):
+    """The body text of PDF page n, from the L1 entry."""
+    p = l1 / "sections" / f"page-{n:03d}.md"
+    raw = p.read_text(encoding="utf-8")
+    parts = raw.split("---\n", 2)
+    body = parts[2] if len(parts) == 3 else raw
+    if "_(no text on this page)_" in body:
+        return ""
+    return body_text(body)
+
+
+def write_table(d, ch_dir, n, spec, pdf, sec_title):
+    """Write one table block for the table starting on PDF page n; return its root."""
+    import pdf_tables
+    rows, _ = pdf_tables.table_rows(pdf, n)
+    tail = spec['label'].split(':', 1)[1]
+    root = f"t-{ch_dir.split('-')[0]}-{'table-' + tail if tail.isdigit() else tail}"
+    pages = spec.get("pages", [n])
+    meta = {
+        "title": sec_title,
+        "source": {
+            "library": L1_ID,
+            "section": f"page-{n:03d}",
+            "pdf": f"who-iris/uploads/{L1_ID}/{L1_ID}.pdf",
+            "pdfPages": pages,
+            "method": "pdf-table-rebuild",
+        },
+    }
+    (d / f"{root}.md").write_text(pdf_tables.markdown(rows, spec["caption"]), encoding="utf-8")
+    (d / f"{root}.ts").write_text(
+        'import { table } from "../../schema/builders";\n\n'
+        "export default table({\n"
+        f"  label: {ts_str(spec['label'])},\n"
+        f"  caption: {ts_str(spec['caption'])},\n"
+        f"  meta: {json.dumps(meta, ensure_ascii=False)},\n"
+        "});\n", encoding="utf-8")
+    return [root]
 
 
 def ts_str(s):
@@ -146,6 +196,18 @@ def ts_str(s):
 
 def main(argv):
     force = "--force" in argv
+    pdf = None
+    if "--pdf" in argv:
+        i = argv.index("--pdf")
+        pdf_path = argv[i + 1]
+        argv = argv[:i] + argv[i + 2:]
+        import hashlib
+        import pdfplumber
+        import pdf_tables
+        digest = hashlib.sha256(Path(pdf_path).read_bytes()).hexdigest()
+        if not digest.startswith(pdf_tables.PDF_SHA256_PREFIX):
+            sys.exit(f"{pdf_path} is not the PDF the L1 entry was made from (sha256 {digest[:16]})")
+        pdf = pdfplumber.open(pdf_path)
     args = [a for a in argv if not a.startswith("--")]
     l1 = Path(args[0]) if args else DEFAULT_L1
     if not (l1 / "sections").is_dir():
@@ -175,6 +237,14 @@ def main(argv):
             blocks = []
             for n in pages.get((ci, si), []):
                 text = page_text(l1, n)
+                table = None
+                if pdf is not None:
+                    outside = pdf_tables.outside_text(pdf, n)
+                    if outside is not None:
+                        text = body_text(outside)
+                    if n in pdf_tables.TABLES:
+                        table = pdf_tables.TABLES[n]
+                blocks += write_table(d, ch_dir, n, table, pdf, sec_title) if table and not text else []
                 if not text:
                     continue
                 root = f"p-{ch_dir.split('-')[0]}-page-{n:03d}"
@@ -199,6 +269,8 @@ def main(argv):
                     f"  meta: {json.dumps(meta, ensure_ascii=False)},\n"
                     "});\n", encoding="utf-8")
                 blocks.append(root)
+                if table:
+                    blocks += write_table(d, ch_dir, n, table, pdf, sec_title)
             if not blocks:
                 continue
             sections_ts.append(

@@ -32,7 +32,7 @@ export default chapter({
     section({
       title: "Alignment with WHO's SMART Guidelines",
       label: "sec:introduction-alignment-with-whos-smart-guidelines",
-      blocks: ["p-introduction-page-016", "p-introduction-page-017", "p-introduction-page-018"],
+      blocks: ["p-introduction-page-016", "p-introduction-page-017", "p-introduction-page-018", "t-introduction-table-1"],
     }),
   ],
 });

@@ -12,7 +12,7 @@ export default chapter({
     section({
       title: "Abbreviations and acronyms",
       label: "sec:front-abbreviations-and-acronyms",
-      blocks: ["p-front-page-007"],
+      blocks: ["t-front-abbreviations"],
     }),
     section({
       title: "Glossary",

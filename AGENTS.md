@@ -33,7 +33,7 @@ redefining them.
 
 | what | where | how it is made |
 |---|---|---|
-| the working document | `folio/dth-sc/` | seeded once from the L1 entry `who-iris/library/9789240101197-eng` by `scripts/folio/seed_from_l1.py`, one prose block per PDF page, by the handbook's contents-page outline; **edited by hand from then on**: never re-run it without `--force`, which discards edits |
+| the working document | `folio/dth-sc/` | seeded once from the L1 entry `who-iris/library/9789240101197-eng` by `scripts/folio/seed_from_l1.py`, one prose block per PDF page, by the handbook's contents-page outline; with `--pdf` the 8 tables (Tables 1-3, abbreviations, Annexes 3, 5, 6, 7) are rebuilt from the PDF as `table` blocks (`scripts/folio/pdf_tables.py`, needs pdfplumber); **edited by hand from then on**: never re-run it without `--force`, which discards edits |
 | the supply chain glossary | `glossary/dth-sc.glossary.json` (SKOS, `folio-glossary/v1`) | by hand; each term quotes the handbook with its L1 page |
 | the source, frozen | `who-iris/library/9789240101197-eng` (mounted) | never edited here |
 | the plan | `docs/workplan.md` | copy of the approved workplan |

@@ -17,7 +17,7 @@ export default chapter({
     section({
       title: "Annex 3. Template for prioritizing DHSC challenges to address",
       label: "sec:annexes-annex-3-template-for-prioritizing-dhsc-c",
-      blocks: ["p-annexes-page-068"],
+      blocks: ["p-annexes-page-068", "t-annexes-annex-3"],
     }),
     section({
       title: "Annex 4. Illustrative template that maps today's challenges to future outcomes",
@@ -27,17 +27,17 @@ export default chapter({
     section({
       title: "Annex 5. Template for listing health supply chain information systems",
       label: "sec:annexes-annex-5-template-for-listing-health-supp",
-      blocks: ["p-annexes-page-070"],
+      blocks: ["p-annexes-page-070", "t-annexes-annex-5"],
     }),
     section({
       title: "Annex 6. Risk register template",
       label: "sec:annexes-annex-6-risk-register-template",
-      blocks: ["p-annexes-page-071"],
+      blocks: ["p-annexes-page-071", "t-annexes-annex-6"],
     }),
     section({
       title: "Annex 7. Resource matrix for DHSC implementation",
       label: "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme",
-      blocks: ["p-annexes-page-072", "p-annexes-page-073", "p-annexes-page-074", "p-annexes-page-075", "p-annexes-page-076"],
+      blocks: ["p-annexes-page-072", "t-annexes-annex-7", "p-annexes-page-076"],
     }),
   ],
 });
