@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-87a3589d681c4d8e9b2ada5d72db9eb0.jsonld",
+  "@type": "archimate:Outcome",
+  "schema:identifier": "id-87a3589d681c4d8e9b2ada5d72db9eb0",
+  "schema:name": "NHWA Module 2: Education",
+  "schema:description": "\"This module addresses capacity and quality in HWF education and training.\" Indicators 2-01 to 2-07. The health workforce registry or database is a named data source for 2-04. Term module-2 in the nhwa-2023 glossary (litlfred/who-iris glossary/nhwa-2023.glossary.json), from National health workforce accounts: a handbook, 2nd ed. (WHO 2023, ISBN 9789240081291).",
+  "schema:category": "Motivation",
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.2.0.jsonld"
+}

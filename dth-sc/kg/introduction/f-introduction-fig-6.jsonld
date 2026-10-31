@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/fig-6",
+  "@type": [
+    "folio-assistant-core:Figure",
+    "doco:Figure"
+  ],
+  "label": "fig:6",
+  "kind": "figure",
+  "text": "f-introduction-fig-6.md",
+  "meta": {
+    "title": "Alignment with WHO's SMART Guidelines",
+    "source": {
+      "library": "9789240101197-eng",
+      "file": "who-iris/library/9789240101197-eng/figures/vfig-p016.png",
+      "page": 16,
+      "method": "l1-vector-figure"
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/smart-guidelines",
+        "prefLabel": "SMART Guidelines"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-health",
+        "prefLabel": "Digital Health"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability",
+        "prefLabel": "Interoperability"
+      }
+    ]
+  },
+  "provenance": "authored"
+}

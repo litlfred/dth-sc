@@ -1,0 +1,18 @@
+{
+  "$schema": "folio-graph-projection/v1",
+  "tile": {
+    "folio": {
+      "count": 0,
+      "unit": "stickies"
+    }
+  },
+  "directories": [
+    {
+      "dir": "dpi-h-ra/folio",
+      "present": false,
+      "nodes": 0,
+      "files": []
+    }
+  ],
+  "nodes": []
+}

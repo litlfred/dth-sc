@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-4cb8cc587d6c4764837e79518dfa2049.jsonld",
+  "@type": "archimate:Outcome",
+  "schema:identifier": "id-4cb8cc587d6c4764837e79518dfa2049",
+  "schema:name": "NHWA Module 4: Working conditions, governance and leadership",
+  "schema:description": "\"This module addresses working conditions, governance and leadership from various perspectives: health workers, national leadership capacity, and contribution of the country to regional and global mandates.\" Indicators 4-01 to 4-05. Their data sources do not include the registry. Term module-4 in the nhwa-2023 glossary (litlfred/who-iris glossary/nhwa-2023.glossary.json), from National health workforce accounts: a handbook, 2nd ed. (WHO 2023, ISBN 9789240081291).",
+  "schema:category": "Motivation",
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.2.0.jsonld"
+}

@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/relationships/id-53551a84a33145b7856a833b0ac6595b.jsonld",
+  "@type": "archimate:Realization",
+  "schema:identifier": "id-53551a84a33145b7856a833b0ac6595b",
+  "schema:description": "Each worker's facility, for 1-05 and 1-06; its location, for 1-02.",
+  "archimate:source": {
+    "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-4e0767822dcf46409554156a133fbc67.jsonld"
+  },
+  "archimate:target": {
+    "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-57355ace4e704cf49bfd82e616a617ac.jsonld"
+  },
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.2.0.jsonld"
+}

@@ -1,0 +1,447 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "_generated": "folio-assistant-core/scripts/glossary-page.ts — do not hand-edit; run `bun run cat glossary:page`",
+  "@graph": [
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture",
+      "skos:definition": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140, #183). Every term is a candidate: only a person adopts a definition. Each term links via SKOS broadMatch/closeMatch/related to the dpi-h-ra concept it narrows or relates to (smart-ra#133 S1, dth-sc#2 SC2b). Concept labels are Capitalized (owner ruling, 2026-10-31, relayed from the dth-pc thread). Trade Item and Product Master Data are defined in dth-pc, not here (smart-ra#142).",
+      "dcterms:modified": "2026-10-31",
+      "dcterms:source": "folio/dth-sc",
+      "dcterms:license": "CC-BY-NC-SA-3.0-IGO"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Digital Health Supply Chain"
+        }
+      ],
+      "skos:altLabel": [
+        "DHSC"
+      ],
+      "skos:definition": [
+        {
+          "@value": "The knowledge and practice of adopting digital technologies to improve health supply chains and enable the delivery of quality-assured health products to individuals when and where they need them."
+        }
+      ],
+      "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Defined in the Introduction (PDF 12), not in the handbook's glossary.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-digital-public-infrastructure"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-health"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-012.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain-intervention",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Digital Health Supply Chain Intervention"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "An intervention that involves the use of digital technologies to improve the management and operation of health supply chains. It aims to enhance the efficiency and effectiveness of health supply chain processes such as planning, procurement, distribution and warehouse management."
+        }
+      ],
+      "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain"
+        }
+      ],
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/capability"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-health"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-008.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/health-supply-chain-information-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Health Supply Chain Information System"
+        }
+      ],
+      "skos:altLabel": [
+        "HSCIS",
+        "electronic logistics management information system"
+      ],
+      "skos:definition": [
+        {
+          "@value": "A paper-based or software tool that supports the management and/or operations of the health supply chain. Such software tools (e.g., for order management or warehouse management) are also commonly referred to as electronic logistics management information systems."
+        }
+      ],
+      "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. smart-ra models the individual systems as ArchiMate application components (sc-workplan.md section 4).",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/point-of-service-applications"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-008.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Order Management"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The planning, directing, monitoring and controlling of the processes related to customer or requisition orders. Order management includes order promising; order entry; order pick, pack and ship; billing; and reconciliation of the customer account."
+        }
+      ],
+      "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook cites its reference 11 for this definition.",
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/capability"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-009.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Order Management System"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A paper-based or software tool that supports the processes for fulfilling requisition orders (e.g., a software tool that supports entry and processing of requisition orders from health facilities to regional or central warehouses to replenish inventory)."
+        }
+      ],
+      "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-009.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/warehouse-management-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Warehouse Management System"
+        }
+      ],
+      "skos:altLabel": [
+        "WMS"
+      ],
+      "skos:definition": [
+        {
+          "@value": "A computer application that manages and optimizes workflows and the storage of goods within a warehouse. It often interfaces with automated data capture and enterprise resource planning systems."
+        }
+      ],
+      "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook cites its reference 11 for this definition.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-009.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/governance-health-supply-chain",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Governance (Health Supply Chain)"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "In the context of the health supply chain, the process of establishing and implementing policies, procedures and mechanisms to ensure that the supply chain processes and the systems to manage those processes are managed effectively, ethically and in alignment with established objectives and stakeholders' interests."
+        }
+      ],
+      "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Boxed definition in Chapter 3 (PDF 45). Differs substantively from the draft RA's 'governance'; both are recorded as alternatives in litlfred/smart-ra#140.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/stakeholder"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-governance"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-045.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Traceability"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification."
+        }
+      ],
+      "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-service"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-object"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/capability"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-009.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability-model",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Traceability Model"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "One of the three main models for implementing traceability (centralized, semi-centralized, distributed), which differ mostly in how they store traceability data and share them with the relevant health authority and across actors in the supply chain."
+        }
+      ],
+      "skos:scopeNote": "Assembled from two sentences of Chapter 4 (PDF 54): 'The three main models for implementing traceability are the centralized, semi-centralized and distributed models. They differ mostly in how they store the data and share them with the relevant health authority and across actors in the supply chain.' The handbook does not state it as a definition, and recommends none of the models. Open: not adopted.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/solution-architecture"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/centralized-traceability-model",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Centralized Traceability Model"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A traceability model that involves a single database or repository for storing all traceability data."
+        }
+      ],
+      "skos:scopeNote": "The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability-model"
+        }
+      ],
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/semi-centralized-traceability-model",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Semi-Centralized Traceability Model"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A traceability model in which the traceability data are spread across multiple databases or repositories."
+        }
+      ],
+      "skos:scopeNote": "The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability-model"
+        }
+      ],
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/distributed-traceability-model",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Distributed Traceability Model"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A traceability model in which traceability data are maintained separately by each supply chain partner."
+        }
+      ],
+      "skos:scopeNote": "The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability-model"
+        }
+      ],
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
+        }
+      ],
+      "skos:broadMatch": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "skos:note": "candidate"
+    }
+  ]
+}

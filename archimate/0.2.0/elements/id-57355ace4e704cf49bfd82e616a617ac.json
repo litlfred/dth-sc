@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-57355ace4e704cf49bfd82e616a617ac.jsonld",
+  "@type": "archimate:Outcome",
+  "schema:identifier": "id-57355ace4e704cf49bfd82e616a617ac",
+  "schema:name": "Health worker density at subnational level; distribution by facility ownership and by facility type (1-02, 1-05, 1-06)",
+  "schema:description": "1-02: \"Density of active health workers per 10 000 population at subnational level.\" 1-05: \"Percentage of active health workers employed by facility ownership.\" 1-06: \"Percentage of active health workers employed by facility type.\" Part of Module 1. Each worker's facility comes from the facility registry. Term indicator-1-02, indicator-1-05, indicator-1-06 in the nhwa-2023 glossary (litlfred/who-iris glossary/nhwa-2023.glossary.json), from National health workforce accounts: a handbook, 2nd ed. (WHO 2023, ISBN 9789240081291).",
+  "schema:category": "Motivation",
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.2.0.jsonld"
+}

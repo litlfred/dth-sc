@@ -1,0 +1,2217 @@
+{
+  "$schema": "folio-graph-projection/v1",
+  "tile": {
+    "folio": {
+      "count": 1,
+      "unit": "stickies"
+    }
+  },
+  "directories": [
+    {
+      "dir": "cat-harness/folio",
+      "present": true,
+      "nodes": 1,
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 1390,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "cat-harness.json",
+          "bytes": 2366,
+          "size": "2.3 KB"
+        }
+      ]
+    },
+    {
+      "dir": "folio",
+      "present": true,
+      "nodes": 0,
+      "files": [
+        {
+          "path": "dth-sc/annexes/annexes.ts",
+          "bytes": 1914,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-066.jsonld",
+          "bytes": 2788,
+          "size": "2.7 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-066.md",
+          "bytes": 1459,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-066.ts",
+          "bytes": 1949,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-067.jsonld",
+          "bytes": 2370,
+          "size": "2.3 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-067.md",
+          "bytes": 146,
+          "size": "146 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-067.ts",
+          "bytes": 1577,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-068.jsonld",
+          "bytes": 1225,
+          "size": "1.2 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-068.md",
+          "bytes": 532,
+          "size": "532 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-068.ts",
+          "bytes": 674,
+          "size": "674 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-069.jsonld",
+          "bytes": 1240,
+          "size": "1.2 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-069.md",
+          "bytes": 253,
+          "size": "253 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-069.ts",
+          "bytes": 689,
+          "size": "689 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-070.jsonld",
+          "bytes": 5407,
+          "size": "5.3 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-070.md",
+          "bytes": 184,
+          "size": "184 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-070.ts",
+          "bytes": 3995,
+          "size": "3.9 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-071.jsonld",
+          "bytes": 1257,
+          "size": "1.2 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-071.md",
+          "bytes": 118,
+          "size": "118 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-071.ts",
+          "bytes": 706,
+          "size": "706 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-072.jsonld",
+          "bytes": 1428,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-072.md",
+          "bytes": 488,
+          "size": "488 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-072.ts",
+          "bytes": 843,
+          "size": "843 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-076.jsonld",
+          "bytes": 1161,
+          "size": "1.1 KB"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-076.md",
+          "bytes": 521,
+          "size": "521 B"
+        },
+        {
+          "path": "dth-sc/annexes/p-annexes-page-076.ts",
+          "bytes": 638,
+          "size": "638 B"
+        },
+        {
+          "path": "dth-sc/annexes/pers-developer-integrator.jsonld",
+          "bytes": 3872,
+          "size": "3.8 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-developer-integrator.md",
+          "bytes": 2282,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-developer-integrator.ts",
+          "bytes": 2900,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-project-manager-ba.jsonld",
+          "bytes": 3755,
+          "size": "3.7 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-project-manager-ba.md",
+          "bytes": 2615,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-project-manager-ba.ts",
+          "bytes": 2718,
+          "size": "2.7 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-solution-architect.jsonld",
+          "bytes": 4547,
+          "size": "4.4 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-solution-architect.md",
+          "bytes": 2158,
+          "size": "2.1 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-solution-architect.ts",
+          "bytes": 3396,
+          "size": "3.3 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-steering-committee-sponsor.jsonld",
+          "bytes": 4051,
+          "size": "4.0 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-steering-committee-sponsor.md",
+          "bytes": 2235,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-steering-committee-sponsor.ts",
+          "bytes": 2974,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-system-administrator-support.jsonld",
+          "bytes": 3715,
+          "size": "3.6 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-system-administrator-support.md",
+          "bytes": 2610,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/annexes/pers-system-administrator-support.ts",
+          "bytes": 2733,
+          "size": "2.7 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-2.jsonld",
+          "bytes": 3641,
+          "size": "3.6 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-2.md",
+          "bytes": 891,
+          "size": "891 B"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-2.ts",
+          "bytes": 2669,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-3.jsonld",
+          "bytes": 2422,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-3.md",
+          "bytes": 807,
+          "size": "807 B"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-3.ts",
+          "bytes": 1726,
+          "size": "1.7 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-4.jsonld",
+          "bytes": 4136,
+          "size": "4.0 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-4.md",
+          "bytes": 1439,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-4.ts",
+          "bytes": 3090,
+          "size": "3.0 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-5.jsonld",
+          "bytes": 8379,
+          "size": "8.2 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-5.md",
+          "bytes": 1010,
+          "size": "1010 B"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-5.ts",
+          "bytes": 6494,
+          "size": "6.3 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-6.jsonld",
+          "bytes": 2073,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-6.md",
+          "bytes": 750,
+          "size": "750 B"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-6.ts",
+          "bytes": 1428,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-7.jsonld",
+          "bytes": 6270,
+          "size": "6.1 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-7.md",
+          "bytes": 13633,
+          "size": "13.3 KB"
+        },
+        {
+          "path": "dth-sc/annexes/t-annexes-annex-7.ts",
+          "bytes": 4457,
+          "size": "4.4 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/ch01-dhsc-strategy.ts",
+          "bytes": 1372,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-10.jsonld",
+          "bytes": 1185,
+          "size": "1.2 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-10.md",
+          "bytes": 229,
+          "size": "229 B"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-10.ts",
+          "bytes": 793,
+          "size": "793 B"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-8.jsonld",
+          "bytes": 1918,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-8.md",
+          "bytes": 224,
+          "size": "224 B"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-8.ts",
+          "bytes": 1381,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-9.jsonld",
+          "bytes": 3829,
+          "size": "3.7 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-9.md",
+          "bytes": 269,
+          "size": "269 B"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/f-ch01-fig-9.ts",
+          "bytes": 2981,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-019.jsonld",
+          "bytes": 1466,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-019.md",
+          "bytes": 1156,
+          "size": "1.1 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-019.ts",
+          "bytes": 861,
+          "size": "861 B"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-020.jsonld",
+          "bytes": 1978,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-020.md",
+          "bytes": 2971,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-020.ts",
+          "bytes": 1333,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-021.jsonld",
+          "bytes": 3889,
+          "size": "3.8 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-021.md",
+          "bytes": 2966,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-021.ts",
+          "bytes": 2888,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-022.jsonld",
+          "bytes": 3917,
+          "size": "3.8 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-022.md",
+          "bytes": 2963,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-022.ts",
+          "bytes": 2785,
+          "size": "2.7 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-023.jsonld",
+          "bytes": 5806,
+          "size": "5.7 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-023.md",
+          "bytes": 3033,
+          "size": "3.0 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-023.ts",
+          "bytes": 4286,
+          "size": "4.2 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-024.jsonld",
+          "bytes": 1388,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-024.md",
+          "bytes": 2398,
+          "size": "2.3 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-024.ts",
+          "bytes": 855,
+          "size": "855 B"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-025.jsonld",
+          "bytes": 1438,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-025.md",
+          "bytes": 1936,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-025.ts",
+          "bytes": 905,
+          "size": "905 B"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-026.jsonld",
+          "bytes": 1242,
+          "size": "1.2 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-026.md",
+          "bytes": 1228,
+          "size": "1.2 KB"
+        },
+        {
+          "path": "dth-sc/ch01-dhsc-strategy/p-ch01-page-026.ts",
+          "bytes": 739,
+          "size": "739 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/ch02-dhsc-architecture.ts",
+          "bytes": 1927,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection.dmn",
+          "bytes": 10206,
+          "size": "10.0 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection.jsonld",
+          "bytes": 5100,
+          "size": "5.0 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection.md",
+          "bytes": 3993,
+          "size": "3.9 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection.ts",
+          "bytes": 3713,
+          "size": "3.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-11.jsonld",
+          "bytes": 2316,
+          "size": "2.3 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-11.md",
+          "bytes": 251,
+          "size": "251 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-11.ts",
+          "bytes": 1738,
+          "size": "1.7 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-13.jsonld",
+          "bytes": 2493,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-13.md",
+          "bytes": 246,
+          "size": "246 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-13.ts",
+          "bytes": 1880,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-14.jsonld",
+          "bytes": 10556,
+          "size": "10.3 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-14.md",
+          "bytes": 220,
+          "size": "220 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-14.ts",
+          "bytes": 8327,
+          "size": "8.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-15.jsonld",
+          "bytes": 7482,
+          "size": "7.3 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-15.md",
+          "bytes": 259,
+          "size": "259 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-15.ts",
+          "bytes": 5898,
+          "size": "5.8 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-16.jsonld",
+          "bytes": 9233,
+          "size": "9.0 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-16.md",
+          "bytes": 259,
+          "size": "259 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-16.ts",
+          "bytes": 7307,
+          "size": "7.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-17.jsonld",
+          "bytes": 3409,
+          "size": "3.3 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-17.md",
+          "bytes": 258,
+          "size": "258 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-17.ts",
+          "bytes": 2622,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-18.jsonld",
+          "bytes": 3431,
+          "size": "3.4 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-18.md",
+          "bytes": 271,
+          "size": "271 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-18.ts",
+          "bytes": 2657,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-19.jsonld",
+          "bytes": 3815,
+          "size": "3.7 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-19.md",
+          "bytes": 271,
+          "size": "271 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-19.ts",
+          "bytes": 2965,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-20.jsonld",
+          "bytes": 2499,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-20.md",
+          "bytes": 240,
+          "size": "240 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-20.ts",
+          "bytes": 1872,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-21.jsonld",
+          "bytes": 2804,
+          "size": "2.7 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-21.md",
+          "bytes": 229,
+          "size": "229 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-21.ts",
+          "bytes": 2112,
+          "size": "2.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-fig-12-third-party.jsonld",
+          "bytes": 732,
+          "size": "732 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-fig-12-third-party.md",
+          "bytes": 278,
+          "size": "278 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-fig-12-third-party.ts",
+          "bytes": 313,
+          "size": "313 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-027.jsonld",
+          "bytes": 2582,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-027.md",
+          "bytes": 1798,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-027.ts",
+          "bytes": 1752,
+          "size": "1.7 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-028.jsonld",
+          "bytes": 3716,
+          "size": "3.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-028.md",
+          "bytes": 4235,
+          "size": "4.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-028.ts",
+          "bytes": 2761,
+          "size": "2.7 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-029.jsonld",
+          "bytes": 2698,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-029.md",
+          "bytes": 904,
+          "size": "904 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-029.ts",
+          "bytes": 1933,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-030.jsonld",
+          "bytes": 4203,
+          "size": "4.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-030.md",
+          "bytes": 2209,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-030.ts",
+          "bytes": 3045,
+          "size": "3.0 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-031.jsonld",
+          "bytes": 2730,
+          "size": "2.7 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-031.md",
+          "bytes": 2020,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-031.ts",
+          "bytes": 1957,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-032.jsonld",
+          "bytes": 3020,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-032.md",
+          "bytes": 3181,
+          "size": "3.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-032.ts",
+          "bytes": 2106,
+          "size": "2.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-033.jsonld",
+          "bytes": 3076,
+          "size": "3.0 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-033.md",
+          "bytes": 2437,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-033.ts",
+          "bytes": 2243,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-034.jsonld",
+          "bytes": 10613,
+          "size": "10.4 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-034.md",
+          "bytes": 1556,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-034.ts",
+          "bytes": 8280,
+          "size": "8.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-035.jsonld",
+          "bytes": 10512,
+          "size": "10.3 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-035.md",
+          "bytes": 4701,
+          "size": "4.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-035.ts",
+          "bytes": 8221,
+          "size": "8.0 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-036.jsonld",
+          "bytes": 7864,
+          "size": "7.7 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-036.md",
+          "bytes": 1112,
+          "size": "1.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-036.ts",
+          "bytes": 6069,
+          "size": "5.9 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-037.jsonld",
+          "bytes": 9290,
+          "size": "9.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-037.md",
+          "bytes": 1648,
+          "size": "1.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-037.ts",
+          "bytes": 7221,
+          "size": "7.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-038.jsonld",
+          "bytes": 6641,
+          "size": "6.5 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-038.md",
+          "bytes": 1441,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-038.ts",
+          "bytes": 5104,
+          "size": "5.0 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-039.jsonld",
+          "bytes": 6089,
+          "size": "5.9 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-039.md",
+          "bytes": 1685,
+          "size": "1.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-039.ts",
+          "bytes": 4666,
+          "size": "4.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-040.jsonld",
+          "bytes": 6282,
+          "size": "6.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-040.md",
+          "bytes": 2321,
+          "size": "2.3 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-040.ts",
+          "bytes": 4821,
+          "size": "4.7 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-041.jsonld",
+          "bytes": 3131,
+          "size": "3.1 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-041.md",
+          "bytes": 1242,
+          "size": "1.2 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-041.ts",
+          "bytes": 2274,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-042.jsonld",
+          "bytes": 2383,
+          "size": "2.3 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-042.md",
+          "bytes": 1013,
+          "size": "1013 B"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-042.ts",
+          "bytes": 1686,
+          "size": "1.6 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-043.jsonld",
+          "bytes": 2861,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-043.md",
+          "bytes": 2514,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/ch02-dhsc-architecture/p-ch02-page-043.ts",
+          "bytes": 2058,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/ch03-implementation-and-operations.ts",
+          "bytes": 1480,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/f-ch03-fig-22.jsonld",
+          "bytes": 1997,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/f-ch03-fig-22.md",
+          "bytes": 250,
+          "size": "250 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/f-ch03-fig-22.ts",
+          "bytes": 1486,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/f-ch03-fig-23.jsonld",
+          "bytes": 1109,
+          "size": "1.1 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/f-ch03-fig-23.md",
+          "bytes": 249,
+          "size": "249 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/f-ch03-fig-23.ts",
+          "bytes": 767,
+          "size": "767 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-044.jsonld",
+          "bytes": 1378,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-044.md",
+          "bytes": 1306,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-044.ts",
+          "bytes": 807,
+          "size": "807 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-045.jsonld",
+          "bytes": 2196,
+          "size": "2.1 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-045.md",
+          "bytes": 1459,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-045.ts",
+          "bytes": 1521,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-046.jsonld",
+          "bytes": 1462,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-046.md",
+          "bytes": 428,
+          "size": "428 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-046.ts",
+          "bytes": 929,
+          "size": "929 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-047.jsonld",
+          "bytes": 1548,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-047.md",
+          "bytes": 2019,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-047.ts",
+          "bytes": 943,
+          "size": "943 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-048.jsonld",
+          "bytes": 1697,
+          "size": "1.7 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-048.md",
+          "bytes": 1906,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-048.ts",
+          "bytes": 1134,
+          "size": "1.1 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-049.jsonld",
+          "bytes": 1166,
+          "size": "1.1 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-049.md",
+          "bytes": 1601,
+          "size": "1.6 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-049.ts",
+          "bytes": 693,
+          "size": "693 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-050.jsonld",
+          "bytes": 1344,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-050.md",
+          "bytes": 175,
+          "size": "175 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-050.ts",
+          "bytes": 841,
+          "size": "841 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-051.jsonld",
+          "bytes": 1565,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-051.md",
+          "bytes": 3596,
+          "size": "3.5 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-051.ts",
+          "bytes": 960,
+          "size": "960 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-052.jsonld",
+          "bytes": 1347,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-052.md",
+          "bytes": 1476,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/p-ch03-page-052.ts",
+          "bytes": 844,
+          "size": "844 B"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/t-ch03-table-2.jsonld",
+          "bytes": 2598,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/t-ch03-table-2.md",
+          "bytes": 5500,
+          "size": "5.4 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/t-ch03-table-2.ts",
+          "bytes": 1923,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/t-ch03-table-3.jsonld",
+          "bytes": 1334,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/t-ch03-table-3.md",
+          "bytes": 3774,
+          "size": "3.7 KB"
+        },
+        {
+          "path": "dth-sc/ch03-implementation-and-operations/t-ch03-table-3.ts",
+          "bytes": 892,
+          "size": "892 B"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.bpmn",
+          "bytes": 14219,
+          "size": "13.9 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.jsonld",
+          "bytes": 6376,
+          "size": "6.2 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.md",
+          "bytes": 3957,
+          "size": "3.9 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.ts",
+          "bytes": 4817,
+          "size": "4.7 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/ch04-traceability.ts",
+          "bytes": 822,
+          "size": "822 B"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/dt-sc-dt-02-traceability-model-selection.dmn",
+          "bytes": 7019,
+          "size": "6.9 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/dt-sc-dt-02-traceability-model-selection.jsonld",
+          "bytes": 5549,
+          "size": "5.4 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/dt-sc-dt-02-traceability-model-selection.md",
+          "bytes": 2931,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/dt-sc-dt-02-traceability-model-selection.ts",
+          "bytes": 4225,
+          "size": "4.1 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/f-ch04-fig-24.jsonld",
+          "bytes": 6097,
+          "size": "6.0 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/f-ch04-fig-24.md",
+          "bytes": 268,
+          "size": "268 B"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/f-ch04-fig-24.ts",
+          "bytes": 4774,
+          "size": "4.7 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/f-ch04-fig-25.jsonld",
+          "bytes": 2072,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/f-ch04-fig-25.md",
+          "bytes": 249,
+          "size": "249 B"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/f-ch04-fig-25.ts",
+          "bytes": 1530,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-053.jsonld",
+          "bytes": 2291,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-053.md",
+          "bytes": 272,
+          "size": "272 B"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-053.ts",
+          "bytes": 1578,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-054.jsonld",
+          "bytes": 4319,
+          "size": "4.2 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-054.md",
+          "bytes": 3661,
+          "size": "3.6 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-054.ts",
+          "bytes": 3228,
+          "size": "3.2 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-055.jsonld",
+          "bytes": 8579,
+          "size": "8.4 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-055.md",
+          "bytes": 2897,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-055.ts",
+          "bytes": 6634,
+          "size": "6.5 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-056.jsonld",
+          "bytes": 2647,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-056.md",
+          "bytes": 2691,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/p-ch04-page-056.ts",
+          "bytes": 1874,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/pers-system-dhsc-traceability-hub.jsonld",
+          "bytes": 5248,
+          "size": "5.1 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/pers-system-dhsc-traceability-hub.md",
+          "bytes": 2255,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/ch04-traceability/pers-system-dhsc-traceability-hub.ts",
+          "bytes": 3937,
+          "size": "3.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/ch05-country-examples.ts",
+          "bytes": 929,
+          "size": "929 B"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-26-27.jsonld",
+          "bytes": 3082,
+          "size": "3.0 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-26-27.md",
+          "bytes": 295,
+          "size": "295 B"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-26-27.ts",
+          "bytes": 2414,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-28-29.jsonld",
+          "bytes": 2868,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-28-29.md",
+          "bytes": 291,
+          "size": "291 B"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-28-29.ts",
+          "bytes": 2234,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-30.jsonld",
+          "bytes": 3682,
+          "size": "3.6 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-30.md",
+          "bytes": 254,
+          "size": "254 B"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-30.ts",
+          "bytes": 2865,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-31-32.jsonld",
+          "bytes": 4374,
+          "size": "4.3 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-31-32.md",
+          "bytes": 291,
+          "size": "291 B"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/f-ch05-fig-31-32.ts",
+          "bytes": 3436,
+          "size": "3.4 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-057.jsonld",
+          "bytes": 1322,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-057.md",
+          "bytes": 48,
+          "size": "48 B"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-057.ts",
+          "bytes": 782,
+          "size": "782 B"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-058.jsonld",
+          "bytes": 2697,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-058.md",
+          "bytes": 2978,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-058.ts",
+          "bytes": 1884,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-059.jsonld",
+          "bytes": 3460,
+          "size": "3.4 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-059.md",
+          "bytes": 1700,
+          "size": "1.7 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-059.ts",
+          "bytes": 2487,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-060.jsonld",
+          "bytes": 2704,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-060.md",
+          "bytes": 2664,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-060.ts",
+          "bytes": 1891,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-061.jsonld",
+          "bytes": 3246,
+          "size": "3.2 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-061.md",
+          "bytes": 1637,
+          "size": "1.6 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-061.ts",
+          "bytes": 2315,
+          "size": "2.3 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-062.jsonld",
+          "bytes": 3907,
+          "size": "3.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-062.md",
+          "bytes": 1016,
+          "size": "1016 B"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-062.ts",
+          "bytes": 2842,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-063.jsonld",
+          "bytes": 2878,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-063.md",
+          "bytes": 2413,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-063.ts",
+          "bytes": 2023,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-064.jsonld",
+          "bytes": 4892,
+          "size": "4.8 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-064.md",
+          "bytes": 1471,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/ch05-country-examples/p-ch05-page-064.ts",
+          "bytes": 3591,
+          "size": "3.5 KB"
+        },
+        {
+          "path": "dth-sc/dth-sc.ts",
+          "bytes": 2448,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/front-matter.ts",
+          "bytes": 593,
+          "size": "593 B"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-006.jsonld",
+          "bytes": 743,
+          "size": "743 B"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-006.md",
+          "bytes": 2745,
+          "size": "2.7 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-006.ts",
+          "bytes": 336,
+          "size": "336 B"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-008.jsonld",
+          "bytes": 1613,
+          "size": "1.6 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-008.md",
+          "bytes": 3650,
+          "size": "3.6 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-008.ts",
+          "bytes": 1048,
+          "size": "1.0 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-009.jsonld",
+          "bytes": 1971,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-009.md",
+          "bytes": 2710,
+          "size": "2.6 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/p-front-page-009.ts",
+          "bytes": 1316,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/t-front-abbreviations.jsonld",
+          "bytes": 771,
+          "size": "771 B"
+        },
+        {
+          "path": "dth-sc/front-matter/t-front-abbreviations.md",
+          "bytes": 1470,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/front-matter/t-front-abbreviations.ts",
+          "bytes": 377,
+          "size": "377 B"
+        },
+        {
+          "path": "dth-sc/introduction/bp-sc-bp-01-stepwise-dhsc-transformation.bpmn",
+          "bytes": 14745,
+          "size": "14.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/bp-sc-bp-01-stepwise-dhsc-transformation.jsonld",
+          "bytes": 7205,
+          "size": "7.0 KB"
+        },
+        {
+          "path": "dth-sc/introduction/bp-sc-bp-01-stepwise-dhsc-transformation.md",
+          "bytes": 5438,
+          "size": "5.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/bp-sc-bp-01-stepwise-dhsc-transformation.ts",
+          "bytes": 5295,
+          "size": "5.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.bpmn",
+          "bytes": 17160,
+          "size": "16.8 KB"
+        },
+        {
+          "path": "dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.jsonld",
+          "bytes": 7612,
+          "size": "7.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.md",
+          "bytes": 5741,
+          "size": "5.6 KB"
+        },
+        {
+          "path": "dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.ts",
+          "bytes": 5808,
+          "size": "5.7 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-1.jsonld",
+          "bytes": 5963,
+          "size": "5.8 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-1.md",
+          "bytes": 241,
+          "size": "241 B"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-1.ts",
+          "bytes": 4619,
+          "size": "4.5 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-2.jsonld",
+          "bytes": 4229,
+          "size": "4.1 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-2.md",
+          "bytes": 238,
+          "size": "238 B"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-2.ts",
+          "bytes": 3240,
+          "size": "3.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-3.jsonld",
+          "bytes": 5221,
+          "size": "5.1 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-3.md",
+          "bytes": 219,
+          "size": "219 B"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-3.ts",
+          "bytes": 4023,
+          "size": "3.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-4.jsonld",
+          "bytes": 2377,
+          "size": "2.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-4.md",
+          "bytes": 235,
+          "size": "235 B"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-4.ts",
+          "bytes": 1761,
+          "size": "1.7 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-5.jsonld",
+          "bytes": 1865,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-5.md",
+          "bytes": 262,
+          "size": "262 B"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-5.ts",
+          "bytes": 1374,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-6.jsonld",
+          "bytes": 1356,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-6.md",
+          "bytes": 221,
+          "size": "221 B"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-6.ts",
+          "bytes": 920,
+          "size": "920 B"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-7.jsonld",
+          "bytes": 2212,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-7.md",
+          "bytes": 276,
+          "size": "276 B"
+        },
+        {
+          "path": "dth-sc/introduction/f-introduction-fig-7.ts",
+          "bytes": 1673,
+          "size": "1.6 KB"
+        },
+        {
+          "path": "dth-sc/introduction/introduction.ts",
+          "bytes": 1878,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-011.jsonld",
+          "bytes": 6039,
+          "size": "5.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-011.md",
+          "bytes": 1412,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-011.ts",
+          "bytes": 4562,
+          "size": "4.5 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-012.jsonld",
+          "bytes": 4305,
+          "size": "4.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-012.md",
+          "bytes": 3394,
+          "size": "3.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-012.ts",
+          "bytes": 3186,
+          "size": "3.1 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-013.jsonld",
+          "bytes": 5297,
+          "size": "5.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-013.md",
+          "bytes": 2553,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-013.ts",
+          "bytes": 3988,
+          "size": "3.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-014.jsonld",
+          "bytes": 2453,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-014.md",
+          "bytes": 1930,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-014.ts",
+          "bytes": 1710,
+          "size": "1.7 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-015.jsonld",
+          "bytes": 1941,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-015.md",
+          "bytes": 4039,
+          "size": "3.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-015.ts",
+          "bytes": 1296,
+          "size": "1.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-016.jsonld",
+          "bytes": 1432,
+          "size": "1.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-016.md",
+          "bytes": 2595,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-016.ts",
+          "bytes": 883,
+          "size": "883 B"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-017.jsonld",
+          "bytes": 2288,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-017.md",
+          "bytes": 2909,
+          "size": "2.8 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-017.ts",
+          "bytes": 1581,
+          "size": "1.5 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-018.jsonld",
+          "bytes": 786,
+          "size": "786 B"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-018.md",
+          "bytes": 2601,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/introduction/p-introduction-page-018.ts",
+          "bytes": 365,
+          "size": "365 B"
+        },
+        {
+          "path": "dth-sc/introduction/pers-central-warehouse.jsonld",
+          "bytes": 4691,
+          "size": "4.6 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-central-warehouse.md",
+          "bytes": 2406,
+          "size": "2.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-central-warehouse.ts",
+          "bytes": 3525,
+          "size": "3.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-community-health-worker.jsonld",
+          "bytes": 3461,
+          "size": "3.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-community-health-worker.md",
+          "bytes": 1683,
+          "size": "1.6 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-community-health-worker.ts",
+          "bytes": 2532,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-health-facility.jsonld",
+          "bytes": 5006,
+          "size": "4.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-health-facility.md",
+          "bytes": 2463,
+          "size": "2.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-health-facility.ts",
+          "bytes": 3790,
+          "size": "3.7 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-health-service-user.jsonld",
+          "bytes": 3984,
+          "size": "3.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-health-service-user.md",
+          "bytes": 2015,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-health-service-user.ts",
+          "bytes": 2930,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-logistics-provider.jsonld",
+          "bytes": 3932,
+          "size": "3.8 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-logistics-provider.md",
+          "bytes": 1896,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-logistics-provider.ts",
+          "bytes": 2927,
+          "size": "2.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-manufacturer-distributor.jsonld",
+          "bytes": 4126,
+          "size": "4.0 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-manufacturer-distributor.md",
+          "bytes": 2031,
+          "size": "2.0 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-manufacturer-distributor.ts",
+          "bytes": 3051,
+          "size": "3.0 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-ministry-of-health.jsonld",
+          "bytes": 4452,
+          "size": "4.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-ministry-of-health.md",
+          "bytes": 2220,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-ministry-of-health.ts",
+          "bytes": 3347,
+          "size": "3.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-procurer.jsonld",
+          "bytes": 4074,
+          "size": "4.0 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-procurer.md",
+          "bytes": 1902,
+          "size": "1.9 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-procurer.ts",
+          "bytes": 3066,
+          "size": "3.0 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-regional-district-warehouse.jsonld",
+          "bytes": 4550,
+          "size": "4.4 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-regional-district-warehouse.md",
+          "bytes": 2235,
+          "size": "2.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-regional-district-warehouse.ts",
+          "bytes": 3400,
+          "size": "3.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-regulatory-authority.jsonld",
+          "bytes": 4395,
+          "size": "4.3 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-regulatory-authority.md",
+          "bytes": 2190,
+          "size": "2.1 KB"
+        },
+        {
+          "path": "dth-sc/introduction/pers-regulatory-authority.ts",
+          "bytes": 3249,
+          "size": "3.2 KB"
+        },
+        {
+          "path": "dth-sc/introduction/t-introduction-table-1.jsonld",
+          "bytes": 2604,
+          "size": "2.5 KB"
+        },
+        {
+          "path": "dth-sc/introduction/t-introduction-table-1.md",
+          "bytes": 1736,
+          "size": "1.7 KB"
+        },
+        {
+          "path": "dth-sc/introduction/t-introduction-table-1.ts",
+          "bytes": 1875,
+          "size": "1.8 KB"
+        },
+        {
+          "path": "dth-sc/l1-coverage.json",
+          "bytes": 139417,
+          "size": "136.1 KB"
+        },
+        {
+          "path": "dth-sc/media/bp-sc-bp-01-stepwise-dhsc-transformation.svg",
+          "bytes": 41310,
+          "size": "40.3 KB"
+        },
+        {
+          "path": "dth-sc/media/bp-sc-bp-02-end-to-end-supply-chain-processes.svg",
+          "bytes": 48838,
+          "size": "47.7 KB"
+        },
+        {
+          "path": "dth-sc/media/bp-sc-bp-03-centralized-track-and-trace.svg",
+          "bytes": 43037,
+          "size": "42.0 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p011.png",
+          "bytes": 142831,
+          "size": "139.5 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p012.png",
+          "bytes": 56883,
+          "size": "55.5 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p013.png",
+          "bytes": 73542,
+          "size": "71.8 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p014.png",
+          "bytes": 193589,
+          "size": "189.1 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p015.png",
+          "bytes": 224085,
+          "size": "218.8 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p016.png",
+          "bytes": 124141,
+          "size": "121.2 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p017.png",
+          "bytes": 161812,
+          "size": "158.0 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p020.png",
+          "bytes": 49463,
+          "size": "48.3 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p021.png",
+          "bytes": 64532,
+          "size": "63.0 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p026.png",
+          "bytes": 131592,
+          "size": "128.5 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p029.png",
+          "bytes": 132081,
+          "size": "129.0 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p033.png",
+          "bytes": 268053,
+          "size": "261.8 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p034.png",
+          "bytes": 166640,
+          "size": "162.7 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p036.png",
+          "bytes": 92116,
+          "size": "90.0 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p037.png",
+          "bytes": 96465,
+          "size": "94.2 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p038.png",
+          "bytes": 95855,
+          "size": "93.6 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p039.png",
+          "bytes": 102553,
+          "size": "100.1 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p040.png",
+          "bytes": 107367,
+          "size": "104.9 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p041.png",
+          "bytes": 166310,
+          "size": "162.4 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p043.png",
+          "bytes": 206269,
+          "size": "201.4 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p045.png",
+          "bytes": 96588,
+          "size": "94.3 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p049.png",
+          "bytes": 188712,
+          "size": "184.3 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p055.png",
+          "bytes": 138121,
+          "size": "134.9 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p056.png",
+          "bytes": 133137,
+          "size": "130.0 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p059.png",
+          "bytes": 191637,
+          "size": "187.1 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p061.png",
+          "bytes": 189899,
+          "size": "185.4 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p062.png",
+          "bytes": 108458,
+          "size": "105.9 KB"
+        },
+        {
+          "path": "dth-sc/media/vfig-p064.png",
+          "bytes": 171572,
+          "size": "167.6 KB"
+        },
+        {
+          "path": "dth-sc/references/p-references-page-065.jsonld",
+          "bytes": 753,
+          "size": "753 B"
+        },
+        {
+          "path": "dth-sc/references/p-references-page-065.md",
+          "bytes": 4796,
+          "size": "4.7 KB"
+        },
+        {
+          "path": "dth-sc/references/p-references-page-065.ts",
+          "bytes": 336,
+          "size": "336 B"
+        },
+        {
+          "path": "dth-sc/references/references.ts",
+          "bytes": 290,
+          "size": "290 B"
+        },
+        {
+          "path": "dth-sc/review-anchors.json",
+          "bytes": 66672,
+          "size": "65.1 KB"
+        },
+        {
+          "path": "schema/builders.ts",
+          "bytes": 496,
+          "size": "496 B"
+        },
+        {
+          "path": "schema/dak.ts",
+          "bytes": 505,
+          "size": "505 B"
+        },
+        {
+          "path": "schema/types.ts",
+          "bytes": 210,
+          "size": "210 B"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "cat-harness",
+      "summary": "computable adjudication and agentic test harness",
+      "theme": "grumpy-cyborg-agents",
+      "anchor": "page:index",
+      "declaredIn": "cat-harness.json",
+      "links": [
+        {
+          "label": "cat-harness, in the source",
+          "href": "https://github.com/litlfred/cat-harness"
+        },
+        {
+          "label": "RTFM — the cat-harness docs",
+          "href": "/docs/cat-harness/concepts/agentic-harness.html"
+        },
+        {
+          "label": "The work plan is where you say what you are doing",
+          "href": "/docs/cat-harness/guides/beans-and-todos.html"
+        },
+        {
+          "label": "Make your first folio",
+          "href": "/docs/cat-harness/start/getting-started.html"
+        },
+        {
+          "label": "Know which kind of thing you are writing",
+          "href": "/docs/cat-harness/concepts/content-types.html"
+        },
+        {
+          "label": "The documentation you will never read",
+          "href": "/docs/cat-harness/guides/index.html"
+        }
+      ],
+      "chars": 431,
+      "file": "cat-harness/folio/cat-harness.json"
+    }
+  ]
+}

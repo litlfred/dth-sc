@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/fig-23",
+  "@type": [
+    "folio-assistant-core:Figure",
+    "doco:Figure"
+  ],
+  "label": "fig:23",
+  "kind": "figure",
+  "text": "f-ch03-fig-23.md",
+  "meta": {
+    "title": "Step 3. Develop a budget for each DHSC intervention",
+    "source": {
+      "library": "9789240101197-eng",
+      "file": "who-iris/library/9789240101197-eng/figures/vfig-p049.png",
+      "page": 49,
+      "method": "l1-vector-figure"
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain-intervention",
+        "prefLabel": "Digital Health Supply Chain Intervention"
+      }
+    ]
+  },
+  "provenance": "authored"
+}

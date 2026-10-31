@@ -1,0 +1,109 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "smart-base": "https://litlfred.github.io/smart-base/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/pers-health-service-user",
+  "@type": [
+    "smart-base:Persona"
+  ],
+  "label": "pers:health-service-user",
+  "kind": "persona",
+  "title": "Individual (health service user / patient)",
+  "uses": [
+    "papers/dth-sc/blocks/prose-introduction-page-011",
+    "papers/dth-sc/blocks/prose-introduction-page-012",
+    "papers/dth-sc/blocks/prose-ch04-page-055",
+    "papers/dth-sc/blocks/prose-ch04-page-056"
+  ],
+  "text": "pers-health-service-user.md",
+  "meta": {
+    "title": "Individual (health service user / patient)",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-011",
+      "file": "who-iris/library/9789240101197-eng/sections/page-011.md",
+      "pdfPage": 11,
+      "method": "l1-outline-seed",
+      "issue": "litlfred/dth-sc#2"
+    },
+    "roleId": "SC-R-10",
+    "personaType": "person",
+    "bpmnLanes": [
+      {
+        "process": "bp:sc-bp-02-end-to-end-supply-chain-processes",
+        "processId": "SC_BP_02",
+        "laneId": "Lane_BP02_Individual",
+        "bpmnFile": "folio/dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.bpmn"
+      },
+      {
+        "process": "bp:sc-bp-03-centralized-track-and-trace",
+        "processId": "SC_BP_03",
+        "laneId": "Lane_BP03_Individual",
+        "bpmnFile": "folio/dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.bpmn"
+      }
+    ],
+    "archimate": {
+      "model": "smart-ra 0.3.0-draft.1",
+      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
+      "elements": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-03e28af10b8f5b099e271461c8a99f21.jsonld",
+          "name": "Individual",
+          "type": "BusinessRole"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-975c5567001151299672c0341a733111.jsonld",
+          "name": "Product Verification",
+          "type": "ApplicationService"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-bc68171ed2615dad80e6f7d8199f4057.jsonld",
+          "name": "Track and Trace",
+          "type": "ApplicationService"
+        }
+      ],
+      "views": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-bea56e01c8345fbc803dee47a17ccfd3.jsonld",
+          "name": "Track and Trace through DHSC Components (DTH SC Fig. 24)"
+        }
+      ]
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+        "prefLabel": "Traceability"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/client",
+        "prefLabel": "Client"
+      }
+    ],
+    "glossaryTerms": [
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+      "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/client"
+    ],
+    "relatedBlocks": [
+      "bp:sc-bp-02-end-to-end-supply-chain-processes",
+      "bp:sc-bp-03-centralized-track-and-trace",
+      "tbl:annex-4",
+      "tbl:annex-5",
+      "fig:ch04-fig-24",
+      "fig:ch04-fig-25"
+    ]
+  },
+  "provenance": "authored"
+}

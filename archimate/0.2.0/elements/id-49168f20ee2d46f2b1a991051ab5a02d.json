@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-49168f20ee2d46f2b1a991051ab5a02d.jsonld",
+  "@type": "archimate:Outcome",
+  "schema:identifier": "id-49168f20ee2d46f2b1a991051ab5a02d",
+  "schema:name": "NHWA Module 1: Stock and flow",
+  "schema:description": "\"This module provides a comprehensive overview of the size, composition and distribution of the HWF as well as its flow throughout the HLM.\" Indicators 1-01 to 1-12. The health workforce registry or database is a named data source for all but 1-11. Term module-1 in the nhwa-2023 glossary (litlfred/who-iris glossary/nhwa-2023.glossary.json), from National health workforce accounts: a handbook, 2nd ed. (WHO 2023, ISBN 9789240081291).",
+  "schema:category": "Motivation",
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.2.0.jsonld"
+}

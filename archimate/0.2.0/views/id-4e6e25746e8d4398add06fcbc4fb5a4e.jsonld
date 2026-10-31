@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/views/id-4e6e25746e8d4398add06fcbc4fb5a4e.jsonld",
+  "@type": "archimate:Diagram",
+  "schema:identifier": "id-4e6e25746e8d4398add06fcbc4fb5a4e",
+  "schema:name": "Capabilities-Goals",
+  "schema:image": "https://litlfred.github.io/smart-ra/archimate/0.2.0/views/id-4e6e25746e8d4398add06fcbc4fb5a4e.svg",
+  "schema:about": [
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-3fd56c1375c44038a7d61f56715945ea.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-bec80863d13c42dd85e3df25cd911478.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-e48158364b4f4d42bf870ad246a0a75b.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-0c7a544f41c64d959ec448b9e152de0a.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-e53b31972646454384c78f3380f5c40e.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-f9c2f2cd09fd4799ac06f33ed88bb61c.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-88dfd0a869354490ae75e095d940582a.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-a0d3c79cdc2840eaaf8927f96ec65a2d.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-2d603034c4194b058762690fd6415ff0.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-0c2dc1785bbc4274b810f7d974fadc9b.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-3c1ffe1cbc8944b4bd1e6075b0eac9e1.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-72c9ea29b0c24074bc555c3b3201e617.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-9825f8c281d74fa5a9ec0171e246fb27.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-cc8f986da3c64f6eb50fea04473a596c.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-1ea61b96bda34536937bf1783d3c4f22.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-f3331a72444d4cc49391c25e0f7745fd.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-611f30aa79e949439f93e4f06bd82e48.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-0cf148cf09914184972be4bdaee43394.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-689e8648bcce42e695cd6512579b30a7.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-78ec1c7fd76943298ffdeea12f7acc4d.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-d56dcdd2deb44ad4a88e6b573ccb7f92.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-3c813327c5e14e6697a0e2fb1586cd6a.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-fb45f12f12df4939927654027e6a54e1.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-7a6dff73ad9d496f9b2df94ece5a3f70.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-b6a234cbca8a47cb8aa6bdfcc7c6bc80.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-f9f30d3e83e24a8daa3393eebb0838eb.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-b37bf4947ec9430197f9056d283eb5b0.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-48362e4151454c8a9dfae6acfb7401be.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-2031d7ced34f4ea0ad0da9d91f5c52e1.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-7677a772744241a89e0cca82c35fb07c.jsonld"
+    }
+  ],
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.2.0.jsonld"
+}

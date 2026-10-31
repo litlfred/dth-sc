@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-a423086366604d2a9ea403aa8f19f264.jsonld",
+  "@type": "archimate:Outcome",
+  "schema:identifier": "id-a423086366604d2a9ea403aa8f19f264",
+  "schema:name": "Availability of National Health Workforce Accounts (NHWA)",
+  "schema:description": "“A system by which countries progressively improve the availability, quality, and use of data on health workforce through monitoring of a set of indicators to support achievement of Universal Health Coverage, Sustainable Development Goals and other health objectives.” 29 indicators in 4 modules (National health workforce accounts: a handbook, 2nd ed. (WHO 2023, ISBN 9789240081291), Definition and A modular approach).",
+  "schema:category": "Motivation",
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.2.0.jsonld"
+}

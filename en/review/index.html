@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script data-folio-saved-scheme>(function(){var d=document.documentElement,s=null,c="dark";try{s=localStorage.getItem("fa-color-scheme")}catch(e){}if(s!=="light"&&s!=="dark"){s="light";try{if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)s="dark"}catch(e){}}try{var n=document.getElementById("fa-site-scheme");if(n)c=JSON.parse(n.textContent).scheme==="light"?"light":"dark"}catch(e){}d.setAttribute("data-fa-scheme",s);var j=window.jtd;if(s!==c&&j&&typeof j.setTheme==="function"){try{j.setTheme(s)}catch(e){}}})();</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review: what changed</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1b1b1b; --bg: #fdfdfb; --muted: #5b5b5b; --link: #0b5cad; --rule: #d8d8d4; }
+  @media (prefers-color-scheme: dark) { :root:not([data-fa-scheme="light"]) { --fg: #e8e8e6; --bg: #161616; --muted: #a8a8a4; --link: #7db4ff; --rule: #3a3a38; } }
+  :root[data-fa-scheme="dark"] { --fg: #e8e8e6; --bg: #161616; --muted: #a8a8a4; --link: #7db4ff; --rule: #3a3a38; }
+  :root[data-fa-scheme="light"] { color-scheme: light; } :root[data-fa-scheme="dark"] { color-scheme: dark; }
+  body { margin: 0; font: 1.05rem/1.6 system-ui, sans-serif; color: var(--fg); background: var(--bg); }
+  /* Column and gutters belong to main: the harness rail owns body padding-left. */
+  main { max-width: 78rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .layout { display: grid; grid-template-columns: 17rem minmax(0, 1fr); gap: 2rem; align-items: start; }
+  /* Bean folio-assistant-xp72: at 2,000 changed blocks the page spent 1.8 s
+     (3.6 s with no change text, two iframes per change) laying out entries
+     nobody could see yet. content-visibility skips style, layout and paint for
+     an entry until it nears the viewport, and keeps it in the DOM, the
+     accessibility tree and find-in-page, so j/k, focus and links are unchanged.
+     The intrinsic size is remembered once an entry has rendered. Measured:
+     0.6-0.8 s for both cases (test/review-budget.e2e.ts). */
+  #changes li[data-label] { content-visibility: auto; contain-intrinsic-size: auto 14rem; }
+  /* The pane gets main's own gutters, so it does not sit flush on the rail. */
+  .layout > aside { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow: auto; font-size: .95rem; padding: 2rem 0 1rem 1.5rem; }
+  @media (max-width: 62rem) { .layout { grid-template-columns: 1fr; } .layout > aside { position: static; max-height: none; padding: 1rem 1.5rem 0; } }
+  .outline ol { list-style: none; padding-left: .75rem; margin: .25rem 0; }
+  .outline > ol { padding-left: 0; }
+  .ol-doc { font-weight: 600; } .ol-ch { font-weight: 600; margin-top: .4rem; }
+  .outline li { border: 0; padding: .1rem 0; }
+  .badges { color: var(--muted); font-size: .9rem; }
+  /* The minimap is a MAP: small square cells that wrap, one per block, so a
+     900-block document fits in a screen instead of a 23,000px column of
+     empty full-width bars. A cell with glyphs widens to fit them, so the
+     glyphs still repeat the colour. On a narrow screen the pane sits above
+     the list, so the map scrolls in its own box rather than pushing the
+     changes off the screen. */
+  .minimap h2 { margin-top: 1.5rem; }
+  .minimap ol { list-style: none; padding: 2px; margin: 0; display: flex; flex-wrap: wrap; gap: 2px; }
+  .minimap li { border: 0; padding: 0; display: block; }
+  .minimap .cell { display: block; box-sizing: border-box; min-width: .85rem; height: .85rem; padding: 0 .1rem; font: 700 .6rem/.75rem system-ui, sans-serif; text-align: center; border: 1px solid var(--rule); border-radius: 2px; cursor: pointer; }
+  .minimap .cell.h0 { background: transparent; color: var(--fg); }
+  /* A cell with something to look at is filled (.h1-.h3 below). */
+  .minimap .cell:not(.h0) { border-color: transparent; }
+  .minimap .cell:focus-visible { outline: 3px solid var(--link); outline-offset: 1px; }
+  .minimap .mm-ch { margin: .6rem 0 .15rem; font-size: .8rem; line-height: 1.3; font-weight: 600; }
+  .minimap .mm-count { font-weight: 400; color: var(--muted); }
+  @media (max-width: 62rem) { .minimap { max-height: 50vh; overflow: auto; } }
+  a { color: var(--link); }
+  a:focus-visible, button:focus-visible, li:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  .nav { display: flex; gap: .5rem; margin: 1rem 0; flex-wrap: wrap; align-items: center; }
+  /* Control rules are scoped to .layout: the harness rail's own controls sit outside it.
+     Minimap cells are excluded: this rule's transparent background beat the
+     .h1-.h3 fills, so a changed block looked the same as an unchanged one. */
+  .layout button:where(:not(.cell)) { font: inherit; padding: .5rem 1rem; min-height: 2.75rem; border: 1px solid var(--muted); border-radius: .4rem; background: transparent; color: var(--fg); cursor: pointer; }
+  h2 { font-size: 1.05rem; margin-top: 2rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+  ul { list-style: none; padding: 0; }
+  li { padding: .5rem .25rem; border-bottom: 1px solid var(--rule); }
+  .kind { font-weight: 600; margin-right: .5rem; }
+  .label { font-family: ui-monospace, monospace; }
+  .links a { margin-right: 1rem; }
+  .muted { color: var(--muted); }
+  .comments { margin: .25rem 0 0 1rem; padding-left: .75rem; border-left: 3px solid var(--rule); }
+  .comment { padding: .15rem 0; }
+  .tagline { font-family: ui-monospace, monospace; font-size: .9rem; }
+  .layout select { font: inherit; min-height: 2.75rem; padding: .25rem .5rem; color: var(--fg); background: var(--bg); border: 1px solid var(--muted); border-radius: .4rem; }
+  .layout select:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  .viewrow { margin: .5rem 0 .25rem; display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+  .diff { margin: .25rem 0 .5rem; padding: .5rem .75rem; border: 1px solid var(--rule); border-radius: .4rem; overflow-x: auto; }
+  pre.diff { white-space: pre-wrap; font: .95rem/1.5 ui-monospace, monospace; }
+  ins { background: #d7f5dc; color: #0b3d17; text-decoration: underline; }
+  del { background: #fbdada; color: #5c0b0b; text-decoration: line-through; }
+  @media (prefers-color-scheme: dark) { :root:not([data-fa-scheme="light"]) ins { background: #12391d; color: #c8f2d0; } :root:not([data-fa-scheme="light"]) del { background: #45181a; color: #f5caca; } }
+  :root[data-fa-scheme="dark"] ins { background: #12391d; color: #c8f2d0; } :root[data-fa-scheme="dark"] del { background: #45181a; color: #f5caca; }
+  :root[data-fa-scheme="light"] { color-scheme: light; } :root[data-fa-scheme="dark"] { color-scheme: dark; }
+  .diff-sbs { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+  .diff-fields table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  .diff-fields caption { text-align: left; font-weight: 600; padding: .25rem 0; }
+  .diff-fields th, .diff-fields td { border: 1px solid var(--rule); padding: .25rem .4rem; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  .diff-fields td:last-child { white-space: nowrap; font-weight: 600; }
+  .diff-sbs iframe { width: 100%; height: 22rem; border: 1px solid var(--rule); border-radius: .3rem; background: #fff; }
+  @media (max-width: 40rem) { .diff-sbs { grid-template-columns: 1fr; } }
+  /* Visual diff (0rxe): pictures on a white card, since they are screenshots
+     of light pages; the mode buttons are native radios, one click each. */
+  .diff-visual img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: .3rem; background: #fff; display: block; }
+  .visual-modes { border: 0; padding: 0; margin: .25rem 0 .5rem; display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+  .visual-modes legend { float: left; margin-right: .5rem; font-weight: 600; }
+  .visual-modes label { cursor: pointer; }
+  /* Heat map (qbfi). Blue 250/400/550 on light and 600/500/400 on dark: an
+     ordinal ramp that passes the dataviz validator, each fill paired with an
+     ink that clears 4.7:1 against it. */
+  .heatwrap { overflow-x: auto; margin: 1rem 0; }
+  table.heat { border-collapse: separate; border-spacing: 2px; font-size: .95rem; }
+  table.heat caption { text-align: left; color: var(--muted); padding-bottom: .4rem; }
+  table.heat th, table.heat td { padding: .35rem .6rem; text-align: left; border-radius: .25rem; overflow-wrap: anywhere; }
+  /* Fit the width rather than scroll sideways: a keyboard user cannot reach a
+     scrolled-off column (the ojcx run clipped QA at 1000 px). The wrapper is
+     still focusable, for the narrowest screens. */
+  table.heat { width: 100%; }
+  table.heat thead th { font-weight: 600; border-bottom: 1px solid var(--rule); }
+  table.heat td { font-variant-numeric: tabular-nums; }
+  .h1 { background: #86b6ef; color: #1b1b1b; } .h2 { background: #3987e5; color: #1b1b1b; } .h3 { background: #1c5cab; color: #ffffff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-fa-scheme="light"]) .h1 { background: #184f95; color: #ffffff; } :root:not([data-fa-scheme="light"]) .h2 { background: #256abf; color: #ffffff; } :root:not([data-fa-scheme="light"]) .h3 { background: #3987e5; color: #161616; } }
+  :root[data-fa-scheme="dark"] .h1 { background: #184f95; color: #ffffff; } :root[data-fa-scheme="dark"] .h2 { background: #256abf; color: #ffffff; } :root[data-fa-scheme="dark"] .h3 { background: #3987e5; color: #161616; }
+  :root[data-fa-scheme="light"] { color-scheme: light; } :root[data-fa-scheme="dark"] { color-scheme: dark; }
+  button.linklike { border: 0; padding: 0; min-height: 0; background: none; color: var(--link); text-decoration: underline; cursor: pointer; font: inherit; text-align: left; }
+  h2:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+</style>
+<link rel="stylesheet" href="../../assets/css/navbar.css"><script src="../../assets/navbar/rail-1xqosn9b1rd.js" defer></script><script src="../../assets/js/navbar.js" defer></script><script src="../../assets/navbar/row-2acuhncsmbg.js" defer></script><link rel="stylesheet" href="../../assets/css/navbar-row.css"><script src="../../assets/js/navbar-row.js" defer></script><meta name="fa-search-exclude" content="true"><script src="../../assets/js/vendor/lunr.min.js" defer></script><script src="../../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../../assets/page-layout.css" data-fa-page-layout><script src="../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../../assets/css/docs-ui.css" data-fa-platform-ui><script src="../../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content="../.."></head>
+<body><script type="application/json" id="fa-navbar-row" data-fa-root="../.." data-fa-row-src="row-2acuhncsmbg"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../..">{"data":"rail-1xqosn9b1rd","here":"/en/review/"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../">Digital Transformation Handbook for Health Supply Chain Architecture</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../../">Digital Transformation Handbook for Health Supply Chain Architecture</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
+<div class="layout">
+<aside id="navpane" aria-label="Navigation"></aside>
+<main>
+<h1>What changed</h1>
+<p id="summary" class="muted"></p>
+<p id="status" role="status" aria-live="polite">Loading the ChangeSet…</p>
+<div class="nav">
+  <button type="button" id="prev">Previous (k)</button>
+  <button type="button" id="next">Next (j)</button>
+  <button type="button" id="prevc">Previous with comments (p)</button>
+  <button type="button" id="nextc">Next with comments (n)</button>
+  <button type="button" id="nextu">Next unreviewed (u)</button>
+  <a id="all-documents" href="../../index.html">All documents</a>
+</div>
+<div class="viewrow"><label for="view">Show every change as</label> <select id="view"></select> <label for="comment-filter">Show comments</label> <select id="comment-filter"></select></div>
+<section aria-labelledby="rendered-h"><h2 id="rendered-h">Rendered pages this change alters</h2><div id="rendered" class="muted">Loading the rendered impact…</div></section>
+<div id="heat" class="heatwrap" tabindex="0" role="region" aria-label="Heat map: where to look first"></div>
+<div id="changes"></div>
+</main>
+</div>
+<script>
+var LOCALES = ["en"];
+var reviewSiteRoot = function reviewSiteRoot(pathname, locales) {
+  const segs = String(pathname || "").split("/");
+  return segs.length >= 4 && locales.indexOf(segs[segs.length - 3]) >= 0 ? "../../" : "../";
+};
+var matchesCommentFilter = function matchesCommentFilter(status, kind, filter) {
+  if (!filter)
+    return !0;
+  if (filter === "open-addressed")
+    return status === "open" || status === "addressed";
+  if (filter.indexOf("status:") === 0)
+    return status === filter.slice(7);
+  if (filter.indexOf("kind:") === 0)
+    return kind === filter.slice(5);
+  return !0;
+};
+var RENDERERS = [{"id":"word","label":"Word diff of the source","description":"The block's Markdown with removed words struck through and added words marked. Shows exactly what the author typed.","needs":["text"],"defaultFor":["*"]},{"id":"inline","label":"Inline, as rendered","description":"The block as a reader sees it now, with added words marked and removed words struck through where they were.","needs":["text"],"defaultFor":["prose","remark","definition","example","recommendation"]},{"id":"visual","label":"Pictures, before and after","description":"A picture of the block on the published page and on this preview, with a slider between them and a view that marks every changed pixel. For figures, diagrams and tables, whose markup says little.","needs":["screenshots"],"defaultFor":["table","figure","diagram","equation","simulator"]},{"id":"side-by-side","label":"Side by side","description":"The published page and this preview next to each other, each scrolled to the block. For tables, figures and anything whose layout is the change.","needs":["pages"],"defaultFor":["table","figure","diagram","equation","simulator"]},{"id":"fields","label":"Fields, before and after","description":"The block's fields side by side, one row each, with every added, removed and changed field named. For structured blocks — a persona, a requirement, a data element — whose source diff is unreadable.","needs":["structure"],"defaultFor":["@structured"]}];
+var wordDiff = function wordDiff(a, b, limit = 4000000) {
+  const tok = (s) => s.match(/\s+|[\p{L}\p{N}_]+|[^\s\p{L}\p{N}_]/gu) || [], x = tok(a), y = tok(b);
+  let pre = 0;
+  while (pre < x.length && pre < y.length && x[pre] === y[pre])
+    pre++;
+  let suf = 0;
+  while (suf < x.length - pre && suf < y.length - pre && x[x.length - 1 - suf] === y[y.length - 1 - suf])
+    suf++;
+  const xs = x.slice(pre, x.length - suf), ys = y.slice(pre, y.length - suf), n = xs.length, m = ys.length;
+  if ((n + 1) * (m + 1) > limit)
+    return null;
+  const w = m + 1, dp = new Int32Array((n + 1) * w);
+  for (let i = n - 1;i >= 0; i--)
+    for (let j = m - 1;j >= 0; j--)
+      dp[i * w + j] = xs[i] === ys[j] ? dp[(i + 1) * w + j + 1] + 1 : Math.max(dp[(i + 1) * w + j], dp[i * w + j + 1]);
+  const out = [], push = (op, t) => {
+    const last = out[out.length - 1];
+    if (last && last.op === op)
+      last.text += t;
+    else
+      out.push({ op, text: t });
+  };
+  if (pre)
+    push("same", x.slice(0, pre).join(""));
+  let i = 0, j = 0;
+  while (i < n && j < m)
+    if (xs[i] === ys[j]) {
+      push("same", xs[i]);
+      i++;
+      j++;
+    } else if (dp[(i + 1) * w + j] >= dp[i * w + j + 1]) {
+      push("del", xs[i]);
+      i++;
+    } else {
+      push("ins", ys[j]);
+      j++;
+    }
+  while (i < n)
+    push("del", xs[i++]);
+  while (j < m)
+    push("ins", ys[j++]);
+  if (suf)
+    push("same", x.slice(x.length - suf).join(""));
+  return out;
+};
+var cleanRendered = function cleanRendered(doc, html) {
+  const parsed = new DOMParser().parseFromString(html, "text/html");
+  parsed.querySelectorAll("script,iframe,object,embed,frame,frameset,link,meta,base,form").forEach((n) => n.remove());
+  parsed.querySelectorAll("*").forEach((el) => {
+    for (const a of Array.from(el.attributes)) {
+      const v = a.value.replace(/[\s\u0000-\u001f]/g, "").toLowerCase();
+      if (/^on/i.test(a.name) || (a.name === "href" || a.name === "src" || a.name === "xlink:href") && v.startsWith("javascript:"))
+        el.removeAttribute(a.name);
+    }
+  });
+  return doc.importNode(parsed.body, !0);
+};
+var renderWordDiff = function renderWordDiff(doc, ops) {
+  const pre = doc.createElement("pre");
+  pre.className = "diff diff-word";
+  for (const o of ops) {
+    const el = doc.createElement(o.op === "ins" ? "ins" : o.op === "del" ? "del" : "span");
+    el.textContent = o.text;
+    pre.appendChild(el);
+  }
+  return pre;
+};
+var renderInline = function renderInline(doc, baseHtml, headHtml, diff, clean) {
+  const box = doc.createElement("div");
+  box.className = "diff diff-inline";
+  if (headHtml === null) {
+    const del = doc.createElement("del");
+    if (baseHtml !== null)
+      del.appendChild(clean(doc, baseHtml));
+    box.appendChild(del);
+    return box;
+  }
+  const head = clean(doc, headHtml), baseText = baseHtml === null ? "" : clean(doc, baseHtml).textContent || "", texts = [], walker = doc.createTreeWalker(head, 4);
+  for (let n = walker.nextNode();n; n = walker.nextNode())
+    texts.push(n);
+  const headText = texts.map((t) => t.data).join(""), ops = diff(baseText, headText);
+  if (ops === null)
+    return "This block is too long for an inline diff. Choose the word diff or side by side.";
+  const ins = [], dels = new Map;
+  let off = 0;
+  for (const o of ops)
+    if (o.op === "same")
+      off += o.text.length;
+    else if (o.op === "ins") {
+      ins.push([off, off + o.text.length]);
+      off += o.text.length;
+    } else if (o.text.trim())
+      dels.set(off, (dels.get(off) || "") + o.text);
+  const inIns = (i) => ins.some(([s, e]) => i >= s && i < e);
+  let start = 0;
+  texts.forEach((t, k) => {
+    const end = start + t.data.length, frag = doc.createDocumentFragment();
+    let run = "", runIns = !1;
+    const flush = () => {
+      if (!run)
+        return;
+      if (runIns) {
+        const e = doc.createElement("ins");
+        e.textContent = run;
+        frag.appendChild(e);
+      } else
+        frag.appendChild(doc.createTextNode(run));
+      run = "";
+    };
+    for (let i = start;i <= end; i++) {
+      if (dels.has(i) && (i > start || k === 0)) {
+        flush();
+        const d = doc.createElement("del");
+        d.textContent = dels.get(i);
+        frag.appendChild(d);
+        dels.delete(i);
+      }
+      if (i === end)
+        break;
+      const isIns = inIns(i);
+      if (isIns !== runIns) {
+        flush();
+        runIns = isIns;
+      }
+      run += t.data[i - start];
+    }
+    flush();
+    t.replaceWith(frag);
+    start = end;
+  });
+  for (const [, text] of dels) {
+    const d = doc.createElement("del");
+    d.textContent = text;
+    head.appendChild(d);
+  }
+  while (head.firstChild)
+    box.appendChild(head.firstChild);
+  return box;
+};
+var renderFields = function renderFields(doc, s) {
+  const base = s.base || {}, head = s.head || {}, keys = Object.keys(base).concat(Object.keys(head).filter((k) => !(k in base))).sort(), box = doc.createElement("div");
+  box.className = "diff diff-fields";
+  const table = (rows, caption) => {
+    const t = doc.createElement("table"), cap = doc.createElement("caption");
+    cap.textContent = caption;
+    t.appendChild(cap);
+    const tr0 = doc.createElement("tr");
+    ["field", "main", "this preview", "change"].forEach((h) => {
+      const th = doc.createElement("th");
+      th.scope = "col";
+      th.textContent = h;
+      tr0.appendChild(th);
+    });
+    t.appendChild(tr0);
+    rows.forEach((r) => {
+      const tr = doc.createElement("tr");
+      tr.className = "f-" + r[3];
+      r.forEach((c, i) => {
+        const td = doc.createElement(i === 0 ? "th" : "td");
+        if (i === 0)
+          td.scope = "row";
+        if (i === 0) {
+          const code = doc.createElement("code");
+          code.textContent = c;
+          td.appendChild(code);
+        } else
+          td.textContent = c;
+        tr.appendChild(td);
+      });
+      t.appendChild(tr);
+    });
+    return t;
+  }, changed = [], same = [];
+  keys.forEach((k) => {
+    const b = k in base ? base[k] : null, h = k in head ? head[k] : null;
+    if (b === h)
+      same.push([k, b ?? "", h ?? "", "unchanged"]);
+    else
+      changed.push([k, b ?? "\u2014", h ?? "\u2014", b === null ? "added" : h === null ? "removed" : "changed"]);
+  });
+  const sideless = !s.base ? "This block is new: every field is added." : !s.head ? "This block was removed: every field is removed." : null;
+  if (sideless) {
+    const p = doc.createElement("p");
+    p.className = "muted";
+    p.textContent = sideless;
+    box.appendChild(p);
+  }
+  if (changed.length)
+    box.appendChild(table(changed, changed.length + " field" + (changed.length === 1 ? "" : "s") + " differ (" + s.kind + ")"));
+  else {
+    const p = doc.createElement("p");
+    p.className = "muted";
+    p.textContent = "No field differs: the change is to the manifest's form, not its values.";
+    box.appendChild(p);
+  }
+  if (same.length) {
+    const d = doc.createElement("details"), sum = doc.createElement("summary");
+    sum.textContent = same.length + " unchanged field" + (same.length === 1 ? "" : "s");
+    d.appendChild(sum);
+    d.appendChild(table(same, "Unchanged fields"));
+    box.appendChild(d);
+  }
+  return box;
+};
+var renderSideBySide = function renderSideBySide(doc, before, after) {
+  const box = doc.createElement("div");
+  box.className = "diff diff-sbs";
+  const pane = (title, href) => {
+    const col = doc.createElement("div"), h = doc.createElement("div");
+    h.className = "muted";
+    h.textContent = title;
+    col.appendChild(h);
+    if (href === null) {
+      const p = doc.createElement("p");
+      p.className = "muted";
+      p.textContent = title === "Main" ? "Not on main: this block is new." : "Not on this preview: this block was removed.";
+      col.appendChild(p);
+    } else {
+      const f = doc.createElement("iframe");
+      f.src = href;
+      f.title = title + ": " + href;
+      f.loading = "lazy";
+      col.appendChild(f);
+    }
+    return col;
+  };
+  box.appendChild(pane("Main", before));
+  box.appendChild(pane("This preview", after));
+  return box;
+};
+var renderVisual = function renderVisual(doc, v, prefix, group) {
+  const box = doc.createElement("div");
+  box.className = "diff diff-visual";
+  const note = (t) => {
+    const p = doc.createElement("p");
+    p.className = "muted";
+    p.textContent = t;
+    return p;
+  };
+  if (!v) {
+    box.appendChild(note("No pictures of this block on this build."));
+    return box;
+  }
+  const why = (s, side) => s === null ? side === "before" ? "Not on main: this block is new." : "Not on this preview: this block was removed." : s.missing === "page" ? "Its page is not in the " + (side === "before" ? "published site" : "preview") + "." : s.missing === "anchor" ? "Its anchor is not on the " + (side === "before" ? "published" : "preview") + " page." : null, pic = (src, alt, fallback) => {
+    if (!src)
+      return note(fallback || "No picture.");
+    const i = doc.createElement("img");
+    i.src = prefix + src;
+    i.alt = alt;
+    i.loading = "lazy";
+    return i;
+  }, summary = doc.createElement("p");
+  summary.className = "kind";
+  summary.textContent = v.changed === null ? "Only one side could be pictured, so nothing is compared." : v.changed === 0 ? "No pixel changed beyond anti-aliasing: the change is not visible." : (v.changed * 100).toFixed(1) + "% of the block's pixels changed.";
+  box.appendChild(summary);
+  const views = [];
+  if (v.diff)
+    views.push(["diff", "Changed pixels", () => pic(v.diff, v.label + ": changed pixels marked", null)]);
+  views.push(["before", "Before", () => pic(v.before && v.before.png, v.label + " on main", why(v.before, "before"))]);
+  views.push(["after", "After", () => pic(v.after && v.after.png, v.label + " on this preview", why(v.after, "after"))]);
+  views.push(["both", "Both", () => {
+    const row = doc.createElement("div");
+    row.className = "diff-sbs";
+    row.appendChild(pic(v.before && v.before.png, v.label + " on main", why(v.before, "before")));
+    row.appendChild(pic(v.after && v.after.png, v.label + " on this preview", why(v.after, "after")));
+    return row;
+  }]);
+  const fs = doc.createElement("fieldset");
+  fs.className = "visual-modes";
+  const lg = doc.createElement("legend");
+  lg.textContent = "Show";
+  fs.appendChild(lg);
+  const stage = doc.createElement("div"), has = (s) => !!(s && s.png), first = views.findIndex(([id]) => id === "diff" || id === "after" && has(v.after) || id === "before" && has(v.before)), start = first < 0 ? 0 : first, show = (i) => {
+    while (stage.firstChild)
+      stage.removeChild(stage.firstChild);
+    stage.appendChild(views[i][2]());
+  };
+  views.forEach(([id, label], i) => {
+    const l = doc.createElement("label"), r = doc.createElement("input");
+    r.type = "radio";
+    r.name = group;
+    r.value = id;
+    r.checked = i === start;
+    r.addEventListener("change", () => show(i));
+    l.appendChild(r);
+    l.appendChild(doc.createTextNode(" " + label));
+    fs.appendChild(l);
+  });
+  box.appendChild(fs);
+  box.appendChild(stage);
+  show(start);
+  return box;
+};
+var computeHeat = function computeHeat(input) {
+  const rows = new Map, row = (s) => {
+    const k = s || "(listed in no section)";
+    let r = rows.get(k);
+    if (!r) {
+      r = { section: k, changed: 0, open: 0, defects: 0, stale: 0, qaFailing: 0, qaWorst: null, qaStale: 0, qaUnaudited: 0, qaScriptsOnly: 0, qaNeedsAgent: 0, qaJudgedUnknown: 0, qaBlocks: 0, needReview: 0, reviewed: 0 };
+      rows.set(k, r);
+    }
+    return r;
+  }, hasVerdicts = !!input.verdicts && input.blocks !== null, current = {};
+  if (hasVerdicts)
+    for (const v of input.verdicts) {
+      const b = input.blocks[v.targetLabel];
+      if (b && b.hash === v.blockHash)
+        current[v.targetLabel] = !0;
+    }
+  const sectionOf = new Map;
+  for (const c of input.changes) {
+    const s = (c.head || c.base || {}).section;
+    sectionOf.set(c.label, s);
+    const r = row(s);
+    r.changed++;
+    if (c.change === "added" || c.change === "changed") {
+      r.needReview++;
+      if (current[c.label])
+        r.reviewed++;
+    }
+  }
+  for (const c of input.comments || []) {
+    if (c.status !== "open" && c.status !== "addressed")
+      continue;
+    const b = input.blocks ? input.blocks[c.targetLabel] : void 0, s = c.review.orphaned ? void 0 : b && b.section || sectionOf.get(c.targetLabel), r = row(s);
+    r.open++;
+    if (c.review.kind === "defect")
+      r.defects++;
+    if (b && c.review.blockHash !== null && b.hash !== c.review.blockHash)
+      r.stale++;
+  }
+  const qa = input.blocks && input.qa ? input.qa : null;
+  if (qa && input.blocks) {
+    const RANK = { critical: 0, major: 1, minor: 2 };
+    for (const [label, q] of Object.entries(qa)) {
+      const s = (input.blocks[label] || {}).section, k = s || "(listed in no section)", attention = q.state === "failing" || q.state === "stale";
+      if (!rows.has(k) && !attention)
+        continue;
+      const r = row(s);
+      r.qaBlocks++;
+      if (q.state === "failing") {
+        r.qaFailing++;
+        if (q.worst && (r.qaWorst === null || RANK[q.worst] < RANK[r.qaWorst]))
+          r.qaWorst = q.worst;
+      } else if (q.state === "stale")
+        r.qaStale++;
+      else if (q.state === "unaudited")
+        r.qaUnaudited++;
+      else if (q.state === "passing") {
+        if (typeof q.needsAgent !== "number")
+          r.qaJudgedUnknown++;
+        else if (q.needsAgent > 0) {
+          r.qaScriptsOnly++;
+          r.qaNeedsAgent += q.needsAgent;
+        }
+      }
+    }
+  }
+  const order = [...new Set(input.changes.map((c) => (c.head || c.base || {}).section || "(listed in no section)"))], rest = [...rows.keys()].filter((k) => !order.includes(k)).sort(), all = [...order, ...rest].filter((k) => k !== "(listed in no section)");
+  if (rows.has("(listed in no section)"))
+    all.push("(listed in no section)");
+  return { rows: all.map((k) => rows.get(k)), hasComments: input.comments !== null, hasBlocks: input.blocks !== null, hasQa: qa !== null, hasVerdicts };
+};
+var heatBucket = function heatBucket(v, max) {
+  if (!v || !max)
+    return 0;
+  const f = v / max;
+  return f <= 0.3333333333333333 ? 1 : f <= 0.6666666666666666 ? 2 : 3;
+};
+var renderHeat = function renderHeat(doc, h, bucket, jump) {
+  const t = doc.createElement("table");
+  t.className = "heat";
+  const cap = doc.createElement("caption");
+  cap.textContent = "Where to look first: each section's changes and open review comments. Darker means more, and every cell shows its number.";
+  t.appendChild(cap);
+  const cols = [
+    ["Section", ""],
+    ["Changed blocks", "blocks the ChangeSet lists"],
+    ["Open comments", "open or addressed; defects in brackets"],
+    ["Stale comments", "the block changed after the comment was made: re-read before replying"],
+    ["Review coverage", "changed blocks with a reviewer verdict on their current version; resolved comments do not count"],
+    ["QA", "blocks whose latest QA verdicts fail; stale and unaudited blocks are counted, never read as passing, and a block whose agent-judged criteria have no verdict passes on scripts only"]
+  ], head = doc.createElement("thead"), hr = doc.createElement("tr");
+  for (const [name, note] of cols) {
+    const th = doc.createElement("th");
+    th.scope = "col";
+    th.textContent = name;
+    if (note)
+      th.title = note;
+    hr.appendChild(th);
+  }
+  head.appendChild(hr);
+  t.appendChild(head);
+  const max = (k) => Math.max(0, ...h.rows.map((r) => r[k])), mx = { changed: max("changed"), open: max("open"), stale: max("stale"), qa: max("qaFailing"), unreviewed: Math.max(0, ...h.rows.map((r) => r.needReview - r.reviewed)) }, body = doc.createElement("tbody"), cell = (text, b, title, muted = !1) => {
+    const td = doc.createElement("td");
+    td.textContent = text;
+    td.title = title;
+    td.className = (b ? "h" + b : "h0") + (muted ? " muted" : "");
+    return td;
+  };
+  for (const r of h.rows) {
+    const tr = doc.createElement("tr"), th = doc.createElement("th");
+    th.scope = "row";
+    const btn = doc.createElement("button");
+    btn.type = "button";
+    btn.className = "linklike";
+    btn.textContent = r.section.replace("::", " \u203A ");
+    btn.addEventListener("click", () => jump(r.section));
+    th.appendChild(btn);
+    tr.appendChild(th);
+    tr.appendChild(cell(String(r.changed), bucket(r.changed, mx.changed), r.changed + " changed block(s) in " + r.section));
+    if (h.hasComments)
+      tr.appendChild(cell(r.open + (r.defects ? " (" + r.defects + " defect" + (r.defects > 1 ? "s" : "") + ")" : ""), bucket(r.open, mx.open), r.open + " open comment(s), " + r.defects + " defect(s)"));
+    else
+      tr.appendChild(cell("no data", 0, "No review-comments.json on this build", !0));
+    if (h.hasComments && h.hasBlocks)
+      tr.appendChild(cell(String(r.stale), bucket(r.stale, mx.stale), r.stale + " open comment(s) on a block that changed since"));
+    else
+      tr.appendChild(cell("no data", 0, "Needs review-comments.json and blocks.json", !0));
+    if (!h.hasVerdicts)
+      tr.appendChild(cell("no data", 0, "Needs review-comments.json (with its verdicts) and blocks.json", !0));
+    else if (!r.needReview)
+      tr.appendChild(cell("nothing to review", 0, "No block here was added or changed", !0));
+    else {
+      const left = r.needReview - r.reviewed;
+      tr.appendChild(cell(r.reviewed + " of " + r.needReview + " reviewed", bucket(left, mx.unreviewed), left + " changed block(s) with no verdict on their current version"));
+    }
+    if (!h.hasQa)
+      tr.appendChild(cell("not published", 0, "This build published no block-qa.json (or no blocks.json to place it by section)", !0));
+    else {
+      const parts = [];
+      if (r.qaFailing)
+        parts.push(r.qaFailing + " failing" + (r.qaWorst ? " (" + r.qaWorst + ")" : ""));
+      if (r.qaStale)
+        parts.push(r.qaStale + " stale");
+      if (r.qaUnaudited)
+        parts.push(r.qaUnaudited + " unaudited");
+      if (r.qaScriptsOnly)
+        parts.push(r.qaScriptsOnly + " passing on scripts only (" + r.qaNeedsAgent + " criteria need an agent)");
+      const judged = r.qaJudgedUnknown ? "passing (this build does not say whether agent-judged criteria were run)" : "passing, every applicable criterion judged", text = parts.length ? parts.join(" \xB7 ") : r.qaBlocks ? judged : "no blocks";
+      tr.appendChild(cell(text, bucket(r.qaFailing, mx.qa), r.qaFailing + " block(s) failing, " + r.qaStale + " stale, " + r.qaUnaudited + " unaudited, of " + r.qaBlocks, !r.qaFailing && !r.qaStale && !r.qaUnaudited));
+    }
+    body.appendChild(tr);
+  }
+  t.appendChild(body);
+  return t;
+};
+var crumbFor = function crumbFor(outline, sectionKey) {
+  if (!outline)
+    return null;
+  for (const d of outline.documents)
+    for (const ch of d.chapters)
+      for (const s of ch.sections)
+        if (s.key === sectionKey)
+          return d.title + " \u203A " + ch.title + " \u203A " + s.title;
+  return null;
+};
+var renderOutline = function renderOutline(doc, outline, badges, jump, root = "../") {
+  const nav = doc.createElement("nav");
+  nav.setAttribute("aria-label", "Outline");
+  nav.className = "outline";
+  const h = doc.createElement("h2");
+  h.textContent = "Outline";
+  nav.appendChild(h);
+  for (const d of outline.documents) {
+    const dt = doc.createElement("div");
+    dt.className = "ol-doc";
+    dt.textContent = d.title;
+    nav.appendChild(dt);
+    const chs = doc.createElement("ol");
+    for (const ch of d.chapters) {
+      const cli = doc.createElement("li"), ct = doc.createElement("div");
+      ct.className = "ol-ch";
+      ct.textContent = ch.title;
+      cli.appendChild(ct);
+      const secs = doc.createElement("ol");
+      for (const s of ch.sections) {
+        const sli = doc.createElement("li"), b = badges(s.key), words = [];
+        if (b && b.changed)
+          words.push(b.changed + " changed");
+        if (b && b.open)
+          words.push(b.open + " comment" + (b.open > 1 ? "s" : ""));
+        if (b && b.qaFailing)
+          words.push("QA failing");
+        let target;
+        if (words.length) {
+          const btn = doc.createElement("button");
+          btn.type = "button";
+          btn.className = "linklike";
+          btn.addEventListener("click", () => jump(s.key));
+          target = btn;
+        } else {
+          const a = doc.createElement("a");
+          a.href = root + d.page;
+          target = a;
+        }
+        target.textContent = s.title;
+        sli.appendChild(target);
+        if (words.length) {
+          const w = doc.createElement("span");
+          w.className = "badges";
+          w.textContent = " " + words.join(", ");
+          sli.appendChild(w);
+        }
+        secs.appendChild(sli);
+      }
+      cli.appendChild(secs);
+      chs.appendChild(cli);
+    }
+    nav.appendChild(chs);
+  }
+  return nav;
+};
+var railOutline = function railOutline(doc, outline, badges, jump, root = "../") {
+  const group = doc.createElement("details");
+  group.className = "fa-nav-group";
+  group.open = !0;
+  const sum = doc.createElement("summary"), glyph = doc.createElement("span");
+  glyph.className = "fa-nav-glyph";
+  glyph.setAttribute("aria-hidden", "true");
+  glyph.textContent = "\xA7";
+  const lab = doc.createElement("span");
+  lab.className = "fa-nav-label";
+  lab.textContent = "Outline";
+  sum.appendChild(glyph);
+  sum.appendChild(lab);
+  group.appendChild(sum);
+  const sub = doc.createElement("div");
+  sub.className = "fa-nav-sub";
+  const label = (text) => {
+    const l = doc.createElement("span");
+    l.className = "fa-nav-label";
+    l.textContent = text;
+    return l;
+  };
+  for (const d of outline.documents)
+    for (const ch of d.chapters) {
+      const row = doc.createElement("span");
+      row.className = "fa-nav-dead fa-nav-kind";
+      row.appendChild(label(outline.documents.length > 1 ? d.title + " \u203A " + ch.title : ch.title));
+      sub.appendChild(row);
+      for (const s of ch.sections) {
+        const b = badges(s.key), words = [];
+        if (b && b.changed)
+          words.push(b.changed + " changed");
+        if (b && b.open)
+          words.push(b.open + " comment" + (b.open > 1 ? "s" : ""));
+        if (b && b.qaFailing)
+          words.push("QA failing");
+        const a = doc.createElement("a"), anchor = s.key.indexOf("::") >= 0 ? s.key.slice(s.key.indexOf("::") + 2) : "";
+        a.href = root + d.page + (anchor.indexOf(":") > 0 ? "#" + encodeURIComponent(anchor) : "");
+        a.appendChild(label(s.title));
+        if (words.length) {
+          const q = doc.createElement("span");
+          q.className = "fa-nav-qualifier";
+          q.textContent = " \xB7 " + words.join(", ");
+          a.lastChild.appendChild(q);
+          a.addEventListener("click", (ev) => {
+            ev.preventDefault();
+            jump(s.key);
+          });
+        }
+        sub.appendChild(a);
+      }
+    }
+  group.appendChild(sub);
+  return group;
+};
+var renderMinimap = function renderMinimap(doc, outline, mark, jumpBlock) {
+  const box = doc.createElement("div");
+  box.className = "minimap";
+  const h = doc.createElement("h2");
+  h.id = "minimap-h";
+  h.textContent = "Minimap";
+  box.appendChild(h);
+  const help = doc.createElement("p");
+  help.className = "muted";
+  help.textContent = "One square per block, one row of squares per chapter, in reading order. Arrow keys move, Enter jumps. Filled squares need a look: \u0394 changed, + added, \u25CF open comments, ! QA failing.";
+  box.appendChild(help);
+  const cells = [], many = outline.documents.length > 1;
+  let n = 0;
+  for (const d of outline.documents)
+    for (const ch of d.chapters) {
+      const id = "minimap-ch-" + n++, cap = doc.createElement("p");
+      cap.className = "mm-ch";
+      cap.id = id;
+      cap.textContent = many ? d.title + " \u203A " + ch.title : ch.title;
+      const ol = doc.createElement("ol");
+      ol.setAttribute("aria-labelledby", id);
+      let flagged = 0;
+      for (const s of ch.sections)
+        for (const label of s.blocks) {
+          const m = mark(label), reasons = (m.change ? 1 : 0) + (m.open ? 1 : 0) + (m.qaFailing ? 1 : 0);
+          if (reasons)
+            flagged++;
+          const li = doc.createElement("li"), b = doc.createElement("button");
+          b.type = "button";
+          b.className = "cell h" + reasons;
+          b.tabIndex = -1;
+          const glyphs = (m.change === "added" ? "+" : m.change ? "\u0394" : "") + (m.open ? "\u25CF" : "") + (m.qaFailing ? "!" : "");
+          b.textContent = glyphs;
+          const words = [m.change === "added" ? "added" : m.change ? "changed" : "unchanged"];
+          if (m.open)
+            words.push(m.open + " open comment" + (m.open > 1 ? "s" : ""));
+          if (m.qaFailing)
+            words.push("QA failing");
+          b.setAttribute("aria-label", label + ": " + words.join(", "));
+          b.title = label + ": " + words.join(", ") + " (" + s.title + ")";
+          b.addEventListener("click", () => jumpBlock(label, d.page));
+          li.appendChild(b);
+          ol.appendChild(li);
+          cells.push(b);
+        }
+      if (!ol.childNodes.length)
+        continue;
+      if (flagged) {
+        const q = doc.createElement("span");
+        q.className = "mm-count";
+        q.textContent = " \xB7 " + flagged + " to look at";
+        cap.appendChild(q);
+      }
+      box.appendChild(cap);
+      box.appendChild(ol);
+    }
+  const first = cells.find((c) => !/\bh0\b/.test(c.className)) || cells[0];
+  if (first)
+    first.tabIndex = 0;
+  box.addEventListener("keydown", (e) => {
+    const i = cells.indexOf(e.target);
+    if (i < 0)
+      return;
+    let j = -1;
+    if (e.key === "ArrowDown" || e.key === "ArrowRight")
+      j = Math.min(cells.length - 1, i + 1);
+    else if (e.key === "ArrowUp" || e.key === "ArrowLeft")
+      j = Math.max(0, i - 1);
+    else if (e.key === "Home")
+      j = 0;
+    else if (e.key === "End")
+      j = cells.length - 1;
+    if (j < 0)
+      return;
+    e.preventDefault();
+    e.stopPropagation();
+    cells[i].tabIndex = -1;
+    cells[j].tabIndex = 0;
+    cells[j].focus();
+  });
+  return box;
+};
+var renderedModel = function renderedModel(impacts, mainSite, root = "../") {
+  const list = Array.isArray(impacts) ? impacts : [impacts], base = mainSite ? String(mainSite).replace(/\/?$/, "/") : null, model = { rows: [], indexCount: 0, unknown: [], renderers: [] };
+  list.forEach(function(imp) {
+    if (!imp || !Array.isArray(imp.files))
+      return;
+    model.renderers.push(imp.renderer);
+    imp.files.slice().sort(function(a, b) {
+      return a.path < b.path ? -1 : a.path > b.path ? 1 : 0;
+    }).forEach(function(f) {
+      if (f.role === "index") {
+        model.indexCount++;
+        return;
+      }
+      (f.anchors && f.anchors.length ? f.anchors : [void 0]).forEach(function(a) {
+        const frag = a ? "#" + encodeURIComponent(a) : "", row = { renderer: imp.renderer, path: f.path, role: f.role, change: f.change, after: root + f.path + frag };
+        if (a)
+          row.anchor = a;
+        if (base && f.change !== "added")
+          row.before = base + f.path + frag;
+        model.rows.push(row);
+      });
+    });
+    (imp.undetermined || []).forEach(function(u) {
+      model.unknown.push({ renderer: imp.renderer, input: u.input, reason: u.reason, scope: u.scope || "unknown" });
+    });
+  });
+  return model;
+};
+var renderRendered = function renderRendered(box, model) {
+  function el(tag, text, cls) {
+    const e = document.createElement(tag);
+    if (text != null)
+      e.textContent = text;
+    if (cls)
+      e.className = cls;
+    return e;
+  }
+  box.textContent = "";
+  if (!model.rows.length && !model.unknown.length) {
+    box.appendChild(el("p", "No rendered page changes: every renderer placed every changed input, and none reaches a page. " + model.indexCount + " index file(s) change.", "muted"));
+    return;
+  }
+  box.appendChild(el("p", model.rows.length + " page(s) to review, from " + model.renderers.join(", ") + "." + (model.indexCount ? " " + model.indexCount + " index file(s) also change and are not listed." : ""), "muted"));
+  const ul = el("ul");
+  model.rows.forEach(function(r) {
+    const li = el("li");
+    li.appendChild(el("span", r.change, "kind"));
+    li.appendChild(el("span", r.path + (r.anchor ? " \u203A " + r.anchor : ""), "label"));
+    li.appendChild(document.createTextNode(" "));
+    const after = el("a", "after");
+    after.href = r.after;
+    li.appendChild(after);
+    if (r.before) {
+      li.appendChild(document.createTextNode(" \xB7 "));
+      const before = el("a", "before");
+      before.href = r.before;
+      li.appendChild(before);
+    }
+    ul.appendChild(li);
+  });
+  box.appendChild(ul);
+  if (model.unknown.length) {
+    box.appendChild(el("p", "Not known: these inputs could not be placed, so any page may have changed. This is not \u201Cno change\u201D.", "muted"));
+    const uk = el("ul");
+    model.unknown.forEach(function(u) {
+      uk.appendChild(el("li", u.input + " (" + u.renderer + ", " + (u.scope === "all" ? "any page" : "unknown pages") + "): " + u.reason));
+    });
+    box.appendChild(uk);
+  }
+};
+var measuredModel = function measuredModel(measured, root = "../") {
+  const m = measured;
+  if (!m || !m.check || !Array.isArray(m.check.missed))
+    return { state: "not-measured", missed: [] };
+  const change = {};
+  (m.measured && m.measured.files || []).forEach(function(f) {
+    change[f.path] = f.change;
+  });
+  const missed = m.check.missed.slice().sort().map(function(p) {
+    const c = change[p] || "changed";
+    return c === "removed" ? { path: p, change: c } : { path: p, change: c, after: root + p };
+  });
+  if (m.status !== "known")
+    return { state: "not-base", missed, beforeCommit: m.beforeCommit ? String(m.beforeCommit).slice(0, 7) : void 0 };
+  return { state: missed.length ? "missed" : "clean", missed };
+};
+var renderMeasured = function renderMeasured(box, model) {
+  function el(tag, text, cls) {
+    const e = document.createElement(tag);
+    if (text != null)
+      e.textContent = text;
+    if (cls)
+      e.className = cls;
+    return e;
+  }
+  const n = model.missed.length, say = {
+    "not-measured": "Not measured: this build published no rendered-measured.json, so whether it changed a page the list does not name is not known.",
+    clean: "Measured against main: the build changed nothing the list above does not name.",
+    missed: "Missed by the list above: " + n + " page(s) the build changed that no renderer named. Each needs a page: verdict.",
+    "not-base": "Measured against main's site as built from " + (model.beforeCommit || "an unrecorded commit") + ", not this change's base, so main's own changes are mixed in and none of these " + n + " page(s) is counted as missed."
+  }[model.state];
+  box.appendChild(el("p", say, model.state === "missed" ? void 0 : "muted"));
+  if (!n)
+    return;
+  const ul = el("ul");
+  model.missed.forEach(function(r) {
+    const li = el("li");
+    li.appendChild(el("span", r.change, "kind"));
+    if (r.after) {
+      const a = el("a", r.path);
+      a.href = r.after;
+      li.appendChild(a);
+    } else
+      li.appendChild(el("span", r.path, "label"));
+    ul.appendChild(li);
+  });
+  box.appendChild(ul);
+};
+</script>
+<script>
+(function () {
+  // Where the site root is, from this page's own path (folio-assistant#2527):
+  // every data file and every page below is relative to it.
+  var ROOT = reviewSiteRoot(location.pathname, LOCALES);
+  var allDocs = document.getElementById("all-documents");
+  if (allDocs) allDocs.href = ROOT + "index.html";
+  var status = document.getElementById("status");
+  var summary = document.getElementById("summary");
+  var list = document.getElementById("changes");
+  var items = [];
+  var at = -1;
+
+  function el(tag, text, cls) {
+    var e = document.createElement(tag);
+    if (text != null) e.textContent = text;
+    if (cls) e.className = cls;
+    return e;
+  }
+  // The document a block belongs to is its manifest's first path segment,
+  // which is the page build-document-site writes. Kept to one safe segment.
+  function docOf(at) {
+    var seg = String((at && at.file) || "").split("/")[0];
+    // "." and ".." match the character class, and would climb out of the site.
+    return /^[A-Za-z0-9._-]+$/.test(seg) && !/^\.+$/.test(seg) ? seg : null;
+  }
+  // The page a document is on, relative to the site root: the outline's
+  // `page` when this build published one (under the locale since
+  // folio-assistant#2527), else `<doc>/index.html`, where
+  // build-document-site wrote it before. Kept to safe segments, like docOf.
+  function docPage(doc) {
+    var ds = OUTLINE && OUTLINE.documents ? OUTLINE.documents : [];
+    for (var i = 0; i < ds.length; i++) {
+      var p = ds[i].slug === doc ? String(ds[i].page || "") : "";
+      if (p && /^[A-Za-z0-9._\/-]+$/.test(p) && p.split("/").every(function (s) { return s && !/^\.+$/.test(s); })) return p;
+    }
+    return doc + "/index.html";
+  }
+  // A ChangeSet whose blocks are not a folio's says where each one is on the
+  // site itself: `page` (site-relative; "" when the block is on no page,
+  // such as an IG's source file) and `anchor` (the element id, when it is not
+  // the label). An IG's preview writes them (the FHIR layer's ig-review-data).
+  function safePage(p) {
+    return /^[A-Za-z0-9._\/-]+$/.test(p) && p.split("/").every(function (s) { return s && !/^\.+$/.test(s); });
+  }
+  function href(base, at, label) {
+    if (at && typeof at.page === "string") {
+      if (!at.page || !safePage(at.page)) return null;
+      return base + at.page + (at.anchor ? "#" + encodeURIComponent(at.anchor) : "");
+    }
+    var doc = docOf(at);
+    return doc == null ? null : base + docPage(doc) + "#" + encodeURIComponent(label);
+  }
+  function kindWords(c) {
+    if (c.change === "added") return ["added"];
+    if (c.change === "removed") return ["removed"];
+    var words = { renamed: "renamed", prose: "reworded", manifest: "edited", moved: "moved" };
+    return c.aspects.map(function (a) { return words[a] || a; });
+  }
+  var OUTLINE = null;
+  function focusItem(i) {
+    if (!items.length) return;
+    at = (i + items.length) % items.length;
+    items[at].focus();
+    // Where am I (eb4l): the breadcrumb goes into the one live region.
+    var sec = items[at].getAttribute("data-section");
+    var crumb = sec ? crumbFor(OUTLINE, sec) : null;
+    var label = items[at].getAttribute("data-label");
+    status.textContent = "Item " + (at + 1) + " of " + items.length + (crumb ? ": " + crumb : "") + (label ? " › " + label : "");
+  }
+  // Next / previous item with open comments (eb4l), wrapping.
+  function focusCommented(step) {
+    var n = items.length;
+    // Before anything is focused, "next" starts at the top and "previous" at the bottom.
+    var start = at < 0 ? (step > 0 ? -1 : 0) : at;
+    for (var k = 1; k <= n; k++) {
+      var j = (((start + step * k) % n) + n) % n;
+      if (Number(items[j].getAttribute("data-open") || 0) > 0) { focusItem(j); return; }
+    }
+    status.textContent = "No block has open comments.";
+  }
+
+  document.getElementById("next").addEventListener("click", function () { focusItem(at + 1); });
+  document.getElementById("prev").addEventListener("click", function () { focusItem(at - 1); });
+  // Next changed block with no verdict on its current version (px0t), wrapping.
+  function focusUnreviewed() {
+    var n = items.length;
+    var start = at < 0 ? -1 : at;
+    for (var k = 1; k <= n; k++) {
+      var j = (start + k) % n;
+      if (items[j].getAttribute("data-reviewed") === "no") { focusItem(j); return; }
+    }
+    status.textContent = VERDICTS ? "Every changed block has a verdict on its current version." : "No verdict data on this build.";
+  }
+  var VERDICTS = false;
+  document.getElementById("nextu").addEventListener("click", focusUnreviewed);
+  document.getElementById("nextc").addEventListener("click", function () { focusCommented(1); });
+  document.getElementById("prevc").addEventListener("click", function () { focusCommented(-1); });
+  document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    // A letter typed into a selector picks an option; it is not navigation.
+    var tag = e.target && e.target.tagName;
+    if (tag === "SELECT" || tag === "INPUT" || tag === "TEXTAREA") return;
+    if (e.key === "j") { focusItem(at + 1); e.preventDefault(); }
+    else if (e.key === "k") { focusItem(at - 1); e.preventDefault(); }
+    else if (e.key === "n") { focusCommented(1); e.preventDefault(); }
+    else if (e.key === "p") { focusCommented(-1); e.preventDefault(); }
+    else if (e.key === "u") { focusUnreviewed(); e.preventDefault(); }
+  });
+
+  // One comment as a line of words: kind, status, who, what — never colour alone.
+  function commentEl(c) {
+    var d = el("div", null, "comment");
+    var r = c.review || {};
+    d.setAttribute("data-status", c.status || "");
+    d.setAttribute("data-kind", r.kind || "");
+    d.appendChild(el("span", (r.kind || "comment") + ", " + c.status, "kind"));
+    d.appendChild(el("span", (r.reviewer || "?") + " as " + (r.role || "reviewer") + ": "));
+    d.appendChild(el("span", c.summary));
+    if (r.anchoredFrom && r.anchoredFrom.length) d.appendChild(el("span", " (made on " + r.anchoredFrom.join(", ") + ")", "muted"));
+    if (r.decision) {
+      if (/^https?:\/\//.test(r.decision)) { d.appendChild(el("span", " (")); var da = el("a", "decision"); da.href = r.decision; d.appendChild(da); d.appendChild(el("span", ")")); }
+      else d.appendChild(el("span", " (decision: " + r.decision + ")", "muted"));
+    }
+    if (r.commentUrl) { d.appendChild(el("span", " ")); var a = el("a", "read on the pull request"); a.href = r.commentUrl; d.appendChild(a); }
+    // Deciding it is a pull-request comment too (bean 423d, owner 2026-10-15):
+    // the page is static and writes nothing. The words offered are the moves
+    // the review-comment table allows from this status; the build applies
+    // the tag for a repository owner, member or collaborator.
+    var next = DECIDE[c.status];
+    if (next && c.id) {
+      var h = el("div", null, "muted");
+      h.appendChild(el("span", "To decide it, comment "));
+      h.appendChild(el("code", "resolve: " + c.id, "tagline"));
+      h.appendChild(el("span", " with the line "));
+      next.forEach(function (w, i) { if (i) h.appendChild(el("span", i === next.length - 1 ? " or " : ", ")); h.appendChild(el("code", "decision: " + w, "tagline")); });
+      d.appendChild(h);
+    }
+    return d;
+  }
+  // From each status, the decisions the review-comment table allows (the content core's review-comment.ts).
+  var DECIDE = { open: ["addressed", "adjudicated", "withdrawn"], addressed: ["resolved", "reopened", "adjudicated", "withdrawn"] };
+  function commentList(cs) {
+    var box = el("div", null, "comments");
+    cs.forEach(function (c) { box.appendChild(commentEl(c)); });
+    return box;
+  }
+  function section(title, nodes, key) {
+    if (!nodes.length) return;
+    var h = el("h2", title);
+    h.tabIndex = -1;
+    if (key) h.setAttribute("data-section", key);
+    list.appendChild(h);
+    var ul = el("ul");
+    nodes.forEach(function (n) {
+      var li = el("li");
+      li.tabIndex = -1;
+      ["data-label", "data-section", "data-open"].forEach(function (a) { if (n.getAttribute(a)) li.setAttribute(a, n.getAttribute(a)); });
+      li.appendChild(n);
+      ul.appendChild(li);
+      items.push(li);
+    });
+    list.appendChild(ul);
+  }
+
+  // ── Diff renderers (bean d903) ─────────────────────────────────
+  var VIEW_KEY = "folio-review:view";
+  function loadView() { try { return window.localStorage.getItem(VIEW_KEY) || ""; } catch (e) { return ""; } }
+  function saveView(v) { try { window.localStorage.setItem(VIEW_KEY, v); } catch (e) { /* the defaults, then */ } }
+  function defaultFor(kind, structured) {
+    var fb = null;
+    // A block the build published fields for opens on the field renderer
+    // (STRUCTURED, bean f327) before any renderer its kind names.
+    if (structured) for (var j = 0; j < RENDERERS.length; j++) if (RENDERERS[j].defaultFor.indexOf("@structured") >= 0) return RENDERERS[j].id;
+    for (var i = 0; i < RENDERERS.length; i++) {
+      if (RENDERERS[i].defaultFor.indexOf(kind) >= 0) return RENDERERS[i].id;
+      if (RENDERERS[i].defaultFor.indexOf("*") >= 0) fb = RENDERERS[i].id;
+    }
+    return fb || RENDERERS[0].id;
+  }
+  // Why a renderer cannot run on this block, or null when it can.
+  function unavailable(r, ctx) {
+    for (var i = 0; i < r.needs.length; i++) {
+      var n = r.needs[i];
+      if (n === "text" && !ctx.text) return "no prose on either side";
+      if (n === "pages" && !ctx.before && !ctx.after) return "no page to show";
+      if (n === "screenshots" && !ctx.visual) return "no pictures on this build";
+      if (n === "structure" && !ctx.structure) return "no fields for this block";
+    }
+    return null;
+  }
+  function renderInto(panel, id, ctx) {
+    while (panel.firstChild) panel.removeChild(panel.firstChild);
+    var t = ctx.text || {};
+    var base = t.base || null;
+    var head = t.head || null;
+    var out;
+    if (id === "word") {
+      var ops = wordDiff(base ? base.prose : "", head ? head.prose : "");
+      out = ops === null ? "This block is too long for a word diff. Choose side by side." : renderWordDiff(document, ops);
+    } else if (id === "inline") {
+      out = renderInline(document, base ? base.html : null, head ? head.html : null, wordDiff, cleanRendered);
+    } else if (id === "side-by-side") {
+      out = renderSideBySide(document, ctx.before, ctx.after);
+    } else if (id === "visual") {
+      out = renderVisual(document, ctx.visual, ROOT, "vis-" + panel.id);
+    } else if (id === "fields") {
+      out = renderFields(document, ctx.structure);
+    }
+    if (typeof out === "string") panel.appendChild(el("p", out, "muted"));
+    else if (out) panel.appendChild(out);
+  }
+  var viewers = [];
+  function viewSelector(ctx) {
+    var row = el("div", null, "viewrow");
+    var id = "view-" + viewers.length;
+    var lab = el("label", "Show this change as");
+    lab.htmlFor = id;
+    var sel = document.createElement("select");
+    sel.id = id;
+    RENDERERS.forEach(function (r) {
+      var why = unavailable(r, ctx);
+      var o = el("option", r.label + (why ? " (unavailable: " + why + ")" : ""));
+      o.value = r.id;
+      o.title = r.description;
+      if (why) o.disabled = true;
+      sel.appendChild(o);
+    });
+    var panel = el("div");
+    panel.id = "panel-" + viewers.length;
+    function pick(v) {
+      var r = RENDERERS.filter(function (x) { return x.id === v; })[0];
+      if (!r || unavailable(r, ctx)) {
+        // The chosen view cannot run here: fall back to the first one that
+        // can, preferring those that list this block's kind (0rxe: a table
+        // with no pictures opens side by side, not on a word diff).
+        var can = RENDERERS.filter(function (x) { return !unavailable(x, ctx); });
+        r = (ctx.structure ? can.filter(function (x) { return x.defaultFor.indexOf("@structured") >= 0; })[0] : null) ||
+          can.filter(function (x) { return x.defaultFor.indexOf(ctx.kind) >= 0; })[0] || can[0];
+      }
+      if (!r) { while (panel.firstChild) panel.removeChild(panel.firstChild); panel.appendChild(el("p", "Nothing to show for this change: it is to the manifest only.", "muted")); return; }
+      sel.value = r.id;
+      renderInto(panel, r.id, ctx);
+    }
+    sel.addEventListener("change", function () { pick(sel.value); });
+    row.appendChild(lab);
+    row.appendChild(sel);
+    var v = { row: row, panel: panel, pick: pick, kind: ctx.kind, structured: !!ctx.structure };
+    viewers.push(v);
+    return v;
+  }
+  function applyView(global) {
+    viewers.forEach(function (v) { v.pick(global || defaultFor(v.kind, v.structured)); });
+  }
+  var viewAll = document.getElementById("view");
+  var none = el("option", "Each block's default");
+  none.value = "";
+  viewAll.appendChild(none);
+  RENDERERS.forEach(function (r) { var o = el("option", r.label); o.value = r.id; o.title = r.description; viewAll.appendChild(o); });
+  viewAll.value = loadView();
+  if (viewAll.value !== loadView()) viewAll.value = "";
+  viewAll.addEventListener("change", function () { saveView(viewAll.value); applyView(viewAll.value); });
+
+  var COMMENT_FILTERS = [
+    ["", "All comments"],
+    ["open-addressed", "Open and addressed"],
+    ["status:open", "Open"],
+    ["status:addressed", "Addressed"],
+    ["status:resolved", "Resolved"],
+    ["status:adjudicated", "Adjudicated"],
+    ["status:withdrawn", "Withdrawn"],
+    ["kind:defect", "Defects"],
+    ["kind:question", "Questions"],
+    ["kind:suggestion", "Suggestions"],
+    ["kind:editorial", "Editorial"]
+  ];
+  var commentFilter = document.getElementById("comment-filter");
+  COMMENT_FILTERS.forEach(function (f) { var o = el("option", f[1]); o.value = f[0]; commentFilter.appendChild(o); });
+  function applyCommentFilter(f, announce) {
+    var boxes = list.querySelectorAll(".comments");
+    var shownCount = 0;
+    var totalCount = 0;
+    for (var i = 0; i < boxes.length; i++) {
+      var cs = boxes[i].querySelectorAll(".comment");
+      var boxShown = 0;
+      for (var j = 0; j < cs.length; j++) {
+        totalCount++;
+        var ok = matchesCommentFilter(cs[j].getAttribute("data-status") || "", cs[j].getAttribute("data-kind") || "", f);
+        cs[j].hidden = !ok;
+        if (ok) { boxShown++; shownCount++; }
+      }
+      boxes[i].hidden = !boxShown;
+    }
+    if (announce) status.textContent = "Showing " + shownCount + " of " + totalCount + " review comment(s).";
+  }
+  commentFilter.addEventListener("change", function () { applyCommentFilter(commentFilter.value, true); });
+
+  function get(url) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); });
+  }
+
+  // The rendered list (bean bnjs): fetched on its own, so a preview with a
+  // ChangeSet but no rendered impact still shows its blocks, and says why
+  // the page list is missing rather than showing an empty one.
+  var renderedBox = document.getElementById("rendered");
+  // The build diff under it (bean ehh6): a missing file is "not measured", said.
+  Promise.all([
+    get(ROOT + "rendered-impact.json"),
+    get(ROOT + "staging.json").catch(function () { return {}; }),
+    get(ROOT + "rendered-measured.json").catch(function () { return null; }),
+  ]).then(function (r) {
+    renderRendered(renderedBox, renderedModel(r[0], r[1].mainSite, ROOT));
+    renderMeasured(renderedBox, measuredModel(r[2], ROOT));
+  }).catch(function () {
+    renderedBox.textContent = "This build published no rendered-impact.json, so which rendered pages the change alters is not known (which is not the same as none).";
+  });
+
+  get(ROOT + "changeset.json").then(function (cs) {
+    return Promise.all([
+      get(ROOT + "staging.json").catch(function () { return {}; }),
+      get(ROOT + "review-comments.json").catch(function () { return null; }),
+      get(ROOT + "changeset-text.json").catch(function () { return null; }),
+      get(ROOT + "blocks.json").catch(function () { return null; }),
+      get(ROOT + "block-qa.json").catch(function () { return null; }),
+      get(ROOT + "outline.json").catch(function () { return null; }),
+      get(ROOT + "visual-diff.json").catch(function () { return null; }),
+      get(ROOT + "changeset-structure.json").catch(function () { return null; }),
+    ]).then(function (both) {
+      var structureFile = both[7];
+      var visualFile = both[6];
+      OUTLINE = both[5];
+      var blocksFile = both[3];
+      var qaFile = both[4];
+      // A summary that found NO verdict corpus (bean tfqf): every block in it
+      // reads "unaudited", which is not what happened. The heat map gets no
+      // QA data and the page says why, instead of a column of unaudited blocks.
+      var qaUnavailable = !!(qaFile && qaFile.corpus && qaFile.corpus.state === "absent");
+      if (qaUnavailable) qaFile = null;
+      var st = both[0];
+      var rc = both[1];
+      var txt = both[2];
+      var byLabel = {};
+      var shown = {};
+      // Verdicts by label (px0t). Counted only on the block's current hash.
+      // A file written before verdicts existed has no field at all: "no data", never "none given".
+      VERDICTS = !!(rc && Array.isArray(rc.verdicts) && blocksFile);
+      var verdictsBy = {};
+      ((rc && rc.verdicts) || []).forEach(function (v) { (verdictsBy[v.targetLabel] = verdictsBy[v.targetLabel] || []).push(v); });
+      ((rc && rc.comments) || []).forEach(function (c) {
+        if (c.review && c.review.orphaned) return;
+        (byLabel[c.targetLabel] = byLabel[c.targetLabel] || []).push(c);
+      });
+      var main = st.mainSite ? String(st.mainSite).replace(/\/?$/, "/") : null;
+      // Which published site is the before side: main's, or a stacked PR's base preview (5uuf).
+      var beforeName = st.beforeRef || "main";
+      var s = cs.summary;
+      // The head is "worktree" in CI (the checkout under review), which names
+      // nothing a reader recognises; the banner's staging.json has the branch.
+      var headName = cs.head.ref === "worktree" && st.branch ? st.branch : cs.head.ref;
+      summary.textContent =
+        cs.base.ref + " \u2192 " + headName + ": " +
+        s.added + " added, " + s.removed + " removed, " + s.changed + " changed (" +
+        s.prose + " reworded, " + s.moved + " moved, " + s.renamed + " renamed, " + s.manifest + " edited), " +
+        s.unchanged + " unchanged.";
+      if (main) summary.textContent += " Before side: " + beforeName + "'s published site.";
+      if (!rc) summary.textContent += " No comment data on this build.";
+      else summary.textContent += " " + rc.comments.length + " review comment(s).";
+      if (!cs.changes.length) {
+        status.textContent = "No block changed. " + s.unchanged + " block(s) compared.";
+      }
+      var groups = {};
+      var order = [];
+      cs.changes.forEach(function (c) {
+        var where = (c.head || c.base || {}).section || "(listed in no section)";
+        if (!groups[where]) { groups[where] = []; order.push(where); }
+        groups[where].push(c);
+      });
+      order.forEach(function (where) {
+        var h2 = el("h2", where.replace("::", " \u203a "));
+        h2.tabIndex = -1;
+        h2.setAttribute("data-section", where);
+        list.appendChild(h2);
+        var ul = el("ul");
+        groups[where].forEach(function (c) {
+          var li = el("li");
+          li.tabIndex = -1;
+          li.setAttribute("data-label", c.label);
+          li.setAttribute("data-section", where);
+          li.setAttribute("data-open", String((byLabel[c.label] || []).filter(function (x) { return x.status === "open" || x.status === "addressed"; }).length));
+          li.appendChild(el("span", kindWords(c).join(", "), "kind"));
+          li.appendChild(el("span", c.label, "label"));
+          if (VERDICTS && c.change !== "removed") {
+            var cur = blocksFile[c.label] ? blocksFile[c.label].hash : null;
+            var vs = verdictsBy[c.label] || [];
+            var now = vs.filter(function (v) { return v.blockHash === cur; });
+            var old = vs.length - now.length;
+            li.setAttribute("data-reviewed", now.length ? "yes" : "no");
+            var vd = el("div", null, now.length ? "verdict" : "verdict muted");
+            vd.appendChild(el("span", now.length ? "Reviewed: " : "No verdict on this version yet", "kind"));
+            if (now.length) vd.appendChild(el("span", now.map(function (v) {
+              return (v.verdict === "waived" ? "waived (" + v.reason + ")" : v.verdict) + " by " + v.reviewer + " as " + v.role;
+            }).join("; ")));
+            if (old) vd.appendChild(el("span", " (" + old + " verdict" + (old > 1 ? "s" : "") + " on an earlier version, not counted)", "muted"));
+            li.appendChild(vd);
+          }
+          if (c.from) li.appendChild(el("span", " (was " + c.from + ")", "muted"));
+          var links = el("div", null, "links");
+          var after = c.change !== "removed" ? href(ROOT, c.head, c.label) : null;
+          var before = c.change !== "added" && main ? href(main, c.base, c.from || c.label) : null;
+          if (after) { var a = el("a", "view on this preview"); a.href = after; links.appendChild(a); }
+          if (before) { var b = el("a", "view on " + beforeName); b.href = before; links.appendChild(b); }
+          if (!after && !before) links.appendChild(el("span", "no page to link to", "muted"));
+          li.appendChild(links);
+          var v = viewSelector({
+            kind: (c.head || c.base || {}).kind || "",
+            text: txt && txt.blocks ? txt.blocks[c.label] || null : null,
+            visual: visualFile && visualFile.blocks ? visualFile.blocks[c.label] || null : null,
+            structure: structureFile && structureFile.blocks ? structureFile.blocks[c.label] || null : null,
+            before: before,
+            after: after,
+          });
+          li.appendChild(v.row);
+          li.appendChild(v.panel);
+          var mine = byLabel[c.label] || [];
+          shown[c.label] = true;
+          if (mine.length) li.appendChild(commentList(mine));
+          if (c.change !== "removed") {
+            var t = el("div", null, "muted");
+            t.appendChild(el("span", "To comment, start a pull-request comment with "));
+            t.appendChild(el("code", "block: " + c.label, "tagline"));
+            t.appendChild(el("span", ". To record that you reviewed it, add the line "));
+            t.appendChild(el("code", "verdict: ok", "tagline"));
+            t.appendChild(el("span", " (or "));
+            t.appendChild(el("code", "verdict: changes", "tagline"));
+            t.appendChild(el("span", ")"));
+            if (st.prUrl) { t.appendChild(el("span", " ")); var p = el("a", "open the pull request"); p.href = st.prUrl; t.appendChild(p); }
+            li.appendChild(t);
+          }
+          ul.appendChild(li);
+          items.push(li);
+        });
+        list.appendChild(ul);
+      });
+      if (rc) {
+        var elsewhere = [];
+        Object.keys(byLabel).forEach(function (label) {
+          if (shown[label]) return;
+          var d = el("div");
+          d.setAttribute("data-label", label);
+          var bs = blocksFile && blocksFile[label] && blocksFile[label].section;
+          if (bs) d.setAttribute("data-section", bs);
+          d.setAttribute("data-open", String(byLabel[label].filter(function (x) { return x.status === "open" || x.status === "addressed"; }).length));
+          d.appendChild(el("span", label, "label"));
+          d.appendChild(commentList(byLabel[label]));
+          elsewhere.push(d);
+        });
+        section("Comments on blocks this pull request did not change", elsewhere, "(unchanged)");
+        section("Orphaned: the block these were made on is gone", rc.comments
+          .filter(function (c) { return c.review && c.review.orphaned; })
+          .map(function (c) { var d = el("div"); d.appendChild(el("span", c.targetLabel, "label")); d.appendChild(commentList([c])); return d; }));
+        section("Tags that could not be read or applied", rc.malformed.map(function (m) {
+          var d = el("div");
+          d.appendChild(el("span", m.error + " "));
+          var a = el("a", "fix it on the pull request"); a.href = m.url; d.appendChild(a);
+          return d;
+        }));
+      }
+      if (!txt && cs.changes.length) summary.textContent += " No change text on this build, so only the views of the pages" + (visualFile ? " and the pictures" : "") + " are available.";
+      applyView(viewAll.value);
+      applyCommentFilter(commentFilter.value, false);
+      // The heat map (qbfi), above the list it indexes.
+      var heat = computeHeat({ changes: cs.changes, comments: rc ? rc.comments : null, blocks: blocksFile, qa: qaFile ? qaFile.blocks : null, verdicts: rc && Array.isArray(rc.verdicts) ? rc.verdicts : null });
+      if (heat.rows.length) {
+        var wrap = document.getElementById("heat");
+        wrap.appendChild(renderHeat(document, heat, heatBucket, function (sec) {
+          var t = list.querySelector('h2[data-section="' + (window.CSS && CSS.escape ? CSS.escape(sec) : sec) + '"]') ||
+            list.querySelector('h2[data-section="(unchanged)"]');
+          if (t) { t.focus(); t.scrollIntoView({ block: "start" }); }
+        }));
+        wrap.appendChild(el("p", "Review coverage counts a changed block as reviewed only when a reviewer recorded a verdict on its current version: an edit after the verdict reopens it, and resolved comments are not a verdict. QA counts a block as failing only on a verdict newer than the block; an older verdict is counted as stale.", "muted"));
+        if (qaUnavailable) wrap.appendChild(el("p", "QA not available for this build: the build found no QA results (its qa-reports fetch missed and no verdicts were in the checkout), so whether any block was audited is unknown. The QA column says “not published” for that reason, not because nothing was checked.", "muted"));
+      }
+      // Navigation pane (eb4l): outline and minimap, when the build published an outline.
+      var navPane = document.getElementById("navpane");
+      function jumpSection(key) {
+        var t = list.querySelector('h2[data-section="' + (window.CSS && CSS.escape ? CSS.escape(key) : key) + '"]') ||
+          list.querySelector('h2[data-section="(unchanged)"]');
+        if (t) { t.focus(); t.scrollIntoView({ block: "start" }); }
+      }
+      if (OUTLINE && OUTLINE.documents) {
+        var rowBy = {};
+        heat.rows.forEach(function (r) { rowBy[r.section] = r; });
+        var badgesOf = function (key) {
+          var r = rowBy[key];
+          return r ? { changed: r.changed, open: r.open, qaFailing: r.qaFailing } : null;
+        };
+        // The outline goes in the harness RAIL when the page has one (owner,
+        // 2026-10-07: "TOC in the LHS navbar, not LHS of displayed content");
+        // without a rail, in the page's own pane as before.
+        var railIn = document.querySelector("nav.fa-nav:not([data-fa-rail]) .fa-nav-in");
+        var railHost = railIn && railIn.querySelector(".fa-nav-graphs");
+        if (railIn && !railHost) {
+          // No page section yet: open one where the rail puts it, after its top.
+          railHost = document.createElement("div");
+          railHost.className = "fa-nav-graphs";
+          var top = railIn.querySelector(".fa-nav-top");
+          railIn.insertBefore(railHost, top ? top.nextSibling : railIn.firstChild);
+        }
+        if (railHost) railHost.insertBefore(railOutline(document, OUTLINE, badgesOf, jumpSection, ROOT), railHost.firstChild);
+        else navPane.appendChild(renderOutline(document, OUTLINE, badgesOf, jumpSection, ROOT));
+        var changeOf = {};
+        cs.changes.forEach(function (c) { if (c.change !== "removed") changeOf[c.label] = c.change === "added" ? "added" : "changed"; });
+        navPane.appendChild(renderMinimap(document, OUTLINE, function (label) {
+          var open = (byLabel[label] || []).filter(function (x) { return x.status === "open" || x.status === "addressed"; }).length;
+          var q = qaFile && qaFile.blocks ? qaFile.blocks[label] : null;
+          return { change: changeOf[label] || null, open: open, qaFailing: !!(q && q.state === "failing") };
+        }, function (label, page) {
+          for (var i = 0; i < items.length; i++) if (items[i].getAttribute("data-label") === label) { focusItem(i); items[i].scrollIntoView({ block: "center" }); return; }
+          // Nothing to review here: open the block where it is published.
+          window.location.href = ROOT + page + "#" + encodeURIComponent(label);
+        }));
+      } else {
+        navPane.appendChild(el("p", "No outline on this build: the folio's build did not publish outline.json. Use Next and Previous.", "muted"));
+      }
+      if (items.length) status.textContent = items.length + " item(s). Press j for the next, k for the previous, n or p for the next or previous with open comments, u for the next unreviewed.";
+    });
+  }).catch(function () {
+    status.textContent =
+      "No ChangeSet on this build, so there is nothing to compare against main. " +
+      "It appears on a staging preview, built for a pull request.";
+  });
+})();
+</script>
+</body>
+</html>

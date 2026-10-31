@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-a738938b20d0405b9d4cee2b558a9d89.jsonld",
+  "@type": "archimate:ApplicationComponent",
+  "schema:identifier": "id-a738938b20d0405b9d4cee2b558a9d89",
+  "schema:name": "<MD> Repository",
+  "schema:category": "Application",
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1.jsonld"
+}

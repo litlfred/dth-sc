@@ -1,0 +1,677 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "_generated": "folio-assistant-core/scripts/glossary-page.ts — do not hand-edit; run `bun run cat glossary:page`",
+  "@graph": [
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Glossary of the Reference Architecture and Guidance for DPI-H",
+      "skos:definition": "The DPI-H Reference Architecture draft's own glossary as a SKOS scheme, one concept per term, read mechanically from the glossary table (folio/dpi-h-ra/glossary/, from the review draft who-dpi-h-reference-architecture-draft-v1). Definitions are verbatim; nothing is paraphrased or chosen. This is the shared scheme the Digital Transformation Handbooks (dth-hrh, dth-phc, dth-sc, dth-pc, dth-sfp) link their terms to (smart-ra#133, task S1). Where a DTH defines a term differently, its wording is added later as a cited alternative; none is chosen.",
+      "dcterms:hasVersion": "2026-10-31",
+      "dcterms:modified": "2026-10-31",
+      "dcterms:source": "library/who-dpi-h-reference-architecture-draft-v1/"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Application Component"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A deployable, modular piece of software that provides a defined set of functionality and holds the data it manages, exposing both through services."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-service",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Application Service"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "An explicitly defined unit of application behaviour. Anch application service exposes the functionality of an application component to its environment."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/capability",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Capability"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A high-level ability the health system possesses or needs in order to achieve its goals. It expresses what the health system is able to do, independently of how that ability is implemented."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/business-domain",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Business Domain"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A specific focus area or subsystem within a broader business system, characterized by its own essential attributes"
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/outcome",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Outcome"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "An end result or consequence of a set of activities; an outcome is often measurable and signals progress towards a goal."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/product",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Product"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A concrete offering, bundling services and data, that is made available to stakeholders."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/business-services-layer",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Business Services layer"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A layer of the reference architecture grouping the health capabilities that national health systems strive to deliver across their principal domains — clinical care, public health, the health supply chain, and health financing — together with the shared components that enable them."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/client",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Client"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Members of the public who are potential or current users of health services, including health prevention and wellness activities."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-governance",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Data Governance"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The structures and standards (policies & legal frameworks) necessary to coordinate and manage the data journey from collection, storage, sharing, analysis to use to produce trusted, secure and quality data for decision making"
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-object",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Data Object"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A defined unit of structured data used or produced by an application component."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-health",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Digital Health"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The systematic application of information and communications technologies, computer science, and data to support informed decision-making by individuals, the health workforce, and health systems, to strengthen resilience to disease and improve health and wellness."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-infrastructure",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Digital Infrastructure"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Infrastructures in the digital domain are digital resources, such as systems and specifications, built as shared means to achieve many ends"
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-public-infrastructure",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Digital Public Infrastructure"
+        }
+      ],
+      "skos:altLabel": [
+        "DPI"
+      ],
+      "skos:definition": [
+        {
+          "@value": "A set of shared digital systems that should be secure and interoperable, and can be built on open standards and specifications to deliver and provide equitable access to public and/or private services at societal scale and are governed by applicable legal frameworks and enabling rules to drive development, inclusion, innovation, trust, and competition, while respecting human rights and fundamental freedoms. (G20/UNDP)"
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Enterprise Architecture"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The organising logic for business processes and IT infrastructure reflecting the integration and standardisation requirements of the organisation's operating model."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/fast-healthcare-interoperability-resources",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Fast Healthcare Interoperability Resources"
+        }
+      ],
+      "skos:altLabel": [
+        "FHIR"
+      ],
+      "skos:definition": [
+        {
+          "@value": "FHIR is a standard for healthcare data exchange, published by HL7®"
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Functional application"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Functional applications are application components that deliver a specific operational function within a defined domain. They are context-specific, reflecting the operational requirements of a programme, scheme, or institution that procures them."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/goal",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Goal"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A high-level statement of intent, direction, or desired state for an organisation and its stakeholders."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-digital-public-infrastructure",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Health Digital Public Infrastructure"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Health Digital Public Infrastructure (DPI-H) refers to digital resources that are built as a shared means for fulfilling multiple health agency functions."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-information-exchange",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Health Information Exchange"
+        }
+      ],
+      "skos:scopeNote": "The draft marks this entry [To be included before publication].",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "could-not-extract: The draft lists the term with no definition."
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-programme",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Health Programme"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Health programmes are structured and coordinated interventions and services, delivered to defined populations or patient groups, to prevent disease, promote health, and address specific health needs."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/integration",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Integration"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Bespoke capability of connecting one application component to another"
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Interoperability"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Interoperability is the standards-based capability of heterogeneous information systems to communicate, exchange data, and use the exchanged information to execute functions effectively."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/logical-observation-identifiers-names-and-codes",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Logical Observation Identifiers Names and Codes"
+        }
+      ],
+      "skos:altLabel": [
+        "LOINC"
+      ],
+      "skos:definition": [
+        {
+          "@value": "LOINC is a common language (a set of identifiers, names, and codes) for identifying health measurements, observations, and documents."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/point-of-service-applications",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Point-of-service applications"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Point-of-service applications are end-user application components (IT systems or software tools) used by individuals directly engaged in healthcare—such as clinicians, community health workers, and patients—that enable interaction with the broader healthcare ecosystem."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/reference-architecture",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Reference Architecture"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A technology-neutral blueprint that captures the common building blocks, relationships, and design principles of a technical environment."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/registry",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Registry"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "A governed, authoritative and centralized information system that captures, stores and maintains the unique attributes and identifiers of health facilities, health service users, health products and/or the health workforce using a predefined canonical minimum data set."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Repository"
+        }
+      ],
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "could-not-extract: The draft lists the term with no definition."
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/smart-guidelines",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "SMART Guidelines"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Standards-based, Machine-readable, Adaptive, Requirements-based, Testable Guidelines are a comprehensive set of reusable digital health components (e.g., interoperability standards, code libraries, algorithms, technical and operational specifications) that transform the guideline adaptation and implementation process to preserve fidelity and accelerate uptake. SMART Guidelines provide a five-step pathway to advance the adoption of best clinical and data practices, even if a country is not yet fully digital."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/snomed-ct",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "SNOMED CT"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Systematized Nomenclature of Medicine Clinical Terms is a structured clinical terminology standard for use in electronic health records."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/snomed-gps",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "SNOMED GPS"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Systematized Nomenclature of Medicine – Global Patient Set is a list of basic clinical terms. It is an open and freely accessible subset of SNOMED CT terms that represents the breadth of concepts included in the SNOMED CT International Edition."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/solution-architecture",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Solution Architecture"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The design of a specific application component or HDPI expressed through specifications and diagrams"
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/stakeholder",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Stakeholder"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "An individual, role, or organisation with an interest in the outcomes of the architecture."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/value",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Value"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The benefit or utility a stakeholder gains from using a service, product, or capability."
+        }
+      ],
+      "skos:scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review.",
+      "dcterms:source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "skos:note": "candidate"
+    }
+  ]
+}

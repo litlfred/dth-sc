@@ -1,0 +1,193 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/tbl-annex-7",
+  "@type": [
+    "folio-assistant-core:Table",
+    "doco:Table"
+  ],
+  "label": "tbl:annex-7",
+  "kind": "table",
+  "text": "t-annexes-annex-7.md",
+  "meta": {
+    "title": "Annex 7. Resource matrix for DHSC implementation",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-072",
+      "pdf": "who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf",
+      "pdfPages": [
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "method": "pdf-table-rebuild"
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain-intervention",
+        "prefLabel": "Digital Health Supply Chain Intervention"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/health-supply-chain-information-system",
+        "prefLabel": "Health Supply Chain Information System"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture",
+        "prefLabel": "Enterprise Architecture"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/solution-architecture",
+        "prefLabel": "Solution Architecture"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability",
+        "prefLabel": "Interoperability"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/integration",
+        "prefLabel": "Integration"
+      }
+    ],
+    "archimate": {
+      "model": "smart-ra 0.3.0-draft.1",
+      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC1b/SC4, smart-ra#147)",
+      "elements": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-1c5c0bc9234e4282b654dbc71b9da706.jsonld",
+          "name": "Ministry of Health",
+          "type": "Stakeholder"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ef2ed03c5fd958cbae67247b253bcba0.jsonld",
+          "name": "Health Supply Chain Information Systems",
+          "type": "ApplicationComponent"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3398a2d96e915055bf5e7aef22f9fbf8.jsonld",
+          "name": "Interoperability Layer",
+          "type": "ApplicationComponent"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-88a90dfa38904fba930a49add401e660.jsonld",
+          "name": "Governance, Policy, and Legislation",
+          "type": "Capability"
+        }
+      ],
+      "views": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld",
+          "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
+        }
+      ]
+    },
+    "tableKind": "resource-matrix",
+    "l1CoverageCategory": "captured",
+    "usedBySteps": [
+      "prose:ch03-page-051",
+      "pers:steering-committee-sponsor",
+      "pers:solution-architect",
+      "pers:project-manager-ba",
+      "pers:developer-integrator",
+      "pers:system-administrator-support",
+      "bp:sc-bp-01-stepwise-dhsc-transformation"
+    ],
+    "roleMappings": [
+      {
+        "row": 1,
+        "role": "Chief technology officer / chief information officer / chief digital officer",
+        "persona": "pers:steering-committee-sponsor",
+        "dthHrhCounterpart": "pers:registry-governance-body"
+      },
+      {
+        "row": 2,
+        "role": "IT manager",
+        "persona": "pers:steering-committee-sponsor",
+        "dthHrhCounterpart": "pers:registry-governance-body"
+      },
+      {
+        "row": 3,
+        "role": "Project manager",
+        "persona": "pers:project-manager-ba",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 4,
+        "role": "Solution architect",
+        "persona": "pers:solution-architect",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 5,
+        "role": "Business analyst",
+        "persona": "pers:project-manager-ba",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 6,
+        "role": "Developer/ programmer",
+        "persona": "pers:developer-integrator",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 7,
+        "role": "Integration specialist",
+        "persona": "pers:developer-integrator",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 8,
+        "role": "Database administrator",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      },
+      {
+        "row": 9,
+        "role": "Infrastructure specialist",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      },
+      {
+        "row": 10,
+        "role": "QA/test manager",
+        "persona": "pers:developer-integrator",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 11,
+        "role": "Test analyst",
+        "persona": "pers:developer-integrator",
+        "dthHrhCounterpart": null
+      },
+      {
+        "row": 12,
+        "role": "System administrator",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      },
+      {
+        "row": 13,
+        "role": "Support engineer",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      },
+      {
+        "row": 14,
+        "role": "Superuser/ trainer",
+        "persona": "pers:system-administrator-support",
+        "dthHrhCounterpart": "pers:registry-custodian"
+      }
+    ]
+  },
+  "provenance": "authored"
+}

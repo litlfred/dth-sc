@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-e162b2223da4440983514be5854b654d.jsonld",
+  "@type": "archimate:DataObject",
+  "schema:identifier": "id-e162b2223da4440983514be5854b654d",
+  "schema:name": "CDE-HWR: Core Data Elements for the Health Workforce Registry",
+  "schema:description": "CDE-HWR: the Core Data Elements of the Health Workforce Registry. The deliberately minimal record the HWR holds as the system of record for each health worker:\n1. Named demographics (name, sex, date of birth).\n2. Identifier and index: the national unique health worker identifier, with cross-references to foundational ID where the law allows.\n3. Licensure: licence number, issuing body, status, validity dates.\n4. Registration: professional registration and cadre (ISCO-08 based health worker classification).\n5. Educational credential: qualification, awarding institution, year.\n6. Organizational affiliation: employer or other affiliating organization.\n7. Facility association: the facility or facilities where the worker practises, by Facility Registry identifier.\nAnything else (employment transactions, payroll, training history, etc.) stays in the operational system that owns it.",
+  "schema:category": "Application",
+  "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1.jsonld"
+}
