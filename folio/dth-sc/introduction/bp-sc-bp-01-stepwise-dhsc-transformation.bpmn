@@ -14,88 +14,88 @@
   <bpmn:resource id="pers:system-administrator-support" name="System administrator, database/infrastructure specialist, support engineer and trainer"/>
 
   <bpmn:collaboration id="Collab_SC_BP_01">
-    <bpmn:participant id="Pool_SC_BP_01" name="SC-BP-01: Stepwise DHSC strategy, architecture and implementation transformation method" processRef="SC_BP_01"/>
+    <bpmn:participant id="Pool_SC_BP_01" name="Stepwise DHSC transformation" processRef="SC_BP_01"/>
   </bpmn:collaboration>
 
-  <bpmn:process id="SC_BP_01" name="SC-BP-01: Stepwise DHSC strategy, architecture and implementation transformation method" isExecutable="false">
-    <bpmn:documentation>Formalizes the handbook&#x27;s stepwise method (Introduction Fig. 4 and Table 1) across Chapter 1 (Defining a holistic DHSC strategy, Steps 1–4), Chapter 2 (Defining the DHSC architecture, Steps 1–3), and Chapter 3 (Planning for scalable implementation and sustainable operations, Steps 1–4), binding each step to the governance and implementation roles defined in Table 1, Annex 2, and Annex 7.</bpmn:documentation>
+  <bpmn:process id="SC_BP_01" name="Stepwise DHSC strategy, architecture and implementation transformation method" isExecutable="false">
+    <bpmn:documentation>Models the three-part stepwise method of the WHO Digital transformation handbook for health supply chain architecture: Chapter 1 (establishing the strategic direction, steps 1–4), Chapter 2 (defining the DHSC architecture and mapping implementation activities, steps 1–3), and Chapter 3 (managing and implementing DHSC interventions across project initiation, planning, execution, monitoring and sustainment, steps 1–4).</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_SC_BP_01">
+      <bpmn:lane id="Lane_BP01_SteeringSponsor" name="Steering committee &amp; sponsor" partitionElementRef="pers:steering-committee-sponsor">
+        <bpmn:flowNodeRef>Task_BP01_02</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_BP01_04</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_BP01_Architect" name="Enterprise &amp; solution architect" partitionElementRef="pers:solution-architect">
+        <bpmn:flowNodeRef>Task_BP01_03</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_BP01_06</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_BP01_07</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_BP01_ProjectManagerBA" name="Project manager &amp; analyst" partitionElementRef="pers:project-manager-ba">
+        <bpmn:flowNodeRef>Task_BP01_05</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_BP01_08</bpmn:flowNodeRef>
+      </bpmn:lane>
       <bpmn:lane id="Lane_BP01_MOH" name="Ministry of health (MOH)" partitionElementRef="pers:ministry-of-health">
         <bpmn:flowNodeRef>Start_BP01</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_BP01_01</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gw_BP01_Endorsed</bpmn:flowNodeRef>
       </bpmn:lane>
-      <bpmn:lane id="Lane_BP01_SteeringSponsor" name="DHSC steering committee, chief digital officer and project sponsor" partitionElementRef="pers:steering-committee-sponsor">
-        <bpmn:flowNodeRef>Task_BP01_02</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Task_BP01_04</bpmn:flowNodeRef>
-      </bpmn:lane>
-      <bpmn:lane id="Lane_BP01_Architect" name="Enterprise and solution architect" partitionElementRef="pers:solution-architect">
-        <bpmn:flowNodeRef>Task_BP01_03</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Task_BP01_06</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Task_BP01_07</bpmn:flowNodeRef>
-      </bpmn:lane>
-      <bpmn:lane id="Lane_BP01_ProjectManagerBA" name="Project manager, IT manager and business analyst" partitionElementRef="pers:project-manager-ba">
-        <bpmn:flowNodeRef>Task_BP01_05</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Task_BP01_08</bpmn:flowNodeRef>
-      </bpmn:lane>
-      <bpmn:lane id="Lane_BP01_DevIntegrator" name="Developer, integration specialist and QA/test team" partitionElementRef="pers:developer-integrator">
+      <bpmn:lane id="Lane_BP01_DevIntegrator" name="Developer, integrator &amp; QA" partitionElementRef="pers:developer-integrator">
         <bpmn:flowNodeRef>Task_BP01_09</bpmn:flowNodeRef>
       </bpmn:lane>
-      <bpmn:lane id="Lane_BP01_SysAdminSupport" name="System administrator, database/infrastructure specialist, support engineer and trainer" partitionElementRef="pers:system-administrator-support">
+      <bpmn:lane id="Lane_BP01_SysAdminSupport" name="Sysadmin, support &amp; trainer" partitionElementRef="pers:system-administrator-support">
         <bpmn:flowNodeRef>Task_BP01_10</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>End_BP01</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="Start_BP01" name="National DHSC transformation mandate">
+    <bpmn:startEvent id="Start_BP01" name="DHSC mandate">
       <bpmn:outgoing>Flow_BP01_01</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="Task_BP01_01" name="Align DHSC mandate with national health and digital health strategies (Fig. 8)">
+    <bpmn:userTask id="Task_BP01_01" name="Align DHSC mandate with national strategies (Fig. 8)">
       <bpmn:incoming>Flow_BP01_01</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_02</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_BP01_02" name="Ch 1 Step 1: Engage stakeholders and form DHSC steering committee &amp; TWGs (Annex 2)">
+    <bpmn:userTask id="Task_BP01_02" name="Ch 1 Step 1: Form steering committee &amp; TWGs (Annex 2)">
       <bpmn:incoming>Flow_BP01_02</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_03</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_BP01_03" name="Ch 1 Step 2 &amp; Ch 2 Step 1: Inventory HSCISs (Annex 5) and assess SCISMM maturity (SC-DT-01)">
+    <bpmn:userTask id="Task_BP01_03" name="Ch 1 Step 2 &amp; Ch 2 Step 1: Inventory HSCISs &amp; SCISMM (SC-DT-01)">
       <bpmn:incoming>Flow_BP01_03</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_04</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_BP01_04" name="Ch 1 Step 3: Prioritize bottlenecks (Annex 3) and define DHSC vision, goals &amp; outcomes (Annex 4)">
+    <bpmn:userTask id="Task_BP01_04" name="Ch 1 Step 3: Prioritize bottlenecks, vision &amp; goals (Annexes 3–4)">
       <bpmn:incoming>Flow_BP01_04</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_05</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_BP01_05" name="Ch 1 Step 4: Define strategic roadmap and key performance indicators (KPIs)">
+    <bpmn:userTask id="Task_BP01_05" name="Ch 1 Step 4: Define strategic roadmap and KPIs">
       <bpmn:incoming>Flow_BP01_05</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_06</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_BP01_06" name="Ch 2 Step 2: Define target DHSC architecture and interoperability framework (Figs. 14–19, SC-DT-01)">
+    <bpmn:userTask id="Task_BP01_06" name="Ch 2 Step 2: Define target DHSC architecture (Figs. 14–19)">
       <bpmn:incoming>Flow_BP01_06</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_07</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_BP01_07" name="Ch 2 Step 3: Map architecture implementation activities to strategic goals (Fig. 21)">
+    <bpmn:userTask id="Task_BP01_07" name="Ch 2 Step 3: Map architecture activities to goals (Fig. 21)">
       <bpmn:incoming>Flow_BP01_07</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_08</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_BP01_08" name="Ch 3 Steps 1–3: Charter intervention, operational plan, risk register (Annex 6), staffing (Annex 7) &amp; TCO budget (Table 3)">
+    <bpmn:userTask id="Task_BP01_08" name="Ch 3 Steps 1–3: Charter plan, risks, staffing &amp; TCO budget">
       <bpmn:incoming>Flow_BP01_08</bpmn:incoming>
       <bpmn:incoming>Flow_BP01_11</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_09</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:exclusiveGateway id="Gw_BP01_Endorsed" name="Architecture &amp; TCO budget endorsed?">
+    <bpmn:exclusiveGateway id="Gw_BP01_Endorsed" name="Endorsed?">
       <bpmn:incoming>Flow_BP01_09</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_10</bpmn:outgoing>
       <bpmn:outgoing>Flow_BP01_11</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:userTask id="Task_BP01_09" name="Ch 3 Step 4 (Deploy): Configure HSCISs, build interoperability mediators &amp; execute QA/UAT testing">
+    <bpmn:userTask id="Task_BP01_09" name="Ch 3 Step 4 (Deploy): Configure HSCISs, mediators &amp; QA/UAT">
       <bpmn:incoming>Flow_BP01_10</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_12</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_BP01_10" name="Ch 3 Step 4 (Operate): Provision infrastructure, train users, operate helpdesk &amp; monitor KPIs">
+    <bpmn:userTask id="Task_BP01_10" name="Ch 3 Step 4 (Operate): Provision infra, train &amp; monitor KPIs">
       <bpmn:incoming>Flow_BP01_12</bpmn:incoming>
       <bpmn:outgoing>Flow_BP01_13</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:endEvent id="End_BP01" name="DHSC intervention deployed and monitored">
+    <bpmn:endEvent id="End_BP01" name="DHSC deployed">
       <bpmn:incoming>Flow_BP01_13</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_BP01_01" sourceRef="Start_BP01" targetRef="Task_BP01_01"/>
@@ -107,8 +107,8 @@
     <bpmn:sequenceFlow id="Flow_BP01_07" sourceRef="Task_BP01_06" targetRef="Task_BP01_07"/>
     <bpmn:sequenceFlow id="Flow_BP01_08" sourceRef="Task_BP01_07" targetRef="Task_BP01_08"/>
     <bpmn:sequenceFlow id="Flow_BP01_09" sourceRef="Task_BP01_08" targetRef="Gw_BP01_Endorsed"/>
-    <bpmn:sequenceFlow id="Flow_BP01_10" sourceRef="Gw_BP01_Endorsed" targetRef="Task_BP01_09" name="Endorsed"/>
-    <bpmn:sequenceFlow id="Flow_BP01_11" sourceRef="Gw_BP01_Endorsed" targetRef="Task_BP01_08" name="Revise scope / budget"/>
+    <bpmn:sequenceFlow id="Flow_BP01_10" name="Endorsed" sourceRef="Gw_BP01_Endorsed" targetRef="Task_BP01_09"/>
+    <bpmn:sequenceFlow id="Flow_BP01_11" name="Revise scope" sourceRef="Gw_BP01_Endorsed" targetRef="Task_BP01_08"/>
     <bpmn:sequenceFlow id="Flow_BP01_12" sourceRef="Task_BP01_09" targetRef="Task_BP01_10"/>
     <bpmn:sequenceFlow id="Flow_BP01_13" sourceRef="Task_BP01_10" targetRef="End_BP01"/>
   </bpmn:process>
@@ -116,142 +116,139 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_SC_BP_01">
     <bpmndi:BPMNPlane id="BPMNPlane_SC_BP_01" bpmnElement="Collab_SC_BP_01">
       <bpmndi:BPMNShape id="Pool_SC_BP_01_di" bpmnElement="Pool_SC_BP_01" isHorizontal="true">
-        <dc:Bounds x="120" y="80" width="3038" height="1582" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_BP01_MOH_di" bpmnElement="Lane_BP01_MOH" isHorizontal="true">
-        <dc:Bounds x="150" y="877" width="3008" height="150" />
+        <dc:Bounds x="120" y="80" width="1340" height="870" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP01_SteeringSponsor_di" bpmnElement="Lane_BP01_SteeringSponsor" isHorizontal="true">
-        <dc:Bounds x="150" y="80" width="3008" height="356" />
+        <dc:Bounds x="150" y="80" width="1310" height="145" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP01_Architect_di" bpmnElement="Lane_BP01_Architect" isHorizontal="true">
-        <dc:Bounds x="150" y="436" width="3008" height="154" />
+        <dc:Bounds x="150" y="225" width="1310" height="145" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP01_ProjectManagerBA_di" bpmnElement="Lane_BP01_ProjectManagerBA" isHorizontal="true">
-        <dc:Bounds x="150" y="590" width="3008" height="287" />
+        <dc:Bounds x="150" y="370" width="1310" height="145" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_BP01_MOH_di" bpmnElement="Lane_BP01_MOH" isHorizontal="true">
+        <dc:Bounds x="150" y="515" width="1310" height="145" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP01_DevIntegrator_di" bpmnElement="Lane_BP01_DevIntegrator" isHorizontal="true">
-        <dc:Bounds x="150" y="1027" width="3008" height="277" />
+        <dc:Bounds x="150" y="660" width="1310" height="145" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_BP01_SysAdminSupport_di" bpmnElement="Lane_BP01_SysAdminSupport" isHorizontal="true">
-        <dc:Bounds x="150" y="1304" width="3008" height="358" />
+        <dc:Bounds x="150" y="805" width="1310" height="145" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Start_BP01_di" bpmnElement="Start_BP01">
-        <dc:Bounds x="242" y="934" width="36" height="36" />
+        <dc:Bounds x="205" y="569.5" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="188" y="612" width="76" height="36" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_01_di" bpmnElement="Task_BP01_01">
-        <dc:Bounds x="367" y="906.5" width="176" height="91" />
+        <dc:Bounds x="280" y="535" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_02_di" bpmnElement="Task_BP01_02">
-        <dc:Bounds x="583" y="202.5" width="176" height="111" />
+        <dc:Bounds x="280" y="100" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_03_di" bpmnElement="Task_BP01_03">
-        <dc:Bounds x="799" y="455.5" width="176" height="111" />
+        <dc:Bounds x="495" y="245" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_04_di" bpmnElement="Task_BP01_04">
-        <dc:Bounds x="1015" y="202.5" width="176" height="111" />
+        <dc:Bounds x="710" y="100" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_05_di" bpmnElement="Task_BP01_05">
-        <dc:Bounds x="1231" y="686" width="176" height="91" />
+        <dc:Bounds x="710" y="390" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_06_di" bpmnElement="Task_BP01_06">
-        <dc:Bounds x="1447" y="448" width="176" height="130" />
+        <dc:Bounds x="925" y="245" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_07_di" bpmnElement="Task_BP01_07">
-        <dc:Bounds x="1663" y="455.5" width="176" height="111" />
+        <dc:Bounds x="1140" y="245" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_08_di" bpmnElement="Task_BP01_08">
-        <dc:Bounds x="1879" y="668.5" width="176" height="130" />
+        <dc:Bounds x="1140" y="390" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gw_BP01_Endorsed_di" bpmnElement="Gw_BP01_Endorsed" isMarkerVisible="true">
-        <dc:Bounds x="2137" y="927" width="50" height="50" />
+        <dc:Bounds x="1207.5" y="562.5" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1268" y="575" width="82" height="24" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_09_di" bpmnElement="Task_BP01_09">
-        <dc:Bounds x="2269" y="1110" width="176" height="111" />
+        <dc:Bounds x="1140" y="680" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_BP01_10_di" bpmnElement="Task_BP01_10">
-        <dc:Bounds x="2485" y="1418.5" width="176" height="129" />
+        <dc:Bounds x="1140" y="825" width="185" height="105" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="End_BP01_di" bpmnElement="End_BP01">
-        <dc:Bounds x="2750" y="1463.5" width="36" height="36" />
+        <dc:Bounds x="1365" y="859.5" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1345" y="815" width="80" height="36" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_BP01_01_di" bpmnElement="Flow_BP01_01">
-        <di:waypoint x="278" y="952" />
-        <di:waypoint x="367" y="952" />
+        <di:waypoint x="241" y="587.5" />
+        <di:waypoint x="280" y="587.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_02_di" bpmnElement="Flow_BP01_02">
-        <di:waypoint x="543" y="952" />
-        <di:waypoint x="563" y="952" />
-        <di:waypoint x="563" y="258" />
-        <di:waypoint x="583" y="258" />
+        <di:waypoint x="372.5" y="535" />
+        <di:waypoint x="372.5" y="205" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_03_di" bpmnElement="Flow_BP01_03">
-        <di:waypoint x="759" y="258" />
-        <di:waypoint x="779" y="258" />
-        <di:waypoint x="779" y="511" />
-        <di:waypoint x="799" y="511" />
+        <di:waypoint x="465" y="152.5" />
+        <di:waypoint x="480" y="152.5" />
+        <di:waypoint x="480" y="297.5" />
+        <di:waypoint x="495" y="297.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_04_di" bpmnElement="Flow_BP01_04">
-        <di:waypoint x="975" y="511" />
-        <di:waypoint x="995" y="511" />
-        <di:waypoint x="995" y="258" />
-        <di:waypoint x="1015" y="258" />
+        <di:waypoint x="680" y="297.5" />
+        <di:waypoint x="695" y="297.5" />
+        <di:waypoint x="695" y="152.5" />
+        <di:waypoint x="710" y="152.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_05_di" bpmnElement="Flow_BP01_05">
-        <di:waypoint x="1191" y="258" />
-        <di:waypoint x="1211" y="258" />
-        <di:waypoint x="1211" y="731.5" />
-        <di:waypoint x="1231" y="731.5" />
+        <di:waypoint x="802.5" y="205" />
+        <di:waypoint x="802.5" y="390" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_06_di" bpmnElement="Flow_BP01_06">
-        <di:waypoint x="1407" y="731.5" />
-        <di:waypoint x="1427" y="731.5" />
-        <di:waypoint x="1427" y="513" />
-        <di:waypoint x="1447" y="513" />
+        <di:waypoint x="895" y="442.5" />
+        <di:waypoint x="910" y="442.5" />
+        <di:waypoint x="910" y="297.5" />
+        <di:waypoint x="925" y="297.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_07_di" bpmnElement="Flow_BP01_07">
-        <di:waypoint x="1623" y="513" />
-        <di:waypoint x="1643" y="513" />
-        <di:waypoint x="1643" y="511" />
-        <di:waypoint x="1663" y="511" />
+        <di:waypoint x="1110" y="297.5" />
+        <di:waypoint x="1140" y="297.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_08_di" bpmnElement="Flow_BP01_08">
-        <di:waypoint x="1839" y="511" />
-        <di:waypoint x="1859" y="511" />
-        <di:waypoint x="1859" y="733.5" />
-        <di:waypoint x="1879" y="733.5" />
+        <di:waypoint x="1232.5" y="350" />
+        <di:waypoint x="1232.5" y="390" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_09_di" bpmnElement="Flow_BP01_09">
-        <di:waypoint x="2055" y="733.5" />
-        <di:waypoint x="2096" y="733.5" />
-        <di:waypoint x="2096" y="952" />
-        <di:waypoint x="2137" y="952" />
+        <di:waypoint x="1232.5" y="495" />
+        <di:waypoint x="1232.5" y="562.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_10_di" bpmnElement="Flow_BP01_10">
-        <di:waypoint x="2187" y="952" />
-        <di:waypoint x="2228" y="952" />
-        <di:waypoint x="2228" y="1165.5" />
-        <di:waypoint x="2269" y="1165.5" />
+        <di:waypoint x="1232.5" y="612.5" />
+        <di:waypoint x="1232.5" y="680" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1242" y="632" width="76" height="22" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_11_di" bpmnElement="Flow_BP01_11">
-        <di:waypoint x="2162" y="927" />
-        <di:waypoint x="2162" y="695" />
-        <di:waypoint x="2055" y="695" />
+        <di:waypoint x="1207.5" y="587.5" />
+        <di:waypoint x="1120" y="587.5" />
+        <di:waypoint x="1120" y="442.5" />
+        <di:waypoint x="1140" y="442.5" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2068" y="652" width="90" height="36" />
+          <dc:Bounds x="1010" y="530" width="98" height="22" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_12_di" bpmnElement="Flow_BP01_12">
-        <di:waypoint x="2445" y="1165.5" />
-        <di:waypoint x="2465" y="1165.5" />
-        <di:waypoint x="2465" y="1483" />
-        <di:waypoint x="2485" y="1483" />
+        <di:waypoint x="1232.5" y="785" />
+        <di:waypoint x="1232.5" y="825" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_BP01_13_di" bpmnElement="Flow_BP01_13">
-        <di:waypoint x="2661" y="1483" />
-        <di:waypoint x="2705.5" y="1483" />
-        <di:waypoint x="2705.5" y="1481.5" />
-        <di:waypoint x="2750" y="1481.5" />
+        <di:waypoint x="1325" y="877.5" />
+        <di:waypoint x="1365" y="877.5" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
