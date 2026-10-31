@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/tbl-annex-2",
+  "@type": [
+    "folio-assistant-core:Table",
+    "doco:Table"
+  ],
+  "label": "tbl:annex-2",
+  "kind": "table",
+  "text": "t-annexes-annex-2.md",
+  "meta": {
+    "title": "Annex 2. Steering committee example structure",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-067",
+      "pdf": "who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf",
+      "pdfPages": [
+        67
+      ],
+      "method": "pdf-table-rebuild"
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/governance-health-supply-chain",
+        "prefLabel": "Governance (Health Supply Chain)"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-governance",
+        "prefLabel": "Data Governance"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture",
+        "prefLabel": "Enterprise Architecture"
+      }
+    ],
+    "archimate": {
+      "model": "smart-ra 0.3.0-draft.1",
+      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC1b/SC4, smart-ra#147)",
+      "elements": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-1c5c0bc9234e4282b654dbc71b9da706.jsonld",
+          "name": "Ministry of Health",
+          "type": "Stakeholder"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ca8d3a5f0b3b50999c9f51cb0d652700.jsonld",
+          "name": "Central Warehouse",
+          "type": "BusinessRole"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-8e67c8e9e1195cdc857b03a2c640e7fe.jsonld",
+          "name": "National Regulatory Authority",
+          "type": "BusinessRole"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-e92ce8265c9751e39557d6169d69cceb.jsonld",
+          "name": "Private Sector",
+          "type": "BusinessRole"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-88a90dfa38904fba930a49add401e660.jsonld",
+          "name": "Governance, Policy, and Legislation",
+          "type": "Capability"
+        }
+      ],
+      "views": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
+        }
+      ]
+    },
+    "tableKind": "template",
+    "l1CoverageCategory": "source-example",
+    "usedBySteps": [
+      "prose:ch01-page-022",
+      "pers:steering-committee-sponsor",
+      "bp:sc-bp-01-stepwise-dhsc-transformation"
+    ],
+    "exampleRows": {
+      "category": "source-example",
+      "count": 5,
+      "description": "5 illustrative steering-committee governance tier rows (Executive chairperson, Secretariat, Technical representatives, Partner organizations, Technical working group – governance topics across Data, Process, Technology, and Risk)"
+    }
+  },
+  "provenance": "authored"
+}

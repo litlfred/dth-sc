@@ -1,0 +1,76 @@
+{
+  "$schema": "cat-harness-declaration/1.0.0",
+  "name": "dth-sc",
+  "title": "Digital Transformation Handbook for Health Supply Chain Architecture",
+  "version": "0.1.0",
+  "iriBase": "https://litlfred.github.io/dth-sc/",
+  "directories": [
+    {
+      "id": "folio",
+      "path": "folio/",
+      "graphTypologies": [
+        "folio"
+      ],
+      "description": "The working document of the DTH on health supply chain architecture: its document, chapters and blocks, seeded from the L1 entry who-iris/library/9789240101197-eng by its contents-page outline.",
+      "coverage": {
+        "visualiser": [
+          {
+            "ref": "en/dth-sc/index.html",
+            "title": "Working document",
+            "writer": [
+              "folio-assistant-core/scripts/build-document-site.ts"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "glossary",
+      "path": "glossary/",
+      "graphTypologies": [
+        "glossary"
+      ],
+      "description": "The handbook's supply chain terms as a folio-glossary/v1 SKOS scheme. Each term quotes the handbook's definition with its L1 page, and links to the smart-ra concept it narrows or matches. General digital terms are held in smart-ra, not here."
+    },
+    {
+      "id": "uploads",
+      "path": "uploads/",
+      "graphTypologies": [
+        "uploads"
+      ],
+      "description": "Inbox for material not yet ingested."
+    },
+    {
+      "id": "beans",
+      "path": "beans/",
+      "graphTypologies": [
+        "beans"
+      ],
+      "source": {
+        "kind": "branch",
+        "branch": "cat/dth-sc/beans",
+        "keyedBy": "tip"
+      },
+      "description": "This instance's work plan — one Markdown file per bean, managed with the `beans` CLI (`.beans.yml`)."
+    },
+    {
+      "id": "todos",
+      "path": "todos/",
+      "graphTypologies": [
+        "todos"
+      ],
+      "source": {
+        "kind": "branch",
+        "branch": "cat/dth-sc/todos",
+        "keyedBy": "tip"
+      },
+      "description": "People's outstanding items and the feedback raised against blocks; its inner directories are declared by `todos/todos.json`."
+    }
+  ],
+  "description": "WHO Digital transformation handbook for health supply chain architecture (ISBN 9789240101197), as an L2 DTH on smart-ra: the working document folio seeded from its L1 entry in who-iris, and its supply chain glossary linked to the smart-ra glossary and ArchiMate model. dth-pc and dth-sfp depend on it.",
+  "needs": [
+    "smart-base",
+    "dpi-h-ra"
+  ],
+  "_needs_comment": "An L2 DTH on smart-ra (owner, 2026-10-31, option A; dth-hrh#47, dth-sc#2): its glossary terms and narrative link to dpi-h-ra (litlfred/smart-ra) glossary concepts and ArchiMate 0.3.0-draft.1 elements and views (smart-ra#147, #148). smart-base stays, because the DAK block kinds reach this folio through smart-base content-adapters/dak.json."
+}

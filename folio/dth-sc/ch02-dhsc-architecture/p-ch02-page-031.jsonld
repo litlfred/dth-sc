@@ -1,0 +1,74 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/prose-ch02-page-031",
+  "@type": [
+    "folio-assistant-core:Prose",
+    "doco:Section"
+  ],
+  "label": "prose:ch02-page-031",
+  "kind": "prose",
+  "text": "p-ch02-page-031.md",
+  "meta": {
+    "title": "Step 1. Assess the current state of HSCISs",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-031",
+      "file": "who-iris/library/9789240101197-eng/sections/page-031.md",
+      "pdfPage": 31,
+      "method": "l1-outline-seed"
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/health-supply-chain-information-system",
+        "prefLabel": "Health Supply Chain Information System"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability",
+        "prefLabel": "Interoperability"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-information-exchange",
+        "prefLabel": "Health Information Exchange"
+      }
+    ],
+    "archimate": {
+      "model": "smart-ra 0.3.0-draft.1",
+      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC4, smart-ra#147)",
+      "elements": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ef2ed03c5fd958cbae67247b253bcba0.jsonld",
+          "name": "Health Supply Chain Information Systems"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3398a2d96e915055bf5e7aef22f9fbf8.jsonld",
+          "name": "Interoperability Layer"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-80856538cbd44167a37b276e38c994c3.jsonld",
+          "name": "Interoperability Component"
+        }
+      ],
+      "views": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld",
+          "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-8c5dd12b8d4e425184f6003d0513d569.jsonld",
+          "name": "Interoperability Layer"
+        }
+      ]
+    }
+  },
+  "provenance": "authored"
+}

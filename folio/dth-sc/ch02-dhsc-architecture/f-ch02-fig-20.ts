@@ -1,0 +1,9 @@
+import { figure } from "../../schema/builders";
+
+export default figure({
+  label: "fig:20",
+  file: "media/vfig-p041.png",
+  caption: "Fig. 20. Benefits of cross-enterprise analytics services",
+  page: 41,
+    meta: {"title": "Illustrative architectural approaches and governance options", "source": {"library": "9789240101197-eng", "file": "who-iris/library/9789240101197-eng/figures/vfig-p041.png", "page": 41, "method": "l1-vector-figure"}, "glossary": [{"iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain", "prefLabel": "Digital Health Supply Chain"}, {"iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability", "prefLabel": "Interoperability"}], "archimate": {"model": "smart-ra 0.3.0-draft.1", "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC4, smart-ra#147)", "elements": [{"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-65a47d9097875c88997d5f5544b388b1.jsonld", "name": "Analytics"}, {"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-2158ff0de2f95b2cbe005c3bf6fc9c01.jsonld", "name": "Data Warehouse"}, {"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3fd92d497ca040c8a436f355c0b68770.jsonld", "name": "Analytics & Reporting Platform"}, {"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-65750fe0d1c65c5a846bf1de3e29f61f.jsonld", "name": "Supply Chain Reports"}, {"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3d0c2c2525ed4131ae533eed8893d4d0.jsonld", "name": "Analytics & Business Intelligence"}], "views": [{"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld", "name": "DHSC Architecture Framework (DTH SC Fig. 14)"}]}},
+});

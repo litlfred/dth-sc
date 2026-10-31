@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  id="Definitions_SC_BP_03"
+                  targetNamespace="https://litlfred.github.io/dth-sc/bpmn">
+
+  <bpmn:resource id="pers:manufacturer-distributor" name="Manufacturer and distributor"/>
+  <bpmn:resource id="pers:central-warehouse" name="Central warehouse (central medical store)"/>
+  <bpmn:resource id="pers:regional-district-warehouse" name="Regional and district warehouse (branch warehouse)"/>
+  <bpmn:resource id="pers:health-facility" name="Health facility (service delivery point)"/>
+  <bpmn:resource id="pers:system-dhsc-traceability-hub" name="DHSC interoperability layer and traceability services hub (system)"/>
+  <bpmn:resource id="pers:regulatory-authority" name="National regulatory authority"/>
+  <bpmn:resource id="pers:health-service-user" name="Individual (health service user / patient)"/>
+
+  <bpmn:collaboration id="Collab_SC_BP_03">
+    <bpmn:participant id="Pool_SC_BP_03" name="Medical product track-and-trace workflow" processRef="SC_BP_03"/>
+  </bpmn:collaboration>
+
+  <bpmn:process id="SC_BP_03" name="Centralized medical product track-and-trace, verification and recall workflow" isExecutable="false">
+    <bpmn:documentation>Models end-to-end medical product serialization, traceability event capture (what: product identifier, batch, serial; when: timestamp; where: location; why: receive, ship, dispense, discard), central aggregation via the DHSC interoperability layer and data warehouse, point-of-dispense verification, and regulatory anomaly/recall investigation in the centralized traceability model (Chapter 4 Figures 24–25).</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_SC_BP_03">
+      <bpmn:lane id="Lane_BP03_Manufacturer" name="Manufacturer &amp; distributor" partitionElementRef="pers:manufacturer-distributor">
+        <bpmn:flowNodeRef>Start_BP03</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_BP03_01</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_BP03_Regulatory" name="Regulatory authority" partitionElementRef="pers:regulatory-authority">
+        <bpmn:flowNodeRef>Task_BP03_09</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_BP03_DHSCTraceabilityHub" name="DHSC traceability hub" partitionElementRef="pers:system-dhsc-traceability-hub">
+        <bpmn:flowNodeRef>Task_BP03_02</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_BP03_07</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gw_BP03_Authentic</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_BP03</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_BP03_Individual" name="Patient / individual" partitionElementRef="pers:health-service-user">
+        <bpmn:flowNodeRef>Task_BP03_06</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_BP03_08</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_BP03_CentralWarehouse" name="Central warehouse" partitionElementRef="pers:central-warehouse">
+        <bpmn:flowNodeRef>Task_BP03_03</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_BP03_RegionalWarehouse" name="Regional warehouse" partitionElementRef="pers:regional-district-warehouse">
+        <bpmn:flowNodeRef>Task_BP03_04</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_BP03_HealthFacility" name="Health facility" partitionElementRef="pers:health-facility">
+        <bpmn:flowNodeRef>Task_BP03_05</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start_BP03" name="Batch serialized">
+      <bpmn:outgoing>Flow_BP03_01</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Task_BP03_01" name="Assign product, batch &amp; serial; publish Event: Ship">
+      <bpmn:incoming>Flow_BP03_01</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_02</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_BP03_02" name="Ingest master &amp; shipping events into Data Warehouse">
+      <bpmn:incoming>Flow_BP03_02</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_03</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_BP03_03" name="Scan inbound shipment &amp; record central WMS events">
+      <bpmn:incoming>Flow_BP03_03</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_04</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_BP03_04" name="Scan regional shipment &amp; record WMS/TMS events">
+      <bpmn:incoming>Flow_BP03_04</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_05</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_BP03_05" name="Scan product at facility &amp; record Event: Dispense">
+      <bpmn:incoming>Flow_BP03_05</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_06</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_BP03_06" name="Query serial number at point of care (Fig. 25)">
+      <bpmn:incoming>Flow_BP03_06</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_07</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_BP03_07" name="Synthesize custody events &amp; evaluate rules (SC-DT-02)">
+      <bpmn:incoming>Flow_BP03_07</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_08</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gw_BP03_Authentic" name="Serial valid?">
+      <bpmn:incoming>Flow_BP03_08</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_09</bpmn:outgoing>
+      <bpmn:outgoing>Flow_BP03_10</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_BP03_08" name="Display verified authenticity &amp; custody history">
+      <bpmn:incoming>Flow_BP03_09</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_11</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_BP03_09" name="Investigate anomaly &amp; issue batch recall">
+      <bpmn:incoming>Flow_BP03_10</bpmn:incoming>
+      <bpmn:outgoing>Flow_BP03_12</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="End_BP03" name="Action completed">
+      <bpmn:incoming>Flow_BP03_11</bpmn:incoming>
+      <bpmn:incoming>Flow_BP03_12</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_BP03_01" sourceRef="Start_BP03" targetRef="Task_BP03_01"/>
+    <bpmn:sequenceFlow id="Flow_BP03_02" sourceRef="Task_BP03_01" targetRef="Task_BP03_02"/>
+    <bpmn:sequenceFlow id="Flow_BP03_03" sourceRef="Task_BP03_02" targetRef="Task_BP03_03"/>
+    <bpmn:sequenceFlow id="Flow_BP03_04" sourceRef="Task_BP03_03" targetRef="Task_BP03_04"/>
+    <bpmn:sequenceFlow id="Flow_BP03_05" sourceRef="Task_BP03_04" targetRef="Task_BP03_05"/>
+    <bpmn:sequenceFlow id="Flow_BP03_06" sourceRef="Task_BP03_05" targetRef="Task_BP03_06"/>
+    <bpmn:sequenceFlow id="Flow_BP03_07" sourceRef="Task_BP03_06" targetRef="Task_BP03_07"/>
+    <bpmn:sequenceFlow id="Flow_BP03_08" sourceRef="Task_BP03_07" targetRef="Gw_BP03_Authentic"/>
+    <bpmn:sequenceFlow id="Flow_BP03_09" name="Verified genuine" sourceRef="Gw_BP03_Authentic" targetRef="Task_BP03_08"/>
+    <bpmn:sequenceFlow id="Flow_BP03_10" name="Anomaly / suspect" sourceRef="Gw_BP03_Authentic" targetRef="Task_BP03_09"/>
+    <bpmn:sequenceFlow id="Flow_BP03_11" sourceRef="Task_BP03_08" targetRef="End_BP03"/>
+    <bpmn:sequenceFlow id="Flow_BP03_12" sourceRef="Task_BP03_09" targetRef="End_BP03"/>
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_SC_BP_03">
+    <bpmndi:BPMNPlane id="BPMNPlane_SC_BP_03" bpmnElement="Collab_SC_BP_03">
+      <bpmndi:BPMNShape id="Pool_SC_BP_03_di" bpmnElement="Pool_SC_BP_03" isHorizontal="true">
+        <dc:Bounds x="120" y="80" width="1260" height="875" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_BP03_Manufacturer_di" bpmnElement="Lane_BP03_Manufacturer" isHorizontal="true">
+        <dc:Bounds x="150" y="80" width="1230" height="125" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_BP03_Regulatory_di" bpmnElement="Lane_BP03_Regulatory" isHorizontal="true">
+        <dc:Bounds x="150" y="205" width="1230" height="125" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_BP03_DHSCTraceabilityHub_di" bpmnElement="Lane_BP03_DHSCTraceabilityHub" isHorizontal="true">
+        <dc:Bounds x="150" y="330" width="1230" height="125" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_BP03_Individual_di" bpmnElement="Lane_BP03_Individual" isHorizontal="true">
+        <dc:Bounds x="150" y="455" width="1230" height="125" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_BP03_CentralWarehouse_di" bpmnElement="Lane_BP03_CentralWarehouse" isHorizontal="true">
+        <dc:Bounds x="150" y="580" width="1230" height="125" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_BP03_RegionalWarehouse_di" bpmnElement="Lane_BP03_RegionalWarehouse" isHorizontal="true">
+        <dc:Bounds x="150" y="705" width="1230" height="125" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_BP03_HealthFacility_di" bpmnElement="Lane_BP03_HealthFacility" isHorizontal="true">
+        <dc:Bounds x="150" y="830" width="1230" height="125" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Start_BP03_di" bpmnElement="Start_BP03">
+        <dc:Bounds x="205" y="124.5" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="188" y="165" width="76" height="36" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_01_di" bpmnElement="Task_BP03_01">
+        <dc:Bounds x="285" y="95" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_02_di" bpmnElement="Task_BP03_02">
+        <dc:Bounds x="285" y="345" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_03_di" bpmnElement="Task_BP03_03">
+        <dc:Bounds x="285" y="595" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_04_di" bpmnElement="Task_BP03_04">
+        <dc:Bounds x="285" y="720" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_05_di" bpmnElement="Task_BP03_05">
+        <dc:Bounds x="285" y="845" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_06_di" bpmnElement="Task_BP03_06">
+        <dc:Bounds x="535" y="470" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_07_di" bpmnElement="Task_BP03_07">
+        <dc:Bounds x="535" y="345" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_BP03_Authentic_di" bpmnElement="Gw_BP03_Authentic" isMarkerVisible="true">
+        <dc:Bounds x="795" y="367.5" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="855" y="381" width="95" height="22" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_08_di" bpmnElement="Task_BP03_08">
+        <dc:Bounds x="965" y="470" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_BP03_09_di" bpmnElement="Task_BP03_09">
+        <dc:Bounds x="965" y="220" width="200" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End_BP03_di" bpmnElement="End_BP03">
+        <dc:Bounds x="1225" y="374.5" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1270" y="375" width="90" height="36" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_BP03_01_di" bpmnElement="Flow_BP03_01">
+        <di:waypoint x="241" y="142.5" />
+        <di:waypoint x="285" y="142.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_02_di" bpmnElement="Flow_BP03_02">
+        <di:waypoint x="385" y="190" />
+        <di:waypoint x="385" y="345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_03_di" bpmnElement="Flow_BP03_03">
+        <di:waypoint x="385" y="440" />
+        <di:waypoint x="385" y="595" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_04_di" bpmnElement="Flow_BP03_04">
+        <di:waypoint x="385" y="690" />
+        <di:waypoint x="385" y="720" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_05_di" bpmnElement="Flow_BP03_05">
+        <di:waypoint x="385" y="815" />
+        <di:waypoint x="385" y="845" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_06_di" bpmnElement="Flow_BP03_06">
+        <di:waypoint x="485" y="892.5" />
+        <di:waypoint x="510" y="892.5" />
+        <di:waypoint x="510" y="517.5" />
+        <di:waypoint x="535" y="517.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_07_di" bpmnElement="Flow_BP03_07">
+        <di:waypoint x="635" y="470" />
+        <di:waypoint x="635" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_08_di" bpmnElement="Flow_BP03_08">
+        <di:waypoint x="735" y="392.5" />
+        <di:waypoint x="795" y="392.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_09_di" bpmnElement="Flow_BP03_09">
+        <di:waypoint x="820" y="417.5" />
+        <di:waypoint x="820" y="517.5" />
+        <di:waypoint x="965" y="517.5" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="830" y="524" width="120" height="22" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_10_di" bpmnElement="Flow_BP03_10">
+        <di:waypoint x="820" y="367.5" />
+        <di:waypoint x="820" y="267.5" />
+        <di:waypoint x="965" y="267.5" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="830" y="240" width="125" height="22" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_11_di" bpmnElement="Flow_BP03_11">
+        <di:waypoint x="1165" y="517.5" />
+        <di:waypoint x="1243" y="517.5" />
+        <di:waypoint x="1243" y="410.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_BP03_12_di" bpmnElement="Flow_BP03_12">
+        <di:waypoint x="1165" y="267.5" />
+        <di:waypoint x="1243" y="267.5" />
+        <di:waypoint x="1243" y="374.5" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

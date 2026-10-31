@@ -1,0 +1,9 @@
+import { figure } from "../../schema/builders";
+
+export default figure({
+  label: "fig:13",
+  file: "media/vfig-p033.png",
+  caption: "Fig. 13. DIIG digital health enterprise architecture framework",
+  page: 33,
+    meta: {"title": "Step 2. Define a target DHSC architecture; DHSC architecture framework", "source": {"library": "9789240101197-eng", "file": "who-iris/library/9789240101197-eng/figures/vfig-p033.png", "page": 33, "method": "l1-vector-figure"}, "glossary": [{"iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture", "prefLabel": "Enterprise Architecture"}, {"iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability", "prefLabel": "Interoperability"}, {"iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-information-exchange", "prefLabel": "Health Information Exchange"}], "archimate": {"model": "smart-ra 0.3.0-draft.1", "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC4, smart-ra#147)", "elements": [{"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f507cb05d32a54028579c6437517150f.jsonld", "name": "Digital Health Supply Chain Enterprise"}, {"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3398a2d96e915055bf5e7aef22f9fbf8.jsonld", "name": "Interoperability Layer"}, {"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-43460361d71e57d2b0bb644b1ac6904d.jsonld", "name": "Shared Services"}], "views": [{"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld", "name": "DHSC Architecture Framework (DTH SC Fig. 14)"}, {"iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-8c5dd12b8d4e425184f6003d0513d569.jsonld", "name": "Interoperability Layer"}]}},
+});

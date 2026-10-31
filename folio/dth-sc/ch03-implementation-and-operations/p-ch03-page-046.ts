@@ -1,0 +1,7 @@
+import { prose } from "../../schema/builders";
+
+export default prose({
+  label: "prose:ch03-page-046",
+  uses: [],
+    meta: {"title": "Building blocks and implementation considerations", "source": {"library": "9789240101197-eng", "section": "page-046", "file": "who-iris/library/9789240101197-eng/sections/page-046.md", "pdfPage": 46, "method": "l1-outline-seed"}, "glossary": [{"iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain", "prefLabel": "Digital Health Supply Chain"}, {"iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/governance-health-supply-chain", "prefLabel": "Governance (Health Supply Chain)"}, {"iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability", "prefLabel": "Interoperability"}, {"iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-infrastructure", "prefLabel": "Digital Infrastructure"}]},
+});

@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/prose-references-page-065",
+  "@type": [
+    "folio-assistant-core:Prose",
+    "doco:Section"
+  ],
+  "label": "prose:references-page-065",
+  "kind": "prose",
+  "text": "p-references-page-065.md",
+  "meta": {
+    "title": "References",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-065",
+      "file": "who-iris/library/9789240101197-eng/sections/page-065.md",
+      "pdfPage": 65,
+      "method": "l1-outline-seed"
+    }
+  },
+  "provenance": "authored"
+}

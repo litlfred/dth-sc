@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/prose-ch05-page-057",
+  "@type": [
+    "folio-assistant-core:Prose",
+    "doco:Section"
+  ],
+  "label": "prose:ch05-page-057",
+  "kind": "prose",
+  "text": "p-ch05-page-057.md",
+  "meta": {
+    "title": "Chapter overview",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-057",
+      "file": "who-iris/library/9789240101197-eng/sections/page-057.md",
+      "pdfPage": 57,
+      "method": "l1-outline-seed"
+    },
+    "sourceOnly": "country reporting: cited source text, not formal content",
+    "l1CoverageCategory": "source-example",
+    "country": [
+      "Ethiopia",
+      "Malawi",
+      "Rwanda"
+    ],
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/health-supply-chain-information-system",
+        "prefLabel": "Health Supply Chain Information System"
+      }
+    ]
+  },
+  "provenance": "authored"
+}

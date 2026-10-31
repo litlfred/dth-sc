@@ -1,0 +1,111 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "smart-base": "https://litlfred.github.io/smart-base/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/pers-manufacturer-distributor",
+  "@type": [
+    "smart-base:Persona"
+  ],
+  "label": "pers:manufacturer-distributor",
+  "kind": "persona",
+  "title": "Manufacturer and distributor",
+  "uses": [
+    "papers/dth-sc/blocks/prose-introduction-page-011",
+    "papers/dth-sc/blocks/prose-introduction-page-012",
+    "papers/dth-sc/blocks/prose-ch04-page-056"
+  ],
+  "text": "pers-manufacturer-distributor.md",
+  "meta": {
+    "title": "Manufacturer and distributor",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-011",
+      "file": "who-iris/library/9789240101197-eng/sections/page-011.md",
+      "pdfPage": 11,
+      "method": "l1-outline-seed",
+      "issue": "litlfred/dth-sc#2"
+    },
+    "roleId": "SC-R-03",
+    "personaType": "person",
+    "bpmnLanes": [
+      {
+        "process": "bp:sc-bp-02-end-to-end-supply-chain-processes",
+        "processId": "SC_BP_02",
+        "laneId": "Lane_BP02_Manufacturer",
+        "bpmnFile": "folio/dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.bpmn"
+      },
+      {
+        "process": "bp:sc-bp-03-centralized-track-and-trace",
+        "processId": "SC_BP_03",
+        "laneId": "Lane_BP03_Manufacturer",
+        "bpmnFile": "folio/dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.bpmn"
+      }
+    ],
+    "archimate": {
+      "model": "smart-ra 0.3.0-draft.1",
+      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
+      "elements": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-66d0f91175c154b48413d57e9f952a34.jsonld",
+          "name": "Manufacturer / Distributor",
+          "type": "BusinessRole"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f8c43d85b20e5671b613d723483217a8.jsonld",
+          "name": "Manufacturer Systems",
+          "type": "ApplicationComponent"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-815bef20a55f5f59b409a76a9a6545f8.jsonld",
+          "name": "Product Master Data",
+          "type": "DataObject"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-5dc77dae1bce5d11b288830795b31bdf.jsonld",
+          "name": "Traceability Event",
+          "type": "DataObject"
+        }
+      ],
+      "views": [
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-bea56e01c8345fbc803dee47a17ccfd3.jsonld",
+          "name": "Track and Trace through DHSC Components (DTH SC Fig. 24)"
+        }
+      ]
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+        "prefLabel": "Traceability"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/product",
+        "prefLabel": "Product"
+      }
+    ],
+    "glossaryTerms": [
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+      "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/product"
+    ],
+    "relatedBlocks": [
+      "bp:sc-bp-02-end-to-end-supply-chain-processes",
+      "bp:sc-bp-03-centralized-track-and-trace",
+      "fig:ch04-fig-24",
+      "fig:ch04-fig-25"
+    ]
+  },
+  "provenance": "authored"
+}

@@ -1,0 +1,1 @@
+Annex 4. Illustrative template that maps today’s challenges to future outcomes This type of template can be used to map the transition from current critical challenges faced by supply chain partners and their processes to the future vision of a DHSC.

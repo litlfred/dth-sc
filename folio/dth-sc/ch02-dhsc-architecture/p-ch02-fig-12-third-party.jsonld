@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/prose-ch02-fig-12-third-party",
+  "@type": [
+    "folio-assistant-core:Prose",
+    "doco:Section"
+  ],
+  "label": "prose:ch02-fig-12-third-party",
+  "kind": "prose",
+  "text": "p-ch02-fig-12-third-party.md",
+  "meta": {
+    "title": "Step 1. Assess the current state of HSCISs",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-031",
+      "pdfPage": 31,
+      "method": "third-party-figure-note"
+    }
+  },
+  "provenance": "authored"
+}

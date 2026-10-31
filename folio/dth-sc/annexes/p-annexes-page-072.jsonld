@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/prose-annexes-page-072",
+  "@type": [
+    "folio-assistant-core:Prose",
+    "doco:Section"
+  ],
+  "label": "prose:annexes-page-072",
+  "kind": "prose",
+  "uses": [
+    "papers/dth-sc/blocks/tbl-annex-7"
+  ],
+  "text": "p-annexes-page-072.md",
+  "meta": {
+    "title": "Annex 7. Resource matrix for DHSC implementation",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-072",
+      "file": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "pdfPage": 72,
+      "method": "l1-outline-seed"
+    },
+    "l1CoverageCategory": "captured",
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain-intervention",
+        "prefLabel": "Digital Health Supply Chain Intervention"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/solution-architecture",
+        "prefLabel": "Solution Architecture"
+      }
+    ]
+  },
+  "provenance": "authored"
+}

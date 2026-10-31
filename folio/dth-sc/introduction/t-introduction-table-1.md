@@ -1,0 +1,8 @@
+*Table 1. Summary of chapters 1–4*
+
+| **Chapter** | **Illustrative target organizations** | **Illustrative target user teams and roles** | **Purpose of the chapter** |
+| --- | --- | --- | --- |
+| Chapter 1. Defining a holistic DHSC strategy | • Ministry of health (MOH)<br>• Central warehouse | • Senior management/leaders<br>• Chief digital officers<br>• Supply chain leaders | To help define a vision and strategic goals to guide DHSC implementation |
+| Chapter 2. Defining the DHSC architecture | • MOH<br>• Central warehouse | • Chief digital officers<br>• Technical/system/enterprise architects | To help define a DHSC architecture that can guide and help coordinate all digital transformation activities |
+| Chapter 3. Planning for scalable implementation and sustainable operations | • MOH<br>• Central warehouse<br>• Donors and funding partners<br>• Implementing partners | • Chief digital officers<br>• Project sponsors<br>• Project managers<br>• Technical/system/enterprise architects and team<br>• Supply chain/operational leaders and team | To provide guidance on factors such as governance, human resource capacity and infrastructure in developing a viable implementation plan for each DHSC intervention |
+| Chapter 4. Using the DHSC to implement traceability | • MOH<br>• Central warehouse<br>• Donors and funding partners<br>• Regulatory authority<br>• Implementing partners | • Chief digital officers<br>• Technical/system/enterprise architects and team<br>• Supply chain/operational leaders and team<br>• Regulatory/market surveillance and control/vigilance teams | To help implement medical product traceability and verification features using DHSC components |
