@@ -69,7 +69,8 @@
   ],
   "description": "WHO Digital transformation handbook for health supply chain architecture (ISBN 9789240101197), as an L2 DTH on smart-ra: the working document folio seeded from its L1 entry in who-iris, and its supply chain glossary linked to the smart-ra glossary and ArchiMate model. dth-pc and dth-sfp depend on it.",
   "needs": [
-    "smart-base"
+    "smart-base",
+    "dpi-h-ra"
   ],
-  "_needs_comment": "Starts on the smart-base harness like dth-hrh, on the same pinned layers. It moves to needs smart-ra when the dth-hrh pilot does (shared step S4, smart-ra#133). Until then smart-ra is linked by IRI only; mounting it needs `bun run cat mount:remote --seed dpi-h-ra=litlfred/smart-ra@<sha> --whole`, which writes the lock. Owner, 2026-10-31 00:45Z: 'create issue and work on dth-sc'."
+  "_needs_comment": "An L2 DTH on smart-ra (owner, 2026-10-31, option A; dth-hrh#47, dth-sc#2): its glossary terms and narrative link to dpi-h-ra (litlfred/smart-ra) glossary concepts and ArchiMate 0.3.0-draft.1 elements and views (smart-ra#147, #148). smart-base stays, because the DAK block kinds reach this folio through smart-base content-adapters/dak.json."
 }

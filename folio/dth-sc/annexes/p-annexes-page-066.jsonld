@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/prose-annexes-page-066",
+  "@type": [
+    "folio-assistant-core:Prose",
+    "doco:Section"
+  ],
+  "label": "prose:annexes-page-066",
+  "kind": "prose",
+  "text": "p-annexes-page-066.md",
+  "meta": {
+    "title": "Annex 1. Principles for digital development",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-066",
+      "file": "who-iris/library/9789240101197-eng/sections/page-066.md",
+      "pdfPage": 66,
+      "method": "l1-outline-seed"
+    }
+  },
+  "provenance": "authored"
+}

@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/prose-annexes-page-069",
+  "@type": [
+    "folio-assistant-core:Prose",
+    "doco:Section"
+  ],
+  "label": "prose:annexes-page-069",
+  "kind": "prose",
+  "text": "p-annexes-page-069.md",
+  "meta": {
+    "title": "Annex 4. Illustrative template that maps today's challenges to future outcomes",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-069",
+      "file": "who-iris/library/9789240101197-eng/sections/page-069.md",
+      "pdfPage": 69,
+      "method": "l1-outline-seed"
+    }
+  },
+  "provenance": "authored"
+}

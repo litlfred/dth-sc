@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/fig-21",
+  "@type": [
+    "folio-assistant-core:Figure",
+    "doco:Figure"
+  ],
+  "label": "fig:21",
+  "kind": "figure",
+  "text": "f-ch02-fig-21.md",
+  "meta": {
+    "title": "Step 3. Identify implementation activities and map them to strategic goals",
+    "source": {
+      "library": "9789240101197-eng",
+      "file": "who-iris/library/9789240101197-eng/figures/vfig-p043.png",
+      "page": 43,
+      "method": "l1-vector-figure"
+    }
+  },
+  "provenance": "authored"
+}

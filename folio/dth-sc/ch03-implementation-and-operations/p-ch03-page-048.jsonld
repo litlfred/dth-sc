@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/prose-ch03-page-048",
+  "@type": [
+    "folio-assistant-core:Prose",
+    "doco:Section"
+  ],
+  "label": "prose:ch03-page-048",
+  "kind": "prose",
+  "text": "p-ch03-page-048.md",
+  "meta": {
+    "title": "Step 2. Develop an operational plan for each DHSC intervention",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-048",
+      "file": "who-iris/library/9789240101197-eng/sections/page-048.md",
+      "pdfPage": 48,
+      "method": "l1-outline-seed"
+    },
+    "glossary": [
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+        "prefLabel": "Digital Health Supply Chain"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain-intervention",
+        "prefLabel": "Digital Health Supply Chain Intervention"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/health-supply-chain-information-system",
+        "prefLabel": "Health Supply Chain Information System"
+      },
+      {
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/governance-health-supply-chain",
+        "prefLabel": "Governance (Health Supply Chain)"
+      },
+      {
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-governance",
+        "prefLabel": "Data Governance"
+      }
+    ]
+  },
+  "provenance": "authored"
+}

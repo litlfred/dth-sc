@@ -40,6 +40,11 @@
       "harness": "bootstrap-tools",
       "repository": "litlfred/bootstrap-tools",
       "ref": "b7fb762ba968a6868bbe5004144ddf78023eb9c7"
+    },
+    {
+      "harness": "dpi-h-ra",
+      "repository": "litlfred/smart-ra",
+      "ref": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28"
     }
   ],
   "instances": [
@@ -156,6 +161,42 @@
         "by": "litlfred",
         "on": "2026-10-31",
         "ref": "f2e2a2ab08e262ec7227539b20ef7eed827ab642",
+        "approver": "unverified"
+      }
+    },
+    {
+      "instance": "dpi-h-ra",
+      "repository": "litlfred/smart-ra",
+      "sha": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28",
+      "upstreamRoot": "",
+      "path": "dpi-h-ra",
+      "via": "dpi-h-ra",
+      "pinnedBy": "declared",
+      "declaration": {
+        "file": "dpi-h-ra.json",
+        "sha256": "4236e721b28ca6464260267a9a270e514fe59461363459221277fc347fcf0653"
+      },
+      "directories": [
+        {
+          "id": "glossary",
+          "path": "dpi-h-ra/glossary",
+          "upstreamPath": "glossary",
+          "treeDigest": "4c0de7553bb9412b2a8cd96f58347448318b652d96f46de8fb9276c3a7e15bbe",
+          "files": 2
+        },
+        {
+          "id": "archimate",
+          "path": "dpi-h-ra/archimate",
+          "upstreamPath": "archimate",
+          "treeDigest": "786545fb056dd63c1f5d3856f22c0101c0ea2019d304bc1ec9182ddc18b74f97",
+          "files": 7
+        }
+      ],
+      "trust": {
+        "basis": "consent",
+        "by": "litlfred",
+        "on": "2026-10-31",
+        "ref": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28",
         "approver": "unverified"
       }
     },

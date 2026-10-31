@@ -4,7 +4,7 @@
 **L1 source:** `litlfred/who-iris/library/9789240101197-eng` (frozen, mounted read-only).
 **Target repo:** `litlfred/dth-sc` (fork of WorldHealthOrganization/dth-sc; today only a README). No WHO repo is touched.
 **Builds on:** workplans.md (project files, dth-l2-ingest-2026-10-31/) (split rule, shared steps S1-S4), smart-ra#133, smart-base#242, dth-hrh#47 (pilot).
-**Status:** approved by the owner 2026-10-31 00:45Z ("create issue and work on dth-sc"). dth-pc and dth-sfp depend on dth-sc. Definition conflicts with smart-ra are raised on smart-ra (litlfred/smart-ra#140).
+**Status:** approved by the owner 2026-10-31 00:45Z ("create issue and work on dth-sc"). Steps SC0, SC1a, SC1b, SC2a, SC2b, SC3 (`smart-ra#147`), SC4, and S4 (`dpi-h-ra` mount and `needs: ["smart-base", "dpi-h-ra"]`) are implemented on `#1`. dth-pc and dth-sfp depend on dth-sc. Definition conflicts with smart-ra are raised on smart-ra (litlfred/smart-ra#140, #183).
 
 ## 1. What the L1 entry holds
 

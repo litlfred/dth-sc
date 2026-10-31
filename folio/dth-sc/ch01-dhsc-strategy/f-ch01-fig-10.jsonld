@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/fig-10",
+  "@type": [
+    "folio-assistant-core:Figure",
+    "doco:Figure"
+  ],
+  "label": "fig:10",
+  "kind": "figure",
+  "text": "f-ch01-fig-10.md",
+  "meta": {
+    "title": "Step 4. Define a strategic roadmap and performance indicators",
+    "source": {
+      "library": "9789240101197-eng",
+      "file": "who-iris/library/9789240101197-eng/figures/vfig-p026.png",
+      "page": 26,
+      "method": "l1-vector-figure"
+    }
+  },
+  "provenance": "authored"
+}

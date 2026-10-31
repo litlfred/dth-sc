@@ -20,7 +20,13 @@ export default paper({
     isbn: "9789240101197",
     source: { library: "9789240101197-eng", repository: "litlfred/who-iris" },
     licence: "CC BY-NC-SA 3.0 IGO",
-    status: "seeded from L1; not yet linked to the glossary or ArchiMate",
+    status: "seeded from L1; linked to dth-sc and dpi-h-ra glossaries and dpi-h-ra ArchiMate 0.3.0-draft.1 views and elements (SC2b, SC4)",
+    figureViews: [
+      { figure: "Figure 1", block: "folio/dth-sc/introduction/p-introduction-page-011.md", model: "0.3.0-draft.1", view: "id-2d524cffba25509e82684f47d624cc42", viewName: "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)" },
+      { figure: "Figure 3", block: "folio/dth-sc/introduction/p-introduction-page-012.md", model: "0.3.0-draft.1", view: "id-2d524cffba25509e82684f47d624cc42", viewName: "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)" },
+      { figure: "Figure 14", block: "folio/dth-sc/ch02-dhsc-architecture/f-ch02-fig-14.md", model: "0.3.0-draft.1", view: "id-92267636cc42566ca5d2cff0e81be8c9", viewName: "DHSC Architecture Framework (DTH SC Fig. 14)" },
+      { figure: "Figure 24", block: "folio/dth-sc/ch04-traceability/f-ch04-fig-24.md", model: "0.3.0-draft.1", view: "id-bea56e01c8345fbc803dee47a17ccfd3", viewName: "Track and Trace through DHSC Components (DTH SC Fig. 24)" },
+    ],
   },
   chapters: [
     chapterRef({ dir: "front-matter" }),

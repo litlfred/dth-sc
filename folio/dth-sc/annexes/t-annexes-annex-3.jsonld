@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/tbl-annex-3",
+  "@type": [
+    "folio-assistant-core:Table",
+    "doco:Table"
+  ],
+  "label": "tbl:annex-3",
+  "kind": "table",
+  "text": "t-annexes-annex-3.md",
+  "meta": {
+    "title": "Annex 3. Template for prioritizing DHSC challenges to address",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-068",
+      "pdf": "who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf",
+      "pdfPages": [
+        68
+      ],
+      "method": "pdf-table-rebuild"
+    }
+  },
+  "provenance": "authored"
+}

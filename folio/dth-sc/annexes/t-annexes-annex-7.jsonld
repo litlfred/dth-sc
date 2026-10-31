@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/tbl-annex-7",
+  "@type": [
+    "folio-assistant-core:Table",
+    "doco:Table"
+  ],
+  "label": "tbl:annex-7",
+  "kind": "table",
+  "text": "t-annexes-annex-7.md",
+  "meta": {
+    "title": "Annex 7. Resource matrix for DHSC implementation",
+    "source": {
+      "library": "9789240101197-eng",
+      "section": "page-072",
+      "pdf": "who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf",
+      "pdfPages": [
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "method": "pdf-table-rebuild"
+    }
+  },
+  "provenance": "authored"
+}

@@ -4,10 +4,14 @@ This is a **folio**: the content repository. The authoring platform —
 skills, schemas, MCP tools, the publication pipeline — is
 folio-assistant, **remote-mounted** at the repository root from the SHAs pinned in
 `index.lock.json` (`who-iris/`, `smart-base/`, `folio-assistant-core/`, `cat-harness/`,
-`cat-harness-tools/`, `fhir-harness/`, `bootstrap/`, `bootstrap-tools/`; all
+`cat-harness-tools/`, `fhir-harness/`, `bootstrap/`, `bootstrap-tools/`, `dpi-h-ra/`; all
 gitignored). The session-start hook mounts them; by hand:
 `bun run cat-harness-tools/scripts/remote-mount.ts`. The pins are dth-hrh's, so
-the handbooks run on the same layers.
+the handbooks run on the same layers (`needs: ["smart-base", "dpi-h-ra"]` in `dth-sc.json`).
+`dpi-h-ra` (`litlfred/smart-ra`) is mounted with `glossary/` and `archimate/` only:
+`glossary/dth-sc.glossary.json` carries SKOS matches to its concepts, and blocks in
+`folio/dth-sc/` name glossary concepts in `meta.glossary` and ArchiMate 0.3.0-draft.1
+elements and views in `meta.archimate`, verified by `bun run check:dth-glossary`.
 
 This file is the **agent-generic** source of truth, read natively by Claude
 Code, Gemini CLI, Antigravity, Cursor and Copilot. `CLAUDE.md` and
