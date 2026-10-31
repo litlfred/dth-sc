@@ -1,0 +1,11 @@
+Chapter Planning for scalable implementation and sustainable operations Plan the implementation of each intervention Develop an operational plan for each intervention Develop a budget for each intervention Implement each intervention Step Step Step Step The following principles, informed by the Principles for Digital Development (Annex 1), can guide the implementation of the DHSC interventions.
+- Plan for sustainability from the start.
+- Engage local resources to build capacity.
+- Promote collaboration across implementation partners to align and complement efforts.
+- Develop plans grounded in the local context to set realistic expectations and milestones. The steps outlined in this chapter will result in the following outputs:
+- detailed project management plans for each implementation activity;
+- stakeholder matrix to manage operations;
+- operations sustainability plan;
+- implementation and operations performance monitoring and evaluation framework;
+- DHSC implementation materials such as requirements, specifications, test scripts and job aids; and
+- developed DHSC applications. 1. Defining a holistic DHSC strategy 2. Defining the DHSC architecture 3. Planning for scalable implementation and sustainable operations 4. Using the DHSC to implement traceability Guiding principles Outputs

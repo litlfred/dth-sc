@@ -1,0 +1,25 @@
+{
+  "name": "dth-sc",
+  "private": true,
+  "scripts": {
+    "cat": "bun cat-harness-tools/scripts/run-script.ts",
+    "site:document": "bun run folio-assistant-core/scripts/build-document-site.ts --landing-layout default --document-layout default --out",
+    "site:library": "bun run folio-assistant-core/scripts/build-library-site.ts --out",
+    "site:node-kinds": "bun run cat-harness-tools/scripts/gen-node-kind-pages.ts --root . --out",
+    "kg:blocks": "bun run cat-harness-tools/pipeline/gen-block-jsonld.ts --paper dth-sc",
+    "check:kg-blocks": "bun run cat-harness-tools/pipeline/gen-block-jsonld.ts --paper dth-sc --check",
+    "check:library-kg": "bun run cat-harness-tools/pipeline/gen-library-jsonld.ts --check",
+    "seed:folio": "python3 -I scripts/folio/seed_from_l1.py"
+  },
+  "_workspaces_comment": "The mounted code layers, as workspaces, as smart-ra and folio-assistant list them: they import each other by package name (@litlfred/cat-harness-tools, ...), and nothing publishes those packages, so a mount resolves them only through the ONE root node_modules that bunfig.toml's hoisted linker lays out. Without this, fhir-harness's scripts could not find @litlfred/cat-harness-tools and check:review-anchors, site:document and the CI publish failed (dth-hrh#41).",
+  "workspaces": [
+    "bootstrap-tools",
+    "cat-harness",
+    "cat-harness-tools",
+    "folio-assistant-core",
+    "fhir-harness"
+  ],
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}

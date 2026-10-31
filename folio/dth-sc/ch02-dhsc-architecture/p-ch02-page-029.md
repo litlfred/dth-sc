@@ -1,0 +1,4 @@
+The following sections detail the steps to defining an overarching DHSC architecture. They also illustrate various architectural approaches that countries can adopt based on their health supply chain context and design.
+- Step 1. Assess the current state of HSCISs.
+- Step 2. Define a DHSC target architecture.
+- Step 3. Identify implementation activities and map them to strategic goals. Fig 11. Health supply chain end-to-end visibility and traceability Fig. End-to-end visibility GLOBAL LEVEL End-to-end visibility COUNTRY LEVEL Track and trace GLOBAL LEVEL Track and trace NATIONAL LEVEL Manufacturing Forecasting and planning Procurement Supplier and contract management Order management Shipping REGULATORY Customs Distribution Individuals CENTRAL WAREHOUSE Receiving CENTRAL WAREHOUSE Inventory management HEALTH FACILITY Dispensing REGIONAL WAREHOUSE Replenishment Defining the DHSC architecture

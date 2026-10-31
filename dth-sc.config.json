@@ -1,0 +1,42 @@
+{
+  "contentType": "document",
+  "adapter": "document",
+  "adapterModule": "./folio-assistant-core/adapters/document/index.ts",
+  "dependencies": {
+    "folioAssistant": [
+      {
+        "name": "folio-assistant-core",
+        "path": "folio-assistant-core"
+      },
+      {
+        "name": "smart-base",
+        "path": "smart-base"
+      }
+    ]
+  },
+  "feedbackDir": ".folio-feedback",
+  "skills": ".claude/skills/local",
+  "viewer": {
+    "dir": "cat-harness-tools/viewer",
+    "port": 8080
+  },
+  "readme": {
+    "linkStyle": "blob",
+    "publishRef": "gh-pages"
+  },
+  "site": {
+    "build": {
+      "sourceSteps": [
+        "site:document"
+      ],
+      "siteSteps": [
+        "site:node-kinds"
+      ],
+      "pre": [],
+      "keep": [
+        "ns"
+      ]
+    }
+  },
+  "_site_comment": "`site.build.pre` is empty until the block KG nodes (`bun run kg:blocks`) are generated and committed; then add check:kg-blocks, as dth-hrh has. `site.build.keep`: `ns`, the JSON-LD context the block KG nodes name."
+}
