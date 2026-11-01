@@ -148,7 +148,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "6aa373c3c932379ff22bb2cbb3d27a8953056ea4",
+          "ref": "d9223fb780333c7dd179e0ad50734a0b144c3955",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -163,9 +163,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "6aa373c3c932379ff22bb2cbb3d27a8953056ea4",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-01",
+              "ref": "d9223fb780333c7dd179e0ad50734a0b144c3955",
+              "evidence": "cat-harness moved from 6aa373c to dth-hrh's pin d9223fb so it runs with folio-assistant-core d95399b (core#462); the older layer refused core's validators (family not listed). litlfred, 2026-11-01 10:09Z, thread 'Share DTH scripts and add dth init': chose 'A. Yes, match dth-hrh' on Q-CYSV4 (repin cat-harness and cat-harness-tools in dth-sc and dth-sfp to dth-hrh's commits)."
             }
           }
         }
@@ -176,7 +176,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "f62a1d9417a60f71b3c96835a33afdc572b957e3",
+          "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -188,9 +188,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "f62a1d9417a60f71b3c96835a33afdc572b957e3",
-              "evidence": "cat-harness-tools moved to main f62a1d9, past #1123 (9b3f7be, figure numbers in figure headings), asked by the coordinator via the supply chain thread. Merge-and-repin window (coordinator, 2026-10-31 10:45Z, to ~19:00Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-01",
+              "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
+              "evidence": "cat-harness-tools moved from f62a1d9 to dth-hrh's pin 6417b9d so it runs with folio-assistant-core d95399b (core#462); the older layer refused core's validators (family not listed). litlfred, 2026-11-01 10:09Z, thread 'Share DTH scripts and add dth init': chose 'A. Yes, match dth-hrh' on Q-CYSV4 (repin cat-harness and cat-harness-tools in dth-sc and dth-sfp to dth-hrh's commits)."
             }
           }
         }
