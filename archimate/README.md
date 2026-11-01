@@ -28,3 +28,10 @@ Rebuild (deterministic ids, so a rebuild gives the same file):
 ```sh
 python3 -I scripts/archimate/build_variant_views.py dpi-h-ra/archimate/0.3.0-draft.1/WHOBaseFile.archimate 0.3.0-draft.1 archimate/0.1.0-draft.1/dth-sc-overlay.archimate
 ```
+
+The figure blocks for Figs 15-19 show SVGs drawn from these views (`folio/dth-sc/media/archimate-fig-NN.svg`), and link the printed PNG as evidence. Redraw them after a rebuild, or check that they match:
+
+```sh
+bun run scripts/archimate/render_figures.ts          # write
+bun run scripts/archimate/render_figures.ts --check  # verify
+```

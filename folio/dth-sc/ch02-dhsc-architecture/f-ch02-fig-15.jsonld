@@ -20,7 +20,16 @@
       "library": "9789240101197-eng",
       "file": "who-iris/library/9789240101197-eng/figures/vfig-p036.png",
       "page": 36,
-      "method": "l1-vector-figure"
+      "method": "generated",
+      "generated": {
+        "tool": "render-view (cat-harness-tools/archimate/scripts/render-view.ts)",
+        "script": "scripts/archimate/render_figures.ts",
+        "model": "archimate/0.1.0-draft.1/dth-sc-overlay.archimate",
+        "view": "id-ab7ddf2e88d786e2f3b40bd251b1ed71",
+        "viewName": "Maturity-based Architecture: SCISMM Level 3 to Level 4 (DTH SC Fig. 15)",
+        "output": "archimate-fig-15.svg",
+        "evidence": "media/vfig-p036.png"
+      }
     },
     "glossary": [
       {

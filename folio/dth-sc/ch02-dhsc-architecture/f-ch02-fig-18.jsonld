@@ -20,7 +20,16 @@
       "library": "9789240101197-eng",
       "file": "who-iris/library/9789240101197-eng/figures/vfig-p039.png",
       "page": 39,
-      "method": "l1-vector-figure"
+      "method": "generated",
+      "generated": {
+        "tool": "render-view (cat-harness-tools/archimate/scripts/render-view.ts)",
+        "script": "scripts/archimate/render_figures.ts",
+        "model": "archimate/0.1.0-draft.1/dth-sc-overlay.archimate",
+        "view": "id-548ef5cca9e14b658dd086a42f0440c5",
+        "viewName": "Supply Chain Design: Decentralized Management, Option A (DTH SC Fig. 18)",
+        "output": "archimate-fig-18.svg",
+        "evidence": "media/vfig-p039.png"
+      }
     },
     "glossary": [
       {
