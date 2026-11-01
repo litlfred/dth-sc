@@ -39,7 +39,8 @@
         "check:dth-blocks",
         "check:l1-coverage",
         "check:kg-blocks",
-        "check:library-kg"
+        "check:library-kg",
+        "check:page-furniture"
       ],
       "keep": [
         "ns"
