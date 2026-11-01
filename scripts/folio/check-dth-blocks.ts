@@ -1,8 +1,13 @@
 #!/usr/bin/env bun
 /**
- * Validate dth-sc's glossary, table blocks (SC1b), personas, BPMN 2.0
- * business processes, DMN decision tables, and cross-instance links to
- * dpi-h-ra (smart-ra).
+ * Validate dth-sc's table blocks (SC1b), personas, BPMN 2.0 business
+ * processes and DMN decision tables (`bun run check:dth-blocks`).
+ *
+ * The glossary and link checks now run from core
+ * (`bun run check:dth-glossary`, folio-assistant-core glossary-validate.ts),
+ * and L1 coverage from core's folio-l1-coverage.ts (bean cysv). The glossary
+ * part below is a leftover until the block checks move to kg-audit
+ * (bean lo3p); then this file is deleted.
  */
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -17,7 +22,6 @@ import {
   loadDecisionTable,
   unreadableExpressions,
 } from "../../cat-harness-tools/src/workflow/decision-table.ts";
-import { verifyL1Coverage } from "../folio/check-l1-coverage.ts";
 
 const MATCHES = ["exactMatch", "closeMatch", "broadMatch", "narrowMatch"] as const;
 
@@ -356,13 +360,5 @@ for (const file of allTsFiles) {
 
 console.log(`✓ Business processes: ${bpCount} BPMN 2.0 process(es) with ${laneCount} role-bound lane(s) and rendered SVGs checked`);
 console.log(`✓ Decision tables: ${dtCount} DMN table(s) with ${dtRuleCount} rule(s) checked against dak-dmn-has-decision-table and FEEL evaluator`);
-
-const l1Res = verifyL1Coverage();
-if (!l1Res.ok) {
-  for (const err of l1Res.errors) console.error(`✗ ${err}`);
-  bad += l1Res.errors.length;
-} else {
-  console.log(l1Res.summary);
-}
 
 process.exit(bad ? 1 : 0);
