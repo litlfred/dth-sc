@@ -127,17 +127,26 @@ const allTsFiles = walk("folio/dth-sc");
 const ra = mounted.find((m) => m.name === "dpi-h-ra");
 if (ra) {
   const { readArchimate } = await import("../../cat-harness-tools/archimate/schemas/archimate.ts");
-  const cfg = JSON.parse(readFileSync(join(ra.root, "archimate/cat-archimate.config.json"), "utf-8"));
-  const ids = new Map<string, { elements: Set<string>; views: Set<string> }>();
-  for (const cm of cfg.models) {
-    const p = join(ra.root, "archimate", cm.file);
-    if (!existsSync(p)) continue;
-    const model = readArchimate(readFileSync(p));
-    ids.set(cm.id, {
-      elements: new Set(model.elements.map((e: { id: string }) => e.id)),
-      views: new Set(model.views.map((v: { id: string }) => v.id)),
-    });
-  }
+  type Ids = Map<string, { elements: Set<string>; views: Set<string> }>;
+  const loadModels = (root: string): Ids => {
+    const out: Ids = new Map();
+    const cfgPath = join(root, "archimate/cat-archimate.config.json");
+    if (!existsSync(cfgPath)) return out;
+    for (const cm of JSON.parse(readFileSync(cfgPath, "utf-8")).models) {
+      const p = join(root, "archimate", cm.file);
+      if (!existsSync(p)) continue;
+      const model = readArchimate(readFileSync(p));
+      out.set(cm.id, {
+        elements: new Set(model.elements.map((e: { id: string }) => e.id)),
+        views: new Set(model.views.map((v: { id: string }) => v.id)),
+      });
+    }
+    return out;
+  };
+  const ids = loadModels(ra.root);
+  // This DTH's own overlay on smart-ra (archimate/, dth-sc#2 SC3): its views and the elements it adds.
+  const own = loadModels(".");
+  const raElements = new Set([...ids.values()].flatMap((m) => [...m.elements]));
   const iriRe = /\/archimate\/([^/]+)\/(elements|views)\/([^/]+)\.jsonld$/;
   let archBlocks = 0;
   let archLinks = 0;
@@ -172,20 +181,26 @@ if (ra) {
       for (const x of [...(a.elements ?? []), ...(a.views ?? [])]) {
         archLinks++;
         const hit = String(x.iri).match(iriRe);
-        const ok =
-          hit &&
-          String(x.iri).startsWith("https://litlfred.github.io/smart-ra/") &&
-          ids.get(hit[1])?.[hit[2] as "elements" | "views"].has(hit[3]);
+        const iri = String(x.iri);
+        const models = iri.startsWith("https://litlfred.github.io/smart-ra/")
+          ? ids
+          : iri.startsWith("https://litlfred.github.io/dth-sc/")
+            ? own
+            : undefined;
+        const ok = hit && models?.get(hit[1])?.[hit[2] as "elements" | "views"].has(hit[3]);
         if (!ok) {
-          console.error(`✗ ${file}: ${x.iri} (${x.name}) is not in the mounted dpi-h-ra ArchiMate model`);
+          console.error(`✗ ${file}: ${x.iri} (${x.name}) is not in the mounted dpi-h-ra model or the dth-sc overlay`);
+          bad++;
+        } else if (models === own && hit && raElements.has(hit[3])) {
+          console.error(`✗ ${file}: ${x.iri} (${x.name}) is a smart-ra element: link it by its smart-ra IRI`);
           bad++;
         }
       }
       for (const fm of a.figures ?? []) {
         figMappings++;
-        const ok = ids.get(String(fm.model))?.views.has(String(fm.view));
+        const ok = (ids.get(String(fm.model)) ?? own.get(String(fm.model)))?.views.has(String(fm.view));
         if (!ok) {
-          console.error(`✗ ${file}: figure ${fm.figure} view ${fm.view} is not in dpi-h-ra ArchiMate model ${fm.model}`);
+          console.error(`✗ ${file}: figure ${fm.figure} view ${fm.view} is not in ArchiMate model ${fm.model} (dpi-h-ra or the dth-sc overlay)`);
           bad++;
         }
       }
@@ -193,7 +208,7 @@ if (ra) {
   }
   console.log(`✓ Glossary links: ${glosLinks} link(s) from ${glosBlocks} block(s) to dth-sc / dpi-h-ra checked`);
   console.log(
-    `✓ ArchiMate: ${archLinks} link(s) and ${figMappings} figure-view mapping(s) from ${archBlocks} block(s) to dpi-h-ra checked`,
+    `✓ ArchiMate: ${archLinks} link(s) and ${figMappings} figure-view mapping(s) from ${archBlocks} block(s) to dpi-h-ra and the dth-sc overlay checked`,
   );
 } else {
   console.log("· dpi-h-ra is not mounted: ArchiMate and cross-instance glossary links not checked");

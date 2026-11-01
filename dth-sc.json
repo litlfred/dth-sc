@@ -33,6 +33,15 @@
       "description": "The handbook's supply chain terms as a folio-glossary/v1 SKOS scheme. Each term quotes the handbook's definition with its L1 page, and links to the smart-ra concept it narrows or matches. General digital terms are held in smart-ra, not here."
     },
     {
+      "id": "archimate",
+      "path": "archimate/",
+      "graphTypologies": [
+        "archimate"
+      ],
+      "served": true,
+      "description": "The dth-sc ArchiMate overlay on the smart-ra (DPI-H RA) model, one folder per SemVer version, named by archimate/cat-archimate.config.json. A DTH builds an overlay and does not add to smart-ra (owner, 2026-11-01, Q-RA1 A): elements tagged overlay:base copy a smart-ra element, elements tagged overlay:owner=dth-sc are this DTH's own. scripts/archimate/build_variant_views.py builds 0.1.0-draft.1: the five architecture variants of Figs 15-19 (dth-sc#2 SC3)."
+    },
+    {
       "id": "uploads",
       "path": "uploads/",
       "graphTypologies": [

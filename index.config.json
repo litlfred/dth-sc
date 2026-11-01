@@ -120,7 +120,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "d95399b3940d71bc09e396b62878d25d0e2de265",
+          "ref": "0a39c5ea5bcf338800f49c6eb91c1e463b7b5ed2",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -136,8 +136,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-01",
-              "ref": "d95399b3940d71bc09e396b62878d25d0e2de265",
-              "evidence": "folio-assistant-core moved to main d95399b = #462 (shared DTH checks: folio-l1-coverage.ts and glossary-validate.ts, bean cysv). litlfred, 2026-11-01 09:26Z, thread 'Share DTH scripts and add dth init': chose 'A. Merge it now' (then repin core in the 5 DTH pull requests). Window: litlfred, 2026-11-01 07:27Z, '+3hrs merge + repin'."
+              "ref": "0a39c5ea5bcf338800f49c6eb91c1e463b7b5ed2",
+              "evidence": "folio-assistant-core moved to main 0a39c5e = #506 (evidence retrieval: a change with no recommendation skips the search, issue #505), so dth-sc#10 can run the editing process for its redrawn figures. litlfred, 2026-11-01 18:45Z, thread 'Finish the dth-sc workplan': card Q-DTH1-7 chose 'A. Ready, merge if green' (merges #506 if green, then repins dth-sc and finishes #10)."
             }
           }
         }

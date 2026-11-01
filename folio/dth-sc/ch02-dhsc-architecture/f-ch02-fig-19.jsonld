@@ -20,7 +20,16 @@
       "library": "9789240101197-eng",
       "file": "who-iris/library/9789240101197-eng/figures/vfig-p040.png",
       "page": 40,
-      "method": "l1-vector-figure"
+      "method": "generated",
+      "generated": {
+        "tool": "render-view (cat-harness-tools/archimate/scripts/render-view.ts)",
+        "script": "scripts/archimate/render_figures.ts",
+        "model": "archimate/0.1.0-draft.1/dth-sc-overlay.archimate",
+        "view": "id-2ddd2da649fce7285cf1b7f4dfe0f954",
+        "viewName": "Supply Chain Design: Decentralized Management, Option B (DTH SC Fig. 19)",
+        "output": "archimate-fig-19.svg",
+        "evidence": "media/vfig-p040.png"
+      }
     },
     "glossary": [
       {
@@ -37,58 +46,194 @@
       }
     ],
     "archimate": {
-      "model": "smart-ra 0.3.0-draft.1",
-      "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC4, smart-ra#147)",
+      "model": "dth-sc overlay 0.1.0-draft.1 on smart-ra 0.3.0-draft.1",
+      "basis": "drawn from the figure as a dth-sc overlay view (dth-sc#2 SC3); smart-ra elements are linked by their smart-ra IRIs, elements this handbook adds by dth-sc IRIs",
       "elements": [
         {
           "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f507cb05d32a54028579c6437517150f.jsonld",
           "name": "Digital Health Supply Chain Enterprise"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3398a2d96e915055bf5e7aef22f9fbf8.jsonld",
-          "name": "Interoperability Layer"
-        },
-        {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ef2ed03c5fd958cbae67247b253bcba0.jsonld",
-          "name": "Health Supply Chain Information Systems"
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-43460361d71e57d2b0bb644b1ac6904d.jsonld",
+          "name": "Shared Services"
         },
         {
           "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-dada45a5bc1c59a186fc4acd813ab7b8.jsonld",
           "name": "Foundational Components"
         },
         {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-5f6d9b9678824b37b95952735420ae8d.jsonld",
+          "name": "Facility registry"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-59c26d672a4248e0bb83cf4d26cba10c.jsonld",
+          "name": "Product Registry"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-199c0717881f4992970d6ba85780b74e.jsonld",
+          "name": "Supplier registry"
+        },
+        {
           "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-a461611e13595520aa843143ef10622b.jsonld",
           "name": "Data Services"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-5973db45fb985f0abd6ba840fa5855e3.jsonld",
-          "name": "District Warehouse"
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-65a47d9097875c88997d5f5544b388b1.jsonld",
+          "name": "Analytics"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-d5c5639801335abeb3485ebd944f378b.jsonld",
-          "name": "Regional Warehouse"
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-65750fe0d1c65c5a846bf1de3e29f61f.jsonld",
+          "name": "Supply Chain Reports"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-9cecae7a982548e1960a36ed41713a7c.jsonld",
-          "name": "Health Facility"
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-2158ff0de2f95b2cbe005c3bf6fc9c01.jsonld",
+          "name": "Data Warehouse"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-67637a829ea744cb930ac67459bc9894.jsonld",
-          "name": "Health Facility Logistics Management System"
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-65d5884fa08c526e91d56c6f8a2f6391.jsonld",
+          "name": "Traceability"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-bc68171ed2615dad80e6f7d8199f4057.jsonld",
+          "name": "Track and Trace"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-975c5567001151299672c0341a733111.jsonld",
+          "name": "Product Verification"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3398a2d96e915055bf5e7aef22f9fbf8.jsonld",
+          "name": "Interoperability Layer"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-80856538cbd44167a37b276e38c994c3.jsonld",
+          "name": "Interoperability Component"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-24cc4577372e56b3a55aae9c79d58440.jsonld",
+          "name": "Authentication"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-a1c1c1cc41405322a68640c7d3759633.jsonld",
+          "name": "Orchestration"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-a75cdd32596c5e908d01fe0cc070f8fe.jsonld",
+          "name": "Encryption"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-c3d4a36bdc8c538d8be328a3adaaccb4.jsonld",
+          "name": "Validation"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-4d159fa30f2d55b7b754941e86eaf183.jsonld",
+          "name": "Transformation"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-323e551234ce5a61a0b9c141dd314258.jsonld",
+          "name": "Translation"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ef2ed03c5fd958cbae67247b253bcba0.jsonld",
+          "name": "Health Supply Chain Information Systems"
+        },
+        {
+          "iri": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/elements/id-ce9398453f40b3d49ea2b6ede3ac24cf.jsonld",
+          "name": "National Level"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-4f7d1037d878435aa3a0fbdcee0c685b.jsonld",
+          "name": "Forecasting & Supply Planning System"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-58832f74225140c38ddc4ebaa5fef90c.jsonld",
+          "name": "Procurement Management System"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-566242a824b24ede92c7b6593b827b94.jsonld",
+          "name": "Supplier & Contract Management System"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ba1ec21bae4641378c56f714f72042d7.jsonld",
+          "name": "Transportation Management System"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-35d0806bcb5c46fab5102d75de09558f.jsonld",
+          "name": "Warehouse Management System"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-57be342b728e5ac08fa2143faba83984.jsonld",
+          "name": "Cold Chain Management System"
+        },
+        {
+          "iri": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/elements/id-92084f8a38ea5db0f4f2bb90664eb27a.jsonld",
+          "name": "District Level"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f6022dce920d4f828581dd2f7e15280f.jsonld",
+          "name": "Order Management System"
+        },
+        {
+          "iri": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/elements/id-e7af3fb7d601d3758195e19bfa9474cf.jsonld",
+          "name": "Inventory Management System"
+        },
+        {
+          "iri": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/elements/id-7d5e19176af61d61219aeb1f5bef1fce.jsonld",
+          "name": "Facility Level"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-370b6bdcb29449c9be74644ffacc94aa.jsonld",
+          "name": "Dispensing System"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-aabf37ef1f7d546d8e801ff38cf4b6a8.jsonld",
+          "name": "Digital Ecosystems"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-1555c26cfbcd57f49b6e63fed8491d80.jsonld",
+          "name": "Quality Systems"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-d626508a7dc55b1fb11bf34f57f8ddd9.jsonld",
+          "name": "Health Management Information System"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-22eff58eae365a4f8d0e0368d8c3497e.jsonld",
+          "name": "Regulatory Systems"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-38e8733e58775142ab2abec1b563131d.jsonld",
+          "name": "Finance and Insurance Systems"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-89a2f91e8b135574b8b9802bed0ad722.jsonld",
+          "name": "External Systems"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-e3c4f0ec36f35eccb0d4c50f887316e5.jsonld",
+          "name": "Global Platforms"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f8c43d85b20e5671b613d723483217a8.jsonld",
+          "name": "Manufacturer Systems"
+        },
+        {
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-a5808a3c23e755509c26c634b21cda83.jsonld",
+          "name": "Data Repositories"
         }
       ],
       "views": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld",
-          "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
+          "iri": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/views/id-2ddd2da649fce7285cf1b7f4dfe0f954.jsonld",
+          "name": "Supply Chain Design: Decentralized Management, Option B (DTH SC Fig. 19)"
         }
       ],
       "figures": [
         {
           "figure": "Figure 19",
-          "model": "0.3.0-draft.1",
-          "view": "id-92267636cc42566ca5d2cff0e81be8c9",
-          "basis": "variant of DHSC Architecture Framework (Fig. 14): decentralized management option B"
+          "model": "0.1.0-draft.1",
+          "view": "id-2ddd2da649fce7285cf1b7f4dfe0f954",
+          "basis": "drawn from the figure"
         }
       ]
     }
