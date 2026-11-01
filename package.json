@@ -16,7 +16,8 @@
     "check:l1-coverage": "bun run folio-assistant-core/scripts/folio-l1-coverage.ts --document dth-sc --l1 who-iris/library/9789240101197-eng --check",
     "review:anchors": "bun run folio-assistant-core/scripts/review-anchors-from-folio.ts --document dth-sc --library 9789240101197-eng --source who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf --source-label \"the WHO handbook (2024, ISBN 9789240101197) it was seeded from\"",
     "check:review-anchors": "bun run folio-assistant-core/scripts/review-anchors-from-folio.ts --document dth-sc --library 9789240101197-eng --source who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf --source-label \"the WHO handbook (2024, ISBN 9789240101197) it was seeded from\" --check",
-    "l1:coverage:write": "bun run folio-assistant-core/scripts/folio-l1-coverage.ts --document dth-sc --l1 who-iris/library/9789240101197-eng"
+    "l1:coverage:write": "bun run folio-assistant-core/scripts/folio-l1-coverage.ts --document dth-sc --l1 who-iris/library/9789240101197-eng",
+    "check:page-furniture": "bun run scripts/folio/check_page_furniture.ts"
   },
   "_workspaces_comment": "The mounted code layers, as workspaces, as smart-ra and folio-assistant list them: they import each other by package name (@litlfred/cat-harness-tools, ...), and nothing publishes those packages, so a mount resolves them only through the ONE root node_modules that bunfig.toml's hoisted linker lays out. Without this, fhir-harness's scripts could not find @litlfred/cat-harness-tools and check:review-anchors, site:document and the CI publish failed (dth-hrh#41).",
   "workspaces": [
