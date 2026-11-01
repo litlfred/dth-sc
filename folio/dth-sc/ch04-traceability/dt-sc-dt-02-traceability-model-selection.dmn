@@ -33,12 +33,12 @@
       </input>
       <output id="Output_DT02_Model" label="Selected traceability model (Ch 4)" name="traceabilityModel" typeRef="string">
         <outputValues>
-          <text>&quot;centralized-traceability-model&quot;, &quot;semi-centralized-traceability-model&quot;, &quot;distributed-traceability-model&quot;</text>
+          <text>&quot;centralized-traceability-model&quot;, &quot;semi-centralized-traceability-model&quot;, &quot;distributed-traceability-model&quot;, &quot;unknown&quot;</text>
         </outputValues>
       </output>
       <output id="Output_DT02_Exchange" label="DHSC data exchange and query architecture" name="dataExchangeMechanism" typeRef="string">
         <outputValues>
-          <text>&quot;interoperability-layer-to-central-data-warehouse&quot;, &quot;selective-event-synchronization-and-federated-query&quot;, &quot;peer-to-peer-standardized-network-exchange&quot;</text>
+          <text>&quot;interoperability-layer-to-central-data-warehouse&quot;, &quot;selective-event-synchronization-and-federated-query&quot;, &quot;peer-to-peer-standardized-network-exchange&quot;, &quot;unknown&quot;</text>
         </outputValues>
       </output>
       <rule id="Rule_DT02_01">
@@ -111,6 +111,24 @@
         </outputEntry>
         <outputEntry id="Rule_DT02_04_out_2">
           <text>&quot;selective-event-synchronization-and-federated-query&quot;</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_DT02_Unknown">
+        <description>The facts do not settle the case: an input is not known, or the combination is one the handbook does not describe. Returns &quot;unknown&quot; rather than guessing (dmn-authoring, &quot;Three states belong in the table&quot;).</description>
+        <inputEntry id="Rule_DT02_Unknown_in_1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT02_Unknown_in_2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT02_Unknown_in_3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="Rule_DT02_Unknown_out_1">
+          <text>&quot;unknown&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT02_Unknown_out_2">
+          <text>&quot;unknown&quot;</text>
         </outputEntry>
       </rule>
     </decisionTable>
