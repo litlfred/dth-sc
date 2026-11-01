@@ -5,10 +5,10 @@
   "totals": {
     "normative": 47,
     "captured": 42,
-    "excluded": 5,
-    "unaccounted": 0,
+    "excluded": 0,
+    "unaccounted": 5,
     "capturedPct": 89.36,
-    "accountedForPct": 100
+    "accountedForPct": 89.36
   },
   "pages": [
     {
@@ -46,10 +46,10 @@
       "page": 4,
       "normative": 6,
       "captured": 1,
-      "excluded": 5,
-      "unaccounted": 0,
+      "excluded": 0,
+      "unaccounted": 5,
       "capturedPct": 16.67,
-      "accountedForPct": 100
+      "accountedForPct": 16.67
     },
     {
       "sectionId": "page-005",
@@ -801,10 +801,8 @@
       "markers": [
         "obligation"
       ],
-      "state": "excluded",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31"
+      "state": "unaccounted",
+      "proposedReason": "editorial"
     },
     {
       "sectionId": "page-004",
@@ -814,10 +812,8 @@
       "markers": [
         "obligation"
       ],
-      "state": "excluded",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31"
+      "state": "unaccounted",
+      "proposedReason": "editorial"
     },
     {
       "sectionId": "page-004",
@@ -838,10 +834,8 @@
       "markers": [
         "obligation"
       ],
-      "state": "excluded",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31"
+      "state": "unaccounted",
+      "proposedReason": "editorial"
     },
     {
       "sectionId": "page-004",
@@ -851,10 +845,8 @@
       "markers": [
         "recommendation"
       ],
-      "state": "excluded",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31"
+      "state": "unaccounted",
+      "proposedReason": "editorial"
     },
     {
       "sectionId": "page-004",
@@ -864,10 +856,8 @@
       "markers": [
         "obligation"
       ],
-      "state": "excluded",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31"
+      "state": "unaccounted",
+      "proposedReason": "editorial"
     },
     {
       "sectionId": "page-008",
