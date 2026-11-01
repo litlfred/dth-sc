@@ -2,14 +2,14 @@
 # dth-sc-0klh
 $schema: bean/1.0.0
 title: Figs 15-19 as computable ArchiMate graphics (dth-sc#10)
-status: in-progress
+status: completed
 type: task
 priority: normal
 tags:
     - dth-sc
     - sc3
 created_at: 2026-11-01T20:46:22Z
-updated_at: 2026-11-01T20:58:44Z
+updated_at: 2026-11-01T23:01:40Z
 ---
 
 Replace the printed PNGs of Figs 15-19 with SVGs drawn from the dth-sc overlay views (archimate/0.1.0-draft.1). Meaning unchanged. PR litlfred/dth-sc#10, issue #9. One editing--fig:N instance per block. Owner: this session (thread 'Finish the dth-sc workplan').
@@ -30,3 +30,7 @@ No recommendation, statistic or claim was added or changed.
 
 
 Revision (1e6b167, editor card Q-DTH1-8 B): Fig. 15's data-service groups now read 'Foundational components' as printed. Finding (2) resolved; checks rerun and pass.
+
+
+
+Merged in dth-sc#10 as 2dac8b8 (2026-11-01 23:01Z).
