@@ -90,15 +90,21 @@ NATIONAL = ("National Level", 2, ["Forecasting & Supply Planning System", "Procu
             "Warehouse Management System", "Cold Chain Management System"])
 
 
+# Fig. 15 labels both data-service groups "Foundational components", as printed
+# (owner, card Q-DTH1-8 B, 2026-11-01); Figs 14 and 16-19 name them Analytics and Traceability.
+DATA15 = ("Data Services", 2, [("Foundational Components", 1, ["Supply Chain Reports", "Data Warehouse"]),
+                               ("Foundational Components", 1, ["Track and Trace", "Product Verification"])])
+
+
 def ent(*rows):
     return ("Digital Health Supply Chain Enterprise", 1, [(None, len(r), list(r)) for r in rows])
 
 
 VIEWS = [
     ("15", "Maturity-based Architecture: SCISMM Level 3 to Level 4 (DTH SC Fig. 15)",
-     "Fig. 15 (PDF 36): the framework without external systems and digital ecosystems. The figure labels both "
-     "data-service groups \"Foundational components\"; the view uses Analytics and Traceability, as in Fig. 14.",
-     [ent([SHARED, DATA], [INTEROP], [HSCIS])]),
+     "Fig. 15 (PDF 36): the framework without external systems and digital ecosystems. As printed, both "
+     "data-service groups are labelled \"Foundational components\" (Figs 14 and 16-19 name them Analytics and Traceability).",
+     [ent([SHARED, DATA15], [INTEROP], [HSCIS])]),
     ("16", "Maturity-based Architecture: SCISMM Level 4 to Level 5 (DTH SC Fig. 16)",
      "Fig. 16 (PDF 37): the full framework, interoperating with digital ecosystems and external systems.",
      [ent([SHARED, DATA], [INTEROP], [HSCIS]), (None, 1, [ECO, EXT])]),
