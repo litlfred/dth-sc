@@ -3,7 +3,7 @@
     "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
-      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns/"
     }
   ],
   "@id": "papers/dth-sc/blocks/fig-13",
@@ -24,15 +24,15 @@
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/enterprise-architecture",
         "prefLabel": "Enterprise Architecture"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/interoperability",
         "prefLabel": "Interoperability"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-information-exchange",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/health-information-exchange",
         "prefLabel": "Health Information Exchange"
       }
     ],
