@@ -43,6 +43,10 @@
   ],
   "text": "p-references-page-065.md",
   "meta": {
+    "referenceList": {
+      "style": "who",
+      "list": "numbered"
+    },
     "title": "References",
     "source": {
       "library": "9789240101197-eng",

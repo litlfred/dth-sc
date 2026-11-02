@@ -4,6 +4,7 @@ export default prose({
   label: "prose:references-page-065",
   uses: [],
   // The References chapter's entries, in chapter order, as KG reference nodes (references/<key>.json).
+  // The chapter's .md is generated from them: `bun run cat references:render --instance .` (meta.referenceList).
   cites: [
     "9789240010567-eng",
     "digital-square-2024-digital-health-interoperability-working-group",
@@ -32,5 +33,5 @@ export default prose({
     "gs1-healthcare-traceability",
     "icmra-2021-traceability-technical-denominators",
   ],
-  meta: {"title": "References", "source": {"library": "9789240101197-eng", "section": "page-065", "file": "who-iris/library/9789240101197-eng/sections/page-065.md", "pdfPage": 65, "method": "l1-outline-seed"}},
+  meta: {"referenceList": {"style": "who", "list": "numbered"}, "title": "References", "source": {"library": "9789240101197-eng", "section": "page-065", "file": "who-iris/library/9789240101197-eng/sections/page-065.md", "pdfPage": 65, "method": "l1-outline-seed"}},
 });
