@@ -148,7 +148,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "520a3124b9e820af767e13a1655f3867066e4227",
+          "ref": "d9223fb780333c7dd179e0ad50734a0b144c3955",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -163,9 +163,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "520a3124b9e820af767e13a1655f3867066e4227",
-              "evidence": "cat-harness moved to main 520a312 alongside cat-harness-tools 7baa295 (#1336 handbook look; the processes viewer covers business-process blocks), so the two layers stay in step. litlfred, 2026-11-01 21:27Z, thread 'Finish the dth-sc workplan': card Q-DTH1-10 A (repin dth-sc and redraw Figs 15-19)."
+              "on": "2026-11-01",
+              "ref": "d9223fb780333c7dd179e0ad50734a0b144c3955",
+              "evidence": "cat-harness moved from 6aa373c to dth-hrh's pin d9223fb so it runs with folio-assistant-core d95399b (core#462); the older layer refused core's validators (family not listed). litlfred, 2026-11-01 10:09Z, thread 'Share DTH scripts and add dth init': chose 'A. Yes, match dth-hrh' on Q-CYSV4 (repin cat-harness and cat-harness-tools in dth-sc and dth-sfp to dth-hrh's commits)."
             }
           }
         }
@@ -176,7 +176,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "7baa2954024fde2b0b79e25491d7c1a4f28e10c9",
+          "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -188,9 +188,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "7baa2954024fde2b0b79e25491d7c1a4f28e10c9",
-              "evidence": "cat-harness-tools moved to main 7baa295, which holds #1336 (the handbook figure look, so Figs 15-19 can be drawn close to the print) and #1312/#1313/#1316 (the business-processes kind). litlfred, 2026-11-01 21:27Z, thread 'Finish the dth-sc workplan': card Q-DTH1-10 chose 'A. Yes, merge when green' (merges #1336, then repins dth-sc and redraws Figs 15-19)."
+              "on": "2026-11-01",
+              "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
+              "evidence": "cat-harness-tools moved from f62a1d9 to dth-hrh's pin 6417b9d so it runs with folio-assistant-core d95399b (core#462); the older layer refused core's validators (family not listed). litlfred, 2026-11-01 10:09Z, thread 'Share DTH scripts and add dth init': chose 'A. Yes, match dth-hrh' on Q-CYSV4 (repin cat-harness and cat-harness-tools in dth-sc and dth-sfp to dth-hrh's commits)."
             }
           }
         }

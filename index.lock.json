@@ -24,12 +24,12 @@
     {
       "harness": "cat-harness",
       "repository": "litlfred/cat-harness",
-      "ref": "520a3124b9e820af767e13a1655f3867066e4227"
+      "ref": "d9223fb780333c7dd179e0ad50734a0b144c3955"
     },
     {
       "harness": "cat-harness-tools",
       "repository": "litlfred/cat-harness-tools",
-      "ref": "7baa2954024fde2b0b79e25491d7c1a4f28e10c9"
+      "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8"
     },
     {
       "harness": "bootstrap",
@@ -109,36 +109,36 @@
     {
       "instance": "cat-harness",
       "repository": "litlfred/cat-harness",
-      "sha": "520a3124b9e820af767e13a1655f3867066e4227",
+      "sha": "d9223fb780333c7dd179e0ad50734a0b144c3955",
       "upstreamRoot": "",
       "path": "cat-harness",
       "via": "cat-harness",
       "pinnedBy": "declared",
       "declaration": {
         "file": "cat-harness.json",
-        "sha256": "ff965c9453162eb3c35504c28968fdaf9903ff64d2e77b7dfe14ebfc2947899a"
+        "sha256": "4762012741dd2f2666276ce370ef722a6f99e839dd236e5222758c3b8c7af1bc"
       },
       "directories": [
         {
           "id": "*",
           "path": "cat-harness",
           "upstreamPath": ".",
-          "treeDigest": "e30ca57db9a6245c8699a52517f2cba3b2c4600949bdccd5e18b604fbea18443",
-          "files": 11971
+          "treeDigest": "08fd235b63a4ad96af364fe6b2b7c595c1b55408904f5fd7b56df9e9c601e8be",
+          "files": 11727
         }
       ],
       "trust": {
         "basis": "consent",
         "by": "litlfred",
-        "on": "2026-11-02",
-        "ref": "520a3124b9e820af767e13a1655f3867066e4227",
+        "on": "2026-11-01",
+        "ref": "d9223fb780333c7dd179e0ad50734a0b144c3955",
         "approver": "unverified"
       }
     },
     {
       "instance": "cat-harness-tools",
       "repository": "litlfred/cat-harness-tools",
-      "sha": "7baa2954024fde2b0b79e25491d7c1a4f28e10c9",
+      "sha": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
       "upstreamRoot": "",
       "path": "cat-harness-tools",
       "via": "cat-harness-tools",
@@ -152,15 +152,15 @@
           "id": "*",
           "path": "cat-harness-tools",
           "upstreamPath": ".",
-          "treeDigest": "786682cf87cf333770a4d22eb725b5f84980462c6dce8a710810b69ef138c8ba",
-          "files": 3146
+          "treeDigest": "bcc242cce78814d7c057cd5f90b1bdcd93a3af4c93eea07b5d623b13d92a76ba",
+          "files": 3080
         }
       ],
       "trust": {
         "basis": "consent",
         "by": "litlfred",
-        "on": "2026-11-02",
-        "ref": "7baa2954024fde2b0b79e25491d7c1a4f28e10c9",
+        "on": "2026-11-01",
+        "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
         "approver": "unverified"
       }
     },
