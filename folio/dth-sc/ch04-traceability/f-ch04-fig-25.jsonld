@@ -3,7 +3,7 @@
     "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
-      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns/"
     }
   ],
   "@id": "papers/dth-sc/blocks/fig-25",
@@ -24,11 +24,11 @@
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-object",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/data-object",
         "prefLabel": "Data Object"
       }
     ],
