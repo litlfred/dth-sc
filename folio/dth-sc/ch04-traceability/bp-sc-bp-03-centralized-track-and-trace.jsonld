@@ -3,7 +3,7 @@
     "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
-      "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
+      "smart-base": "https://litlfred.github.io/smart-base/v0/ns#"
     }
   ],
   "@id": "papers/dth-sc/blocks/bp-sc-bp-03-centralized-track-and-trace",
@@ -126,27 +126,27 @@
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability-model",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability-model",
         "prefLabel": "Traceability Model"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/centralized-traceability-model",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/centralized-traceability-model",
         "prefLabel": "Centralized Traceability Model"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/interoperability",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability",
         "prefLabel": "Interoperability"
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability-model",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/centralized-traceability-model",
-      "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/interoperability"
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability-model",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/centralized-traceability-model",
+      "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
     ],
     "relatedBlocks": [
       "pers:manufacturer-distributor",

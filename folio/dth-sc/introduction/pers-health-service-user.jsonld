@@ -3,7 +3,7 @@
     "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
-      "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
+      "smart-base": "https://litlfred.github.io/smart-base/v0/ns#"
     }
   ],
   "@id": "papers/dth-sc/blocks/pers-health-service-user",
@@ -79,22 +79,22 @@
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/client",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/client",
         "prefLabel": "Client"
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
-      "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/client"
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
+      "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/client"
     ],
     "relatedBlocks": [
       "bp:sc-bp-02-end-to-end-supply-chain-processes",

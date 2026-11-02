@@ -3,7 +3,7 @@
     "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
-      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns/"
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
     }
   ],
   "@id": "papers/dth-sc/blocks/prose-annexes-page-076",
@@ -30,7 +30,7 @@
     "sourceOnly": "bibliographic references for Annex 7 (People that Deliver resources)",
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       }
     ]

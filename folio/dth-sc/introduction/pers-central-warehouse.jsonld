@@ -3,7 +3,7 @@
     "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
-      "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
+      "smart-base": "https://litlfred.github.io/smart-base/v0/ns#"
     }
   ],
   "@id": "papers/dth-sc/blocks/pers-central-warehouse",
@@ -88,27 +88,27 @@
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/warehouse-management-system",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/warehouse-management-system",
         "prefLabel": "Warehouse Management System"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management-system",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management-system",
         "prefLabel": "Order Management System"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management",
         "prefLabel": "Order Management"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/warehouse-management-system",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management-system",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/warehouse-management-system",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management-system",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management",
+      "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability"
     ],
     "relatedBlocks": [
       "bp:sc-bp-02-end-to-end-supply-chain-processes",

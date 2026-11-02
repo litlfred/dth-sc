@@ -3,7 +3,7 @@
     "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
-      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns/"
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns#"
     }
   ],
   "@id": "papers/dth-sc/blocks/prose-front-page-009",
@@ -25,35 +25,35 @@
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management",
         "prefLabel": "Order Management"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management-system",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/order-management-system",
         "prefLabel": "Order Management System"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/warehouse-management-system",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/warehouse-management-system",
         "prefLabel": "Warehouse Management System"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/registry",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/registry",
         "prefLabel": "Registry"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/smart-guidelines",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/smart-guidelines",
         "prefLabel": "SMART Guidelines"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/stakeholder",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/stakeholder",
         "prefLabel": "Stakeholder"
       },
       {
-        "iri": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/solution-architecture",
+        "iri": "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/solution-architecture",
         "prefLabel": "Solution Architecture"
       }
     ]
