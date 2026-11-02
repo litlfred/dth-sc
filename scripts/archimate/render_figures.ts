@@ -19,7 +19,7 @@ for (const view of model.views) {
   const fig = view.name.match(/\(DTH SC Fig\. (\d+)\)$/)?.[1];
   if (!fig) continue;
   const out = `folio/dth-sc/media/archimate-fig-${fig}.svg`;
-  const svg = renderViewSvg(model, view) + "\n";
+  const svg = renderViewSvg(model, view, { theme: "handbook" }) + "\n";
   if (check) {
     if (!existsSync(out) || readFileSync(out, "utf-8") !== svg) {
       console.error(`✗ ${out} is out of date: run scripts/archimate/render_figures.ts`);
