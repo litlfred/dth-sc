@@ -1,0 +1,27 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "openhie-framework",
+  "type": "webpage",
+  "title": "OpenHIE: a framework based on real-world application [website]",
+  "publisher": "OpenHIE",
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "URL": "https://ohie.org/framework/",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "authored",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 17 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: OpenHIE: a framework based on real-world application [website]. OpenHIE, 2024 (https://ohie.org/framework/). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "digital-square-2024-digital-health-interoperability-working-group",
+  "type": "webpage",
+  "title": "Digital Health & Interoperability Working Group [website]",
+  "publisher": "Digital Square",
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "URL": "https://wiki.digitalsquare.io/index.php/Digital_Health_%26_Interoperability_Working_Group",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "authored",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 2 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: Digital Health & Interoperability Working Group [website]. Digital Square; 2024 (https://wiki.digitalsquare.io/index.php/Digital_ Health_%26_Interoperability_Working_Group). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}

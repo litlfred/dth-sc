@@ -1,0 +1,41 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "reynolds-2011-open-source-open-standards",
+  "type": "article-journal",
+  "title": "Open source, open standards, and health care information systems",
+  "author": [
+    {
+      "family": "Reynolds",
+      "given": "CJ"
+    },
+    {
+      "family": "Wyatt",
+      "given": "JC"
+    }
+  ],
+  "container-title": "J Med Internet Res",
+  "volume": "13",
+  "issue": "1",
+  "page": "e24",
+  "issued": {
+    "date-parts": [
+      [
+        2011
+      ]
+    ]
+  },
+  "DOI": "10.2196/jmir.1521",
+  "URL": "https://doi.org/10.2196/jmir.1521",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "authored",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 8 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: Reynolds CJ, Wyatt JC. Open source, open standards, and health care information systems. J Med Internet Res. 2011;13(1):e24. (https://doi.org/10.2196/jmir.1521). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}

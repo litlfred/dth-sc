@@ -1,0 +1,28 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "opengroup-2022-togaf-standard-tenth-edition",
+  "type": "document",
+  "title": "The TOGAF® standard, tenth edition",
+  "publisher-place": "San Francisco",
+  "publisher": "The Open Group",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "URL": "https://www.opengroup.org/togaf/10thedition",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "authored",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 18 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: The TOGAF® standard, tenth edition. San Francisco: The Open Group; 2022 (https://www.opengroup.org/togaf/10thedition). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}
