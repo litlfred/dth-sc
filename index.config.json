@@ -14,7 +14,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "d755e9c3062e61f1d54c0ee439e38834310697ce",
+          "ref": "90bb3f558f1f23a4d4b58c8e070e5bbc86e72695",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -38,9 +38,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "d755e9c3062e61f1d54c0ee439e38834310697ce",
-              "evidence": "who-iris moved to main d755e9c, past who-iris#147 (the dth-sc figure renders the Figs 1-4 and 6-9 blocks of c92a29c place). Asked by the figure thread, merge-and-repin window (coordinator, 2026-10-31 10:45Z, to ~19:00Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-05",
+              "ref": "90bb3f558f1f23a4d4b58c8e070e5bbc86e72695",
+              "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
         }
@@ -51,7 +51,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-base",
-          "ref": "49178a48d460bb53acf6e90d8c0aee3f0146d8f7",
+          "ref": "1e111a661b6fe2ada620b4e7480f085cedde36a0",
           "overrides": {
             "smart-base": {
               "path": "smart-base",
@@ -78,16 +78,17 @@
                 "smart-base-scenarios",
                 "smart-base-code-lists",
                 "smart-base-typologies",
-                "smart-base-validators"
+                "smart-base-validators",
+                "smart-base-templates"
               ]
             }
           },
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "49178a48d460bb53acf6e90d8c0aee3f0146d8f7",
-              "evidence": "smart-base moved to main 49178a4, past smart-base#233 (L1 extraction out of library/, who-iris#107), whose stale library copies fail check:l1-complete beside who-iris (same repin as dth-pc, 2026-10-31). Merge-and-repin window (coordinator relay, 11:07Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-05",
+              "ref": "1e111a661b6fe2ada620b4e7480f085cedde36a0",
+              "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
         }
@@ -98,7 +99,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93",
+          "ref": "299de78ec2aa5ede11acb7db6327a83301ae49ed",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -107,9 +108,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-05",
+              "ref": "299de78ec2aa5ede11acb7db6327a83301ae49ed",
+              "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
         }
@@ -120,7 +121,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "0a39c5ea5bcf338800f49c6eb91c1e463b7b5ed2",
+          "ref": "705a2b8a75be2d20877df25b14b8c34003f02c7a",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -135,9 +136,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-01",
-              "ref": "0a39c5ea5bcf338800f49c6eb91c1e463b7b5ed2",
-              "evidence": "folio-assistant-core moved to main 0a39c5e = #506 (evidence retrieval: a change with no recommendation skips the search, issue #505), so dth-sc#10 can run the editing process for its redrawn figures. litlfred, 2026-11-01 18:45Z, thread 'Finish the dth-sc workplan': card Q-DTH1-7 chose 'A. Ready, merge if green' (merges #506 if green, then repins dth-sc and finishes #10)."
+              "on": "2026-11-05",
+              "ref": "705a2b8a75be2d20877df25b14b8c34003f02c7a",
+              "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
         }
@@ -148,7 +149,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "d9223fb780333c7dd179e0ad50734a0b144c3955",
+          "ref": "f5c9140b1b5391f48b3d4903c4cd40eb8473e37f",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -163,9 +164,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-01",
-              "ref": "d9223fb780333c7dd179e0ad50734a0b144c3955",
-              "evidence": "cat-harness moved from 6aa373c to dth-hrh's pin d9223fb so it runs with folio-assistant-core d95399b (core#462); the older layer refused core's validators (family not listed). litlfred, 2026-11-01 10:09Z, thread 'Share DTH scripts and add dth init': chose 'A. Yes, match dth-hrh' on Q-CYSV4 (repin cat-harness and cat-harness-tools in dth-sc and dth-sfp to dth-hrh's commits)."
+              "on": "2026-11-05",
+              "ref": "f5c9140b1b5391f48b3d4903c4cd40eb8473e37f",
+              "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
         }
@@ -176,7 +177,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
+          "ref": "42cc850e43e4d798126ee8fe456b72118e128112",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -188,9 +189,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-01",
-              "ref": "6417b9dab87fdebf27775f79f31a59e1c79e43b8",
-              "evidence": "cat-harness-tools moved from f62a1d9 to dth-hrh's pin 6417b9d so it runs with folio-assistant-core d95399b (core#462); the older layer refused core's validators (family not listed). litlfred, 2026-11-01 10:09Z, thread 'Share DTH scripts and add dth init': chose 'A. Yes, match dth-hrh' on Q-CYSV4 (repin cat-harness and cat-harness-tools in dth-sc and dth-sfp to dth-hrh's commits)."
+              "on": "2026-11-05",
+              "ref": "42cc850e43e4d798126ee8fe456b72118e128112",
+              "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
         }
@@ -201,7 +202,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "3ce2b5d641779ca78432971abb919e6e3afdc60a",
+          "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -210,9 +211,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "3ce2b5d641779ca78432971abb919e6e3afdc60a",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-05",
+              "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
+              "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
         }
@@ -223,7 +224,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "b7fb762ba968a6868bbe5004144ddf78023eb9c7",
+          "ref": "9f478d4d9fcd87842e9a4f5b886232ec806e657e",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -235,9 +236,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "b7fb762ba968a6868bbe5004144ddf78023eb9c7",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-05",
+              "ref": "9f478d4d9fcd87842e9a4f5b886232ec806e657e",
+              "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
         }
@@ -248,12 +249,13 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-ra",
-          "ref": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28",
+          "ref": "eac7354a275fc12b9424b13cb54476233bf5f73d",
           "overrides": {
             "dpi-h-ra": {
               "directories": [
                 "glossary",
-                "archimate"
+                "archimate",
+                "references"
               ]
             },
             "who-iris": {
@@ -284,9 +286,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'; plan option A for L2 DTHs on smart-ra, 2026-10-31 00:26Z, thread 'Prepare DTH ingests as L2 on smart-ra' (dth-hrh#47, dth-sc#2). main tip 2c01ca033 = #147 (supply chain ArchiMate views 0.3.0-draft.1) on #148 (RA glossary as SKOS)."
+              "on": "2026-11-05",
+              "ref": "eac7354a275fc12b9424b13cb54476233bf5f73d",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
