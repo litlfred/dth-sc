@@ -78,7 +78,8 @@
                 "smart-base-scenarios",
                 "smart-base-code-lists",
                 "smart-base-typologies",
-                "smart-base-validators"
+                "smart-base-validators",
+                "smart-base-templates"
               ]
             }
           },
@@ -120,7 +121,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "4f18e66ede3404816a99c63c2a6865a2f32541a5",
+          "ref": "705a2b8a75be2d20877df25b14b8c34003f02c7a",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -136,7 +137,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-05",
-              "ref": "4f18e66ede3404816a99c63c2a6865a2f32541a5",
+              "ref": "705a2b8a75be2d20877df25b14b8c34003f02c7a",
               "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
@@ -148,7 +149,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "a2da2ed27956d5b2bba1f9f648279cf05bd86c03",
+          "ref": "f5c9140b1b5391f48b3d4903c4cd40eb8473e37f",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -164,7 +165,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-05",
-              "ref": "a2da2ed27956d5b2bba1f9f648279cf05bd86c03",
+              "ref": "f5c9140b1b5391f48b3d4903c4cd40eb8473e37f",
               "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
@@ -176,7 +177,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "78a982e36e10ad7f9248b4aba6725ac6cf529259",
+          "ref": "42cc850e43e4d798126ee8fe456b72118e128112",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -189,7 +190,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-05",
-              "ref": "78a982e36e10ad7f9248b4aba6725ac6cf529259",
+              "ref": "42cc850e43e4d798126ee8fe456b72118e128112",
               "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
@@ -201,7 +202,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "c90ef456067a874fd7017a370232908ba62e9fcd",
+          "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -211,7 +212,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-05",
-              "ref": "c90ef456067a874fd7017a370232908ba62e9fcd",
+              "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
               "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
@@ -253,7 +254,8 @@
             "dpi-h-ra": {
               "directories": [
                 "glossary",
-                "archimate"
+                "archimate",
+                "references"
               ]
             },
             "who-iris": {
