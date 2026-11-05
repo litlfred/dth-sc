@@ -14,7 +14,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "a378a59bec81f26a159449795d7ba823ff3a5c71",
+          "ref": "1e5c01c9737a025905ba4e82e968695cf6c2f411",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -38,9 +38,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "a378a59bec81f26a159449795d7ba823ff3a5c71",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-05",
+              "ref": "1e5c01c9737a025905ba4e82e968695cf6c2f411",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
@@ -51,7 +51,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-base",
-          "ref": "db7f311e92ef254ae665dfbbc81d0e3f0959175e",
+          "ref": "f1c6eb0c6992191c94ef5cf99b5f0cf8f4008d1a",
           "overrides": {
             "smart-base": {
               "path": "smart-base",
@@ -85,9 +85,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "db7f311e92ef254ae665dfbbc81d0e3f0959175e",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-05",
+              "ref": "f1c6eb0c6992191c94ef5cf99b5f0cf8f4008d1a",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
@@ -98,7 +98,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "c702c345824ce1e883609be8e9b9533e90b51d53",
+          "ref": "2b29c8c6dfc557d32b67e96886748df3ed2fe4be",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -107,9 +107,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "c702c345824ce1e883609be8e9b9533e90b51d53",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-05",
+              "ref": "2b29c8c6dfc557d32b67e96886748df3ed2fe4be",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
@@ -120,7 +120,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "3c13890e8ce4f5d08dcd3cb03992c3289a7b89a4",
+          "ref": "494589282eff0fc6f1e4a1ef1beec5545a8d08da",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -135,9 +135,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "3c13890e8ce4f5d08dcd3cb03992c3289a7b89a4",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-05",
+              "ref": "494589282eff0fc6f1e4a1ef1beec5545a8d08da",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
@@ -148,7 +148,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "ea6ace8071ababfefaa96efa68a0aed7172a7659",
+          "ref": "90c3bcf91b779973f26e9401e17f7ec02c7c5b70",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -163,9 +163,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "ea6ace8071ababfefaa96efa68a0aed7172a7659",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-05",
+              "ref": "90c3bcf91b779973f26e9401e17f7ec02c7c5b70",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
@@ -176,7 +176,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "109b85085488de4e167bd19737218ceb10d1e906",
+          "ref": "ca5122858c4367b1ca528520b504f7cab80e615e",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -188,9 +188,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "109b85085488de4e167bd19737218ceb10d1e906",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-05",
+              "ref": "ca5122858c4367b1ca528520b504f7cab80e615e",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
@@ -201,7 +201,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "c90ef456067a874fd7017a370232908ba62e9fcd",
+          "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -210,9 +210,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "c90ef456067a874fd7017a370232908ba62e9fcd",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-05",
+              "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
@@ -223,7 +223,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "aa25987a2e637838be02baf4ed239d58086551a3",
+          "ref": "f22b2490ff8b6930c55d1b6fe9605fc5f9f9a743",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -235,9 +235,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "aa25987a2e637838be02baf4ed239d58086551a3",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-05",
+              "ref": "f22b2490ff8b6930c55d1b6fe9605fc5f9f9a743",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
@@ -248,7 +248,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-ra",
-          "ref": "da2d90cbb578374b9d612e22c61ea848429e6a07",
+          "ref": "eac7354a275fc12b9424b13cb54476233bf5f73d",
           "overrides": {
             "dpi-h-ra": {
               "directories": [
@@ -284,9 +284,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "da2d90cbb578374b9d612e22c61ea848429e6a07",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread cmsg_017WNUkNK8kdDziPK58Pv6G991qa3xg86ZCWdyH2spZ7FS): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.'"
+              "on": "2026-11-05",
+              "ref": "eac7354a275fc12b9424b13cb54476233bf5f73d",
+              "evidence": "Owner litlfred, 2026-11-05: standing OK to merge re-pins whose only workflow edits are lock-following uses: pins; ~13:0xZ card '1. Attach repos' to re-pin the site PRs (stalled-pickup D, bean rpc6)."
             }
           }
         }
