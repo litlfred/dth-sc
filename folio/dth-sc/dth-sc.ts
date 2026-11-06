@@ -36,7 +36,8 @@ export default paper({
     chapterRef({ dir: "ch03-implementation-and-operations" }),
     chapterRef({ dir: "ch04-traceability" }),
     chapterRef({ dir: "ch05-country-examples" }),
-    chapterRef({ dir: "references" }),
     chapterRef({ dir: "annexes" }),
+    chapterRef({ dir: "glossary" }),
+    chapterRef({ dir: "references" }),
   ],
 });
