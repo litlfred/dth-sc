@@ -33,17 +33,17 @@
       </input>
       <output id="Output_DT01_TargetLevel" label="Target SCISMM maturity level" name="targetScismmLevel" typeRef="string">
         <outputValues>
-          <text>&quot;level-3-advanced-digitalization&quot;, &quot;level-4-end-to-end-visibility&quot;, &quot;level-5-digital-ecosystem&quot;</text>
+          <text>&quot;level-3-advanced-digitalization&quot;, &quot;level-4-end-to-end-visibility&quot;, &quot;level-5-digital-ecosystem&quot;, &quot;unknown&quot;</text>
         </outputValues>
       </output>
       <output id="Output_DT01_Approach" label="Target DHSC architectural approach" name="targetArchitectureApproach" typeRef="string">
         <outputValues>
-          <text>&quot;foundational-hscis-digitalization-and-registries&quot;, &quot;maturity-level-3-to-4-interoperability-layer&quot;, &quot;maturity-level-4-to-5-collaborative-ecosystem&quot;, &quot;supply-chain-design-centralized-management&quot;, &quot;supply-chain-design-decentralized-option-a&quot;, &quot;supply-chain-design-decentralized-option-b&quot;</text>
+          <text>&quot;foundational-hscis-digitalization-and-registries&quot;, &quot;maturity-level-3-to-4-interoperability-layer&quot;, &quot;maturity-level-4-to-5-collaborative-ecosystem&quot;, &quot;supply-chain-design-centralized-management&quot;, &quot;supply-chain-design-decentralized-option-a&quot;, &quot;supply-chain-design-decentralized-option-b&quot;, &quot;unknown&quot;</text>
         </outputValues>
       </output>
       <output id="Output_DT01_Figure" label="Handbook illustrative architecture figure" name="illustrativeFigure" typeRef="string">
         <outputValues>
-          <text>&quot;Fig. 12&quot;, &quot;Fig. 15&quot;, &quot;Fig. 16&quot;, &quot;Fig. 17&quot;, &quot;Fig. 18&quot;, &quot;Fig. 19&quot;</text>
+          <text>&quot;Fig. 12&quot;, &quot;Fig. 15&quot;, &quot;Fig. 16&quot;, &quot;Fig. 17&quot;, &quot;Fig. 18&quot;, &quot;Fig. 19&quot;, &quot;unknown&quot;</text>
         </outputValues>
       </output>
       <rule id="Rule_DT01_01">
@@ -170,6 +170,27 @@
         </outputEntry>
         <outputEntry id="Rule_DT01_06_out_3">
           <text>&quot;Fig. 16&quot;</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_DT01_Unknown">
+        <description>The facts do not settle the case: an input is not known, or the combination is one the handbook does not describe. Returns &quot;unknown&quot; rather than guessing (dmn-authoring, &quot;Three states belong in the table&quot;).</description>
+        <inputEntry id="Rule_DT01_Unknown_in_1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_Unknown_in_2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_DT01_Unknown_in_3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="Rule_DT01_Unknown_out_1">
+          <text>&quot;unknown&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_Unknown_out_2">
+          <text>&quot;unknown&quot;</text>
+        </outputEntry>
+        <outputEntry id="Rule_DT01_Unknown_out_3">
+          <text>&quot;unknown&quot;</text>
         </outputEntry>
       </rule>
     </decisionTable>
