@@ -1,0 +1,28 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "ihe-2020-pharmacy-white-paper-supply",
+  "type": "document",
+  "title": "IHE Pharmacy (PHARM) white paper: supply of products for healthcare, revision 1.1",
+  "publisher-place": "Oak Brook (IL)",
+  "publisher": "Integrating the Healthcare Enterprise (IHE) International",
+  "issued": {
+    "date-parts": [
+      [
+        2020
+      ]
+    ]
+  },
+  "URL": "https://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_Pharmacy_WP_Supply.pdf",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "authored",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 23 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: IHE Pharmacy (PHARM) white paper: supply of products for healthcare, revision 1.1. Oak Brook (IL): Integrating the Healthcare Enterprise (IHE) International; 2020 (https://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_Pharmacy_WP_Supply.pdf). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}
