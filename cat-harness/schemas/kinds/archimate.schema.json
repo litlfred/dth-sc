@@ -1,0 +1,533 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/archimate.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Archimate",
+  "description": "ArchiMate models an instance holds, as Archi `.archimate` files (plain XML or Archi's zipped archive), named by `cat-archimate.config.json` (cat-harness's `archimate` subgraph). Every view, element and relationship in a model is a node of its own: a page and an IRI, keyed by Archi's own id, and every view is drawn as SVG from the model's diagram.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/cat-archimate-config~1v1"
+    },
+    {
+      "$ref": "#/$defs/archimate-model~1v1"
+    }
+  ],
+  "$defs": {
+    "cat-archimate-config/v1": {
+      "title": "cat-archimate-config/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "cat-archimate-config/v1"
+        },
+        "directory": {
+          "type": "string",
+          "minLength": 1
+        },
+        "models": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._-]+$"
+              },
+              "file": {
+                "type": "string",
+                "pattern": "\\.archimate$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "file"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "figures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "block": {
+                "type": "string",
+                "pattern": "\\.md$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "model": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._-]+$"
+              },
+              "view": {
+                "type": "string",
+                "minLength": 1
+              },
+              "basis": {
+                "type": "string",
+                "enum": [
+                  "same-elements",
+                  "by-eye"
+                ]
+              },
+              "svg": {
+                "type": "string",
+                "pattern": "\\.svg$"
+              }
+            },
+            "required": [
+              "block",
+              "label",
+              "model",
+              "view",
+              "basis"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "tables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "block": {
+                "type": "string",
+                "pattern": "\\.md$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "relationship-types",
+                  "relationship-rules"
+                ]
+              },
+              "rules": {
+                "type": "string",
+                "pattern": "\\.json$"
+              },
+              "model": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._-]+$"
+              }
+            },
+            "required": [
+              "block",
+              "label",
+              "kind",
+              "rules"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "poster": {
+          "type": "object",
+          "properties": {
+            "noteProperty": {
+              "type": "string",
+              "minLength": 1
+            },
+            "starProperty": {
+              "type": "string",
+              "minLength": 1
+            },
+            "starLabel": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "$schema",
+        "directory",
+        "models"
+      ],
+      "additionalProperties": false
+    },
+    "archimate-model/v1": {
+      "title": "archimate-model/v1",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        },
+        "archiVersion": {
+          "type": "string"
+        },
+        "documentation": {
+          "type": "string"
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "key",
+              "value"
+            ],
+            "additionalProperties": false,
+            "description": "Property"
+          }
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "type": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string"
+              },
+              "layer": {
+                "type": "string",
+                "enum": [
+                  "Strategy",
+                  "Business",
+                  "Application",
+                  "Technology",
+                  "Physical",
+                  "Motivation",
+                  "Implementation & Migration",
+                  "Other"
+                ]
+              },
+              "documentation": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "value"
+                  ],
+                  "additionalProperties": false,
+                  "description": "Property"
+                }
+              },
+              "folder": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "name",
+              "layer",
+              "properties",
+              "folder"
+            ],
+            "additionalProperties": false,
+            "description": "Element"
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "type": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              },
+              "target": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string"
+              },
+              "documentation": {
+                "type": "string"
+              },
+              "accessType": {
+                "type": "string",
+                "enum": [
+                  "write",
+                  "read",
+                  "access",
+                  "readwrite"
+                ]
+              },
+              "directed": {
+                "type": "boolean"
+              },
+              "strength": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "value"
+                  ],
+                  "additionalProperties": false,
+                  "description": "Property"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "source",
+              "target",
+              "properties"
+            ],
+            "additionalProperties": false,
+            "description": "Relationship"
+          }
+        },
+        "views": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string"
+              },
+              "viewpoint": {
+                "type": "string"
+              },
+              "documentation": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "value"
+                  ],
+                  "additionalProperties": false,
+                  "description": "Property"
+                }
+              },
+              "folder": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "nodes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "element",
+                        "group",
+                        "note",
+                        "view-ref"
+                      ]
+                    },
+                    "ref": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "w": {
+                      "type": "number"
+                    },
+                    "h": {
+                      "type": "number"
+                    },
+                    "parent": {
+                      "type": "string"
+                    },
+                    "fill": {
+                      "type": "string"
+                    },
+                    "alternate": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "kind",
+                    "x",
+                    "y",
+                    "w",
+                    "h"
+                  ],
+                  "additionalProperties": false,
+                  "description": "ViewNode"
+                }
+              },
+              "connections": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "relationship": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "target": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "bendpoints": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "startX": {
+                            "type": "number"
+                          },
+                          "startY": {
+                            "type": "number"
+                          },
+                          "endX": {
+                            "type": "number"
+                          },
+                          "endY": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "startX",
+                          "startY",
+                          "endX",
+                          "endY"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "source",
+                    "target",
+                    "bendpoints"
+                  ],
+                  "additionalProperties": false,
+                  "description": "ViewConnection"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "properties",
+              "folder",
+              "nodes",
+              "connections"
+            ],
+            "additionalProperties": false,
+            "description": "View"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "properties",
+        "elements",
+        "relationships",
+        "views"
+      ],
+      "additionalProperties": false,
+      "description": "Model"
+    }
+  }
+}

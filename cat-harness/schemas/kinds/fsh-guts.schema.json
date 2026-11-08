@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/fsh-guts.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "FSH guts",
+  "description": "Deprecated and throwaway structured content — kept, addressable and exported, and deliberately absent from the rendered site. The destination for anything that would otherwise be deleted, and for SDLC churn that must not reach the folio's readers.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "folio-fsh-guts/v1"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "movedOn": {
+      "type": "string",
+      "minLength": 1
+    },
+    "movedFrom": {
+      "type": "string",
+      "minLength": 1
+    },
+    "issue": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+    "bean": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "A bean identifier, e.g. folio-assistant-1dfh"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "$schema",
+    "title",
+    "kind"
+  ],
+  "additionalProperties": {}
+}

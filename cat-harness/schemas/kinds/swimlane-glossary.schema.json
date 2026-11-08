@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/swimlane-glossary.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Swimlane glossary",
+  "description": "A Subgraph recording every term a Knowledge Graph's Processes have ever named, and when each stopped being used, so a retired term is never silently reused.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/glossary-ledger~11.0.0"
+    }
+  ],
+  "$defs": {
+    "glossary-ledger/1.0.0": {
+      "title": "glossary-ledger/1.0.0",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "glossary-ledger/1.0.0"
+        },
+        "instance": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Which Knowledge Graph's glossary this is: its name, never a path."
+        },
+        "concepts": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^(?:role\\/[a-z0-9][a-z0-9-]*|process\\/[A-Za-z_][\\w.-]*\\/lane\\/[A-Za-z_][\\w.-]*|(?:kind|node-kind|harness)\\/[a-z][a-z0-9-]*)$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "prefLabel": {
+                "type": "string",
+                "description": "The current label — what the term is shown as, and what a retired term keeps."
+              },
+              "formerLabels": {
+                "description": "Labels this key carried before, oldest first — published as skos:hiddenLabel, so the old name still finds the term.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "firstSeen": {
+                "type": "string",
+                "description": "ISO date this key was first written."
+              },
+              "retiredOn": {
+                "description": "ISO date it stopped being used, or null while it still is.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "prefLabel",
+              "firstSeen",
+              "retiredOn"
+            ]
+          },
+          "description": "Keyed by the term IRI's local part, never the absolute IRI, so the file survives a change of address."
+        }
+      },
+      "required": [
+        "$schema",
+        "instance",
+        "concepts"
+      ]
+    }
+  }
+}
