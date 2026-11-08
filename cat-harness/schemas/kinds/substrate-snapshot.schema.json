@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/substrate-snapshot.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Substrate snapshots",
+  "description": "The root declaration of each Knowledge Graph this instance subscribes to, cached byte for byte at the pinned commit with its fixity, and what the substrate judgement found in it; and each chosen subgraph or asset materialised from it, with its fixity, provenance and gate answers.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "folio-substrate-snapshot/v1"
+    },
+    "subscription": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "substrate",
+        "content"
+      ]
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*\\/[A-Za-z0-9][A-Za-z0-9._-]*$",
+      "description": "A forge repository's full name, owner/name"
+    },
+    "ref": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "file": {
+      "type": "string",
+      "pattern": "^(?:[A-Za-z0-9_-][A-Za-z0-9._-]*\\/)*[^/]+\\.json$"
+    },
+    "raw": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fixity": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "const": "sha256"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "algorithm",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "subgraphs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "graphTypologies": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "id",
+              "graphTypologies"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "harnesses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "name",
+        "subgraphs",
+        "harnesses"
+      ],
+      "additionalProperties": false
+    },
+    "note": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "$schema",
+    "subscription",
+    "repository",
+    "ref",
+    "file",
+    "raw",
+    "fixity",
+    "summary"
+  ],
+  "additionalProperties": false
+}

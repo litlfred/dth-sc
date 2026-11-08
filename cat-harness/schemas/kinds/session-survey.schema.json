@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/session-survey.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Session surveys",
+  "description": "Published surveys of a commit window — one JSON file each, carrying `\"$schema\": \"folio-session-survey/v1\"` and the window's two edge commits, so a later session can compute what it is NOT covered for instead of re-deriving the whole range (bean `6ptx`).",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-session-survey~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-session-survey/v1": {
+      "title": "folio-session-survey/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "folio-session-survey/v1"
+        },
+        "from": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "to": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "takenAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commits": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "axes": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "axis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "covered": {
+                "type": "boolean"
+              },
+              "finding": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "axis",
+              "covered",
+              "finding"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "from",
+        "to",
+        "branch",
+        "takenAt",
+        "by",
+        "commits",
+        "axes"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
