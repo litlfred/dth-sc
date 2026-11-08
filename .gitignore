@@ -40,11 +40,18 @@ review/wg-comment/raw/
 /beans/**
 /cat-harness-tools/beans/marks/**
 /cat-harness-tools/health/**
-/cat-harness/test/health/results/**
+/cat-harness/subscribed-harnesses/**
+/dpi-h-ra/beans/**
+/dpi-h-ra/fsh-guts/**
+/dpi-h-ra/todos/**
 /folio-assistant-core/test/health/results/**
 /fsh-guts/**
 /issue-marks/**
+/merge-reviews/**
+/test/health/results/**
 /todos/**
+/who-iris/test/attestations/**
+/who-iris/test/health/results/**
 # END state mounts
 
 # Written by the site build (sync-docs-harness), never committed
