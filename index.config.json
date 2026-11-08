@@ -177,7 +177,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "553cef51005027a509163e25be03622dd8dc77f4",
+          "ref": "961b4d939d7d69874f44162d12407bd3f1d96c6b",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -190,7 +190,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-08",
-              "ref": "553cef51005027a509163e25be03622dd8dc77f4",
+              "ref": "961b4d939d7d69874f44162d12407bd3f1d96c6b",
               "evidence": "Owner litlfred, 2026-11-05: card '1. Freeze one set' — re-pin all site PRs to one fixed set of layer commits; 'merge when green' (bean folio-assistant-rpc6)."
             }
           }
