@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/qa-checkers.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "QA checkers",
+  "description": "The QA checkers a harness provides, one node per criterion naming the table that holds the code; registered for a folio through its dependency tree.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-qa-checker~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-qa-checker/v1": {
+      "title": "folio-qa-checker/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "folio-qa-checker/v1"
+        },
+        "criterion": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "check": {
+          "type": "string",
+          "pattern": "^(?![a-z][a-z0-9-]*:)(?!\\/)(?!\\.\\.)[^#\\s]+\\.ts#[A-Za-z_$][\\w$]*$"
+        },
+        "rationale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$schema",
+        "criterion",
+        "check"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

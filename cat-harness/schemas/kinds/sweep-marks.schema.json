@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/sweep-marks.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Sweep marks",
+  "description": "When a sweep step last ran — one JSON per check, carrying `\"$schema\": \"folio-sweep-mark/v1\"`, so a skipped `check:session-staleness` is visible after the terminal scrolls (bean `rq8s`).",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-sweep-mark~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-sweep-mark/v1": {
+      "title": "folio-sweep-mark/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "folio-sweep-mark/v1"
+        },
+        "check": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "checkedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "read": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "findings": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "$schema",
+        "check",
+        "checkedAt",
+        "read",
+        "findings"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

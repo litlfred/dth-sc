@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/issue-marks.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Issue marks",
+  "description": "How far an agent has read an issue — the comment id and the edit time it accounted for.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-issue-mark~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-issue-mark/v1": {
+      "title": "folio-issue-mark/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "folio-issue-mark/v1"
+        },
+        "issue": {
+          "type": "string"
+        },
+        "lastCommentId": {
+          "type": "number"
+        },
+        "lastUpdatedAt": {
+          "type": "string"
+        },
+        "checkedAt": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$schema",
+        "issue",
+        "lastCommentId",
+        "checkedAt"
+      ]
+    }
+  }
+}

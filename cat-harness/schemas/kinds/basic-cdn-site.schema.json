@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/basic-cdn-site.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Basic CDN site",
+  "description": "A published static site on a CDN that serves files by path only (GitHub Pages): its routes, the commit it was built from, and its files as archive entries. Built from the renderable graphs its directory names, and deployed by the Tool its storage names.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/basic-cdn-site~11.0.0"
+    }
+  ],
+  "$defs": {
+    "basic-cdn-site/1.0.0": {
+      "title": "basic-cdn-site/1.0.0",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "routes": {
+          "type": "object",
+          "properties": {
+            "release": {
+              "type": "string",
+              "pattern": "^(?!\\/)[^\\s]*$"
+            },
+            "previews": {
+              "type": "string",
+              "pattern": "^(?!\\/)[^\\s]*$"
+            },
+            "subSites": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "pattern": "^(?!\\/)[^\\s]*$"
+                  },
+                  "instance": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "path",
+                  "instance"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "release"
+          ],
+          "additionalProperties": false
+        },
+        "builtFrom": {
+          "type": "object",
+          "properties": {
+            "ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{7,40}$"
+            }
+          },
+          "required": [
+            "ref",
+            "sha"
+          ],
+          "additionalProperties": false
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "file",
+                  "directory",
+                  "symlink",
+                  "special"
+                ]
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "mtime": {
+                "type": "string"
+              },
+              "sha256": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "mimetype_sniffed": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "mimetype_source": {
+                "type": "string",
+                "enum": [
+                  "magic-bytes",
+                  "unrecognised",
+                  "unreadable"
+                ]
+              }
+            },
+            "required": [
+              "path",
+              "kind"
+            ]
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@id",
+        "routes",
+        "$schema"
+      ]
+    }
+  }
+}
