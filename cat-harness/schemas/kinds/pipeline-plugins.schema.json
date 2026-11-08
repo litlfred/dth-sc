@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/pipeline-plugins.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Pipeline plugins",
+  "description": "The generic pipeline slots a harness fills, one node per slot naming the table of implementations; registered for a folio through its dependency tree.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-pipeline-plugin~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-pipeline-plugin/v1": {
+      "title": "folio-pipeline-plugin/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "folio-pipeline-plugin/v1"
+        },
+        "slot": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "implementation": {
+          "type": "string",
+          "pattern": "^(?![a-z][a-z0-9-]*:)(?!\\/)(?!\\.\\.)[^#\\s]+\\.ts#[A-Za-z_$][\\w$]*$"
+        },
+        "rationale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$schema",
+        "slot",
+        "implementation"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

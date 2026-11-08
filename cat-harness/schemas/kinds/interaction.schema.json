@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/interaction.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Interaction",
+  "description": "How a person wants to be asked — read at session start, never written by a process.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-interaction~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-interaction/v1": {
+      "title": "folio-interaction/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "folio-interaction/v1"
+        },
+        "$comment": {
+          "type": "string"
+        },
+        "users": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "aliases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "profiles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "note": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "profiles"
+            ]
+          }
+        },
+        "default": {
+          "type": "object",
+          "properties": {
+            "aliases": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "profiles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "note": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "profiles"
+          ]
+        }
+      },
+      "required": [
+        "$schema",
+        "users"
+      ]
+    }
+  }
+}

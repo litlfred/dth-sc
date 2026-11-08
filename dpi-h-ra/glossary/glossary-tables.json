@@ -1,0 +1,15 @@
+{
+  "$schema": "folio-glossary-tables/v1",
+  "tables": [
+    {
+      "glossary": "glossary/dpi-h-ra.glossary.json",
+      "block": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "kind": "terms"
+    },
+    {
+      "glossary": "glossary/dpi-h-ra-acronyms.glossary.json",
+      "block": "folio/dpi-h-ra/acronyms/t-acronyms-lead-bf4749.md",
+      "kind": "acronyms"
+    }
+  ]
+}
