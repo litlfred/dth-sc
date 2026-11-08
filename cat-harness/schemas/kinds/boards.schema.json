@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/boards.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Boards",
+  "description": "Boards — one JSON file each, carrying `\"$schema\": \"folio-board/v1\"`. A board is a diagram OF a folio: it declares what it shows, and a folio with no board is complete. Schema: `schemas/ui/board.ts`.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "folio-board/v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "filter": {
+      "type": "object",
+      "properties": {
+        "pages": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "kinds": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "$schema",
+    "id",
+    "title"
+  ],
+  "additionalProperties": false
+}

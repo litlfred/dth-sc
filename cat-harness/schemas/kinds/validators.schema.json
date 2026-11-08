@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/validators.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Validators",
+  "description": "The validators a harness's code provides, one node each naming the graph typology and $schema family it checks and the Zod export that checks it, joined onto the kinds on first use.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-validator~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-validator/v1": {
+      "title": "folio-validator/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "folio-validator/v1"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "validates": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "minLength": 1
+            },
+            "family": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        "schema": {
+          "type": "string",
+          "pattern": "#[A-Za-z_$][\\w$]*$"
+        },
+        "pages": {
+          "type": "string",
+          "pattern": "#[A-Za-z_$][\\w$]*$"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "$schema",
+        "id",
+        "validates",
+        "schema"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
