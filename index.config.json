@@ -191,7 +191,7 @@
               "by": "litlfred",
               "on": "2026-11-08",
               "ref": "961b4d939d7d69874f44162d12407bd3f1d96c6b",
-              "evidence": "Owner litlfred, 2026-11-08: card Q-CIB-4 A (13:23Z, release-gated CI, full rollout in phases; phase 4 = the other layers) and Q-MM-1 A (\"non-content can merge/repin + 12hr\", window to 2026-11-08 19:00Z). Tools-only re-pin to cat-harness-tools 961b4d9 (#1722): a non-release PR runs the fast tier of layer-pr-checks; cat-harness#1158."
+              "evidence": "Owner litlfred, 2026-11-08: card Q-CIB-4 A (13:23Z, release-gated CI, full rollout in phases; phase 4 = the other layers) and Q-MM-1 A (non-content can merge/repin + 12hr, window to 2026-11-08 19:00Z). Tools-only re-pin to cat-harness-tools 961b4d9 (#1722); cat-harness#1158."
             }
           }
         }
