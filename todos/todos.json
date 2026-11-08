@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/litlfred/folio-assistant/main/bootstrap/schemas/graph.schema.json",
+  "schemaVersion": "1.0.0",
+  "name": "dth-sc",
+  "description": "Personal action items, external feedback, and review verdicts — separate from the agent's beans work plan.",
+  "directories": [
+    {
+      "id": "items",
+      "path": "items",
+      "graphTypologies": [
+        "todos"
+      ],
+      "description": "Personal action items owned by a named person, never autonomously claimed by an agent."
+    },
+    {
+      "id": "feedback",
+      "path": "feedback",
+      "graphTypologies": [
+        "todos"
+      ],
+      "description": "Captured external comments (document reviews, issue threads, email) normalized to todo-feedback/v1."
+    },
+    {
+      "id": "verdicts",
+      "path": "verdicts",
+      "graphTypologies": [
+        "todos"
+      ],
+      "description": "Structured review outcomes on sections, PRs, or artifacts (todo-verdict/v1)."
+    }
+  ]
+}
