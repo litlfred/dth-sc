@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/content-adapters.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Content adapters",
+  "description": "The block vocabularies a harness owns, one node per vocabulary carrying its companion roles and whether the platform's code types it. Discovered across the instances; no module lists them.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-content-adapter~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-content-adapter/v1": {
+      "title": "folio-content-adapter/v1",
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "const": "folio-content-adapter/v1"
+        },
+        "adapter": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "typed": {
+          "type": "boolean"
+        },
+        "companionRoles": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "md",
+              "ts",
+              "lean",
+              "bpmn",
+              "dmn",
+              "xlsx",
+              "fsh",
+              "cql",
+              "feature"
+            ]
+          }
+        },
+        "vocabulary": {
+          "type": "string",
+          "pattern": "^(?![a-z][a-z0-9-]*:)(?!\\/)(?!\\.\\.)[^#\\s]+\\.ts$"
+        },
+        "rationale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$schema",
+        "adapter",
+        "typed",
+        "companionRoles"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "$schema": "folio-glossary/v1",
+  "id": "dpi-h-ra",
+  "title": "Glossary of the Reference Architecture and Guidance for DPI-H",
+  "description": "The DPI-H Reference Architecture draft's own glossary as a SKOS scheme, one concept per term, read mechanically from the glossary table (folio/dpi-h-ra/glossary/, from the review draft who-dpi-h-reference-architecture-draft-v1). Definitions are verbatim; nothing is paraphrased or chosen. This is the shared scheme the Digital Transformation Handbooks (dth-hrh, dth-phc, dth-sc, dth-pc, dth-sfp) link their terms to (smart-ra#133, task S1). Where a DTH defines a term differently, its wording is added later as a cited alternative; none is chosen.",
+  "hasVersion": "2026-10-31",
+  "modified": "2026-10-31",
+  "source": "library/who-dpi-h-reference-architecture-draft-v1/",
+  "terms": [
+    {
+      "id": "application-component",
+      "prefLabel": "Application Component",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A deployable, modular piece of software that provides a defined set of functionality and holds the data it manages, exposing both through services.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "application-service",
+      "prefLabel": "Application Service",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "An explicitly defined unit of application behaviour. Anch application service exposes the functionality of an application component to its environment.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "capability",
+      "prefLabel": "Capability",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A high-level ability the health system possesses or needs in order to achieve its goals. It expresses what the health system is able to do, independently of how that ability is implemented.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "business-domain",
+      "prefLabel": "Business Domain",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A specific focus area or subsystem within a broader business system, characterized by its own essential attributes",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "editorialNote": "Under review"
+    },
+    {
+      "id": "outcome",
+      "prefLabel": "Outcome",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "An end result or consequence of a set of activities; an outcome is often measurable and signals progress towards a goal.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "product",
+      "prefLabel": "Product",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A concrete offering, bundling services and data, that is made available to stakeholders.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "business-services-layer",
+      "prefLabel": "Business Services layer",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A layer of the reference architecture grouping the health capabilities that national health systems strive to deliver across their principal domains — clinical care, public health, the health supply chain, and health financing — together with the shared components that enable them.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "client",
+      "prefLabel": "Client",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Members of the public who are potential or current users of health services, including health prevention and wellness activities.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "data-governance",
+      "prefLabel": "Data Governance",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "The structures and standards (policies & legal frameworks) necessary to coordinate and manage the data journey from collection, storage, sharing, analysis to use to produce trusted, secure and quality data for decision making",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "data-object",
+      "prefLabel": "Data Object",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A defined unit of structured data used or produced by an application component.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "digital-health",
+      "prefLabel": "Digital Health",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "The systematic application of information and communications technologies, computer science, and data to support informed decision-making by individuals, the health workforce, and health systems, to strengthen resilience to disease and improve health and wellness.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "digital-infrastructure",
+      "prefLabel": "Digital Infrastructure",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Infrastructures in the digital domain are digital resources, such as systems and specifications, built as shared means to achieve many ends",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "digital-public-infrastructure",
+      "prefLabel": "Digital Public Infrastructure",
+      "altLabel": [
+        "DPI"
+      ],
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A set of shared digital systems that should be secure and interoperable, and can be built on open standards and specifications to deliver and provide equitable access to public and/or private services at societal scale and are governed by applicable legal frameworks and enabling rules to drive development, inclusion, innovation, trust, and competition, while respecting human rights and fundamental freedoms. (G20/UNDP)",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "enterprise-architecture",
+      "prefLabel": "Enterprise Architecture",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "The organising logic for business processes and IT infrastructure reflecting the integration and\nstandardisation requirements of the organisation's operating model.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "editorialNote": "Under review"
+    },
+    {
+      "id": "fast-healthcare-interoperability-resources",
+      "prefLabel": "Fast Healthcare Interoperability Resources",
+      "altLabel": [
+        "FHIR"
+      ],
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "FHIR is a standard for healthcare data exchange, published by HL7®",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "functional-application",
+      "prefLabel": "Functional application",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Functional applications are application components that deliver a specific operational function within a defined domain. They are context-specific, reflecting the operational requirements of a programme, scheme, or institution that procures them.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "goal",
+      "prefLabel": "Goal",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A high-level statement of intent, direction, or desired state for an organisation and its stakeholders.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "health-digital-public-infrastructure",
+      "prefLabel": "Health Digital Public Infrastructure",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Health Digital Public Infrastructure (DPI-H) refers to digital resources that are built as a shared means for fulfilling multiple health agency functions.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "health-information-exchange",
+      "prefLabel": "Health Information Exchange",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "status": "could-not-extract",
+      "reason": "The draft lists the term with no definition.",
+      "scopeNote": "The draft marks this entry [To be included before publication].",
+      "editorialNote": "To be included before publication"
+    },
+    {
+      "id": "health-programme",
+      "prefLabel": "Health Programme",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Health programmes are structured and coordinated interventions and services, delivered to defined populations or patient groups, to prevent disease, promote health, and address specific health needs.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "integration",
+      "prefLabel": "Integration",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Bespoke capability of connecting one application component to another",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "editorialNote": "Under review"
+    },
+    {
+      "id": "interoperability",
+      "prefLabel": "Interoperability",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Interoperability is the standards-based capability of heterogeneous information systems to communicate, exchange data, and use the exchanged information to execute functions effectively.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "logical-observation-identifiers-names-and-codes",
+      "prefLabel": "Logical Observation Identifiers Names and Codes",
+      "altLabel": [
+        "LOINC"
+      ],
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "LOINC is a common language (a set of identifiers, names, and codes) for identifying health measurements, observations, and documents.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "point-of-service-applications",
+      "prefLabel": "Point-of-service applications",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Point-of-service applications are end-user application components (IT systems or software tools) used by individuals directly engaged in healthcare—such as clinicians, community health workers, and patients—that enable interaction with the broader healthcare ecosystem.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "editorialNote": "Under review"
+    },
+    {
+      "id": "reference-architecture",
+      "prefLabel": "Reference Architecture",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A technology-neutral blueprint that captures the common building blocks, relationships, and design principles of a technical environment.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "registry",
+      "prefLabel": "Registry",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "A governed, authoritative and centralized information system that captures, stores and maintains the unique attributes and identifiers of health facilities, health service users, health products and/or the health workforce using a predefined canonical minimum data set.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "editorialNote": "Under review"
+    },
+    {
+      "id": "repository",
+      "prefLabel": "Repository",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "status": "could-not-extract",
+      "reason": "The draft lists the term with no definition."
+    },
+    {
+      "id": "smart-guidelines",
+      "prefLabel": "SMART Guidelines",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Standards-based, Machine-readable, Adaptive, Requirements-based, Testable Guidelines are a comprehensive set of reusable digital health components (e.g., interoperability standards, code libraries, algorithms, technical and operational specifications) that transform the guideline adaptation and implementation process to preserve fidelity and accelerate uptake. SMART Guidelines provide a five-step pathway to advance the adoption of best clinical and data practices, even if a country is not yet fully digital.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "snomed-ct",
+      "prefLabel": "SNOMED CT",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Systematized Nomenclature of Medicine Clinical Terms is a structured clinical terminology standard for use in electronic health records.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "snomed-gps",
+      "prefLabel": "SNOMED GPS",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "Systematized Nomenclature of Medicine – Global Patient Set is a list of basic clinical terms. It is an open and freely accessible subset of SNOMED CT terms that represents the breadth of concepts included in the SNOMED CT International Edition.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "solution-architecture",
+      "prefLabel": "Solution Architecture",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "The design of a specific application component or HDPI expressed through specifications and diagrams",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review].",
+      "editorialNote": "Under review"
+    },
+    {
+      "id": "stakeholder",
+      "prefLabel": "Stakeholder",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "An individual, role, or organisation with an interest in the outcomes of the architecture.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    },
+    {
+      "id": "value",
+      "prefLabel": "Value",
+      "source": "folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md",
+      "definition": "The benefit or utility a stakeholder gains from using a service, product, or capability.",
+      "status": "candidate",
+      "scopeNote": "The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/merge-queue.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Merge queue",
+  "description": "A merge steward's DECISIONS about an open pull request — priority, rank or override with its reason, a hold with its expiry, the train it joined, an ejection with its evidence. Never a fact GitHub owns: CI, mergeability, labels and the head SHA are read live and refused by name here.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/folio-merge-queue-entry~1v1"
+    }
+  ],
+  "$defs": {
+    "folio-merge-queue-entry/v1": {
+      "title": "folio-merge-queue-entry/v1",
+      "type": "object",
+      "properties": {},
+      "additionalProperties": {}
+    }
+  }
+}

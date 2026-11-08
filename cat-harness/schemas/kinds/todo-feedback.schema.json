@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/todo-feedback.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Todo feedback",
+  "description": "Feedback items — todos raised against a specific block, carrying the submitter's identity. Read by the `todo-review` skill.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "comment": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "blocked",
+        "resolved",
+        "wontfix"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "origin": {
+      "type": "string",
+      "enum": [
+        "agent",
+        "human",
+        "qc",
+        "extracted"
+      ]
+    },
+    "targetLabel": {
+      "type": "string"
+    },
+    "assignee": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "updatedBy": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "theme": {
+      "type": "string",
+      "minLength": 1
+    },
+    "author": {
+      "type": "string"
+    },
+    "authorEmail": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "summary",
+    "comment",
+    "status",
+    "priority",
+    "origin",
+    "createdAt"
+  ]
+}

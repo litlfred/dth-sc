@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/uploads.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Uploads",
+  "description": "The incoming queue — raw files as dropped, before ingestion. NOT L1, and not greppable as corpus: a document here reads as absent to every consumer.",
+  "anyOf": [
+    {
+      "$ref": "https://json-schema.org/draft/2020-12/schema"
+    }
+  ]
+}

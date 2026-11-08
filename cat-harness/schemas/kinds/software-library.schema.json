@@ -1,0 +1,431 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://litlfred.github.io/cat-harness/v0/schemas/kinds/software-library.schema.json",
+  "_generated": "scripts/gen-kind-json-schemas.ts of cat-harness-tools — do not hand-edit; change the Zod and run `bun run cat kind:json-schemas`",
+  "title": "Software libraries",
+  "description": "Outside libraries a layer imports or vendors -- one generated `software-library` node per library per layer, with the version and sha512 its `bun.lock` pins, its SPDX licence, its range, whether it is a dev dependency, the files that import it and the shim that types it. Shares its core with `tool-release`.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/software-library~11.0.0"
+    },
+    {
+      "$ref": "#/$defs/software-library~11.1.0"
+    },
+    {
+      "$ref": "#/$defs/software-library~11.2.0"
+    }
+  ],
+  "$defs": {
+    "software-library/1.0.0": {
+      "title": "software-library/1.0.0",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^(@[a-z0-9][a-z0-9._-]*\\/)?[a-z0-9][a-z0-9._-]*$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[^\\s@/]+$"
+        },
+        "digest": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "algorithm": {
+                  "type": "string",
+                  "const": "sha256"
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "verifiedAt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "algorithm",
+                "digest"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "algorithm": {
+                  "type": "string",
+                  "const": "sha512"
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{128}$"
+                },
+                "verifiedAt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "algorithm",
+                "digest"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "url"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "type",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "licence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "licenceSource": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dev": {
+          "type": "boolean"
+        },
+        "vendored": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false
+        },
+        "layer": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "usedBy": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "shim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "digest",
+        "source",
+        "licence",
+        "licenceSource",
+        "usedBy",
+        "$schema"
+      ],
+      "additionalProperties": false
+    },
+    "software-library/1.1.0": {
+      "title": "software-library/1.1.0",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^(@[a-z0-9][a-z0-9._-]*\\/)?[a-z0-9][a-z0-9._-]*$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[^\\s@/]+$"
+        },
+        "digest": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "algorithm": {
+                  "type": "string",
+                  "const": "sha256"
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "verifiedAt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "algorithm",
+                "digest"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "algorithm": {
+                  "type": "string",
+                  "const": "sha512"
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{128}$"
+                },
+                "verifiedAt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "algorithm",
+                "digest"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "url"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "type",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "licence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "licenceSource": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dev": {
+          "type": "boolean"
+        },
+        "vendored": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false
+        },
+        "layer": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "usedBy": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "shim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "digest",
+        "source",
+        "licence",
+        "licenceSource",
+        "usedBy",
+        "$schema"
+      ],
+      "additionalProperties": false
+    },
+    "software-library/1.2.0": {
+      "title": "software-library/1.2.0",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^(@[a-z0-9][a-z0-9._-]*\\/)?[a-z0-9][a-z0-9._-]*$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[^\\s@/]+$"
+        },
+        "digest": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "algorithm": {
+                  "type": "string",
+                  "const": "sha256"
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "verifiedAt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "algorithm",
+                "digest"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "algorithm": {
+                  "type": "string",
+                  "const": "sha512"
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{128}$"
+                },
+                "verifiedAt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "algorithm",
+                "digest"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "url"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "type",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "licence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "licenceSource": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dev": {
+          "type": "boolean"
+        },
+        "vendored": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false
+        },
+        "layer": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "usedBy": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "shim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "digest",
+        "source",
+        "licence",
+        "licenceSource",
+        "usedBy",
+        "$schema"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
