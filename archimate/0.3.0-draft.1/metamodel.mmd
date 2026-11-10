@@ -6,36 +6,40 @@ classDiagram
   <<Strategy>> Capability
   class Goal["Goal"]
   <<Motivation>> Goal
+  class Grouping["Grouping"]
+  <<Other>> Grouping
   class BusinessRole["Business Role"]
   <<Business>> BusinessRole
   class ApplicationService["Application Service"]
   <<Application>> ApplicationService
   class DataObject["Data Object"]
   <<Application>> DataObject
-  class Grouping["Grouping"]
-  <<Other>> Grouping
   class BusinessFunction["Business Function"]
   <<Business>> BusinessFunction
   class BusinessObject["Business Object"]
   <<Business>> BusinessObject
+  class Stakeholder["Stakeholder"]
+  <<Motivation>> Stakeholder
   class Value["Value"]
   <<Motivation>> Value
   class BusinessProcess["Business Process"]
   <<Business>> BusinessProcess
   class ApplicationFunction["Application Function"]
   <<Application>> ApplicationFunction
-  class Stakeholder["Stakeholder"]
-  <<Motivation>> Stakeholder
   class Artifact["Artifact"]
   <<Technology>> Artifact
   class BusinessService["Business Service"]
   <<Business>> BusinessService
   class ApplicationProcess["Application Process"]
   <<Application>> ApplicationProcess
+  class Node["Node"]
+  <<Technology>> Node
   class Outcome["Outcome"]
   <<Motivation>> Outcome
   class ApplicationInteraction["Application Interaction"]
   <<Application>> ApplicationInteraction
+  class Principle["Principle"]
+  <<Motivation>> Principle
   class ValueStream["Value Stream"]
   <<Strategy>> ValueStream
   class ApplicationInterface["Application Interface"]
@@ -44,19 +48,21 @@ classDiagram
   <<Business>> BusinessCollaboration
   class Product["Product"]
   <<Business>> Product
+  Grouping o-- ApplicationComponent : aggregates ×52
+  Grouping o-- Capability : aggregates ×27
   Capability ..> Goal : influences ×21
   Grouping o-- BusinessRole : aggregates ×21
-  Grouping o-- ApplicationComponent : aggregates ×20
   ApplicationComponent ..|> Capability : realises ×16
   ApplicationComponent ..> ApplicationComponent : flows to ×15
-  Grouping o-- Capability : aggregates ×15
   ApplicationComponent ..> DataObject : accesses ×13
   Goal o-- Goal : aggregates ×13
+  Grouping o-- Grouping : aggregates ×12
   Capability --> Capability : serves ×11
+  Grouping o-- Stakeholder : aggregates ×11
   ApplicationComponent --> ApplicationComponent : serves ×10
   Stakeholder -- Value : associated with ×10
   BusinessFunction *-- BusinessProcess : composed of ×9
-  Grouping o-- Grouping : aggregates ×7
+  Grouping o-- Goal : aggregates ×7
   BusinessFunction ..|> Capability : realises ×6
   BusinessFunction --> ApplicationService : serves ×6
   Capability ..|> Outcome : realises ×6
@@ -64,6 +70,7 @@ classDiagram
   Value -- Stakeholder : associated with ×6
   ApplicationComponent ..|> ApplicationComponent : realises ×5
   ApplicationProcess ..|> Capability : realises ×5
+  Grouping o-- Node : aggregates ×5
   Value ..> Outcome : influences ×5
   ApplicationComponent --> ApplicationFunction : assigned to ×4
   ApplicationComponent --> ApplicationInteraction : assigned to ×4
@@ -81,7 +88,7 @@ classDiagram
   Capability -- BusinessObject : associated with ×3
   DataObject -- ApplicationComponent : associated with ×3
   Grouping o-- ApplicationService : aggregates ×3
-  Grouping o-- Stakeholder : aggregates ×3
+  Grouping o-- Principle : aggregates ×3
   ApplicationService ..> DataObject : accesses ×2
   ApplicationService o-- ApplicationService : aggregates ×2
   ApplicationService ..|> Capability : realises ×2

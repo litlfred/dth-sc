@@ -62,6 +62,12 @@
   .label { font-family: ui-monospace, monospace; }
   .links a { margin-right: 1rem; }
   .muted { color: var(--muted); }
+  .source-docs { margin: -.25rem 0 .75rem; font-size: 1.05rem; font-weight: 600; }
+  .anchor-btn { float: right; margin-left: .5rem; min-width: 2rem; min-height: 2rem; font-size: .95rem; line-height: 1; padding: .2rem .35rem; border: 1px solid var(--rule); border-radius: .35rem; background: var(--bg); color: var(--fg); cursor: pointer; }
+  .anchor-btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  h2 .anchor-btn { font-weight: 400; margin-top: -.3rem; }
+  .anchor-target { display: block; }
+  .meta-only { margin: .25rem 0 .5rem; padding: .4rem .7rem; border-left: 3px solid #b26b00; background: color-mix(in srgb, #ffb84d 18%, transparent); border-radius: 0 .3rem .3rem 0; }
   .comments { margin: .25rem 0 0 1rem; padding-left: .75rem; border-left: 3px solid var(--rule); }
   .comment { padding: .15rem 0; }
   .tagline { font-family: ui-monospace, monospace; font-size: .9rem; }
@@ -80,10 +86,24 @@
   .diff-fields caption { text-align: left; font-weight: 600; padding: .25rem 0; }
   .diff-fields th, .diff-fields td { border: 1px solid var(--rule); padding: .25rem .4rem; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
   .diff-fields td:last-child { white-space: nowrap; font-weight: 600; }
-  .diff-sbs iframe { width: 100%; height: 22rem; border: 1px solid var(--rule); border-radius: .3rem; background: #fff; }
+  .diff-sbs iframe { width: 100%; height: 22rem; border: 1px solid var(--rule); border-radius: 0 0 .3rem .3rem; background: #fff; display: block; }
+  .sbs-head { padding: .2rem .6rem; border-radius: .3rem .3rem 0 0; font-size: .85rem; line-height: 1.4; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sbs-side-base { background: #5f6368; }
+  .sbs-side-head { background: #4F6F52; }
+  .sbs-head a, .sbs-head code { color: #fff; }
+  .sbs-head code { background: rgba(0,0,0,.25); padding: 0 .25rem; border-radius: .2rem; }
   @media (max-width: 40rem) { .diff-sbs { grid-template-columns: 1fr; } }
   /* Visual diff (0rxe): pictures on a white card, since they are screenshots
      of light pages; the mode buttons are native radios, one click each. */
+  /* A changed picture: before and after, side by side (the text diff cannot
+     see a new src). */
+  .diff-figures { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: .25rem 0 .75rem; }
+  .diff-figure { margin: 0; border: 2px solid var(--rule); border-radius: .3rem; padding: .4rem; background: #fff; }
+  .diff-figure figcaption { font-weight: 600; font-size: .85rem; margin-bottom: .3rem; color: #1f1f1f; }
+  .diff-figure-base { border-color: #b3261e; }
+  .diff-figure-head { border-color: #4F6F52; }
+  .diff-figure img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  @media (max-width: 40rem) { .diff-figures { grid-template-columns: 1fr; } }
   .diff-visual img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: .3rem; background: #fff; display: block; }
   .visual-modes { border: 0; padding: 0; margin: .25rem 0 .5rem; display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
   .visual-modes legend { float: left; margin-right: .5rem; font-weight: 600; }
@@ -106,14 +126,26 @@
   :root[data-fa-scheme="dark"] .h1 { background: #184f95; color: #ffffff; } :root[data-fa-scheme="dark"] .h2 { background: #256abf; color: #ffffff; } :root[data-fa-scheme="dark"] .h3 { background: #3987e5; color: #161616; }
   :root[data-fa-scheme="light"] { color-scheme: light; } :root[data-fa-scheme="dark"] { color-scheme: dark; }
   button.linklike { border: 0; padding: 0; min-height: 0; background: none; color: var(--link); text-decoration: underline; cursor: pointer; font: inherit; text-align: left; }
+  /* What to expect (cat-harness-tools#1153): the PR's own summary, in a card. */
+  #brief { border: 1px solid var(--rule); border-radius: .5rem; padding: .25rem 1rem .5rem; margin: 1rem 0; }
+  #brief h2 { margin-top: .75rem; }
+  #brief h3 { font-size: 1rem; margin: .75rem 0 .25rem; }
+  #brief ul, #brief ol { padding-left: 1.25rem; }
+  #brief ul { list-style: disc; }
+  #brief li { border: 0; padding: .1rem 0; }
+  #brief ul.brief-where { list-style: none; padding-left: 0; }
+  .brief-body { max-height: 28rem; overflow: auto; }
+  .brief-chip { font-weight: 600; padding: .05rem .45rem; border-radius: .3rem; background: #4F6F52; color: #fff; }
   h2:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
 </style>
 <link rel="stylesheet" href="../../assets/css/navbar.css"><script src="../../assets/navbar/rail-1xqosn9b1rd.js" defer></script><script src="../../assets/js/navbar.js" defer></script><script src="../../assets/navbar/row-2acuhncsmbg.js" defer></script><link rel="stylesheet" href="../../assets/css/navbar-row.css"><script src="../../assets/js/navbar-row.js" defer></script><meta name="fa-search-exclude" content="true"><script src="../../assets/js/vendor/lunr.min.js" defer></script><script src="../../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../../assets/page-layout.css" data-fa-page-layout><script src="../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../../assets/css/docs-ui.css" data-fa-platform-ui><script src="../../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content="../.."></head>
-<body><script type="application/json" id="fa-navbar-row" data-fa-root="../.." data-fa-row-src="row-2acuhncsmbg"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../..">{"data":"rail-1xqosn9b1rd","here":"/en/review/"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../">Digital Transformation Handbook for Health Supply Chain Architecture</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../../">Digital Transformation Handbook for Health Supply Chain Architecture</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
+<body><script type="application/json" id="fa-navbar-row" data-fa-root="../.." data-fa-row-src="row-2acuhncsmbg"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../..">{"data":"rail-1xqosn9b1rd","here":"/en/review/","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#brief-h","label":"What to expect in this review"},{"href":"#rendered-h","label":"Rendered pages this change alters"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../">Digital Transformation Handbook for Health Supply Chain Architecture</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../../">Digital Transformation Handbook for Health Supply Chain Architecture</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
 <div class="layout">
 <aside id="navpane" aria-label="Navigation"></aside>
 <main>
 <h1>What changed</h1>
+<p id="source-docs" class="source-docs">Back to <a id="source-doc-link" href="../../index.html">the document</a></p>
+<section id="brief" aria-labelledby="brief-h"><h2 id="brief-h">What to expect in this review</h2><p class="muted">Loading the pull request's summary…</p></section>
 <p id="summary" class="muted"></p>
 <p id="status" role="status" aria-live="polite">Loading the ChangeSet…</p>
 <div class="nav">
@@ -147,7 +179,7 @@ var matchesCommentFilter = function matchesCommentFilter(status, kind, filter) {
     return kind === filter.slice(5);
   return !0;
 };
-var RENDERERS = [{"id":"word","label":"Word diff of the source","description":"The block's Markdown with removed words struck through and added words marked. Shows exactly what the author typed.","needs":["text"],"defaultFor":["*"]},{"id":"inline","label":"Inline, as rendered","description":"The block as a reader sees it now, with added words marked and removed words struck through where they were.","needs":["text"],"defaultFor":["prose","remark","definition","example","recommendation"]},{"id":"visual","label":"Pictures, before and after","description":"A picture of the block on the published page and on this preview, with a slider between them and a view that marks every changed pixel. For figures, diagrams and tables, whose markup says little.","needs":["screenshots"],"defaultFor":["table","figure","diagram","equation","simulator"]},{"id":"side-by-side","label":"Side by side","description":"The published page and this preview next to each other, each scrolled to the block. For tables, figures and anything whose layout is the change.","needs":["pages"],"defaultFor":["table","figure","diagram","equation","simulator"]},{"id":"fields","label":"Fields, before and after","description":"The block's fields side by side, one row each, with every added, removed and changed field named. For structured blocks — a persona, a requirement, a data element — whose source diff is unreadable.","needs":["structure"],"defaultFor":["@structured"]}];
+var RENDERERS = [{"id":"word","label":"Word diff of the source","description":"The block's Markdown with removed words struck through and added words marked. Shows exactly what the author typed.","needs":["text"],"defaultFor":[]},{"id":"inline","label":"Inline","description":"The block as a reader sees it now, with added words marked and removed words struck through where they were.","needs":["text"],"defaultFor":["*","prose","remark","definition","example","recommendation","table","figure","diagram","equation","simulator"]},{"id":"visual","label":"Pictures, before and after","description":"A picture of the block on the published page and on this preview, with a slider between them and a view that marks every changed pixel. For figures, diagrams and tables, whose markup says little.","needs":["screenshots"],"defaultFor":["table","figure","diagram","equation","simulator"]},{"id":"side-by-side","label":"Side by side","description":"The published page and this preview next to each other, each scrolled to the block. For tables, figures and anything whose layout is the change.","needs":["pages"],"defaultFor":["table","figure","diagram","equation","simulator"]},{"id":"fields","label":"Fields, before and after","description":"The block's fields side by side, one row each, with every added, removed and changed field named. For structured blocks — a persona, a requirement, a data element — whose source diff is unreadable.","needs":["structure"],"defaultFor":["@structured"]}];
 var wordDiff = function wordDiff(a, b, limit = 4000000) {
   const tok = (s) => s.match(/\s+|[\p{L}\p{N}_]+|[^\s\p{L}\p{N}_]/gu) || [], x = tok(a), y = tok(b);
   let pre = 0;
@@ -193,8 +225,14 @@ var wordDiff = function wordDiff(a, b, limit = 4000000) {
     push("same", x.slice(x.length - suf).join(""));
   return out;
 };
-var cleanRendered = function cleanRendered(doc, html) {
+var cleanRendered = function cleanRendered(doc, html, base) {
   const parsed = new DOMParser().parseFromString(html, "text/html");
+  if (base)
+    parsed.querySelectorAll("img[src],source[src],a[href]").forEach((el) => {
+      const attr = el.hasAttribute("src") ? "src" : "href", v = el.getAttribute(attr) || "";
+      if (v && !/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(v))
+        el.setAttribute(attr, base + v);
+    });
   parsed.querySelectorAll("script,iframe,object,embed,frame,frameset,link,meta,base,form").forEach((n) => n.remove());
   parsed.querySelectorAll("*").forEach((el) => {
     for (const a of Array.from(el.attributes)) {
@@ -204,6 +242,34 @@ var cleanRendered = function cleanRendered(doc, html) {
     }
   });
   return doc.importNode(parsed.body, !0);
+};
+var imageChange = function imageChange(doc, baseHtml, headHtml, cleanBase, cleanHead) {
+  const srcs = (html) => html === null ? [] : Array.from(new DOMParser().parseFromString(html, "text/html").querySelectorAll("img")).map((i) => i.getAttribute("src") || ""), b = srcs(baseHtml), h = srcs(headHtml);
+  if (b.join(`
+`) === h.join(`
+`))
+    return null;
+  const box = doc.createElement("div");
+  box.className = "diff-figures";
+  const side = (label, cls, html, clean) => {
+    const col = doc.createElement("figure");
+    col.className = "diff-figure " + cls;
+    const cap = doc.createElement("figcaption");
+    cap.textContent = label;
+    col.appendChild(cap);
+    const imgs = html === null ? [] : Array.from(clean(doc, html).querySelectorAll("img"));
+    if (!imgs.length) {
+      const p = doc.createElement("p");
+      p.className = "muted";
+      p.textContent = "no picture";
+      col.appendChild(p);
+    }
+    imgs.forEach((i) => col.appendChild(i));
+    box.appendChild(col);
+  };
+  side("Before", "diff-figure-base", baseHtml, cleanBase);
+  side("After", "diff-figure-head", headHtml, cleanHead);
+  return box;
 };
 var renderWordDiff = function renderWordDiff(doc, ops) {
   const pre = doc.createElement("pre");
@@ -283,6 +349,19 @@ var renderInline = function renderInline(doc, baseHtml, headHtml, diff, clean) {
     d.textContent = text;
     head.appendChild(d);
   }
+  const key = (a) => (a.getAttribute("href") || "") + "\x01" + (a.textContent || "").trim(), had = new Set(baseHtml === null ? [] : Array.from(clean(doc, baseHtml).querySelectorAll("a[href]")).map(key));
+  head.querySelectorAll("a[href]").forEach((a) => {
+    if (had.has(key(a)) || !(a.textContent || "").trim())
+      return;
+    if (a.querySelector("ins") && (a.textContent || "") === Array.from(a.querySelectorAll("ins")).map((e) => e.textContent).join(""))
+      return;
+    const e = doc.createElement("ins");
+    e.className = "diff-link-added";
+    e.title = "link added";
+    while (a.firstChild)
+      e.appendChild(a.firstChild);
+    a.appendChild(e);
+  });
   while (head.firstChild)
     box.appendChild(head.firstChild);
   return box;
@@ -352,31 +431,205 @@ var renderFields = function renderFields(doc, s) {
   }
   return box;
 };
-var renderSideBySide = function renderSideBySide(doc, before, after) {
-  const box = doc.createElement("div");
+var FRAME_CHROME_CSS = "[data-fa-staging-banner]{display:none!important}:root{--fa-staging-offset:0px!important}html{padding-top:0!important}nav.fa-nav,.fa-nav,.side-bar{display:none!important}body{padding-left:0!important}.main{margin-left:0!important;max-width:none!important}";
+var renderSideBySide = function renderSideBySide(doc, before, after, opts) {
+  const o = opts || {}, box = doc.createElement("div");
   box.className = "diff diff-sbs";
-  const pane = (title, href) => {
-    const col = doc.createElement("div"), h = doc.createElement("div");
-    h.className = "muted";
-    h.textContent = title;
-    col.appendChild(h);
+  const link = (text, href) => {
+    if (!href || !/^https?:/i.test(href)) {
+      const c = doc.createElement("code");
+      c.textContent = text;
+      return c;
+    }
+    const a = doc.createElement("a");
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = text;
+    return a;
+  }, header = (side) => {
+    const h = doc.createElement("div");
+    h.className = "sbs-head sbs-side-" + side;
+    const b = doc.createElement("b");
+    b.textContent = side === "base" ? o.beforeName && o.beforeName !== "main" ? o.beforeName : "Main" : "This preview";
+    h.appendChild(b);
+    const f = o.facts;
+    if (side === "head" && f) {
+      const add = (label, node) => {
+        h.appendChild(doc.createTextNode(" \xB7 " + label));
+        h.appendChild(node);
+      };
+      if (f.branch)
+        add("", link(f.branch, f.branchUrl));
+      if (f.sha) {
+        const m = (f.branchUrl || "").match(/^(https:\/\/github\.com\/[^/]+\/[^/]+)\//);
+        add("commit ", link(f.sha, m ? m[1] + "/commit/" + f.sha : void 0));
+      }
+      if (f.pr && f.pr !== "n/a")
+        add("", link("PR #" + f.pr, f.prUrl));
+      if (f.runUrl)
+        add("", link("build log", f.runUrl));
+    } else if (side === "base") {
+      h.appendChild(doc.createTextNode(" \xB7 published site"));
+      const sha = f && /^[0-9a-f]{7,40}$/i.test(f.baseSha || "") ? f.baseSha.slice(0, 7) : "", m = (f && f.branchUrl || "").match(/^(https:\/\/github\.com\/[^/]+\/[^/]+)\//);
+      if (sha) {
+        h.appendChild(doc.createTextNode(" \xB7 commit "));
+        h.appendChild(link(sha, m ? m[1] + "/commit/" + f.baseSha : void 0));
+      }
+    }
+    h.title = h.textContent || "";
+    return h;
+  }, pane = (side, href) => {
+    const col = doc.createElement("div");
+    col.className = "sbs-pane";
+    col.appendChild(header(side));
     if (href === null) {
       const p = doc.createElement("p");
       p.className = "muted";
-      p.textContent = title === "Main" ? "Not on main: this block is new." : "Not on this preview: this block was removed.";
+      p.textContent = side === "base" ? "Not on " + (o.beforeName || "main") + ": this block is new." : "Not on this preview: this block was removed.";
       col.appendChild(p);
     } else {
       const f = doc.createElement("iframe");
       f.src = href;
-      f.title = title + ": " + href;
+      f.title = (side === "base" ? o.beforeName || "Main" : "This preview") + ": " + href;
       f.loading = "lazy";
+      f.addEventListener("load", () => {
+        try {
+          const d = f.contentDocument;
+          if (!d || !d.head)
+            return;
+          const st = d.createElement("style");
+          st.textContent = FRAME_CHROME_CSS;
+          d.head.appendChild(st);
+        } catch {}
+      });
+      const mark = o.mark;
+      if (mark) {
+        const runs = o.runs && o.runs[side] || [], cls = "fa-change-" + side;
+        f.addEventListener("load", () => {
+          let tries = 0;
+          const go = () => {
+            if (mark(f, runs, cls) === 0 && runs.length && ++tries < 4)
+              setTimeout(go, 400 * tries);
+          };
+          go();
+          setTimeout(() => mark(f, runs, cls), 1200);
+        });
+      }
       col.appendChild(f);
     }
     return col;
   };
-  box.appendChild(pane("Main", before));
-  box.appendChild(pane("This preview", after));
+  box.appendChild(pane("base", before));
+  box.appendChild(pane("head", after));
   return box;
+};
+var changeRuns = function changeRuns(ops) {
+  const out = { base: [], head: [] };
+  let base = "", head = "";
+  for (const o of ops)
+    if (o.op === "same") {
+      base += o.text;
+      head += o.text;
+    } else if (o.op === "del") {
+      if (o.text.trim())
+        out.base.push({ before: base.slice(-40), text: o.text });
+      base += o.text;
+    } else if (o.op === "ins") {
+      if (o.text.trim())
+        out.head.push({ before: head.slice(-40), text: o.text });
+      head += o.text;
+    }
+  return out;
+};
+var markInFrame = function markInFrame(f, runs, cls) {
+  let d = null;
+  try {
+    d = f.contentDocument;
+  } catch {
+    return 0;
+  }
+  if (!d || !d.body)
+    return 0;
+  const w = d.defaultView;
+  if (!d.getElementById("fa-review-frame-style")) {
+    const st = d.createElement("style");
+    st.id = "fa-review-frame-style";
+    st.textContent = "[data-fa-staging-banner]{display:none!important}html{padding-top:0!important}.side-bar,.fa-nav{top:0!important}mark.fa-change-base{background:#fbdada;color:#5c0b0b;outline:2px solid #c0392b}mark.fa-change-head{background:#d7f5dc;color:#0b3d17;outline:2px solid #2e7d32}";
+    (d.head || d.body).appendChild(st);
+  }
+  const scrollTo = (m) => {
+    const r = m.getBoundingClientRect();
+    w.scrollTo(0, Math.max(0, r.top + w.scrollY - w.innerHeight / 3));
+  }, had = d.querySelectorAll("mark." + cls);
+  if (had.length) {
+    scrollTo(had[0]);
+    return had.length;
+  }
+  if (!runs.length)
+    return 0;
+  const ok = /[\p{L}\p{N}]/u, norm = (t) => Array.from(t).filter((c) => ok.test(c)).map((c) => c.toLowerCase()[0]).join("");
+  let id = "";
+  try {
+    id = decodeURIComponent((w.location.hash || "").slice(1));
+  } catch {}
+  const block = id ? d.getElementById(id) : null, tryIn = (root) => {
+    const chars = [], where = [], walker = d.createTreeWalker(root, 4);
+    for (let n = walker.nextNode();n; n = walker.nextNode()) {
+      const p = n.parentElement;
+      if (!p || p.closest("script,style,noscript,[data-fa-staging-banner]"))
+        continue;
+      for (let i = 0;i < n.data.length; i++) {
+        const c = n.data[i];
+        if (ok.test(c)) {
+          chars.push(c.toLowerCase()[0]);
+          where.push([n, i]);
+        }
+      }
+    }
+    const s = chars.join(""), segs = [];
+    let from = 0;
+    for (const r of runs) {
+      const t = norm(r.text);
+      if (!t)
+        continue;
+      const ctx = norm(r.before);
+      let at = ctx ? s.indexOf(ctx + t, from) : -1;
+      if (at >= 0)
+        at += ctx.length;
+      else
+        at = s.indexOf(t, from);
+      if (at < 0)
+        continue;
+      from = at + t.length;
+      for (let k = at;k < at + t.length; ) {
+        const node = where[k][0], s0 = where[k][1];
+        let e = s0;
+        while (k < at + t.length && where[k][0] === node) {
+          e = where[k][1];
+          k++;
+        }
+        segs.push([node, s0, e + 1]);
+      }
+    }
+    return segs;
+  };
+  let segs = block ? tryIn(block) : [];
+  if (!segs.length)
+    segs = tryIn(d.body);
+  if (!segs.length)
+    return 0;
+  const marks = [];
+  segs.slice().reverse().forEach(([node, s0, e]) => {
+    node.splitText(e);
+    const mid = node.splitText(s0), m = d.createElement("mark");
+    m.className = cls;
+    mid.replaceWith(m);
+    m.appendChild(mid);
+    marks.unshift(m);
+  });
+  scrollTo(marks[0]);
+  return marks.length;
 };
 var renderVisual = function renderVisual(doc, v, prefix, group) {
   const box = doc.createElement("div");
@@ -916,6 +1169,235 @@ var renderMeasured = function renderMeasured(box, model) {
   });
   box.appendChild(ul);
 };
+var briefRepo = function briefRepo(st) {
+  const m = String(st && (st.branchUrl || st.prUrl) || "").match(/^https:\/\/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)\//);
+  return m ? { owner: m[1], repo: m[2] } : null;
+};
+var closedIssue = function closedIssue(body) {
+  const m = String(body || "").match(/\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/i);
+  return m ? Number(m[1]) : null;
+};
+var briefText = function briefText(body) {
+  const b = String(body || "").replace(/\r\n?/g, `
+`), m = b.match(/<!--\s*review-brief\s*-->([\s\S]*?)<!--\s*\/review-brief\s*-->/i);
+  if (m)
+    return { text: m[1].trim(), marked: !0 };
+  let t = b.replace(/<!--[\s\S]*?-->/g, "");
+  t = t.replace(/\n-{3,}\s*\n(?:\s*(?:_Generated by[^\n]*|\uD83E\uDD16[^\n]*|https:\/\/claude\.ai\/code\/\S*)\s*\n?)+\s*$/, `
+`);
+  t = t.split(`
+`).filter(function(l) {
+    return !/^_Requested by \*\*/.test(l.trim());
+  }).join(`
+`);
+  return { text: t.trim(), marked: !1 };
+};
+var briefModel = function briefModel(o) {
+  const t = briefText(o.pr ? o.pr.body : null), cs = o.pr ? String(o.pr.title).match(/^\s*(CS-\d+)\b/i) : null;
+  return {
+    source: o.pr ? o.source : "none",
+    pr: o.pr,
+    issue: o.issue,
+    changeSet: cs ? cs[1].toUpperCase() : null,
+    text: t.text,
+    marked: t.marked,
+    fetchedAt: o.fetchedAt || null
+  };
+};
+var whereToLook = function whereToLook(changes, max) {
+  const by = {}, order = [];
+  (changes || []).forEach(function(c) {
+    const s = (c.head || c.base || {}).section || "(listed in no section)";
+    if (!(s in by)) {
+      by[s] = 0;
+      order.push(s);
+    }
+    by[s]++;
+  });
+  return order.map(function(s, i) {
+    return { section: s, count: by[s], i };
+  }).sort(function(a, b) {
+    return b.count - a.count || a.i - b.i;
+  }).slice(0, max).map(function(r) {
+    return { section: r.section, count: r.count };
+  });
+};
+var briefBlocks = function briefBlocks(md) {
+  const out = [];
+  let para = [], list = null;
+  function flush() {
+    if (para.length) {
+      out.push({ type: "p", text: para.join(" ") });
+      para = [];
+    }
+    if (list) {
+      out.push(list);
+      list = null;
+    }
+  }
+  String(md || "").split(`
+`).forEach(function(raw) {
+    const l = raw.replace(/\s+$/, "");
+    let m;
+    if (!l.trim()) {
+      flush();
+      return;
+    }
+    if (m = l.match(/^\s{0,3}(#{1,6})\s+(.*)$/)) {
+      flush();
+      out.push({ type: "h", level: m[1].length, text: m[2] });
+      return;
+    }
+    if (/^\s{0,3}(?:-{3,}|\*{3,}|_{3,})\s*$/.test(l)) {
+      flush();
+      out.push({ type: "hr" });
+      return;
+    }
+    if (m = l.match(/^\s{0,3}([-*+]|\d+[.)])\s+(.*)$/)) {
+      const type = /\d/.test(m[1]) ? "ol" : "ul";
+      if (para.length) {
+        out.push({ type: "p", text: para.join(" ") });
+        para = [];
+      }
+      if (!list || list.type !== type) {
+        if (list)
+          out.push(list);
+        list = { type, items: [] };
+      }
+      list.items.push(m[2]);
+      return;
+    }
+    if (list && /^\s+\S/.test(raw)) {
+      list.items[list.items.length - 1] += " " + l.trim();
+      return;
+    }
+    if (list) {
+      out.push(list);
+      list = null;
+    }
+    para.push(l.trim());
+  });
+  flush();
+  return out;
+};
+var briefInline = function briefInline(doc, parent, text) {
+  const re = /\*\*([^*]+)\*\*|`([^`]+)`|\[([^\]]+)\]\(([^)\s]+)\)|(https?:\/\/[^\s<>()]+[^\s<>().,;:!?'"])/g, s = String(text || "");
+  let last = 0, m;
+  while (m = re.exec(s)) {
+    if (m.index > last)
+      parent.appendChild(doc.createTextNode(s.slice(last, m.index)));
+    if (m[1] !== void 0) {
+      const b = doc.createElement("strong");
+      briefInline(doc, b, m[1]);
+      parent.appendChild(b);
+    } else if (m[2] !== void 0) {
+      const c = doc.createElement("code");
+      c.textContent = m[2];
+      parent.appendChild(c);
+    } else {
+      const label = m[3] !== void 0 ? m[3] : m[5], url = m[3] !== void 0 ? m[4] : m[5];
+      if (/^https?:\/\//i.test(url)) {
+        const a = doc.createElement("a");
+        a.setAttribute("href", url);
+        a.setAttribute("rel", "noopener");
+        a.textContent = label;
+        parent.appendChild(a);
+      } else
+        parent.appendChild(doc.createTextNode(m[0]));
+    }
+    last = re.lastIndex;
+  }
+  if (last < s.length)
+    parent.appendChild(doc.createTextNode(s.slice(last)));
+};
+var renderBrief = function renderBrief(doc, box, model, where, jump) {
+  while (box.firstChild)
+    box.removeChild(box.firstChild);
+  function el(tag, text, cls) {
+    const e = doc.createElement(tag);
+    if (text !== void 0)
+      e.textContent = text;
+    if (cls)
+      e.className = cls;
+    return e;
+  }
+  const h = el("h2", "What to expect in this review");
+  h.id = "brief-h";
+  box.appendChild(h);
+  const head = el("p");
+  if (model.changeSet) {
+    head.appendChild(el("span", "Change set " + model.changeSet, "brief-chip"));
+    head.appendChild(doc.createTextNode(" "));
+  }
+  if (model.pr) {
+    const a = el("a", "PR #" + model.pr.number + ": " + model.pr.title);
+    if (/^https:\/\//.test(model.pr.url))
+      a.setAttribute("href", model.pr.url);
+    head.appendChild(a);
+  } else
+    head.appendChild(el("span", "No pull request found for this preview, so there is no summary from it.", "muted"));
+  if (model.issue) {
+    head.appendChild(doc.createTextNode(" \xB7 "));
+    const ia = el("a", "Issue #" + model.issue.number + (model.issue.title ? ": " + model.issue.title : ""));
+    if (/^https:\/\//.test(model.issue.url))
+      ia.setAttribute("href", model.issue.url);
+    head.appendChild(ia);
+  }
+  box.appendChild(head);
+  if (model.pr) {
+    const body = el("div", void 0, "brief-body"), blocks = briefBlocks(model.text);
+    if (!blocks.length)
+      body.appendChild(el("p", "The pull request has no description.", "muted"));
+    blocks.forEach(function(b) {
+      if (b.type === "hr") {
+        body.appendChild(el("hr"));
+        return;
+      }
+      if (b.type === "h") {
+        const hh = el("h3");
+        briefInline(doc, hh, b.text || "");
+        body.appendChild(hh);
+        return;
+      }
+      if (b.type === "p") {
+        const p = el("p");
+        briefInline(doc, p, b.text || "");
+        body.appendChild(p);
+        return;
+      }
+      const l = el(b.type);
+      (b.items || []).forEach(function(it) {
+        const li = el("li");
+        briefInline(doc, li, it);
+        l.appendChild(li);
+      });
+      body.appendChild(l);
+    });
+    box.appendChild(body);
+  }
+  if (where && where.length) {
+    box.appendChild(el("h3", "Sections this change touches"));
+    const ul = el("ul", void 0, "brief-where");
+    where.forEach(function(w) {
+      const li = el("li"), name = w.section.indexOf("::") >= 0 ? w.section.split("::").pop() || w.section : w.section;
+      if (jump) {
+        const btn = el("button", name, "linklike");
+        btn.setAttribute("type", "button");
+        btn.addEventListener("click", function() {
+          jump(w.section);
+        });
+        li.appendChild(btn);
+      } else
+        li.appendChild(el("span", name));
+      li.appendChild(doc.createTextNode(" (" + w.count + " changed block" + (w.count === 1 ? "" : "s") + ")"));
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+  }
+  const src = model.source === "live" ? "Read from GitHub when this page opened." : model.source === "snapshot" ? "Read from the copy taken when this preview was staged" + (model.fetchedAt ? " (" + model.fetchedAt + ")" : "") + ": GitHub could not be reached, so a later edit to the pull request may not show." : "";
+  if (src)
+    box.appendChild(el("p", src + (model.marked ? " This is the pull request's review brief." : ""), "muted"));
+};
 </script>
 <script>
 (function () {
@@ -924,6 +1406,57 @@ var renderMeasured = function renderMeasured(box, model) {
   var ROOT = reviewSiteRoot(location.pathname, LOCALES);
   var allDocs = document.getElementById("all-documents");
   if (allDocs) allDocs.href = ROOT + "index.html";
+  // Back to the source document, at the top (owner, 2026-11-02: "you should
+  // have link back to source document at top"). Each document the outline
+  // names, by its title; the site's list of documents until it loads.
+  var srcLink = document.getElementById("source-doc-link");
+  if (srcLink) srcLink.href = ROOT + "index.html";
+  // Named anchors (owner, 2026-11-02: "should have (named/semantic/slug) #
+  // links for items in the page like #dth-hrh/ch05-user-personas-and-use-cases").
+  // A chapter is its section key's path, a section that path plus "/" and its
+  // label, a block its own label: the same id the document pages give it.
+  // The link button copies the address and puts it in the address bar.
+  function anchorButton(id, what) {
+    var b = el("button", "🔗", "anchor-btn");
+    b.type = "button";
+    b.title = "Copy link to this " + what;
+    b.setAttribute("aria-label", "Copy link to this " + what);
+    b.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var url = location.href.replace(/#.*$/, "") + "#" + encodeURIComponent(id).replace(/%2F/g, "/").replace(/%3A/g, ":");
+      try { history.replaceState(null, "", url); } catch (x) { /* the copy still works */ }
+      var said = function (t) { status.textContent = t; };
+      try {
+        navigator.clipboard.writeText(url).then(function () { said("Link copied: " + url); }, function () { said("Link: " + url); });
+      } catch (x) { said("Link: " + url); }
+    });
+    return b;
+  }
+  function goToHash() {
+    var h = location.hash ? location.hash.slice(1) : "";
+    if (!h) return;
+    var t = null;
+    try { t = document.getElementById(decodeURIComponent(h)); } catch (x) { t = document.getElementById(h); }
+    if (!t) return;
+    if (t.tabIndex < 0 && !t.hasAttribute("tabindex")) t.tabIndex = -1;
+    t.scrollIntoView({ block: "start" });
+    t.focus({ preventScroll: true });
+  }
+  window.addEventListener("hashchange", goToHash);
+  function sourceLinks(outline) {
+    var box = document.getElementById("source-docs");
+    var ds = outline && outline.documents ? outline.documents : [];
+    var ok = ds.filter(function (d) { var p = String(d.page || ""); return d.title && p && safePage(p); });
+    if (!box || !ok.length) return;
+    while (box.firstChild) box.removeChild(box.firstChild);
+    box.appendChild(document.createTextNode(ok.length > 1 ? "Back to the documents: " : "Back to the document: "));
+    ok.forEach(function (d, i) {
+      if (i) box.appendChild(document.createTextNode(" · "));
+      var a = el("a", String(d.title));
+      a.href = ROOT + d.page;
+      box.appendChild(a);
+    });
+  }
   var status = document.getElementById("status");
   var summary = document.getElementById("summary");
   var list = document.getElementById("changes");
@@ -1083,14 +1616,18 @@ var renderMeasured = function renderMeasured(box, model) {
   }
 
   // ── Diff renderers (bean d903) ─────────────────────────────────
-  var VIEW_KEY = "folio-review:view";
+  // v2 (owner, 2026-10-31, "default to inline"): a page-level choice made
+  // before, such as Side by side, is not carried over to override the new default.
+  // v3 (owner, 2026-11-02, "defaults to in-line for all elements"): the same,
+  // for structured blocks, which opened on the field table before.
+  var VIEW_KEY = "folio-review:view:v3";
   function loadView() { try { return window.localStorage.getItem(VIEW_KEY) || ""; } catch (e) { return ""; } }
   function saveView(v) { try { window.localStorage.setItem(VIEW_KEY, v); } catch (e) { /* the defaults, then */ } }
   function defaultFor(kind, structured) {
     var fb = null;
-    // A block the build published fields for opens on the field renderer
-    // (STRUCTURED, bean f327) before any renderer its kind names.
-    if (structured) for (var j = 0; j < RENDERERS.length; j++) if (RENDERERS[j].defaultFor.indexOf("@structured") >= 0) return RENDERERS[j].id;
+    // Every block opens inline, structured ones too (owner, 2026-11-02). A
+    // structured block falls back to the field renderer (STRUCTURED, bean
+    // f327) in pick() only when inline cannot run on it.
     for (var i = 0; i < RENDERERS.length; i++) {
       if (RENDERERS[i].defaultFor.indexOf(kind) >= 0) return RENDERERS[i].id;
       if (RENDERERS[i].defaultFor.indexOf("*") >= 0) fb = RENDERERS[i].id;
@@ -1114,20 +1651,59 @@ var renderMeasured = function renderMeasured(box, model) {
     var base = t.base || null;
     var head = t.head || null;
     var out;
+    // Each side's HTML resolves relative links from its own page's directory.
+    function dirOf(u) { return u ? String(u).replace(/[#?].*$/, "").replace(/[^/]*$/, "") : ""; }
+    var headDir = dirOf(ctx.after) || dirOf(ctx.before);
+    var baseDir = dirOf(ctx.before) || headDir;
+    function cleanHead(d, h) { return cleanRendered(d, h, headDir); }
+    function cleanBase(d, h) { return cleanRendered(d, h, baseDir); }
+    var figs = (id === "inline" || id === "side-by-side") && (base || head) ? imageChange(document, base ? base.html : null, head ? head.html : null, cleanBase, cleanHead) : null;
+    if (figs) panel.appendChild(figs);
     if (id === "word") {
       var ops = wordDiff(base ? base.prose : "", head ? head.prose : "");
       out = ops === null ? "This block is too long for a word diff. Choose side by side." : renderWordDiff(document, ops);
     } else if (id === "inline") {
-      out = renderInline(document, base ? base.html : null, head ? head.html : null, wordDiff, cleanRendered);
+      // Words the same on both sides: say so, rather than show a diff with no
+      // marks that reads as broken (owner, 2026-11-02, "no green or red").
+      if (base && head && sameText(base, head)) {
+        var note = el("div", null, "meta-only");
+        note.appendChild(el("strong", "No visible text change. "));
+        note.appendChild(el("span", (ctx.aspects || []).indexOf("manifest") >= 0 || (ctx.aspects || []).length === 0
+          ? "Only this block's metadata changed, such as a linked element or its source."
+          : "The change is to: " + (ctx.aspects || []).join(", ") + "."));
+        if (ctx.structure) note.appendChild(renderFields(document, ctx.structure));
+        panel.appendChild(note);
+      }
+      out = renderInline(document, base ? base.html : null, head ? head.html : null, wordDiff, head ? cleanHead : cleanBase);
     } else if (id === "side-by-side") {
-      out = renderSideBySide(document, ctx.before, ctx.after);
+      // The rendered text of each side, diffed, says where each pane scrolls to.
+      var runs = null;
+      if (base || head) {
+        var bt = base ? cleanRendered(document, base.html).textContent || "" : "";
+        var ht = head ? cleanRendered(document, head.html).textContent || "" : "";
+        var sops = wordDiff(bt, ht);
+        if (sops) runs = changeRuns(sops);
+      }
+      out = renderSideBySide(document, ctx.before, ctx.after, { beforeName: ctx.beforeName, facts: ctx.facts, runs: runs, mark: markInFrame });
     } else if (id === "visual") {
       out = renderVisual(document, ctx.visual, ROOT, "vis-" + panel.id);
     } else if (id === "fields") {
       out = renderFields(document, ctx.structure);
     }
+    // The pictures are already shown, before and after; inline shows only
+    // the text around them, and nothing when the picture was all that changed.
+    if (figs && id === "inline" && out && typeof out !== "string") {
+      out.querySelectorAll("img").forEach(function (i) { i.remove(); });
+      if (!(out.textContent || "").trim()) out = null;
+    }
     if (typeof out === "string") panel.appendChild(el("p", out, "muted"));
     else if (out) panel.appendChild(out);
+  }
+  function sameText(a, b) {
+    if (a.html === b.html) return true;
+    var ta = (cleanRendered(document, a.html || "").textContent || "").replace(/\s+/g, " ").trim();
+    var tb = (cleanRendered(document, b.html || "").textContent || "").replace(/\s+/g, " ").trim();
+    return ta === tb && (a.prose || "") === (b.prose || "");
   }
   var viewers = [];
   function viewSelector(ctx) {
@@ -1152,10 +1728,11 @@ var renderMeasured = function renderMeasured(box, model) {
       if (!r || unavailable(r, ctx)) {
         // The chosen view cannot run here: fall back to the first one that
         // can, preferring those that list this block's kind (0rxe: a table
-        // with no pictures opens side by side, not on a word diff).
+        // with no pictures opens side by side, not on a word diff), then the
+        // field table for a structured block.
         var can = RENDERERS.filter(function (x) { return !unavailable(x, ctx); });
-        r = (ctx.structure ? can.filter(function (x) { return x.defaultFor.indexOf("@structured") >= 0; })[0] : null) ||
-          can.filter(function (x) { return x.defaultFor.indexOf(ctx.kind) >= 0; })[0] || can[0];
+        r = can.filter(function (x) { return x.defaultFor.indexOf(ctx.kind) >= 0; })[0] ||
+          (ctx.structure ? can.filter(function (x) { return x.defaultFor.indexOf("@structured") >= 0; })[0] : null) || can[0];
       }
       if (!r) { while (panel.firstChild) panel.removeChild(panel.firstChild); panel.appendChild(el("p", "Nothing to show for this change: it is to the manifest only.", "muted")); return; }
       sel.value = r.id;
@@ -1218,6 +1795,42 @@ var renderMeasured = function renderMeasured(box, model) {
     return fetch(url).then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); });
   }
 
+  // What to expect (cat-harness-tools#1153): the PR and the issue it closes,
+  // live from GitHub, else the copy staged with the preview. Any branch has a
+  // PR; a change set only adds detail. "Where to look" joins when the
+  // ChangeSet loads.
+  var briefBox = document.getElementById("brief");
+  var BRIEF = null, WHERE = null, JUMP = null;
+  function drawBrief() { if (BRIEF) renderBrief(document, briefBox, BRIEF, WHERE, JUMP); }
+  function gh(path) {
+    return fetch("https://api.github.com/" + path, { headers: { Accept: "application/vnd.github+json" } })
+      .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); });
+  }
+  get(ROOT + "staging.json").catch(function () { return {}; }).then(function (st) {
+    var rp = briefRepo(st);
+    var prn = st && /^\d+$/.test(String(st.pr || "")) ? String(st.pr) : null;
+    var live = rp && prn && typeof fetch === "function"
+      ? gh("repos/" + rp.owner + "/" + rp.repo + "/pulls/" + prn).then(function (p) {
+          var pr = { number: p.number, title: p.title || "", body: p.body || "", url: p.html_url || "" };
+          var n = closedIssue(pr.body) || (st.issue && /^\d+$/.test(String(st.issue)) ? Number(st.issue) : null);
+          var issue = n ? gh("repos/" + rp.owner + "/" + rp.repo + "/issues/" + n).then(function (i) {
+            return { number: i.number, title: i.title || "", url: i.html_url || "" };
+          }).catch(function () { return { number: n, title: "", url: "https://github.com/" + rp.owner + "/" + rp.repo + "/issues/" + n }; }) : Promise.resolve(null);
+          return issue.then(function (i) { return { pr: pr, issue: i, source: "live" }; });
+        })
+      : Promise.reject(new Error("no PR"));
+    return live.catch(function () {
+      return get(ROOT + "review-brief.json").then(function (b) {
+        return { pr: b.pr || null, issue: b.issue || null, source: "snapshot", fetchedAt: b.fetchedAt || null };
+      });
+    }).catch(function () { return { pr: null, issue: null, source: "none" }; }).then(function (r) {
+      // The main site, or a preview with no PR: nothing to summarise, so no pane.
+      if (!r.pr && !prn) { briefBox.hidden = true; return; }
+      BRIEF = briefModel({ staging: st, pr: r.pr, issue: r.issue, source: r.source, fetchedAt: r.fetchedAt });
+      drawBrief();
+    });
+  });
+
   // The rendered list (bean bnjs): fetched on its own, so a preview with a
   // ChangeSet but no rendered impact still shows its blocks, and says why
   // the page list is missing rather than showing an empty one.
@@ -1248,6 +1861,7 @@ var renderMeasured = function renderMeasured(box, model) {
       var structureFile = both[7];
       var visualFile = both[6];
       OUTLINE = both[5];
+      sourceLinks(OUTLINE);
       var blocksFile = both[3];
       var qaFile = both[4];
       // A summary that found NO verdict corpus (bean tfqf): every block in it
@@ -1298,6 +1912,15 @@ var renderMeasured = function renderMeasured(box, model) {
         var h2 = el("h2", where.replace("::", " \u203a "));
         h2.tabIndex = -1;
         h2.setAttribute("data-section", where);
+        var chap = where.split("::")[0];
+        if (where.indexOf("::") > 0 && !document.getElementById(chap)) {
+          var ca = el("span", null, "anchor-target");
+          ca.id = chap;
+          ca.tabIndex = -1;
+          list.appendChild(ca);
+        }
+        if (!document.getElementById(where.replace("::", "/"))) h2.id = where.replace("::", "/");
+        if (h2.id) h2.appendChild(anchorButton(h2.id, "section"));
         list.appendChild(h2);
         var ul = el("ul");
         groups[where].forEach(function (c) {
@@ -1305,6 +1928,7 @@ var renderMeasured = function renderMeasured(box, model) {
           li.tabIndex = -1;
           li.setAttribute("data-label", c.label);
           li.setAttribute("data-section", where);
+          if (!document.getElementById(c.label)) { li.id = c.label; li.appendChild(anchorButton(c.label, "block")); }
           li.setAttribute("data-open", String((byLabel[c.label] || []).filter(function (x) { return x.status === "open" || x.status === "addressed"; }).length));
           li.appendChild(el("span", kindWords(c).join(", "), "kind"));
           li.appendChild(el("span", c.label, "label"));
@@ -1332,11 +1956,14 @@ var renderMeasured = function renderMeasured(box, model) {
           li.appendChild(links);
           var v = viewSelector({
             kind: (c.head || c.base || {}).kind || "",
+            aspects: c.aspects || [],
             text: txt && txt.blocks ? txt.blocks[c.label] || null : null,
             visual: visualFile && visualFile.blocks ? visualFile.blocks[c.label] || null : null,
             structure: structureFile && structureFile.blocks ? structureFile.blocks[c.label] || null : null,
             before: before,
             after: after,
+            beforeName: beforeName,
+            facts: st && st.branch ? Object.assign({}, st, { baseSha: cs.base && cs.base.commit ? String(cs.base.commit) : "" }) : null,
           });
           li.appendChild(v.row);
           li.appendChild(v.panel);
@@ -1387,6 +2014,7 @@ var renderMeasured = function renderMeasured(box, model) {
       if (!txt && cs.changes.length) summary.textContent += " No change text on this build, so only the views of the pages" + (visualFile ? " and the pictures" : "") + " are available.";
       applyView(viewAll.value);
       applyCommentFilter(commentFilter.value, false);
+      goToHash();
       // The heat map (qbfi), above the list it indexes.
       var heat = computeHeat({ changes: cs.changes, comments: rc ? rc.comments : null, blocks: blocksFile, qa: qaFile ? qaFile.blocks : null, verdicts: rc && Array.isArray(rc.verdicts) ? rc.verdicts : null });
       if (heat.rows.length) {
@@ -1406,6 +2034,9 @@ var renderMeasured = function renderMeasured(box, model) {
           list.querySelector('h2[data-section="(unchanged)"]');
         if (t) { t.focus(); t.scrollIntoView({ block: "start" }); }
       }
+      WHERE = whereToLook(cs.changes, 6);
+      JUMP = jumpSection;
+      drawBrief();
       if (OUTLINE && OUTLINE.documents) {
         var rowBy = {};
         heat.rows.forEach(function (r) { rowBy[r.section] = r; });

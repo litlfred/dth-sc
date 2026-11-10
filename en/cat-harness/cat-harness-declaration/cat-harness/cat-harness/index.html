@@ -119,13 +119,13 @@
 <h2 id="fields">Fields</h2>
 <dl>
 <dt>$schema</dt><dd>cat-harness-declaration/1.0.0</dd>
-<dt>_comment</dt><dd>THE AGENTIC HARNESS layer. Owner, 2026-09-20 (paraphrased): the harness, the content core above it and the composed checkout are distinct instances with distinct schemas — so this declares itself `cat-harness` rather than `folio-assistant`. It carried the latter until the repository root gained a harness.json of its own, at which point TWO instances declared one name and `instanceRoots` — keyed on the declared name — could only hold one of them. The one it held was the root, so `folio-assistant` resolved to the checkout and the harness layer became unreachable by name. `stub` was RENAMED to `cat-harness` on 2026-09-21 (owner ruling, PR #685), resolving the collision where both resolved to `&lt;base&gt;/folio-assistant.jsonld`. The CatHarness declaration for THIS instance — what directories it scans and what kind of graph each holds. See skills/kg/kg-core/directory-conventions.md. This repo is PRE-SPLIT (issue #223), so it declares what is true today, not the target layout: `tools/` and `folio/` do not exist here yet and are deliberately not declared. A directory that is declared but absent is worse than one that is missing, because every consumer then scans nothing and reports a clean run over it. NOTE: `schemas/` declares TWO graphs — the first real use of the array. A directory is a place to look and may hold more than one part of the graph; it does not say how to tell them apart, because the files declare what they are (see bean xxxb: schemas/*.ts does not yet do this well). `beans/` is declared ONCE, as a single `beans` graph. Its internal split — `defs` for work items, `workflows` for running BPMN state — is declared by `beans/beans.json`, not here. #263 declared the two as separate directories, one nested inside the other, which left a consumer unable to tell which owned what beneath it; the nodes now carry that.</dd>
-<dt>_title</dt><dd>No `title`, deliberately: `displayTitle` is title || name || id, so the sidebar and the landing page fall back to `name` — which the schema already requires to be the instance&#39;s identifier, the one artefacts are stub-named after. A title here said `c@t-harness` and overrode that, labelling THIS repository with the brand of the harness layer that is still to be split out of it. Setting the title to `folio-assistant` instead would be the same fact in two fields, free to drift. The c@t-harness derivation stays in the description, where it is a tagline rather than an identity.</dd>
+<dt>_comment</dt><dd>THE AGENTIC HARNESS layer. Owner, 2026-09-20 (paraphrased): the harness, the content core above it and the composed checkout are distinct layers with distinct schemas — so this declares itself `cat-harness` rather than `folio-assistant`. It carried the latter until the repository root gained a harness.json of its own, at which point TWO layers declared one name and `instanceRoots` — keyed on the declared name — could only hold one of them. The one it held was the root, so `folio-assistant` resolved to the checkout and the harness layer became unreachable by name. `stub` was RENAMED to `cat-harness` on 2026-09-21 (owner ruling, PR #685), resolving the collision where both resolved to `&lt;base&gt;/folio-assistant.jsonld`. The CatHarness declaration for THIS layer — what directories it scans and what kind of graph each holds. See skills/kg/kg-core/directory-conventions.md. This repo is PRE-SPLIT (issue #223), so it declares what is true today, not the target layout: `tools/` and `folio/` do not exist here yet and are deliberately not declared. A directory that is declared but absent is worse than one that is missing, because every consumer then scans nothing and reports a clean run over it. NOTE: `schemas/` declares TWO graphs — the first real use of the array. A directory is a place to look and may hold more than one part of the graph; it does not say how to tell them apart, because the files declare what they are (see bean xxxb: schemas/*.ts does not yet do this well). `beans/` is declared ONCE, as a single `beans` graph. Its internal split — `defs` for work items, `workflows` for running BPMN state — is declared by `beans/beans.json`, not here. #263 declared the two as separate directories, one nested inside the other, which left a consumer unable to tell which owned what beneath it; the nodes now carry that.</dd>
+<dt>_title</dt><dd>No `title`, deliberately: `displayTitle` is title || name || id, so the sidebar and the landing page fall back to `name` — which the schema already requires to be the layer&#39;s identifier, the one artefacts are stub-named after. A title here said `c@t-harness` and overrode that, labelling THIS repository with the brand of the harness layer that is still to be split out of it. Setting the title to `folio-assistant` instead would be the same fact in two fields, free to drift. The c@t-harness derivation stays in the description, where it is a tagline rather than an identity.</dd>
 <dt>name</dt><dd>cat-harness</dd>
 <dt>repository</dt><dd>litlfred/cat-harness</dd>
 <dt>version</dt><dd>0.1.0</dd>
 <dt>iriBase</dt><dd>https://litlfred.github.io/cat-harness/</dd>
-<dt>_title_comment</dt><dd>The HUMAN display name, for the LHS navbar&#39;s harness tabs. Owner, 2026-09-21: &quot;harnesses should list the names (they should be named in schmeas, e.g. cat-boostrap should be named &#39;Boostrap&#39;, f-a =&gt; Folio Assistant, cat-harness =&gt; C@T Harness)&quot;. `name` stays the machine identifier that filenames, `needs` edges and `declaredBy` resolve against; `title` is what a reader sees and nothing resolves against. Bean t3n8. THIS ONE WAS WRONG RATHER THAN ABSENT: it declared `title: &quot;folio-assistant&quot;`, the ROOT instance&#39;s name, so two instances carried one title and `disambiguate()` correctly qualified this tab to &quot;folio-assistant (cat-harness)&quot; — the label the owner reported. The disambiguator behaved as designed; the declaration was the defect.</dd>
+<dt>_title_comment</dt><dd>The HUMAN display name, for the LHS navbar&#39;s harness tabs. Owner, 2026-09-21: &quot;harnesses should list the names (they should be named in schmeas, e.g. cat-boostrap should be named &#39;Boostrap&#39;, f-a =&gt; Folio Assistant, cat-harness =&gt; C@T Harness)&quot;. `name` stays the machine identifier that filenames, `needs` edges and `declaredBy` resolve against; `title` is what a reader sees and nothing resolves against. Bean t3n8. THIS ONE WAS WRONG RATHER THAN ABSENT: it declared `title: &quot;folio-assistant&quot;`, the ROOT layer&#39;s name, so two layers carried one title and `disambiguate()` correctly qualified this tab to &quot;folio-assistant (cat-harness)&quot; — the label the owner reported. The disambiguator behaved as designed; the declaration was the defect.</dd>
 <dt>title</dt><dd>C@T Harness</dd>
 <dt>skillPrefix</dt><dd>cat</dd>
 <dt>description</dt><dd>computable adjudication and agentic test harness
@@ -189,12 +189,12 @@ ca&amp;at-harness
     &quot;description&quot;: &quot;An at-sign whose inner a is a cat: the a&#39;s bowl is the head, its counter is the face, the ears grow out of the top of the bowl and cross the ring, and the whiskers are cut in white across the sage. The ring keeps its gap and its tail, so it still reads as an @.&quot;
   },
   {
-    &quot;_comment&quot;: &quot;THE MASK FORM, and it REPLACES the light/dark pair above rather than joining it. Owner, 2026-09-22: \&quot;I want theme like in avaatars\&quot;. An avatar is a mask plus a background-colour derived from one declared hue, so both schemes come from one number and neither can be authored legible while the other is invisible — which is exactly what `gen-avatars-css` says about not shipping 64 assets: \&quot;as files they would drift, and the one that fell behind would be invisible until somebody opened the site in the other mode\&quot;. The mark had already shipped that risk as two files that must agree. It also ends a second disagreement: `cat-harness` declares tone 268 and its mark was sage, two colour vocabularies for one instance. The cost, accepted by the owner over two hand-derived tones: the pale-sage EAR step flattens into the body.&quot;,
+    &quot;_comment&quot;: &quot;THE MASK FORM, and it REPLACES the light/dark pair above rather than joining it. Owner, 2026-09-22: \&quot;I want theme like in avaatars\&quot;. An avatar is a mask plus a background-colour derived from one declared hue, so both schemes come from one number and neither can be authored legible while the other is invisible — which is exactly what `gen-avatars-css` says about not shipping 64 assets: \&quot;as files they would drift, and the one that fell behind would be invisible until somebody opened the site in the other mode\&quot;. The mark had already shipped that risk as two files that must agree. It also ends a second disagreement: `cat-harness` declares tone 268 and its mark was sage, two colour vocabularies for one layer. The cost, accepted by the owner over two hand-derived tones: the pale-sage EAR step flattens into the body.&quot;,
     &quot;id&quot;: &quot;mark-mask&quot;,
     &quot;src&quot;: &quot;docs/assets/img/icons/cat-mark-mask.svg&quot;,
     &quot;role&quot;: &quot;mark-mask&quot;,
     &quot;title&quot;: &quot;c@t mark, as a mask&quot;,
-    &quot;description&quot;: &quot;The same at-sign expressed as ALPHA rather than as colour: opaque where the mark takes the instance&#39;s declared tone, transparent where it cuts out — the face and the whiskers, both of which are already cut-outs in the coloured mark.&quot;
+    &quot;description&quot;: &quot;The same at-sign expressed as ALPHA rather than as colour: opaque where the mark takes the layer&#39;s declared tone, transparent where it cuts out — the face and the whiskers, both of which are already cut-outs in the coloured mark.&quot;
   },
   {
     &quot;_comment&quot;: &quot;THE DARK-SCHEME MARK, and it exists for a MEASUREMENT rather than for taste. The light ink (#596a5b, taken from the art the owner supplied) is only 2.60:1 on the dark sidebar #27262b — under the 3:1 bar for meaningful non-text content. #9db89f is the same hue lifted: 7.00:1 there, 8.82:1 on near-black. Same geometry, one fill attribute apart, both generated from one trace so they cannot drift. Bean 5r57.&quot;,
@@ -217,7 +217,7 @@ ca&amp;at-harness
       &quot;h&quot;: 0.28
     },
     &quot;title&quot;: &quot;Thinking about it — wide&quot;,
-    &quot;description&quot;: &quot;A grumpy cat in a sage hoodie stands in the rain under a thought-cloud carrying the c@t mark; the instance&#39;s description is drawn inside the cloud. Wide crop. The region is the cloud&#39;s lower interior, below the mark and clear of the ear that rises into its lower left. The text region was found by rendering candidate boxes over the image and looking at them — the first attempt spilled past the cloud edge, which no amount of arithmetic on the aspect ratio would have caught.&quot;
+    &quot;description&quot;: &quot;A grumpy cat in a sage hoodie stands in the rain under a thought-cloud carrying the c@t mark; the layer&#39;s description is drawn inside the cloud. Wide crop. The region is the cloud&#39;s lower interior, below the mark and clear of the ear that rises into its lower left. The text region was found by rendering candidate boxes over the image and looking at them — the first attempt spilled past the cloud edge, which no amount of arithmetic on the aspect ratio would have caught.&quot;
   },
   {
     &quot;id&quot;: &quot;landing-mobile&quot;,
@@ -233,7 +233,7 @@ ca&amp;at-harness
       &quot;h&quot;: 0.225
     },
     &quot;title&quot;: &quot;Thinking about it — tall&quot;,
-    &quot;description&quot;: &quot;A grumpy cat in a sage hoodie stands in the rain under a thought-cloud carrying the c@t mark; the instance&#39;s description is drawn inside the cloud. Portrait crop for a phone: the cloud fills the upper half and the cat sits below it, so the region is wider in fraction and shallower than the laptop&#39;s, and the cat is nowhere near it. The text region was found by rendering candidate boxes over the image and looking at them — the first attempt spilled past the cloud edge, which no amount of arithmetic on the aspect ratio would have caught.&quot;
+    &quot;description&quot;: &quot;A grumpy cat in a sage hoodie stands in the rain under a thought-cloud carrying the c@t mark; the layer&#39;s description is drawn inside the cloud. Portrait crop for a phone: the cloud fills the upper half and the cat sits below it, so the region is wider in fraction and shallower than the laptop&#39;s, and the cat is nowhere near it. The text region was found by rendering candidate boxes over the image and looking at them — the first attempt spilled past the cloud edge, which no amount of arithmetic on the aspect ratio would have caught.&quot;
   },
   {
     &quot;id&quot;: &quot;landing-card&quot;,
@@ -249,7 +249,7 @@ ca&amp;at-harness
       &quot;h&quot;: 0.235
     },
     &quot;title&quot;: &quot;Thinking about it — square&quot;,
-    &quot;description&quot;: &quot;A grumpy cat in a sage hoodie stands in the rain under a thought-cloud carrying the c@t mark; the instance&#39;s description is drawn inside the cloud. Square crop for a card or sticker. The cloud is pushed right by the cat at the lower left, so the region starts further in than either other variant — the clearest case for why each layout carries its own. The text region was found by rendering candidate boxes over the image and looking at them — the first attempt spilled past the cloud edge, which no amount of arithmetic on the aspect ratio would have caught.&quot;,
+    &quot;description&quot;: &quot;A grumpy cat in a sage hoodie stands in the rain under a thought-cloud carrying the c@t mark; the layer&#39;s description is drawn inside the cloud. Square crop for a card or sticker. The cloud is pushed right by the cat at the lower left, so the region starts further in than either other variant — the clearest case for why each layout carries its own. The text region was found by rendering candidate boxes over the image and looking at them — the first attempt spilled past the cloud edge, which no amount of arithmetic on the aspect ratio would have caught.&quot;,
     &quot;avatarRegion&quot;: {
       &quot;x&quot;: 0,
       &quot;y&quot;: 0.46,
@@ -265,7 +265,7 @@ ca&amp;at-harness
     &quot;width&quot;: 1672,
     &quot;height&quot;: 941,
     &quot;title&quot;: &quot;The engineer, wide&quot;,
-    &quot;description&quot;: &quot;The grumpy cat in a hi-vis engineering vest, rust-stained, with the c@t mark as a chest patch, under the same thought-cloud. Backdrop for the `engineer` theme, reached by ROLE rather than by path, so an instance declaring its own `landing-engineer` art gets its own. No `textRegion`, deliberately: this art backs a STICKY, and a sticky is the container that sizes to its content rather than text fitted into a cloud interior, so a region here would reimpose the geometry the sticky removes. The three landing-*.webp entries keep theirs, because the composited path still uses them. PNG rather than webp because no converter was available where these arrived; at roughly 1.6 MB each against 100 KB for the webp siblings that is worth fixing and is tracked separately. One is loaded per viewport, not all three.&quot;
+    &quot;description&quot;: &quot;The grumpy cat in a hi-vis engineering vest, rust-stained, with the c@t mark as a chest patch, under the same thought-cloud. Backdrop for the `engineer` theme, reached by ROLE rather than by path, so a layer declaring its own `landing-engineer` art gets its own. No `textRegion`, deliberately: this art backs a STICKY, and a sticky is the container that sizes to its content rather than text fitted into a cloud interior, so a region here would reimpose the geometry the sticky removes. The three landing-*.webp entries keep theirs, because the composited path still uses them. PNG rather than webp because no converter was available where these arrived; at roughly 1.6 MB each against 100 KB for the webp siblings that is worth fixing and is tracked separately. One is loaded per viewport, not all three.&quot;
   },
   {
     &quot;id&quot;: &quot;landing-engineer-mobile&quot;,
@@ -275,7 +275,7 @@ ca&amp;at-harness
     &quot;width&quot;: 942,
     &quot;height&quot;: 1670,
     &quot;title&quot;: &quot;The engineer, tall&quot;,
-    &quot;description&quot;: &quot;The grumpy cat in a hi-vis engineering vest, rust-stained, with the c@t mark as a chest patch, under the same thought-cloud. Backdrop for the `engineer` theme, reached by ROLE rather than by path, so an instance declaring its own `landing-engineer` art gets its own. No `textRegion`, deliberately: this art backs a STICKY, and a sticky is the container that sizes to its content rather than text fitted into a cloud interior, so a region here would reimpose the geometry the sticky removes. The three landing-*.webp entries keep theirs, because the composited path still uses them. PNG rather than webp because no converter was available where these arrived; at roughly 1.6 MB each against 100 KB for the webp siblings that is worth fixing and is tracked separately. One is loaded per viewport, not all three.&quot;
+    &quot;description&quot;: &quot;The grumpy cat in a hi-vis engineering vest, rust-stained, with the c@t mark as a chest patch, under the same thought-cloud. Backdrop for the `engineer` theme, reached by ROLE rather than by path, so a layer declaring its own `landing-engineer` art gets its own. No `textRegion`, deliberately: this art backs a STICKY, and a sticky is the container that sizes to its content rather than text fitted into a cloud interior, so a region here would reimpose the geometry the sticky removes. The three landing-*.webp entries keep theirs, because the composited path still uses them. PNG rather than webp because no converter was available where these arrived; at roughly 1.6 MB each against 100 KB for the webp siblings that is worth fixing and is tracked separately. One is loaded per viewport, not all three.&quot;
   },
   {
     &quot;id&quot;: &quot;landing-engineer-card&quot;,
@@ -285,7 +285,7 @@ ca&amp;at-harness
     &quot;width&quot;: 1254,
     &quot;height&quot;: 1254,
     &quot;title&quot;: &quot;The engineer, square&quot;,
-    &quot;description&quot;: &quot;The grumpy cat in a hi-vis engineering vest, rust-stained, with the c@t mark as a chest patch, under the same thought-cloud. Backdrop for the `engineer` theme, reached by ROLE rather than by path, so an instance declaring its own `landing-engineer` art gets its own. No `textRegion`, deliberately: this art backs a STICKY, and a sticky is the container that sizes to its content rather than text fitted into a cloud interior, so a region here would reimpose the geometry the sticky removes. The three landing-*.webp entries keep theirs, because the composited path still uses them. PNG rather than webp because no converter was available where these arrived; at roughly 1.6 MB each against 100 KB for the webp siblings that is worth fixing and is tracked separately. One is loaded per viewport, not all three.&quot;,
+    &quot;description&quot;: &quot;The grumpy cat in a hi-vis engineering vest, rust-stained, with the c@t mark as a chest patch, under the same thought-cloud. Backdrop for the `engineer` theme, reached by ROLE rather than by path, so a layer declaring its own `landing-engineer` art gets its own. No `textRegion`, deliberately: this art backs a STICKY, and a sticky is the container that sizes to its content rather than text fitted into a cloud interior, so a region here would reimpose the geometry the sticky removes. The three landing-*.webp entries keep theirs, because the composited path still uses them. PNG rather than webp because no converter was available where these arrived; at roughly 1.6 MB each against 100 KB for the webp siblings that is worth fixing and is tracked separately. One is loaded per viewport, not all three.&quot;,
     &quot;avatarRegion&quot;: {
       &quot;x&quot;: 0,
       &quot;y&quot;: 0.4,
@@ -355,7 +355,7 @@ ca&amp;at-harness
     &quot;width&quot;: 1669,
     &quot;height&quot;: 942,
     &quot;title&quot;: &quot;The librarian, wide&quot;,
-    &quot;description&quot;: &quot;The grumpy cat as librarian: reading glasses, knitted scarf, a stack of tooled leather books with paw-print and tree devices, a satchel carrying the c@t mark on a brass fob, a gothic library behind in the rain. Backdrop for the `library` theme - the one for knowledge-graph discussion, content, data modelling and schema definition. Reached by ROLE rather than by path, so an instance declaring its own `landing-library` art gets its own. NOTE the portrait crop is 1024x1536 (aspect 0.667) where the other themes&#39; portrait crops are 941x1670 (0.564). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface colour instead of cropping the subject. It would matter if this art were ever composited behind text positioned by a textRegion, which is why the difference is written down. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2.3 MB a crop, against ~100 KB for the original webp siblings; one is loaded per viewport, not all three. Converting is tracked in bean ll11.&quot;
+    &quot;description&quot;: &quot;The grumpy cat as librarian: reading glasses, knitted scarf, a stack of tooled leather books with paw-print and tree devices, a satchel carrying the c@t mark on a brass fob, a gothic library behind in the rain. Backdrop for the `library` theme - the one for knowledge-graph discussion, content, data modelling and schema definition. Reached by ROLE rather than by path, so a layer declaring its own `landing-library` art gets its own. NOTE the portrait crop is 1024x1536 (aspect 0.667) where the other themes&#39; portrait crops are 941x1670 (0.564). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface colour instead of cropping the subject. It would matter if this art were ever composited behind text positioned by a textRegion, which is why the difference is written down. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2.3 MB a crop, against ~100 KB for the original webp siblings; one is loaded per viewport, not all three. Converting is tracked in bean ll11.&quot;
   },
   {
     &quot;id&quot;: &quot;landing-library-mobile&quot;,
@@ -365,7 +365,7 @@ ca&amp;at-harness
     &quot;width&quot;: 1024,
     &quot;height&quot;: 1536,
     &quot;title&quot;: &quot;The librarian, tall&quot;,
-    &quot;description&quot;: &quot;The grumpy cat as librarian: reading glasses, knitted scarf, a stack of tooled leather books with paw-print and tree devices, a satchel carrying the c@t mark on a brass fob, a gothic library behind in the rain. Backdrop for the `library` theme - the one for knowledge-graph discussion, content, data modelling and schema definition. Reached by ROLE rather than by path, so an instance declaring its own `landing-library` art gets its own. NOTE the portrait crop is 1024x1536 (aspect 0.667) where the other themes&#39; portrait crops are 941x1670 (0.564). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface colour instead of cropping the subject. It would matter if this art were ever composited behind text positioned by a textRegion, which is why the difference is written down. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2.3 MB a crop, against ~100 KB for the original webp siblings; one is loaded per viewport, not all three. Converting is tracked in bean ll11.&quot;
+    &quot;description&quot;: &quot;The grumpy cat as librarian: reading glasses, knitted scarf, a stack of tooled leather books with paw-print and tree devices, a satchel carrying the c@t mark on a brass fob, a gothic library behind in the rain. Backdrop for the `library` theme - the one for knowledge-graph discussion, content, data modelling and schema definition. Reached by ROLE rather than by path, so a layer declaring its own `landing-library` art gets its own. NOTE the portrait crop is 1024x1536 (aspect 0.667) where the other themes&#39; portrait crops are 941x1670 (0.564). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface colour instead of cropping the subject. It would matter if this art were ever composited behind text positioned by a textRegion, which is why the difference is written down. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2.3 MB a crop, against ~100 KB for the original webp siblings; one is loaded per viewport, not all three. Converting is tracked in bean ll11.&quot;
   },
   {
     &quot;id&quot;: &quot;landing-library-card&quot;,
@@ -375,7 +375,7 @@ ca&amp;at-harness
     &quot;width&quot;: 1254,
     &quot;height&quot;: 1254,
     &quot;title&quot;: &quot;The librarian, square&quot;,
-    &quot;description&quot;: &quot;The grumpy cat as librarian: reading glasses, knitted scarf, a stack of tooled leather books with paw-print and tree devices, a satchel carrying the c@t mark on a brass fob, a gothic library behind in the rain. Backdrop for the `library` theme - the one for knowledge-graph discussion, content, data modelling and schema definition. Reached by ROLE rather than by path, so an instance declaring its own `landing-library` art gets its own. NOTE the portrait crop is 1024x1536 (aspect 0.667) where the other themes&#39; portrait crops are 941x1670 (0.564). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface colour instead of cropping the subject. It would matter if this art were ever composited behind text positioned by a textRegion, which is why the difference is written down. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2.3 MB a crop, against ~100 KB for the original webp siblings; one is loaded per viewport, not all three. Converting is tracked in bean ll11.&quot;,
+    &quot;description&quot;: &quot;The grumpy cat as librarian: reading glasses, knitted scarf, a stack of tooled leather books with paw-print and tree devices, a satchel carrying the c@t mark on a brass fob, a gothic library behind in the rain. Backdrop for the `library` theme - the one for knowledge-graph discussion, content, data modelling and schema definition. Reached by ROLE rather than by path, so a layer declaring its own `landing-library` art gets its own. NOTE the portrait crop is 1024x1536 (aspect 0.667) where the other themes&#39; portrait crops are 941x1670 (0.564). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface colour instead of cropping the subject. It would matter if this art were ever composited behind text positioned by a textRegion, which is why the difference is written down. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2.3 MB a crop, against ~100 KB for the original webp siblings; one is loaded per viewport, not all three. Converting is tracked in bean ll11.&quot;,
     &quot;avatarRegion&quot;: {
       &quot;x&quot;: 0.14,
       &quot;y&quot;: 0.4,
@@ -391,7 +391,7 @@ ca&amp;at-harness
     &quot;width&quot;: 1536,
     &quot;height&quot;: 1024,
     &quot;title&quot;: &quot;The analyst, wide&quot;,
-    &quot;description&quot;: &quot;The grumpy cat as analyst: pinstripe suit, blue tie carrying the c@t mark, glasses, a tablet, printed bar and pie charts, books with chart devices on the spines, a marked mug. Backdrop for the `analyst` theme - SDLC, CRDM, business analysis and data engineering. Reached by ROLE rather than by path, so an instance declaring its own `landing-analyst` art gets its own. THE ONLY SUNNY ONE. Blue sky and flowering shrubs where grumpy-cat, engineer, architecture and library are all storm-grey, which is why its palette is warmer and brighter than theirs rather than a variation on one: the sampled cloud is #f0f0e4 over 28% of the frame, against #e4e4e4 for the librarian. The wide crop is 1536x1024 (aspect 1.50) where the other landscape crops are 1671x941 (1.78). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface instead of cropping the subject. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2 MB a crop; one is loaded per viewport, not all three. Conversion is bean ll11.&quot;
+    &quot;description&quot;: &quot;The grumpy cat as analyst: pinstripe suit, blue tie carrying the c@t mark, glasses, a tablet, printed bar and pie charts, books with chart devices on the spines, a marked mug. Backdrop for the `analyst` theme - SDLC, CRDM, business analysis and data engineering. Reached by ROLE rather than by path, so a layer declaring its own `landing-analyst` art gets its own. THE ONLY SUNNY ONE. Blue sky and flowering shrubs where grumpy-cat, engineer, architecture and library are all storm-grey, which is why its palette is warmer and brighter than theirs rather than a variation on one: the sampled cloud is #f0f0e4 over 28% of the frame, against #e4e4e4 for the librarian. The wide crop is 1536x1024 (aspect 1.50) where the other landscape crops are 1671x941 (1.78). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface instead of cropping the subject. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2 MB a crop; one is loaded per viewport, not all three. Conversion is bean ll11.&quot;
   },
   {
     &quot;id&quot;: &quot;landing-analyst-mobile&quot;,
@@ -401,7 +401,7 @@ ca&amp;at-harness
     &quot;width&quot;: 941,
     &quot;height&quot;: 1672,
     &quot;title&quot;: &quot;The analyst, tall&quot;,
-    &quot;description&quot;: &quot;The grumpy cat as analyst: pinstripe suit, blue tie carrying the c@t mark, glasses, a tablet, printed bar and pie charts, books with chart devices on the spines, a marked mug. Backdrop for the `analyst` theme - SDLC, CRDM, business analysis and data engineering. Reached by ROLE rather than by path, so an instance declaring its own `landing-analyst` art gets its own. THE ONLY SUNNY ONE. Blue sky and flowering shrubs where grumpy-cat, engineer, architecture and library are all storm-grey, which is why its palette is warmer and brighter than theirs rather than a variation on one: the sampled cloud is #f0f0e4 over 28% of the frame, against #e4e4e4 for the librarian. The wide crop is 1536x1024 (aspect 1.50) where the other landscape crops are 1671x941 (1.78). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface instead of cropping the subject. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2 MB a crop; one is loaded per viewport, not all three. Conversion is bean ll11.&quot;
+    &quot;description&quot;: &quot;The grumpy cat as analyst: pinstripe suit, blue tie carrying the c@t mark, glasses, a tablet, printed bar and pie charts, books with chart devices on the spines, a marked mug. Backdrop for the `analyst` theme - SDLC, CRDM, business analysis and data engineering. Reached by ROLE rather than by path, so a layer declaring its own `landing-analyst` art gets its own. THE ONLY SUNNY ONE. Blue sky and flowering shrubs where grumpy-cat, engineer, architecture and library are all storm-grey, which is why its palette is warmer and brighter than theirs rather than a variation on one: the sampled cloud is #f0f0e4 over 28% of the frame, against #e4e4e4 for the librarian. The wide crop is 1536x1024 (aspect 1.50) where the other landscape crops are 1671x941 (1.78). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface instead of cropping the subject. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2 MB a crop; one is loaded per viewport, not all three. Conversion is bean ll11.&quot;
   },
   {
     &quot;id&quot;: &quot;landing-analyst-card&quot;,
@@ -411,7 +411,7 @@ ca&amp;at-harness
     &quot;width&quot;: 1254,
     &quot;height&quot;: 1254,
     &quot;title&quot;: &quot;The analyst, square&quot;,
-    &quot;description&quot;: &quot;The grumpy cat as analyst: pinstripe suit, blue tie carrying the c@t mark, glasses, a tablet, printed bar and pie charts, books with chart devices on the spines, a marked mug. Backdrop for the `analyst` theme - SDLC, CRDM, business analysis and data engineering. Reached by ROLE rather than by path, so an instance declaring its own `landing-analyst` art gets its own. THE ONLY SUNNY ONE. Blue sky and flowering shrubs where grumpy-cat, engineer, architecture and library are all storm-grey, which is why its palette is warmer and brighter than theirs rather than a variation on one: the sampled cloud is #f0f0e4 over 28% of the frame, against #e4e4e4 for the librarian. The wide crop is 1536x1024 (aspect 1.50) where the other landscape crops are 1671x941 (1.78). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface instead of cropping the subject. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2 MB a crop; one is loaded per viewport, not all three. Conversion is bean ll11.&quot;,
+    &quot;description&quot;: &quot;The grumpy cat as analyst: pinstripe suit, blue tie carrying the c@t mark, glasses, a tablet, printed bar and pie charts, books with chart devices on the spines, a marked mug. Backdrop for the `analyst` theme - SDLC, CRDM, business analysis and data engineering. Reached by ROLE rather than by path, so a layer declaring its own `landing-analyst` art gets its own. THE ONLY SUNNY ONE. Blue sky and flowering shrubs where grumpy-cat, engineer, architecture and library are all storm-grey, which is why its palette is warmer and brighter than theirs rather than a variation on one: the sampled cloud is #f0f0e4 over 28% of the frame, against #e4e4e4 for the librarian. The wide crop is 1536x1024 (aspect 1.50) where the other landscape crops are 1671x941 (1.78). Recorded rather than corrected: the backdrop is `contain`ed and faded, so a different aspect letterboxes into the card&#39;s own surface instead of cropping the subject. No `textRegion`: this art backs a STICKY, and a sticky sizes to its content. PNG at ~2 MB a crop; one is loaded per viewport, not all three. Conversion is bean ll11.&quot;,
     &quot;avatarRegion&quot;: {
       &quot;x&quot;: 0.05,
       &quot;y&quot;: 0.48,
@@ -586,21 +586,21 @@ ca&amp;at-harness
     &quot;src&quot;: &quot;AGENTS.md&quot;,
     &quot;role&quot;: &quot;agent-instructions&quot;,
     &quot;title&quot;: &quot;AGENTS.md — cat-harness&quot;,
-    &quot;description&quot;: &quot;The cold-start file for an agent working IN this layer, and it is THIS LAYER&#39;S own as of 2026-09-20 (issue #592). It was declared `scope: \&quot;repository\&quot;`, so it resolved to the repository root&#39;s AGENTS.md — one file answering both \&quot;what binds everywhere\&quot; and \&quot;what binds in the harness layer\&quot;, which is the conflation `readmeFinding` calls MAJOR for a non-root instance and could not report, because the asset DID resolve. It resolved to the wrong file&#39;s job. No `source`: this file is authored here. The root&#39;s carries the bootstrap provenance, because the root&#39;s is the file bootstrap copies at initialisation.&quot;
+    &quot;description&quot;: &quot;The cold-start file for an agent working IN this layer, and it is THIS LAYER&#39;S own as of 2026-09-20 (issue #592). It was declared `scope: \&quot;repository\&quot;`, so it resolved to the repository root&#39;s AGENTS.md — one file answering both \&quot;what binds everywhere\&quot; and \&quot;what binds in the harness layer\&quot;, which is the conflation `readmeFinding` calls MAJOR for a non-root layer and could not report, because the asset DID resolve. It resolved to the wrong file&#39;s job. No `source`: this file is authored here. The root&#39;s carries the bootstrap provenance, because the root&#39;s is the file bootstrap copies at initialisation.&quot;
   },
   {
     &quot;id&quot;: &quot;instance-readme&quot;,
     &quot;src&quot;: &quot;README.md&quot;,
     &quot;role&quot;: &quot;instance-readme&quot;,
     &quot;title&quot;: &quot;cat-harness&quot;,
-    &quot;description&quot;: &quot;What this LAYER is, for a reader — as distinct from what the repository is, which is the root&#39;s README. Split from it on 2026-09-20 (issue #592); before that this instance had no README of its own and claimed the repository&#39;s. It does not list this instance&#39;s directories: `harness.json` is that list, and a second copy in prose is free to disagree with it the day a directory moves.&quot;
+    &quot;description&quot;: &quot;What this LAYER is, for a reader — as distinct from what the repository is, which is the root&#39;s README. Split from it on 2026-09-20 (issue #592); before that this layer had no README of its own and claimed the repository&#39;s. It does not list this layer&#39;s directories: `harness.json` is that list, and a second copy in prose is free to disagree with it the day a directory moves.&quot;
   },
   {
     &quot;id&quot;: &quot;bootstrap-initialization&quot;,
     &quot;src&quot;: &quot;docs/bootstrap/initialization.md&quot;,
     &quot;role&quot;: &quot;bootstrap-initialization&quot;,
     &quot;title&quot;: &quot;Initializing into folio-assistant&quot;,
-    &quot;description&quot;: &quot;What bootstrap&#39;s step 2 reads once it has been pointed at THIS instance. Published at the fixed convention every cat-harness instance honours, composed by `initializationDoc()` rather than spelled, so bootstrap needs no per-target knowledge and can initialise into a SPECIALISED harness it was never written against. Declared as an asset as well as conventional, so `check:declared-assets` verifies it is there and that its links resolve: a convention nothing checks is a convention that is honoured until it quietly is not. The path is INSTANCE-relative here, not `&lt;stub&gt;/docs/...`: this instance has its own directory (`cat-harness/`), so `siteDir` is plain `docs`, and the stub names published artefacts rather than a directory. Whether bootstrap can still find it from one reference is open — see bean `wggr`.&quot;
+    &quot;description&quot;: &quot;What bootstrap&#39;s step 2 reads once it has been pointed at THIS layer. Published at the fixed convention every cat-harness layer honours, composed by `initializationDoc()` rather than spelled, so bootstrap needs no per-target knowledge and can initialise into a SPECIALISED harness it was never written against. Declared as an asset as well as conventional, so `check:declared-assets` verifies it is there and that its links resolve: a convention nothing checks is a convention that is honoured until it quietly is not. The path is INSTANCE-relative here, not `&lt;stub&gt;/docs/...`: this layer has its own directory (`cat-harness/`), so `siteDir` is plain `docs`, and the stub names published artefacts rather than a directory. Whether bootstrap can still find it from one reference is open — see bean `wggr`.&quot;
   },
   {
     &quot;id&quot;: &quot;npm-manifest&quot;,
@@ -614,13 +614,13 @@ ca&amp;at-harness
     &quot;src&quot;: &quot;node-kinds.baseline.json&quot;,
     &quot;role&quot;: &quot;unkinded-baseline&quot;,
     &quot;title&quot;: &quot;Unkinded families — cat-harness&quot;,
-    &quot;description&quot;: &quot;The families whose typology THIS instance declares (in code, BASE_GRAPH_TYPOLOGIES and its registrations, or in its archimate/ and openapi/ typologies graphs) that predate node kinds and may stay unkinded; `node-kinds:check` fails on any other. Owner, 2026-10-15: split out of docs/_data/node-kinds.json, which spanned every layer and is now built at publish, so each layer&#39;s families are judged by its own commit. Written by `bun run cat node-kinds`, which only shrinks it; `--accept-unkinded` grows it deliberately.&quot;
+    &quot;description&quot;: &quot;The families whose typology THIS layer declares (in code, BASE_GRAPH_TYPOLOGIES and its registrations, or in its archimate/ and openapi/ typologies graphs) that predate node kinds and may stay unkinded; `node-kinds:check` fails on any other. Owner, 2026-10-15: split out of docs/_data/node-kinds.json, which spanned every layer and is now built at publish, so each layer&#39;s families are judged by its own commit. Written by `bun run cat node-kinds`, which only shrinks it; `--accept-unkinded` grows it deliberately.&quot;
   }
 ]</pre></dd>
-<dt>_stub_comment</dt><dd>RENAMED from `folio-assistant` on 2026-09-21, on the owner&#39;s ruling, closing the collision issue #649 raised and bean `x3bd` flagged as settle-before-you-move. `artefactStub(d) = d.stub ?? d.name`, so this field is the ONLY stub declared anywhere in the tree — every other instance falls through to its `name`. While it read `folio-assistant` it was the string the REPOSITORY ROOT instance also carries as its `name`, so both resolved to `&lt;base&gt;/folio-assistant.jsonld`: two vocabularies, one path, and a reader dereferencing it got whichever layer answered. It is kept as an explicit field rather than deleted so the rename is visible where the collision was, and because `x3bd` records that this string names published artefacts (`.jsonld`, `.schema.json`, the viewer directory) rather than being cosmetic.</dd>
+<dt>_stub_comment</dt><dd>RENAMED from `folio-assistant` on 2026-09-21, on the owner&#39;s ruling, closing the collision issue #649 raised and bean `x3bd` flagged as settle-before-you-move. `artefactStub(d) = d.stub ?? d.name`, so this field is the ONLY stub declared anywhere in the tree — every other layer falls through to its `name`. While it read `folio-assistant` it was the string the REPOSITORY ROOT layer also carries as its `name`, so both resolved to `&lt;base&gt;/folio-assistant.jsonld`: two vocabularies, one path, and a reader dereferencing it got whichever layer answered. It is kept as an explicit field rather than deleted so the rename is visible where the collision was, and because `x3bd` records that this string names published artefacts (`.jsonld`, `.schema.json`, the viewer directory) rather than being cosmetic.</dd>
 <dt>stub</dt><dd>cat-harness</dd>
 <dt>canonicalUrl</dt><dd>https://litlfred.github.io/folio-assistant</dd>
-<dt>_publication_comment</dt><dd>The `publication host` axis of docs/proposals/deployment-topologies.md, accepted 2026-09-19 (issue #363). WHAT KIND of host serves the renderings — distinct from `canonicalUrl` (the base @ids are minted against) and from `readme.linkStyle` in harness.config.json (how a link to a published artefact is written). This instance really does publish to GitHub Pages, so it declares so; an instance that has not said is `undefined`, which is a third state and must never be read as `github-pages`.</dd>
+<dt>_publication_comment</dt><dd>The `publication host` axis of docs/proposals/deployment-topologies.md, accepted 2026-09-19 (issue #363). WHAT KIND of host serves the renderings — distinct from `canonicalUrl` (the base @ids are minted against) and from `readme.linkStyle` in harness.config.json (how a link to a published artefact is written). This layer really does publish to GitHub Pages, so it declares so; a layer that has not said is `undefined`, which is a third state and must never be read as `github-pages`.</dd>
 <dt>publication</dt><dd><pre>{
   &quot;host&quot;: &quot;github-pages&quot;
 }</pre></dd>
@@ -689,7 +689,7 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;external-schemas&quot;,
     &quot;path&quot;: &quot;external-schemas/&quot;,
-    &quot;description&quot;: &quot;The specifications this instance depends on, one record per specification, each pinning the EDITION in use and carrying the operative terms DERIVED from the corpus rather than hand-listed. Owner, 2026-09-20: \&quot;dont need to materalize, but should reference specific version being used\&quot; and \&quot;some schema that is operational should be in KG\&quot;. UNDECLARED UNTIL 2026-09-22, which is the dh4f shape inverted: dh4f is a declared directory nothing holds, reported as a clean scan; this was a held directory nothing declared, so every consumer that fans out over declared directories skipped a registry that pins four external namespaces. It was reachable only by the one script that hardcodes its path. `dependents: reproduce` because a dependent folio consumes its own specifications — it inherits the convention, an id and a relative path, not this instance&#39;s records.&quot;,
+    &quot;description&quot;: &quot;The specifications this layer depends on, one record per specification, each pinning the EDITION in use and carrying the operative terms DERIVED from the corpus rather than hand-listed. Owner, 2026-09-20: \&quot;dont need to materalize, but should reference specific version being used\&quot; and \&quot;some schema that is operational should be in KG\&quot;. UNDECLARED UNTIL 2026-09-22, which is the dh4f shape inverted: dh4f is a declared directory nothing holds, reported as a clean scan; this was a held directory nothing declared, so every consumer that fans out over declared directories skipped a registry that pins four external namespaces. It was reachable only by the one script that hardcodes its path. `dependents: reproduce` because a dependent folio consumes its own specifications — it inherits the convention, an id and a relative path, not this layer&#39;s records.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;external-schema&quot;
     ],
@@ -704,10 +704,10 @@ ca&amp;at-harness
     &quot;id&quot;: &quot;subscriptions&quot;,
     &quot;path&quot;: &quot;subscriptions/&quot;,
     &quot;title&quot;: &quot;Subscribed substrates&quot;,
-    &quot;description&quot;: &quot;The root declaration of each Knowledge Graph this instance subscribes to, cached at the pinned commit: one `&lt;id&gt;.substrate.json` per `subscriptions` entry, holding the upstream bytes, their sha256, and the harnesses and subgraphs the substrate offers. Written by `bun run cat kg:subscribe`; never edited by hand. Each CHOSEN part a subscriber materialises lands here too, under `&lt;id&gt;/subgraphs/&lt;subgraph&gt;/` or `&lt;id&gt;/assets/&lt;path&gt;/`: the upstream bytes under `tree/` and a `materialization.json` beside them with fixity, provenance and the five gates. A subgraph fetched in metadata mode (`kg:materialize --nodes`) lands under `&lt;id&gt;/nodes/&lt;subgraph path&gt;/`: its published `index.hydrated.jsonld` and a `nodes.json` record with its sha256. Written by `bun run cat kg:materialize`; never edited by hand. Nothing else writes here: an instantiated harness&#39;s state lives in `subscribed-harnesses/` (owner, 2026-10-30, bean `w1gy` finding 1, option C, \&quot;split the directory\&quot;).&quot;,
+    &quot;description&quot;: &quot;The root declaration of each Knowledge Graph this layer subscribes to, cached at the pinned commit: one `&lt;id&gt;.substrate.json` per `subscriptions` entry, holding the upstream bytes, their sha256, and the harnesses and subgraphs the substrate offers. Written by `bun run cat kg:subscribe`; never edited by hand. Each CHOSEN part a subscriber materialises lands here too, under `&lt;id&gt;/subgraphs/&lt;subgraph&gt;/` or `&lt;id&gt;/assets/&lt;path&gt;/`: the upstream bytes under `tree/` and a `materialization.json` beside them with fixity, provenance and the five gates. A subgraph fetched in metadata mode (`kg:materialize --nodes`) lands under `&lt;id&gt;/nodes/&lt;subgraph path&gt;/`: its published `index.hydrated.jsonld` and a `nodes.json` record with its sha256. Written by `bun run cat kg:materialize`; never edited by hand. Nothing else writes here: an instantiated harness&#39;s state lives in `subscribed-harnesses/` (owner, 2026-10-30, bean `w1gy` finding 1, option C, \&quot;split the directory\&quot;).&quot;,
     &quot;readOnly&quot;: true,
     &quot;readOnlyBasis&quot;: &quot;Copies of somebody else&#39;s bytes at a pin: each snapshot carries the sha256 of the upstream declaration it wraps, and each materialised part a `materialization.json` with fixity per file, re-checked by `kg:subscribe:check`, `kg:materialize:check` and `check:materialized-fixity`. Refresh by moving the pin and re-running the writer, never by editing here. The subscriber&#39;s own working state was split out to `subscribed-harnesses/` so this directory holds copies only.&quot;,
-    &quot;_description_comment&quot;: &quot;Issue #1719, epic bean `fnx4`, slice 4. A NEW directory rather than a reused one because no declared kind fits: `external-schema` is a person&#39;s decision about an edition (`content`), `library` is ingested L1 sections, and `catalogue` is core&#39;s, which cat-harness may not depend on. The snapshot is somebody else&#39;s bytes regenerated by a command, which is `derived`. `dependents: skip` because a subscription is a choice each instance makes for itself: `reproduce` would put an empty directory in every downstream folio, and one that subscribes declares its own (`kg:subscribe` refuses an instance that declares none, and says what to declare). The snapshot WRAPS the upstream `&lt;name&gt;.json` rather than copying it, because a bare copy carries `name` equal to its stem, which is the rule every scanner uses to recognise an instance declaration.&quot;,
+    &quot;_description_comment&quot;: &quot;Issue #1719, epic bean `fnx4`, slice 4. A NEW directory rather than a reused one because no declared kind fits: `external-schema` is a person&#39;s decision about an edition (`content`), `library` is ingested L1 sections, and `catalogue` is core&#39;s, which cat-harness may not depend on. The snapshot is somebody else&#39;s bytes regenerated by a command, which is `derived`. `dependents: skip` because a subscription is a choice each layer makes for itself: `reproduce` would put an empty directory in every downstream folio, and one that subscribes declares its own (`kg:subscribe` refuses a layer that declares none, and says what to declare). The snapshot WRAPS the upstream `&lt;name&gt;.json` rather than copying it, because a bare copy carries `name` equal to its stem, which is the rule every scanner uses to recognise a layer declaration.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;substrate-snapshot&quot;
     ]
@@ -716,14 +716,20 @@ ca&amp;at-harness
     &quot;id&quot;: &quot;subscribed-harnesses&quot;,
     &quot;path&quot;: &quot;subscribed-harnesses/&quot;,
     &quot;title&quot;: &quot;Subscribed harness state&quot;,
-    &quot;description&quot;: &quot;The state directories of each harness this instance instantiates from a KG subscription: `&lt;subscription&gt;/&lt;harness&gt;/&lt;state path&gt;/`, one home per chosen harness, each state directory the harness declares created with a `.gitkeep`. Written by `bun run cat kg:instantiate`; the harness&#39;s processes write into it after that. Never at the repository root, where a harness named after a staged instance would write into that instance&#39;s directory (gap G11), and never under `subscriptions/`, which holds upstream&#39;s bytes and is read-only.&quot;,
-    &quot;_description_comment&quot;: &quot;Owner, 2026-10-30 22:37Z (bean `w1gy` finding 1, option C, \&quot;split the directory\&quot;): the state `kg:instantiate` wrote under `subscriptions/&lt;id&gt;/harnesses/` made one directory both upstream&#39;s copies and the subscriber&#39;s working state, so `check:read-only-graphs` could not be answered either way. The copies stay in `subscriptions/` (read-only); the state moves here, under the `subscribed-harnesses` graph typology (`holds: state`). It holds only its README today: cat-harness&#39;s one subscription, `ihris`, chooses no harness, by the owner&#39;s ruling recorded in `_subscriptions_comment`. `dependents: skip`, for the reason `subscriptions` gives: a subscription is each instance&#39;s own choice.&quot;,
+    &quot;description&quot;: &quot;The state directories of each harness this layer instantiates from a KG subscription: `&lt;subscription&gt;/&lt;harness&gt;/&lt;state path&gt;/`, one home per chosen harness, each state directory the harness declares created with a `.gitkeep`. Written by `bun run cat kg:instantiate`; the harness&#39;s processes write into it after that. Never at the repository root, where a harness named after a staged layer would write into that layer&#39;s directory (gap G11), and never under `subscriptions/`, which holds upstream&#39;s bytes and is read-only.&quot;,
+    &quot;_description_comment&quot;: &quot;Owner, 2026-10-30 22:37Z (bean `w1gy` finding 1, option C, \&quot;split the directory\&quot;): the state `kg:instantiate` wrote under `subscriptions/&lt;id&gt;/harnesses/` made one directory both upstream&#39;s copies and the subscriber&#39;s working state, so `check:read-only-graphs` could not be answered either way. The copies stay in `subscriptions/` (read-only); the state moves here, under the `subscribed-harnesses` graph typology (`holds: state`). It holds only its README today: cat-harness&#39;s one subscription, `ihris`, chooses no harness, by the owner&#39;s ruling recorded in `_subscriptions_comment`. `dependents: skip`, for the reason `subscriptions` gives: a subscription is each layer&#39;s own choice.&quot;,
     &quot;dependents&quot;: &quot;skip&quot;,
     &quot;readOnly&quot;: false,
     &quot;readOnlyBasis&quot;: &quot;The subscriber&#39;s own working state: `kg:instantiate` makes each home and the subscribed harness&#39;s processes write into it. Nothing here is a copy of upstream&#39;s bytes.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;subscribed-harnesses&quot;
-    ]
+    ],
+    &quot;_source_comment&quot;: &quot;MOUNTED, 2026-10-31 (fa#2781): the typology `holds: state`, and `check:state-on-main` refuses new state on `main`, so it is kept on its own per-graph branch like beans, todos and issue-marks (owner, 2026-10-03, bean laqs) and mounted here by `bun run cat state:mount`. Main dropped it in the same commit that declared this source, because `mountTip` refuses a path the checkout still tracks.&quot;,
+    &quot;source&quot;: {
+      &quot;kind&quot;: &quot;branch&quot;,
+      &quot;branch&quot;: &quot;cat/cat-harness/subscribed-harnesses&quot;,
+      &quot;keyedBy&quot;: &quot;tip&quot;
+    }
   },
   {
     &quot;id&quot;: &quot;code-lists&quot;,
@@ -746,7 +752,7 @@ ca&amp;at-harness
     &quot;path&quot;: &quot;tool-releases/&quot;,
     &quot;title&quot;: &quot;Tool releases&quot;,
     &quot;description&quot;: &quot;The external tools this platform runs: one `folio-tool-release/v1` file per tool at one version, with the sha256 of its bytes, where to fetch it, its SPDX licence, how to run it and the runtimes that release needs; and one `folio-tool-profile/v1` file per named set of releases a run selects. A profile never names a runtime.&quot;,
-    &quot;_description_comment&quot;: &quot;Issue #2481, bean `3sbm`, step 1 of `docs/proposals/tool-releases-2026-10-07.md`. Owner 2026-10-07, T1 = (a): releases and profiles live in cat-harness as a declared graph that every layer inherits, so a dependent reads this directory through the dependency overlay and declares none of its own. T4 = (a): the first tools are PlantUML with its JRE, and graphviz. Every digest here was computed over downloaded bytes or read from the publisher&#39;s checksum file, never written down from memory. A profile file is `&lt;name&gt;.profile.json` and a release file is `&lt;name&gt;-&lt;version&gt;[-&lt;platform&gt;].json`, so no file&#39;s stem equals its `name` field, which is the rule `findDeclarationFile` uses to recognise an instance declaration. Run contexts (`folio-run-context/v1`) are produced per run and are not kept here.&quot;,
+    &quot;_description_comment&quot;: &quot;Issue #2481, bean `3sbm`, step 1 of `docs/proposals/tool-releases-2026-10-07.md`. Owner 2026-10-07, T1 = (a): releases and profiles live in cat-harness as a declared graph that every layer inherits, so a dependent reads this directory through the dependency overlay and declares none of its own. T4 = (a): the first tools are PlantUML with its JRE, and graphviz. Every digest here was computed over downloaded bytes or read from the publisher&#39;s checksum file, never written down from memory. A profile file is `&lt;name&gt;.profile.json` and a release file is `&lt;name&gt;-&lt;version&gt;[-&lt;platform&gt;].json`, so no file&#39;s stem equals its `name` field, which is the rule `findDeclarationFile` uses to recognise a layer declaration. Run contexts (`folio-run-context/v1`) are produced per run and are not kept here.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;tool-release&quot;
     ]
@@ -763,7 +769,7 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;cat-harness-ns&quot;,
     &quot;path&quot;: &quot;ns/&quot;,
-    &quot;description&quot;: &quot;The JSON-LD @contexts this instance publishes, one per namespace, served at `&lt;iriBase&gt;ns/&lt;name&gt;/v1.jsonld`: `content/` (the shared content context, written by `scripts/gen-jsonld-context.ts`) and `subgraph/` (the subgraph context the docs JSON-LD names). Both are committed. `context/v1.jsonld`, the instance context, is NOT committed and stays listed under `builtAtPublish`, because it is computed over the checkout&#39;s other instances. Declared 2026-10-24 under bean `0uu2` (owner, card \&quot;A. Declare and keep\&quot;): before this only `ns/context/v1.jsonld` was named, so the two committed contexts sat in a present-but-undeclared directory that no consumer scanning the declaration could see.&quot;,
+    &quot;description&quot;: &quot;The JSON-LD @contexts this layer publishes, one per namespace, served at `&lt;iriBase&gt;ns/&lt;name&gt;/v1.jsonld`: `content/` (the shared content context, written by `scripts/gen-jsonld-context.ts`) and `subgraph/` (the subgraph context the docs JSON-LD names). Both are committed. `context/v1.jsonld`, the layer context, is NOT committed and stays listed under `builtAtPublish`, because it is computed over the checkout&#39;s other layers. Declared 2026-10-24 under bean `0uu2` (owner, card \&quot;A. Declare and keep\&quot;): before this only `ns/context/v1.jsonld` was named, so the two committed contexts sat in a present-but-undeclared directory that no consumer scanning the declaration could see.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;schemas&quot;
     ]
@@ -800,7 +806,7 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;policies&quot;,
     &quot;path&quot;: &quot;policies/&quot;,
-    &quot;description&quot;: &quot;What an Actor may DO, as W3C ODRL 2.2 policies (issue #1180, owner 2026-09-23). `folio-defaults.jsonld` is the instance&#39;s odrl:Set: the permissions each actor file used to list, migrated one rule per (actor, action), plus the owner&#39;s floor for an unauthenticated reader (visualize and render only). Actions are the folio ODRL profile in `skills/permissions/permissions.json`; roles stay in `scenarios/`, and identity (which login is which actor) stays in the data store, never here. `dependents: skip` because a downstream instance writes its own policies and inherits these through ODRL&#39;s `inheritFrom`, rather than getting a copy.&quot;,
+    &quot;description&quot;: &quot;What an Actor may DO, as W3C ODRL 2.2 policies (issue #1180, owner 2026-09-23). `folio-defaults.jsonld` is the layer&#39;s odrl:Set: the permissions each actor file used to list, migrated one rule per (actor, action), plus the owner&#39;s floor for an unauthenticated reader (visualize and render only). Actions are the folio ODRL profile in `skills/permissions/permissions.json`; roles stay in `scenarios/`, and identity (which login is which actor) stays in the data store, never here. `dependents: skip` because a downstream layer writes its own policies and inherits these through ODRL&#39;s `inheritFrom`, rather than getting a copy.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;policies&quot;
     ]
@@ -808,7 +814,7 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;processes&quot;,
     &quot;path&quot;: &quot;processes/&quot;,
-    &quot;description&quot;: &quot;Executable BPMN processes and the DMN tables their gateways compute from. The diagrams are the source of truth, not illustrations of one: a lane binds a Role, an activity names the Skill to run through `&lt;folio:skill ref&gt;`, and `workflow_complete` refuses a step that is not enabled. WHERE A RUNNING INSTANCE GOT TO is not here — that is `beans/workflows/`, kind `workflow-state`, which is `state` rather than `content`. Two questions, two graphs. GROUPED BY CONCERN since placement PR3 (bean `63wl`): `processes.json` names the groups, each diagram sits in `processes/&lt;group&gt;/` and a DMN in `processes/&lt;group&gt;/decisions/` beside the diagrams that read it; the content-type diagrams moved up to the instances that own their skills (folio-assistant-core, folio-assistant-sci, fhir-harness), whose same-named `processes/&lt;group&gt;/` are members of these groups.&quot;,
+    &quot;description&quot;: &quot;Executable BPMN processes and the DMN tables their gateways compute from. The diagrams are the source of truth, not illustrations of one: a lane binds a Role, an activity names the Skill to run through `&lt;folio:skill ref&gt;`, and `workflow_complete` refuses a step that is not enabled. WHERE A RUNNING INSTANCE GOT TO is not here — that is `beans/workflows/`, kind `workflow-state`, which is `state` rather than `content`. Two questions, two graphs. GROUPED BY CONCERN since placement PR3 (bean `63wl`): `processes.json` names the groups, each diagram sits in `processes/&lt;group&gt;/` and a DMN in `processes/&lt;group&gt;/decisions/` beside the diagrams that read it; the content-type diagrams moved up to the layers that own their skills (folio-assistant-core, folio-assistant-sci, fhir-harness), whose same-named `processes/&lt;group&gt;/` are members of these groups.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;processes&quot;
     ]
@@ -819,10 +825,10 @@ ca&amp;at-harness
       &quot;themeId&quot;: &quot;analyst&quot;
     },
     &quot;coverage&quot;: {
-      &quot;_visualiser_comment&quot;: &quot;THE LIST FORM, so the entry can carry a title. Declared 2026-09-23 under bean `yunp`: `methodology` was one of seven kinds with no published viewer, which the build reports as a finding in `_data/harness.json` and the navbar renders as a disabled row. The page spans EVERY declared methodology graph, not this directory alone — a DAK layer&#39;s `methodologies/` and the content core&#39;s are the same kind and their nodes are on it, labelled by declaring instance. So the visualiser is declared once, here, rather than three times at one page: the obligation is per KIND and a second declaration would be a second claim on one file.&quot;
+      &quot;_visualiser_comment&quot;: &quot;THE LIST FORM, so the entry can carry a title. Declared 2026-09-23 under bean `yunp`: `methodology` was one of seven kinds with no published viewer, which the build reports as a finding in `_data/harness.json` and the navbar renders as a disabled row. The page spans EVERY declared methodology graph, not this directory alone — a DAK layer&#39;s `methodologies/` and the content core&#39;s are the same kind and their nodes are on it, labelled by declaring layer. So the visualiser is declared once, here, rather than three times at one page: the obligation is per KIND and a second declaration would be a second claim on one file.&quot;
     },
     &quot;path&quot;: &quot;methodologies/&quot;,
-    &quot;description&quot;: &quot;Judgement methodologies the harness owns, one sub-graph each: Kepner-Tregoe for a decision, MADR for its record, DMN for the computable case. PARALLEL rather than composable — which applies is contextual, and blending them produces a house method that cites nobody. Its own graph typology rather than skills, for three properties a skill does not have: extractable (somebody else&#39;s work, adopted, so it lifts out with its declaration when the field moves on), referenced rather than inlined (two skills quoting one method is two copies free to drift), and exempt from skill criteria (skill-is-brief caps an INSTRUCTION near 280 lines; a methodology is a faithful rendering of an external standard, and truncating it to fit a house limit would misrepresent the standard). GRADE is deliberately NOT here: it is WHO guideline method, and since 2026-09-24 (bean `wg7r`) it is the `grade` skill in the DAK layer&#39;s `skills/content/authoring-who-smart-guidelines/` with its vocabularies as code lists — the owner: \&quot;needs to be part of skill/SKOS etc. … dont want smart-kg here yet, that is its own repo already\&quot;. RELOCATION, 2026-09-22, and the THREE declarations it removed. The owner: \&quot;dont bury sub-graph assets. same for &lt;stub&gt;/skills, etc.\&quot; CRDM&#39;s three skills moved to `skills/sdlc/crdm/`, RACI&#39;s to `skills/process/raci/`, and CRDM&#39;s eight diagrams to `processes/` — the stub-level graphs that were already declared. `methodology-crdm`, `methodology-raci` and `methodology-crdm-processes` are GONE rather than repointed: a separate entry for a directory that is already a package subdirectory of the declared `skills/` graph would declare one directory twice, which is the `x4v4` graph-inside-a-graph shape one level down. `gen-skill-docs` demonstrated it rather than anyone reasoning it out — it demanded a category under BOTH the basename and the declaration id, because both discovery branches found the same directory. So this entry now has the `methodology` graph to itself, holding exactly the four nodes and no subgraph: dmn, kepner-tregoe, madr, swot. This REVERSES the placement half of bean `g43o`; its argument that a reader should meet CRDM as a thing rather than as three prefixed filenames is preserved by the package manifest, which is what makes a skill package a thing everywhere else in this tree.&quot;,
+    &quot;description&quot;: &quot;Judgement methodologies the harness owns, one sub-graph each: Kepner-Tregoe for a decision, MADR for its record, DMN for the computable case. PARALLEL rather than composable — which applies is contextual, and blending them produces a house method that cites nobody. Its own graph typology rather than skills, for three properties a skill does not have: extractable (somebody else&#39;s work, adopted, so it lifts out with its declaration when the field moves on), referenced rather than inlined (two skills quoting one method is two copies free to drift), and exempt from skill criteria (skill-is-brief caps an INSTRUCTION near 280 lines; a methodology is a faithful rendering of an external standard, and truncating it to fit a house limit would misrepresent the standard). GRADE is deliberately NOT here: it is WHO guideline method, and since 2026-09-24 (bean `wg7r`) it is the `grade` skill in the DAK layer&#39;s `skills/content/authoring-who-smart-guidelines/` with its vocabularies as code lists — the owner: \&quot;needs to be part of skill/SKOS etc. … dont want smart-kg here yet, that is its own repo already\&quot;. RELOCATION, 2026-09-22, and the THREE declarations it removed. The owner: \&quot;dont bury sub-graph assets. same for &lt;stub&gt;/skills, etc.\&quot; CRDM&#39;s three skills moved to `sdlc/skills/crdm/`, RACI&#39;s to `skills/process/raci/`, and CRDM&#39;s eight diagrams to `processes/` — the stub-level graphs that were already declared. `methodology-crdm`, `methodology-raci` and `methodology-crdm-processes` are GONE rather than repointed: a separate entry for a directory that is already a package subdirectory of the declared `skills/` graph would declare one directory twice, which is the `x4v4` graph-inside-a-graph shape one level down. `gen-skill-docs` demonstrated it rather than anyone reasoning it out — it demanded a category under BOTH the basename and the declaration id, because both discovery branches found the same directory. So this entry now has the `methodology` graph to itself, holding exactly the four nodes and no subgraph: dmn, kepner-tregoe, madr, swot. This REVERSES the placement half of bean `g43o`; its argument that a reader should meet CRDM as a thing rather than as three prefixed filenames is preserved by the package manifest, which is what makes a skill package a thing everywhere else in this tree.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;methodology&quot;
     ],
@@ -837,19 +843,19 @@ ca&amp;at-harness
       &quot;branch&quot;: &quot;cat/cat-harness/qa-reports&quot;,
       &quot;keyedBy&quot;: &quot;commit&quot;
     },
-    &quot;description&quot;: &quot;Everything a QA process produced, in one declared tree. The owner&#39;s rule, 2026-09-19: an artefact generated primarily as a QA reviewer belongs under `test/results/` as part of a QA process — placement follows PROVENANCE, not file family and not who fetches it afterwards. Four kinds live here and the FILES say which they are, per the `$schema` contract: `qa-results/v1` (`&lt;producer&gt;.qa-results.json`, a whole-artefact review — findings about a document the build just produced), `qa-witness/v1` (`witnesses/**`, one per audited subject in the families `block`, `kg` and `translation`, the published projection) `kg-qa/v1` (`kg-qa/**`, the KG verdicts themselves — what `kg-audit` wrote) and `kg-qa-manifest/v1` (`kg-qa.manifest.json`, the auditor&#39;s identity for all of them, ONE per instance rather than one per sidecar). The manifest moved here from `skills/` on 2026-09-27: `kg-audit.ts` writes it unconditionally, so auditing every declared instance made its old home CREATE a `skills/` directory holding no skills in each of the six instances that have none. Its registration in `graph-typology-registry.ts` moved from the `skills` kind to `qa` with it — a kind claiming a `$schema` whose files live in another kind&#39;s directory is a validator aimed at nothing. The `kg-qa/` tree MIRRORS each subject&#39;s path rather than being flat, and that is not tidiness: measured 2026-09-19, four sidecar basenames already occur twice across packages (`editor`, `getting-started`, `idle-backlog`, `l2-dak-authoring`), so a flat directory would silently overwrite four verdicts. `kgQaSidecarPath` in `schemas/sdlc/kg-qa.ts` is the one answer for writer and reader alike. A directory is a PLACE TO LOOK and may hold more than one part of a graph; extension is a coincidence, a declaration inside the file is the contract. ONE entry rather than a nested set, deliberately: #263&#39;s own comment names the defect a declaration inside another declaration creates. STILL OUTSIDE: the 122 block verdicts `*.qa.json`, which sit beside their blocks and move next. The witnesses are PUBLISHED at `/assets/qa/`, which is where every badge points; the publishing workflows copy them into `_site/assets/qa/` after Jekyll, since Jekyll builds only `docs/`. Where a file lives and where it is served from are different questions.&quot;,
+    &quot;description&quot;: &quot;Everything a QA process produced, in one declared tree. The owner&#39;s rule, 2026-09-19: an artefact generated primarily as a QA reviewer belongs under `test/results/` as part of a QA process — placement follows PROVENANCE, not file family and not who fetches it afterwards. Four kinds live here and the FILES say which they are, per the `$schema` contract: `qa-results/v1` (`&lt;producer&gt;.qa-results.json`, a whole-artefact review — findings about a document the build just produced), `qa-witness/v1` (`witnesses/**`, one per audited subject in the families `block`, `kg` and `translation`, the published projection) `kg-qa/v1` (`kg-qa/**`, the KG verdicts themselves — what `kg-audit` wrote) and `kg-qa-manifest/v1` (`kg-qa.manifest.json`, the auditor&#39;s identity for all of them, ONE per layer rather than one per sidecar). The manifest moved here from `skills/` on 2026-09-27: `kg-audit.ts` writes it unconditionally, so auditing every declared layer made its old home CREATE a `skills/` directory holding no skills in each of the six layers that have none. Its registration in `graph-typology-registry.ts` moved from the `skills` kind to `qa` with it — a kind claiming a `$schema` whose files live in another kind&#39;s directory is a validator aimed at nothing. The `kg-qa/` tree MIRRORS each subject&#39;s path rather than being flat, and that is not tidiness: measured 2026-09-19, four sidecar basenames already occur twice across packages (`editor`, `getting-started`, `idle-backlog`, `l2-dak-authoring`), so a flat directory would silently overwrite four verdicts. `kgQaSidecarPath` in `schemas/sdlc/kg-qa.ts` is the one answer for writer and reader alike. A directory is a PLACE TO LOOK and may hold more than one part of a graph; extension is a coincidence, a declaration inside the file is the contract. ONE entry rather than a nested set, deliberately: #263&#39;s own comment names the defect a declaration inside another declaration creates. STILL OUTSIDE: the 122 block verdicts `*.qa.json`, which sit beside their blocks and move next. The witnesses are PUBLISHED at `/assets/qa/`, which is where every badge points; the publishing workflows copy them into `_site/assets/qa/` after Jekyll, since Jekyll builds only `docs/`. Where a file lives and where it is served from are different questions.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;qa&quot;
     ],
     &quot;tile&quot;: {
-      &quot;title&quot;: &quot;Latent semantic indexes&quot;,
+      &quot;title&quot;: &quot;Indexing evidence&quot;,
       &quot;icon&quot;: &quot;index&quot;
     }
   },
   {
     &quot;id&quot;: &quot;attestations&quot;,
     &quot;path&quot;: &quot;test/attestations/&quot;,
-    &quot;description&quot;: &quot;The JUDGEMENT half of every QA verdict this instance carries across runs, split out of `test/results/` by owner ruling D2 (a), 2026-10-01 (bean `2gst`, arc `3fva`): derived script verdicts move to the `qa-reports` branch; anything a reviewer judged stays HERE, on main, where a `git rm` of derived results cannot reach it. One `qa-attestations/v1` file per subject at `&lt;family&gt;/&lt;mirrored subject path&gt;.attestations.json`, where `&lt;family&gt;` is the derived family it sits beside (`kg-qa`, bean `2gst`; `block-qa` and `translation-qa`, bean `8wj1`) and the mirror is exactly that family&#39;s own, so a subject&#39;s attestation is found by swapping the tree root and the suffix. Today: the `pair_attestations` that were carried inside `kg-qa/v1` sidecars, ALL of them, the `by: baseline` entries with the `by: agent` ones; the owner ruled on 2026-10-01 that a baseline is a judgement, because a regenerated one forgets the drift it recorded (defect C4). `voice_reviews` live here too when one is recorded. Under `block-qa/` and `translation-qa/`: every block or translation verdict whose `reviewer.kind` is not `script` (13 at the split, 11 + 2), held in a `criteria` map of the derived report&#39;s own shape; the derived report keeps a projection composed from here. Schema and the five read states (hit / miss / absent / corrupt / unknown): `schemas/sdlc/qa-attestations.ts`. Owner ruling 2 (2026-10-01): a writer that finds judgements in a prior derived file and no store entry MOVES them here as it saves, rather than refusing; a corrupt store is still unknown and refused. Hosted instances (bootstrap) would sit under `&lt;stub&gt;/`, as their `qa` verdicts do. Declared WITH its files, per bean dh4f.&quot;,
+    &quot;description&quot;: &quot;The JUDGEMENT half of every QA verdict this layer carries across runs, split out of `test/results/` by owner ruling D2 (a), 2026-10-01 (bean `2gst`, arc `3fva`): derived script verdicts move to the `qa-reports` branch; anything a reviewer judged stays HERE, on main, where a `git rm` of derived results cannot reach it. One `qa-attestations/v1` file per subject at `&lt;family&gt;/&lt;mirrored subject path&gt;.attestations.json`, where `&lt;family&gt;` is the derived family it sits beside (`kg-qa`, bean `2gst`; `block-qa` and `translation-qa`, bean `8wj1`) and the mirror is exactly that family&#39;s own, so a subject&#39;s attestation is found by swapping the tree root and the suffix. Today: the `pair_attestations` that were carried inside `kg-qa/v1` sidecars, ALL of them, the `by: baseline` entries with the `by: agent` ones; the owner ruled on 2026-10-01 that a baseline is a judgement, because a regenerated one forgets the drift it recorded (defect C4). `voice_reviews` live here too when one is recorded. Under `adversarial-review/`: the `adversarial_reviews` that `adversarial-backfill` or a reviewer recorded about a tool, schema, skill or process, on the `kg-qa` mirror, pinned by the subject&#39;s `source_hash` (owner, 2026-10-14: carry them forward; they sat only in the derived sidecars, so #857 took the last two, restored here verbatim from 161b243^). Under `block-qa/` and `translation-qa/`: every block or translation verdict whose `reviewer.kind` is not `script` (13 at the split, 11 + 2), held in a `criteria` map of the derived report&#39;s own shape; the derived report keeps a projection composed from here. Schema and the five read states (hit / miss / absent / corrupt / unknown): `schemas/sdlc/qa-attestations.ts`. Owner ruling 2 (2026-10-01): a writer that finds judgements in a prior derived file and no store entry MOVES them here as it saves, rather than refusing; a corrupt store is still unknown and refused. Hosted layers (bootstrap) would sit under `&lt;stub&gt;/`, as their `qa` verdicts do. Declared WITH its files, per bean dh4f.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;attestations&quot;
     ]
@@ -857,7 +863,7 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;test-plans&quot;,
     &quot;path&quot;: &quot;test/plans/&quot;,
-    &quot;description&quot;: &quot;Test plans this instance certifies against — one `test-plan/v1` document per plan (`schemas/sdlc/test-plan.ts`). Content, not state: a process reads a plan and never writes it, and the run points at the plan, never the reverse. The runs and reports a plan&#39;s execution produces go to the `qa-reports` branch with the rest of `test/results/`, and the certification decision to `test/attestations/` (owner ruling D2). First declared for dogfood plan #1, `crdm-detect-evaluation` (bean `folio-assistant-ff09`). Declared WITH its files, per bean dh4f.&quot;,
+    &quot;description&quot;: &quot;Test plans this layer certifies against — one `test-plan/v1` document per plan (`schemas/sdlc/test-plan.ts`). Content, not state: a process reads a plan and never writes it, and the run points at the plan, never the reverse. The runs and reports a plan&#39;s execution produces go to the `qa-reports` branch with the rest of `test/results/`, and the certification decision to `test/attestations/` (owner ruling D2). First declared for dogfood plan #1, `crdm-detect-evaluation` (bean `folio-assistant-ff09`). Declared WITH its files, per bean dh4f.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;test-plan&quot;
     ]
@@ -865,12 +871,12 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;health&quot;,
     &quot;path&quot;: &quot;test/health/results/&quot;,
-    &quot;description&quot;: &quot;Repository health reports — what the daily sweep under `test/health/` wrote. One `health-report/v1` document, declaring itself with a `$schema` tag rather than being duck-typed by path: a directory is a PLACE TO LOOK and the files inside say what they are. A SEPARATE graph from `qa`, and the line between them is about the SUBJECT, not the producer: a QA verdict judges an artefact this repository produced, against criteria that artefact is supposed to meet; a health report judges the REPOSITORY ITSELF — how big it has grown, how much of the publish branch the review previews occupy, whether the work plan has duplicates in it. Folding it into `qa` would leave a consumer asking for verdicts about this instance&#39;s content holding a fact about its clone. NOTE the path: it was `tests/health/results/` when this graph landed in #395, because this repository then had BOTH `test/` (the `qa` graph) and `tests/` (the Playwright e2e specs), and the owner asked for `tests/health`. #395 flagged that inconsistency in `skills/kg/kg-core/directory-conventions.md` rather than resolving it, since relocating a declared directory as a side effect of adding a check is the `dh4f` shape, where a consumer scans nothing and reports a clean run over it. The owner settled it on `test/` the same day and it moved as its own change — bean `auap`, PR #400. The `id` here is unchanged, deliberately: an inheriting instance overrides on the entry&#39;s id and never on its path, so `health` still binds after the relocation. The e2e specs came to the declaration rather than the declaration to the specs, because `testDir` is one line of one config file and a declared path is what every downstream override resolves against.&quot;,
+    &quot;description&quot;: &quot;Repository health reports — what the daily sweep under `test/health/` wrote. One `health-report/v1` document, declaring itself with a `$schema` tag rather than being duck-typed by path: a directory is a PLACE TO LOOK and the files inside say what they are. A SEPARATE graph from `qa`, and the line between them is about the SUBJECT, not the producer: a QA verdict judges an artefact this repository produced, against criteria that artefact is supposed to meet; a health report judges the REPOSITORY ITSELF — how big it has grown, how much of the publish branch the review previews occupy, whether the work plan has duplicates in it. Folding it into `qa` would leave a consumer asking for verdicts about this layer&#39;s content holding a fact about its clone. NOTE the path: it was `tests/health/results/` when this graph landed in #395, because this repository then had BOTH `test/` (the `qa` graph) and `tests/` (the Playwright e2e specs), and the owner asked for `tests/health`. #395 flagged that inconsistency in `skills/kg/kg-core/directory-conventions.md` rather than resolving it, since relocating a declared directory as a side effect of adding a check is the `dh4f` shape, where a consumer scans nothing and reports a clean run over it. The owner settled it on `test/` the same day and it moved as its own change — bean `auap`, PR #400. The `id` here is unchanged, deliberately: an inheriting layer overrides on the entry&#39;s id and never on its path, so `health` still binds after the relocation. The e2e specs came to the declaration rather than the declaration to the specs, because `testDir` is one line of one config file and a declared path is what every downstream override resolves against.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;health&quot;
     ],
     &quot;scope&quot;: &quot;repository&quot;,
-    &quot;_scope_comment&quot;: &quot;REPOSITORY-scoped, like `beans` and `todos` (owner, 2026-10-23, bean folio-assistant-kyrg: \&quot;Yes, scope: repository\&quot;). A health report is about the REPOSITORY the sweep runs in, so whatever checkout mounts this harness keeps it at its own root, on its own origin&#39;s `cat/cat-harness/health`. Unscoped, it bound to the mounted cat-harness instance, so the index&#39;s daily sweep pushed to litlfred/cat-harness&#39;s branch, which that workflow&#39;s token cannot write: a 403 on every run. Standalone, this checkout IS the root, so nothing here moves.&quot;,
+    &quot;_scope_comment&quot;: &quot;REPOSITORY-scoped, like `beans` and `todos` (owner, 2026-10-23, bean folio-assistant-kyrg: \&quot;Yes, scope: repository\&quot;). A health report is about the REPOSITORY the sweep runs in, so whatever checkout mounts this harness keeps it at its own root, on its own origin&#39;s `cat/cat-harness/health`. Unscoped, it bound to the mounted cat-harness layer, so the index&#39;s daily sweep pushed to litlfred/cat-harness&#39;s branch, which that workflow&#39;s token cannot write: a 403 on every run. Standalone, this checkout IS the root, so nothing here moves.&quot;,
     &quot;_source_comment&quot;: &quot;MOUNTED, owner 2026-10-11 (session_01UC1NuEuSy1MBNpEhnDuiGj, 05:58:12Z: \&quot;move health to state branch now\&quot;). The report is generated state, not reviewed content, so it is kept on its own per-graph branch (owner, 2026-10-03, bean laqs) and mounted at this path by `bun run cat state:mount`; main dropped it in the same commit that declared this source, because `mountTip` refuses a path the checkout still tracks.&quot;,
     &quot;source&quot;: {
       &quot;kind&quot;: &quot;branch&quot;,
@@ -893,32 +899,12 @@ ca&amp;at-harness
     }
   },
   {
-    &quot;id&quot;: &quot;library&quot;,
+    &quot;id&quot;: &quot;library-graph&quot;,
     &quot;path&quot;: &quot;library/&quot;,
-    &quot;description&quot;: &quot;L1 source content — one `&lt;bib-slug&gt;/` per ingested document, holding `sections/*.md`, `structure.json` and, where the source was scanned, `ocr/page-NNN.txt`. THIS INSTANCE HOLDS NONE. Bean `frs5` moved all four entries out (the three IRIS items to the IRIS replica, milnorlink to the science layer) because the platform holds no content, and this entry was removed with them. It is back, on the owner&#39;s ruling of 2026-09-20, for ONE reason and it is not about this instance: `wwi6` pins the guarantee that a DEPENDENT folio materialises its own `uploads/` and `library/`, and a dependent inherits the convention — an id and a relative path — from what the harness declares. Remove this and every downstream folio silently stops getting a library. IT IS THE `dh4f` SHAPE AND THAT IS KNOWN, NOT OVERLOOKED: a declared directory this instance does not hold is exactly what that bean is about. The cost is paid deliberately and it is bounded — the consumers that scan libraries now fan out over EVERY declared one (bean `a02m`), so an empty one contributes nothing rather than shadowing the two that have content. What it must never become again is the FIRST of several silently taken as the only one. The real fix is the core relocation — `uploads`, `voices`, `translation-sources` and this moving to the content core, per the owner&#39;s earlier \&quot;voices, uploads library in folio-asst-core\&quot; — after which a dependent inherits them from the layer that owns content and this entry goes for good. THE AGENT-SKILL CORPUS JOINED IT on 2026-10-01 (owner ruling: agent-skills dissolves into cat-harness&#39;s concern groups; bean `j7ql`): the 14 documents listed in `heldEntries` — vendor skill documentation (ASSERTION: a publisher describing its own product) and three arXiv papers (EVIDENCE: a measurement somebody else can repeat); each entry&#39;s `structure.json` carries its publisher, which is how a reader tells the two kinds apart. They sit flat here until placement PR8 (bean `f8wp`) regroups `library/` into `library/&lt;group&gt;/&lt;slug&gt;/`; the audit (#1778) assigns them conduct (10), sdlc (`hmans-2026-beans-readme`), tools (`mcp-2026-specification-2026-07-28`) and content (the two RFCs). Their summaries stay HELD, per entry, on the owner&#39;s 2026-09-24 ruling (bean `x80s`: &#39;Library summaries for agent-skills entries — No, keep held back&#39;), which was stated about these documents and not about this directory.&quot;,
+    &quot;title&quot;: &quot;Library&quot;,
+    &quot;description&quot;: &quot;The library sub-graph — a NAMED SUB-GRAPH of the harness on the pattern of `sdlc/` and `openapi/`, holding everything about libraries: the skills that teach acquisition, ingestion, cataloguing, translation and materialisation (`library-core`, `large-datasets`), the processes that run them, with their decision tables, and this layer&#39;s own corpus of cited sources. The graphs inside it — `library-skills`, `library-processes` and `library` — are declared FROM WITHIN, in `library/graph.json` (#980). The sub-graph itself is ON in every layer, because the content layers ingest with its skills and call its processes; only the corpus inside it is OPT-IN (owner, 2026-11-04, card &#39;Library cut&#39; option 1: the skills and processes always on, the corpus opt-in). The id is not `library` on purpose: a layer above that declares its own `library` replaces an inherited entry of that id, and would take this sub-graph&#39;s skills and processes with it.&quot;,
     &quot;graphTypologies&quot;: [
-      &quot;library&quot;
-    ],
-    &quot;heldEntries&quot;: [
-      &quot;agent-skill-best-practices---gemini-cli&quot;,
-      &quot;agent-skills---google-antigravity-docs&quot;,
-      &quot;arxiv-2602.12670v4&quot;,
-      &quot;arxiv-2607.25032v1&quot;,
-      &quot;arxiv-2608.08453v1&quot;,
-      &quot;best-practices---google-antigravity-docs&quot;,
-      &quot;equipping-agents-for-the-real-world-with-agent-skills-anthro&quot;,
-      &quot;hmans-2026-beans-readme&quot;,
-      &quot;mcp-2026-specification-2026-07-28&quot;,
-      &quot;rfc2119-key-words-requirement-levels&quot;,
-      &quot;rfc8174-uppercase-vs-lowercase-2119-key-words&quot;,
-      &quot;skill-authoring-best-practices---claude-platform-docs&quot;,
-      &quot;skills-in-openai-api&quot;,
-      &quot;skills-in-openai-api-notebook&quot;,
-      &quot;github-docs-actions-secure-use-reference&quot;,
-      &quot;arxiv-2507.07974v2&quot;,
-      &quot;arxiv-2510.19207v2&quot;,
-      &quot;arxiv-2503.18813v2&quot;,
-      &quot;nist-sp-800-207&quot;
+      &quot;cat-harness&quot;
     ]
   },
   {
@@ -941,7 +927,7 @@ ca&amp;at-harness
     &quot;graphTypologies&quot;: [
       &quot;folio&quot;
     ],
-    &quot;description&quot;: &quot;Authored content of this instance itself, rendered to a website. Holds the landing sticky — the instance&#39;s own description and its onboarding links, as a page-global note rather than text composited into the backdrop.&quot;
+    &quot;description&quot;: &quot;Authored content of this layer itself, rendered to a website. Holds the landing sticky — the layer&#39;s own description and its onboarding links, as a page-global note rather than text composited into the backdrop.&quot;
   },
   {
     &quot;id&quot;: &quot;folio-render&quot;,
@@ -963,8 +949,8 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;docs&quot;,
     &quot;path&quot;: &quot;docs/&quot;,
-    &quot;description&quot;: &quot;Documentation about the Knowledge Graph itself: the pages of the published site, some written by people and some generated from the graph. Also holds `reference/harness.config.example.json`, the worked example of an instance config that the installation guide tells a reader to copy into their content repository and that `package.json` `files` ships in the npm tarball — a reference asset, published with the site rather than rendered as a page. It sat at the repository root until 2026-10-06 (bean `ar1s`, phase 3: tooling leaves the root before the repo split).&quot;,
-    &quot;_description_comment&quot;: &quot;Documentation ABOUT the knowledge graph itself -- 241 markdown files, the entire published surface, and UNDECLARED until 2026-09-20. That is the dh4f defect in its purest form: every declaration-driven consumer scanned straight past the thing readers actually see. Owner, same day: &#39;docs/ is about documentation about the KG itself... docs/ in cat-harness&#39;, with the intent that this is WHERE DOCUMENTATION GOES and therefore the only place a forward reference may be authored. The `docs` kind is RENDERABLE and is registered by `schemas/docs-graph-typology.ts` rather than added to BASE_GRAPH_TYPOLOGIES, so the assertion that the harness&#39;s base vocabulary carries no renderable kind stays true and its test stays unchanged. Distinct from `folio`, which is core&#39;s: the difference is the SUBJECT. A page explaining how ingestion works is `docs`; a note an author writes about an ingested catalogue is a `folio`; the catalogue itself is `library/`. `dependents` is `skip`, unlike the other renderable graph `folio`: this is documentation THIS instance publishes about the knowledge graph, so a dependent folio inherits the pages rather than an empty directory to refill — it authors its own subject matter under `folio/`, which is `reproduce`. CHANGED TO `reproduce` 2026-09-21 ON THE OWNER&#39;S COMPOSE RULING (bean `n0nf`, issue #638), and the paragraph above is kept rather than deleted because its reasoning was right for the question it answered. It argued `skip` on the grounds that a dependent should INHERIT THE PAGES rather than get an empty directory to refill. Under compose it gets BOTH: the pages still reach it, and `reproduce` gives it the place to override one. So this is not a reversal of that argument, it is the second half of it arriving. The `dependents` doc warns that defaulting to `reproduce` ships junk -- twelve inherited directories, four of them the platform&#39;s own, each empty with a committed keep marker, the `dh4f` shape shipped downstream. That warning is about a DEFAULT, and the test it turns on is the one that schema states: is this directory part of the SHAPE a folio has, or merely where THIS instance&#39;s content lives? Before the ruling `docs/` was the second. After it, a folio is expected to author and override its own documentation, which makes it the first -- the same answer `uploads/` and `library/` get, and they are `reproduce` and also start empty. WHAT THIS DOES NOT DO is give the REPOSITORY ROOT a `docs/`. The root does not depend on cat-harness (measured: its declaration chain has length 1), so nothing is inherited there, and the root&#39;s own `harness.json` carries the owner&#39;s \&quot;only uploads/ on this repo&#39;s root\&quot;. `n0nf` says the root&#39;s docs \&quot;is not its own: cat-harness installs it\&quot;, which needs a dependency edge that does not exist. That is left for the owner rather than settled here. A viewer IS declared for this `docs` directory, and `owesVisualiser` not demanding one is not the same as forbidding one. The kind is `renderable`, so it does not OWE a viewer — but the owner&#39;s rule, quoted in full in `mount-instance-docs.ts`&#39;s module note, is that a harness which instantiates a directory MAKES a visualiser for it, docs and library included. It points at the `auto-docs` index, NOT at the mount route `/docs/&lt;instance&gt;/`: that mount is a VERBATIM copy of the directory, and `visualiserHref` exists precisely because linking a rail to it lands on a byte-identical page — the owner&#39;s report that clicking `doc/` under an instance&#39;s navbar did nothing. The owner&#39;s sentence is CITED rather than quoted here on purpose: it names a graph whose viewer is `publish: \&quot;staging-only\&quot;`, and a test asserts that name appears NOWHERE in the built export — including in a declaration&#39;s own prose, which is where quoting it put it. The test caught that, and this paragraph is the second attempt.&quot;,
+    &quot;description&quot;: &quot;Documentation about the Knowledge Graph itself: the pages of the published site, some written by people and some generated from the graph. Also holds `reference/harness.config.example.json`, the worked example of a layer config that the installation guide tells a reader to copy into their content repository and that `package.json` `files` ships in the npm tarball — a reference asset, published with the site rather than rendered as a page. It sat at the repository root until 2026-10-06 (bean `ar1s`, phase 3: tooling leaves the root before the repo split).&quot;,
+    &quot;_description_comment&quot;: &quot;Documentation ABOUT the knowledge graph itself -- 241 markdown files, the entire published surface, and UNDECLARED until 2026-09-20. That is the dh4f defect in its purest form: every declaration-driven consumer scanned straight past the thing readers actually see. Owner, same day: &#39;docs/ is about documentation about the KG itself... docs/ in cat-harness&#39;, with the intent that this is WHERE DOCUMENTATION GOES and therefore the only place a forward reference may be authored. The `docs` kind is RENDERABLE and is registered by `schemas/docs-graph-typology.ts` rather than added to BASE_GRAPH_TYPOLOGIES, so the assertion that the harness&#39;s base vocabulary carries no renderable kind stays true and its test stays unchanged. Distinct from `folio`, which is core&#39;s: the difference is the SUBJECT. A page explaining how ingestion works is `docs`; a note an author writes about an ingested catalogue is a `folio`; the catalogue itself is `library/`. `dependents` is `skip`, unlike the other renderable graph `folio`: this is documentation THIS layer publishes about the knowledge graph, so a dependent folio inherits the pages rather than an empty directory to refill — it authors its own subject matter under `folio/`, which is `reproduce`. CHANGED TO `reproduce` 2026-09-21 ON THE OWNER&#39;S COMPOSE RULING (bean `n0nf`, issue #638), and the paragraph above is kept rather than deleted because its reasoning was right for the question it answered. It argued `skip` on the grounds that a dependent should INHERIT THE PAGES rather than get an empty directory to refill. Under compose it gets BOTH: the pages still reach it, and `reproduce` gives it the place to override one. So this is not a reversal of that argument, it is the second half of it arriving. The `dependents` doc warns that defaulting to `reproduce` ships junk -- twelve inherited directories, four of them the platform&#39;s own, each empty with a committed keep marker, the `dh4f` shape shipped downstream. That warning is about a DEFAULT, and the test it turns on is the one that schema states: is this directory part of the SHAPE a folio has, or merely where THIS layer&#39;s content lives? Before the ruling `docs/` was the second. After it, a folio is expected to author and override its own documentation, which makes it the first -- the same answer `uploads/` and `library/` get, and they are `reproduce` and also start empty. WHAT THIS DOES NOT DO is give the REPOSITORY ROOT a `docs/`. The root does not depend on cat-harness (measured: its declaration chain has length 1), so nothing is inherited there, and the root&#39;s own `harness.json` carries the owner&#39;s \&quot;only uploads/ on this repo&#39;s root\&quot;. `n0nf` says the root&#39;s docs \&quot;is not its own: cat-harness installs it\&quot;, which needs a dependency edge that does not exist. That is left for the owner rather than settled here. A viewer IS declared for this `docs` directory, and `owesVisualiser` not demanding one is not the same as forbidding one. The kind is `renderable`, so it does not OWE a viewer — but the owner&#39;s rule, quoted in full in `mount-instance-docs.ts`&#39;s module note, is that a harness which instantiates a directory MAKES a visualiser for it, docs and library included. It points at the `auto-docs` index, NOT at the mount route `/docs/&lt;instance&gt;/`: that mount is a VERBATIM copy of the directory, and `visualiserHref` exists precisely because linking a rail to it lands on a byte-identical page — the owner&#39;s report that clicking `doc/` under a layer&#39;s navbar did nothing. The owner&#39;s sentence is CITED rather than quoted here on purpose: it names a graph whose viewer is `publish: \&quot;staging-only\&quot;`, and a test asserts that name appears NOWHERE in the built export — including in a declaration&#39;s own prose, which is where quoting it put it. The test caught that, and this paragraph is the second attempt.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;docs&quot;
     ],
@@ -987,13 +973,13 @@ ca&amp;at-harness
       &quot;docs&quot;,
       &quot;folio&quot;
     ],
-    &quot;description&quot;: &quot;The PUBLISHED SITE, on a CDN that serves files by path only (GitHub Pages). Lives on the `gh-pages` branch, one entry per route (the release root and each `STAGING/&lt;slug&gt;/` preview); never in the checkout, and `site/` is only where a local build lands. Built by `site-build-local` on a machine and by `pages-publish` in CI (two Tools, one skill, `docs-generation`), and deployed by the Tool `storage.tool` names. `derivedFrom` names the renderable graphs THIS instance can reach; every other instance&#39;s docs are composed onto it by `mount-instance-docs.ts`, which an instance below cannot name without pointing upward. Declared here, on the harness that composes the site, rather than as a row in a central table (owner, 2026-10-03 and 2026-10-05: special-branches.json is gone; beans rva2, lehh).&quot;
+    &quot;description&quot;: &quot;The PUBLISHED SITE, on a CDN that serves files by path only (GitHub Pages). Lives on the `gh-pages` branch, one entry per route (the release root and each `branches/&lt;slug&gt;/` preview); never in the checkout, and `site/` is only where a local build lands. Built by `site-build-local` on a machine and by `pages-publish` in CI (two Tools, one skill, `docs-generation`), and deployed by the Tool `storage.tool` names. `derivedFrom` names the renderable graphs THIS layer can reach; every other layer&#39;s docs are composed onto it by `mount-instance-docs.ts`, which a layer below cannot name without pointing upward. Declared here, on the harness that composes the site, rather than as a row in a central table (owner, 2026-10-03 and 2026-10-05: special-branches.json is gone; beans rva2, lehh).&quot;
   },
   {
     &quot;id&quot;: &quot;swimlane-glossary&quot;,
     &quot;path&quot;: &quot;glossary/&quot;,
     &quot;_visualiser_comment&quot;: &quot;The auto-docs GLOSSARY INDEX, not `docs/glossary/index.html`. That was the declared value until 2026-09-22 and it was CIRCULAR: `docs/glossary/index.html` IS the state-visualiser&#39;s own page for this graph, so the page rendered “This graph is rendered elsewhere … the declaration names a visualiser for it: /glossary/” — pointing at the page you were reading. It was declared to make `published-graphs.md` count the graph as published, which made the count look right and the page say something false. The auto-docs index is a real rendering: every term in the ledgers, each with the definition joined from the role registry. No count here on purpose: this comment said \&quot;44 terms\&quot; while the page showed 46, then 48, then 55 (bean `n5be`, finding 6) — the page states its own count.&quot;,
-    &quot;description&quot;: &quot;The swimlane glossary&#39;s retirement ledger. Declared rather than hidden because a consumer must be able to find what this instance has ever called a term: the glossary document is regenerated from the corpus each run and has no memory, so the one fact that cannot be re-derived — that a concept was once minted — is committed here. Keyed by the IRI&#39;s local part, never the absolute IRI, because the publication base is a deploy-time variable and a stored absolute IRI would rot the day it moved.&quot;,
+    &quot;description&quot;: &quot;The swimlane glossary&#39;s retirement ledger. Declared rather than hidden because a consumer must be able to find what this layer has ever called a term: the glossary document is regenerated from the corpus each run and has no memory, so the one fact that cannot be re-derived — that a concept was once minted — is committed here. Keyed by the IRI&#39;s local part, never the absolute IRI, because the publication base is a deploy-time variable and a stored absolute IRI would rot the day it moved.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;swimlane-glossary&quot;
     ]
@@ -1001,7 +987,7 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;cat-harness-upstream&quot;,
     &quot;path&quot;: &quot;upstream/&quot;,
-    &quot;description&quot;: &quot;The pinned-upstream registry, `upstream-pins.json` (`\&quot;$schema\&quot;: \&quot;folio-upstream-pins/v1\&quot;`): one row per upstream dependency the build pins — such as the just-the-docs theme and the Bun runtime — naming the file the pin is READ from (`pinnedIn`, resolved against this instance&#39;s root), the pattern that reads it, what of ours binds to the dependency and the MVP that must pass before it moves. It deliberately holds no version: that lives in the file the build reads. Read by `bun run cat check:upstream-pins` (weekly, `.github/workflows/upstream-pins.yml`) and worked by the `upstream-pin-watch` / `upstream-version-adoption` processes and skill this instance owns. Moved here from the repository root on 2026-10-06 (bean `ar1s`, phase 3: tooling leaves the root before the repo split). HERE rather than in the tool layer because this instance&#39;s processes, skills and scripts name it, and a harness file naming a file in the layer above is a wrong-direction reference (`check:reference-direction`). `code`: the checker&#39;s input table, authored beside the processes that read it, not content any reader renders.&quot;,
+    &quot;description&quot;: &quot;The pinned-upstream registry, `upstream-pins.json` (`\&quot;$schema\&quot;: \&quot;folio-upstream-pins/v1\&quot;`): one row per upstream dependency the build pins — such as the just-the-docs theme and the Bun runtime — naming the file the pin is READ from (`pinnedIn`, resolved against this layer&#39;s root), the pattern that reads it, what of ours binds to the dependency and the MVP that must pass before it moves. It deliberately holds no version: that lives in the file the build reads. Read by `bun run cat check:upstream-pins` (weekly, `.github/workflows/upstream-pins.yml`) and worked by the `upstream-pin-watch` / `upstream-version-adoption` processes and skill this layer owns. Moved here from the repository root on 2026-10-06 (bean `ar1s`, phase 3: tooling leaves the root before the repo split). HERE rather than in the tool layer because this layer&#39;s processes, skills and scripts name it, and a harness file naming a file in the layer above is a wrong-direction reference (`check:reference-direction`). `code`: the checker&#39;s input table, authored beside the processes that read it, not content any reader renders.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;code&quot;
     ],
@@ -1012,7 +998,70 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;openapi&quot;,
     &quot;path&quot;: &quot;openapi/&quot;,
-    &quot;description&quot;: &quot;The OpenAPI subgraph — a NAMED SUBGRAPH of the harness, and until 2026-10-07 an instance of its own, `cat-openapi` (repository never created). Owner, 2026-10-07: *\&quot;put cat-openapi under cat-harness as named subgraph &#39;openapi&#39;, not separate repo.\&quot;* It holds the machinery for OpenAPI 3 documents rather than documents: the graph typology `openapi` an instance declares to hold one, the validator for that kind&#39;s provenance node, the shapes (`cat-openapi.config.json`, provenance, the subset of OpenAPI 3 the pages read) and the rendering sub-pipeline that gives every operation a page and an IRI. Of graph typology `cat-harness` because it holds MORE THAN ONE of the harness&#39;s parts; the graphs inside it — `openapi-validators` and `openapi-typologies` — are declared FROM WITHIN, in `openapi/graph.json` (#980); its schema and scripts are code, so the tools layer (https://github.com/litlfred/cat-harness-tools) holds them (`cat-harness-tools-openapi-schemas`, `cat-harness-tools-openapi`; beans `70lx`, `8lcl`), never reached down to from here. Bean `s4ta`.&quot;,
+    &quot;description&quot;: &quot;The OpenAPI subgraph — a NAMED SUBGRAPH of the harness, and until 2026-10-07 a layer of its own, `cat-openapi` (repository never created). Owner, 2026-10-07: *\&quot;put cat-openapi under cat-harness as named subgraph &#39;openapi&#39;, not separate repo.\&quot;* It holds the machinery for OpenAPI 3 documents rather than documents: the graph typology `openapi` a layer declares to hold one, the validator for that kind&#39;s provenance node, the shapes (`cat-openapi.config.json`, provenance, the subset of OpenAPI 3 the pages read) and the rendering sub-pipeline that gives every operation a page and an IRI. Of graph typology `cat-harness` because it holds MORE THAN ONE of the harness&#39;s parts; the graphs inside it — `openapi-validators` and `openapi-typologies` — are declared FROM WITHIN, in `openapi/graph.json` (#980); its schema and scripts are code, so the tools layer (https://github.com/litlfred/cat-harness-tools) holds them (`cat-harness-tools-openapi-schemas`, `cat-harness-tools-openapi`; beans `70lx`, `8lcl`), never reached down to from here. Bean `s4ta`.&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;sdlc&quot;,
+    &quot;path&quot;: &quot;sdlc/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;description&quot;: &quot;The software-delivery sub-graph — a NAMED SUB-GRAPH of the harness on the pattern of `openapi/`, and OPT-IN: off in every layer, this one included, unless that layer lists `cat-harness.sdlc` in its own `enableSubgraphs` (owner, 2026-11-03, rulings Q12 and Q18: named folders, a clean break, no redirects; cat-harness#991 step 23.2). It holds the development processes (branch, review, merge, gates, QA, publication, release) and the skills that teach them (`sdlc-core`, `crdm`, `spec-kit`); the graphs inside it — `sdlc-skills` and `sdlc-processes` — are declared FROM WITHIN, in `sdlc/graph.json` (#980). Its processes and skills use the work plan, so a layer enabling it enables `cat-harness.work-plan` too. Off, the material is left out of what an agent is given (skills, Tools, a mount&#39;s default list), so a content layer&#39;s knowledge graph does not teach the agent the harness&#39;s own delivery process (proposal §4.13).&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;work-plan&quot;,
+    &quot;path&quot;: &quot;work-plan/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;description&quot;: &quot;The work-plan sub-graph — a NAMED SUB-GRAPH of the harness, OPT-IN like `sdlc`: off in every layer unless that layer lists `cat-harness.work-plan` in its own `enableSubgraphs` (owner, 2026-11-03, rulings Q15 and Q18; cat-harness#991 step 23.2). It holds the bean Tool&#39;s skills (the `work-plan` package) and the Tool definitions of the work plan and the process engine (beans CLI, bean query, claim check, drain queue, `work_plan_prime`, the `workflow_*` tools); the graphs inside it — `work-plan-skills` and `work-plan-tools` — are declared FROM WITHIN, in `work-plan/graph.json`. Used by `sdlc` and by collaborative content development; the memory-store Role and its neutral tools stay in cat-harness itself, outside it (proposal §4.14).&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;integrations&quot;,
+    &quot;path&quot;: &quot;integrations/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;description&quot;: &quot;The integrations sub-graph — a NAMED SUB-GRAPH of the harness, OPT-IN like `sdlc`: off in every layer unless that layer lists `cat-harness.integrations` in its own `enableSubgraphs` (owner, 2026-11-10, card Q-SG-1 C, wave 1). It holds the Tool definitions that bind the harness to an outside service: the git hosts&#39; change-proposal tools (`github-pr-*`, `github-branches`, `gitlab-mr-*`, `gitlab-branches`, whose operations `skills-and-tools` names), the MCP capture and server-image tools, and `upload-step-docs`. The graph inside it, `integrations-tools`, is declared FROM WITHIN, in `integrations/graph.json`. Their implementations stay in cat-harness-tools.&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;research&quot;,
+    &quot;path&quot;: &quot;research/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;description&quot;: &quot;The research sub-graph — a NAMED SUB-GRAPH of the harness, OPT-IN like `sdlc`: off in every layer unless that layer lists `cat-harness.research` in its own `enableSubgraphs` (owner, 2026-11-10, card Q-SG-1 C, wave 1). It holds the methodologies derived from the research literature on agentic software engineering (`sdlc-agentic-landscape`, `agentic-se-literature-synthesis`, `agentic-pre-merge-review`, `verifiable-ai-guideline-evaluation`), which only `sdlc` and the docs cite. The graph inside it, `research-methodologies`, is declared FROM WITHIN, in `research/graph.json`. Methodologies an on-by-default skill cites stay in `methodologies/`.&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;editorial&quot;,
+    &quot;path&quot;: &quot;editorial/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;description&quot;: &quot;The editorial sub-graph — a NAMED SUB-GRAPH of the harness, OPT-IN like `sdlc`: off in every layer unless that layer lists `cat-harness.editorial` in its own `enableSubgraphs` (owner, 2026-11-10, card Q-SG-1 C, wave 2). It holds the `editorial-audits` skill package: the one-voice, devil&#39;s-advocate and integration watchers, voice reviews, readability, block density, chapter complexity, the exposition swarm drain and the production-vs-exploratory discipline. The editor, content graph, content profiles, Markdown authoring and the review skills that always-on skills cite stay in `authoring-core`. Declared FROM WITHIN in `editorial/graph.json`.&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;kg-ops&quot;,
+    &quot;path&quot;: &quot;kg-ops/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;description&quot;: &quot;The KG operations sub-graph — a NAMED SUB-GRAPH of the harness, OPT-IN like `sdlc`: off in every layer unless that layer lists `cat-harness.kg-ops` in its own `enableSubgraphs` (owner, 2026-11-10, card Q-SG-1 C, wave 2). It holds the `kg-ops` skill package (N-Quads distribution, named SPARQL queries, edge kinds and blast radius, domain fencing), their two processes and `witness-parity`. KG separation, sub-KG life cycle, LSI and rendering stay in `graph-management`, because always-on skills, Tools and visualisers cite them. Declared FROM WITHIN in `kg-ops/graph.json`.&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;platform-ui&quot;,
+    &quot;path&quot;: &quot;platform-ui/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;description&quot;: &quot;The platform UI sub-graph — a NAMED SUB-GRAPH of the harness, OPT-IN like `sdlc`: off in every layer unless that layer lists `cat-harness.platform-ui` in its own `enableSubgraphs` (owner, 2026-11-10, card Q-SG-1 C, wave 3). It holds the `platform-ui` skill package: how the harness&#39;s own site and viewers are built and themed (PDF inline viewer, visualiser loading, incremental rendering, HTML rendering QC, deployment awareness, theme declaration, generation, contrast and artefacts, sticky notes). The viewers, the site Tools and the skills always-on content cites stay in `ui-core`, `theming` and `tools/`, because sites a layer publishes still use them. Declared FROM WITHIN in `platform-ui/graph.json`.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;cat-harness&quot;
     ]
@@ -1020,7 +1069,7 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;archimate&quot;,
     &quot;path&quot;: &quot;archimate/&quot;,
-    &quot;description&quot;: &quot;The ArchiMate subgraph — a NAMED SUBGRAPH of the harness, on the `openapi` subgraph&#39;s pattern (owner, 2026-10-09: *\&quot;need new specialixed harness (like openapi) for archimate content in the KG\&quot;*). It holds the machinery for ArchiMate models rather than models: the graph typology `archimate` an instance declares to hold them, the validator for the instance&#39;s `cat-archimate.config.json`, the reader for Archi&#39;s native format, and the rendering sub-pipeline that gives every view, element and relationship a page and an IRI and draws every view as SVG from the model&#39;s own diagram — no Archi install. Of graph typology `cat-harness` because it holds MORE THAN ONE of the harness&#39;s parts; the graphs inside it — `archimate-validators` and `archimate-typologies` — are declared FROM WITHIN, in `archimate/graph.json` (#980); its schema and scripts are code, so the tools layer (https://github.com/litlfred/cat-harness-tools) holds them (`cat-harness-tools-archimate-schemas`, `cat-harness-tools-archimate`; beans `70lx`, `8lcl`). First instance: smart-ra&#39;s DPI-H reference architecture models.&quot;,
+    &quot;description&quot;: &quot;The ArchiMate subgraph — a NAMED SUBGRAPH of the harness, on the `openapi` subgraph&#39;s pattern (owner, 2026-10-09: *\&quot;need new specialixed harness (like openapi) for archimate content in the KG\&quot;*). It holds the machinery for ArchiMate models rather than models: the graph typology `archimate` a layer declares to hold them, the validator for the layer&#39;s `cat-archimate.config.json`, the reader for Archi&#39;s native format, and the rendering sub-pipeline that gives every view, element and relationship a page and an IRI and draws every view as SVG from the model&#39;s own diagram — no Archi install. Of graph typology `cat-harness` because it holds MORE THAN ONE of the harness&#39;s parts; the graphs inside it — `archimate-validators` and `archimate-typologies` — are declared FROM WITHIN, in `archimate/graph.json` (#980); its schema and scripts are code, so the tools layer (https://github.com/litlfred/cat-harness-tools) holds them (`cat-harness-tools-archimate-schemas`, `cat-harness-tools-archimate`; beans `70lx`, `8lcl`). First layer: smart-ra&#39;s DPI-H reference architecture models.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;cat-harness&quot;
     ]
@@ -1028,7 +1077,7 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;memory&quot;,
     &quot;path&quot;: &quot;memory/&quot;,
-    &quot;description&quot;: &quot;Agent memory for the platform: durable lessons an agent carries between sessions, one `\&quot;$schema\&quot;: \&quot;folio-memory/v1\&quot;` node each, assembled into `.claude/agent-memory/&lt;agent&gt;/MEMORY.md` by `scripts/agent-memory.ts`, which reads EVERY instance&#39;s declared `memory` directory. `context`: read during a process, never written by one; it changes when a person directs an authoring agent. Also holds the `interaction` node (how each person wants to be asked, read at session start) and any `folio-waiver/v1` confirmation waivers, told apart by their `$schema` tag. Moved from the repository root on the owner&#39;s ruling of 2026-10-06 (bean `ar1s`): memory belongs to the harness its lesson is about, so lessons about content authoring live in the content harness&#39;s own `memory/`.&quot;,
+    &quot;description&quot;: &quot;Agent memory for the platform: durable lessons an agent carries between sessions, one `\&quot;$schema\&quot;: \&quot;folio-memory/v1\&quot;` node each, assembled into `.claude/agent-memory/&lt;agent&gt;/MEMORY.md` by `scripts/agent-memory.ts`, which reads EVERY layer&#39;s declared `memory` directory. `context`: read during a process, never written by one; it changes when a person directs an authoring agent. Also holds the `interaction` node (how each person wants to be asked, read at session start) and any `folio-waiver/v1` confirmation waivers, told apart by their `$schema` tag. Moved from the repository root on the owner&#39;s ruling of 2026-10-06 (bean `ar1s`): memory belongs to the harness its lesson is about, so lessons about content authoring live in the content harness&#39;s own `memory/`.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;memory&quot;,
       &quot;waiver&quot;,
@@ -1037,10 +1086,10 @@ ca&amp;at-harness
   },
   {
     &quot;id&quot;: &quot;fsh-guts&quot;,
-    &quot;_coverage_comment&quot;: &quot;RESTORED 2026-10-09, then MOVED the same day to this instance&#39;s `visualisers` (owner: \&quot;Why renders: [fsh-guts] in visualizer? … Need harness to declare visualizer is renderedBy\&quot;). The visualiser is declared there as `fsh-guts`, rendered by the `staging-graph-viewer` Tool, `publish: staging-only` with its `writer`, so compose-docs still withholds it from a canonical build and gen-fsh-guts-viz.ts still refuses to draw a page nobody declared.&quot;,
+    &quot;_coverage_comment&quot;: &quot;RESTORED 2026-10-09, then MOVED the same day to this layer&#39;s `visualisers` (owner: \&quot;Why renders: [fsh-guts] in visualizer? … Need harness to declare visualizer is renderedBy\&quot;). The visualiser is declared there as `fsh-guts`, rendered by the `staging-graph-viewer` Tool, `publish: staging-only` with its `writer`, so compose-docs still withholds it from a canonical build and gen-fsh-guts-viz.ts still refuses to draw a page nobody declared.&quot;,
     &quot;path&quot;: &quot;fsh-guts/&quot;,
     &quot;scope&quot;: &quot;repository&quot;,
-    &quot;description&quot;: &quot;The workspace for FSH guts, scratch space, retired configs, and separated archives. REPOSITORY-scoped: it sits at the top of the checkout, not inside this instance, and it is deliberately never overlaid by a dependency.&quot;,
+    &quot;description&quot;: &quot;The workspace for FSH guts, scratch space, retired configs, and separated archives. REPOSITORY-scoped: it sits at the top of the checkout, not inside this layer, and it is deliberately never overlaid by a dependency.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;fsh-guts&quot;
     ],
@@ -1053,11 +1102,11 @@ ca&amp;at-harness
   {
     &quot;id&quot;: &quot;beans&quot;,
     &quot;coverage&quot;: {
-      &quot;_visualiser_comment&quot;: &quot;THE LIST FORM, for one visualisation, so it can carry `icon`. A bare string still parses and 26 other entries here are one; this is not the start of a migration. Owner, 2026-09-21, having gone looking for the board and landed on the origin: they asked for a tile for it and sent the bean art. `icon` names a glyph in `docs-ui.js`&#39;s registry rather than carrying markup, because `tileLink` assigns its glyph with innerHTML and a declaration is INHERITED by dependent instances — see VisualisationSchema.icon. An unknown name falls back to the generic glyph.&quot;
+      &quot;_visualiser_comment&quot;: &quot;THE LIST FORM, for one visualisation, so it can carry `icon`. A bare string still parses and 26 other entries here are one; this is not the start of a migration. Owner, 2026-09-21, having gone looking for the board and landed on the origin: they asked for a tile for it and sent the bean art. `icon` names a glyph in `docs-ui.js`&#39;s registry rather than carrying markup, because `tileLink` assigns its glyph with innerHTML and a declaration is INHERITED by dependent layers — see VisualisationSchema.icon. An unknown name falls back to the generic glyph.&quot;
     },
     &quot;path&quot;: &quot;beans/&quot;,
     &quot;scope&quot;: &quot;repository&quot;,
-    &quot;description&quot;: &quot;The work plan. `beans/beans.json` declares its nodes — `defs` (work items) and `workflows` (running BPMN instance state). REPOSITORY-scoped: it sits at the top of the checkout, not inside this instance, and it is deliberately never overlaid by a dependency.&quot;,
+    &quot;description&quot;: &quot;The work plan. `beans/beans.json` declares its nodes — `defs` (work items) and `workflows` (running BPMN instance state). REPOSITORY-scoped: it sits at the top of the checkout, not inside this layer, and it is deliberately never overlaid by a dependency.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;beans&quot;
     ],
@@ -1087,7 +1136,7 @@ ca&amp;at-harness
   },
   {
     &quot;id&quot;: &quot;checkout-uploads&quot;,
-    &quot;_scope_comment&quot;: &quot;Owner, 2026-10-09: \&quot;uploads/ is a dir-subgraph\&quot;. The CHECKOUT&#39;s ingestion queue at the root of the index checkout — distinct from this instance&#39;s own `uploads` above, which is cat-harness&#39;s queue. Declared here, REPOSITORY-scoped, for the reason `beans` and `todos` are: the index root declares no instance (owner, 2026-10-08), so the instance that owns the harness owns the checkout-level graphs. Unlike those two it is a DIRECTORY source: its content is tracked in the checkout, not kept on a branch.&quot;,
+    &quot;_scope_comment&quot;: &quot;Owner, 2026-10-09: \&quot;uploads/ is a dir-subgraph\&quot;. The CHECKOUT&#39;s ingestion queue at the root of the index checkout — distinct from this layer&#39;s own `uploads` above, which is cat-harness&#39;s queue. Declared here, REPOSITORY-scoped, for the reason `beans` and `todos` are: the index root declares no layer (owner, 2026-10-08), so the layer that owns the harness owns the checkout-level graphs. Unlike those two it is a DIRECTORY source: its content is tracked in the checkout, not kept on a branch.&quot;,
     &quot;path&quot;: &quot;uploads/&quot;,
     &quot;scope&quot;: &quot;repository&quot;,
     &quot;graphTypologies&quot;: [
@@ -1223,8 +1272,10 @@ ca&amp;at-harness
     &quot;id&quot;: &quot;processes&quot;,
     &quot;renderedBy&quot;: &quot;processes-viewer&quot;,
     &quot;coversKinds&quot;: [
-      &quot;processes&quot;
+      &quot;processes&quot;,
+      &quot;business-processes&quot;
     ],
+    &quot;subgraphs&quot;: &quot;instance&quot;,
     &quot;alias&quot;: &quot;processes&quot;
   },
   {
@@ -1274,7 +1325,7 @@ ca&amp;at-harness
     &quot;covers&quot;: [
       &quot;qa&quot;
     ],
-    &quot;title&quot;: &quot;Latent semantic indexes&quot;,
+    &quot;title&quot;: &quot;Indexing evidence&quot;,
     &quot;alias&quot;: &quot;lsi&quot;
   },
   {
@@ -1444,15 +1495,6 @@ ca&amp;at-harness
     &quot;title&quot;: &quot;Pipeline plugins&quot;
   },
   {
-    &quot;id&quot;: &quot;editor-checkers&quot;,
-    &quot;renderedBy&quot;: &quot;state-viewer&quot;,
-    &quot;coversKinds&quot;: [
-      &quot;editor-checkers&quot;
-    ],
-    &quot;subgraphs&quot;: &quot;instance&quot;,
-    &quot;title&quot;: &quot;Editor checkers&quot;
-  },
-  {
     &quot;id&quot;: &quot;scenarios&quot;,
     &quot;renderedBy&quot;: &quot;state-viewer&quot;,
     &quot;coversKinds&quot;: [
@@ -1539,6 +1581,8 @@ ca&amp;at-harness
       &quot;scenarios&quot;,
       &quot;processes&quot;,
       &quot;openapi&quot;,
+      &quot;sdlc&quot;,
+      &quot;work-plan&quot;,
       &quot;archimate&quot;,
       &quot;tools&quot;,
       &quot;schemas&quot;
@@ -1558,7 +1602,7 @@ ca&amp;at-harness
     ]
   }
 ]</pre></dd>
-<dt>_builtAtPublish_comment</dt><dd>Owner, 2026-10-14 (B1, widened to state the same day: &#39;fix all, in proper way&#39;). The artefacts this instance serves and never commits: each is computed over the checkout&#39;s OTHER instances (`checkout`), which sit above this layer and which it cannot pin, or from a branch-kept graph (`state`), which moves without a commit — so no commit of cat-harness can hold it current, and a `:check` against committed bytes went red in the index on every re-pin. `derive:publish` runs each `writer` (a package script, `bun run cat &lt;script&gt;`) once, in THIS ORDER, after `state:mount` and before the site is composed — so a writer that reads another&#39;s output is listed after it (the slices read the todos index docs:pages writes); `.gitignore` carries one anchored line per path, and `schemas/built-at-publish.test.ts` keeps the two equal. The rule and the two causes are in `schemas/kg/built-at-publish.ts`. NOT here, deliberately: this instance&#39;s OWN BPMN drawings (`docs/assets/img/workflows/&lt;own&gt;.svg`), which its README and authored pages embed on github.com and whose inputs are all its own; the 37 drawings of other instances&#39; diagrams are listed individually so the 67 own ones stay committed.</dd>
+<dt>_builtAtPublish_comment</dt><dd>Owner, 2026-10-14 (B1, widened to state the same day: &#39;fix all, in proper way&#39;). The artefacts this layer serves and never commits: each is computed over the checkout&#39;s OTHER layers (`checkout`), which sit above this layer and which it cannot pin, or from a branch-kept graph (`state`), which moves without a commit — so no commit of cat-harness can hold it current, and a `:check` against committed bytes went red in the index on every re-pin. `derive:publish` runs each `writer` (a package script, `bun run cat &lt;script&gt;`) once, in THIS ORDER, after `state:mount` and before the site is composed — so a writer that reads another&#39;s output is listed after it (the slices read the todos index docs:pages writes); `.gitignore` carries one anchored line per path, and `schemas/built-at-publish.test.ts` keeps the two equal. The rule and the two causes are in `schemas/kg/built-at-publish.ts`. NOT here, deliberately: this layer&#39;s OWN BPMN drawings (`docs/assets/img/workflows/&lt;own&gt;.svg`), which its README and authored pages embed on github.com and whose inputs are all its own; the 37 drawings of other layers&#39; diagrams are listed individually so the 67 own ones stay committed.</dd>
 <dt>builtAtPublish</dt><dd><pre>[
   {
     &quot;path&quot;: &quot;docs/cat-harness/published-graphs.md&quot;,
@@ -1566,7 +1610,8 @@ ca&amp;at-harness
       &quot;handler:index&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;lists every graph the handler renders, by the instance whose material it shows&quot;
+    &quot;reason&quot;: &quot;lists every graph the handler renders, by the instance whose material it shows&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;uml/overview/&quot;,
@@ -1574,7 +1619,10 @@ ca&amp;at-harness
       &quot;uml:overview&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;one .puml/.mmd per instance in the checkout, and the QA tree it draws is branch-kept&quot;
+    &quot;reads&quot;: [
+      &quot;fhir-artifact-index&quot;
+    ],
+    &quot;reason&quot;: &quot;one .puml/.mmd per instance in the checkout, and the QA tree it draws is branch-kept. `reads: fhir-artifact-index`: it draws every declared directory, an IG&#39;s artefact index (with its `sidecars/`) among them, and that index is built at publish by `ig-index:build`; unordered, the two ran together and it read a sidecar mid-rewrite (folio-assistant#2953)&quot;
   },
   {
     &quot;path&quot;: &quot;docs/uml/overview/&quot;,
@@ -1620,6 +1668,17 @@ ca&amp;at-harness
       &quot;library&quot;
     ],
     &quot;reason&quot;: &quot;the library projection of every instance in the checkout: index.json carries each entry&#39;s referencedBy, scanned over every instance&#39;s declared directories; entries/ is one flat folder of all instances&#39; entries (28 of 88 ids not this instance&#39;s); jsonld/ and avatars/ hold a subtree per instance, including the byte copies of sub-graphs declared inside another instance&#39;s entry (bean 8pzh, owner 2026-10-15 H1). Measured: 741 file-touches in two weeks, the largest share of docs/ churn (cat-harness#362). Listed after docs/subgraph/, because the library pages link the subgraph index only when it is on disk, and before docs/assets/slices/, whose writer reads index.json&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/assets/keywords/&quot;,
+    &quot;writer&quot;: [
+      &quot;library:keywords&quot;
+    ],
+    &quot;because&quot;: &quot;checkout&quot;,
+    &quot;reads&quot;: [
+      &quot;library&quot;
+    ],
+    &quot;reason&quot;: &quot;the derived keywords graph (folio-keywords/v2, cat-harness#1144): one JSON-LD node per library entry with six keyword variants side by side (LSI log-entropy and tf-idf on surface and latent terms, a latent re-rank, correspondence analysis). Keywords are extracted content, so they never live in the ingest record, and their term weights derive from the WHOLE library, so one sibling ingesting an entry reweights every node. Readers that need them (library:viz) compute them in memory, so the order only matters for pages that read these files&quot;
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/library/&quot;,
@@ -1701,7 +1760,8 @@ ca&amp;at-harness
       &quot;node-kind:pages&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the node-kind-index kind&#39;s pages: its one node is docs/_data/node-kinds.json, listed just above and built at publish, which the node page renders verbatim (measured: the committed page went stale the day the table was regenerated, ci72 2026-10-15)&quot;
+    &quot;reason&quot;: &quot;the node-kind-index kind&#39;s pages: its one node is docs/_data/node-kinds.json, listed just above and built at publish, which the node page renders verbatim (measured: the committed page went stale the day the table was regenerated, ci72 2026-10-15)&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/bean/&quot;,
@@ -1709,7 +1769,8 @@ ca&amp;at-harness
       &quot;node-kind:pages&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the bean kind&#39;s pages: in the composed checkout, cat-harness-tools/beans/defs/ and folio-assistant-core/beans/defs/ sit above this layer and beans/ is kept on its state branch (bean folio-assistant-p7mb)&quot;
+    &quot;reason&quot;: &quot;the bean kind&#39;s pages: in the composed checkout, cat-harness-tools/beans/defs/ and folio-assistant-core/beans/defs/ sit above this layer and beans/ is kept on its state branch (bean folio-assistant-p7mb)&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/software-library/&quot;,
@@ -1717,7 +1778,35 @@ ca&amp;at-harness
       &quot;node-kind:pages&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the software-library kind&#39;s pages (bean folio-assistant-9lby): every node is in cat-harness-tools/libraries/, a layer above this one (bean folio-assistant-p7mb)&quot;
+    &quot;reason&quot;: &quot;the software-library kind&#39;s pages (bean folio-assistant-9lby): every node is in cat-harness-tools/libraries/, a layer above this one (bean folio-assistant-p7mb)&quot;,
+    &quot;index&quot;: true
+  },
+  {
+    &quot;path&quot;: &quot;docs/en/cat-harness/sme-case-verdict/&quot;,
+    &quot;writer&quot;: [
+      &quot;node-kind:pages&quot;
+    ],
+    &quot;because&quot;: &quot;checkout&quot;,
+    &quot;reason&quot;: &quot;the sme-case-verdict kind&#39;s pages: its schema and nodes sit in higher layers (bean folio-assistant-p7mb)&quot;,
+    &quot;index&quot;: true
+  },
+  {
+    &quot;path&quot;: &quot;docs/en/cat-harness/test-data-fixed/&quot;,
+    &quot;writer&quot;: [
+      &quot;node-kind:pages&quot;
+    ],
+    &quot;because&quot;: &quot;checkout&quot;,
+    &quot;reason&quot;: &quot;the test-data-fixed kind&#39;s pages: its schema and nodes sit in higher layers (bean folio-assistant-p7mb)&quot;,
+    &quot;index&quot;: true
+  },
+  {
+    &quot;path&quot;: &quot;docs/en/cat-harness/test-data-generated/&quot;,
+    &quot;writer&quot;: [
+      &quot;node-kind:pages&quot;
+    ],
+    &quot;because&quot;: &quot;checkout&quot;,
+    &quot;reason&quot;: &quot;the test-data-generated kind&#39;s pages: its schema and nodes sit in higher layers (bean folio-assistant-p7mb)&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/cat-harness-declaration/&quot;,
@@ -1725,7 +1814,8 @@ ca&amp;at-harness
       &quot;node-kind:pages&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a page per instance declaration in the checkout&quot;
+    &quot;reason&quot;: &quot;a page per instance declaration in the checkout&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/document-kind/&quot;,
@@ -1733,7 +1823,8 @@ ca&amp;at-harness
       &quot;node-kind:pages&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the document-kind kind&#39;s pages: every node is a higher layer&#39;s document kind (smart-base/document-kinds/), so a smart-base change moved the committed pages and turned node-kind:pages:check red downstream (cat-harness#331)&quot;
+    &quot;reason&quot;: &quot;the document-kind kind&#39;s pages: every node is a higher layer&#39;s document kind (smart-base/document-kinds/), so a smart-base change moved the committed pages and turned node-kind:pages:check red downstream (cat-harness#331)&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/document-kind-coverage/&quot;,
@@ -1744,7 +1835,8 @@ ca&amp;at-harness
     &quot;reads&quot;: [
       &quot;document-kinds&quot;
     ],
-    &quot;reason&quot;: &quot;the document-kind-coverage kind&#39;s pages: every node is a higher layer&#39;s coverage record (smart-base/document-kinds/*.coverage.*.json), stale for the same reason (cat-harness#331)&quot;
+    &quot;reason&quot;: &quot;the document-kind-coverage kind&#39;s pages: every node is a higher layer&#39;s coverage record (smart-base/document-kinds/*.coverage.*.json), stale for the same reason (cat-harness#331)&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/folio-assistant-core/changeset/&quot;,
@@ -1752,7 +1844,8 @@ ca&amp;at-harness
       &quot;node-kind:pages&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the pages of a node kind folio-assistant-core declares, a layer above this one, the same case as document-kind/ (cat-harness#362)&quot;
+    &quot;reason&quot;: &quot;the pages of a node kind folio-assistant-core declares, a layer above this one, the same case as document-kind/ (cat-harness#362)&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/folio-assistant-core/public-comment/&quot;,
@@ -1760,199 +1853,8 @@ ca&amp;at-harness
       &quot;node-kind:pages&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the pages of a node kind folio-assistant-core declares, a layer above this one (cat-harness#362)&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/cat-harness-tools--kg-tools.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/fhir-harness--kg-skills.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/fhir-harness--kg-tools.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-core--kg-bpmn-activities.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-core--kg-dmn-decisions.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-core--kg-skills.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-core--kg-tools.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-core--guideline-domain.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-core--platform.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-sci--kg-bpmn-activities.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-sci--kg-dmn-decisions.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-sci--kg-skills.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-sci--kg-tools.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/folio-assistant-sci--kg-schema-fields.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/smart-base--kg-bpmn-activities.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/smart-base--kg-schema-fields.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/smart-base--kg-skills.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/smart-base--kg-tools.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/who-iris--kg-skills.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/who-iris--kg-tools.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/glossary/who-iris--who-terms.skos.jsonld&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the SKOS export of another instance&#39;s glossary, which sits above this layer&quot;
+    &quot;reason&quot;: &quot;the pages of a node kind folio-assistant-core declares, a layer above this one (cat-harness#362)&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/folio-assistant-core/bibliography/&quot;,
@@ -1960,55 +1862,16 @@ ca&amp;at-harness
       &quot;bibliography:page&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;folio-assistant-core&#39;s bibliography, which sits above this layer; it is computed over every instance&#39;s references and catalogue directories. Under the page locale like every other visualiser (folio-assistant#2527); the composed site forwards the old docs/folio-assistant-core/bibliography/ address&quot;
+    &quot;reason&quot;: &quot;the bibliography folio-assistant-core renders over every instance in the checkout: one page per layer&#39;s references, catalogue and library directories, so its bytes are a function of the consuming index&#39;s lock. Never committed, but no entry named it, so `check:bibliography` judged a fresh mount (no pages yet) as 582 stale files (dth-hrh#105, run 42366701605)&quot;
   },
   {
-    &quot;path&quot;: &quot;docs/en/folio-assistant-core/glossary/&quot;,
+    &quot;path&quot;: &quot;docs/assets/glossary/&quot;,
     &quot;writer&quot;: [
       &quot;glossary:page&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;folio-assistant-core&#39;s English glossary, under the page locale like every other visualiser since 2026-10-16 (owner, \&quot;c\&quot;); it sits above this layer&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/ar/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;its translated glossary index&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/es/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;its translated glossary index&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/fr/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;its translated glossary index&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/ru/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;its translated glossary index&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/zh/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;glossary:page&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;its translated glossary index&quot;
+    &quot;reason&quot;: &quot;every instance&#39;s glossary schemes, each `&lt;instance&gt;--&lt;scheme&gt;.skos.jsonld`, composed for this site from the instances at the index&#39;s pins, so a new instance or scheme needs no edit here (bean folio-assistant-uldr, owner ruling 2026-11-06)&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/smart-base/&quot;,
@@ -2073,17 +1936,15 @@ ca&amp;at-harness
     ],
     &quot;because&quot;: &quot;checkout&quot;,
     &quot;reads&quot;: [
+      &quot;methodology&quot;,
       &quot;library&quot;,
       &quot;skills&quot;,
-      &quot;beans&quot;,
-      &quot;folio&quot;,
-      &quot;docs&quot;,
-      &quot;methodology&quot;,
-      &quot;memory&quot;,
-      &quot;policies&quot;,
+      &quot;tools&quot;,
+      &quot;processes&quot;,
       &quot;glossary&quot;
     ],
-    &quot;reason&quot;: &quot;the LSI viewer: which declared prose graphs of every instance in the checkout need an index (needOf over the tree), so it moves with the index&#39;s pins, not with this commit&quot;
+    &quot;reason&quot;: &quot;the Indexing evidence page (cat-harness#1144): each indexing method&#39;s held evidence joined to every instance&#39;s skills, Tools and processes; and its keywords/ page, read from docs/assets/keywords/ (declared above, so written first) and the checkout&#39;s glossaries. Both move with the index&#39;s pins, not with this commit&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/translation-status/&quot;,
@@ -2094,7 +1955,8 @@ ca&amp;at-harness
     &quot;reads&quot;: [
       &quot;translation-sources&quot;
     ],
-    &quot;reason&quot;: &quot;the translation status page: this instance&#39;s catalogues and, beside them, those of every other instance in the checkout declaring a translation-sources directory&quot;
+    &quot;reason&quot;: &quot;the translation status page: this instance&#39;s catalogues and, beside them, those of every other instance in the checkout declaring a translation-sources directory&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/assets/translation-status/&quot;,
@@ -2105,7 +1967,8 @@ ca&amp;at-harness
     &quot;reads&quot;: [
       &quot;translation-sources&quot;
     ],
-    &quot;reason&quot;: &quot;the projection the translation status page renders, and the tile count docs:harness reads: written with the page, from the same checkout&quot;
+    &quot;reason&quot;: &quot;the projection the translation status page renders, and the tile count docs:harness reads: written with the page, from the same checkout&quot;,
+    &quot;index&quot;: true
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/openapi/&quot;,
@@ -2307,7 +2170,7 @@ ca&amp;at-harness
     &quot;reason&quot;: &quot;the forwarding page kg:viewer writes at the viewer&#39;s address until 2026-10-20, `&lt;stub&gt;/`, beside the page it forwards to&quot;
   },
   {
-    &quot;path&quot;: &quot;docs/en/cat-harness/beans/index.html&quot;,
+    &quot;path&quot;: &quot;docs/en/cat-harness/beans/&quot;,
     &quot;writer&quot;: [
       &quot;state:visualizer&quot;
     ],
@@ -2315,7 +2178,7 @@ ca&amp;at-harness
     &quot;from&quot;: [
       &quot;beans&quot;
     ],
-    &quot;reason&quot;: &quot;the beans dashboard: the live board drawn from the beans projection docs:pages publishes, and a list of every state graph tagged by what the build published (owner, 2026-10-15)&quot;
+    &quot;reason&quot;: &quot;the beans dashboard: the live board drawn from the beans projection docs:pages publishes, and a list of every state graph tagged by what the build published (owner, 2026-10-15); one folder for every instance&#39;s page, so a new instance needs no edit here (bean folio-assistant-uldr, owner ruling 2026-11-06)&quot;
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/todos/index.html&quot;,
@@ -2329,7 +2192,7 @@ ca&amp;at-harness
     &quot;reason&quot;: &quot;the todos dashboard: the live board drawn from the todos projection docs:pages publishes, and the graph&#39;s feedback todos, boards and how many notes each board places (bean folio-assistant-750a), read from the mounted todos graph (owner, 2026-10-15)&quot;
   },
   {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/index.html&quot;,
+    &quot;path&quot;: &quot;docs/en/cat-harness/qa/&quot;,
     &quot;writer&quot;: [
       &quot;state:visualizer&quot;
     ],
@@ -2337,10 +2200,10 @@ ca&amp;at-harness
     &quot;from&quot;: [
       &quot;qa&quot;
     ],
-    &quot;reason&quot;: &quot;the QA dashboard: family counts over test/results/, which lives on qa-reports, and a list of every state graph tagged by what the build published (owner, 2026-10-15)&quot;
+    &quot;reason&quot;: &quot;the QA dashboard: family counts over test/results/, which lives on qa-reports, and a list of every state graph tagged by what the build published (owner, 2026-10-15); one folder for every instance&#39;s page, so a new instance needs no edit here (bean folio-assistant-uldr, owner ruling 2026-11-06)&quot;
   },
   {
-    &quot;path&quot;: &quot;docs/en/cat-harness/health/index.html&quot;,
+    &quot;path&quot;: &quot;docs/en/cat-harness/health/&quot;,
     &quot;writer&quot;: [
       &quot;state:visualizer&quot;
     ],
@@ -2348,10 +2211,10 @@ ca&amp;at-harness
     &quot;from&quot;: [
       &quot;health&quot;
     ],
-    &quot;reason&quot;: &quot;the health dashboard: its graph is drawn on per-instance pages built at publish, and its state and sibling list are tagged by what the build published (owner, 2026-10-15)&quot;
+    &quot;reason&quot;: &quot;the health dashboard: its graph is drawn on per-instance pages built at publish, and its state and sibling list are tagged by what the build published (owner, 2026-10-15); one folder for every instance&#39;s page, so a new instance needs no edit here (bean folio-assistant-uldr, owner ruling 2026-11-06)&quot;
   },
   {
-    &quot;path&quot;: &quot;docs/en/cat-harness/attestations/index.html&quot;,
+    &quot;path&quot;: &quot;docs/en/cat-harness/attestations/&quot;,
     &quot;writer&quot;: [
       &quot;state:visualizer&quot;
     ],
@@ -2359,7 +2222,7 @@ ca&amp;at-harness
     &quot;from&quot;: [
       &quot;attestations&quot;
     ],
-    &quot;reason&quot;: &quot;the attestations dashboard: its graph is drawn on per-instance pages built at publish, and its state and sibling list are tagged by what the build published (owner, 2026-10-15)&quot;
+    &quot;reason&quot;: &quot;the attestations dashboard: its graph is drawn on per-instance pages built at publish, and its state and sibling list are tagged by what the build published (owner, 2026-10-15); one folder for every instance&#39;s page, so a new instance needs no edit here (bean folio-assistant-uldr, owner ruling 2026-11-06)&quot;
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/issue-marks/index.html&quot;,
@@ -2400,33 +2263,6 @@ ca&amp;at-harness
     &quot;reason&quot;: &quot;the uploads-queue dashboard: a list of every state graph tagged by what the build published, which other instances&#39; pins and the publish-time pages decide (owner, 2026-10-15)&quot;
   },
   {
-    &quot;path&quot;: &quot;docs/en/cat-harness/beans/cat-harness/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;state&quot;,
-    &quot;from&quot;: [
-      &quot;beans&quot;
-    ],
-    &quot;reason&quot;: &quot;the repository store&#39;s own page (bean folio-assistant-750a): its open beans, notes, workflow instances, merge-queue decisions (bean folio-assistant-30jr), session surveys and sweep marks, which the board&#39;s client does not draw; the rows of its parts (bean-defs, bean-notes, workflow-state, merge-queue, session-survey, sweep-marks) open it&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/beans/cat-harness-tools/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s own work plan (bean folio-assistant-1nu0): one page per instance in the checkout holding a beans store of its own&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/beans/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s own work plan (bean folio-assistant-1nu0): one page per instance in the checkout holding a beans store of its own&quot;
-  },
-  {
     &quot;path&quot;: &quot;docs/en/cat-harness/folio/folio-assistant-core/&quot;,
     &quot;writer&quot;: [
       &quot;folio:viz&quot;
@@ -2441,143 +2277,6 @@ ca&amp;at-harness
     ],
     &quot;because&quot;: &quot;checkout&quot;,
     &quot;reason&quot;: &quot;another instance&#39;s folio-graph page (bean folio-assistant-1nu0): one per instance in the checkout holding a folio directory, other than this one&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/cat-harness/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;state&quot;,
-    &quot;from&quot;: [
-      &quot;qa&quot;
-    ],
-    &quot;reason&quot;: &quot;this instance&#39;s own QA results page (bean folio-assistant-1nu0): it projects test/results/, which lives on qa-reports&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/cat-harness-tools/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s QA results page (bean folio-assistant-1nu0): one per instance in the checkout holding a qa directory, projecting that instance&#39;s test/results/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/fhir-harness/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s QA results page (bean folio-assistant-1nu0): one per instance in the checkout holding a qa directory, projecting that instance&#39;s test/results/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s QA results page (bean folio-assistant-1nu0): one per instance in the checkout holding a qa directory, projecting that instance&#39;s test/results/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/folio-assistant-sci/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s QA results page (bean folio-assistant-1nu0): one per instance in the checkout holding a qa directory, projecting that instance&#39;s test/results/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/smart-base/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s QA results page (bean folio-assistant-1nu0): one per instance in the checkout holding a qa directory, projecting that instance&#39;s test/results/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/smart-immunizations/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s QA results page (bean folio-assistant-1nu0): one per instance in the checkout holding a qa directory, projecting that instance&#39;s test/results/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/qa/who-iris/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s QA results page (bean folio-assistant-1nu0): one per instance in the checkout holding a qa directory, projecting that instance&#39;s test/results/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/health/cat-harness/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;state&quot;,
-    &quot;from&quot;: [
-      &quot;health&quot;
-    ],
-    &quot;reason&quot;: &quot;this instance&#39;s own health page (bean folio-assistant-1nu0): it projects test/health/results/, which the daily sweep writes and nothing commits&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/health/cat-harness-tools/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s health page (bean folio-assistant-1nu0): one per instance in the checkout holding a health directory, projecting that instance&#39;s health reports&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/health/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s health page (bean folio-assistant-1nu0): one per instance in the checkout holding a health directory, projecting that instance&#39;s health reports&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/health/who-iris/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s health page (bean folio-assistant-1nu0): one per instance in the checkout holding a health directory, projecting that instance&#39;s health reports&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/attestations/cat-harness/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;state&quot;,
-    &quot;from&quot;: [
-      &quot;attestations&quot;
-    ],
-    &quot;reason&quot;: &quot;this instance&#39;s own attestations page (bean folio-assistant-1nu0): a projection of test/attestations/, rebuilt each publish rather than committed beside it&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/attestations/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s attestations page (bean folio-assistant-1nu0): one per instance in the checkout holding an attestations directory, projecting that instance&#39;s test/attestations/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/attestations/folio-assistant-sci/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s attestations page (bean folio-assistant-1nu0): one per instance in the checkout holding an attestations directory, projecting that instance&#39;s test/attestations/&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/attestations/smart-base/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;another instance&#39;s attestations page (bean folio-assistant-1nu0): one per instance in the checkout holding an attestations directory, projecting that instance&#39;s test/attestations/&quot;
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/graph-typologies/&quot;,
@@ -2628,84 +2327,12 @@ ca&amp;at-harness
     &quot;reason&quot;: &quot;the code-lists registry pages (bean folio-assistant-k7ro): a hub and one page per instance in the checkout holding a directory of the kind, each listing that instance&#39;s nodes&quot;
   },
   {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/bootstrap-tools/&quot;,
+    &quot;path&quot;: &quot;docs/en/cat-harness/code/&quot;,
     &quot;writer&quot;: [
       &quot;state:visualizer&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/cat-harness/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/cat-harness-tools/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/fhir-harness/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/folio-assistant-core/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/folio-assistant-sci/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/smart-base/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/smart-immunizations/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/index.html&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the code pages&#39; hub (bean folio-assistant-svgx): it lists every instance in the checkout declaring a code directory, so no commit of this instance can hold it current (bean folio-assistant-5o5c: smart-immunizations&#39; run found it stale)&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/code/who-iris/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins&quot;
+    &quot;reason&quot;: &quot;an instance&#39;s code page (bean folio-assistant-svgx): one per instance in the checkout declaring a code directory, listing its files linked to GitHub at the commit the index pins; one folder for every instance&#39;s page, so a new instance needs no edit here (bean folio-assistant-uldr, owner ruling 2026-11-06)&quot;
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/memory/&quot;,
@@ -2722,14 +2349,6 @@ ca&amp;at-harness
     ],
     &quot;because&quot;: &quot;checkout&quot;,
     &quot;reason&quot;: &quot;the pipeline-plugins registry viewer (cat-harness-tools#386): a hub and one page per instance in the checkout declaring a pipeline-plugins directory, listing each folio-pipeline-plugin/v1 node by its slot&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/en/cat-harness/editor-checkers/&quot;,
-    &quot;writer&quot;: [
-      &quot;state:visualizer&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;the editor-checkers registry viewer (cat-harness-tools#386): a hub and one page per instance in the checkout declaring an editor-checkers directory, listing each folio-editor-checker/v1 node&quot;
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/scenarios/&quot;,
@@ -2857,6 +2476,24 @@ ca&amp;at-harness
     &quot;reason&quot;: &quot;the per-page todo listing includes&quot;
   },
   {
+    &quot;path&quot;: &quot;docs/_data/provenance/&quot;,
+    &quot;writer&quot;: [
+      &quot;docs:pages&quot;,
+      &quot;skills:docs&quot;
+    ],
+    &quot;because&quot;: &quot;checkout&quot;,
+    &quot;reason&quot;: &quot;the provenance footer (owner, 2026-11-05, 2B), from the .prov.jsonld logs of every instance&#39;s documents and skills in the checkout: one site-data slice per writer, which footer_custom.html reads&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/_includes/generated/provenance/&quot;,
+    &quot;writer&quot;: [
+      &quot;docs:pages&quot;,
+      &quot;skills:docs&quot;
+    ],
+    &quot;because&quot;: &quot;checkout&quot;,
+    &quot;reason&quot;: &quot;the provenance footer (owner, 2026-11-05, 2B), from the .prov.jsonld logs of every instance&#39;s documents and skills in the checkout: the per-page fragments the slices name&quot;
+  },
+  {
     &quot;path&quot;: &quot;docs/assets/slices/&quot;,
     &quot;writer&quot;: [
       &quot;slice:sqlite&quot;
@@ -2866,311 +2503,16 @@ ca&amp;at-harness
       &quot;beans&quot;,
       &quot;todos&quot;
     ],
-    &quot;reason&quot;: &quot;the kg slice is framed over the checkout, and the beans and todos slices over branch-kept graphs&quot;
+    &quot;reason&quot;: &quot;the kg slice is framed over the checkout, and the beans and todos slices over branch-kept graphs&quot;,
+    &quot;index&quot;: true
   },
   {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/atomic-mass-drift-check.svg&quot;,
+    &quot;path&quot;: &quot;docs/assets/img/workflows/&quot;,
     &quot;writer&quot;: [
       &quot;render:bpmn&quot;
     ],
     &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/authoring-a-document.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/authoring-a-paper.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/board-open-close.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/board-place-note.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/board-relocate.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/classify-and-code-content.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/complete-initialization.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/content-change-review.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/content-lifecycle.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/dak-l3-ig.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/deep-document-research.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/diig-investment-path.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/discussion.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/draft-to-publication.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/editing-hci-validation.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/evidence-retrieval.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/getting-started.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/human-agent-discussion.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/ig-ast-cache.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/ig-ast-delta-review.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/ig-incremental-build.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/ingest-build-l1-kg.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/ingest-derive-content.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/ingest-extract-structure.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/ingest-l1-completeness-gate.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/initialize-harness.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/l1-document-ingestion.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/l2-component-edit-review.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/l2-dak-authoring.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/l3-fhir-pipeline.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/lean-docs-publish.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/log-message.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/public-comment.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/questionnaire-wireframe-review.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/render-kg-to-github-pages.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/SGAuthoring.DAKLifecycle.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
-  },
-  {
-    &quot;path&quot;: &quot;docs/assets/img/workflows/smart-guideline-end-to-end.svg&quot;,
-    &quot;writer&quot;: [
-      &quot;render:bpmn&quot;
-    ],
-    &quot;because&quot;: &quot;checkout&quot;,
-    &quot;reason&quot;: &quot;a drawing of another instance&#39;s diagram, rendered from that instance&#39;s .bpmn at the index&#39;s pin&quot;
+    &quot;reason&quot;: &quot;the site&#39;s drawing of every instance&#39;s diagrams, each step and [+] linked to this site&#39;s pages, so it changes with the index&#39;s pins; each layer commits its own plain drawing beside its .bpmn instead (bean folio-assistant-akiq)&quot;
   },
   {
     &quot;path&quot;: &quot;docs/en/cat-harness/processes/&quot;,
@@ -3187,13 +2529,32 @@ ca&amp;at-harness
     ],
     &quot;because&quot;: &quot;checkout&quot;,
     &quot;reason&quot;: &quot;the tile count of each page this writer draws that a landing tile opens, keyed by that tile&#39;s directory id (folio-assistant#931, owner&#39;s ruling 2026-10-29). Build-time data read by docs:harness, never committed. docs:harness in derive:publish runs before this writer, so the tile reads it from the publish workflow&#39;s own later docs:harness step&quot;
+  },
+  {
+    &quot;path&quot;: &quot;schemas/kinds/&quot;,
+    &quot;writer&quot;: [
+      &quot;kind:json-schemas&quot;
+    ],
+    &quot;because&quot;: &quot;checkout&quot;,
+    &quot;reason&quot;: &quot;one JSON Schema per harness kind, generated from cat-harness-tools&#39; Zod, a layer above this one: committed here, each layer&#39;s CI checked it against the other&#39;s main, so a schema change could go green in neither (owner card via the merge steward, 2026-11-05: build it at publish)&quot;
   }
 ]</pre></dd>
-<dt>_needs_comment</dt><dd>The layer this instance sits on. Owner, 2026-09-20: &quot;So bootsteap, cat harness, fa-core, f-a, from bottom to top.&quot; Declared rather than hardcoded in the navbar, so the ordering is a fact of the repository and not of whichever consumer needed it first. `bootstrap-tools` added 2026-09-30 (bean `0lj4`, owner&#39;s ruling): bean `xsqm` moved that code OUT of this instance into its own, and this list was not updated with it, so 20 imports under `cat-harness/` reached an instance this file did not name. `allowedFromNeeds` gives a layer `{layer} U ancestors(layer)`, and `bootstrap-tools` is a SIBLING of `cat-harness` rather than an ancestor, so every one of those 20 was `wrong-direction` by the declared rule while four separate checks reported clean. The reverse arrow stays forbidden and is guarded by `check:tools-closure`. REMOVED again 2026-10-30 (bean `8lcl`, owner card &quot;A. One coordinated move&quot;): the code those imports sat in moved to cat-harness-tools, which names `bootstrap-tools` in its own `needs`. Measured after the move, no file under `cat-harness/` imports `bootstrap-tools`, so the edge named nothing.</dd>
+<dt>_enableSubgraphs_comment</dt><dd>cat-harness switches its own opt-in sub-graphs on for ITSELF, so its gates, generators and site still see `sdlc`, `work-plan` and the `library` corpus (`library/corpus/`, 2026-11-04). Not inherited: every layer above has them off unless it lists them in its own `enableSubgraphs` (cat-harness#991 step 23.2; folio-assistant enables both in step 23.4).</dd>
+<dt>enableSubgraphs</dt><dd><pre>[
+  &quot;cat-harness.sdlc&quot;,
+  &quot;cat-harness.work-plan&quot;,
+  &quot;cat-harness.library&quot;,
+  &quot;cat-harness.integrations&quot;,
+  &quot;cat-harness.research&quot;,
+  &quot;cat-harness.editorial&quot;,
+  &quot;cat-harness.kg-ops&quot;,
+  &quot;cat-harness.platform-ui&quot;
+]</pre></dd>
+<dt>_needs_comment</dt><dd>The layer this layer sits on. Owner, 2026-09-20: &quot;So bootsteap, cat harness, fa-core, f-a, from bottom to top.&quot; Declared rather than hardcoded in the navbar, so the ordering is a fact of the repository and not of whichever consumer needed it first. `bootstrap-tools` added 2026-09-30 (bean `0lj4`, owner&#39;s ruling): bean `xsqm` moved that code OUT of this layer into its own, and this list was not updated with it, so 20 imports under `cat-harness/` reached a layer this file did not name. `allowedFromNeeds` gives a layer `{layer} U ancestors(layer)`, and `bootstrap-tools` is a SIBLING of `cat-harness` rather than an ancestor, so every one of those 20 was `wrong-direction` by the declared rule while four separate checks reported clean. The reverse arrow stays forbidden and is guarded by `check:tools-closure`. REMOVED again 2026-10-30 (bean `8lcl`, owner card &quot;A. One coordinated move&quot;): the code those imports sat in moved to cat-harness-tools, which names `bootstrap-tools` in its own `needs`. Measured after the move, no file under `cat-harness/` imports `bootstrap-tools`, so the edge named nothing.</dd>
 <dt>needs</dt><dd><pre>[
   &quot;bootstrap&quot;
 ]</pre></dd>
-<dt>_jsonldPrefixes_comment</dt><dd>The external vocabularies this instance&#39;s JSON-LD speaks (schemas/kg/jsonld-prefixes.ts; bean folio-assistant-63q4, owner 2026-10-14). Measured 2026-10-14: these are emitted (doco, prov, dcterms by the block/library/site generators; skos by the glossary export; cito by block siblings; rdfs by the named-subgraph documents, through ns/subgraph/v1.jsonld&#39;s aliases). deo, oa, csvw and fhir are bound in CONTENT_CONTEXT but emitted by no code and no document, so they are not declared: the generated context will not carry them.</dd>
+<dt>_jsonldPrefixes_comment</dt><dd>The external vocabularies this layer&#39;s JSON-LD speaks (schemas/kg/jsonld-prefixes.ts; bean folio-assistant-63q4, owner 2026-10-14). Measured 2026-10-14: these are emitted (doco, prov, dcterms by the block/library/site generators; skos by the glossary export; cito by block siblings; rdfs by the named-subgraph documents, through ns/subgraph/v1.jsonld&#39;s aliases). deo, oa, csvw and fhir are bound in CONTENT_CONTEXT but emitted by no code and no document, so they are not declared: the generated context will not carry them.</dd>
 <dt>jsonldPrefixes</dt><dd><pre>{
   &quot;doco&quot;: &quot;http://purl.org/spar/doco/&quot;,
   &quot;cito&quot;: &quot;http://purl.org/spar/cito/&quot;,
@@ -3211,7 +2572,7 @@ ca&amp;at-harness
     &quot;name&quot;: &quot;who-world-health-data-hub&quot;,
     &quot;title&quot;: &quot;WHO World Health Data Hub&quot;,
     &quot;status&quot;: &quot;proposed&quot;,
-    &quot;note&quot;: &quot;Proposed by the owner 2026-09-30 as a repository per large KG asset type; no instance or repository yet.&quot;
+    &quot;note&quot;: &quot;Proposed by the owner 2026-09-30 as a repository per large KG asset type; no layer or repository yet.&quot;
   }
 ]</pre></dd>
 <dt>contentTranslations</dt><dd><pre>[
@@ -3230,7 +2591,7 @@ ca&amp;at-harness
       }
     ],
     &quot;rtlSupported&quot;: true,
-    &quot;notes&quot;: &quot;The harness&#39;s own just-the-docs site, and the profile of any instance that declares no content type: every site this platform publishes is Markdown, translated through the generic pipeline (bean 0r7u).&quot;
+    &quot;notes&quot;: &quot;The harness&#39;s own just-the-docs site, and the profile of any layer that declares no content type: every site this platform publishes is Markdown, translated through the generic pipeline (bean 0r7u).&quot;
   }
 ]</pre></dd>
 <dt>_subscriptions_comment</dt><dd>Issue #1719, bean `tmo5`: the first real subscription. iHRIS was an `associatedHarnesses` entry (issue #1146) until it became a subscription; the schema allows one relation per remote thing, so the association was dropped when the subscription was added. It stays in the known-substrates registry as `exists`, now derived from this entry. No harness is chosen, and that is deliberate. Owner, 2026-09-23: &quot;i dont want to publish at /folio-assistant/ihris/; that&#39;s a platform change, certainly not a materialized publish&quot;. Instantiating `ihris` would put it in this site&#39;s navbar, so it stays referenced and is published from its own repository at https://litlfred.github.io/ihris/. Only the `skills` subgraph is chosen, and assets are on demand. Each copy still passes the five gates of `Process_MaterializeRemote`, and the upstream has no root licence, so the copyright gate is the person&#39;s to answer. The snapshot is under `subscriptions/` and is written by `bun run cat kg:subscribe`.</dd>

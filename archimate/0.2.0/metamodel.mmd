@@ -6,10 +6,10 @@ classDiagram
   <<Strategy>> Capability
   class Goal["Goal"]
   <<Motivation>> Goal
-  class DataObject["Data Object"]
-  <<Application>> DataObject
   class ApplicationService["Application Service"]
   <<Application>> ApplicationService
+  class DataObject["Data Object"]
+  <<Application>> DataObject
   class BusinessFunction["Business Function"]
   <<Business>> BusinessFunction
   class Value["Value"]
@@ -20,8 +20,6 @@ classDiagram
   <<Business>> BusinessRole
   class Stakeholder["Stakeholder"]
   <<Motivation>> Stakeholder
-  class Outcome["Outcome"]
-  <<Motivation>> Outcome
   class BusinessObject["Business Object"]
   <<Business>> BusinessObject
   class Artifact["Artifact"]
@@ -32,6 +30,8 @@ classDiagram
   <<Application>> ApplicationProcess
   class ApplicationFunction["Application Function"]
   <<Application>> ApplicationFunction
+  class Outcome["Outcome"]
+  <<Motivation>> Outcome
   class ApplicationInteraction["Application Interaction"]
   <<Application>> ApplicationInteraction
   class ValueStream["Value Stream"]
@@ -45,8 +45,8 @@ classDiagram
   Capability ..> Goal : influences ×21
   ApplicationComponent ..|> Capability : realises ×15
   Goal o-- Goal : aggregates ×13
-  ApplicationComponent ..> DataObject : accesses ×12
   Capability --> Capability : serves ×11
+  ApplicationComponent ..> DataObject : accesses ×10
   ApplicationComponent --> ApplicationComponent : serves ×10
   Stakeholder -- Value : associated with ×10
   BusinessFunction *-- BusinessProcess : composed of ×9
@@ -54,7 +54,6 @@ classDiagram
   BusinessFunction ..|> Capability : realises ×6
   BusinessFunction --> ApplicationService : serves ×6
   Capability ..|> Outcome : realises ×6
-  Outcome *-- Outcome : composed of ×6
   Value -- Stakeholder : associated with ×6
   ApplicationComponent ..|> ApplicationComponent : realises ×5
   ApplicationProcess ..|> Capability : realises ×5
@@ -67,7 +66,6 @@ classDiagram
   Goal *-- Goal : composed of ×4
   Outcome -- Outcome : associated with ×4
   ApplicationComponent ..|> ApplicationService : realises ×3
-  ApplicationComponent ..|> Outcome : realises ×3
   Capability -- BusinessObject : associated with ×3
   DataObject -- ApplicationComponent : associated with ×3
   ApplicationService o-- ApplicationService : aggregates ×2
@@ -80,8 +78,6 @@ classDiagram
   BusinessObject --|> BusinessObject : specialises ×2
   BusinessRole -- ApplicationProcess : associated with ×2
   BusinessRole -- Capability : associated with ×2
-  DataObject o-- DataObject : aggregates ×2
-  DataObject -- DataObject : associated with ×2
   DataObject --|> DataObject : specialises ×2
   ApplicationComponent -- ApplicationComponent : associated with ×1
   ApplicationComponent -- ApplicationService : associated with ×1
@@ -90,7 +86,6 @@ classDiagram
   ApplicationComponent *-- ApplicationComponent : composed of ×1
   ApplicationComponent *-- ApplicationInterface : composed of ×1
   ApplicationComponent --> BusinessRole : serves ×1
-  ApplicationFunction ..> DataObject : accesses ×1
   ApplicationInterface --> BusinessRole : serves ×1
   ApplicationProcess ..> DataObject : accesses ×1
   ApplicationProcess o-- ApplicationProcess : aggregates ×1
@@ -107,8 +102,9 @@ classDiagram
   Capability -- DataObject : associated with ×1
   Capability -- Product : associated with ×1
   Capability ..> Capability : flows to ×1
-  DataObject -- Outcome : associated with ×1
+  DataObject o-- DataObject : aggregates ×1
   Outcome -- Capability : associated with ×1
+  Outcome *-- Outcome : composed of ×1
   Outcome ..> Outcome : influences ×1
   Product o-- Artifact : aggregates ×1
   Product o-- BusinessObject : aggregates ×1

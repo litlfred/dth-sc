@@ -8,7 +8,7 @@
   "@type": "archimate:Model",
   "schema:identifier": "0.3.0-draft.1",
   "schema:name": "WHO Reference Architecture 0.3.0-draft.1",
-  "schema:description": "0.2.0 plus the supply chain views and elements from the DTH for health supply chain architecture (dth-sc), made by tools/archimate-dth/add_views.py with dth_sc.py. Draft: the product catalogue views (dth-pc) are to be added to the same folder.",
+  "schema:description": "0.2.0 plus the supply chain views and elements from the DTH for health supply chain architecture (dth-sc), made by tools/archimate-dth/add_views.py with dth_sc.py, plus the RA's Integrated View (Figs. 3.2 and 3.5) with dpi_h_integrated.py. Draft: the product catalogue views (dth-pc) are to be added to the same folder.",
   "dcterms:identifier": "id-9153c9dfd2314fc79ca46e015fd59169",
   "schema:contentUrl": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/WHOBaseFile.archimate",
   "schema:hasPart": [
@@ -26,6 +26,16 @@
       "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-f6a9d019b02a4865a75ae76a8282fa1d.jsonld",
       "@type": "archimate:Diagram",
       "schema:name": "Metamodel vs EIRA"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-b16aba0577295090bd77388f73c61239.jsonld",
+      "@type": "archimate:Diagram",
+      "schema:name": "DPI-H Reference Architecture — Integrated View (Fig. 3.2)"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-76c0e5d33b895f68af49f8590466474b.jsonld",
+      "@type": "archimate:Diagram",
+      "schema:name": "DPI-H Reference Architecture — DPI-H layers (Fig. 3.5)"
     },
     {
       "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-19be800d18a34a618d6e1955cf58e956.jsonld",

@@ -9,35 +9,7 @@
 
   <link rel="stylesheet" href="../../../../../assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
 
-  <style id="jtd-nav-activation">
   
-
-    .site-nav > ul.nav-list:first-child > li > a,
-    .site-nav > ul.nav-list:first-child > li > ul > li > a,
-    
-    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(7)) > a,
-    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > ul > li a {
-      background-image: none;
-    }
-
-    .site-nav > ul.nav-list:not(:first-child) a,
-    .site-nav li.external a {
-      background-image: none;
-    }
-
-    .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(12) > ul > li:nth-child(7) > a {
-      font-weight: 600;
-      text-decoration: none;
-    }.site-nav > ul.nav-list:first-child > li:nth-child(2) > button svg,
-    .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(12) > button svg,
-    .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(12) > ul > li:nth-child(7) > button svg {
-      transform: rotate(-90deg);
-    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list,
-    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list > li.nav-list-item:nth-child(12) > ul.nav-list,
-    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list > li.nav-list-item:nth-child(12) > ul.nav-list > li.nav-list-item:nth-child(7) > ul.nav-list {
-      display: block;
-    }
-  </style>
 
   
 
@@ -71,122 +43,11 @@
 <!-- End Jekyll SEO tag -->
 
 
-  <!--
-  The configured colour scheme, published for site-chrome/assets/js/docs-ui.js.
-
-  just-the-docs' first stylesheet is `just-the-docs-default.css`, which is
-  whatever `color_scheme` in _config.yml compiled to -- so `jtd.getTheme()`
-  returns the string "default" on a fresh load, never "dark". The scheme
-  toggle needs to know what "default" MEANS here, and reading it from the
-  config is the one way that does not go stale when the config changes.
-
-  FIRST in this file since 2026-09-24, because the first-paint snippet below
-  reads it too, and a script can only read what the parser has already seen.
--->
-<script type="application/json" id="fa-site-scheme">{"scheme": "dark"}</script>
-<!--
-  THE FIRST PAINT IS DARK — owner, 2026-09-24: *"when any
-  page/foio-asst/cat-harness first loads if flashes white before goignt o
-  dark mode. instead it should deafult dark mode then turn to light mode to
-  prevent light flash in dark."*
-
-  WHY IT FLASHED. The site is configured dark, so the theme's first
-  stylesheet already paints dark. But `docs-ui.js` is deferred, and on load
-  it applied a STORED choice with `jtd.setTheme(name)`, which swaps that
-  stylesheet's href -- to the dark file, when the default file already was
-  dark. The swap unloads the sheet that was painting the ground, and until
-  the new one arrives the browser's WHITE canvas shows. Every reader who had
-  ever pressed the light/dark control got that on every page. And nothing
-  painted `html` at all, so any moment without the theme's sheet was white.
-
-  So, FIRST THING in this include, before every stylesheet it emits:
-
-  1. decide the scheme -- the reader's stored choice (`fa-color-scheme`, the
-     key `docs-ui.js` writes), else the OS, else LIGHT -- and put it on
-     `<html data-fa-scheme>` before the body is parsed, so no rule keyed on
-     it ever paints the wrong way first;
-  2. if that is not the configured scheme, switch the theme's sheet NOW,
-     while the parser is still in the head. `jtd.setTheme` loads the new
-     file beside the old, render-blocking, and drops the old one once it
-     has loaded (cat-harness#820): never a frame with no theme sheet;
-  3. paint `html` itself, dark unless the scheme is light, so a sheet in
-     flight shows the page's ground rather than white.
-
-  The theme's own stylesheet link is ABOVE this include (just-the-docs emits
-  `head_custom.html` last in its head), which is why step 2 exists: there is
-  no hook before it, and none is needed -- nothing paints until the head is
-  parsed, and this runs while it is being parsed.
-
-  INLINE, which the rest of this file avoids so that no `script-src`
-  relaxation is ever needed. This is the one exception, and it is the only
-  way to run before first paint: a `src` script here is a network round-trip
-  on the critical path of every page. It interpolates nothing into markup,
-  and a CSP added later needs this block's hash.
-
-  ELSE LIGHT -- owner, 2026-10-15, "follow os else light". The declared
-  `color_scheme` only names the sheet shipped first. The ONE source: tools'
-  `scheme-css.ts` lifts this script; `docs-ui.js` reads its attribute.
-
-  NO LIQUID between the markers. `first-paint-scheme.e2e.ts` lifts these
-  exact bytes into a replica page, so the spec tests what ships.
-
-  The generated dashboards that write their OWN head (`state-visualizer.ts`,
-  `gen-translation-status.ts`) do not carry this. They switch nothing with
-  script, so they cannot flash: their first CSS paints dark, and the same spec
-  holds them to that. Giving them this snippet would switch ON their
-  `data-fa-scheme="light"` rules for the first time -- and those were never
-  finished (axe, 2026-09-24: 3 to 6 contrast failures per dashboard in light,
-  dark-scheme tag colours on a light ground). A light palette for them is its
-  own piece of work, not a side effect of this one.
--->
-<!-- fa-first-paint:begin -->
+  <script type="application/json" id="fa-site-scheme">{"scheme": "dark"}</script><!-- fa-first-paint:begin -->
 <script>(function(){var d=document.documentElement,s=null,c="dark";try{s=localStorage.getItem("fa-color-scheme")}catch(e){}if(s!=="light"&&s!=="dark"){s="light";try{if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)s="dark"}catch(e){}}try{var n=document.getElementById("fa-site-scheme");if(n)c=JSON.parse(n.textContent).scheme==="light"?"light":"dark"}catch(e){}d.setAttribute("data-fa-scheme",s);var j=window.jtd;if(s!==c&&j&&typeof j.setTheme==="function"){try{j.setTheme(s)}catch(e){}}})();</script>
 <style>html{background-color:#27262b}html[data-fa-scheme="light"]{background-color:#ffffff}</style>
-<!-- fa-first-paint:end -->
-<!-- PROSE HERE IS NOT FREE: these are HTML comments, so every byte ships on
-     every page (2356 of them). A comment in this file is a POINTER; the
-     reasoning goes in the artefact. Measured, with the cost this change paid
-     before measuring, in assets/harness/site.json's front matter. -->
-<!-- THE RENDER STATE. pending here; ready/failed from assets/js/kg-render.js,
-     which carries the contract. No attribute = no dynamic region on this page.
-     The number is a MINIMUM cross-checking registrations, not a count. -->
-<meta name="fa-render-regions" content="1">
-<script>document.documentElement.setAttribute("data-fa-render","pending");</script>
-<!--
-  The browser-tab icon, from the same declared mark the sidebar title
-  (`title.html`) renders — reused rather than looked up by its own
-  `browser-icon` role. There WAS a second role for exactly that, on
-  `mark-small` in `harness.json`, and it went unread: nothing in this
-  repo ever emitted a favicon at all, `rel="icon"` included. It also could
-  not have driven this lookup as declared — `imagesForRole()`
-  (`schemas/kg/kg-node.ts`) requires an image's `layout` field, which neither
-  mark entry carries, so a `browser-icon`-role lookup returns nothing. Reusing
-  the already-resolved `icon` (the same field `title.html` reads) sidesteps
-  that and, more importantly, is what was asked for: the sidebar mark and the
-  tab icon are meant to be the SAME glyph, so one declaration driving both is
-  correct, not just convenient — flip `icon` in `harness.json` and both
-  follow in one edit, no template change needed.
-
-  SVG-only. No PNG/ICO fallback exists in the repo and none is generated
-  here — every browser this matters for (evergreen Chrome/Firefox/Edge, and
-  Safari since 16) reads `type="image/svg+xml"` directly; a raster fallback
-  would need generating actual image files, which is out of scope for this
-  change.
-
-  `relative_url`, same as `title.html` and `landing.html` — a bare
-  `/assets/...` 404s on the same baseurl this file's landing-panel fix exists
-  for.
---><!--
-  Site-wide styling for the BPMN workflow figures.
-
-  just-the-docs pulls this file into <head> on every page. The diagrams are wide
-  (a swimlane process does not shrink well), so the figure scrolls horizontally
-  inside its own container rather than forcing the page body to scroll.
-
-  The SVGs carry their own white backdrop — see scripts/render-bpmn.ts — so they
-  stay legible under the dark colour scheme even if this stylesheet is missing.
--->
-<style>
+<!-- fa-first-paint:end --><meta name="fa-render-regions" content="1">
+<script>document.documentElement.setAttribute("data-fa-render","pending");</script><style>
   .bpmn-figure {
     overflow-x: auto;
     background: #fff;
@@ -204,85 +65,7 @@
     margin-top: 0;
     font-size: 0.75rem;
   }
-</style>
-
-<!--
-  Site UI: a QR of the current page in the sidebar header, and zoom /
-  full-width controls on the figures.
-
-  Loaded as same-origin files with no inline script, so no script-src
-  relaxation is needed. The QR is generated in the browser from
-  window.location.href rather than baked per page at build time, so it is
-  right for anchors, query strings, and both the directory and .html forms of
-  the same page. The UTF-8 shim must come after the encoder: without it the
-  encoder's stringToBytes is single-byte and a non-ASCII character in a URL
-  silently encodes to mojibake.
--->
-<!--
-  The TRANSLATION INDEX — which source page has a translation in which locale.
-
-  `mountNavLocale` in docs-ui.js reads this to decide what the left-hand navbar
-  shows: with the source language selected it does nothing, and with `fr`
-  selected it swaps each nav item that HAS a French page for that page, IN
-  PLACE OF the English one. An item with no translation is left exactly as it
-  is — that is the fallback, and it is the absence of a rewrite rather than a
-  code path of its own.
-
-  Generated into `docs/_data/translations.json` by
-  `content/pipeline/translation-index.ts`, from what each page DECLARES about
-  itself: `lang`, and `translation_source` naming the page it expresses. NOT
-  from a scan for directories whose names look like language subtags — see
-  that module's header for why that inference is wrong in both directions.
-
-  THREE STATES, and the third is the reason this is a JSON island rather than
-  a conditional. (The tag name is written inside {% raw %}
-  below because LIQUID PARSES TAGS INSIDE AN HTML COMMENT — the comment
-  wrapper means nothing to it — so naming a tag in prose is a syntax error at
-  build time, and the message points at the THEME's head.html because Liquid
-  attributes an include's line to the includer. This comment cost one red
-  deploy.
-
-  AND THEN IT COST A SECOND ONE, differently, which is why this paragraph now
-  describes the wrapper rather than spelling it. It used to SPELL both halves
-  as an example — and the closing half ENDED THIS COMMENT eighteen lines
-  early, so every line below it rendered as visible body text at the top of
-  EVERY PAGE on the site. Reported by the owner from the staging URL,
-  2026-09-19.
-
-  The asymmetry is the lesson: a Liquid tag has an escape, and the closing
-  comment delimiter has NONE. There is no way to write those three characters
-  inside a comment and have the comment survive them, because the parser is
-  not looking for an escape — it stops at the first match. So the rule is not
-  "escape it carefully", it is DO NOT WRITE IT: describe it, or name it one
-  character at a time. Guarded by
-  scripts/tests/html-comment-delimiters.test.ts, which fails on an opening
-  delimiter appearing inside an open comment — the one machine-detectable
-  signature of somebody trying.)
-  A {% if %} would have to choose between the second and
-  third rows below, and there is no expression that can:
-
-    1. the data file is there      -> `index` is an object; filter the nav.
-    2. it is there and EMPTY       -> `pages` is `{}`; there is nothing to
-                                      swap, so every item correctly falls back
-                                      to the source language.
-    3. the data file is ABSENT     -> `jsonify` emits `null`, and docs-ui.js
-                                      leaves the navbar EXACTLY as built.
-
-  A build that could not determine the translation set must never render as a
-  folio that has no translations. `null` is how that is said.
-
-  `baseurl` travels with it because the client has no other way to strip the
-  site prefix off a nav `href` before matching it.
--->
-<!-- MOVED 2026-10-02 to assets/harness/site.json: fetched once instead of
-     inlined 2356x (9482 B/page, 22.34 MB, ONE payload). The three states above
-     are unchanged; a fourth — the file is unreachable — is data-fa-render. -->
-<!--
-  Translation metadata for this page, consumed by docs-ui.js to auto-render
-  language coverage and QA badges. The translation pipeline stamps front matter;
-  this block publishes it to the client. No manual editing needed.
--->
-<script type="application/json" id="fa-translation-meta">{
+</style><script type="application/json" id="fa-translation-meta">{
   "lang": "en",
   "translationStatus": "",
   "translationSource": "",
@@ -304,400 +87,15 @@
     "complete": false
   },
   "statusSrc":"../../../../../assets/translation-status/index.json"
-}</script>
-<!--
-  Where the action tiles point.
+}</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/dth-sc/","jsonld":"https://litlfred.github.io/folio-assistant/dth-sc/dth-sc.jsonld","source":"https://github.com/litlfred/dth-sc"}</script><meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
+<meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-  RESOLVED, not composed. `scripts/sync-docs-harness.ts` writes
-  `docs/_data/harness.json` from the instance's own `cat-harness.json`,
-  through `siteLinks` in `scripts/site-links.ts` -- which computes every path
-  with `artefactStub` and `renderingPath`, the same functions the knowledge
-  graph exporter and the Pages workflow use. The tile therefore cannot
-  disagree with what is published.
-
-  This block previously wrote `../../../../../kg/` by hand. Nothing
-  has ever been published at `<base>/kg/` -- the renderings sit at the base,
-  named after the stub -- so the only entry point to the viewer anywhere on
-  this site was a 404 from the day it was added. See bean `udx8`, and the
-  identical defect AGENTS.md records against the README's chapter PDFs. A
-  path built by convention is a claim; `bun run cat site:links --site _site`
-  checks it against the tree that actually ships, and the Pages workflow runs
-  that check after the export.
-
-  `path` is site-ROOT-relative and gets `relative_url`, which is what makes it
-  right under this site's `/folio-assistant/` baseurl. `url` is off-site and
-  is printed as-is. `source` is no longer taken from `aux_links`: those were
-  removed so the forge link stops appearing as text at the top of the main
-  panel (the owner asked for it as an icon, not a header), and the URL is
-  resolved from the git remote instead of written down twice.
--->
-<!--
-  THE NAVBAR ICON ROW — which icons this instance shows, and where each goes.
-
-  `null` when the instance has not decided, and that is NOT the same as an
-  empty list: `navbarIcons` absent means "inherit, and nothing up the chain has
-  said either", while `[]` means the instance chose to show none. docs-ui.js
-  reads the two apart, and `jsonify` emits `null` for the first exactly as the
-  translations block above relies on.
-
-  Resolved in `sync-docs-harness.ts`: the icon list walks `needs` with the site
-  owner as the floor, and the hrefs come from this instance's own declared
-  visualisations plus `siteLinks`. Nothing about the row is decided in Liquid
-  or in JavaScript.
--->
-<!--
-  EMPTY HERE, FILLED BY `assets/js/harness-data.js` (bean `gp2f`, page weight).
-  The row is the same on every page of a build, so it is written once into a
-  cached file instead of into each page. `data-fa-row-src` is the contract the
-  railed pages already use (`withNavbarRow` in harness-rail.ts): the file drops
-  the name once it has filled the island, and a reader that finds it still
-  named and empty reports a failed load rather than "declared none".
--->
-<script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><!-- NOT MOVED, deliberately. Measured, with the reason and the condition for
-     moving it, in assets/harness/site.json's front matter. -->
-<script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/dth-sc/","jsonld":"https://litlfred.github.io/folio-assistant/dth-sc/dth-sc.jsonld","source":"https://github.com/litlfred/dth-sc"}</script>
-
-<!--
-  The todo index — a PERSON's outstanding items, published by
-  `scripts/gen-docs-pages.ts` to `/assets/todos/index.json`.
-
-  `relative_url` for the same reason every other path here uses it: the site is
-  served from `/folio-assistant` on the canonical deploy and from
-  `/folio-assistant/STAGING/<branch>` on a preview, and an absolute literal
-  404s on every deploy but one.
-
-  A URL rather than inline JSON, unlike `fa-site-links` above, because the
-  index grows with the todo corpus and inlining it would put the whole set into
-  every page's <head> whether the reader opens the board or not. A missing file
-  is reported by the fetch and the board is simply not mounted — a board that
-  opens empty is indistinguishable from a person with nothing outstanding, and
-  those are opposite facts.
-
-  `<meta>` and not a `<div>`: this is `<head>`, where flow content is not
-  permitted. A browser hoists a stray `<div>` into `<body>` and the code still
-  works, which is exactly what makes the mistake survive review.
--->
-<!-- THE SITE INDEX, published once. docs-ui.js reads an ISLAND FIRST where a
-     page has one and falls back to this. Rationale and measurement are in that
-     file's front matter, which is not served. -->
-<meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
-<meta name="fa-todo-src" content="../../../../../assets/todos/index.json">
-<!-- The todo GRAPH (#1941): the typed edges — node, person, bean — the board
-     filters and groups by, and each todo's own page. -->
-<meta name="fa-todo-graph" content="../../../../../todos.jsonld">
-
-<!--
-  THE SEMANTIC-ZOOM DECLARATION — when the card stops rendering its words and
-  becomes its avatar.
-
-  R2 of issue #602: *"The threshold SHALL be declared data, not a literal in
-  the renderer."* `gen-docs-pages.ts` publishes the folio's own
-  `semantic-zoom.json`, and publishes NOTHING when the folio has not declared
-  one. So this `<meta>` may point at a 404, and that is a real state rather
-  than a defect: `docs-ui.js` reports it could not determine a threshold and
-  leaves every card's words in place. A default in either file would be the
-  literal R2 forbids, one layer further from where anybody looks for it.
-
-  The pointer is emitted UNCONDITIONALLY because Liquid cannot see whether the
-  generator wrote the file, and a conditional that guessed would make "this
-  folio declares no threshold" and "the build did not run" the same page.
--->
-<meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json">
-
-<!--
-  THE DECLARED VISUALISATIONS, as tiles.
-
-  Owner, 2026-09-20: *"if harness declares visaluzers, those should have tile"*
-  — so the tile set is the `coverage.visualiser` obligation made reachable, not
-  a second registry. `graph-tiles.ts` derives it into `_data/harness.json`;
-  this hands it to `docs-ui.js` for BOTH surfaces, because a tile is declared
-  once and says where it shows.
-
-  INLINE rather than a second fetch, unlike the todo index above, and the two
-  are different for a reason worth stating: that index grows with the todo
-  corpus, while this one is bounded by the number of directories an instance
-  DECLARES — twelve here — and every page needs it before first paint or the
-  navbar would visibly grow tiles a moment after the reader arrives.
-
-  `jsonify` and not a hand-built string: a title carrying a quote would
-  otherwise close the attribute, and the quoting rule is Liquid's rather than
-  something this comment has to be right about.
--->
-<!--
-  THE CONTENT IS FILLED BY `assets/js/harness-data.js` (bean `gp2f`). The list
-  is the same on every page and was 12.5 KB of each one (measured on gh-pages
-  1ad53fa, 2026-10-23). That file is a deferred script ahead of `docs-ui.js`,
-  and deferred scripts run in document order, so the tiles are in place before
-  the first reader runs: no later paint than the inlined copy had.
--->
-<meta name="fa-tiles" content="" data-fa-src="harness-data">
-<!--
-  THE GLASS STRIP'S PINNED TILES, in order (owner, 2026-10-01, bean `ob3m`
-  finding 10: "Pinned tiles first, plus '+N more'"). Resolved from the
-  instance's `glassStrip` declaration by `sync-docs-harness.ts`; absent when
-  nothing declared one. Replica pages read `assets/harness/glass-strip.json`.
--->
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]">
-
-<!--
-  THE SITE'S BASEURL, for the tiles above.
-
-  Every other site-root path on this page is composed by Liquid: `relative_url`
-  prepends `site.baseurl`, which is `/folio-assistant` on the canonical deploy
-  and `/folio-assistant/STAGING/<branch>` on a preview. The tiles cannot use
-  it, because they reach the client as JSON and are composed in `docs-ui.js`
-  after Liquid has finished — so the base has to travel with them.
-
-  IT SHIPPED WITHOUT ONE AND EVERY TILE 404ed (issue #801). `graph-tiles.ts`
-  stores `/beans/`, which is correct as data and is what `harness.links[].path`
-  stores too; written into an `href` unprefixed, a browser resolves it against
-  the ORIGIN, so the beans tile pointed at `litlfred.github.io/beans/`. The
-  owner found it by going looking for the board and landing there.
-
-  A meta of its own rather than reading the site index, which also carries a
-  `baseurl`: that document reads as `null` when `_data/translations.json` was
-  not built, and since 2026-10-02 it is FETCHED, so it is also absent until a
-  request resolves and may never arrive. Composing links out of an optional
-  block means the day it goes missing every tile silently points at the origin
-  again — which is this defect, with a second way to reach it. Two reasons for
-  one answer now.
-
-  RELATIVE TO THIS PAGE since bean `g196` (2026-10-23): `.` at the root,
-  `../..` two levels down, never the deploy's path, so the page is the same
-  bytes in every preview. `_plugins/fa-root-relative.rb` does that to every
-  `site.baseurl` and `relative_url` on an HTML page; `siteBaseurl()` in
-  `docs-ui.js` and `navbar-row.js` resolves it back to an absolute path.
--->
-<meta name="fa-baseurl" content="../../../../..">
-
-<!--
-  WHETHER THIS IS A PREVIEW, for the tiles above.
-
-  `feature-staging.yml` writes `staging_slug` into `_data/build.yml`;
-  `docs-site.yml` writes the same file WITHOUT it. So a non-empty value here
-  means "a STAGING/<slug>/ preview", an empty one means the canonical deploy
-  or a local build.
-
-  It exists so a tile can vanish with its page. `compose-docs.ts` withholds a
-  `publish: "staging-only"` page from the canonical tree; a tile still pointing
-  at it would be a link to a 404 — `pb04`, a dead link being worse than no
-  link, and worse than usual here because the tile ALSO advertises content the
-  declaration is deliberately not publishing.
-
-  The filtering is client-side rather than baked into `harness.json` because
-  that file is generated once and committed, so it cannot know which deploy
-  will serve it. The page can be withheld at compose time because compose runs
-  per deploy; the data file cannot.
-
-  EMPTY IS THE SAFE VALUE, and it is what an absent `_data/build.yml` yields:
-  a build that cannot say it is a preview is treated as canonical and hides
-  the tile. That matches `compose-docs.ts`, which withholds unless positively
-  told `--staging` — one direction in both places, so the page and its tile
-  cannot disagree about which deploy they are on.
-
-  A CONSTANT, `preview`, rather than the slug (bean `g196`, 2026-10-23): every
-  reader asks only whether it is empty, and the slug made every page differ
-  between previews. The branch is in `staging.json`, which the banner reads.
--->
-<meta name="fa-staging" content="">
-
-<!--
-  WHICH SEARCH INDEX THIS PAGE IS SERVING.
-
-  `feature-staging.yml` fetches the PUBLISHED index before the build and
-  stamps what happened; `docs-site.yml` writes no such key, so the canonical
-  deploy leaves this empty and draws no warning. Bean `eof6`, on the owner's
-  ruling of 2026-09-22: *"staging uses last published index (w/ wanrnig)"*.
-
-  Three values, and the empty one is a real state rather than a fallback:
-
-    published    the preview serves the last published index. Results are
-                 about the MAIN SITE, not about this branch.
-    unavailable  the fetch failed; an empty index is served.
-    (empty)      not a staging build. No warning.
-
-  The bean this implements had first concluded that staging must disable
-  search outright, because a stale hit is "a wrong PASS, BELIEVED". The ruling
-  keeps search and attacks the belief instead — which is why the value is
-  emitted at all. An index swapped in with nothing on the page saying so would
-  be the unmarked staleness the bean was right to refuse.
--->
-<meta name="fa-search-index" content="">
-
-<!--
-  A page left out of the search index ON PURPOSE (`search_exclude: true`)
-  says so in what is built, so `publish:verify`'s search-index check can tell
-  a deliberate exclusion from a truncated index (#2233). Front matter is gone
-  once Jekyll has run; without this marker the ~2,800 IG artefact pages that
-  #2194 excluded read as "4,189 pages offer a search box, 1,003 indexed".
--->
-
-
-
-
-<!--
-  The bean index — the AGENT work plan, published by the same generator beside
-  the todo index above, for the same reason and read the same way. Separate
-  files rather than one combined document because the two stores are separate
-  graphs with separate declarations, and a consumer that wants only the human
-  half should not fetch 239 beans to get three todos.
--->
-<meta name="fa-beans-src" content="../../../../../assets/beans/index.json">
-<!--
-  The process index's entry point — the REPOSITORY's named-subgraph index,
-  whose children are the harness roots this site frames (`bun run
-  subgraph:jsonld`; bean `ax6r`, owner 2026-10-03: "Move to JSON-LD").
-  Read by assets/js/process-index.js on the page carrying
-  `[data-fa-process-index]` (the publication-workflow page), which walks it
-  down to every `processes` subgraph's `index.hydrated.jsonld`.
--->
-<meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld">
-<!--
-  The deploy's stamp — when it was built and from which commit — which the
-  work-plan dashboard turns into "generated … · N commits behind main".
-  `build.json` on the main site, `staging.json` on a preview; written by the
-  deploy, never committed, because a committed timestamp is a merge conflict
-  on every pair of concurrent changes (bean `y7b3`).
--->
-<meta name="fa-build-src" content="../../../../../build.json">
-
-<!--
-  The discarded-items document — `fsh-guts.jsonld`, published at the base by
-  `docs-site.yml`. A URL and not inline JSON, for the todo index's reason and
-  then some: it carries every node's BODY, which is 64 KB against a 5 KB
-  document without them. Inlining that into every page's <head> would be
-  absurd for content reached through one control inside Settings.
-
-  `.json` rather than `.jsonld`. Both are published and they are the same
-  bytes; Pages has no media type for `.jsonld` and serves it as
-  octet-stream. `fetch().json()` would parse it anyway, but every other
-  rendering here uses the alias and one that did not would be the odd case a
-  later reader has to work out.
-
-  The viewer fetches this WHEN SETTINGS OPENS, never on page load, and a
-  fetch that fails is reported rather than shown as an empty trashcan —
-  "nothing discarded" and "could not read the document" are opposite facts.
--->
-<!--
-  NOT on a folio's site that does not link its OWN fsh-guts (#2263 follow-up):
-  there this path is the folio's, where no document is published, and the
-  fetch's 404 painted "?" -- an error -- on the fish. With no meta the count is
-  ABSENT, and the row's fish is a link or an inert icon saying why
-  (`foreignSite.absent.fshGuts`, `lib/foreign-site-scope.ts`).
--->
-<!--
-  ?v=<content hash> ON EVERY FIRST-PARTY ASSET — and the reason is a REVIEW
-  failure, not a performance one.
-
-  These five are served from stable paths with no hash in the name, so a
-  browser that has the page cached keeps the old CSS and JS until its
-  `max-age` runs out. On the live site that is invisible. On a STAGING
-  preview it is the whole point of the deployment: the reviewer opens the URL
-  they opened an hour ago, gets yesterday's stylesheet, and reports "i dont
-  see changes" — which is indistinguishable from a deploy that never
-  happened, and sends the next hour after the wrong cause. Measured
-  2026-09-21 on this branch: every byte of the change was verified present in
-  the publish ref while the page rendered the previous build.
-
-  The query is a HASH OF THE ASSET (`fa_asset_version`,
-  `_plugins/fa-asset-version.rb`), so it changes exactly when the served bytes
-  do. It was `site.time` until 2026-10-23, and the build time is new on every
-  build: every page then differed on every rebuild, so each re-push of a
-  preview stored a whole new copy of its HTML (bean `g196`).
-
-  NOT a cache-busting strategy for third-party assets, and not applied to
-  them: those are versioned in their own URLs already.
--->
-<!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=6071ae228cf3">
-<!-- Narrow viewports: wide content scrolls in its own box, never the page
-     (bean `2r2n`). The standalone viewers inline the same file through
-     `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2">
-
-<!--
-  The work-plan dashboard's styles, split from docs-ui.css so that
-  `state-visualizer.ts` can inline exactly these bytes into the generated
-  `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
--->
-<link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=ed3e33f033fe">
-<!-- Sticky themes. GENERATED from the theme nodes in `schemas/ui/themes.ts` by
-     `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
-     Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
-     roles that docs-ui.css consumes, and a custom property has to be set on a
-     matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f">
-<!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
-     that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66">
-<!-- Kind avatars. GENERATED from `schemas/content/avatars.ts` by `bun run cat avatars:css`;
-     `avatars:css:check` fails the build when it is stale. One stylesheet
-     rather than 68 assets: the glyph is a mask and the colour is a property,
-     so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=a0806788c1f5">
-
-<!--
-  The kinds THIS INSTANCE DECLARES, for the avatar fan.
-
-  Owner: "shows the DECLared kinds for that instance, not inheritance." Written
-  by `sync-docs-harness.ts` from the instance's own `harness.json`, BEFORE
-  `resolveDirectories` overlays a dependency's. The effective set is strictly
-  larger, and showing it would name kinds this repository never claimed.
-
-  Inline rather than a fetched URL, unlike the todo index and the discarded
-  document: this is a dozen short strings, it is needed to render the fan at
-  all, and a fetch for that would put a spinner in front of a badge.
--->
-<!-- NOT MOVED: same reason as fa-site-links above. -->
-<script type="application/json" id="fa-declared-kinds">["beans","folio","glossary","todos","uploads"]</script>
-<!--
-  FIRST of the deferred scripts: it fills `#fa-navbar-row` and
-  `meta[name=fa-tiles]` before any reader runs (bean `gp2f`).
-
-  NO VERSION QUERY, unlike every other first-party asset here. This file carries LIVE
-  COUNTS (open beans, todos), so it changes whenever one bean opens or closes.
-  A version query naming its content would write that change into every page: two
-  previews built 25 minutes apart differed on 1,351 pages for one count going
-  133 -> 132 (bean `g196`, 2026-10-23). Unversioned, a stale copy lives only as
-  long as GitHub Pages' cache (about 10 minutes), and the pages stay the same.
--->
-<script src="../../../../../assets/js/harness-data.js" defer></script>
+<meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script>
-<!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
-<script src="../../../../../assets/js/kg-render.js" defer></script>
-<!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="../../../../../assets/js/navbar-row.js?v=7dce6a7e2ab0" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=59c1d8d3ff0a" defer></script>
-<!-- The edit, source and feedback links of every page, from the platform's one
-  recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
-  facts and this builds the hrefs. -->
-<script src="../../../../../assets/js/edit-links.js?v=81bb303b6bc2" defer></script>
-
-<!--
-  The work-plan dashboard. SELF-MOUNTING on any page carrying
-  `[data-fa-workplan]`, so docs-ui.js neither calls it nor knows it exists; a
-  page without that container pays one failed querySelector. The same file is
-  inlined verbatim into the generated state-visualiser pages.
--->
-<script src="../../../../../assets/js/work-plan.js" defer></script>
-<!--
-  The process index, self-mounting on `[data-fa-process-index]` the same way.
-  Its rows are the diagrams' own documentation, from the published subgraph JSON-LD.
--->
-<script src="../../../../../assets/js/process-index.js" defer></script>
-
-<!--
-  The landing panel — the instance's declared description drawn inside the
-  quiet part of its declared backdrop. Markup: `_includes/landing.html`.
-
-  The region comes in as custom properties (`--fl-x` …) set per instance from
-  `harness.json`, so this stylesheet knows nothing about where any
-  particular picture is quiet. That is the whole design: a downstream folio
-  swaps the art and the numbers and needs no CSS.
--->
-<style>
+<script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
+<script src="../../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -727,36 +125,42 @@
     position: static; width: auto; height: auto; color: inherit;
   }
   .folio-landing--plain p { font-size: inherit; font-weight: inherit; }
+</style><style id="fa-page-ground" data-instance="folio-assistant-core">
+  /* Grumpy cat, the theme of folio-assistant-core. */
+  :root { --fa-page-scrim: rgba(39, 38, 43, 0.85); --fa-text-scrim: rgba(39, 38, 43, 0.96); }
+  :root[data-fa-scheme="light"] { --fa-page-scrim: rgba(255, 255, 255, 0.85); --fa-text-scrim: rgba(255, 255, 255, 0.96); }
+  /* The root carries the art, so it covers the whole viewport however short
+     the page; the body is made see-through so the art is not painted over. */
+  html:root body { background-color: transparent; }
+  html body .main-content { background-color: var(--fa-text-scrim); border-radius: 6px; }
+  html:root {
+    background-image:
+      linear-gradient(var(--fa-page-scrim), var(--fa-page-scrim)),
+      url("../../../../../assets/img/harness/landing-laptop.webp");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (max-width: 48rem) {
+    html:root {
+      background-image:
+        linear-gradient(var(--fa-page-scrim), var(--fa-page-scrim)),
+        url("../../../../../assets/img/harness/landing-card.webp");
+    }
+  }
+  @media (max-width: 30rem) {
+    html:root {
+      background-image:
+        linear-gradient(var(--fa-page-scrim), var(--fa-page-scrim)),
+        url("../../../../../assets/img/harness/landing-mobile.webp");
+    }
+  }
+  /* Print and forced colours get the plain page: art is decoration. */
+  @media print, (forced-colors: active) {
+    html:root { background-image: none; }
+  }
 </style>
-
-<!--
-  AN INSTANCE'S OWN WEBPAGE THEME, scoped to its pages.
-
-  Bean `7h3u`, on the owner's 2026-09-30 ruling to wire this at the PLATFORM
-  layer so every ingested IG gets it, rather than in one instance's page
-  generator.
-
-  WHY LIQUID AND NOT CSS. A webpage theme dresses one instance's pages, so it
-  has to be scoped by URL — and CSS cannot select on a URL. Jekyll is what
-  knows which page is rendering, so the scope is applied here and the VALUES
-  come from `_data/instance-themes.json`, written by `gen-themes-css.ts` from
-  each instance's declared `themes/`. That is the `site.data` pass-through bean
-  `kott` settled, and the owner's own instruction for this work: "reuse all
-  existing justthedocs infra".
-
-  WHY INLINE AND NOT A LINKED STYLESHEET. The same first-paint reasoning this
-  file already carries for the colour scheme: a sheet arriving after first
-  paint flashes the unthemed colours, which is the defect this file was
-  rewritten to remove.
-
-  WHAT IT RETHEMES, AND WHAT IT CANNOT. These three names are read by
-  `docs-ui.css` at 29 of its 33 `var(--x, #literal)` sites and DEFINED by
-  nothing — just-the-docs is Sass, so its own chrome compiles to literals and
-  no custom property can reach it. So this dresses the surfaces the site owns,
-  the left-hand nav among them, and leaves just-the-docs' compiled chrome
-  alone. Stated here because the alternative is a reader concluding the theme
-  is broken when it is doing exactly what it can.
--->
 
 <link rel="stylesheet" href="../../../../../assets/css/navbar.css"><script src="../../../../../assets/navbar/rail-1xqosn9b1rd.js" defer></script><script src="../../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-pinned-data" content="../../../../.."></head>
 
@@ -877,26 +281,26 @@
 
 <p>Candidate terms extracted from every schema field with a doc comment: <code class="language-plaintext highlighter-rouge">&lt;Declaration&gt;.&lt;field&gt;</code> as the label, the comment’s first paragraph as the definition. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: bootstrap-tools 44 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · cat-harness-tools 2250 (<a href="../../../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · fhir-harness 100 (<a href="../../../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a>) · folio-assistant-core 181 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a>) · smart-base 13 (<a href="../../../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a>).</p>
+<p>From: bootstrap-tools 45 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · cat-harness-tools 2477 (<a href="../../../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · fhir-harness 147 (<a href="../../../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a>) · folio-assistant-core 207 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a>) · smart-base 33 (<a href="../../../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a>).</p>
 
 <p>One of 7 pages of this type, split by the first letter of the label: <a href="../../../../../en/folio-assistant-core/glossary/schema-fields/">all parts</a>.</p>
 
-<p><strong>Size:</strong> this page holds 455 terms and is 308 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 506 terms and is 344 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
 <thead><tr><th>target</th><th>mapped</th><th>unmapped</th><th>undetermined</th><th>why undetermined</th></tr></thead>
-<tbody><tr><td><code>fhir</code></td><td>0</td><td>2537</td><td>0</td><td>—</td></tr><tr><td><code>skos</code></td><td>0</td><td>2537</td><td>0</td><td>—</td></tr></tbody>
+<tbody><tr><td><code>fhir</code></td><td>0</td><td>2864</td><td>0</td><td>—</td></tr><tr><td><code>skos</code></td><td>0</td><td>2864</td><td>0</td><td>—</td></tr></tbody>
 </table></div>
 <p class="fa-gloss-mapping-note"><strong>Undetermined is never “no match”.</strong> 
 A vocabulary that could not be reached has said nothing, and the column above keeps that 
 apart from a checked miss. The counts are reported and not graded: an unmapped candidate may 
 be a term this corpus is right to coin.</p>
-<p class="fa-gloss-mapping-perterm"><strong>Per term.</strong> Every term on this page is in no single state on <code>fhir</code>, so each entry states its own, and in no single state on <code>skos</code>, so each entry states its own, unless its entry says otherwise. 455 entries say otherwise.</p>
+<p class="fa-gloss-mapping-perterm"><strong>Per term.</strong> Every term on this page is in no single state on <code>fhir</code>, so each entry states its own, and in no single state on <code>skos</code>, so each entry states its own, unless its entry says otherwise. 506 entries say otherwise.</p>
 
 <p><label for="fa-gloss-q">Filter terms</label>
 <input id="fa-gloss-q" type="search" autocomplete="off" style="min-height:44px;width:100%;max-width:32rem" /></p>
-<p aria-live="polite"><span id="fa-gloss-n">455</span> shown</p>
+<p aria-live="polite"><span id="fa-gloss-n">506</span> shown</p>
 
 <nav aria-label="Letters"><a href="#letter-T">T</a> <a href="#letter-U">U</a> <a href="#letter-V">V</a> <a href="#letter-W">W</a></nav>
 <h2 id="letter-T">
@@ -930,6 +334,30 @@ TableBlock.tex <span class="fa-gloss-status">candidate, extracted</span>
 <dd>
 <p>LaTeX tabular/longtable source (optional; can also live in .md).</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/types.ts"><code>cat-harness-tools/schemas/types.ts#TableBlock.tex</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.tablerowschema.example" data-fa-state="extracted" data-fa-gloss="">
+TableRowSchema.example <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A worked example from somewhere real.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#TableRowSchema.example</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.tablerowschema.question" data-fa-state="extracted" data-fa-gloss="">
+TableRowSchema.question <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The question the row asks a room.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#TableRowSchema.question</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.tablerowschema.what" data-fa-state="extracted" data-fa-gloss="">
+TableRowSchema.what <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>What the row means, in one sentence.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#TableRowSchema.what</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
 <dt id="cat-harness-tools--kg-schema-fields--tabular-csvw.tabularcsvwschema.narrative" data-fa-state="extracted" data-fa-gloss="">
@@ -1136,7 +564,7 @@ TermGloss.seeAlso <span class="fa-gloss-status">candidate, extracted</span>
 TermMappingSchema.instance <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The instance that owns the scheme. A scheme id such as <code>kg-tools</code> is shared by every instance's extraction, so a scheme is keyed by (instance, scheme): bean <code>q3n9</code>, owner ruling A, 2026-10-24. The instance is derived from the scheme's source, never from where its glossary file sits, so a file that moves keeps its key.</p>
+<p>The layer that owns the scheme. A scheme id such as <code>kg-tools</code> is shared by every layer's extraction, so a scheme is keyed by (instance, scheme): bean <code>q3n9</code>, owner ruling A, 2026-10-24. The layer is derived from the scheme's source, never from where its glossary file sits, so a file that moves keeps its key.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/term-mapping.ts"><code>cat-harness-tools/schemas/content/term-mapping.ts#TermMappingSchema.instance</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -1188,11 +616,27 @@ TermSchema.broader <span class="fa-gloss-status">candidate, extracted</span>
 <p class="fa-gloss-meta">Schema fields of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/schemas/glossary.ts"><code>folio-assistant-core/schemas/glossary.ts#TermSchema.broader</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
+<dt id="folio-assistant-core--kg-schema-fields--glossary.termschema.editorialnote" data-fa-state="extracted" data-fa-gloss="">
+TermSchema.editorialNote <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A note for the editors, not part of the meaning (<code>skos:editorialNote</code>): the document's own marks such as &quot;Under review&quot; or &quot;To be included before publication&quot;. A table drawn from the glossary prints it in brackets after the definition, as the document does (smart-ra Q-RAC-8 A).</p>
+<p class="fa-gloss-meta">Schema fields of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/schemas/glossary.ts"><code>folio-assistant-core/schemas/glossary.ts#TermSchema.editorialNote</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="folio-assistant-core--kg-schema-fields--glossary.termschema.focus" data-fa-state="extracted" data-fa-gloss="">
+TermSchema.focus <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The thing the concept is about, an organization or an architecture element (&#123;@link FocusSchema}): <code>foaf:focus</code>.</p>
+<p class="fa-gloss-meta">Schema fields of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/schemas/glossary.ts"><code>folio-assistant-core/schemas/glossary.ts#TermSchema.focus</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
 <dt id="folio-assistant-core--kg-schema-fields--glossary.termschema.iri" data-fa-state="extracted" data-fa-gloss="">
 TermSchema.iri <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The concept's IRI when its defining vocabulary already mints one. The glossary then DESCRIBES that concept — its labels, translations, order — rather than minting a second IRI for the same term. Owner, 2026-09-30 (bean <code>xsqm</code>, &quot;one SKOS&quot;, option A): bootstrap's terms are <code>&lt;bootstrap&gt;/ns#Node</code>, not also <code>…ns#glossary/terms/node</code>.</p>
+<p>The concept's IRI when its defining vocabulary already mints one. The glossary then DESCRIBES that concept — its labels, translations, order — rather than minting a second IRI for the same term. Owner, 2026-09-30 (bean <code>xsqm</code>, &quot;one SKOS&quot;, option A): bootstrap's terms are <code>&lt;bootstrap&gt;/ns/Node</code>, not also <code>…ns/glossary/terms/node</code>.</p>
 <p class="fa-gloss-meta">Schema fields of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/schemas/glossary.ts"><code>folio-assistant-core/schemas/glossary.ts#TermSchema.iri</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -1234,6 +678,22 @@ TermSchema.source <span class="fa-gloss-status">candidate, extracted</span>
 <dd>
 <p>Where the term came from: a repository path (with #anchor) or an IRI.</p>
 <p class="fa-gloss-meta">Schema fields of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/schemas/glossary.ts"><code>folio-assistant-core/schemas/glossary.ts#TermSchema.source</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="folio-assistant-core--kg-schema-fields--glossary.termschema.subject" data-fa-state="extracted" data-fa-gloss="">
+TermSchema.subject <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Overrides the scheme's &#123;@link SubjectSchema subject area} for this term.</p>
+<p class="fa-gloss-meta">Schema fields of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/schemas/glossary.ts"><code>folio-assistant-core/schemas/glossary.ts#TermSchema.subject</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="folio-assistant-core--kg-schema-fields--glossary.termschema.translationstatus" data-fa-state="extracted" data-fa-gloss="">
+TermSchema.translationStatus <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Per locale, whether this term's translation is signed off. The translation itself is in the scheme's <code>.po</code>, never here: this records only who stands behind it. A locale not listed is <code>unofficial</code>.</p>
+<p class="fa-gloss-meta">Schema fields of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/schemas/glossary.ts"><code>folio-assistant-core/schemas/glossary.ts#TermSchema.translationStatus</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
 <dt id="cat-harness-tools--kg-schema-fields--test-plan.testassertionschema.expectation" data-fa-state="extracted" data-fa-gloss="">
@@ -1352,7 +812,7 @@ TestPlanCaseSchema.dependsOn <span class="fa-gloss-status">candidate, extracted<
 TestPlanCaseSchema.feature <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Optional Gherkin <code>.feature</code> file the case is written in.</p>
+<p>The Gherkin <code>.feature</code> file the case is written in. Required under <code>test-plan/v1.1</code> — enforced on the plan, since a case does not know its plan's version — and optional only in a <code>test-plan/v1</code> plan.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/test-plan.ts"><code>cat-harness-tools/schemas/sdlc/test-plan.ts#TestPlanCaseSchema.feature</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -1840,7 +1300,7 @@ ThemeBackdropSchema.description <span class="fa-gloss-status">candidate, extract
 ThemeBackdropSchema.imageRole <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The declared image <code>role</code> this theme's art comes from — <code>landing</code> for the three <code>landing-*</code> entries an instance declares.</p>
+<p>The declared image <code>role</code> this theme's art comes from — <code>landing</code> for the three <code>landing-*</code> entries a layer declares.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/theme.ts"><code>cat-harness-tools/schemas/ui/theme.ts#ThemeBackdropSchema.imageRole</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -1912,7 +1372,7 @@ ThemeOverrideNoteSchema.source <span class="fa-gloss-status">candidate, extracte
 ThemeRefSchema.instance <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The owning instance, as <code>owner/repo</code> (bean <code>6rmv</code>). Absent means the citing instance's own.</p>
+<p>The owning layer, as <code>owner/repo</code> (bean <code>6rmv</code>). Absent means the citing layer's own.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/theme.ts"><code>cat-harness-tools/schemas/ui/theme.ts#ThemeRefSchema.instance</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -2408,7 +1868,7 @@ ToolInvocationSchema.tool <span class="fa-gloss-status">candidate, extracted</sp
 ToolInvokeSchema.inProcess <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>A function in **this instance's own code**.</p>
+<p>A function in **this layer's own code**.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/tool.ts"><code>cat-harness-tools/schemas/tools/tool.ts#ToolInvokeSchema.inProcess</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -2432,7 +1892,7 @@ ToolInvokeSchema.shell <span class="fa-gloss-status">candidate, extracted</span>
 ToolMaintainsSchema.artefact <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Published path relative to the instance's base, e.g. <code>tool.schema.json</code>. No leading slash: it is joined by <code>renderingPath</code>, which owns the layout.</p>
+<p>Published path relative to the layer's base, e.g. <code>tool.schema.json</code>. No leading slash: it is joined by <code>renderingPath</code>, which owns the layout.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/tool.ts"><code>cat-harness-tools/schemas/tools/tool.ts#ToolMaintainsSchema.artefact</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -2440,7 +1900,7 @@ ToolMaintainsSchema.artefact <span class="fa-gloss-status">candidate, extracted<
 ToolMaintainsSchema.format <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>What the artefact IS, for a consumer deciding whether it can read it. Open string: an instance may maintain kinds this vocabulary has not met.</p>
+<p>What the artefact IS, for a consumer deciding whether it can read it. Open string: a layer may maintain kinds this vocabulary has not met.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/tool.ts"><code>cat-harness-tools/schemas/tools/tool.ts#ToolMaintainsSchema.format</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -2784,7 +2244,7 @@ TranslationBlockQaReport.label <span class="fa-gloss-status">candidate, extracte
 TranslationBlockQaReport.paths <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Repo-relative paths of the block's files.</p>
+<p>Repo-relative paths of the subject's files: a block's or page's <code>.md</code> (and <code>.ts</code>), or — for a catalogue measured against its template, which has no page of its own here (an IG page, a glossary) — the <code>.pot</code>.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/qa-record-shapes.ts"><code>cat-harness-tools/schemas/kg/qa-record-shapes.ts#TranslationBlockQaReport.paths</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -2794,6 +2254,14 @@ TranslationBlockQaReport.po <span class="fa-gloss-status">candidate, extracted</
 <dd>
 <p>The PO this verdict was measured against, repo-relative.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/qa-record-shapes.ts"><code>cat-harness-tools/schemas/kg/qa-record-shapes.ts#TranslationBlockQaReport.po</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--qa-record-shapes.translationblockqareport.updated_at" data-fa-state="extracted" data-fa-gloss="">
+TranslationBlockQaReport.updated_at <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Optional and no longer written (owner rulings 2026-11-06, cards &quot;QA dates&quot; and &quot;Date source&quot;): the date is derived on read from the entries' <code>reviewed_tree</code>.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/qa-record-shapes.ts"><code>cat-harness-tools/schemas/kg/qa-record-shapes.ts#TranslationBlockQaReport.updated_at</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
 <dt id="cat-harness-tools--kg-schema-fields--harness-config.translationconfig.defaultlocale" data-fa-state="extracted" data-fa-gloss="">
@@ -3064,7 +2532,7 @@ TranslationStatusSchema.changedAt <span class="fa-gloss-status">candidate, extra
 TranslationStatusSchema.instances <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Every OTHER instance's declared <code>translation-sources</code> directory, each measured on its own (issue #2228). Optional: an index written before the field existed is still a valid index.</p>
+<p>Every OTHER layer's declared <code>translation-sources</code> directory, each measured on its own (issue #2228). Optional: an index written before the field existed is still a valid index.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/site-indexes.ts"><code>cat-harness-tools/schemas/ui/site-indexes.ts#TranslationStatusSchema.instances</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -3230,6 +2698,30 @@ UserStorySchema.want <span class="fa-gloss-status">candidate, extracted</span>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/user-story.ts"><code>cat-harness-tools/schemas/process/user-story.ts#UserStorySchema.want</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
+<dt id="cat-harness-tools--kg-schema-fields--user-scenario.usesschema.block" data-fa-state="extracted" data-fa-gloss="">
+UsesSchema.block <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A block id in a <code>building-blocks</code> catalogue.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/user-scenario.ts"><code>cat-harness-tools/schemas/process/user-scenario.ts#UsesSchema.block</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--user-scenario.usesschema.component" data-fa-state="extracted" data-fa-gloss="">
+UsesSchema.component <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Which ArchiMate component plays it here, when the block names more than one.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/user-scenario.ts"><code>cat-harness-tools/schemas/process/user-scenario.ts#UsesSchema.component</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--user-scenario.usesschema.role" data-fa-state="extracted" data-fa-gloss="">
+UsesSchema.role <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>What the block does in THIS step, in one line.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/user-scenario.ts"><code>cat-harness-tools/schemas/process/user-scenario.ts#UsesSchema.role</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
 </dl>
 <h2 id="letter-V">
   
@@ -3292,7 +2784,7 @@ ValidatorRef.exportName <span class="fa-gloss-status">candidate, extracted</span
 ValidatorRef.instance <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The instance the module belongs to, by its DECLARED NAME, when that is not the instance resolving the reference: <code>folio-assistant-core:schemas/x.ts#X</code>.</p>
+<p>The layer the module belongs to, by its DECLARED NAME, when that is not the layer resolving the reference: <code>folio-assistant-core:schemas/x.ts#X</code>.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/kind-validator.ts"><code>cat-harness-tools/schemas/kg/kind-validator.ts#ValidatorRef.instance</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -3708,7 +3200,7 @@ VisualisationSchema.surfaces <span class="fa-gloss-status">candidate, extracted<
 VisualisationSchema.theme <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The tile's theme, by reference (#1168 B8). Absent means the directory's, then the instance's.</p>
+<p>The tile's theme, by reference (#1168 B8). Absent means the directory's, then the layer's.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/cat-harness.ts"><code>cat-harness-tools/schemas/kg/cat-harness.ts#VisualisationSchema.theme</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -4100,7 +3592,7 @@ VoiceProfileSchema.superseded <span class="fa-gloss-status">candidate, extracted
 VoiceProvenanceFlag.ruleIds <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Rule ids that cite a node of this instance's own graph.</p>
+<p>Rule ids that cite a node of this layer's own graph.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/voices.ts"><code>cat-harness-tools/schemas/content/voices.ts#VoiceProvenanceFlag.ruleIds</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -4108,7 +3600,7 @@ VoiceProvenanceFlag.ruleIds <span class="fa-gloss-status">candidate, extracted</
 VoiceRefSchema.instance <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The instance holding it, as <code>owner/repo</code> (bean <code>6rmv</code>). Absent means this one.</p>
+<p>The layer holding it, as <code>owner/repo</code> (bean <code>6rmv</code>). Absent means this one.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/voices.ts"><code>cat-harness-tools/schemas/content/voices.ts#VoiceRefSchema.instance</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -4132,7 +3624,7 @@ VoiceRuleSchema.title <span class="fa-gloss-status">candidate, extracted</span>
 VoiceRuleSourceSchema.instance <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The instance holding the corpus, as its planned <code>owner/repo</code> (bean <code>6rmv</code>; it was the declared name until then), when it is not this one. Absent means this instance, so every existing citation keeps its meaning unchanged.</p>
+<p>The layer holding the corpus, as its planned <code>owner/repo</code> (bean <code>6rmv</code>; it was the declared name until then), when it is not this one. Absent means this layer, so every existing citation keeps its meaning unchanged.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/voices.ts"><code>cat-harness-tools/schemas/content/voices.ts#VoiceRuleSourceSchema.instance</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -4212,7 +3704,7 @@ VoiceSkillSchema.overlaySeverity <span class="fa-gloss-status">candidate, extrac
 VoiceSkillSchema.owner <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The instance that DERIVED this voice, by declared name.</p>
+<p>The layer that DERIVED this voice, by declared name.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/voice-skill.ts"><code>cat-harness-tools/schemas/content/voice-skill.ts#VoiceSkillSchema.owner</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
@@ -4546,6 +4038,326 @@ WorkflowDefinition.transitions <span class="fa-gloss-status">candidate, extracte
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/assistant-workflow.ts"><code>cat-harness-tools/schemas/process/assistant-workflow.ts#WorkflowDefinition.transitions</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>
+<dt id="cat-harness-tools--kg-schema-fields--work-plan.workplantags.processes" data-fa-state="extracted" data-fa-gloss="">
+WorkPlanTags.processes <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The processes it instantiates, in tag order, without duplicates.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/work-plan.ts"><code>cat-harness-tools/schemas/sdlc/work-plan.ts#WorkPlanTags.processes</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--work-plan.workplantags.proposal" data-fa-state="extracted" data-fa-gloss="">
+WorkPlanTags.proposal <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The proposal it was made from, when it names one.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/work-plan.ts"><code>cat-harness-tools/schemas/sdlc/work-plan.ts#WorkPlanTags.proposal</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopmoduleschema.carries" data-fa-state="extracted" data-fa-gloss="">
+WorkshopModuleSchema.carries <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The question the module carries, in one line.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopModuleSchema.carries</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopmoduleschema.day" data-fa-state="extracted" data-fa-gloss="">
+WorkshopModuleSchema.day <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Which day or session block it is in, when the workshop runs over several.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopModuleSchema.day</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopmoduleschema.objectives" data-fa-state="extracted" data-fa-gloss="">
+WorkshopModuleSchema.objectives <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>What a participant can do after it.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopModuleSchema.objectives</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopmoduleschema.sheet" data-fa-state="extracted" data-fa-gloss="">
+WorkshopModuleSchema.sheet <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The sheet (<code>sheets[].id</code>) the module fills.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopModuleSchema.sheet</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopmoduleschema.tables" data-fa-state="extracted" data-fa-gloss="">
+WorkshopModuleSchema.tables <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Tables (<code>tables[].id</code>) the module works through.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopModuleSchema.tables</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.about" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.about <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A band on the overview naming what the walkthrough demonstrates, with <code>links</code>.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.about</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.badge" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.badge <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A short badge beside the name (&quot;Interactive Spec&quot;).</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.badge</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.cast" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.cast <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The order the cast is listed in, everywhere it is listed (the overview, the journey map's lanes, the persona lens): actor ids. An actor a step names and this list does not follows, in order of first appearance; an id no step names is not drawn. Absent: order of first appearance.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.cast</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.chaptertitles" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.chapterTitles <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A chapter's title in the room, by the id of the journey the chapter is (<code>&quot;j4-family-records-abroad&quot;: &quot;Crossing back&quot;</code>). Absent: the journey's title without its code in front.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.chapterTitles</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.closingquestion" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.closingQuestion <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The line the Discussion view opens with (&quot;The technology works. What do countries need to agree on to make it real?&quot;).</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.closingQuestion</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.devicedemo" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.deviceDemo <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The layer's own device demo: an app that shows each moment's screen. The viewer does not draw the screens; its Device Demo view frames the app's own page for each (<code>href</code> + <code>#/demo/&lt;id&gt;</code> unless <code>route</code> says otherwise) and links each screen and the steps it shows both ways. <code>href</code> is a URL, or a path from the site's root (<code>vaxlink/</code>).</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.deviceDemo</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.ig" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.ig <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Where the FHIR implementation guide the walkthrough demonstrates is published, so a step's examples, profiles and processes link to their pages. <code>href</code> is the IG's base: a URL, or a path from the site's root (<code>&quot;&quot;</code> when the IG is the site). <code>example</code> and <code>profile</code> are page patterns under it, with <code>&#123;type}</code> and <code>&#123;id}</code> filled in (the IG Publisher's own: <code>&#123;type}-&#123;id}.html</code>, <code>StructureDefinition-&#123;id}.html</code>); <code>processes</code> is the page listing the business processes, each under a heading named for its BPMN process.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.ig</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.lede" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.lede <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A line under it.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.lede</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.links" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.links <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Links out (the IG, its source, its journeys), drawn in the <code>about</code> band; one with <code>frame</code> is also on the app bar, under that label.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.links</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.name" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.name <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The app's name in its frame (&quot;VaxLink&quot;); the workshop title when absent.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.name</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.notes" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.notes <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The presenter's note on each of the other views; a view without one shows none.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.notes</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.occasion" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.occasion <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The occasion, first on the frame's top bar (&quot;WHO Pre-GDHF Vignette&quot;).</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.occasion</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.presenternote" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.presenterNote <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The presenter's note on the overview; a step's note is its <code>facilitatorCue</code>.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.presenterNote</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.recordof" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.recordOf <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The actor whose record the trust ladder follows (&quot;Somsack's record&quot;).</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.recordOf</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.scope" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.scope <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Where the story moves, after the step range (&quot;Thailand ⇄ Lao PDR&quot;).</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.scope</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.status" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.status <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A status line at the right of the top bar.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.status</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.story" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.story <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The story in one sentence: the overview's headline.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.story</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.subject" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.subject <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>What the story is about, beside the occasion.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.subject</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.tagline" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.tagline <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>One line under the name.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.tagline</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoppresentationschema.views" data-fa-state="extracted" data-fa-gloss="">
+WorkshopPresentationSchema.views <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The ArchiMate views How it works shows first (the systems, the journeys as use cases), before the views each taught journey names: a model id of the layer's <code>cat-archimate.config.json</code> and a view id in it.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopPresentationSchema.views</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopresourceschema.body" data-fa-state="extracted" data-fa-gloss="">
+WorkshopResourceSchema.body <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>For a job aid: the short instructions themselves, Markdown, printed with it.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopResourceSchema.body</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopresourceschema.href" data-fa-state="extracted" data-fa-gloss="">
+WorkshopResourceSchema.href <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A URL, or a path relative to the workshop file.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopResourceSchema.href</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopresourceschema.steps" data-fa-state="extracted" data-fa-gloss="">
+WorkshopResourceSchema.steps <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Step refs, <code>&lt;scenario id&gt;#&lt;step id&gt;</code>.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopResourceSchema.steps</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetschema.assessmentstrip" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetSchema.assessmentStrip <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Print the assessment strip across its foot.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetSchema.assessmentStrip</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetschema.fields" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetSchema.fields <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Write-in fields the sheet has besides the module questions.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetSchema.fields</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetschema.label" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetSchema.label <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>As the room calls it: &quot;Sheet 4&quot;.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetSchema.label</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetschema.modules" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetSchema.modules <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The modules whose questions it carries, in order.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetSchema.modules</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopstepschema.asktheroom" data-fa-state="extracted" data-fa-gloss="">
+WorkshopStepSchema.askTheRoom <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The one question for the whole room.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopStepSchema.askTheRoom</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopstepschema.capabilities" data-fa-state="extracted" data-fa-gloss="">
+WorkshopStepSchema.capabilities <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>What had to exist for the step to work: the rows the assessment rates.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopStepSchema.capabilities</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopstepschema.facilitatorcue" data-fa-state="extracted" data-fa-gloss="">
+WorkshopStepSchema.facilitatorCue <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A note to the facilitator on how to run the step.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopStepSchema.facilitatorCue</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopstepschema.scenario" data-fa-state="extracted" data-fa-gloss="">
+WorkshopStepSchema.scenario <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The scenario id (<code>user-scenario</code>), looked up in this layer first.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopStepSchema.scenario</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopstepschema.step" data-fa-state="extracted" data-fa-gloss="">
+WorkshopStepSchema.step <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The step id in that scenario.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopStepSchema.step</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoptableschema.module" data-fa-state="extracted" data-fa-gloss="">
+WorkshopTableSchema.module <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The module that teaches it.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopTableSchema.module</code></a></p>
+<p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
+</dd>
 <dt id="cat-harness-tools--kg-schema-fields--ref-window.writerequestschema.authored" data-fa-state="extracted" data-fa-gloss="">
 WriteRequestSchema.authored <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
@@ -4566,7 +4378,7 @@ WriteRequestSchema.requestedBy <span class="fa-gloss-status">candidate, extracte
 WriteRequestSchema.route <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The route this write owns — <code>/</code> for the published site, <code>STAGING/&lt;slug&gt;/</code> for a preview. Composition is per route: two different routes compose by union, two of the same route take the newer.</p>
+<p>The route this write owns — <code>/</code> for the published site, <code>branches/&lt;slug&gt;/</code> for a preview. Composition is per route: two different routes compose by union, two of the same route take the newer.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/ref-window.ts"><code>cat-harness-tools/schemas/sdlc/ref-window.ts#WriteRequestSchema.route</code></a></p>
 <p class="fa-gloss-mapstate">Mapping: <code>fhir</code> unmapped · <code>skos</code> unmapped</p>
 </dd>

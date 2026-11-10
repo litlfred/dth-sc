@@ -9,22 +9,22 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 686.44)">
 <title>WHO Reference Architecture — metamodel in use</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-686.44 924,-686.44 924,4 -4,4"/>
-<g id="clust1" class="cluster">
+<g id="clust1" class="cluster mm&#45;layer&#45;motivation">
 <title>cluster_0</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M20,-496.76C20,-496.76 852,-496.76 852,-496.76 858,-496.76 864,-502.76 864,-508.76 864,-508.76 864,-594.28 864,-594.28 864,-600.28 858,-606.28 852,-606.28 852,-606.28 20,-606.28 20,-606.28 14,-606.28 8,-600.28 8,-594.28 8,-594.28 8,-508.76 8,-508.76 8,-502.76 14,-496.76 20,-496.76"/>
 <text text-anchor="middle" x="41.07" y="-592.38" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Motivation</text>
 </g>
-<g id="clust2" class="cluster">
+<g id="clust2" class="cluster mm&#45;layer&#45;strategy">
 <title>cluster_1</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M382,-329.44C382,-329.44 828,-329.44 828,-329.44 834,-329.44 840,-335.44 840,-341.44 840,-341.44 840,-426.96 840,-426.96 840,-432.96 834,-438.96 828,-438.96 828,-438.96 382,-438.96 382,-438.96 376,-438.96 370,-432.96 370,-426.96 370,-426.96 370,-341.44 370,-341.44 370,-335.44 376,-329.44 382,-329.44"/>
 <text text-anchor="middle" x="398.48" y="-425.06" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Strategy</text>
 </g>
-<g id="clust3" class="cluster">
+<g id="clust3" class="cluster mm&#45;layer&#45;business">
 <title>cluster_2</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M438,-175.32C438,-175.32 518,-175.32 518,-175.32 524,-175.32 530,-181.32 530,-187.32 530,-187.32 530,-259.64 530,-259.64 530,-265.64 524,-271.64 518,-271.64 518,-271.64 438,-271.64 438,-271.64 432,-271.64 426,-265.64 426,-259.64 426,-259.64 426,-187.32 426,-187.32 426,-181.32 432,-175.32 438,-175.32"/>
 <text text-anchor="middle" x="456.32" y="-257.74" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Business</text>
 </g>
-<g id="clust4" class="cluster">
+<g id="clust4" class="cluster mm&#45;layer&#45;application">
 <title>cluster_3</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M392,-8C392,-8 900,-8 900,-8 906,-8 912,-14 912,-20 912,-20 912,-105.52 912,-105.52 912,-111.52 906,-117.52 900,-117.52 900,-117.52 392,-117.52 392,-117.52 386,-117.52 380,-111.52 380,-105.52 380,-105.52 380,-20 380,-20 380,-14 386,-8 392,-8"/>
 <text text-anchor="middle" x="414.91" y="-103.62" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Application</text>

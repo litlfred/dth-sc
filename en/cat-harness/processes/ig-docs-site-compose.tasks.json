@@ -1,0 +1,397 @@
+{
+ "$schema": "process-task-panel/v1",
+ "process": "Process_IgDocsSiteCompose",
+ "markers": [
+  {
+   "id": "Task_Indexes",
+   "name": "Build each IG's artefact index",
+   "left": 28.26,
+   "top": 26.19,
+   "box": {
+    "left": 21.24,
+    "top": 61.9,
+    "width": 1.82,
+    "height": 11.43
+   }
+  },
+  {
+   "id": "Task_Pages",
+   "name": "Generate each IG instance's artefact pages",
+   "left": 45.72,
+   "top": 26.19,
+   "box": {
+    "left": 38.7,
+    "top": 61.9,
+    "width": 1.82,
+    "height": 11.43
+   }
+  },
+  {
+   "id": "Task_Stage",
+   "name": "Clone each IG at its recorded commit and stage it",
+   "left": 63.18,
+   "top": 26.19,
+   "box": {
+    "left": 56.16,
+    "top": 61.9,
+    "width": 1.82,
+    "height": 11.43
+   }
+  },
+  {
+   "id": "Task_ComposeInto",
+   "name": "Compose each staged IG into the host source",
+   "left": 80.64,
+   "top": 26.19,
+   "box": {
+    "left": 73.62,
+    "top": 61.9,
+    "width": 1.82,
+    "height": 11.43
+   }
+  }
+ ],
+ "processHref": "ig-docs-site-compose.html",
+ "tasks": {
+  "Task_Indexes": {
+   "id": "Task_Indexes",
+   "name": "Build each IG's artefact index",
+   "type": "bpmn:ServiceTask",
+   "stepHref": "ig-docs-site-compose.html#step-Task_Indexes",
+   "lane": "Host docs site build (CI runner)",
+   "laneHref": "ig-docs-site-compose.html#lane-Lane_Build",
+   "skills": [
+    {
+     "name": "ig-build-pipeline",
+     "href": "../../../en/cat-harness/processes/skills/ig-build-pipeline.html"
+    }
+   ],
+   "role": {
+    "name": "build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
+    "title": "Build pipeline",
+    "skills": [
+     {
+      "name": "ci-health"
+     },
+     {
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
+     },
+     {
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
+     },
+     {
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
+     },
+     {
+      "name": "feature-staging"
+     },
+     {
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
+     },
+     {
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
+     },
+     {
+      "name": "platform-gates"
+     },
+     {
+      "name": "prepare-merge"
+     },
+     {
+      "name": "publish-verification"
+     },
+     {
+      "name": "qa-reports"
+     },
+     {
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
+     },
+     {
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
+     },
+     {
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "todo-manager"
+     },
+     {
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
+     },
+     {
+      "name": "upstream-version-adoption"
+     },
+     {
+      "name": "watch"
+     }
+    ]
+   }
+  },
+  "Task_Pages": {
+   "id": "Task_Pages",
+   "name": "Generate each IG instance's artefact pages",
+   "type": "bpmn:ServiceTask",
+   "stepHref": "ig-docs-site-compose.html#step-Task_Pages",
+   "lane": "Host docs site build (CI runner)",
+   "laneHref": "ig-docs-site-compose.html#lane-Lane_Build",
+   "skills": [
+    {
+     "name": "ig-build-pipeline",
+     "href": "../../../en/cat-harness/processes/skills/ig-build-pipeline.html"
+    }
+   ],
+   "role": {
+    "name": "build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
+    "title": "Build pipeline",
+    "skills": [
+     {
+      "name": "ci-health"
+     },
+     {
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
+     },
+     {
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
+     },
+     {
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
+     },
+     {
+      "name": "feature-staging"
+     },
+     {
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
+     },
+     {
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
+     },
+     {
+      "name": "platform-gates"
+     },
+     {
+      "name": "prepare-merge"
+     },
+     {
+      "name": "publish-verification"
+     },
+     {
+      "name": "qa-reports"
+     },
+     {
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
+     },
+     {
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
+     },
+     {
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "todo-manager"
+     },
+     {
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
+     },
+     {
+      "name": "upstream-version-adoption"
+     },
+     {
+      "name": "watch"
+     }
+    ]
+   }
+  },
+  "Task_Stage": {
+   "id": "Task_Stage",
+   "name": "Clone each IG at its recorded commit and stage it",
+   "type": "bpmn:ServiceTask",
+   "stepHref": "ig-docs-site-compose.html#step-Task_Stage",
+   "lane": "Host docs site build (CI runner)",
+   "laneHref": "ig-docs-site-compose.html#lane-Lane_Build",
+   "skills": [
+    {
+     "name": "ig-render-jekyll",
+     "href": "../../../en/cat-harness/processes/skills/ig-render-jekyll.html"
+    },
+    {
+     "name": "ig-build-pipeline",
+     "href": "../../../en/cat-harness/processes/skills/ig-build-pipeline.html"
+    }
+   ],
+   "role": {
+    "name": "build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
+    "title": "Build pipeline",
+    "skills": [
+     {
+      "name": "ci-health"
+     },
+     {
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
+     },
+     {
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
+     },
+     {
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
+     },
+     {
+      "name": "feature-staging"
+     },
+     {
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
+     },
+     {
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
+     },
+     {
+      "name": "platform-gates"
+     },
+     {
+      "name": "prepare-merge"
+     },
+     {
+      "name": "publish-verification"
+     },
+     {
+      "name": "qa-reports"
+     },
+     {
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
+     },
+     {
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
+     },
+     {
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "todo-manager"
+     },
+     {
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
+     },
+     {
+      "name": "upstream-version-adoption"
+     },
+     {
+      "name": "watch"
+     }
+    ]
+   }
+  },
+  "Task_ComposeInto": {
+   "id": "Task_ComposeInto",
+   "name": "Compose each staged IG into the host source",
+   "type": "bpmn:ServiceTask",
+   "stepHref": "ig-docs-site-compose.html#step-Task_ComposeInto",
+   "lane": "Host docs site build (CI runner)",
+   "laneHref": "ig-docs-site-compose.html#lane-Lane_Build",
+   "skills": [
+    {
+     "name": "ig-render-jekyll",
+     "href": "../../../en/cat-harness/processes/skills/ig-render-jekyll.html"
+    }
+   ],
+   "role": {
+    "name": "build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
+    "title": "Build pipeline",
+    "skills": [
+     {
+      "name": "ci-health"
+     },
+     {
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
+     },
+     {
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
+     },
+     {
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
+     },
+     {
+      "name": "feature-staging"
+     },
+     {
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
+     },
+     {
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
+     },
+     {
+      "name": "platform-gates"
+     },
+     {
+      "name": "prepare-merge"
+     },
+     {
+      "name": "publish-verification"
+     },
+     {
+      "name": "qa-reports"
+     },
+     {
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
+     },
+     {
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
+     },
+     {
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "todo-manager"
+     },
+     {
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
+     },
+     {
+      "name": "upstream-version-adoption"
+     },
+     {
+      "name": "watch"
+     }
+    ]
+   }
+  }
+ }
+}

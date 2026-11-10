@@ -3,31 +3,33 @@ digraph "WHO_RA — metamodel in use" {
   node [shape=box, style="filled", fontname="Helvetica", fontsize=11, margin="0.14,0.08"];
   edge [fontname="Helvetica", fontsize=9, color="#555555", fontcolor="#333333"];
   subgraph cluster_0 {
-    label="Motivation"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
+    label="Motivation"; class="mm-layer-motivation"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
     rank=same;
     "Goal" [label="Goal
-27 element(s)
+32 element(s)
 (to itself: aggregates ×13, composed of ×4)", class="mm-layer-motivation", fillcolor="#ccccff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Goal", target="_top", tooltip="Goal: its elements"];
     "Outcome" [label="Outcome
 4 element(s)
 (to itself: composed of ×1, influences ×1)", class="mm-layer-motivation", fillcolor="#ccccff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Outcome", target="_top", tooltip="Outcome: its elements"];
+    "Principle" [label="Principle
+3 element(s)", class="mm-layer-motivation", fillcolor="#ccccff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Principle", target="_top", tooltip="Principle: its elements"];
     "Stakeholder" [label="Stakeholder
-10 element(s)", class="mm-layer-motivation", fillcolor="#ccccff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Stakeholder", target="_top", tooltip="Stakeholder: its elements"];
+13 element(s)", class="mm-layer-motivation", fillcolor="#ccccff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Stakeholder", target="_top", tooltip="Stakeholder: its elements"];
     "Value" [label="Value
 12 element(s)", class="mm-layer-motivation", fillcolor="#ccccff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Value", target="_top", tooltip="Value: its elements"];
   }
   subgraph cluster_1 {
-    label="Strategy"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
+    label="Strategy"; class="mm-layer-strategy"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
     rank=same;
     "Capability" [label="Capability
-28 element(s)
+33 element(s)
 (to itself: serves ×11, flows to ×1)", class="mm-layer-strategy", fillcolor="#f5deaa", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Capability", target="_top", tooltip="Capability: its elements"];
     "ValueStream" [label="Value Stream
 3 element(s)
 (to itself: triggers ×1)", class="mm-layer-strategy", fillcolor="#f5deaa", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ValueStream", target="_top", tooltip="Value Stream: its elements"];
   }
   subgraph cluster_2 {
-    label="Business"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
+    label="Business"; class="mm-layer-business"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
     rank=same;
     "BusinessCollaboration" [label="Business Collaboration
 1 element(s)", class="mm-layer-business", fillcolor="#ffffb5", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessCollaboration", target="_top", tooltip="Business Collaboration: its elements"];
@@ -47,10 +49,10 @@ digraph "WHO_RA — metamodel in use" {
 1 element(s)", class="mm-layer-business", fillcolor="#ffffb5", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Product", target="_top", tooltip="Product: its elements"];
   }
   subgraph cluster_3 {
-    label="Application"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
+    label="Application"; class="mm-layer-application"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
     rank=same;
     "ApplicationComponent" [label="Application Component
-47 element(s)
+68 element(s)
 (to itself: flows to ×15, serves ×10, realises ×5, composed of ×1)", class="mm-layer-application", fillcolor="#b5ffff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationComponent", target="_top", tooltip="Application Component: its elements"];
     "ApplicationFunction" [label="Application Function
 10 element(s)", class="mm-layer-application", fillcolor="#b5ffff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationFunction", target="_top", tooltip="Application Function: its elements"];
@@ -69,11 +71,13 @@ digraph "WHO_RA — metamodel in use" {
 (to itself: aggregates ×2, specialises ×2)", class="mm-layer-application", fillcolor="#b5ffff", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-DataObject", target="_top", tooltip="Data Object: its elements"];
   }
   subgraph cluster_4 {
-    label="Technology"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
+    label="Technology"; class="mm-layer-technology"; labeljust=l; style="rounded,filled"; fillcolor="#f7f7f7"; color="#bbbbbb"; fontcolor="#666666";
     rank=same;
     "Artifact" [label="Artifact
 7 element(s)
 (to itself: realises ×2, specialises ×2)", class="mm-layer-technology", fillcolor="#c9e7b7", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Artifact", target="_top", tooltip="Artifact: its elements"];
+    "Node" [label="Node
+5 element(s)", class="mm-layer-technology", fillcolor="#c9e7b7", URL="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Node", target="_top", tooltip="Node: its elements"];
   }
   "Goal" -> "Capability" [style=invis, constraint=true, weight=10];
   "Capability" -> "BusinessCollaboration" [style=invis, constraint=true, weight=10];

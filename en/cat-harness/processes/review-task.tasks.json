@@ -1,18 +1,93 @@
 {
  "$schema": "process-task-panel/v1",
  "process": "Process_Review",
- "processHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review",
+ "markers": [
+  {
+   "id": "Task_ClassifyChange",
+   "name": "Classify what changed",
+   "left": 23.5,
+   "top": 27.5,
+   "box": {
+    "left": 16.32,
+    "top": 43.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Call_NarrativeReview",
+   "name": "Narrative review",
+   "left": 58.14,
+   "top": 2.5,
+   "box": {
+    "left": 50.96,
+    "top": 18.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Call_CodeReview",
+   "name": "Code node review",
+   "left": 58.14,
+   "top": 52.5,
+   "box": {
+    "left": 50.96,
+    "top": 68.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Call_NarrativeCodeReview",
+   "name": "Prose and the code it describes",
+   "left": 58.14,
+   "top": 27.5,
+   "box": {
+    "left": 50.96,
+    "top": 43.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Task_Consolidate",
+   "name": "Consolidate findings",
+   "left": 82.88,
+   "top": 27.5,
+   "box": {
+    "left": 75.7,
+    "top": 43.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Task_EditorDecides",
+   "name": "Accept, or send back",
+   "left": 82.88,
+   "top": 76.67,
+   "box": {
+    "left": 75.7,
+    "top": 92.5,
+    "width": 2.38,
+    "height": 4
+   }
+  }
+ ],
+ "processHref": "review-task.html",
  "tasks": {
   "Task_ClassifyChange": {
    "id": "Task_ClassifyChange",
    "name": "Classify what changed",
    "type": "bpmn:Task",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/node/Task_ClassifyChange",
+   "stepHref": "review-task.html#step-Task_ClassifyChange",
    "lane": "Reviewer / SME",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/lane/Lane_Reviewer",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "content-review"
+     "name": "content-review",
+     "href": "../../../en/cat-harness/processes/skills/content-review.html"
     },
     {
      "name": "staging-review"
@@ -20,17 +95,19 @@
    ],
    "role": {
     "name": "reviewer",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
       "name": "adjudication"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
       "name": "decision-audit"
@@ -45,7 +122,8 @@
       "name": "staging-review"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
@@ -60,28 +138,30 @@
    "id": "Call_NarrativeReview",
    "name": "Narrative review",
    "type": "bpmn:CallActivity",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/node/Call_NarrativeReview",
+   "stepHref": "review-task.html#step-Call_NarrativeReview",
    "lane": "Reviewer / SME",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/lane/Lane_Reviewer",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [],
    "calls": {
     "name": "Narrative review",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_NarrativeReview",
+    "href": "review-narrative.html",
     "diagram": "review-narrative.html"
    },
    "role": {
     "name": "reviewer",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
       "name": "adjudication"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
       "name": "decision-audit"
@@ -96,7 +176,8 @@
       "name": "staging-review"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
@@ -111,28 +192,30 @@
    "id": "Call_CodeReview",
    "name": "Code node review",
    "type": "bpmn:CallActivity",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/node/Call_CodeReview",
+   "stepHref": "review-task.html#step-Call_CodeReview",
    "lane": "Reviewer / SME",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/lane/Lane_Reviewer",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [],
    "calls": {
     "name": "Code node review",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CodeReview",
+    "href": "review-code.html",
     "diagram": "review-code.html"
    },
    "role": {
     "name": "reviewer",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
       "name": "adjudication"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
       "name": "decision-audit"
@@ -147,7 +230,8 @@
       "name": "staging-review"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
@@ -162,28 +246,28 @@
    "id": "Call_NarrativeCodeReview",
    "name": "Prose and the code it describes",
    "type": "bpmn:CallActivity",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/node/Call_NarrativeCodeReview",
+   "stepHref": "review-task.html#step-Call_NarrativeCodeReview",
    "lane": "Reviewer / SME",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/lane/Lane_Reviewer",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [],
    "calls": {
-    "name": "Prose and the code it describes",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_NarrativeCodeReview",
-    "diagram": "narrative-code-review.html"
+    "name": "Process_NarrativeCodeReview"
    },
    "role": {
     "name": "reviewer",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
       "name": "adjudication"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
       "name": "decision-audit"
@@ -198,7 +282,8 @@
       "name": "staging-review"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
@@ -213,27 +298,30 @@
    "id": "Task_Consolidate",
    "name": "Consolidate findings",
    "type": "bpmn:Task",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/node/Task_Consolidate",
+   "stepHref": "review-task.html#step-Task_Consolidate",
    "lane": "Reviewer / SME",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/lane/Lane_Reviewer",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "content-review"
+     "name": "content-review",
+     "href": "../../../en/cat-harness/processes/skills/content-review.html"
     }
    ],
    "role": {
     "name": "reviewer",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
       "name": "adjudication"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
       "name": "decision-audit"
@@ -248,7 +336,8 @@
       "name": "staging-review"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
@@ -263,37 +352,33 @@
    "id": "Task_EditorDecides",
    "name": "Accept, or send back",
    "type": "bpmn:Task",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/node/Task_EditorDecides",
+   "stepHref": "review-task.html#step-Task_EditorDecides",
    "lane": "Editors + authoring agents",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review/lane/Lane_EditorDecides",
+   "laneHref": "review-task.html#lane-Lane_EditorDecides",
    "skills": [
     {
-     "name": "content-validate"
+     "name": "content-validate",
+     "href": "../../../en/cat-harness/processes/skills/content-validate.html"
     }
    ],
    "role": {
     "name": "editor",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/editor",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-editor",
     "title": "Editor",
     "skills": [
      {
       "name": "bpmn-authoring",
-      "via": "author"
-     },
-     {
-      "name": "content-author",
-      "via": "author"
-     },
-     {
-      "name": "content-plan",
+      "href": "../../../en/cat-harness/processes/skills/bpmn-authoring.html",
       "via": "author"
      },
      {
       "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html",
       "via": "author"
      },
      {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "decision-audit",
@@ -301,14 +386,17 @@
      },
      {
       "name": "dmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/dmn-authoring.html",
       "via": "author"
      },
      {
       "name": "evidence-appraisal",
+      "href": "../../../en/cat-harness/processes/skills/evidence-appraisal.html",
       "via": "author"
      },
      {
       "name": "kg-affordances",
+      "href": "../../../en/cat-harness/processes/skills/kg-affordances.html",
       "via": "author"
      },
      {

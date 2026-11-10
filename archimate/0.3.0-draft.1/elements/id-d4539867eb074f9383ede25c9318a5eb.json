@@ -7,7 +7,7 @@
   "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-d4539867eb074f9383ede25c9318a5eb.jsonld",
   "@type": "archimate:Capability",
   "schema:identifier": "id-d4539867eb074f9383ede25c9318a5eb",
-  "schema:name": "Privacy / Concent/ Trust",
+  "schema:name": "Cybersecurity, Privacy & Consent",
   "schema:category": "Strategy",
   "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1.jsonld"
 }

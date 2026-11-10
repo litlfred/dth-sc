@@ -7,7 +7,7 @@
   "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-788f660553e14f0283b93c2dda3ae441.jsonld",
   "@type": "archimate:Capability",
   "schema:identifier": "id-788f660553e14f0283b93c2dda3ae441",
-  "schema:name": "Client Identity Management",
+  "schema:name": "Identity Management",
   "schema:category": "Strategy",
   "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1.jsonld"
 }

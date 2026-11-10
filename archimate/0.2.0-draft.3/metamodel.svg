@@ -9,27 +9,27 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 852.36)">
 <title>WHO Models — metamodel in use</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-852.36 1842.29,-852.36 1842.29,4 -4,4"/>
-<g id="clust1" class="cluster">
+<g id="clust1" class="cluster mm&#45;layer&#45;motivation">
 <title>cluster_0</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M408.29,-662.68C408.29,-662.68 1818.29,-662.68 1818.29,-662.68 1824.29,-662.68 1830.29,-668.68 1830.29,-674.68 1830.29,-674.68 1830.29,-760.2 1830.29,-760.2 1830.29,-766.2 1824.29,-772.2 1818.29,-772.2 1818.29,-772.2 408.29,-772.2 408.29,-772.2 402.29,-772.2 396.29,-766.2 396.29,-760.2 396.29,-760.2 396.29,-674.68 396.29,-674.68 396.29,-668.68 402.29,-662.68 408.29,-662.68"/>
 <text text-anchor="middle" x="429.36" y="-758.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Motivation</text>
 </g>
-<g id="clust2" class="cluster">
+<g id="clust2" class="cluster mm&#45;layer&#45;strategy">
 <title>cluster_1</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M686.29,-495.36C686.29,-495.36 1132.29,-495.36 1132.29,-495.36 1138.29,-495.36 1144.29,-501.36 1144.29,-507.36 1144.29,-507.36 1144.29,-592.88 1144.29,-592.88 1144.29,-598.88 1138.29,-604.88 1132.29,-604.88 1132.29,-604.88 686.29,-604.88 686.29,-604.88 680.29,-604.88 674.29,-598.88 674.29,-592.88 674.29,-592.88 674.29,-507.36 674.29,-507.36 674.29,-501.36 680.29,-495.36 686.29,-495.36"/>
 <text text-anchor="middle" x="702.78" y="-590.98" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Strategy</text>
 </g>
-<g id="clust3" class="cluster">
+<g id="clust3" class="cluster mm&#45;layer&#45;business">
 <title>cluster_2</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M236.29,-341.24C236.29,-341.24 825.29,-341.24 825.29,-341.24 831.29,-341.24 837.29,-347.24 837.29,-353.24 837.29,-353.24 837.29,-425.56 837.29,-425.56 837.29,-431.56 831.29,-437.56 825.29,-437.56 825.29,-437.56 236.29,-437.56 236.29,-437.56 230.29,-437.56 224.29,-431.56 224.29,-425.56 224.29,-425.56 224.29,-353.24 224.29,-353.24 224.29,-347.24 230.29,-341.24 236.29,-341.24"/>
 <text text-anchor="middle" x="254.61" y="-423.66" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Business</text>
 </g>
-<g id="clust4" class="cluster">
+<g id="clust4" class="cluster mm&#45;layer&#45;application">
 <title>cluster_3</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M266.29,-152.32C266.29,-152.32 1043.29,-152.32 1043.29,-152.32 1049.29,-152.32 1055.29,-158.32 1055.29,-164.32 1055.29,-164.32 1055.29,-249.84 1055.29,-249.84 1055.29,-255.84 1049.29,-261.84 1043.29,-261.84 1043.29,-261.84 266.29,-261.84 266.29,-261.84 260.29,-261.84 254.29,-255.84 254.29,-249.84 254.29,-249.84 254.29,-164.32 254.29,-164.32 254.29,-158.32 260.29,-152.32 266.29,-152.32"/>
 <text text-anchor="middle" x="289.2" y="-247.94" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Application</text>
 </g>
-<g id="clust5" class="cluster">
+<g id="clust5" class="cluster mm&#45;layer&#45;implementation&#45;migration">
 <title>cluster_4</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M714.29,-8C714.29,-8 839.29,-8 839.29,-8 845.29,-8 851.29,-14 851.29,-20 851.29,-20 851.29,-92.32 851.29,-92.32 851.29,-98.32 845.29,-104.32 839.29,-104.32 839.29,-104.32 714.29,-104.32 714.29,-104.32 708.29,-104.32 702.29,-98.32 702.29,-92.32 702.29,-92.32 702.29,-20 702.29,-20 702.29,-14 708.29,-8 714.29,-8"/>
 <text text-anchor="middle" x="777.24" y="-90.42" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Implementation &amp; Migration</text>

@@ -1,27 +1,223 @@
 {
  "$schema": "process-task-panel/v1",
  "process": "Process_HumanTranslation",
- "processHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation",
+ "markers": [
+  {
+   "id": "Task_IdentifyContent",
+   "name": "Identify content and target locale",
+   "left": 8.78,
+   "top": 7.53,
+   "box": {
+    "left": 6.14,
+    "top": 15.07,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_AssignTranslator",
+   "name": "Assign to qualified human translator",
+   "left": 24.73,
+   "top": 7.53,
+   "box": {
+    "left": 22.09,
+    "top": 15.07,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_CheckCompleteness",
+   "name": "Check translation completeness",
+   "left": 46.35,
+   "top": 7.53,
+   "box": {
+    "left": 43.71,
+    "top": 15.07,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_RequestMoreWork",
+   "name": "Request completion of remaining strings",
+   "left": 54.07,
+   "top": 4.79,
+   "box": {
+    "left": 52.2,
+    "top": 17.81,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_ReceiveAssignment",
+   "name": "Receive assignment and materials",
+   "left": 30.39,
+   "top": 32.12,
+   "box": {
+    "left": 27.75,
+    "top": 39.79,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_TranslateInTool",
+   "name": "Translate strings in preferred tool",
+   "left": 36.05,
+   "top": 32.19,
+   "box": {
+    "left": 33.41,
+    "top": 39.73,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_SubmitPO",
+   "name": "Submit completed .po file",
+   "left": 40.68,
+   "top": 32.19,
+   "box": {
+    "left": 38.56,
+    "top": 39.73,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_SMEReview",
+   "name": "Review translation for accuracy",
+   "left": 72.08,
+   "top": 56.85,
+   "box": {
+    "left": 69.96,
+    "top": 64.38,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_ReturnForCorrection",
+   "name": "Return for correction with annotations",
+   "left": 79.54,
+   "top": 51.37,
+   "box": {
+    "left": 77.68,
+    "top": 64.38,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_Signoff",
+   "name": "Sign off translation as official",
+   "left": 90.61,
+   "top": 56.85,
+   "box": {
+    "left": 88.48,
+    "top": 64.38,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_ExtractPOT",
+   "name": "Extract the POT",
+   "left": 13.41,
+   "top": 81.51,
+   "box": {
+    "left": 11.28,
+    "top": 89.04,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_PrepareGlossary",
+   "name": "Prepare domain glossary",
+   "left": 19.07,
+   "top": 81.51,
+   "box": {
+    "left": 16.43,
+    "top": 89.04,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_InjectPO",
+   "name": "Inject the PO",
+   "left": 58.7,
+   "top": 81.51,
+   "box": {
+    "left": 56.57,
+    "top": 89.04,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_RoundTripQA",
+   "name": "Round-trip translation QA",
+   "left": 64.36,
+   "top": 81.51,
+   "box": {
+    "left": 61.72,
+    "top": 89.04,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_AppendDisclaimer",
+   "name": "Append WHO disclaimer (if DAK)",
+   "left": 85.98,
+   "top": 81.51,
+   "box": {
+    "left": 83.34,
+    "top": 89.04,
+    "width": 0.62,
+    "height": 3.29
+   }
+  },
+  {
+   "id": "Task_WriteStatus",
+   "name": "Write status.json (official)",
+   "left": 96.27,
+   "top": 81.51,
+   "box": {
+    "left": 93.63,
+    "top": 89.04,
+    "width": 0.62,
+    "height": 3.29
+   }
+  }
+ ],
+ "processHref": "human-translation-workflow.html",
  "tasks": {
   "Task_IdentifyContent": {
    "id": "Task_IdentifyContent",
    "name": "Identify content and target locale",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_IdentifyContent",
+   "stepHref": "human-translation-workflow.html#step-Task_IdentifyContent",
    "lane": "Translation Coordinator",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Coordinator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Coordinator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "translation-coordinator",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/translation-coordinator",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-translation-coordinator",
     "title": "Translation coordinator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -30,21 +226,23 @@
    "id": "Task_AssignTranslator",
    "name": "Assign to qualified human translator",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_AssignTranslator",
+   "stepHref": "human-translation-workflow.html#step-Task_AssignTranslator",
    "lane": "Translation Coordinator",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Coordinator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Coordinator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "translation-coordinator",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/translation-coordinator",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-translation-coordinator",
     "title": "Translation coordinator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -53,21 +251,23 @@
    "id": "Task_CheckCompleteness",
    "name": "Check translation completeness",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_CheckCompleteness",
+   "stepHref": "human-translation-workflow.html#step-Task_CheckCompleteness",
    "lane": "Translation Coordinator",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Coordinator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Coordinator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "translation-coordinator",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/translation-coordinator",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-translation-coordinator",
     "title": "Translation coordinator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -76,21 +276,23 @@
    "id": "Task_RequestMoreWork",
    "name": "Request completion of remaining strings",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_RequestMoreWork",
+   "stepHref": "human-translation-workflow.html#step-Task_RequestMoreWork",
    "lane": "Translation Coordinator",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Coordinator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Coordinator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "translation-coordinator",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/translation-coordinator",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-translation-coordinator",
     "title": "Translation coordinator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -99,27 +301,31 @@
    "id": "Task_ReceiveAssignment",
    "name": "Receive assignment and materials",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_ReceiveAssignment",
+   "stepHref": "human-translation-workflow.html#step-Task_ReceiveAssignment",
    "lane": "Human Translator",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Translator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Translator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "translator",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/translator",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-translator",
     "title": "Human translator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -128,21 +334,23 @@
    "id": "Task_TranslateInTool",
    "name": "Translate strings in preferred tool",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_TranslateInTool",
+   "stepHref": "human-translation-workflow.html#step-Task_TranslateInTool",
    "lane": "Human Translator",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Translator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Translator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "translator",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/translator",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-translator",
     "title": "Human translator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -151,27 +359,31 @@
    "id": "Task_SubmitPO",
    "name": "Submit completed .po file",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_SubmitPO",
+   "stepHref": "human-translation-workflow.html#step-Task_SubmitPO",
    "lane": "Human Translator",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Translator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Translator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "translator",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/translator",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-translator",
     "title": "Human translator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -180,33 +392,38 @@
    "id": "Task_SMEReview",
    "name": "Review translation for accuracy",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_SMEReview",
+   "stepHref": "human-translation-workflow.html#step-Task_SMEReview",
    "lane": "Subject-Matter Expert / Reviewer",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Reviewer",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "reviewer",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
       "name": "adjudication"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
       "name": "decision-audit"
@@ -221,7 +438,8 @@
       "name": "staging-review"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
@@ -236,27 +454,30 @@
    "id": "Task_ReturnForCorrection",
    "name": "Return for correction with annotations",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_ReturnForCorrection",
+   "stepHref": "human-translation-workflow.html#step-Task_ReturnForCorrection",
    "lane": "Subject-Matter Expert / Reviewer",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Reviewer",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "reviewer",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
       "name": "adjudication"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
       "name": "decision-audit"
@@ -271,7 +492,8 @@
       "name": "staging-review"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
@@ -286,27 +508,30 @@
    "id": "Task_Signoff",
    "name": "Sign off translation as official",
    "type": "bpmn:UserTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_Signoff",
+   "stepHref": "human-translation-workflow.html#step-Task_Signoff",
    "lane": "Subject-Matter Expert / Reviewer",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Reviewer",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "reviewer",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
       "name": "adjudication"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
       "name": "decision-audit"
@@ -321,7 +546,8 @@
       "name": "staging-review"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
@@ -334,44 +560,51 @@
   },
   "Task_ExtractPOT": {
    "id": "Task_ExtractPOT",
-   "name": "Extract POT (translatable strings)",
-   "type": "bpmn:ServiceTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_ExtractPOT",
+   "name": "Extract the POT",
+   "type": "bpmn:Task",
+   "stepHref": "human-translation-workflow.html#step-Task_ExtractPOT",
    "lane": "Automated Pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
+   "shared": {
+    "id": "GT_ExtractPot",
+    "type": "bpmn:GlobalTask"
+   },
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -386,19 +619,23 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"
@@ -413,42 +650,45 @@
    "id": "Task_PrepareGlossary",
    "name": "Prepare domain glossary",
    "type": "bpmn:ServiceTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_PrepareGlossary",
+   "stepHref": "human-translation-workflow.html#step-Task_PrepareGlossary",
    "lane": "Automated Pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -463,19 +703,23 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"
@@ -488,44 +732,51 @@
   },
   "Task_InjectPO": {
    "id": "Task_InjectPO",
-   "name": "Inject PO → translated Markdown",
-   "type": "bpmn:ServiceTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_InjectPO",
+   "name": "Inject the PO",
+   "type": "bpmn:Task",
+   "stepHref": "human-translation-workflow.html#step-Task_InjectPO",
    "lane": "Automated Pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
+   "shared": {
+    "id": "GT_InjectPo",
+    "type": "bpmn:GlobalTask"
+   },
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -540,19 +791,23 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"
@@ -566,43 +821,50 @@
   "Task_RoundTripQA": {
    "id": "Task_RoundTripQA",
    "name": "Round-trip translation QA",
-   "type": "bpmn:ServiceTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_RoundTripQA",
+   "type": "bpmn:Task",
+   "stepHref": "human-translation-workflow.html#step-Task_RoundTripQA",
    "lane": "Automated Pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
+   "shared": {
+    "id": "GT_RoundTripQa",
+    "type": "bpmn:GlobalTask"
+   },
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -617,19 +879,23 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"
@@ -644,42 +910,45 @@
    "id": "Task_AppendDisclaimer",
    "name": "Append WHO disclaimer (if DAK)",
    "type": "bpmn:ServiceTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_AppendDisclaimer",
+   "stepHref": "human-translation-workflow.html#step-Task_AppendDisclaimer",
    "lane": "Automated Pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -694,19 +963,23 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"
@@ -720,43 +993,53 @@
   "Task_WriteStatus": {
    "id": "Task_WriteStatus",
    "name": "Write status.json (official)",
-   "type": "bpmn:ServiceTask",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/node/Task_WriteStatus",
+   "type": "bpmn:Task",
+   "stepHref": "human-translation-workflow.html#step-Task_WriteStatus",
    "lane": "Automated Pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation/lane/Lane_Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
+   "shared": {
+    "id": "GT_WriteTranslationStatus",
+    "type": "bpmn:GlobalTask",
+    "inputs": {
+     "official": "true"
+    }
+   },
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -771,19 +1054,23 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"

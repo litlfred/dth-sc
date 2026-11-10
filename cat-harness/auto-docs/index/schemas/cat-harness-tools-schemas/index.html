@@ -9,13 +9,7 @@
 
   <link rel="stylesheet" href="../../../../../assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
 
-  <style id="jtd-nav-activation">
   
-    .site-nav ul li a {
-      background-image: none;
-    }
-
-  </style>
 
   
 
@@ -49,122 +43,11 @@
 <!-- End Jekyll SEO tag -->
 
 
-  <!--
-  The configured colour scheme, published for site-chrome/assets/js/docs-ui.js.
-
-  just-the-docs' first stylesheet is `just-the-docs-default.css`, which is
-  whatever `color_scheme` in _config.yml compiled to -- so `jtd.getTheme()`
-  returns the string "default" on a fresh load, never "dark". The scheme
-  toggle needs to know what "default" MEANS here, and reading it from the
-  config is the one way that does not go stale when the config changes.
-
-  FIRST in this file since 2026-09-24, because the first-paint snippet below
-  reads it too, and a script can only read what the parser has already seen.
--->
-<script type="application/json" id="fa-site-scheme">{"scheme": "dark"}</script>
-<!--
-  THE FIRST PAINT IS DARK — owner, 2026-09-24: *"when any
-  page/foio-asst/cat-harness first loads if flashes white before goignt o
-  dark mode. instead it should deafult dark mode then turn to light mode to
-  prevent light flash in dark."*
-
-  WHY IT FLASHED. The site is configured dark, so the theme's first
-  stylesheet already paints dark. But `docs-ui.js` is deferred, and on load
-  it applied a STORED choice with `jtd.setTheme(name)`, which swaps that
-  stylesheet's href -- to the dark file, when the default file already was
-  dark. The swap unloads the sheet that was painting the ground, and until
-  the new one arrives the browser's WHITE canvas shows. Every reader who had
-  ever pressed the light/dark control got that on every page. And nothing
-  painted `html` at all, so any moment without the theme's sheet was white.
-
-  So, FIRST THING in this include, before every stylesheet it emits:
-
-  1. decide the scheme -- the reader's stored choice (`fa-color-scheme`, the
-     key `docs-ui.js` writes), else the OS, else LIGHT -- and put it on
-     `<html data-fa-scheme>` before the body is parsed, so no rule keyed on
-     it ever paints the wrong way first;
-  2. if that is not the configured scheme, switch the theme's sheet NOW,
-     while the parser is still in the head. `jtd.setTheme` loads the new
-     file beside the old, render-blocking, and drops the old one once it
-     has loaded (cat-harness#820): never a frame with no theme sheet;
-  3. paint `html` itself, dark unless the scheme is light, so a sheet in
-     flight shows the page's ground rather than white.
-
-  The theme's own stylesheet link is ABOVE this include (just-the-docs emits
-  `head_custom.html` last in its head), which is why step 2 exists: there is
-  no hook before it, and none is needed -- nothing paints until the head is
-  parsed, and this runs while it is being parsed.
-
-  INLINE, which the rest of this file avoids so that no `script-src`
-  relaxation is ever needed. This is the one exception, and it is the only
-  way to run before first paint: a `src` script here is a network round-trip
-  on the critical path of every page. It interpolates nothing into markup,
-  and a CSP added later needs this block's hash.
-
-  ELSE LIGHT -- owner, 2026-10-15, "follow os else light". The declared
-  `color_scheme` only names the sheet shipped first. The ONE source: tools'
-  `scheme-css.ts` lifts this script; `docs-ui.js` reads its attribute.
-
-  NO LIQUID between the markers. `first-paint-scheme.e2e.ts` lifts these
-  exact bytes into a replica page, so the spec tests what ships.
-
-  The generated dashboards that write their OWN head (`state-visualizer.ts`,
-  `gen-translation-status.ts`) do not carry this. They switch nothing with
-  script, so they cannot flash: their first CSS paints dark, and the same spec
-  holds them to that. Giving them this snippet would switch ON their
-  `data-fa-scheme="light"` rules for the first time -- and those were never
-  finished (axe, 2026-09-24: 3 to 6 contrast failures per dashboard in light,
-  dark-scheme tag colours on a light ground). A light palette for them is its
-  own piece of work, not a side effect of this one.
--->
-<!-- fa-first-paint:begin -->
+  <script type="application/json" id="fa-site-scheme">{"scheme": "dark"}</script><!-- fa-first-paint:begin -->
 <script>(function(){var d=document.documentElement,s=null,c="dark";try{s=localStorage.getItem("fa-color-scheme")}catch(e){}if(s!=="light"&&s!=="dark"){s="light";try{if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)s="dark"}catch(e){}}try{var n=document.getElementById("fa-site-scheme");if(n)c=JSON.parse(n.textContent).scheme==="light"?"light":"dark"}catch(e){}d.setAttribute("data-fa-scheme",s);var j=window.jtd;if(s!==c&&j&&typeof j.setTheme==="function"){try{j.setTheme(s)}catch(e){}}})();</script>
 <style>html{background-color:#27262b}html[data-fa-scheme="light"]{background-color:#ffffff}</style>
-<!-- fa-first-paint:end -->
-<!-- PROSE HERE IS NOT FREE: these are HTML comments, so every byte ships on
-     every page (2356 of them). A comment in this file is a POINTER; the
-     reasoning goes in the artefact. Measured, with the cost this change paid
-     before measuring, in assets/harness/site.json's front matter. -->
-<!-- THE RENDER STATE. pending here; ready/failed from assets/js/kg-render.js,
-     which carries the contract. No attribute = no dynamic region on this page.
-     The number is a MINIMUM cross-checking registrations, not a count. -->
-<meta name="fa-render-regions" content="1">
-<script>document.documentElement.setAttribute("data-fa-render","pending");</script>
-<!--
-  The browser-tab icon, from the same declared mark the sidebar title
-  (`title.html`) renders — reused rather than looked up by its own
-  `browser-icon` role. There WAS a second role for exactly that, on
-  `mark-small` in `harness.json`, and it went unread: nothing in this
-  repo ever emitted a favicon at all, `rel="icon"` included. It also could
-  not have driven this lookup as declared — `imagesForRole()`
-  (`schemas/kg/kg-node.ts`) requires an image's `layout` field, which neither
-  mark entry carries, so a `browser-icon`-role lookup returns nothing. Reusing
-  the already-resolved `icon` (the same field `title.html` reads) sidesteps
-  that and, more importantly, is what was asked for: the sidebar mark and the
-  tab icon are meant to be the SAME glyph, so one declaration driving both is
-  correct, not just convenient — flip `icon` in `harness.json` and both
-  follow in one edit, no template change needed.
-
-  SVG-only. No PNG/ICO fallback exists in the repo and none is generated
-  here — every browser this matters for (evergreen Chrome/Firefox/Edge, and
-  Safari since 16) reads `type="image/svg+xml"` directly; a raster fallback
-  would need generating actual image files, which is out of scope for this
-  change.
-
-  `relative_url`, same as `title.html` and `landing.html` — a bare
-  `/assets/...` 404s on the same baseurl this file's landing-panel fix exists
-  for.
---><!--
-  Site-wide styling for the BPMN workflow figures.
-
-  just-the-docs pulls this file into <head> on every page. The diagrams are wide
-  (a swimlane process does not shrink well), so the figure scrolls horizontally
-  inside its own container rather than forcing the page body to scroll.
-
-  The SVGs carry their own white backdrop — see scripts/render-bpmn.ts — so they
-  stay legible under the dark colour scheme even if this stylesheet is missing.
--->
-<style>
+<!-- fa-first-paint:end --><meta name="fa-render-regions" content="1">
+<script>document.documentElement.setAttribute("data-fa-render","pending");</script><style>
   .bpmn-figure {
     overflow-x: auto;
     background: #fff;
@@ -182,85 +65,7 @@
     margin-top: 0;
     font-size: 0.75rem;
   }
-</style>
-
-<!--
-  Site UI: a QR of the current page in the sidebar header, and zoom /
-  full-width controls on the figures.
-
-  Loaded as same-origin files with no inline script, so no script-src
-  relaxation is needed. The QR is generated in the browser from
-  window.location.href rather than baked per page at build time, so it is
-  right for anchors, query strings, and both the directory and .html forms of
-  the same page. The UTF-8 shim must come after the encoder: without it the
-  encoder's stringToBytes is single-byte and a non-ASCII character in a URL
-  silently encodes to mojibake.
--->
-<!--
-  The TRANSLATION INDEX — which source page has a translation in which locale.
-
-  `mountNavLocale` in docs-ui.js reads this to decide what the left-hand navbar
-  shows: with the source language selected it does nothing, and with `fr`
-  selected it swaps each nav item that HAS a French page for that page, IN
-  PLACE OF the English one. An item with no translation is left exactly as it
-  is — that is the fallback, and it is the absence of a rewrite rather than a
-  code path of its own.
-
-  Generated into `docs/_data/translations.json` by
-  `content/pipeline/translation-index.ts`, from what each page DECLARES about
-  itself: `lang`, and `translation_source` naming the page it expresses. NOT
-  from a scan for directories whose names look like language subtags — see
-  that module's header for why that inference is wrong in both directions.
-
-  THREE STATES, and the third is the reason this is a JSON island rather than
-  a conditional. (The tag name is written inside {% raw %}
-  below because LIQUID PARSES TAGS INSIDE AN HTML COMMENT — the comment
-  wrapper means nothing to it — so naming a tag in prose is a syntax error at
-  build time, and the message points at the THEME's head.html because Liquid
-  attributes an include's line to the includer. This comment cost one red
-  deploy.
-
-  AND THEN IT COST A SECOND ONE, differently, which is why this paragraph now
-  describes the wrapper rather than spelling it. It used to SPELL both halves
-  as an example — and the closing half ENDED THIS COMMENT eighteen lines
-  early, so every line below it rendered as visible body text at the top of
-  EVERY PAGE on the site. Reported by the owner from the staging URL,
-  2026-09-19.
-
-  The asymmetry is the lesson: a Liquid tag has an escape, and the closing
-  comment delimiter has NONE. There is no way to write those three characters
-  inside a comment and have the comment survive them, because the parser is
-  not looking for an escape — it stops at the first match. So the rule is not
-  "escape it carefully", it is DO NOT WRITE IT: describe it, or name it one
-  character at a time. Guarded by
-  scripts/tests/html-comment-delimiters.test.ts, which fails on an opening
-  delimiter appearing inside an open comment — the one machine-detectable
-  signature of somebody trying.)
-  A {% if %} would have to choose between the second and
-  third rows below, and there is no expression that can:
-
-    1. the data file is there      -> `index` is an object; filter the nav.
-    2. it is there and EMPTY       -> `pages` is `{}`; there is nothing to
-                                      swap, so every item correctly falls back
-                                      to the source language.
-    3. the data file is ABSENT     -> `jsonify` emits `null`, and docs-ui.js
-                                      leaves the navbar EXACTLY as built.
-
-  A build that could not determine the translation set must never render as a
-  folio that has no translations. `null` is how that is said.
-
-  `baseurl` travels with it because the client has no other way to strip the
-  site prefix off a nav `href` before matching it.
--->
-<!-- MOVED 2026-10-02 to assets/harness/site.json: fetched once instead of
-     inlined 2356x (9482 B/page, 22.34 MB, ONE payload). The three states above
-     are unchanged; a fourth — the file is unreachable — is data-fa-render. -->
-<!--
-  Translation metadata for this page, consumed by docs-ui.js to auto-render
-  language coverage and QA badges. The translation pipeline stamps front matter;
-  this block publishes it to the client. No manual editing needed.
--->
-<script type="application/json" id="fa-translation-meta">{
+</style><script type="application/json" id="fa-translation-meta">{
   "lang": "en",
   "translationStatus": "",
   "translationSource": "",
@@ -282,400 +87,15 @@
     "complete": false
   },
   "statusSrc":"../../../../../assets/translation-status/index.json"
-}</script>
-<!--
-  Where the action tiles point.
+}</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/dth-sc/","jsonld":"https://litlfred.github.io/folio-assistant/dth-sc/dth-sc.jsonld","source":"https://github.com/litlfred/dth-sc"}</script><meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
+<meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-  RESOLVED, not composed. `scripts/sync-docs-harness.ts` writes
-  `docs/_data/harness.json` from the instance's own `cat-harness.json`,
-  through `siteLinks` in `scripts/site-links.ts` -- which computes every path
-  with `artefactStub` and `renderingPath`, the same functions the knowledge
-  graph exporter and the Pages workflow use. The tile therefore cannot
-  disagree with what is published.
-
-  This block previously wrote `../../../../../kg/` by hand. Nothing
-  has ever been published at `<base>/kg/` -- the renderings sit at the base,
-  named after the stub -- so the only entry point to the viewer anywhere on
-  this site was a 404 from the day it was added. See bean `udx8`, and the
-  identical defect AGENTS.md records against the README's chapter PDFs. A
-  path built by convention is a claim; `bun run cat site:links --site _site`
-  checks it against the tree that actually ships, and the Pages workflow runs
-  that check after the export.
-
-  `path` is site-ROOT-relative and gets `relative_url`, which is what makes it
-  right under this site's `/folio-assistant/` baseurl. `url` is off-site and
-  is printed as-is. `source` is no longer taken from `aux_links`: those were
-  removed so the forge link stops appearing as text at the top of the main
-  panel (the owner asked for it as an icon, not a header), and the URL is
-  resolved from the git remote instead of written down twice.
--->
-<!--
-  THE NAVBAR ICON ROW — which icons this instance shows, and where each goes.
-
-  `null` when the instance has not decided, and that is NOT the same as an
-  empty list: `navbarIcons` absent means "inherit, and nothing up the chain has
-  said either", while `[]` means the instance chose to show none. docs-ui.js
-  reads the two apart, and `jsonify` emits `null` for the first exactly as the
-  translations block above relies on.
-
-  Resolved in `sync-docs-harness.ts`: the icon list walks `needs` with the site
-  owner as the floor, and the hrefs come from this instance's own declared
-  visualisations plus `siteLinks`. Nothing about the row is decided in Liquid
-  or in JavaScript.
--->
-<!--
-  EMPTY HERE, FILLED BY `assets/js/harness-data.js` (bean `gp2f`, page weight).
-  The row is the same on every page of a build, so it is written once into a
-  cached file instead of into each page. `data-fa-row-src` is the contract the
-  railed pages already use (`withNavbarRow` in harness-rail.ts): the file drops
-  the name once it has filled the island, and a reader that finds it still
-  named and empty reports a failed load rather than "declared none".
--->
-<script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><!-- NOT MOVED, deliberately. Measured, with the reason and the condition for
-     moving it, in assets/harness/site.json's front matter. -->
-<script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/dth-sc/","jsonld":"https://litlfred.github.io/folio-assistant/dth-sc/dth-sc.jsonld","source":"https://github.com/litlfred/dth-sc"}</script>
-
-<!--
-  The todo index — a PERSON's outstanding items, published by
-  `scripts/gen-docs-pages.ts` to `/assets/todos/index.json`.
-
-  `relative_url` for the same reason every other path here uses it: the site is
-  served from `/folio-assistant` on the canonical deploy and from
-  `/folio-assistant/STAGING/<branch>` on a preview, and an absolute literal
-  404s on every deploy but one.
-
-  A URL rather than inline JSON, unlike `fa-site-links` above, because the
-  index grows with the todo corpus and inlining it would put the whole set into
-  every page's <head> whether the reader opens the board or not. A missing file
-  is reported by the fetch and the board is simply not mounted — a board that
-  opens empty is indistinguishable from a person with nothing outstanding, and
-  those are opposite facts.
-
-  `<meta>` and not a `<div>`: this is `<head>`, where flow content is not
-  permitted. A browser hoists a stray `<div>` into `<body>` and the code still
-  works, which is exactly what makes the mistake survive review.
--->
-<!-- THE SITE INDEX, published once. docs-ui.js reads an ISLAND FIRST where a
-     page has one and falls back to this. Rationale and measurement are in that
-     file's front matter, which is not served. -->
-<meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
-<meta name="fa-todo-src" content="../../../../../assets/todos/index.json">
-<!-- The todo GRAPH (#1941): the typed edges — node, person, bean — the board
-     filters and groups by, and each todo's own page. -->
-<meta name="fa-todo-graph" content="../../../../../todos.jsonld">
-
-<!--
-  THE SEMANTIC-ZOOM DECLARATION — when the card stops rendering its words and
-  becomes its avatar.
-
-  R2 of issue #602: *"The threshold SHALL be declared data, not a literal in
-  the renderer."* `gen-docs-pages.ts` publishes the folio's own
-  `semantic-zoom.json`, and publishes NOTHING when the folio has not declared
-  one. So this `<meta>` may point at a 404, and that is a real state rather
-  than a defect: `docs-ui.js` reports it could not determine a threshold and
-  leaves every card's words in place. A default in either file would be the
-  literal R2 forbids, one layer further from where anybody looks for it.
-
-  The pointer is emitted UNCONDITIONALLY because Liquid cannot see whether the
-  generator wrote the file, and a conditional that guessed would make "this
-  folio declares no threshold" and "the build did not run" the same page.
--->
-<meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json">
-
-<!--
-  THE DECLARED VISUALISATIONS, as tiles.
-
-  Owner, 2026-09-20: *"if harness declares visaluzers, those should have tile"*
-  — so the tile set is the `coverage.visualiser` obligation made reachable, not
-  a second registry. `graph-tiles.ts` derives it into `_data/harness.json`;
-  this hands it to `docs-ui.js` for BOTH surfaces, because a tile is declared
-  once and says where it shows.
-
-  INLINE rather than a second fetch, unlike the todo index above, and the two
-  are different for a reason worth stating: that index grows with the todo
-  corpus, while this one is bounded by the number of directories an instance
-  DECLARES — twelve here — and every page needs it before first paint or the
-  navbar would visibly grow tiles a moment after the reader arrives.
-
-  `jsonify` and not a hand-built string: a title carrying a quote would
-  otherwise close the attribute, and the quoting rule is Liquid's rather than
-  something this comment has to be right about.
--->
-<!--
-  THE CONTENT IS FILLED BY `assets/js/harness-data.js` (bean `gp2f`). The list
-  is the same on every page and was 12.5 KB of each one (measured on gh-pages
-  1ad53fa, 2026-10-23). That file is a deferred script ahead of `docs-ui.js`,
-  and deferred scripts run in document order, so the tiles are in place before
-  the first reader runs: no later paint than the inlined copy had.
--->
-<meta name="fa-tiles" content="" data-fa-src="harness-data">
-<!--
-  THE GLASS STRIP'S PINNED TILES, in order (owner, 2026-10-01, bean `ob3m`
-  finding 10: "Pinned tiles first, plus '+N more'"). Resolved from the
-  instance's `glassStrip` declaration by `sync-docs-harness.ts`; absent when
-  nothing declared one. Replica pages read `assets/harness/glass-strip.json`.
--->
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]">
-
-<!--
-  THE SITE'S BASEURL, for the tiles above.
-
-  Every other site-root path on this page is composed by Liquid: `relative_url`
-  prepends `site.baseurl`, which is `/folio-assistant` on the canonical deploy
-  and `/folio-assistant/STAGING/<branch>` on a preview. The tiles cannot use
-  it, because they reach the client as JSON and are composed in `docs-ui.js`
-  after Liquid has finished — so the base has to travel with them.
-
-  IT SHIPPED WITHOUT ONE AND EVERY TILE 404ed (issue #801). `graph-tiles.ts`
-  stores `/beans/`, which is correct as data and is what `harness.links[].path`
-  stores too; written into an `href` unprefixed, a browser resolves it against
-  the ORIGIN, so the beans tile pointed at `litlfred.github.io/beans/`. The
-  owner found it by going looking for the board and landing there.
-
-  A meta of its own rather than reading the site index, which also carries a
-  `baseurl`: that document reads as `null` when `_data/translations.json` was
-  not built, and since 2026-10-02 it is FETCHED, so it is also absent until a
-  request resolves and may never arrive. Composing links out of an optional
-  block means the day it goes missing every tile silently points at the origin
-  again — which is this defect, with a second way to reach it. Two reasons for
-  one answer now.
-
-  RELATIVE TO THIS PAGE since bean `g196` (2026-10-23): `.` at the root,
-  `../..` two levels down, never the deploy's path, so the page is the same
-  bytes in every preview. `_plugins/fa-root-relative.rb` does that to every
-  `site.baseurl` and `relative_url` on an HTML page; `siteBaseurl()` in
-  `docs-ui.js` and `navbar-row.js` resolves it back to an absolute path.
--->
-<meta name="fa-baseurl" content="../../../../..">
-
-<!--
-  WHETHER THIS IS A PREVIEW, for the tiles above.
-
-  `feature-staging.yml` writes `staging_slug` into `_data/build.yml`;
-  `docs-site.yml` writes the same file WITHOUT it. So a non-empty value here
-  means "a STAGING/<slug>/ preview", an empty one means the canonical deploy
-  or a local build.
-
-  It exists so a tile can vanish with its page. `compose-docs.ts` withholds a
-  `publish: "staging-only"` page from the canonical tree; a tile still pointing
-  at it would be a link to a 404 — `pb04`, a dead link being worse than no
-  link, and worse than usual here because the tile ALSO advertises content the
-  declaration is deliberately not publishing.
-
-  The filtering is client-side rather than baked into `harness.json` because
-  that file is generated once and committed, so it cannot know which deploy
-  will serve it. The page can be withheld at compose time because compose runs
-  per deploy; the data file cannot.
-
-  EMPTY IS THE SAFE VALUE, and it is what an absent `_data/build.yml` yields:
-  a build that cannot say it is a preview is treated as canonical and hides
-  the tile. That matches `compose-docs.ts`, which withholds unless positively
-  told `--staging` — one direction in both places, so the page and its tile
-  cannot disagree about which deploy they are on.
-
-  A CONSTANT, `preview`, rather than the slug (bean `g196`, 2026-10-23): every
-  reader asks only whether it is empty, and the slug made every page differ
-  between previews. The branch is in `staging.json`, which the banner reads.
--->
-<meta name="fa-staging" content="">
-
-<!--
-  WHICH SEARCH INDEX THIS PAGE IS SERVING.
-
-  `feature-staging.yml` fetches the PUBLISHED index before the build and
-  stamps what happened; `docs-site.yml` writes no such key, so the canonical
-  deploy leaves this empty and draws no warning. Bean `eof6`, on the owner's
-  ruling of 2026-09-22: *"staging uses last published index (w/ wanrnig)"*.
-
-  Three values, and the empty one is a real state rather than a fallback:
-
-    published    the preview serves the last published index. Results are
-                 about the MAIN SITE, not about this branch.
-    unavailable  the fetch failed; an empty index is served.
-    (empty)      not a staging build. No warning.
-
-  The bean this implements had first concluded that staging must disable
-  search outright, because a stale hit is "a wrong PASS, BELIEVED". The ruling
-  keeps search and attacks the belief instead — which is why the value is
-  emitted at all. An index swapped in with nothing on the page saying so would
-  be the unmarked staleness the bean was right to refuse.
--->
-<meta name="fa-search-index" content="">
-
-<!--
-  A page left out of the search index ON PURPOSE (`search_exclude: true`)
-  says so in what is built, so `publish:verify`'s search-index check can tell
-  a deliberate exclusion from a truncated index (#2233). Front matter is gone
-  once Jekyll has run; without this marker the ~2,800 IG artefact pages that
-  #2194 excluded read as "4,189 pages offer a search box, 1,003 indexed".
--->
-
-
-
-
-<!--
-  The bean index — the AGENT work plan, published by the same generator beside
-  the todo index above, for the same reason and read the same way. Separate
-  files rather than one combined document because the two stores are separate
-  graphs with separate declarations, and a consumer that wants only the human
-  half should not fetch 239 beans to get three todos.
--->
-<meta name="fa-beans-src" content="../../../../../assets/beans/index.json">
-<!--
-  The process index's entry point — the REPOSITORY's named-subgraph index,
-  whose children are the harness roots this site frames (`bun run
-  subgraph:jsonld`; bean `ax6r`, owner 2026-10-03: "Move to JSON-LD").
-  Read by assets/js/process-index.js on the page carrying
-  `[data-fa-process-index]` (the publication-workflow page), which walks it
-  down to every `processes` subgraph's `index.hydrated.jsonld`.
--->
-<meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld">
-<!--
-  The deploy's stamp — when it was built and from which commit — which the
-  work-plan dashboard turns into "generated … · N commits behind main".
-  `build.json` on the main site, `staging.json` on a preview; written by the
-  deploy, never committed, because a committed timestamp is a merge conflict
-  on every pair of concurrent changes (bean `y7b3`).
--->
-<meta name="fa-build-src" content="../../../../../build.json">
-
-<!--
-  The discarded-items document — `fsh-guts.jsonld`, published at the base by
-  `docs-site.yml`. A URL and not inline JSON, for the todo index's reason and
-  then some: it carries every node's BODY, which is 64 KB against a 5 KB
-  document without them. Inlining that into every page's <head> would be
-  absurd for content reached through one control inside Settings.
-
-  `.json` rather than `.jsonld`. Both are published and they are the same
-  bytes; Pages has no media type for `.jsonld` and serves it as
-  octet-stream. `fetch().json()` would parse it anyway, but every other
-  rendering here uses the alias and one that did not would be the odd case a
-  later reader has to work out.
-
-  The viewer fetches this WHEN SETTINGS OPENS, never on page load, and a
-  fetch that fails is reported rather than shown as an empty trashcan —
-  "nothing discarded" and "could not read the document" are opposite facts.
--->
-<!--
-  NOT on a folio's site that does not link its OWN fsh-guts (#2263 follow-up):
-  there this path is the folio's, where no document is published, and the
-  fetch's 404 painted "?" -- an error -- on the fish. With no meta the count is
-  ABSENT, and the row's fish is a link or an inert icon saying why
-  (`foreignSite.absent.fshGuts`, `lib/foreign-site-scope.ts`).
--->
-<!--
-  ?v=<content hash> ON EVERY FIRST-PARTY ASSET — and the reason is a REVIEW
-  failure, not a performance one.
-
-  These five are served from stable paths with no hash in the name, so a
-  browser that has the page cached keeps the old CSS and JS until its
-  `max-age` runs out. On the live site that is invisible. On a STAGING
-  preview it is the whole point of the deployment: the reviewer opens the URL
-  they opened an hour ago, gets yesterday's stylesheet, and reports "i dont
-  see changes" — which is indistinguishable from a deploy that never
-  happened, and sends the next hour after the wrong cause. Measured
-  2026-09-21 on this branch: every byte of the change was verified present in
-  the publish ref while the page rendered the previous build.
-
-  The query is a HASH OF THE ASSET (`fa_asset_version`,
-  `_plugins/fa-asset-version.rb`), so it changes exactly when the served bytes
-  do. It was `site.time` until 2026-10-23, and the build time is new on every
-  build: every page then differed on every rebuild, so each re-push of a
-  preview stored a whole new copy of its HTML (bean `g196`).
-
-  NOT a cache-busting strategy for third-party assets, and not applied to
-  them: those are versioned in their own URLs already.
--->
-<!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=6071ae228cf3">
-<!-- Narrow viewports: wide content scrolls in its own box, never the page
-     (bean `2r2n`). The standalone viewers inline the same file through
-     `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2">
-
-<!--
-  The work-plan dashboard's styles, split from docs-ui.css so that
-  `state-visualizer.ts` can inline exactly these bytes into the generated
-  `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
--->
-<link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=ed3e33f033fe">
-<!-- Sticky themes. GENERATED from the theme nodes in `schemas/ui/themes.ts` by
-     `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
-     Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
-     roles that docs-ui.css consumes, and a custom property has to be set on a
-     matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f">
-<!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
-     that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66">
-<!-- Kind avatars. GENERATED from `schemas/content/avatars.ts` by `bun run cat avatars:css`;
-     `avatars:css:check` fails the build when it is stale. One stylesheet
-     rather than 68 assets: the glyph is a mask and the colour is a property,
-     so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=a0806788c1f5">
-
-<!--
-  The kinds THIS INSTANCE DECLARES, for the avatar fan.
-
-  Owner: "shows the DECLared kinds for that instance, not inheritance." Written
-  by `sync-docs-harness.ts` from the instance's own `harness.json`, BEFORE
-  `resolveDirectories` overlays a dependency's. The effective set is strictly
-  larger, and showing it would name kinds this repository never claimed.
-
-  Inline rather than a fetched URL, unlike the todo index and the discarded
-  document: this is a dozen short strings, it is needed to render the fan at
-  all, and a fetch for that would put a spinner in front of a badge.
--->
-<!-- NOT MOVED: same reason as fa-site-links above. -->
-<script type="application/json" id="fa-declared-kinds">["beans","folio","glossary","todos","uploads"]</script>
-<!--
-  FIRST of the deferred scripts: it fills `#fa-navbar-row` and
-  `meta[name=fa-tiles]` before any reader runs (bean `gp2f`).
-
-  NO VERSION QUERY, unlike every other first-party asset here. This file carries LIVE
-  COUNTS (open beans, todos), so it changes whenever one bean opens or closes.
-  A version query naming its content would write that change into every page: two
-  previews built 25 minutes apart differed on 1,351 pages for one count going
-  133 -> 132 (bean `g196`, 2026-10-23). Unversioned, a stale copy lives only as
-  long as GitHub Pages' cache (about 10 minutes), and the pages stay the same.
--->
-<script src="../../../../../assets/js/harness-data.js" defer></script>
+<meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script>
-<!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
-<script src="../../../../../assets/js/kg-render.js" defer></script>
-<!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="../../../../../assets/js/navbar-row.js?v=7dce6a7e2ab0" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=59c1d8d3ff0a" defer></script>
-<!-- The edit, source and feedback links of every page, from the platform's one
-  recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
-  facts and this builds the hrefs. -->
-<script src="../../../../../assets/js/edit-links.js?v=81bb303b6bc2" defer></script>
-
-<!--
-  The work-plan dashboard. SELF-MOUNTING on any page carrying
-  `[data-fa-workplan]`, so docs-ui.js neither calls it nor knows it exists; a
-  page without that container pays one failed querySelector. The same file is
-  inlined verbatim into the generated state-visualiser pages.
--->
-<script src="../../../../../assets/js/work-plan.js" defer></script>
-<!--
-  The process index, self-mounting on `[data-fa-process-index]` the same way.
-  Its rows are the diagrams' own documentation, from the published subgraph JSON-LD.
--->
-<script src="../../../../../assets/js/process-index.js" defer></script>
-
-<!--
-  The landing panel — the instance's declared description drawn inside the
-  quiet part of its declared backdrop. Markup: `_includes/landing.html`.
-
-  The region comes in as custom properties (`--fl-x` …) set per instance from
-  `harness.json`, so this stylesheet knows nothing about where any
-  particular picture is quiet. That is the whole design: a downstream folio
-  swaps the art and the numbers and needs no CSS.
--->
-<style>
+<script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
+<script src="../../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -705,36 +125,42 @@
     position: static; width: auto; height: auto; color: inherit;
   }
   .folio-landing--plain p { font-size: inherit; font-weight: inherit; }
+</style><style id="fa-page-ground" data-instance="cat-harness">
+  /* Grumpy cyborg agents, the theme of cat-harness. */
+  :root { --fa-page-scrim: rgba(39, 38, 43, 0.85); --fa-text-scrim: rgba(39, 38, 43, 0.96); }
+  :root[data-fa-scheme="light"] { --fa-page-scrim: rgba(255, 255, 255, 0.85); --fa-text-scrim: rgba(255, 255, 255, 0.96); }
+  /* The root carries the art, so it covers the whole viewport however short
+     the page; the body is made see-through so the art is not painted over. */
+  html:root body { background-color: transparent; }
+  html body .main-content { background-color: var(--fa-text-scrim); border-radius: 6px; }
+  html:root {
+    background-image:
+      linear-gradient(var(--fa-page-scrim), var(--fa-page-scrim)),
+      url("../../../../../assets/img/harness/landing-grumpy-cyborg-agents-laptop.webp");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (max-width: 48rem) {
+    html:root {
+      background-image:
+        linear-gradient(var(--fa-page-scrim), var(--fa-page-scrim)),
+        url("../../../../../assets/img/harness/landing-grumpy-cyborg-agents-card.webp");
+    }
+  }
+  @media (max-width: 30rem) {
+    html:root {
+      background-image:
+        linear-gradient(var(--fa-page-scrim), var(--fa-page-scrim)),
+        url("../../../../../assets/img/harness/landing-grumpy-cyborg-agents-mobile.webp");
+    }
+  }
+  /* Print and forced colours get the plain page: art is decoration. */
+  @media print, (forced-colors: active) {
+    html:root { background-image: none; }
+  }
 </style>
-
-<!--
-  AN INSTANCE'S OWN WEBPAGE THEME, scoped to its pages.
-
-  Bean `7h3u`, on the owner's 2026-09-30 ruling to wire this at the PLATFORM
-  layer so every ingested IG gets it, rather than in one instance's page
-  generator.
-
-  WHY LIQUID AND NOT CSS. A webpage theme dresses one instance's pages, so it
-  has to be scoped by URL — and CSS cannot select on a URL. Jekyll is what
-  knows which page is rendering, so the scope is applied here and the VALUES
-  come from `_data/instance-themes.json`, written by `gen-themes-css.ts` from
-  each instance's declared `themes/`. That is the `site.data` pass-through bean
-  `kott` settled, and the owner's own instruction for this work: "reuse all
-  existing justthedocs infra".
-
-  WHY INLINE AND NOT A LINKED STYLESHEET. The same first-paint reasoning this
-  file already carries for the colour scheme: a sheet arriving after first
-  paint flashes the unthemed colours, which is the defect this file was
-  rewritten to remove.
-
-  WHAT IT RETHEMES, AND WHAT IT CANNOT. These three names are read by
-  `docs-ui.css` at 29 of its 33 `var(--x, #literal)` sites and DEFINED by
-  nothing — just-the-docs is Sass, so its own chrome compiles to literals and
-  no custom property can reach it. So this dresses the surfaces the site owns,
-  the left-hand nav among them, and leaves just-the-docs' compiled chrome
-  alone. Stated here because the alternative is a reader concluding the theme
-  is broken when it is doing exactly what it can.
--->
 
 <link rel="stylesheet" href="../../../../../assets/css/navbar.css"><script src="../../../../../assets/navbar/rail-1xqosn9b1rd.js" defer></script><script src="../../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-pinned-data" content="../../../../.."></head>
 
@@ -917,12 +343,12 @@
 </div>
 
 <ul class="subs">
-<li><a href="../cat-harness-tools-archimate-schemas/">cat-harness-tools-archimate-schemas</a> <span class="p">cat-harness-tools/archimate/schemas</span> <span class="n">3</span></li>
-<li><a href="../cat-harness-tools-openapi-schemas/">cat-harness-tools-openapi-schemas</a> <span class="p">cat-harness-tools/openapi/schemas</span> <span class="n">1</span></li>
-<li><strong>cat-harness-tools-schemas</strong> <span class="p">cat-harness-tools/schemas</span> <span class="n">209</span></li>
-<li><a href="../core-schemas/">core-schemas</a> <span class="p">folio-assistant-core/schemas</span> <span class="n">16</span></li>
-<li><a href="../fhir-harness-schemas/">fhir-harness-schemas</a> <span class="p">fhir-harness/schemas</span> <span class="n">13</span></li>
-<li><a href="../smart-base-schemas/">smart-base-schemas</a> <span class="p">smart-base/schemas</span> <span class="n">6</span></li>
+<li><a href="../cat-harness-tools-archimate-schemas/">cat-harness-tools-archimate-schemas</a> <span class="p">cat-harness-tools/archimate/schemas</span> <span class="n" data-da-count="index/schemas/cat-harness-tools-archimate-schemas" data-da-count-state="pending">…</span></li>
+<li><a href="../cat-harness-tools-openapi-schemas/">cat-harness-tools-openapi-schemas</a> <span class="p">cat-harness-tools/openapi/schemas</span> <span class="n" data-da-count="index/schemas/cat-harness-tools-openapi-schemas" data-da-count-state="pending">…</span></li>
+<li><strong>cat-harness-tools-schemas</strong> <span class="p">cat-harness-tools/schemas</span> <span class="n" data-da-count="index/schemas/cat-harness-tools-schemas" data-da-count-state="pending">…</span></li>
+<li><a href="../core-schemas/">core-schemas</a> <span class="p">folio-assistant-core/schemas</span> <span class="n" data-da-count="index/schemas/core-schemas" data-da-count-state="pending">…</span></li>
+<li><a href="../fhir-harness-schemas/">fhir-harness-schemas</a> <span class="p">fhir-harness/schemas</span> <span class="n" data-da-count="index/schemas/fhir-harness-schemas" data-da-count-state="pending">…</span></li>
+<li><a href="../smart-base-schemas/">smart-base-schemas</a> <span class="p">smart-base/schemas</span> <span class="n" data-da-count="index/schemas/smart-base-schemas" data-da-count-state="pending">…</span></li>
 </ul>
 
 <div class="fa-table-filter">
@@ -963,7 +389,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/conduct/memory.ts"><code>memory</code></a><br><span class="p">cat-harness-tools/schemas/conduct/memory.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>An agent's memory — what it carries into the next task, as a graph node.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/conduct/model-capabilities.ts"><code>model-capabilities</code></a><br><span class="p">cat-harness-tools/schemas/conduct/model-capabilities.ts</span></td>
@@ -979,7 +405,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/attribution.ts"><code>attribution</code></a><br><span class="p">cat-harness-tools/schemas/content/attribution.ts</span></td>
-  <td>Who wrote a piece of derived content — bean <code>iqim</code>.</td>
+  <td>Who wrote a piece of derived content.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/avatars.ts"><code>avatars</code></a><br><span class="p">cat-harness-tools/schemas/content/avatars.ts</span></td>
@@ -991,7 +417,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/block-summary.ts"><code>block-summary</code></a><br><span class="p">cat-harness-tools/schemas/content/block-summary.ts</span></td>
-  <td>An agent's summary of a library block, kept BESIDE the block — the QA sidecar the owner asked for on 2026-09-24.</td>
+  <td>An agent's summary of a library block, kept BESIDE the block as a QA sidecar, drained as part of general document ingestion.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/content-context.ts"><code>content-context</code></a><br><span class="p">cat-harness-tools/schemas/content/content-context.ts</span></td>
@@ -1007,11 +433,11 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/contributions.ts"><code>contributions</code></a><br><span class="p">cat-harness-tools/schemas/content/contributions.ts</span></td>
-  <td>Contribution registry — what a folio-assistant *dependency* may add to the root instance.</td>
+  <td>Contribution registry — what a folio-assistant *dependency* may add to the root layer: block kinds, adapters and MCP tools, not only translations.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/document-image.ts"><code>document-image</code></a><br><span class="p">cat-harness-tools/schemas/content/document-image.ts</span></td>
-  <td>An image placed on a page of an ingested document — bean <code>d5f1</code>.</td>
+  <td>An image placed on a page of an ingested document.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/document-kind.ts"><code>document-kind</code></a><br><span class="p">cat-harness-tools/schemas/content/document-kind.ts</span></td>
@@ -1019,7 +445,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/document-structure.ts"><code>document-structure</code></a><br><span class="p">cat-harness-tools/schemas/content/document-structure.ts</span></td>
-  <td><code>structure.json</code> as a BASE with VARIANTS — bean <code>rkqp</code>, owner 2026-09-30 (&quot;A+B&quot;, after a measured analysis).</td>
+  <td><code>structure.json</code> as a BASE with VARIANTS.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/extraction.ts"><code>extraction</code></a><br><span class="p">cat-harness-tools/schemas/content/extraction.ts</span></td>
@@ -1027,19 +453,19 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/figure-description.ts"><code>figure-description</code></a><br><span class="p">cat-harness-tools/schemas/content/figure-description.ts</span></td>
-  <td>What a person or agent SAYS a drawn figure shows — bean <code>a8wy</code>, under <code>m4xy</code>.</td>
+  <td>What a person or agent SAYS a drawn figure shows — the judgement half of the vector arm.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/inline-code.ts"><code>inline-code</code></a><br><span class="p">cat-harness-tools/schemas/content/inline-code.ts</span></td>
-  <td>Backtick spans in authored prose, rendered as <code>&lt;code&gt;</code> — bean <code>mylx</code>.</td>
+  <td>Backtick spans in authored prose, rendered as <code>&lt;code&gt;</code>.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/landing-sticky.ts"><code>landing-sticky</code></a><br><span class="p">cat-harness-tools/schemas/content/landing-sticky.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>The landing page, as a board of sticky notes.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/narrative.ts"><code>narrative</code></a><br><span class="p">cat-harness-tools/schemas/content/narrative.ts</span></td>
-  <td>A generated narrative, and who stands behind it — bean <code>ju0u</code>.</td>
+  <td>A generated narrative, and who stands behind it.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/odrl.ts"><code>odrl</code></a><br><span class="p">cat-harness-tools/schemas/content/odrl.ts</span></td>
@@ -1047,7 +473,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/pinned-terminology.ts"><code>pinned-terminology</code></a><br><span class="p">cat-harness-tools/schemas/content/pinned-terminology.ts</span></td>
-  <td>The codes a PUBLISHED IG carries at ONE pinned version — bean <code>7wou</code>.</td>
+  <td>The codes a PUBLISHED IG carries at ONE pinned version.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/po-strings.ts"><code>po-strings</code></a><br><span class="p">cat-harness-tools/schemas/content/po-strings.ts</span></td>
@@ -1055,7 +481,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/prov.ts"><code>prov</code></a><br><span class="p">cat-harness-tools/schemas/content/prov.ts</span></td>
-  <td>W3C PROV-O: the record of a task or decision being performed.</td>
+  <td>W3C PROV-O: the record of a task or decision being performed, extended for computable Data Sharing Agreements.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/reader-filter.ts"><code>reader-filter</code></a><br><span class="p">cat-harness-tools/schemas/content/reader-filter.ts</span></td>
@@ -1067,7 +493,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/sticky-contribution.ts"><code>sticky-contribution</code></a><br><span class="p">cat-harness-tools/schemas/content/sticky-contribution.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>A sticky is a CONTRIBUTION from a layer, declared by that layer.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/term-adjudication.ts"><code>term-adjudication</code></a><br><span class="p">cat-harness-tools/schemas/content/term-adjudication.ts</span></td>
@@ -1075,7 +501,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/term-mapping.ts"><code>term-mapping</code></a><br><span class="p">cat-harness-tools/schemas/content/term-mapping.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>Whether a glossary term the extractor MINTED already exists as a concept somebody else is authoritative for.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/translation.ts"><code>translation</code></a><br><span class="p">cat-harness-tools/schemas/content/translation.ts</span></td>
@@ -1083,11 +509,11 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/vector-figure.ts"><code>vector-figure</code></a><br><span class="p">cat-harness-tools/schemas/content/vector-figure.ts</span></td>
-  <td>A DRAWN figure, assembled and rendered — bean <code>ay3x</code>, under <code>m4xy</code>.</td>
+  <td>A DRAWN figure, assembled and rendered — the step above <code>vector-labels.json</code>.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/vector-labels.ts"><code>vector-labels</code></a><br><span class="p">cat-harness-tools/schemas/content/vector-labels.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>The positioned TEXT on a page that declares a figure: the labels of a figure that is DRAWN rather than placed.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/vocab-mapping.ts"><code>vocab-mapping</code></a><br><span class="p">cat-harness-tools/schemas/content/vocab-mapping.ts</span></td>
@@ -1115,7 +541,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/formal-ref.ts"><code>formal-ref</code></a><br><span class="p">cat-harness-tools/schemas/formal-ref.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>Dependency injection point for FORMAL REFERENCES — the <code>lean:</code> field's grammar and the package list it resolves against.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/formalization-types.ts"><code>formalization-types</code></a><br><span class="p">cat-harness-tools/schemas/formalization-types.ts</span></td>
@@ -1123,15 +549,15 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/harness-root.ts"><code>harness-root</code></a><br><span class="p">cat-harness-tools/schemas/harness-root.ts</span></td>
-  <td>Where the cat-harness instance lives: the directory holding <code>cat-harness.json</code>.</td>
+  <td>Where the cat-harness layer lives: the directory holding <code>cat-harness.json</code>.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/block-kind-node.ts"><code>block-kind-node</code></a><br><span class="p">cat-harness-tools/schemas/kg/block-kind-node.ts</span></td>
-  <td>A block kind as a KG node: <code>folio-block-kind/v1</code>, one JSON file per kind in a <code>block-kinds/</code> graph the OWNING harness declares (bean riit, step 2; sod4 finding #1).</td>
+  <td>A block kind as a KG node: <code>folio-block-kind/v1</code>, one JSON file per kind in a <code>block-kinds/</code> graph the OWNING harness declares.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/built-at-publish.ts"><code>built-at-publish</code></a><br><span class="p">cat-harness-tools/schemas/kg/built-at-publish.ts</span></td>
-  <td>Artefacts an instance must NOT commit, because no commit of it can hold them current: they are built when the site is published, and only then.</td>
+  <td>Artefacts a layer must NOT commit, because no commit of it can hold them current: they are built when the site is published, and only then.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/carried-note.ts"><code>carried-note</code></a><br><span class="p">cat-harness-tools/schemas/kg/carried-note.ts</span></td>
@@ -1139,23 +565,23 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/cat-harness.ts"><code>cat-harness</code></a><br><span class="p">cat-harness-tools/schemas/kg/cat-harness.ts</span></td>
-  <td>The <code>CatHarness</code> declaration — what an instance IS, at its root.</td>
+  <td>The <code>CatHarness</code> declaration — what a layer IS, at its root.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/concern-groups.ts"><code>concern-groups</code></a><br><span class="p">cat-harness-tools/schemas/kg/concern-groups.ts</span></td>
-  <td>The shape of a kind's FROM-WITHIN declaration file when it names concern groups: <code>processes/processes.json</code>, <code>schemas/schemas.json</code>, <code>library/library.json</code>, <code>uml/uml.json</code>, a test directory's <code>code.json</code> (placement PR0c…</td>
+  <td>The shape of a kind's FROM-WITHIN declaration file when it names concern groups: <code>processes/processes.json</code>, <code>schemas/schemas.json</code>, <code>library/library.json</code>, <code>uml/uml.json</code>, a test directory's <code>code.json</code>.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/content-adapter-node.ts"><code>content-adapter-node</code></a><br><span class="p">cat-harness-tools/schemas/kg/content-adapter-node.ts</span></td>
-  <td>A content adapter's block VOCABULARY as a KG node: <code>folio-content-adapter/v1</code>, one JSON file per adapter in a <code>content-adapters/</code> graph the owning harness declares (bean riit, step 5).</td>
+  <td>A content adapter's block VOCABULARY as a KG node: <code>folio-content-adapter/v1</code>, one JSON file per adapter in a <code>content-adapters/</code> graph the owning harness declares.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/contribution-nodes.ts"><code>contribution-nodes</code></a><br><span class="p">cat-harness-tools/schemas/kg/contribution-nodes.ts</span></td>
-  <td>Contributions as KG nodes: a harness's QA checkers and pipeline-plugin implementations, each a node in a graph of its own (bean riit, step 3b).</td>
+  <td>Contributions as KG nodes: a harness's QA checkers and pipeline-plugin implementations, each a node in a graph of its own.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/declared-nodes.ts"><code>declared-nodes</code></a><br><span class="p">cat-harness-tools/schemas/kg/declared-nodes.ts</span></td>
-  <td>The files of every declared directory of one graph typology, across the instances of a checkout: the one scan behind each node graph a harness declares instead of a central table (<code>typologies/</code>, bean dmx1; <code>validators/</code>…</td>
+  <td>The files of every declared directory of one graph typology, across the layers of a checkout: the one scan behind each node graph a harness declares instead of a central table (<code>typologies/</code>, <code>validators/</code>).</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/dependency-order.ts"><code>dependency-order</code></a><br><span class="p">cat-harness-tools/schemas/kg/dependency-order.ts</span></td>
@@ -1167,15 +593,15 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/detangle-sidecar.ts"><code>detangle-sidecar</code></a><br><span class="p">cat-harness-tools/schemas/kg/detangle-sidecar.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>The durable record of a detangle measurement — what is pinned, and what is not.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/detangle.ts"><code>detangle</code></a><br><span class="p">cat-harness-tools/schemas/kg/detangle.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>Detangling — is this candidate subgraph really a subgraph? ## The criterion A candidate subgraph is a large collection of thematically related content that the rest of the graph references while it references little out…</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/discovered-vocabulary.ts"><code>discovered-vocabulary</code></a><br><span class="p">cat-harness-tools/schemas/kg/discovered-vocabulary.ts</span></td>
-  <td>An enum whose members are DISCOVERED from the instances mounted beside this layer, rather than written in code — marked, so a reader that publishes the schema knows its members are the composition's and not the schema's.</td>
+  <td>An enum whose members are DISCOVERED from the layers mounted beside this layer, rather than written in code — marked, so a reader that publishes the schema knows its members are the composition's and not the schema's.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/external-schema.ts"><code>external-schema</code></a><br><span class="p">cat-harness-tools/schemas/kg/external-schema.ts</span></td>
@@ -1194,8 +620,12 @@
   <td>A node of the trashcan — what <code>fsh-guts/</code> holds, and what may leave it.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/glossary-sense.ts"><code>glossary-sense</code></a><br><span class="p">cat-harness-tools/schemas/kg/glossary-sense.ts</span></td>
+  <td>**The glossary sense verdicts** of a layer: for a use of a glossary term in the narrative that no rule decides, whether the term is used in its glossary sense — the store <code>translation:glossary:check</code> reads and its `--re…</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/graph-typology-node.ts"><code>graph-typology-node</code></a><br><span class="p">cat-harness-tools/schemas/kg/graph-typology-node.ts</span></td>
-  <td>A GRAPH TYPOLOGY as a node of the knowledge graph, declared by the harness that owns it (bean dmx1).</td>
+  <td>A GRAPH TYPOLOGY as a node of the knowledge graph, declared by the harness that owns it — no central registry; a <code>typologies/</code> graph of one node per kind, the way <code>tools/</code> holds Tool definitions as nodes.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/graph-typology-registry.ts"><code>graph-typology-registry</code></a><br><span class="p">cat-harness-tools/schemas/kg/graph-typology-registry.ts</span></td>
@@ -1215,15 +645,15 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/instance-repositories.ts"><code>instance-repositories</code></a><br><span class="p">cat-harness-tools/schemas/kg/instance-repositories.ts</span></td>
-  <td>The <code>owner/repo ↔ instance</code> map — DERIVED, never kept by hand (bean <code>6rmv</code>).</td>
+  <td>The <code>owner/repo ↔ instance</code> map — DERIVED, never kept by hand.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/instance-roots.ts"><code>instance-roots</code></a><br><span class="p">cat-harness-tools/schemas/kg/instance-roots.ts</span></td>
-  <td>Instance DISCOVERY: which directories are instances, and which file in a directory is its declaration.</td>
+  <td>Layer DISCOVERY: which directories are layers, and which file in a directory is its declaration.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/jsonld-prefixes.ts"><code>jsonld-prefixes</code></a><br><span class="p">cat-harness-tools/schemas/kg/jsonld-prefixes.ts</span></td>
-  <td><code>jsonldPrefixes</code>: the external vocabularies an instance's JSON-LD speaks, as declared data — prefix → namespace IRI (bean folio-assistant-63q4, owner 2026-10-14, &quot;1 3&quot;).</td>
+  <td><code>jsonldPrefixes</code>: the external vocabularies a layer's JSON-LD speaks, as declared data — prefix → namespace IRI.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/jsonld.ts"><code>jsonld</code></a><br><span class="p">cat-harness-tools/schemas/kg/jsonld.ts</span></td>
@@ -1239,27 +669,31 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/layer-direction.ts"><code>layer-direction</code></a><br><span class="p">cat-harness-tools/schemas/kg/layer-direction.ts</span></td>
-  <td>layer-direction.ts — is this edge pointing the way its layers allow? ONE answer to one question, asked by two tools that used to answer it separately or not at all (bean <code>j79e</code>): - <code>scripts/partition/engine.ts</code> (`check:…</td>
+  <td>layer-direction.ts — is this edge pointing the way its layers allow? ONE answer to one question, asked by two tools: - <code>scripts/partition/engine.ts</code> (<code>check:partition</code>) asks it of every import between modules, where the…</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/materialization-state.ts"><code>materialization-state</code></a><br><span class="p">cat-harness-tools/schemas/kg/materialization-state.ts</span></td>
   <td>The materialization STATE vocabulary — whether the bytes are here, and how a held copy proves it is unchanged.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/memory-record.ts"><code>memory-record</code></a><br><span class="p">cat-harness-tools/schemas/kg/memory-record.ts</span></td>
+  <td>**The memory record**: the base every kept memory shares, and the layer a bean extends — a bean is a memory note with additional structure for process, role and the like.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/mount-trust.ts"><code>mount-trust</code></a><br><span class="p">cat-harness-tools/schemas/kg/mount-trust.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>MOUNT TRUST — what must be true before a remote knowledge graph is mounted.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/namespaces.ts"><code>namespaces</code></a><br><span class="p">cat-harness-tools/schemas/kg/namespaces.ts</span></td>
-  <td>The platform's own IRI namespace — a leaf module, imported by nothing.</td>
+  <td>The platform's own IRI namespaces.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/node-kind-index.ts"><code>node-kind-index</code></a><br><span class="p">cat-harness-tools/schemas/kg/node-kind-index.ts</span></td>
-  <td>Every node kind a checkout declares, found THROUGH the graph typologies — issue #2195, PR 1.</td>
+  <td>Every node kind a checkout declares, found THROUGH the graph typologies.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/node-kind-nodes.ts"><code>node-kind-nodes</code></a><br><span class="p">cat-harness-tools/schemas/kg/node-kind-nodes.ts</span></td>
-  <td>The NODES of a node kind, found where its typologies say they are — issue #2195, PR 2.</td>
+  <td>The NODES of a node kind, found where its typologies say they are.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/node-kind.ts"><code>node-kind</code></a><br><span class="p">cat-harness-tools/schemas/kg/node-kind.ts</span></td>
@@ -1270,16 +704,20 @@
   <td>Partitioned RDF N-Quads Dataset Distribution &amp; Named Query Manifest Schema.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/opt-in-subgraphs.ts"><code>opt-in-subgraphs</code></a><br><span class="p">cat-harness-tools/schemas/kg/opt-in-subgraphs.ts</span></td>
+  <td>Opt-in named sub-graphs: which are switched on for a folio, and whether a directory sits inside one that is switched off.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/portable-path.ts"><code>portable-path</code></a><br><span class="p">cat-harness-tools/schemas/kg/portable-path.ts</span></td>
   <td>Path segments a checkout can actually create — on every filesystem, not only the one that wrote them.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/property-skills.ts"><code>property-skills</code></a><br><span class="p">cat-harness-tools/schemas/kg/property-skills.ts</span></td>
-  <td>Which skill edits which declaration property: the &quot;edit skills&quot; column of the harness config panel (issue #1146).</td>
+  <td>Which skill edits which declaration property: the &quot;edit skills&quot; column of the harness config panel.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/prov-jsonld.ts"><code>prov-jsonld</code></a><br><span class="p">cat-harness-tools/schemas/kg/prov-jsonld.ts</span></td>
-  <td>PROV activities as PROV-JSONLD — links, not strings (beans <code>jcet</code>, <code>9y9j</code>).</td>
+  <td>PROV activities as PROV-JSONLD — links, not strings.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/qa-record-shapes.ts"><code>qa-record-shapes</code></a><br><span class="p">cat-harness-tools/schemas/kg/qa-record-shapes.ts</span></td>
@@ -1287,7 +725,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/reference-direction.ts"><code>reference-direction</code></a><br><span class="p">cat-harness-tools/schemas/kg/reference-direction.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>reference-direction.ts — does this PROSE reference follow the dependency arrow? If A depends on B (directly or through a chain), nothing in B may reference A: B is lower and must not know what sits on top of it.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/remote-mount.ts"><code>remote-mount</code></a><br><span class="p">cat-harness-tools/schemas/kg/remote-mount.ts</span></td>
@@ -1315,7 +753,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/skill-topics.ts"><code>skill-topics</code></a><br><span class="p">cat-harness-tools/schemas/kg/skill-topics.ts</span></td>
-  <td>The shape of <code>skills.json</code>, the labelling node that says which subdirectories of a skills directory are TOPICS (bean <code>9umr</code>).</td>
+  <td>The shape of <code>skills.json</code>, the labelling node that says which subdirectories of a skills directory are TOPICS.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/state-manifest.ts"><code>state-manifest</code></a><br><span class="p">cat-harness-tools/schemas/kg/state-manifest.ts</span></td>
@@ -1335,15 +773,15 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/to-json-schema.ts"><code>to-json-schema</code></a><br><span class="p">cat-harness-tools/schemas/kg/to-json-schema.ts</span></td>
-  <td>JSON Schema conversion — one wrapper, because the converter changed under us.</td>
+  <td>JSON Schema conversion — one wrapper over zod 4's native <code>z.toJSONSchema</code>.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/url-space.ts"><code>url-space</code></a><br><span class="p">cat-harness-tools/schemas/kg/url-space.ts</span></td>
-  <td>Where a published thing is served: one resolver for the site's URL space (bean <code>nbal</code>, the producer half of <code>cat-tools-sthf</code>).</td>
+  <td>Where a published thing is served: one resolver for the site's URL space.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/validator-node.ts"><code>validator-node</code></a><br><span class="p">cat-harness-tools/schemas/kg/validator-node.ts</span></td>
-  <td>A VALIDATOR as a node of the knowledge graph (bean riit).</td>
+  <td>A VALIDATOR as a node of the knowledge graph.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/version-bump.ts"><code>version-bump</code></a><br><span class="p">cat-harness-tools/schemas/kg/version-bump.ts</span></td>
@@ -1359,11 +797,11 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/archive-contents.ts"><code>archive-contents</code></a><br><span class="p">cat-harness-tools/schemas/library/archive-contents.ts</span></td>
-  <td>An archive's entry list, as data — bean <code>twqe</code>.</td>
+  <td>An archive's entry list, as data.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/bib-attestations.ts"><code>bib-attestations</code></a><br><span class="p">cat-harness-tools/schemas/library/bib-attestations.ts</span></td>
-  <td>BIBLIOGRAPHY ATTESTATIONS — the ONE reader and the ONE writer for a folio's two bibliography judgement ledgers (qou C9 stories B3 and B4).</td>
+  <td>BIBLIOGRAPHY ATTESTATIONS — the ONE reader and the ONE writer for a folio's two bibliography judgement ledgers.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/bib-verification.ts"><code>bib-verification</code></a><br><span class="p">cat-harness-tools/schemas/library/bib-verification.ts</span></td>
@@ -1378,6 +816,10 @@
   <td>The swimlane glossary's retirement ledger: its tag and its shape.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/ingest-candidates.ts"><code>ingest-candidates</code></a><br><span class="p">cat-harness-tools/schemas/library/ingest-candidates.ts</span></td>
+  <td><code>library/&lt;slug&gt;/candidates.json</code> — Stage B's proposals for an entry, written by <code>scripts/extract-candidates.py</code> (a class extractor, the <code>--aspects-only</code> aspects, or by hand in the same shape) and turned into one typed b…</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/intake.ts"><code>intake</code></a><br><span class="p">cat-harness-tools/schemas/library/intake.ts</span></td>
   <td>An intake record — what one capture put into <code>uploads/&lt;doc&gt;/</code>, and where it came from.</td>
 </tr>
@@ -1387,7 +829,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/library-keywords.ts"><code>library-keywords</code></a><br><span class="p">cat-harness-tools/schemas/library/library-keywords.ts</span></td>
-  <td><code>library/&lt;slug&gt;/keywords.json</code> — an entry's keywords, read from the LSI index's own log-entropy term weights (issue #2302).</td>
+  <td><code>library/&lt;slug&gt;/keywords.json</code> — an entry's keywords, read from the LSI index's own log-entropy term weights.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/library-nodes.ts"><code>library-nodes</code></a><br><span class="p">cat-harness-tools/schemas/library/library-nodes.ts</span></td>
@@ -1411,11 +853,11 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/source-descriptor.ts"><code>source-descriptor</code></a><br><span class="p">cat-harness-tools/schemas/library/source-descriptor.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>How to enumerate a corpus you will never hold, and how to ask it for a subset.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/source-licence.ts"><code>source-licence</code></a><br><span class="p">cat-harness-tools/schemas/library/source-licence.ts</span></td>
-  <td>A source's licence, as one record wherever it is written — bean <code>7bg9</code>.</td>
+  <td>A source's licence, as one record wherever it is written.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/source-provenance.ts"><code>source-provenance</code></a><br><span class="p">cat-harness-tools/schemas/library/source-provenance.ts</span></td>
@@ -1427,11 +869,11 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/tabular-csvw.ts"><code>tabular-csvw</code></a><br><span class="p">cat-harness-tools/schemas/library/tabular-csvw.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>A tabular source as CSVW, annotated with what CSVW cannot say.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/tabular-records.ts"><code>tabular-records</code></a><br><span class="p">cat-harness-tools/schemas/library/tabular-records.ts</span></td>
-  <td>What makes a dataset findable — bean <code>p67i</code>.</td>
+  <td>What makes a dataset findable.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/theme-art-intake.ts"><code>theme-art-intake</code></a><br><span class="p">cat-harness-tools/schemas/library/theme-art-intake.ts</span></td>
@@ -1470,24 +912,36 @@
   <td>**The deployment resolver**: for each task of a process, who may run it in a deployment, and with which Tool.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/device-screen.ts"><code>device-screen</code></a><br><span class="p">cat-harness-tools/schemas/process/device-screen.ts</span></td>
+  <td>Device screens: what one person sees on one device at a moment of a journey, as data.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/methodology.ts"><code>methodology</code></a><br><span class="p">cat-harness-tools/schemas/process/methodology.ts</span></td>
   <td>A methodology node's front matter — <code>folio-methodology/v1</code>.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/process-element-id.ts"><code>process-element-id</code></a><br><span class="p">cat-harness-tools/schemas/process/process-element-id.ts</span></td>
-  <td>The id a BPMN <code>&lt;process&gt;</code> element declares — <code>Process_CRDM</code>, <code>Process_Editing</code> — as a typed reference (#1168 B8).</td>
+  <td>The id a BPMN <code>&lt;process&gt;</code> element declares — <code>Process_CRDM</code>, <code>Process_Editing</code> — as a typed reference.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/role-graph.ts"><code>role-graph</code></a><br><span class="p">cat-harness-tools/schemas/process/role-graph.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>Actors, Roles and Skills — who does a BPMN task, and what they need to know.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/scenario-overlay.ts"><code>scenario-overlay</code></a><br><span class="p">cat-harness-tools/schemas/process/scenario-overlay.ts</span></td>
+  <td>Roles, actors and capabilities EXTENDED BY ID from a higher layer's own <code>scenarios/</code>.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/user-scenario.ts"><code>user-scenario</code></a><br><span class="p">cat-harness-tools/schemas/process/user-scenario.ts</span></td>
   <td><span class="none">no description in the artefact</span></td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/user-story.ts"><code>user-story</code></a><br><span class="p">cat-harness-tools/schemas/process/user-story.ts</span></td>
   <td>User stories — what a reader acting in a role is trying to do.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>workshop</code></a><br><span class="p">cat-harness-tools/schemas/process/workshop.ts</span></td>
+  <td>Workshops: the didactic layer over a set of journeys.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/adversarial-checklist.ts"><code>adversarial-checklist</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/adversarial-checklist.ts</span></td>
@@ -1507,19 +961,31 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/binary-release.ts"><code>binary-release</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/binary-release.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>Binary releases — what was published, under what version, with what digest.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/block-qa.ts"><code>block-qa</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/block-qa.ts</span></td>
   <td>Per-content-block QA report schema.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/cache.ts"><code>cache</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/cache.ts</span></td>
+  <td>Caches — one node per CI cache a layer DECLARES: its key recipe, where its entries live, who produces and consumes them, its trust class and budget.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/change-size.ts"><code>change-size</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/change-size.ts</span></td>
   <td>The change-size rule: thresholds, basis, and prose/KG versus code weighting.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/gates-report.ts"><code>gates-report</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/gates-report.ts</span></td>
+  <td>The typed reports of <code>bun run cat gates</code> and <code>bun run cat check:merged</code>.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/git-corpus.ts"><code>git-corpus</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/git-corpus.ts</span></td>
   <td>What files this REPOSITORY contains — asked of git, never of the disk.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/harness-state.ts"><code>harness-state</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/harness-state.ts</span></td>
+  <td>One harness's state as <code>harness:state</code> publishes it (<code>folio-harness-state/v1</code>).</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/health-report.ts"><code>health-report</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/health-report.ts</span></td>
@@ -1527,7 +993,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/input-trace.ts"><code>input-trace</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/input-trace.ts</span></td>
-  <td>The runtime half of the input-site audit — bean <code>f017</code>.</td>
+  <td>The runtime half of the input-site audit.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/kg-qa.ts"><code>kg-qa</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/kg-qa.ts</span></td>
@@ -1539,11 +1005,15 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/merge-queue.ts"><code>merge-queue</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/merge-queue.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>The MERGE QUEUE — what the merge steward DECIDED about each open pull request, and nothing GitHub already knows.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/merge-review.ts"><code>merge-review</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/merge-review.ts</span></td>
   <td>Agentic pre-merge review and would-have-blocked counterfactual schemas.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/preview-prefix.ts"><code>preview-prefix</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/preview-prefix.ts</span></td>
+  <td>Where a branch's preview is published on the publish branch: <code>branches/&lt;slug&gt;/</code>.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/python-deps.ts"><code>python-deps</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/python-deps.ts</span></td>
@@ -1555,11 +1025,15 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/qa-report.ts"><code>qa-report</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/qa-report.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>QA reports — what a pipeline TOOL recorded about its own run.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/qa-review.ts"><code>qa-review</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/qa-review.ts</span></td>
   <td>QA review — findings, decisions, and the audit notes that justify them.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/read-projections.ts"><code>read-projections</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/read-projections.ts</span></td>
+  <td>Projected reads: a reader that uses only part of a file says so, and a writer's record keeps only that part.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/red-flag.ts"><code>red-flag</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/red-flag.ts</span></td>
@@ -1567,7 +1041,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/ref-window.ts"><code>ref-window</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/ref-window.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>A COALESCING WINDOW over a watched ref — the writes a steward batched into one push, and nothing the host already knows.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/run-context.ts"><code>run-context</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/run-context.ts</span></td>
@@ -1579,7 +1053,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/script-table.ts"><code>script-table</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/script-table.ts</span></td>
-  <td>The checkout's script table, read from where each script now lives.</td>
+  <td>The checkout's script table, read from where each script lives.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/session-context.ts"><code>session-context</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/session-context.ts</span></td>
@@ -1607,7 +1081,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/test-data.ts"><code>test-data</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/test-data.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>Test data sets (fixed and generated) and SME review case/verdict pairs.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/test-plan.ts"><code>test-plan</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/test-plan.ts</span></td>
@@ -1619,7 +1093,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/test-run.ts"><code>test-run</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/test-run.ts</span></td>
-  <td>A TEST RUN — what was measured, with what, and whether it can be redone.</td>
+  <td>A TEST RUN — what was measured, with what, and whether it can be redone: repeatable, hashable test data and processes.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/todo-graph.ts"><code>todo-graph</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/todo-graph.ts</span></td>
@@ -1627,7 +1101,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/todo-index.ts"><code>todo-index</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/todo-index.ts</span></td>
-  <td>The published todo index — <code>folio-todo-index/v1</code>, described at last.</td>
+  <td>The published todo index — <code>folio-todo-index/v1</code>.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/todo.ts"><code>todo</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/todo.ts</span></td>
@@ -1635,7 +1109,11 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/viewer-nav-qa.ts"><code>viewer-nav-qa</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/viewer-nav-qa.ts</span></td>
-  <td>The viewer-navbar audit — **what the owner's rule looks like as data**.</td>
+  <td>The viewer-navbar audit — the common navbar rail as data.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/sdlc/work-plan.ts"><code>work-plan</code></a><br><span class="p">cat-harness-tools/schemas/sdlc/work-plan.ts</span></td>
+  <td>A work plan is an epic or a milestone that names the process it instantiates.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/test-fixture-preload.ts"><code>test-fixture-preload</code></a><br><span class="p">cat-harness-tools/schemas/test-fixture-preload.ts</span></td>
@@ -1647,11 +1125,15 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/harness-tools.ts"><code>harness-tools</code></a><br><span class="p">cat-harness-tools/schemas/tools/harness-tools.ts</span></td>
-  <td>The cat-harness instance's Tool nodes — its <code>tools</code> graph.</td>
+  <td>The cat-harness layer's Tool nodes — its <code>tools</code> graph.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/store-tool-results.ts"><code>store-tool-results</code></a><br><span class="p">cat-harness-tools/schemas/tools/store-tool-results.ts</span></td>
+  <td>Typed results of the tools that read and write the harness's data stores — the work plan, the activity log and the session record.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/tool-folders.ts"><code>tool-folders</code></a><br><span class="p">cat-harness-tools/schemas/tools/tool-folders.ts</span></td>
-  <td>One Tool per folder: <code>&lt;tools dir&gt;/&lt;id&gt;/&lt;id&gt;.ts</code>, and the loader that reads them.</td>
+  <td>One Tool per folder: <code>&lt;tools dir&gt;/&lt;id&gt;/&lt;id&gt;.json</code> or <code>&lt;id&gt;/&lt;id&gt;.ts</code>, and the loader that reads them.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/tool-helpers.ts"><code>tool-helpers</code></a><br><span class="p">cat-harness-tools/schemas/tools/tool-helpers.ts</span></td>
@@ -1671,7 +1153,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/tool-release.ts"><code>tool-release</code></a><br><span class="p">cat-harness-tools/schemas/tools/tool-release.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>Tool releases — one external tool at one version, with the digest of the bytes and the runtime THIS release needs.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/tool-run.ts"><code>tool-run</code></a><br><span class="p">cat-harness-tools/schemas/tools/tool-run.ts</span></td>
@@ -1686,16 +1168,20 @@
   <td>What a Tool is.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/tools/workflow-tool-results.ts"><code>workflow-tool-results</code></a><br><span class="p">cat-harness-tools/schemas/tools/workflow-tool-results.ts</span></td>
+  <td>Typed results of the workflow engine's tools.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/types.ts"><code>types</code></a><br><span class="p">cat-harness-tools/schemas/types.ts</span></td>
   <td>ALL types are inferred from Zod schemas in constraints.ts, which is the single source of truth.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/blank-avatar.ts"><code>blank-avatar</code></a><br><span class="p">cat-harness-tools/schemas/ui/blank-avatar.ts</span></td>
-  <td>The blank avatar on its own, with no <code>node:</code> import, so a browser bundle can use it: the navbar client (the tools layer's <code>scripts/lib/navbar.ts</code>) compares a glyph with it, and importing it from <code>avatars.ts</code> pulled that…</td>
+  <td>The blank avatar on its own, with no <code>node:</code> import, so a browser bundle can use it: the navbar client (the tools layer's <code>scripts/lib/navbar.ts</code>) compares a glyph with it, and <code>avatars.ts</code> reads <code>node:fs</code> / <code>node:url</code>,…</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/board-positions.ts"><code>board-positions</code></a><br><span class="p">cat-harness-tools/schemas/ui/board-positions.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>Where a note sits on a board — a layer ON TOP of the notes, never inside them.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/board.ts"><code>board</code></a><br><span class="p">cat-harness-tools/schemas/ui/board.ts</span></td>
@@ -1719,11 +1205,11 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/render-log.ts"><code>render-log</code></a><br><span class="p">cat-harness-tools/schemas/ui/render-log.ts</span></td>
-  <td>The render log — what was published to the publish branch, when, and why.</td>
+  <td>The render log — what was published to the publish branch, when, and why: each staging rendering added or deleted, logged on the publish branch.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/render-output.ts"><code>render-output</code></a><br><span class="p">cat-harness-tools/schemas/ui/render-output.ts</span></td>
-  <td>The ONE implementation of a Tool output's render hint — bean <code>q2wm</code>, R17.</td>
+  <td>The ONE implementation of a Tool output's render hint.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/render-targets.ts"><code>render-targets</code></a><br><span class="p">cat-harness-tools/schemas/ui/render-targets.ts</span></td>
@@ -1731,7 +1217,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/rendered-impact.ts"><code>rendered-impact</code></a><br><span class="p">cat-harness-tools/schemas/ui/rendered-impact.ts</span></td>
-  <td>What a change does to a RENDERED site: the contract every renderer answers (bean <code>bnjs</code>, issue #971).</td>
+  <td>What a change does to a RENDERED site: the contract every renderer answers.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/safe-url.ts"><code>safe-url</code></a><br><span class="p">cat-harness-tools/schemas/ui/safe-url.ts</span></td>
@@ -1739,7 +1225,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/site-indexes.ts"><code>site-indexes</code></a><br><span class="p">cat-harness-tools/schemas/ui/site-indexes.ts</span></td>
-  <td>The published index files the site's viewers read — each <code>$schema</code> family typed, so the graph-typology registry names a validator instead of the script that writes it (#1168 B6b, bean <code>dv8v</code>).</td>
+  <td>The published index files the site's viewers read — each <code>$schema</code> family typed, so the graph-typology registry names a validator instead of the script that writes it.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/slides-accessibility.ts"><code>slides-accessibility</code></a><br><span class="p">cat-harness-tools/schemas/ui/slides-accessibility.ts</span></td>
@@ -1747,19 +1233,19 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/theme-by-ref.ts"><code>theme-by-ref</code></a><br><span class="p">cat-harness-tools/schemas/ui/theme-by-ref.ts</span></td>
-  <td>A theme by REFERENCE — <code>{instance?, themeId}</code> — resolved against the instance that owns it, not only against the platform's own table.</td>
+  <td>A theme by REFERENCE — <code>{instance?, themeId}</code> — resolved against the layer that owns it, not only against the platform's own table ({@link THEMES}).</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/theme.ts"><code>theme</code></a><br><span class="p">cat-harness-tools/schemas/ui/theme.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>A sticky theme — named colour roles plus the three layouts, as a graph node.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/themes.ts"><code>themes</code></a><br><span class="p">cat-harness-tools/schemas/ui/themes.ts</span></td>
-  <td>The themes this instance ships, and the default.</td>
+  <td>The themes this layer ships, and the default: grumpy-cat, white and black (with high-contrast variants), pale sages and dusty carolina blues in several gradations.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/tile-count.ts"><code>tile-count</code></a><br><span class="p">cat-harness-tools/schemas/ui/tile-count.ts</span></td>
-  <td><span class="none">no description in the artefact</span></td>
+  <td>The number a graph tile shows, DECLARED BY THE PROJECTION.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/webpage.ts"><code>webpage</code></a><br><span class="p">cat-harness-tools/schemas/ui/webpage.ts</span></td>
@@ -1797,6 +1283,24 @@ var SCOPE = "cat-harness-tools-schemas";
   }
   input.addEventListener("input", apply);
   apply();
+})();
+</script>
+<script>
+(function () {
+  var badges = document.querySelectorAll(".da-page [data-da-count]");
+  if (!badges.length) return;
+  function set(counts) {
+    Array.prototype.forEach.call(badges, function (b) {
+      var n = counts ? counts[b.getAttribute("data-da-count")] : undefined;
+      var ok = typeof n === "number" && isFinite(n);
+      b.textContent = ok ? String(n) : "";
+      b.setAttribute("data-da-count-state", ok ? "some" : counts ? "absent" : "error");
+    });
+  }
+  fetch("../../../../../assets/auto-docs/index.json", { cache: "no-cache" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) { set(j && j.counts && typeof j.counts === "object" ? j.counts : null); })
+    .catch(function () { set(null); });
 })();
 </script>
 

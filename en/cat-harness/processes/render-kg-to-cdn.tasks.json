@@ -1,48 +1,101 @@
 {
  "$schema": "process-task-panel/v1",
  "process": "Process_RenderKgToCdn",
- "processHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn",
+ "markers": [
+  {
+   "id": "Task_Resolve",
+   "name": "Determine which CDN, the root URL and the Subgraphs",
+   "left": 23.8,
+   "top": 28.79,
+   "box": {
+    "left": 18.11,
+    "top": 57.58,
+    "width": 1.89,
+    "height": 7.27
+   }
+  },
+  {
+   "id": "Call_GitHubPages",
+   "name": "Render and push to GitHub Pages",
+   "left": 56.01,
+   "top": 6.06,
+   "box": {
+    "left": 47.96,
+    "top": 22.73,
+    "width": 1.89,
+    "height": 7.27
+   }
+  },
+  {
+   "id": "Call_ToolSubprocess",
+   "name": "Render and push with that CDN's own Tool",
+   "left": 56.01,
+   "top": 34.85,
+   "box": {
+    "left": 47.96,
+    "top": 51.52,
+    "width": 1.89,
+    "height": 7.27
+   }
+  },
+  {
+   "id": "Task_Report",
+   "name": "Report the push: status and message",
+   "left": 70.93,
+   "top": 28.79,
+   "box": {
+    "left": 65.24,
+    "top": 57.58,
+    "width": 1.89,
+    "height": 7.27
+   }
+  }
+ ],
+ "processHref": "render-kg-to-cdn.html",
  "tasks": {
   "Task_Resolve": {
    "id": "Task_Resolve",
-   "name": "Resolve the Subgraphs, the root URL and the target's Tool",
+   "name": "Determine which CDN, the root URL and the Subgraphs",
    "type": "bpmn:Task",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn/node/Task_Resolve",
+   "stepHref": "render-kg-to-cdn.html#step-Task_Resolve",
    "lane": "Build pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn/lane/Lane_Ci",
+   "laneHref": "render-kg-to-cdn.html#lane-Lane_Ci",
    "skills": [
     {
-     "name": "render-kg-to-cdn"
+     "name": "render-kg-to-cdn",
+     "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
     }
    ],
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -57,19 +110,107 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
+     },
+     {
+      "name": "upstream-version-adoption"
+     },
+     {
+      "name": "watch"
+     }
+    ]
+   }
+  },
+  "Call_GitHubPages": {
+   "id": "Call_GitHubPages",
+   "name": "Render and push to GitHub Pages",
+   "type": "bpmn:CallActivity",
+   "stepHref": "render-kg-to-cdn.html#step-Call_GitHubPages",
+   "lane": "Build pipeline",
+   "laneHref": "render-kg-to-cdn.html#lane-Lane_Ci",
+   "skills": [
+    {
+     "name": "render-kg-to-cdn",
+     "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
+    }
+   ],
+   "role": {
+    "name": "build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
+    "title": "Build pipeline",
+    "skills": [
+     {
+      "name": "ci-health"
+     },
+     {
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
+     },
+     {
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
+     },
+     {
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
+     },
+     {
+      "name": "feature-staging"
+     },
+     {
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
+     },
+     {
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
+     },
+     {
+      "name": "platform-gates"
+     },
+     {
+      "name": "prepare-merge"
+     },
+     {
+      "name": "publish-verification"
+     },
+     {
+      "name": "qa-reports"
+     },
+     {
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
+     },
+     {
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
+     },
+     {
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "todo-manager"
+     },
+     {
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"
@@ -82,44 +223,47 @@
   },
   "Call_ToolSubprocess": {
    "id": "Call_ToolSubprocess",
-   "name": "Render and push with the target's Tool [its own subprocess]",
+   "name": "Render and push with that CDN's own Tool",
    "type": "bpmn:CallActivity",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn/node/Call_ToolSubprocess",
+   "stepHref": "render-kg-to-cdn.html#step-Call_ToolSubprocess",
    "lane": "Build pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn/lane/Lane_Ci",
+   "laneHref": "render-kg-to-cdn.html#lane-Lane_Ci",
    "skills": [
     {
-     "name": "render-kg-to-cdn"
+     "name": "render-kg-to-cdn",
+     "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
     }
    ],
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -134,19 +278,23 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"
@@ -161,42 +309,45 @@
    "id": "Task_Report",
    "name": "Report the push: status and message",
    "type": "bpmn:Task",
-   "href": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn/node/Task_Report",
+   "stepHref": "render-kg-to-cdn.html#step-Task_Report",
    "lane": "Build pipeline",
-   "laneHref": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn/lane/Lane_Ci",
+   "laneHref": "render-kg-to-cdn.html#lane-Lane_Ci",
    "skills": [
     {
-     "name": "render-kg-to-cdn"
+     "name": "render-kg-to-cdn",
+     "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
     }
    ],
    "role": {
     "name": "build-pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
       "name": "ci-health"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
-     },
-     {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "feature-staging"
      },
      {
-      "name": "harness-projections"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "kg-separation"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
       "name": "platform-gates"
@@ -211,19 +362,23 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "upstream-version-adoption"

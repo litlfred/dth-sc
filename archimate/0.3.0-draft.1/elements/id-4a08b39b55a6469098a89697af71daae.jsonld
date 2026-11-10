@@ -7,7 +7,7 @@
   "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-4a08b39b55a6469098a89697af71daae.jsonld",
   "@type": "archimate:Capability",
   "schema:identifier": "id-4a08b39b55a6469098a89697af71daae",
-  "schema:name": "Health Record Sharing",
+  "schema:name": "Health Record Management",
   "schema:category": "Strategy",
   "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1.jsonld"
 }

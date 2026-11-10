@@ -1,0 +1,13 @@
+{
+  "$schema": "cat-archimate-config/v1",
+  "directory": "archimate",
+  "models": [
+    {
+      "id": "0.1.0-draft.1",
+      "file": "0.1.0-draft.1/dth-sc-overlay.archimate",
+      "title": "DTH-SC overlay 0.1.0-draft.1",
+      "description": "The dth-sc overlay on the smart-ra (DPI-H RA) ArchiMate model 0.3.0-draft.1: the five architecture variants of the supply chain DTH (Figs 15-19). Elements tagged overlay:base copy a smart-ra element and name it by IRI; elements tagged overlay:owner=dth-sc are this DTH's own (dth-sc#2 SC3)."
+    }
+  ],
+  "figures": []
+}

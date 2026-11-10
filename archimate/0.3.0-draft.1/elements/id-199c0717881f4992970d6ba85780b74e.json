@@ -7,7 +7,7 @@
   "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-199c0717881f4992970d6ba85780b74e.jsonld",
   "@type": "archimate:ApplicationComponent",
   "schema:identifier": "id-199c0717881f4992970d6ba85780b74e",
-  "schema:name": "Supplier registry",
+  "schema:name": "Supplier Registry",
   "schema:category": "Application",
   "dcterms:isPartOf": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1.jsonld"
 }

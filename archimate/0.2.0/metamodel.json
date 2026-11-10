@@ -118,31 +118,6 @@
       ]
     },
     {
-      "type": "DataObject",
-      "layer": "Application",
-      "elements": 18,
-      "ids": [
-        "id-702c24bbd73341be9afc11c7e11e9810",
-        "id-e162b2223da4440983514be5854b654d",
-        "id-145e885489634e469e8a6734f56b7df5",
-        "id-ad969289cb774307aa678037c56fdd3f",
-        "id-301912f3fcaf4648b0ebc3cbbfc3b447",
-        "id-783de50de1ae4db7b52cdfd21002d938",
-        "id-6e06187bc1764418b58cfe3455df7481",
-        "id-71b2e11df2e348a2b9f8eee36c8e5292",
-        "id-066e40fefc9e48e4b23e51d9f9bd14d2",
-        "id-2f415a2e0d4245c19663f5821ed02a16",
-        "id-22a44179b1b34a74984de87cd5a702b7",
-        "id-85cd033bc1bd4bec9bb4a2f316f357da",
-        "id-3c784d3ce7c9447cb8f9204ad485f7a6",
-        "id-c693e10fa7d2459280f8937d802f823c",
-        "id-73b79ca58c6b4b008398c22ead97bf24",
-        "id-c41368c8e91646cf96381ca301ac003d",
-        "id-9410790dc72a4831b7bdd40e85a8158d",
-        "id-0115ed19cda749078ae41e91e9895a7d"
-      ]
-    },
-    {
       "type": "ApplicationService",
       "layer": "Application",
       "elements": 16,
@@ -163,6 +138,29 @@
         "id-4ca1d3ec69af40b99a793fb0d6356085",
         "id-f44753abaac24a3cb7965453fce4cc0d",
         "id-1e18b92a47b541179feb658af4647419"
+      ]
+    },
+    {
+      "type": "DataObject",
+      "layer": "Application",
+      "elements": 16,
+      "ids": [
+        "id-702c24bbd73341be9afc11c7e11e9810",
+        "id-ad969289cb774307aa678037c56fdd3f",
+        "id-301912f3fcaf4648b0ebc3cbbfc3b447",
+        "id-783de50de1ae4db7b52cdfd21002d938",
+        "id-6e06187bc1764418b58cfe3455df7481",
+        "id-71b2e11df2e348a2b9f8eee36c8e5292",
+        "id-066e40fefc9e48e4b23e51d9f9bd14d2",
+        "id-2f415a2e0d4245c19663f5821ed02a16",
+        "id-22a44179b1b34a74984de87cd5a702b7",
+        "id-85cd033bc1bd4bec9bb4a2f316f357da",
+        "id-3c784d3ce7c9447cb8f9204ad485f7a6",
+        "id-c693e10fa7d2459280f8937d802f823c",
+        "id-73b79ca58c6b4b008398c22ead97bf24",
+        "id-c41368c8e91646cf96381ca301ac003d",
+        "id-9410790dc72a4831b7bdd40e85a8158d",
+        "id-0115ed19cda749078ae41e91e9895a7d"
       ]
     },
     {
@@ -257,22 +255,6 @@
       ]
     },
     {
-      "type": "Outcome",
-      "layer": "Motivation",
-      "elements": 9,
-      "ids": [
-        "id-49168f20ee2d46f2b1a991051ab5a02d",
-        "id-57355ace4e704cf49bfd82e616a617ac",
-        "id-87a3589d681c4d8e9b2ada5d72db9eb0",
-        "id-f3da9bf103a341d28717012ddfb83ae2",
-        "id-4cb8cc587d6c4764837e79518dfa2049",
-        "id-558aba849cc54d659ef1a5473d9aa2f1",
-        "id-d1b556b9ac4940eeb49f44f9a78b825a",
-        "id-3463482224324a95a77b808562828a38",
-        "id-a423086366604d2a9ea403aa8f19f264"
-      ]
-    },
-    {
       "type": "BusinessObject",
       "layer": "Business",
       "elements": 8,
@@ -335,6 +317,17 @@
         "id-70448b30ed3b43a1bbfea442a3f32388",
         "id-7a7f13e6c56d4c4fa3c37ca598a8be1c",
         "id-b3a5209e0e88419382a678964bed91f9"
+      ]
+    },
+    {
+      "type": "Outcome",
+      "layer": "Motivation",
+      "elements": 4,
+      "ids": [
+        "id-558aba849cc54d659ef1a5473d9aa2f1",
+        "id-d1b556b9ac4940eeb49f44f9a78b825a",
+        "id-3463482224324a95a77b808562828a38",
+        "id-a423086366604d2a9ea403aa8f19f264"
       ]
     },
     {
@@ -461,27 +454,6 @@
       ]
     },
     {
-      "source": "ApplicationComponent",
-      "relationship": "Access",
-      "target": "DataObject",
-      "count": 12,
-      "allowed": true,
-      "relationships": [
-        "id-82a19dce8ad94edead787664c3af59f6",
-        "id-d0f759a25e8242a8b7a00cd526fa6ecd",
-        "id-ba37954c9c86400a8b71c5cdb1058441",
-        "id-1a95e061e76a4a16a6b921d503b281d6",
-        "id-c4a4adb63b16424ea40b2762a0598b0b",
-        "id-1ac9ba1451ae4d41a98f0e024640c5ee",
-        "id-274a1c6653c24a208bace113e1123493",
-        "id-36c426f94fdb4cacbcf583f6896d4232",
-        "id-4bd27ebddb6749c299f3553a27dbdc43",
-        "id-b9473fd16288407aa570ef1fefcb6e56",
-        "id-8da5e152bad04b79b35d063800fa1343",
-        "id-93d197f1da8b4fad940330387ea9a797"
-      ]
-    },
-    {
       "source": "Capability",
       "relationship": "Serving",
       "target": "Capability",
@@ -499,6 +471,25 @@
         "id-f75f0d1d0a254ec1b5ea3024ba338628",
         "id-a4238739f82a49318b6cdd3e21856c21",
         "id-acf94d73c4ed4e42a5865f4920988cef"
+      ]
+    },
+    {
+      "source": "ApplicationComponent",
+      "relationship": "Access",
+      "target": "DataObject",
+      "count": 10,
+      "allowed": true,
+      "relationships": [
+        "id-ba37954c9c86400a8b71c5cdb1058441",
+        "id-1a95e061e76a4a16a6b921d503b281d6",
+        "id-c4a4adb63b16424ea40b2762a0598b0b",
+        "id-1ac9ba1451ae4d41a98f0e024640c5ee",
+        "id-274a1c6653c24a208bace113e1123493",
+        "id-36c426f94fdb4cacbcf583f6896d4232",
+        "id-4bd27ebddb6749c299f3553a27dbdc43",
+        "id-b9473fd16288407aa570ef1fefcb6e56",
+        "id-8da5e152bad04b79b35d063800fa1343",
+        "id-93d197f1da8b4fad940330387ea9a797"
       ]
     },
     {
@@ -616,21 +607,6 @@
         "id-4e17f7d791d64629a9a59541c7cb4eb2",
         "id-40ed92f0179d4ec5a52d8fafffe746ba",
         "id-eb0cc63917d34b07850d9da6a6ef9f7c"
-      ]
-    },
-    {
-      "source": "Outcome",
-      "relationship": "Composition",
-      "target": "Outcome",
-      "count": 6,
-      "allowed": true,
-      "relationships": [
-        "id-cf5e86f0565f4ff4a2b8821f4af13e6c",
-        "id-e63d530d966c4c74944ace4beb0d4f33",
-        "id-0169d10f98db447fa43127e004db11cd",
-        "id-f097f2f1304b4273b171eec27c9ba208",
-        "id-20b3bbde1e7848f3a5b9fce080a8a08a",
-        "id-271efb19e9de46829fb7fae9eab858e5"
       ]
     },
     {
@@ -794,18 +770,6 @@
       ]
     },
     {
-      "source": "ApplicationComponent",
-      "relationship": "Realization",
-      "target": "Outcome",
-      "count": 3,
-      "allowed": true,
-      "relationships": [
-        "id-39faa92fef56478eb6edf0d8f9d3c363",
-        "id-85a8bbb9c55747b39ad59180d8ec16e9",
-        "id-53551a84a33145b7856a833b0ac6595b"
-      ]
-    },
-    {
       "source": "Capability",
       "relationship": "Association",
       "target": "BusinessObject",
@@ -941,28 +905,6 @@
     },
     {
       "source": "DataObject",
-      "relationship": "Aggregation",
-      "target": "DataObject",
-      "count": 2,
-      "allowed": true,
-      "relationships": [
-        "id-b94bbb2900d345b3bef61810ecd7e3fe",
-        "id-804f3a8fab754b55b254d7da6fc1ae0c"
-      ]
-    },
-    {
-      "source": "DataObject",
-      "relationship": "Association",
-      "target": "DataObject",
-      "count": 2,
-      "allowed": true,
-      "relationships": [
-        "id-0c20303182ab4dc7b0e35b0a2f9c9c78",
-        "id-bee6e6eb9b854e50afe423e0a675f18f"
-      ]
-    },
-    {
-      "source": "DataObject",
       "relationship": "Specialization",
       "target": "DataObject",
       "count": 2,
@@ -1040,16 +982,6 @@
       "allowed": true,
       "relationships": [
         "id-42a891f6319b4b14a7a7ba21b20a92fc"
-      ]
-    },
-    {
-      "source": "ApplicationFunction",
-      "relationship": "Access",
-      "target": "DataObject",
-      "count": 1,
-      "allowed": true,
-      "relationships": [
-        "id-015bb6e20381471c883cf5603a767283"
       ]
     },
     {
@@ -1214,12 +1146,12 @@
     },
     {
       "source": "DataObject",
-      "relationship": "Association",
-      "target": "Outcome",
+      "relationship": "Aggregation",
+      "target": "DataObject",
       "count": 1,
       "allowed": true,
       "relationships": [
-        "id-d90b8e058eaa41a4ab40620f738ba2c5"
+        "id-804f3a8fab754b55b254d7da6fc1ae0c"
       ]
     },
     {
@@ -1230,6 +1162,16 @@
       "allowed": true,
       "relationships": [
         "id-b253eb2e7f61456b879020c1038f65d8"
+      ]
+    },
+    {
+      "source": "Outcome",
+      "relationship": "Composition",
+      "target": "Outcome",
+      "count": 1,
+      "allowed": true,
+      "relationships": [
+        "id-271efb19e9de46829fb7fae9eab858e5"
       ]
     },
     {

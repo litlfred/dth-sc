@@ -9,29 +9,29 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 798.8)">
 <title>WHO_RA — metamodel in use</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-798.8 2714.87,-798.8 2714.87,4 -4,4"/>
-<g id="clust1" class="cluster">
+<g id="clust1" class="cluster mm&#45;layer&#45;motivation">
 <title>cluster_0</title>
-<path fill="#f7f7f7" stroke="#bbbbbb" d="M437.87,-677.28C437.87,-677.28 1232.87,-677.28 1232.87,-677.28 1238.87,-677.28 1244.87,-683.28 1244.87,-689.28 1244.87,-689.28 1244.87,-774.8 1244.87,-774.8 1244.87,-780.8 1238.87,-786.8 1232.87,-786.8 1232.87,-786.8 437.87,-786.8 437.87,-786.8 431.87,-786.8 425.87,-780.8 425.87,-774.8 425.87,-774.8 425.87,-689.28 425.87,-689.28 425.87,-683.28 431.87,-677.28 437.87,-677.28"/>
+<path fill="#f7f7f7" stroke="#bbbbbb" d="M437.87,-677.28C437.87,-677.28 1356.87,-677.28 1356.87,-677.28 1362.87,-677.28 1368.87,-683.28 1368.87,-689.28 1368.87,-689.28 1368.87,-774.8 1368.87,-774.8 1368.87,-780.8 1362.87,-786.8 1356.87,-786.8 1356.87,-786.8 437.87,-786.8 437.87,-786.8 431.87,-786.8 425.87,-780.8 425.87,-774.8 425.87,-774.8 425.87,-689.28 425.87,-689.28 425.87,-683.28 431.87,-677.28 437.87,-677.28"/>
 <text text-anchor="middle" x="458.93" y="-772.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Motivation</text>
 </g>
-<g id="clust2" class="cluster">
+<g id="clust2" class="cluster mm&#45;layer&#45;strategy">
 <title>cluster_1</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M462.87,-509.96C462.87,-509.96 798.87,-509.96 798.87,-509.96 804.87,-509.96 810.87,-515.96 810.87,-521.96 810.87,-521.96 810.87,-607.48 810.87,-607.48 810.87,-613.48 804.87,-619.48 798.87,-619.48 798.87,-619.48 462.87,-619.48 462.87,-619.48 456.87,-619.48 450.87,-613.48 450.87,-607.48 450.87,-607.48 450.87,-521.96 450.87,-521.96 450.87,-515.96 456.87,-509.96 462.87,-509.96"/>
 <text text-anchor="middle" x="479.35" y="-605.58" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Strategy</text>
 </g>
-<g id="clust3" class="cluster">
+<g id="clust3" class="cluster mm&#45;layer&#45;business">
 <title>cluster_2</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M294.87,-342.64C294.87,-342.64 1556.87,-342.64 1556.87,-342.64 1562.87,-342.64 1568.87,-348.64 1568.87,-354.64 1568.87,-354.64 1568.87,-440.16 1568.87,-440.16 1568.87,-446.16 1562.87,-452.16 1556.87,-452.16 1556.87,-452.16 294.87,-452.16 294.87,-452.16 288.87,-452.16 282.87,-446.16 282.87,-440.16 282.87,-440.16 282.87,-354.64 282.87,-354.64 282.87,-348.64 288.87,-342.64 294.87,-342.64"/>
 <text text-anchor="middle" x="313.18" y="-438.26" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Business</text>
 </g>
-<g id="clust4" class="cluster">
+<g id="clust4" class="cluster mm&#45;layer&#45;application">
 <title>cluster_3</title>
 <path fill="#f7f7f7" stroke="#bbbbbb" d="M104.87,-175.32C104.87,-175.32 2690.87,-175.32 2690.87,-175.32 2696.87,-175.32 2702.87,-181.32 2702.87,-187.32 2702.87,-187.32 2702.87,-272.84 2702.87,-272.84 2702.87,-278.84 2696.87,-284.84 2690.87,-284.84 2690.87,-284.84 104.87,-284.84 104.87,-284.84 98.87,-284.84 92.87,-278.84 92.87,-272.84 92.87,-272.84 92.87,-187.32 92.87,-187.32 92.87,-181.32 98.87,-175.32 104.87,-175.32"/>
 <text text-anchor="middle" x="127.77" y="-270.94" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Application</text>
 </g>
-<g id="clust5" class="cluster">
+<g id="clust5" class="cluster mm&#45;layer&#45;technology">
 <title>cluster_4</title>
-<path fill="#f7f7f7" stroke="#bbbbbb" d="M1807.87,-8C1807.87,-8 1995.87,-8 1995.87,-8 2001.87,-8 2007.87,-14 2007.87,-20 2007.87,-20 2007.87,-105.52 2007.87,-105.52 2007.87,-111.52 2001.87,-117.52 1995.87,-117.52 1995.87,-117.52 1807.87,-117.52 1807.87,-117.52 1801.87,-117.52 1795.87,-111.52 1795.87,-105.52 1795.87,-105.52 1795.87,-20 1795.87,-20 1795.87,-14 1801.87,-8 1807.87,-8"/>
+<path fill="#f7f7f7" stroke="#bbbbbb" d="M1807.87,-8C1807.87,-8 2120.87,-8 2120.87,-8 2126.87,-8 2132.87,-14 2132.87,-20 2132.87,-20 2132.87,-105.52 2132.87,-105.52 2132.87,-111.52 2126.87,-117.52 2120.87,-117.52 2120.87,-117.52 1807.87,-117.52 1807.87,-117.52 1801.87,-117.52 1795.87,-111.52 1795.87,-105.52 1795.87,-105.52 1795.87,-20 1795.87,-20 1795.87,-14 1801.87,-8 1807.87,-8"/>
 <text text-anchor="middle" x="1832.3" y="-103.62" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#666666">Technology</text>
 </g>
 <!-- Goal -->
@@ -40,18 +40,18 @@
 <g id="a_node1"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Goal" xlink:title="Goal: its elements" target="_top">
 <polygon fill="#ccccff" stroke="black" points="663.5,-736.4 434.23,-736.4 434.23,-685.28 663.5,-685.28 663.5,-736.4"/>
 <text text-anchor="middle" x="548.87" y="-720.74" font-family="Helvetica,sans-Serif" font-size="11.00">Goal</text>
-<text text-anchor="middle" x="548.87" y="-707.54" font-family="Helvetica,sans-Serif" font-size="11.00">27 element(s)</text>
+<text text-anchor="middle" x="548.87" y="-707.54" font-family="Helvetica,sans-Serif" font-size="11.00">32 element(s)</text>
 <text text-anchor="middle" x="548.87" y="-694.34" font-family="Helvetica,sans-Serif" font-size="11.00">(to itself: aggregates ×13, composed of ×4)</text>
 </a>
 </g>
 </g>
 <!-- Capability -->
-<g id="node5" class="node mm&#45;layer&#45;strategy">
+<g id="node6" class="node mm&#45;layer&#45;strategy">
 <title>Capability</title>
-<g id="a_node5"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Capability" xlink:title="Capability: its elements" target="_top">
+<g id="a_node6"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Capability" xlink:title="Capability: its elements" target="_top">
 <polygon fill="#f5deaa" stroke="black" points="639.33,-569.08 458.4,-569.08 458.4,-517.96 639.33,-517.96 639.33,-569.08"/>
 <text text-anchor="middle" x="548.87" y="-553.42" font-family="Helvetica,sans-Serif" font-size="11.00">Capability</text>
-<text text-anchor="middle" x="548.87" y="-540.22" font-family="Helvetica,sans-Serif" font-size="11.00">28 element(s)</text>
+<text text-anchor="middle" x="548.87" y="-540.22" font-family="Helvetica,sans-Serif" font-size="11.00">33 element(s)</text>
 <text text-anchor="middle" x="548.87" y="-527.02" font-family="Helvetica,sans-Serif" font-size="11.00">(to itself: serves ×11, flows to ×1)</text>
 </a>
 </g>
@@ -61,30 +61,40 @@
 <g id="node2" class="node mm&#45;layer&#45;motivation">
 <title>Outcome</title>
 <g id="a_node2"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Outcome" xlink:title="Outcome: its elements" target="_top">
-<polygon fill="#ccccff" stroke="black" points="1236.69,-736.4 1019.04,-736.4 1019.04,-685.28 1236.69,-685.28 1236.69,-736.4"/>
-<text text-anchor="middle" x="1127.87" y="-720.74" font-family="Helvetica,sans-Serif" font-size="11.00">Outcome</text>
-<text text-anchor="middle" x="1127.87" y="-707.54" font-family="Helvetica,sans-Serif" font-size="11.00">4 element(s)</text>
-<text text-anchor="middle" x="1127.87" y="-694.34" font-family="Helvetica,sans-Serif" font-size="11.00">(to itself: composed of ×1, influences ×1)</text>
+<polygon fill="#ccccff" stroke="black" points="1360.69,-736.4 1143.04,-736.4 1143.04,-685.28 1360.69,-685.28 1360.69,-736.4"/>
+<text text-anchor="middle" x="1251.87" y="-720.74" font-family="Helvetica,sans-Serif" font-size="11.00">Outcome</text>
+<text text-anchor="middle" x="1251.87" y="-707.54" font-family="Helvetica,sans-Serif" font-size="11.00">4 element(s)</text>
+<text text-anchor="middle" x="1251.87" y="-694.34" font-family="Helvetica,sans-Serif" font-size="11.00">(to itself: composed of ×1, influences ×1)</text>
+</a>
+</g>
+</g>
+<!-- Principle -->
+<g id="node3" class="node mm&#45;layer&#45;motivation">
+<title>Principle</title>
+<g id="a_node3"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Principle" xlink:title="Principle: its elements" target="_top">
+<polygon fill="#ccccff" stroke="black" points="787.51,-729.8 706.22,-729.8 706.22,-691.88 787.51,-691.88 787.51,-729.8"/>
+<text text-anchor="middle" x="746.87" y="-714.14" font-family="Helvetica,sans-Serif" font-size="11.00">Principle</text>
+<text text-anchor="middle" x="746.87" y="-700.94" font-family="Helvetica,sans-Serif" font-size="11.00">3 element(s)</text>
 </a>
 </g>
 </g>
 <!-- Stakeholder -->
-<g id="node3" class="node mm&#45;layer&#45;motivation">
+<g id="node4" class="node mm&#45;layer&#45;motivation">
 <title>Stakeholder</title>
-<g id="a_node3"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Stakeholder" xlink:title="Stakeholder: its elements" target="_top">
-<polygon fill="#ccccff" stroke="black" points="793.57,-729.8 706.16,-729.8 706.16,-691.88 793.57,-691.88 793.57,-729.8"/>
-<text text-anchor="middle" x="749.87" y="-714.14" font-family="Helvetica,sans-Serif" font-size="11.00">Stakeholder</text>
-<text text-anchor="middle" x="749.87" y="-700.94" font-family="Helvetica,sans-Serif" font-size="11.00">10 element(s)</text>
+<g id="a_node4"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Stakeholder" xlink:title="Stakeholder: its elements" target="_top">
+<polygon fill="#ccccff" stroke="black" points="917.57,-729.8 830.16,-729.8 830.16,-691.88 917.57,-691.88 917.57,-729.8"/>
+<text text-anchor="middle" x="873.87" y="-714.14" font-family="Helvetica,sans-Serif" font-size="11.00">Stakeholder</text>
+<text text-anchor="middle" x="873.87" y="-700.94" font-family="Helvetica,sans-Serif" font-size="11.00">13 element(s)</text>
 </a>
 </g>
 </g>
 <!-- Value -->
-<g id="node4" class="node mm&#45;layer&#45;motivation">
+<g id="node5" class="node mm&#45;layer&#45;motivation">
 <title>Value</title>
-<g id="a_node4"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Value" xlink:title="Value: its elements" target="_top">
-<polygon fill="#ccccff" stroke="black" points="923.57,-729.8 836.16,-729.8 836.16,-691.88 923.57,-691.88 923.57,-729.8"/>
-<text text-anchor="middle" x="879.87" y="-714.14" font-family="Helvetica,sans-Serif" font-size="11.00">Value</text>
-<text text-anchor="middle" x="879.87" y="-700.94" font-family="Helvetica,sans-Serif" font-size="11.00">12 element(s)</text>
+<g id="a_node5"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Value" xlink:title="Value: its elements" target="_top">
+<polygon fill="#ccccff" stroke="black" points="1047.57,-729.8 960.16,-729.8 960.16,-691.88 1047.57,-691.88 1047.57,-729.8"/>
+<text text-anchor="middle" x="1003.87" y="-714.14" font-family="Helvetica,sans-Serif" font-size="11.00">Value</text>
+<text text-anchor="middle" x="1003.87" y="-700.94" font-family="Helvetica,sans-Serif" font-size="11.00">12 element(s)</text>
 </a>
 </g>
 </g>
@@ -92,12 +102,12 @@
 <g id="edge13" class="edge mm&#45;cat&#45;dependency mm&#45;from&#45;motivation mm&#45;to&#45;motivation">
 <title>Value&#45;&gt;Outcome</title>
 <g id="a_edge13"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#pattern-Value-Outcome" xlink:title="Value → Outcome: its relationships" target="_top">
-<path fill="none" stroke="#555555" stroke-dasharray="5,2" d="M923.92,-710.84C947.47,-710.84 977.73,-710.84 1007.7,-710.84"/>
-<polygon fill="#555555" stroke="#555555" points="1017.49,-710.84 1007.49,-715.34 1013.71,-710.84 1007.49,-710.84 1007.49,-710.84 1007.49,-710.84 1013.71,-710.84 1007.49,-706.34 1017.49,-710.84"/>
+<path fill="none" stroke="#555555" stroke-dasharray="5,2" d="M1047.92,-710.84C1071.47,-710.84 1101.73,-710.84 1131.7,-710.84"/>
+<polygon fill="#555555" stroke="#555555" points="1141.49,-710.84 1131.49,-715.34 1137.71,-710.84 1131.49,-710.84 1131.49,-710.84 1131.49,-710.84 1137.71,-710.84 1131.49,-706.34 1141.49,-710.84"/>
 </a>
 </g>
 <g id="a_edge13&#45;label"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#pattern-Value-Outcome" xlink:title="influences ×5" target="_top">
-<text text-anchor="middle" x="971.31" y="-716.54" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#333333">influences ×5</text>
+<text text-anchor="middle" x="1095.31" y="-716.54" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#333333">influences ×5</text>
 </a>
 </g>
 </g>
@@ -118,19 +128,19 @@
 <g id="edge11" class="edge mm&#45;cat&#45;structural mm&#45;from&#45;strategy mm&#45;to&#45;motivation">
 <title>Capability&#45;&gt;Outcome</title>
 <g id="a_edge11"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#pattern-Capability-Outcome" xlink:title="Capability → Outcome: its relationships" target="_top">
-<path fill="none" stroke="#555555" stroke-dasharray="5,2" d="M578.82,-569.42C600.36,-586.07 630.79,-607.1 660.87,-619.48 676.97,-626.11 874.78,-663.27 1007.73,-687.82"/>
-<polygon fill="none" stroke="#555555" points="1006.83,-691.21 1017.3,-689.58 1008.1,-684.33 1006.83,-691.21"/>
+<path fill="none" stroke="#555555" stroke-dasharray="5,2" d="M578.17,-569.54C599.64,-586.46 630.27,-607.78 660.87,-619.48 831.93,-684.9 888.01,-648.39 1068.87,-677.28 1089.12,-680.52 1110.61,-684.15 1131.46,-687.79"/>
+<polygon fill="none" stroke="#555555" points="1130.68,-691.21 1141.13,-689.49 1131.89,-684.31 1130.68,-691.21"/>
 </a>
 </g>
 <g id="a_edge11&#45;label"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#pattern-Capability-Outcome" xlink:title="realises ×6" target="_top">
-<text text-anchor="middle" x="760.57" y="-630.18" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#333333">realises ×6</text>
+<text text-anchor="middle" x="730.73" y="-630.18" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#333333">realises ×6</text>
 </a>
 </g>
 </g>
 <!-- BusinessCollaboration -->
-<g id="node7" class="node mm&#45;layer&#45;business">
+<g id="node8" class="node mm&#45;layer&#45;business">
 <title>BusinessCollaboration</title>
-<g id="a_node7"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessCollaboration" xlink:title="Business Collaboration: its elements" target="_top">
+<g id="a_node8"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessCollaboration" xlink:title="Business Collaboration: its elements" target="_top">
 <polygon fill="#ffffb5" stroke="black" points="966.2,-395.16 833.53,-395.16 833.53,-357.24 966.2,-357.24 966.2,-395.16"/>
 <text text-anchor="middle" x="899.87" y="-379.5" font-family="Helvetica,sans-Serif" font-size="11.00">Business Collaboration</text>
 <text text-anchor="middle" x="899.87" y="-366.3" font-family="Helvetica,sans-Serif" font-size="11.00">1 element(s)</text>
@@ -139,9 +149,9 @@
 </g>
 <!-- Capability&#45;&gt;BusinessCollaboration -->
 <!-- ValueStream -->
-<g id="node6" class="node mm&#45;layer&#45;strategy">
+<g id="node7" class="node mm&#45;layer&#45;strategy">
 <title>ValueStream</title>
-<g id="a_node6"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ValueStream" xlink:title="Value Stream: its elements" target="_top">
+<g id="a_node7"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ValueStream" xlink:title="Value Stream: its elements" target="_top">
 <polygon fill="#f5deaa" stroke="black" points="803.07,-569.08 682.66,-569.08 682.66,-517.96 803.07,-517.96 803.07,-569.08"/>
 <text text-anchor="middle" x="742.87" y="-553.42" font-family="Helvetica,sans-Serif" font-size="11.00">Value Stream</text>
 <text text-anchor="middle" x="742.87" y="-540.22" font-family="Helvetica,sans-Serif" font-size="11.00">3 element(s)</text>
@@ -150,21 +160,21 @@
 </g>
 </g>
 <!-- ApplicationComponent -->
-<g id="node14" class="node mm&#45;layer&#45;application">
+<g id="node15" class="node mm&#45;layer&#45;application">
 <title>ApplicationComponent</title>
-<g id="a_node14"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationComponent" xlink:title="Application Component: its elements" target="_top">
+<g id="a_node15"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationComponent" xlink:title="Application Component: its elements" target="_top">
 <polygon fill="#b5ffff" stroke="black" points="2067.23,-234.44 1736.5,-234.44 1736.5,-183.32 2067.23,-183.32 2067.23,-234.44"/>
 <text text-anchor="middle" x="1901.87" y="-218.78" font-family="Helvetica,sans-Serif" font-size="11.00">Application Component</text>
-<text text-anchor="middle" x="1901.87" y="-205.58" font-family="Helvetica,sans-Serif" font-size="11.00">47 element(s)</text>
+<text text-anchor="middle" x="1901.87" y="-205.58" font-family="Helvetica,sans-Serif" font-size="11.00">68 element(s)</text>
 <text text-anchor="middle" x="1901.87" y="-192.38" font-family="Helvetica,sans-Serif" font-size="11.00">(to itself: flows to ×15, serves ×10, realises ×5, composed of ×1)</text>
 </a>
 </g>
 </g>
 <!-- BusinessCollaboration&#45;&gt;ApplicationComponent -->
 <!-- BusinessFunction -->
-<g id="node8" class="node mm&#45;layer&#45;business">
+<g id="node9" class="node mm&#45;layer&#45;business">
 <title>BusinessFunction</title>
-<g id="a_node8"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessFunction" xlink:title="Business Function: its elements" target="_top">
+<g id="a_node9"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessFunction" xlink:title="Business Function: its elements" target="_top">
 <polygon fill="#ffffb5" stroke="black" points="400.89,-395.16 290.85,-395.16 290.85,-357.24 400.89,-357.24 400.89,-395.16"/>
 <text text-anchor="middle" x="345.87" y="-379.5" font-family="Helvetica,sans-Serif" font-size="11.00">Business Function</text>
 <text text-anchor="middle" x="345.87" y="-366.3" font-family="Helvetica,sans-Serif" font-size="11.00">13 element(s)</text>
@@ -185,9 +195,9 @@
 </g>
 </g>
 <!-- BusinessProcess -->
-<g id="node10" class="node mm&#45;layer&#45;business">
+<g id="node11" class="node mm&#45;layer&#45;business">
 <title>BusinessProcess</title>
-<g id="a_node10"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessProcess" xlink:title="Business Process: its elements" target="_top">
+<g id="a_node11"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessProcess" xlink:title="Business Process: its elements" target="_top">
 <polygon fill="#ffffb5" stroke="black" points="790.66,-395.16 683.07,-395.16 683.07,-357.24 790.66,-357.24 790.66,-395.16"/>
 <text text-anchor="middle" x="736.87" y="-379.5" font-family="Helvetica,sans-Serif" font-size="11.00">Business Process</text>
 <text text-anchor="middle" x="736.87" y="-366.3" font-family="Helvetica,sans-Serif" font-size="11.00">11 element(s)</text>
@@ -208,9 +218,9 @@
 </g>
 </g>
 <!-- ApplicationFunction -->
-<g id="node15" class="node mm&#45;layer&#45;application">
+<g id="node16" class="node mm&#45;layer&#45;application">
 <title>ApplicationFunction</title>
-<g id="a_node15"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationFunction" xlink:title="Application Function: its elements" target="_top">
+<g id="a_node16"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationFunction" xlink:title="Application Function: its elements" target="_top">
 <polygon fill="#b5ffff" stroke="black" points="220.47,-227.84 101.26,-227.84 101.26,-189.92 220.47,-189.92 220.47,-227.84"/>
 <text text-anchor="middle" x="160.87" y="-212.18" font-family="Helvetica,sans-Serif" font-size="11.00">Application Function</text>
 <text text-anchor="middle" x="160.87" y="-198.98" font-family="Helvetica,sans-Serif" font-size="11.00">10 element(s)</text>
@@ -231,9 +241,9 @@
 </g>
 </g>
 <!-- ApplicationService -->
-<g id="node19" class="node mm&#45;layer&#45;application">
+<g id="node20" class="node mm&#45;layer&#45;application">
 <title>ApplicationService</title>
-<g id="a_node19"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationService" xlink:title="Application Service: its elements" target="_top">
+<g id="a_node20"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationService" xlink:title="Application Service: its elements" target="_top">
 <polygon fill="#b5ffff" stroke="black" points="520.85,-234.44 306.88,-234.44 306.88,-183.32 520.85,-183.32 520.85,-234.44"/>
 <text text-anchor="middle" x="413.87" y="-218.78" font-family="Helvetica,sans-Serif" font-size="11.00">Application Service</text>
 <text text-anchor="middle" x="413.87" y="-205.58" font-family="Helvetica,sans-Serif" font-size="11.00">19 element(s)</text>
@@ -255,9 +265,9 @@
 </g>
 </g>
 <!-- BusinessObject -->
-<g id="node9" class="node mm&#45;layer&#45;business">
+<g id="node10" class="node mm&#45;layer&#45;business">
 <title>BusinessObject</title>
-<g id="a_node9"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessObject" xlink:title="Business Object: its elements" target="_top">
+<g id="a_node10"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessObject" xlink:title="Business Object: its elements" target="_top">
 <polygon fill="#ffffb5" stroke="black" points="1560.82,-401.76 1338.91,-401.76 1338.91,-350.64 1560.82,-350.64 1560.82,-401.76"/>
 <text text-anchor="middle" x="1449.87" y="-386.1" font-family="Helvetica,sans-Serif" font-size="11.00">Business Object</text>
 <text text-anchor="middle" x="1449.87" y="-372.9" font-family="Helvetica,sans-Serif" font-size="11.00">13 element(s)</text>
@@ -266,9 +276,9 @@
 </g>
 </g>
 <!-- ApplicationInteraction -->
-<g id="node16" class="node mm&#45;layer&#45;application">
+<g id="node17" class="node mm&#45;layer&#45;application">
 <title>ApplicationInteraction</title>
-<g id="a_node16"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationInteraction" xlink:title="Application Interaction: its elements" target="_top">
+<g id="a_node17"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationInteraction" xlink:title="Application Interaction: its elements" target="_top">
 <polygon fill="#b5ffff" stroke="black" points="1635.06,-227.84 1506.67,-227.84 1506.67,-189.92 1635.06,-189.92 1635.06,-227.84"/>
 <text text-anchor="middle" x="1570.87" y="-212.18" font-family="Helvetica,sans-Serif" font-size="11.00">Application Interaction</text>
 <text text-anchor="middle" x="1570.87" y="-198.98" font-family="Helvetica,sans-Serif" font-size="11.00">3 element(s)</text>
@@ -289,9 +299,9 @@
 </g>
 </g>
 <!-- BusinessRole -->
-<g id="node11" class="node mm&#45;layer&#45;business">
+<g id="node12" class="node mm&#45;layer&#45;business">
 <title>BusinessRole</title>
-<g id="a_node11"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessRole" xlink:title="Business Role: its elements" target="_top">
+<g id="a_node12"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessRole" xlink:title="Business Role: its elements" target="_top">
 <polygon fill="#ffffb5" stroke="black" points="581.63,-401.76 444.1,-401.76 444.1,-350.64 581.63,-350.64 581.63,-401.76"/>
 <text text-anchor="middle" x="512.87" y="-386.1" font-family="Helvetica,sans-Serif" font-size="11.00">Business Role</text>
 <text text-anchor="middle" x="512.87" y="-372.9" font-family="Helvetica,sans-Serif" font-size="11.00">26 element(s)</text>
@@ -314,9 +324,9 @@
 </g>
 </g>
 <!-- BusinessService -->
-<g id="node12" class="node mm&#45;layer&#45;business">
+<g id="node13" class="node mm&#45;layer&#45;business">
 <title>BusinessService</title>
-<g id="a_node12"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessService" xlink:title="Business Service: its elements" target="_top">
+<g id="a_node13"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-BusinessService" xlink:title="Business Service: its elements" target="_top">
 <polygon fill="#ffffb5" stroke="black" points="1114.13,-395.16 1009.6,-395.16 1009.6,-357.24 1114.13,-357.24 1114.13,-395.16"/>
 <text text-anchor="middle" x="1061.87" y="-379.5" font-family="Helvetica,sans-Serif" font-size="11.00">Business Service</text>
 <text text-anchor="middle" x="1061.87" y="-366.3" font-family="Helvetica,sans-Serif" font-size="11.00">6 element(s)</text>
@@ -324,9 +334,9 @@
 </g>
 </g>
 <!-- Product -->
-<g id="node13" class="node mm&#45;layer&#45;business">
+<g id="node14" class="node mm&#45;layer&#45;business">
 <title>Product</title>
-<g id="a_node13"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Product" xlink:title="Product: its elements" target="_top">
+<g id="a_node14"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Product" xlink:title="Product: its elements" target="_top">
 <polygon fill="#ffffb5" stroke="black" points="1238.51,-395.16 1157.22,-395.16 1157.22,-357.24 1238.51,-357.24 1238.51,-395.16"/>
 <text text-anchor="middle" x="1197.87" y="-379.5" font-family="Helvetica,sans-Serif" font-size="11.00">Product</text>
 <text text-anchor="middle" x="1197.87" y="-366.3" font-family="Helvetica,sans-Serif" font-size="11.00">1 element(s)</text>
@@ -360,9 +370,9 @@
 </g>
 </g>
 <!-- DataObject -->
-<g id="node20" class="node mm&#45;layer&#45;application">
+<g id="node21" class="node mm&#45;layer&#45;application">
 <title>DataObject</title>
-<g id="a_node20"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-DataObject" xlink:title="Data Object: its elements" target="_top">
+<g id="a_node21"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-DataObject" xlink:title="Data Object: its elements" target="_top">
 <polygon fill="#b5ffff" stroke="black" points="2378.85,-234.44 2164.88,-234.44 2164.88,-183.32 2378.85,-183.32 2378.85,-234.44"/>
 <text text-anchor="middle" x="2271.87" y="-218.78" font-family="Helvetica,sans-Serif" font-size="11.00">Data Object</text>
 <text text-anchor="middle" x="2271.87" y="-205.58" font-family="Helvetica,sans-Serif" font-size="11.00">19 element(s)</text>
@@ -384,9 +394,9 @@
 </g>
 </g>
 <!-- Artifact -->
-<g id="node21" class="node mm&#45;layer&#45;technology">
+<g id="node22" class="node mm&#45;layer&#45;technology">
 <title>Artifact</title>
-<g id="a_node21"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Artifact" xlink:title="Artifact: its elements" target="_top">
+<g id="a_node22"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Artifact" xlink:title="Artifact: its elements" target="_top">
 <polygon fill="#c9e7b7" stroke="black" points="2000.28,-67.12 1803.45,-67.12 1803.45,-16 2000.28,-16 2000.28,-67.12"/>
 <text text-anchor="middle" x="1901.87" y="-51.46" font-family="Helvetica,sans-Serif" font-size="11.00">Artifact</text>
 <text text-anchor="middle" x="1901.87" y="-38.26" font-family="Helvetica,sans-Serif" font-size="11.00">7 element(s)</text>
@@ -475,9 +485,9 @@
 </g>
 </g>
 <!-- ApplicationInterface -->
-<g id="node17" class="node mm&#45;layer&#45;application">
+<g id="node18" class="node mm&#45;layer&#45;application">
 <title>ApplicationInterface</title>
-<g id="a_node17"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationInterface" xlink:title="Application Interface: its elements" target="_top">
+<g id="a_node18"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationInterface" xlink:title="Application Interface: its elements" target="_top">
 <polygon fill="#b5ffff" stroke="black" points="1463.78,-227.84 1343.95,-227.84 1343.95,-189.92 1463.78,-189.92 1463.78,-227.84"/>
 <text text-anchor="middle" x="1403.87" y="-212.18" font-family="Helvetica,sans-Serif" font-size="11.00">Application Interface</text>
 <text text-anchor="middle" x="1403.87" y="-198.98" font-family="Helvetica,sans-Serif" font-size="11.00">1 element(s)</text>
@@ -564,9 +574,9 @@
 </g>
 </g>
 <!-- ApplicationProcess -->
-<g id="node18" class="node mm&#45;layer&#45;application">
+<g id="node19" class="node mm&#45;layer&#45;application">
 <title>ApplicationProcess</title>
-<g id="a_node18"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationProcess" xlink:title="Application Process: its elements" target="_top">
+<g id="a_node19"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-ApplicationProcess" xlink:title="Application Process: its elements" target="_top">
 <polygon fill="#b5ffff" stroke="black" points="2694.44,-234.44 2471.29,-234.44 2471.29,-183.32 2694.44,-183.32 2694.44,-234.44"/>
 <text text-anchor="middle" x="2582.87" y="-218.78" font-family="Helvetica,sans-Serif" font-size="11.00">Application Process</text>
 <text text-anchor="middle" x="2582.87" y="-205.58" font-family="Helvetica,sans-Serif" font-size="11.00">5 element(s)</text>
@@ -669,12 +679,22 @@
 <g id="edge17" class="edge mm&#45;cat&#45;structural mm&#45;from&#45;technology mm&#45;to&#45;application">
 <title>Artifact&#45;&gt;DataObject</title>
 <g id="a_edge17"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#pattern-Artifact-DataObject" xlink:title="Artifact → Data Object: its relationships" target="_top">
-<path fill="none" stroke="#555555" stroke-dasharray="5,2" d="M1957.81,-67.56C2024.36,-97.29 2135.3,-146.86 2205.95,-178.43"/>
-<polygon fill="none" stroke="#555555" points="2204.13,-181.45 2214.69,-182.33 2206.99,-175.06 2204.13,-181.45"/>
+<path fill="none" stroke="#555555" stroke-dasharray="5,2" d="M1937.48,-67.6C1960.77,-83.26 1992.26,-103.13 2021.87,-117.52 2072.03,-141.91 2130.55,-163.41 2178.35,-179.31"/>
+<polygon fill="none" stroke="#555555" points="2176.98,-182.55 2187.57,-182.35 2179.17,-175.9 2176.98,-182.55"/>
 </a>
 </g>
 <g id="a_edge17&#45;label"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#pattern-Artifact-DataObject" xlink:title="realises ×4" target="_top">
-<text text-anchor="middle" x="2130.78" y="-128.22" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#333333">realises ×4</text>
+<text text-anchor="middle" x="2083.18" y="-128.22" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#333333">realises ×4</text>
+</a>
+</g>
+</g>
+<!-- Node -->
+<g id="node23" class="node mm&#45;layer&#45;technology">
+<title>Node</title>
+<g id="a_node23"><a xlink:href="../../en/dpi-h-ra/archimate/0.3.0-draft.1/metamodel/#type-Node" xlink:title="Node: its elements" target="_top">
+<polygon fill="#c9e7b7" stroke="black" points="2124.51,-60.52 2043.22,-60.52 2043.22,-22.6 2124.51,-22.6 2124.51,-60.52"/>
+<text text-anchor="middle" x="2083.87" y="-44.86" font-family="Helvetica,sans-Serif" font-size="11.00">Node</text>
+<text text-anchor="middle" x="2083.87" y="-31.66" font-family="Helvetica,sans-Serif" font-size="11.00">5 element(s)</text>
 </a>
 </g>
 </g>

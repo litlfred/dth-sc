@@ -11,7 +11,7 @@
 (function () {
   var row = document.getElementById("fa-navbar-row");
   if (row && row.getAttribute("data-fa-row-src") === "harness-data" && !row.textContent) {
-    row.textContent = "{\"icons\":[\"close\",\"todos\",\"beans\",\"fsh-guts\",\"qr\",\"launcher\"],\"hrefs\":{},\"notes\":{\"beans\":\"no viewer yet\",\"todos\":\"dth-sc's todos graph is not published on this site\"},\"folders\":[{\"kind\":\"beans\",\"label\":\"Beans\",\"note\":\"no viewer yet\"},{\"kind\":\"folio\",\"label\":\"Folio\",\"path\":\"/en/dth-sc/\"},{\"kind\":\"glossary\",\"label\":\"Glossary\",\"note\":\"no viewer yet\"},{\"kind\":\"todos\",\"label\":\"Todos\",\"note\":\"dth-sc's todos graph is not published on this site\"},{\"kind\":\"uploads\",\"label\":\"Uploads\",\"note\":\"dth-sc's uploads graph is not published on this site\"}]}";
+    row.textContent = "{\"icons\":[\"close\",\"todos\",\"beans\",\"fsh-guts\",\"qr\",\"launcher\"],\"hrefs\":{},\"notes\":{\"todos\":\"dth-sc's todos graph is not published on this site\",\"beans\":\"dth-sc's beans graph is not published on this site\"},\"folders\":[{\"kind\":\"archimate\",\"label\":\"Archimate\",\"note\":\"no viewer yet\"},{\"kind\":\"beans\",\"label\":\"Plans and work\",\"note\":\"dth-sc's beans graph is not published on this site\"},{\"kind\":\"folio\",\"label\":\"Folio\",\"path\":\"/en/dth-sc/\"},{\"kind\":\"glossary\",\"label\":\"Glossary\",\"note\":\"no viewer yet\"},{\"kind\":\"todos\",\"label\":\"Todos\",\"note\":\"dth-sc's todos graph is not published on this site\"},{\"kind\":\"uploads\",\"label\":\"Uploads\",\"note\":\"dth-sc's uploads graph is not published on this site\"}]}";
     row.removeAttribute("data-fa-row-src");
   }
   var tiles = document.querySelector('meta[name="fa-tiles"][data-fa-src="harness-data"]');

@@ -1,6 +1,6 @@
 {
   "$schema": "folio-translation-status/v1",
-  "changedAt": "2026-10-31",
+  "changedAt": "2026-11-10",
   "scope": "cat-harness/translations",
   "tile": {},
   "page": "en/cat-harness/translation-status/index.md",
@@ -15,30 +15,30 @@
       "files": [
         {
           "path": "concepts/agentic-harness.po",
-          "entries": 218,
-          "translated": 218,
+          "entries": 164,
+          "translated": 164,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/architecture.po",
-          "entries": 60,
-          "translated": 60,
+          "entries": 24,
+          "translated": 24,
           "fuzzy": 0,
           "untranslated": 0,
           "official": "no"
         },
         {
           "path": "concepts/content-types.po",
-          "entries": 28,
-          "translated": 28,
+          "entries": 18,
+          "translated": 18,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/skills.po",
-          "entries": 133,
-          "translated": 133,
+          "entries": 83,
+          "translated": 83,
           "fuzzy": 0,
           "untranslated": 0,
           "official": "no"
@@ -66,15 +66,15 @@
         },
         {
           "path": "guides/agent-onboarding.po",
-          "entries": 68,
-          "translated": 68,
+          "entries": 40,
+          "translated": 40,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "guides/beans-and-todos.po",
-          "entries": 66,
-          "translated": 66,
+          "entries": 35,
+          "translated": 35,
           "fuzzy": 0,
           "untranslated": 0
         },
@@ -95,38 +95,38 @@
         },
         {
           "path": "start/accessibility.po",
-          "entries": 117,
-          "translated": 117,
+          "entries": 98,
+          "translated": 98,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/contributing.po",
-          "entries": 16,
-          "translated": 16,
+          "entries": 6,
+          "translated": 6,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/getting-started.po",
-          "entries": 142,
-          "translated": 142,
+          "entries": 92,
+          "translated": 92,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/installation.po",
-          "entries": 57,
-          "translated": 55,
-          "fuzzy": 2,
+          "entries": 30,
+          "translated": 30,
+          "fuzzy": 0,
           "untranslated": 0
         }
       ],
-      "templates": 93,
+      "templates": 109,
       "catalogues": 15,
-      "entries": 1051,
-      "translated": 1000,
-      "fuzzy": 2,
+      "entries": 736,
+      "translated": 687,
+      "fuzzy": 0,
       "untranslated": 49,
       "unreadable": []
     },
@@ -140,29 +140,29 @@
       "files": [
         {
           "path": "concepts/agentic-harness.po",
-          "entries": 218,
-          "translated": 218,
+          "entries": 164,
+          "translated": 164,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/architecture.po",
-          "entries": 59,
-          "translated": 59,
+          "entries": 24,
+          "translated": 24,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/content-types.po",
-          "entries": 28,
-          "translated": 28,
+          "entries": 18,
+          "translated": 18,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/skills.po",
-          "entries": 131,
-          "translated": 131,
+          "entries": 83,
+          "translated": 83,
           "fuzzy": 0,
           "untranslated": 0
         },
@@ -189,16 +189,16 @@
         },
         {
           "path": "guides/agent-onboarding.po",
-          "entries": 80,
-          "translated": 80,
+          "entries": 41,
+          "translated": 41,
           "fuzzy": 0,
           "untranslated": 0,
           "official": "no"
         },
         {
           "path": "guides/beans-and-todos.po",
-          "entries": 66,
-          "translated": 66,
+          "entries": 35,
+          "translated": 35,
           "fuzzy": 0,
           "untranslated": 0
         },
@@ -219,38 +219,38 @@
         },
         {
           "path": "start/accessibility.po",
-          "entries": 117,
-          "translated": 117,
+          "entries": 98,
+          "translated": 98,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/contributing.po",
-          "entries": 16,
-          "translated": 16,
+          "entries": 6,
+          "translated": 6,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/getting-started.po",
-          "entries": 142,
-          "translated": 142,
+          "entries": 92,
+          "translated": 92,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/installation.po",
-          "entries": 57,
-          "translated": 55,
-          "fuzzy": 2,
+          "entries": 30,
+          "translated": 30,
+          "fuzzy": 0,
           "untranslated": 0
         }
       ],
-      "templates": 94,
+      "templates": 110,
       "catalogues": 15,
-      "entries": 1060,
-      "translated": 1009,
-      "fuzzy": 2,
+      "entries": 737,
+      "translated": 688,
+      "fuzzy": 0,
       "untranslated": 49,
       "unreadable": []
     },
@@ -264,29 +264,29 @@
       "files": [
         {
           "path": "concepts/agentic-harness.po",
-          "entries": 218,
-          "translated": 218,
+          "entries": 164,
+          "translated": 164,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/architecture.po",
-          "entries": 59,
-          "translated": 59,
+          "entries": 24,
+          "translated": 24,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/content-types.po",
-          "entries": 28,
-          "translated": 28,
+          "entries": 18,
+          "translated": 18,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/skills.po",
-          "entries": 131,
-          "translated": 131,
+          "entries": 83,
+          "translated": 83,
           "fuzzy": 0,
           "untranslated": 0
         },
@@ -313,15 +313,15 @@
         },
         {
           "path": "guides/agent-onboarding.po",
-          "entries": 74,
-          "translated": 18,
+          "entries": 72,
+          "translated": 72,
           "fuzzy": 0,
-          "untranslated": 56
+          "untranslated": 0
         },
         {
           "path": "guides/beans-and-todos.po",
-          "entries": 66,
-          "translated": 66,
+          "entries": 35,
+          "translated": 35,
           "fuzzy": 0,
           "untranslated": 0
         },
@@ -349,39 +349,39 @@
         },
         {
           "path": "start/accessibility.po",
-          "entries": 117,
-          "translated": 117,
+          "entries": 98,
+          "translated": 98,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/contributing.po",
-          "entries": 16,
-          "translated": 16,
+          "entries": 6,
+          "translated": 6,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/getting-started.po",
-          "entries": 142,
-          "translated": 142,
+          "entries": 92,
+          "translated": 92,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/installation.po",
-          "entries": 57,
-          "translated": 55,
-          "fuzzy": 2,
+          "entries": 30,
+          "translated": 30,
+          "fuzzy": 0,
           "untranslated": 0
         }
       ],
-      "templates": 96,
+      "templates": 112,
       "catalogues": 16,
-      "entries": 1055,
-      "translated": 948,
-      "fuzzy": 2,
-      "untranslated": 105,
+      "entries": 769,
+      "translated": 720,
+      "fuzzy": 0,
+      "untranslated": 49,
       "unreadable": []
     },
     {
@@ -394,29 +394,29 @@
       "files": [
         {
           "path": "concepts/agentic-harness.po",
-          "entries": 218,
-          "translated": 218,
+          "entries": 164,
+          "translated": 164,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/architecture.po",
-          "entries": 59,
-          "translated": 59,
+          "entries": 24,
+          "translated": 24,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/content-types.po",
-          "entries": 28,
-          "translated": 28,
+          "entries": 18,
+          "translated": 18,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/skills.po",
-          "entries": 131,
-          "translated": 131,
+          "entries": 83,
+          "translated": 83,
           "fuzzy": 0,
           "untranslated": 0
         },
@@ -443,15 +443,15 @@
         },
         {
           "path": "guides/agent-onboarding.po",
-          "entries": 68,
-          "translated": 68,
+          "entries": 40,
+          "translated": 40,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "guides/beans-and-todos.po",
-          "entries": 66,
-          "translated": 66,
+          "entries": 35,
+          "translated": 35,
           "fuzzy": 0,
           "untranslated": 0
         },
@@ -472,38 +472,38 @@
         },
         {
           "path": "start/accessibility.po",
-          "entries": 117,
-          "translated": 117,
+          "entries": 98,
+          "translated": 98,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/contributing.po",
-          "entries": 16,
-          "translated": 16,
+          "entries": 6,
+          "translated": 6,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/getting-started.po",
-          "entries": 142,
-          "translated": 142,
+          "entries": 92,
+          "translated": 92,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/installation.po",
-          "entries": 57,
-          "translated": 55,
-          "fuzzy": 2,
+          "entries": 30,
+          "translated": 30,
+          "fuzzy": 0,
           "untranslated": 0
         }
       ],
-      "templates": 93,
+      "templates": 109,
       "catalogues": 15,
-      "entries": 1048,
-      "translated": 997,
-      "fuzzy": 2,
+      "entries": 736,
+      "translated": 687,
+      "fuzzy": 0,
       "untranslated": 49,
       "unreadable": []
     },
@@ -517,29 +517,29 @@
       "files": [
         {
           "path": "concepts/agentic-harness.po",
-          "entries": 218,
-          "translated": 218,
+          "entries": 164,
+          "translated": 164,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/architecture.po",
-          "entries": 59,
-          "translated": 59,
+          "entries": 24,
+          "translated": 24,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/content-types.po",
-          "entries": 28,
-          "translated": 28,
+          "entries": 18,
+          "translated": 18,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "concepts/skills.po",
-          "entries": 133,
-          "translated": 133,
+          "entries": 83,
+          "translated": 83,
           "fuzzy": 0,
           "untranslated": 0,
           "official": "no"
@@ -567,16 +567,16 @@
         },
         {
           "path": "guides/agent-onboarding.po",
-          "entries": 80,
-          "translated": 80,
+          "entries": 41,
+          "translated": 41,
           "fuzzy": 0,
           "untranslated": 0,
           "official": "no"
         },
         {
           "path": "guides/beans-and-todos.po",
-          "entries": 66,
-          "translated": 66,
+          "entries": 35,
+          "translated": 35,
           "fuzzy": 0,
           "untranslated": 0
         },
@@ -597,38 +597,38 @@
         },
         {
           "path": "start/accessibility.po",
-          "entries": 117,
-          "translated": 117,
+          "entries": 98,
+          "translated": 98,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/contributing.po",
-          "entries": 16,
-          "translated": 16,
+          "entries": 6,
+          "translated": 6,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/getting-started.po",
-          "entries": 143,
-          "translated": 143,
+          "entries": 93,
+          "translated": 93,
           "fuzzy": 0,
           "untranslated": 0
         },
         {
           "path": "start/installation.po",
-          "entries": 57,
-          "translated": 55,
-          "fuzzy": 2,
+          "entries": 30,
+          "translated": 30,
+          "fuzzy": 0,
           "untranslated": 0
         }
       ],
-      "templates": 94,
+      "templates": 110,
       "catalogues": 15,
-      "entries": 1063,
-      "translated": 1012,
-      "fuzzy": 2,
+      "entries": 738,
+      "translated": 689,
+      "fuzzy": 0,
       "untranslated": 49,
       "unreadable": []
     }
@@ -646,7 +646,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 5,
+          "templates": 6,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -662,7 +662,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 5,
+          "templates": 6,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -678,7 +678,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 5,
+          "templates": 6,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -694,7 +694,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 5,
+          "templates": 6,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -710,7 +710,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 5,
+          "templates": 6,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -776,7 +776,7 @@
               "official": "no"
             }
           ],
-          "templates": 26,
+          "templates": 38,
           "catalogues": 6,
           "entries": 361,
           "translated": 361,
@@ -835,7 +835,7 @@
               "untranslated": 0
             }
           ],
-          "templates": 26,
+          "templates": 38,
           "catalogues": 6,
           "entries": 346,
           "translated": 346,
@@ -894,7 +894,7 @@
               "untranslated": 0
             }
           ],
-          "templates": 26,
+          "templates": 38,
           "catalogues": 6,
           "entries": 346,
           "translated": 346,
@@ -953,7 +953,7 @@
               "untranslated": 0
             }
           ],
-          "templates": 26,
+          "templates": 38,
           "catalogues": 6,
           "entries": 346,
           "translated": 346,
@@ -1013,7 +1013,7 @@
               "official": "no"
             }
           ],
-          "templates": 26,
+          "templates": 38,
           "catalogues": 6,
           "entries": 361,
           "translated": 359,
@@ -1035,7 +1035,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 7,
+          "templates": 10,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -1051,7 +1051,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 7,
+          "templates": 10,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -1067,7 +1067,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 7,
+          "templates": 10,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -1083,7 +1083,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 7,
+          "templates": 10,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -1099,7 +1099,7 @@
             "findings": 0
           },
           "files": [],
-          "templates": 7,
+          "templates": 10,
           "catalogues": 0,
           "entries": 0,
           "translated": 0,
@@ -1130,16 +1130,16 @@
             },
             {
               "path": "site/iris-site.po",
-              "entries": 116,
-              "translated": 116,
+              "entries": 158,
+              "translated": 158,
               "fuzzy": 0,
               "untranslated": 0
             }
           ],
-          "templates": 2,
+          "templates": 6,
           "catalogues": 2,
-          "entries": 120,
-          "translated": 120,
+          "entries": 162,
+          "translated": 162,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []
@@ -1161,16 +1161,16 @@
             },
             {
               "path": "site/iris-site.po",
-              "entries": 116,
-              "translated": 116,
+              "entries": 158,
+              "translated": 158,
               "fuzzy": 0,
               "untranslated": 0
             }
           ],
-          "templates": 2,
+          "templates": 6,
           "catalogues": 2,
-          "entries": 120,
-          "translated": 120,
+          "entries": 162,
+          "translated": 162,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []
@@ -1192,16 +1192,16 @@
             },
             {
               "path": "site/iris-site.po",
-              "entries": 116,
-              "translated": 116,
+              "entries": 158,
+              "translated": 158,
               "fuzzy": 0,
               "untranslated": 0
             }
           ],
-          "templates": 2,
+          "templates": 6,
           "catalogues": 2,
-          "entries": 120,
-          "translated": 120,
+          "entries": 162,
+          "translated": 162,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []
@@ -1223,16 +1223,16 @@
             },
             {
               "path": "site/iris-site.po",
-              "entries": 116,
-              "translated": 116,
+              "entries": 158,
+              "translated": 158,
               "fuzzy": 0,
               "untranslated": 0
             }
           ],
-          "templates": 2,
+          "templates": 6,
           "catalogues": 2,
-          "entries": 120,
-          "translated": 120,
+          "entries": 162,
+          "translated": 162,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []
@@ -1254,16 +1254,16 @@
             },
             {
               "path": "site/iris-site.po",
-              "entries": 116,
-              "translated": 116,
+              "entries": 158,
+              "translated": 158,
               "fuzzy": 0,
               "untranslated": 0
             }
           ],
-          "templates": 2,
+          "templates": 6,
           "catalogues": 2,
-          "entries": 120,
-          "translated": 120,
+          "entries": 162,
+          "translated": 162,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []

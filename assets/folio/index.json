@@ -14,7 +14,7 @@
       "files": [
         {
           "path": "README.md",
-          "bytes": 1390,
+          "bytes": 1384,
           "size": "1.4 KB"
         },
         {
@@ -561,78 +561,78 @@
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-15.jsonld",
-          "bytes": 7482,
-          "size": "7.3 KB"
+          "bytes": 7986,
+          "size": "7.8 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-15.md",
-          "bytes": 259,
-          "size": "259 B"
+          "bytes": 391,
+          "size": "391 B"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-15.ts",
-          "bytes": 5898,
-          "size": "5.8 KB"
+          "bytes": 6339,
+          "size": "6.2 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-16.jsonld",
-          "bytes": 9233,
-          "size": "9.0 KB"
+          "bytes": 10106,
+          "size": "9.9 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-16.md",
-          "bytes": 259,
-          "size": "259 B"
+          "bytes": 391,
+          "size": "391 B"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-16.ts",
-          "bytes": 7307,
-          "size": "7.1 KB"
+          "bytes": 8041,
+          "size": "7.9 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-17.jsonld",
-          "bytes": 3409,
-          "size": "3.3 KB"
+          "bytes": 10110,
+          "size": "9.9 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-17.md",
-          "bytes": 258,
-          "size": "258 B"
+          "bytes": 379,
+          "size": "379 B"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-17.ts",
-          "bytes": 2622,
-          "size": "2.6 KB"
+          "bytes": 8044,
+          "size": "7.9 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-18.jsonld",
-          "bytes": 3431,
-          "size": "3.4 KB"
+          "bytes": 10705,
+          "size": "10.5 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-18.md",
-          "bytes": 271,
-          "size": "271 B"
+          "bytes": 404,
+          "size": "404 B"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-18.ts",
-          "bytes": 2657,
-          "size": "2.6 KB"
+          "bytes": 8538,
+          "size": "8.3 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-19.jsonld",
-          "bytes": 3815,
-          "size": "3.7 KB"
+          "bytes": 10891,
+          "size": "10.6 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-19.md",
-          "bytes": 271,
-          "size": "271 B"
+          "bytes": 404,
+          "size": "404 B"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-19.ts",
-          "bytes": 2965,
-          "size": "2.9 KB"
+          "bytes": 8686,
+          "size": "8.5 KB"
         },
         {
           "path": "dth-sc/ch02-dhsc-architecture/f-ch02-fig-20.jsonld",
@@ -1975,9 +1975,44 @@
           "size": "1.8 KB"
         },
         {
+          "path": "dth-sc/l1-coverage.exclusions.json",
+          "bytes": 1999,
+          "size": "2.0 KB"
+        },
+        {
           "path": "dth-sc/l1-coverage.json",
-          "bytes": 139417,
-          "size": "136.1 KB"
+          "bytes": 45280,
+          "size": "44.2 KB"
+        },
+        {
+          "path": "dth-sc/l1-coverage.quotes.json",
+          "bytes": 376,
+          "size": "376 B"
+        },
+        {
+          "path": "dth-sc/media/archimate-fig-15.svg",
+          "bytes": 14021,
+          "size": "13.7 KB"
+        },
+        {
+          "path": "dth-sc/media/archimate-fig-16.svg",
+          "bytes": 16661,
+          "size": "16.3 KB"
+        },
+        {
+          "path": "dth-sc/media/archimate-fig-17.svg",
+          "bytes": 16639,
+          "size": "16.2 KB"
+        },
+        {
+          "path": "dth-sc/media/archimate-fig-18.svg",
+          "bytes": 17877,
+          "size": "17.5 KB"
+        },
+        {
+          "path": "dth-sc/media/archimate-fig-19.svg",
+          "bytes": 18486,
+          "size": "18.1 KB"
         },
         {
           "path": "dth-sc/media/bp-sc-bp-01-stepwise-dhsc-transformation.svg",
@@ -2156,7 +2191,7 @@
         },
         {
           "path": "dth-sc/review-anchors.json",
-          "bytes": 66672,
+          "bytes": 66702,
           "size": "65.1 KB"
         },
         {
