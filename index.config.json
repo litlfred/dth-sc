@@ -177,7 +177,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "1abe68e6510e3e39a02d46227859554fc302368a",
+          "ref": "ba1af6f2ca64c48c0393e4f6a99cc44a5b53287f",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -190,8 +190,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-10",
-              "ref": "1abe68e6510e3e39a02d46227859554fc302368a",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
+              "ref": "ba1af6f2ca64c48c0393e4f6a99cc44a5b53287f",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\"; 20:07:47Z \"try again... i cant run\" (move tools to main ba1af6f with the sandbox layers publish, tools#1784)."
             }
           }
         }

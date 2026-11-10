@@ -1,0 +1,10 @@
+name: Move a sandbox's layers cache ref
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths: [index.lock.json]
+permissions:
+  contents: write
+jobs:
+  move:
+    uses: litlfred/cat-harness-tools/.github/workflows/layer-layers-move.yml@ba1af6f2ca64c48c0393e4f6a99cc44a5b53287f # index.lock.json

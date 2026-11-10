@@ -29,7 +29,7 @@
     {
       "harness": "cat-harness-tools",
       "repository": "litlfred/cat-harness-tools",
-      "ref": "1abe68e6510e3e39a02d46227859554fc302368a"
+      "ref": "ba1af6f2ca64c48c0393e4f6a99cc44a5b53287f"
     },
     {
       "harness": "bootstrap",
@@ -123,8 +123,20 @@
           "id": "*",
           "path": "cat-harness",
           "upstreamPath": ".",
-          "treeDigest": "71f8e248f64748505b0275b5d1b146b1bd69bed384b70dc763747737ba357186",
-          "files": 12537
+          "treeDigest": "0aacfcc289f1a182d052597dad387ff8c8f0e03cab734f87c1a0ed2011b478ef",
+          "files": 2545,
+          "except": [
+            "docs/proposals",
+            "docs/wireframes",
+            "editorial",
+            "integrations",
+            "kg-ops",
+            "library/corpus",
+            "platform-ui",
+            "research",
+            "sdlc",
+            "work-plan"
+          ]
         }
       ],
       "trust": {
@@ -138,7 +150,7 @@
     {
       "instance": "cat-harness-tools",
       "repository": "litlfred/cat-harness-tools",
-      "sha": "1abe68e6510e3e39a02d46227859554fc302368a",
+      "sha": "ba1af6f2ca64c48c0393e4f6a99cc44a5b53287f",
       "upstreamRoot": "",
       "path": "cat-harness-tools",
       "via": "cat-harness-tools",
@@ -152,15 +164,15 @@
           "id": "*",
           "path": "cat-harness-tools",
           "upstreamPath": ".",
-          "treeDigest": "db86d57cec0d5e80a9a8c6f04a9b2b3fc4bc67b368af6c3fddd9d293a0eb3c32",
-          "files": 3651
+          "treeDigest": "fa76907760525fc9682d531d9dc5166c09ed6494c1300f19dc34742ff5bc987e",
+          "files": 3652
         }
       ],
       "trust": {
         "basis": "consent",
         "by": "litlfred",
         "on": "2026-11-10",
-        "ref": "1abe68e6510e3e39a02d46227859554fc302368a",
+        "ref": "ba1af6f2ca64c48c0393e4f6a99cc44a5b53287f",
         "approver": "unverified"
       }
     },
@@ -263,8 +275,14 @@
           "id": "*",
           "path": "folio-assistant-core",
           "upstreamPath": ".",
-          "treeDigest": "b7fa2d4acba9de93d6b4ff6bf348833d9c2b1218dfb4c734b17165fd42079bcd",
-          "files": 6371
+          "treeDigest": "c64f2373f9504dec7fde8f9298cd8267d89fe68633f646d801755afa1f7d4b12",
+          "files": 1574,
+          "except": [
+            "board",
+            "dsa",
+            "library-extras",
+            "library/corpus"
+          ]
         }
       ],
       "trust": {
