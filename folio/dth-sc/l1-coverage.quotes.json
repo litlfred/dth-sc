@@ -3,5 +3,11 @@
     "block": "ch03-implementation-and-operations/p-ch03-page-048",
     "quote": "The operational plan should determine the necessary resources and the effort needed to effectively maintain and run the DHSC systems.",
     "note": "The L1 sentence carries the step number of the heading before it (\"intervention 2 Step\"); the block holds the sentence without it."
+  },
+  {
+    "block": "references/p-references-page-065",
+    "quote": "International Coalition of Medicines Regulatory Authorities (ICMRA); 2021 (https://www.icmra.info/drupal/sites/default/files/2021-08/recommendations_on_common_technical_denominators_for_T&T_systems_to_allow_for_interoperability_final.pdf",
+    "l1": "International Coalition of Medicines Regulatory Authorities (ICMRA); 2021 (https://www.icmra.info/drupal/sites/default/ files/2021-08/recommendations_on_common_technical_denominators_for_T&T_systems_to_allow_for_interoperability_final.pdf).",
+    "note": "Reference 26. The L1 text carries a PDF line-break space inside the URL (\"default/ files\"); the References list, generated from the reference node, prints the working URL. The node's _comment keeps the entry as printed."
   }
 ]
