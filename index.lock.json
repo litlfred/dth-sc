@@ -202,13 +202,6 @@
           "upstreamPath": "archimate",
           "treeDigest": "13a223fc61cb0f718016eed732159ec371a80c922b999fabf699f81756ff9b53",
           "files": 8
-        },
-        {
-          "id": "references",
-          "path": "dpi-h-ra/references",
-          "upstreamPath": "references",
-          "treeDigest": "64b0dbfe6350c279d41b96b9e159c12efc87bcef2af07d94030451411a1abdfc",
-          "files": 95
         }
       ],
       "assets": [
