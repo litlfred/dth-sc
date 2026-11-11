@@ -103,7 +103,7 @@ todos/                    people's outstanding items (mounted likewise)
 ```sh
 bun run ./cat-harness-tools/src/index.ts --stdio --repo .   # the MCP server
 bun run ./cat-harness-tools/src/index.ts --check-deps       # what's installed
-bun run ./cat-harness-tools/content/pipeline/qa-sweep.ts folio  # QA every block
+bun run ./cat-harness-tools/pipeline/qa-sweep.ts folio  # QA every block
 ```
 
 ## QA — every block is checked from the first commit

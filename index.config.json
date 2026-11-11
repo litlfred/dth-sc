@@ -14,7 +14,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "d755e9c3062e61f1d54c0ee439e38834310697ce",
+          "ref": "4bb03f64dadd2e984b3c847c27c21f11737acffb",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -38,9 +38,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "d755e9c3062e61f1d54c0ee439e38834310697ce",
-              "evidence": "who-iris moved to main d755e9c, past who-iris#147 (the dth-sc figure renders the Figs 1-4 and 6-9 blocks of c92a29c place). Asked by the figure thread, merge-and-repin window (coordinator, 2026-10-31 10:45Z, to ~19:00Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-10",
+              "ref": "4bb03f64dadd2e984b3c847c27c21f11737acffb",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
             }
           }
         }
@@ -51,7 +51,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-base",
-          "ref": "49178a48d460bb53acf6e90d8c0aee3f0146d8f7",
+          "ref": "49118332fb66ea355a3ee9429fd2e8031ff27a39",
           "overrides": {
             "smart-base": {
               "path": "smart-base",
@@ -78,16 +78,17 @@
                 "smart-base-scenarios",
                 "smart-base-code-lists",
                 "smart-base-typologies",
-                "smart-base-validators"
+                "smart-base-validators",
+                "smart-base-templates"
               ]
             }
           },
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "49178a48d460bb53acf6e90d8c0aee3f0146d8f7",
-              "evidence": "smart-base moved to main 49178a4, past smart-base#233 (L1 extraction out of library/, who-iris#107), whose stale library copies fail check:l1-complete beside who-iris (same repin as dth-pc, 2026-10-31). Merge-and-repin window (coordinator relay, 11:07Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-10",
+              "ref": "49118332fb66ea355a3ee9429fd2e8031ff27a39",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
             }
           }
         }
@@ -98,7 +99,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93",
+          "ref": "0ec7fa69b2ed1315b1b59f8d3bef196f3185a8b6",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -107,9 +108,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-10",
+              "ref": "0ec7fa69b2ed1315b1b59f8d3bef196f3185a8b6",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
             }
           }
         }
@@ -120,7 +121,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "aea7652a99ef5c77b9a4c604aea83b9e3749f039",
+          "ref": "05f5525758184b4be66e7f1a4cd84107b210ec47",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -135,9 +136,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "aea7652a99ef5c77b9a4c604aea83b9e3749f039",
-              "evidence": "folio-assistant-core moved to main aea7652 = #398 (glossary term links, --link-terms; also review-anchors-from-folio.ts). litlfred, 2026-10-31 12:39Z, thread 'Plan product catalogue handbook KG': chose 'A. Merge and rebuild' for #398; repin asked by the supply chain thread. Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-10",
+              "ref": "05f5525758184b4be66e7f1a4cd84107b210ec47",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
             }
           }
         }
@@ -148,7 +149,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "6aa373c3c932379ff22bb2cbb3d27a8953056ea4",
+          "ref": "df6a3c05e78c7e72aca044daecfcfeffc2b3d3dc",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -163,9 +164,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "6aa373c3c932379ff22bb2cbb3d27a8953056ea4",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-10",
+              "ref": "df6a3c05e78c7e72aca044daecfcfeffc2b3d3dc",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
             }
           }
         }
@@ -176,7 +177,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "f62a1d9417a60f71b3c96835a33afdc572b957e3",
+          "ref": "ba1af6f2ca64c48c0393e4f6a99cc44a5b53287f",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -188,9 +189,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "f62a1d9417a60f71b3c96835a33afdc572b957e3",
-              "evidence": "cat-harness-tools moved to main f62a1d9, past #1123 (9b3f7be, figure numbers in figure headings), asked by the coordinator via the supply chain thread. Merge-and-repin window (coordinator, 2026-10-31 10:45Z, to ~19:00Z). Earlier basis: litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-10",
+              "ref": "ba1af6f2ca64c48c0393e4f6a99cc44a5b53287f",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\"; 20:07:47Z \"try again... i cant run\" (move tools to main ba1af6f with the sandbox layers publish, tools#1784)."
             }
           }
         }
@@ -201,7 +202,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "3ce2b5d641779ca78432971abb919e6e3afdc60a",
+          "ref": "9435037232a09950ffe442bb4b00cb7da54b5985",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -210,9 +211,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "3ce2b5d641779ca78432971abb919e6e3afdc60a",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-10",
+              "ref": "9435037232a09950ffe442bb4b00cb7da54b5985",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
             }
           }
         }
@@ -223,7 +224,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "b7fb762ba968a6868bbe5004144ddf78023eb9c7",
+          "ref": "30c4585d5dfbf6960e3ecca86b18d131d6cd3921",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -235,9 +236,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "b7fb762ba968a6868bbe5004144ddf78023eb9c7",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'. Initial pins copied from dth-hrh main 58dd360, so the two handbooks run on the same layers."
+              "on": "2026-11-10",
+              "ref": "30c4585d5dfbf6960e3ecca86b18d131d6cd3921",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
             }
           }
         }
@@ -248,12 +249,13 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-ra",
-          "ref": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28",
+          "ref": "7a3df32635d07b1ec95c4cd3730d938386a6a000",
           "overrides": {
             "dpi-h-ra": {
               "directories": [
                 "glossary",
-                "archimate"
+                "archimate",
+                "references"
               ]
             },
             "who-iris": {
@@ -284,9 +286,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-31",
-              "ref": "2c01ca03314dd7aba2bbbe04d1ef9b988e634e28",
-              "evidence": "litlfred, 2026-10-31 00:45Z, thread 'Plan supply chain handbook KG': 'create issue and work on dth-sc'; plan option A for L2 DTHs on smart-ra, 2026-10-31 00:26Z, thread 'Prepare DTH ingests as L2 on smart-ra' (dth-hrh#47, dth-sc#2). main tip 2c01ca033 = #147 (supply chain ArchiMate views 0.3.0-draft.1) on #148 (RA glossary as SKOS)."
+              "on": "2026-11-10",
+              "ref": "7a3df32635d07b1ec95c4cd3730d938386a6a000",
+              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main). (also satisfies bean folio-assistant-y4pw: dpi-h-ra declared asset README.md)"
             }
           }
         }
