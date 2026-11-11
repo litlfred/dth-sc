@@ -18,11 +18,11 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-012.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-health"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digital-health"
       ],
       "related": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/health-digital-public-infrastructure",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/health-digital-public-infrastructure",
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/enterprise-architecture"
       ],
       "notation": "DHSC"
     },
@@ -37,11 +37,11 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-008.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/digital-health"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digital-health"
       ],
       "related": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/capability",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/capability",
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/application-component"
       ]
     },
     {
@@ -56,11 +56,11 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-008.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/application-component"
       ],
       "related": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/point-of-service-applications"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/functional-application",
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/point-of-service-applications"
       ],
       "notation": "HSCIS"
     },
@@ -72,7 +72,7 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-009.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/capability"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/capability"
       ]
     },
     {
@@ -84,13 +84,13 @@
       ],
       "related": [
         "order-management",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/functional-application"
       ],
       "scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives.",
       "source": "who-iris/library/9789240101197-eng/sections/page-009.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/application-component"
       ],
       "altLabel": [
         "OMS"
@@ -111,10 +111,10 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-009.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-component"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/application-component"
       ],
       "related": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/functional-application"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/functional-application"
       ],
       "notation": "WMS"
     },
@@ -126,11 +126,11 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-045.md",
       "status": "candidate",
       "closeMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-governance"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/data-governance"
       ],
       "related": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/stakeholder",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/enterprise-architecture"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/stakeholder",
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/enterprise-architecture"
       ]
     },
     {
@@ -141,11 +141,11 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-009.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/capability"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/capability"
       ],
       "related": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/application-service",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/data-object"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/application-service",
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/data-object"
       ]
     },
     {
@@ -154,14 +154,14 @@
       "definition": "One of the three main models for implementing traceability (centralized, semi-centralized, distributed), which differ mostly in how they store traceability data and share them with the relevant health authority and across actors in the supply chain.",
       "related": [
         "traceability",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/repository",
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/interoperability"
       ],
       "scopeNote": "Assembled from two sentences of Chapter 4 (PDF 54): 'The three main models for implementing traceability are the centralized, semi-centralized and distributed models. They differ mostly in how they store the data and share them with the relevant health authority and across actors in the supply chain.' The handbook does not state it as a definition, and recommends none of the models. Open: not adopted.",
       "source": "who-iris/library/9789240101197-eng/sections/page-054.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/solution-architecture"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/solution-architecture"
       ]
     },
     {
@@ -175,11 +175,11 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-054.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/repository"
       ],
       "related": [
         "traceability",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/interoperability"
       ]
     },
     {
@@ -193,11 +193,11 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-054.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/repository"
       ],
       "related": [
         "traceability",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/interoperability"
       ]
     },
     {
@@ -211,11 +211,11 @@
       "source": "who-iris/library/9789240101197-eng/sections/page-054.md",
       "status": "candidate",
       "broadMatch": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/repository"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/repository"
       ],
       "related": [
         "traceability",
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/interoperability"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/interoperability"
       ]
     },
     {
@@ -404,7 +404,7 @@
       "notation": "SMART",
       "scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
       "related": [
-        "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/smart-guidelines"
+        "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/smart-guidelines"
       ],
       "source": "who-iris/library/9789240101197-eng/sections/page-007.md",
       "status": "candidate"
@@ -921,7 +921,7 @@
       "focus": {
         "type": "OrganizationalUnit",
         "subOrganizationOf": [
-          "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/who/_focus"
+          "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/who/_focus"
         ]
       }
     },
@@ -940,7 +940,7 @@
       "focus": {
         "type": "OrganizationalUnit",
         "subOrganizationOf": [
-          "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/usaid/_focus"
+          "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/usaid/_focus"
         ]
       }
     },
@@ -1046,20 +1046,20 @@
     }
   ],
   "members": [
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/un",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/who",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/paho",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/unicef",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/unido",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/itu",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/hl7",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/gs1",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/usaid",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/global-fund",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/gavi",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/giz",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/path",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/openhie",
-    "https://litlfred.github.io/smart-ra/v0/ns#glossary/organizations/gates-foundation"
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/un",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/who",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/paho",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/unicef",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/unido",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/itu",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/hl7",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/gs1",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/usaid",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/global-fund",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/gavi",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/giz",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/path",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/openhie",
+    "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/gates-foundation"
   ]
 }

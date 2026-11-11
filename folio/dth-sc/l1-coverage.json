@@ -2,367 +2,799 @@
   "$schema": "l1-coverage-report/v1",
   "definitionVersion": "smart-kg/docs/COVERAGE.md (markers §1, reasons §2) — folio-assistant-core l1-coverage v1",
   "matchMethod": "normalised-substring",
-  "document": "dth-sc",
-  "issue": "litlfred/dth-sc#2 (Step SC5)",
-  "l1Entry": {
-    "library": "9789240101197-eng",
-    "repository": "litlfred/who-iris",
-    "path": "who-iris/library/9789240101197-eng",
-    "isbn": "978-92-4-010119-7",
-    "irisId": "ceaeb260",
-    "pdfSha256Prefix": "cd157b40eef513c1",
-    "totalPages": 78,
-    "totalFolioBlocks": 118
-  },
   "totals": {
     "normative": 47,
-    "captured": 41,
-    "excluded": 6,
+    "captured": 42,
+    "excluded": 5,
     "unaccounted": 0,
-    "capturedPct": 87.23,
+    "capturedPct": 89.36,
     "accountedForPct": 100
   },
-  "categoryBreakdown": {
-    "captured": 30,
-    "background-fact": 7,
-    "editorial": 10,
-    "source-example": 0,
-    "totalNormativeSentences": 47,
-    "ch05SourceExampleBlocks": 12,
-    "annexBlocks": 19,
-    "annexTemplateExampleRows": 27,
-    "annex7RoleMatrixRows": 14
-  },
-  "capturedStatements": [
+  "pages": [
     {
-      "id": "front-matter/p-front-page-008#p8:s9",
-      "text": "Open-source software must have a license approved by the Open Source Initiative (9).",
-      "blockId": "front-matter/p-front-page-008",
-      "location": "p8:s9"
+      "sectionId": "page-001",
+      "page": 1,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "front-matter/p-front-page-009#p9:s7",
-      "text": "systems architecture A technical framework based on a conceptual model that defines how the system should be structured and how its elements should be connected.",
-      "blockId": "front-matter/p-front-page-009",
-      "location": "p9:s7"
+      "sectionId": "page-002",
+      "page": 2,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "introduction/p-introduction-page-011#p11:s2",
-      "text": "Supply chain processes such as forecasting and planning, sourcing, procurement, order management, warehouse management and dispensing must operate in harmony to facilitate the flow of health products from manufacturers to the individuals who need them.",
-      "blockId": "introduction/p-introduction-page-011",
-      "location": "p11:s2"
+      "sectionId": "page-003",
+      "page": 3,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "introduction/p-introduction-page-012#p12:s1",
-      "text": "Vital information such as order details, shipping details and inventory data must be exchanged among partners in the supply chain to enable seamless movement of health products.",
-      "blockId": "introduction/p-introduction-page-012",
-      "location": "p12:s1"
+      "sectionId": "page-004",
+      "page": 4,
+      "normative": 6,
+      "captured": 1,
+      "excluded": 5,
+      "unaccounted": 0,
+      "capturedPct": 16.67,
+      "accountedForPct": 100
     },
     {
-      "id": "introduction/p-introduction-page-014#p14:s3",
-      "text": "Familiarity with resources such as the Digital Implementation Investment Guide (DIIG) (1), the Supply Chain Information System Maturity Model (SCISMM) (16), the OpenHIE framework (17) and The Open Group Architecture Framework (TOGAF®) (18) is highly recommended before using this handbook.",
-      "blockId": "introduction/p-introduction-page-014",
-      "location": "p14:s3"
+      "sectionId": "page-005",
+      "page": 5,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "introduction/p-introduction-page-015#p15:s7",
-      "text": "WHO guideline: recommendations on digital interventions for health system strengthening",
-      "blockId": "introduction/p-introduction-page-015",
-      "location": "p15:s7"
+      "sectionId": "page-006",
+      "page": 6,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "introduction/p-introduction-page-016#p16:s3",
-      "text": "The SMART Guidelines offer a step-by-step pathway that builds five progressive knowledge layers and associated products, to advance the adoption of best clinical and data practices:",
-      "blockId": "introduction/p-introduction-page-016",
-      "location": "p16:s3"
+      "sectionId": "page-007",
+      "page": 7,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "introduction/p-introduction-page-016#p16:s4",
-      "text": "These steps help developers translate recommendations into specifications and standards, help technologists integrate recommendations into updatable digital systems and help countries localize, make interoperable, institutionalize and update digital systems consistent with evidence-based recommendations (13).",
-      "blockId": "introduction/p-introduction-page-016",
-      "location": "p16:s4"
+      "sectionId": "page-008",
+      "page": 8,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "introduction/p-introduction-page-016#p16:s7",
-      "text": "L1 Narrative Guideline and data recommendations:",
-      "blockId": "introduction/p-introduction-page-016",
-      "location": "p16:s7"
+      "sectionId": "page-009",
+      "page": 9,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "introduction/p-introduction-page-017#p17:s3",
-      "text": "In particular, they define recommended public health and clinical business processes that use structured, task-based workflows.",
-      "blockId": "introduction/p-introduction-page-017",
-      "location": "p17:s3"
+      "sectionId": "page-010",
+      "page": 10,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch01-dhsc-strategy/p-ch01-page-020#p20:s2",
-      "text": "The DHSC strategy should align closely with the country’s IT strategy, health strategy, medicines and health product strategies, supply chain strategy and digital health strategy.",
-      "blockId": "ch01-dhsc-strategy/p-ch01-page-020",
-      "location": "p20:s2"
+      "sectionId": "page-011",
+      "page": 11,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch01-dhsc-strategy/p-ch01-page-020#p20:s3",
-      "text": "National priorities should be the driving force behind DHSC implementation initiatives.",
-      "blockId": "ch01-dhsc-strategy/p-ch01-page-020",
-      "location": "p20:s3"
+      "sectionId": "page-012",
+      "page": 12,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch01-dhsc-strategy/p-ch01-page-022#p22:s9",
-      "text": "The TWG should support the overall governance and planning of DHSC implementation activities, and the steering committee should provide leadership and oversight for all implementation activities.",
-      "blockId": "ch01-dhsc-strategy/p-ch01-page-022",
-      "location": "p22:s9"
+      "sectionId": "page-013",
+      "page": 13,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch01-dhsc-strategy/p-ch01-page-023#p23:s10",
-      "text": "Prioritize challenges, problems and needs that should be addressed within a defined time frame (e.g., one year, three years or five years).",
-      "blockId": "ch01-dhsc-strategy/p-ch01-page-023",
-      "location": "p23:s10"
+      "sectionId": "page-014",
+      "page": 14,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch01-dhsc-strategy/p-ch01-page-024#p24:s19",
-      "text": "The goals should link to the DHSC implementation activities.",
-      "blockId": "ch01-dhsc-strategy/p-ch01-page-024",
-      "location": "p24:s19"
+      "sectionId": "page-015",
+      "page": 15,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-028#p28:s2",
-      "text": "The architecture should comprehensively support all the supply chain functions, their data requirements and the need for interoperability between not only various supply chain functions but also between the entire ecosystem and other digital health systems (including health financing and insurance systems and regulatory systems).",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-028",
-      "location": "p28:s2"
+      "sectionId": "page-016",
+      "page": 16,
+      "normative": 3,
+      "captured": 3,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-028#p28:s3",
-      "text": "The DHSC architecture should align with the priorities of the country’s information and communications technology (ICT) architecture and the digital health architecture.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-028",
-      "location": "p28:s3"
+      "sectionId": "page-017",
+      "page": 17,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-028#p28:s9",
-      "text": "Health supply chains should be able to quickly respond to exceptions such as stockouts and quality issues like product recalls.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-028",
-      "location": "p28:s9"
+      "sectionId": "page-018",
+      "page": 18,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-028#p28:s10",
-      "text": "More importantly, they should support patient safety by ensuring that the products dispensed to and consumed by individuals are quality assured and are not falsified.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-028",
-      "location": "p28:s10"
+      "sectionId": "page-019",
+      "page": 19,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-032#p32:s15",
-      "text": "A key mandate of the TWG should be oversight in this area.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-032",
-      "location": "p32:s15"
+      "sectionId": "page-020",
+      "page": 20,
+      "normative": 2,
+      "captured": 2,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-032#p32:s18",
-      "text": "However, actual consumption should include what is dispensed to individuals, product expiries, wastages and inventory shrinkage.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-032",
-      "location": "p32:s18"
+      "sectionId": "page-021",
+      "page": 21,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-032#p32:s19",
-      "text": "Systems, especially at the last mile of the supply chain, should have the ability to track and capture batch details and serial numbers, where available, as part of product expiries, wastages, inventory shrinkage and dispensation.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-032",
-      "location": "p32:s19"
+      "sectionId": "page-022",
+      "page": 22,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-033#p33:s3",
-      "text": "Provides software capabilities, or “services,” that are specific to health care and may be used by other applications across the digital health enterprise",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-033",
-      "location": "p33:s3"
+      "sectionId": "page-023",
+      "page": 23,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-034#p34:s7",
-      "text": "EXTERNAL SYSTEMS Systems and data repositories (e.g., product master data and serialization data) that may be used by the DHSC enterprise.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-034",
-      "location": "p34:s7"
+      "sectionId": "page-024",
+      "page": 24,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-035#p35:s16",
-      "text": "These resources specify what capabilities should be supported by each of the components within the “health supply chain information systems” layer.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-035",
-      "location": "p35:s16"
+      "sectionId": "page-025",
+      "page": 25,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-035#p35:s24",
-      "text": "Countries often have a mixture of needs and capabilities that should be reflected in their DHSC architecture.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-035",
-      "location": "p35:s24"
+      "sectionId": "page-026",
+      "page": 26,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-040#p40:s7",
-      "text": "In addition to the architectural approaches detailed above, SCISMM, TSS v2 and the IHE white paper (23) can provide guidance on the health supply chain functions that information systems should support to minimize manual tasks and improve data quality and availability.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-040",
-      "location": "p40:s7"
+      "sectionId": "page-027",
+      "page": 27,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch02-dhsc-architecture/p-ch02-page-040#p40:s9",
-      "text": "As noted earlier, one benefit that the DHSC architecture should deliver is timely visibility of the end-to-end health supply chain so leaders can make informed decisions to deliver health products to individuals when and where they need them.",
-      "blockId": "ch02-dhsc-architecture/p-ch02-page-040",
-      "location": "p40:s9"
+      "sectionId": "page-028",
+      "page": 28,
+      "normative": 4,
+      "captured": 4,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch03-implementation-and-operations/p-ch03-page-046#p46:s9",
-      "text": "As outlined in the upcoming steps, each intervention should include a project implementation plan, an operational plan and a budget that considers the total cost of ownership.",
-      "blockId": "ch03-implementation-and-operations/p-ch03-page-046",
-      "location": "p46:s9"
+      "sectionId": "page-029",
+      "page": 29,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch03-implementation-and-operations/p-ch03-page-047#p47:s1",
-      "text": "The project charter should include details about the following:",
-      "blockId": "ch03-implementation-and-operations/p-ch03-page-047",
-      "location": "p47:s1"
+      "sectionId": "page-030",
+      "page": 30,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch03-implementation-and-operations/p-ch03-page-047#p47:s2",
-      "text": "The project management plan should include the following:",
-      "blockId": "ch03-implementation-and-operations/p-ch03-page-047",
-      "location": "p47:s2"
+      "sectionId": "page-031",
+      "page": 31,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch03-implementation-and-operations/p-ch03-page-047#p47:s3",
-      "text": "The project performance monitoring and analysis framework should include the following:",
-      "blockId": "ch03-implementation-and-operations/p-ch03-page-047",
-      "location": "p47:s3"
+      "sectionId": "page-032",
+      "page": 32,
+      "normative": 3,
+      "captured": 3,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch03-implementation-and-operations/p-ch03-page-048#p48:s1",
-      "text": "The operations and sustainability plan should include the following:",
-      "blockId": "ch03-implementation-and-operations/p-ch03-page-048",
-      "location": "p48:s1"
+      "sectionId": "page-033",
+      "page": 33,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch03-implementation-and-operations/p-ch03-page-048#p48:s2",
-      "text": "The operational performance monitoring and analysis framework should include the following:",
-      "blockId": "ch03-implementation-and-operations/p-ch03-page-048",
-      "location": "p48:s2"
+      "sectionId": "page-034",
+      "page": 34,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch03-implementation-and-operations/p-ch03-page-048#p48:s3",
-      "text": "The operational plan should determine the necessary resources and the effort needed to effectively maintain and run the DHSC systems.",
-      "blockId": "ch03-implementation-and-operations/p-ch03-page-048",
-      "location": "p48:s3"
+      "sectionId": "page-035",
+      "page": 35,
+      "normative": 2,
+      "captured": 2,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "ch04-traceability/p-ch04-page-054#p54:s24",
-      "text": "This handbook does not recommend a particular model because the best choice depends on the context and various other factors.",
-      "blockId": "ch04-traceability/p-ch04-page-054",
-      "location": "p54:s24"
+      "sectionId": "page-036",
+      "page": 36,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "ch04-traceability/p-ch04-page-056#p56:s2",
-      "text": "Traceability processes should be designed according to a structured architecture that is independent of the technology used to capture and share data.",
-      "blockId": "ch04-traceability/p-ch04-page-056",
-      "location": "p56:s2"
+      "sectionId": "page-037",
+      "page": 37,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "references/p-references-page-065#p65:s45",
-      "text": "WHO SMART guidelines: optimising country-level use of guideline recommendations in the digital age.",
-      "blockId": "references/p-references-page-065",
-      "location": "p65:s45"
+      "sectionId": "page-038",
+      "page": 38,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "references/p-references-page-065#p65:s70",
-      "text": "Digital adaptation kit for antenatal care: operational requirements for implementing WHO recommendations in digital systems.",
-      "blockId": "references/p-references-page-065",
-      "location": "p65:s70"
+      "sectionId": "page-039",
+      "page": 39,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "id": "references/p-references-page-065#p65:s89",
-      "text": "Recommendations on common technical denominators for traceability systems for medicines to allow for interoperability.",
-      "blockId": "references/p-references-page-065",
-      "location": "p65:s89"
+      "sectionId": "page-040",
+      "page": 40,
+      "normative": 2,
+      "captured": 2,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
     },
     {
-      "id": "references/p-references-page-065#p65:s90",
-      "text": "recommendations_on_common_technical_denominators_for_T&T_systems_to_allow_for_interoperability_final.pdf",
-      "blockId": "references/p-references-page-065",
-      "location": "p65:s90"
-    }
-  ],
-  "exclusions": [
-    {
-      "location": "p4:s4",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "signerRole": {
-        "role": "l1-extraction-reviewer"
-      },
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "basis": "WHO imprint and CC BY-NC-SA 3.0 IGO licence non-endorsement clause on PDF p. 4 (recorded in folio/dth-sc/dth-sc.ts meta.licence)."
+      "sectionId": "page-041",
+      "page": 41,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "location": "p4:s6",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "signerRole": {
-        "role": "l1-extraction-reviewer"
-      },
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "basis": "CC BY-NC-SA 3.0 IGO share-alike licence condition on PDF p. 4 (recorded in folio/dth-sc/dth-sc.ts meta.licence)."
+      "sectionId": "page-042",
+      "page": 42,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "location": "p4:s7",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "signerRole": {
-        "role": "l1-extraction-reviewer"
-      },
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "basis": "WHO translation disclaimer instruction on the imprint page (PDF p. 4); editorial front matter."
+      "sectionId": "page-043",
+      "page": 43,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "location": "p4:s9",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "signerRole": {
-        "role": "l1-extraction-reviewer"
-      },
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "basis": "WHO translation authenticity and WIPO mediation clause on the imprint page (PDF p. 4); editorial front matter."
+      "sectionId": "page-044",
+      "page": 44,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "location": "p4:s25",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "signerRole": {
-        "role": "l1-extraction-reviewer"
-      },
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "basis": "Standard WHO commercial non-endorsement disclaimer on the imprint page (PDF p. 4); editorial front matter."
+      "sectionId": "page-045",
+      "page": 45,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     },
     {
-      "location": "p4:s30",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "signerRole": {
-        "role": "l1-extraction-reviewer"
-      },
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "basis": "Standard WHO limitation of liability clause on the imprint page (PDF p. 4); editorial front matter."
+      "sectionId": "page-046",
+      "page": 46,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
+    },
+    {
+      "sectionId": "page-047",
+      "page": 47,
+      "normative": 3,
+      "captured": 3,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
+    },
+    {
+      "sectionId": "page-048",
+      "page": 48,
+      "normative": 3,
+      "captured": 3,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
+    },
+    {
+      "sectionId": "page-049",
+      "page": 49,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-050",
+      "page": 50,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-051",
+      "page": 51,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-052",
+      "page": 52,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-053",
+      "page": 53,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-054",
+      "page": 54,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
+    },
+    {
+      "sectionId": "page-055",
+      "page": 55,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-056",
+      "page": 56,
+      "normative": 1,
+      "captured": 1,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
+    },
+    {
+      "sectionId": "page-057",
+      "page": 57,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-058",
+      "page": 58,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-059",
+      "page": 59,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-060",
+      "page": 60,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-061",
+      "page": 61,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-062",
+      "page": 62,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-063",
+      "page": 63,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-064",
+      "page": 64,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-065",
+      "page": 65,
+      "normative": 4,
+      "captured": 4,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": 100,
+      "accountedForPct": 100
+    },
+    {
+      "sectionId": "page-066",
+      "page": 66,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-067",
+      "page": 67,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-068",
+      "page": 68,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-069",
+      "page": 69,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-070",
+      "page": 70,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-071",
+      "page": 71,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-072",
+      "page": 72,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-073",
+      "page": 73,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-074",
+      "page": 74,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-075",
+      "page": 75,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-076",
+      "page": 76,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-077",
+      "page": 77,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
+    },
+    {
+      "sectionId": "page-078",
+      "page": 78,
+      "normative": 0,
+      "captured": 0,
+      "excluded": 0,
+      "unaccounted": 0,
+      "capturedPct": null,
+      "accountedForPct": null
     }
   ],
   "sentences": [
     {
+      "sectionId": "page-004",
       "location": "p4:s4",
       "page": 4,
       "text": "In any use of this work, there should be no suggestion that WHO endorses any specific organization, products or services.",
@@ -372,22 +804,10 @@
       "state": "excluded",
       "reason": "editorial",
       "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "printedPage": "iv",
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "primaryBlockId": "dth-sc",
-      "blockIds": [
-        "dth-sc"
-      ],
-      "blockLabels": [
-        "doc:dth-sc"
-      ],
-      "verbatimQuote": "In any use of this work, there should be no suggestion that WHO endorses any specific organization, products or services.",
-      "basis": "WHO imprint and CC BY-NC-SA 3.0 IGO licence non-endorsement clause on PDF p. 4 (recorded in folio/dth-sc/dth-sc.ts meta.licence)."
+      "signedOffAt": "2026-10-31"
     },
     {
+      "sectionId": "page-004",
       "location": "p4:s6",
       "page": 4,
       "text": "If you adapt the work, then you must license your work under the same or equivalent Creative Commons licence.",
@@ -397,47 +817,21 @@
       "state": "excluded",
       "reason": "editorial",
       "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "printedPage": "iv",
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "primaryBlockId": "dth-sc",
-      "blockIds": [
-        "dth-sc"
-      ],
-      "blockLabels": [
-        "doc:dth-sc"
-      ],
-      "verbatimQuote": "If you adapt the work, then you must license your work under the same or equivalent Creative Commons licence.",
-      "basis": "CC BY-NC-SA 3.0 IGO share-alike licence condition on PDF p. 4 (recorded in folio/dth-sc/dth-sc.ts meta.licence)."
+      "signedOffAt": "2026-10-31"
     },
     {
+      "sectionId": "page-004",
       "location": "p4:s7",
       "page": 4,
       "text": "If you create a translation of this work, you should add the following disclaimer along with the suggested citation: “This translation was not created by the World Health Organization (WHO).",
       "markers": [
         "obligation"
       ],
-      "state": "excluded",
-      "reason": "editorial",
-      "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "printedPage": "iv",
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "primaryBlockId": "dth-sc",
-      "blockIds": [
-        "dth-sc"
-      ],
-      "blockLabels": [
-        "doc:dth-sc"
-      ],
-      "verbatimQuote": "If you create a translation of this work, you should add the following disclaimer along with the suggested citation: “This translation was not created by the World Health Organization (WHO).",
-      "basis": "WHO translation disclaimer instruction on the imprint page (PDF p. 4); editorial front matter."
+      "state": "captured",
+      "node": "front-matter/t-front-abbreviations"
     },
     {
+      "sectionId": "page-004",
       "location": "p4:s9",
       "page": 4,
       "text": "The original English edition shall be the binding and authentic edition.” Any mediation relating to disputes arising under the licence shall be conducted in accordance with the mediation rules of the World Intellectual Property Organization (http://www.wipo.int/amc/en/mediation/rules/).",
@@ -447,22 +841,10 @@
       "state": "excluded",
       "reason": "editorial",
       "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "printedPage": "iv",
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "primaryBlockId": "dth-sc",
-      "blockIds": [
-        "dth-sc"
-      ],
-      "blockLabels": [
-        "doc:dth-sc"
-      ],
-      "verbatimQuote": "The original English edition shall be the binding and authentic edition.” Any mediation relating to disputes arising under the licence shall be conducted in accordance with the mediation rules of the World Intellectual Property Organization (http://www.wipo.int/amc/en/mediation/rules/).",
-      "basis": "WHO translation authenticity and WIPO mediation clause on the imprint page (PDF p. 4); editorial front matter."
+      "signedOffAt": "2026-10-31"
     },
     {
+      "sectionId": "page-004",
       "location": "p4:s25",
       "page": 4,
       "text": "The mention of specific companies or of certain manufacturers’ products does not imply that they are endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned.",
@@ -472,22 +854,10 @@
       "state": "excluded",
       "reason": "editorial",
       "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "printedPage": "iv",
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "primaryBlockId": "dth-sc",
-      "blockIds": [
-        "dth-sc"
-      ],
-      "blockLabels": [
-        "doc:dth-sc"
-      ],
-      "verbatimQuote": "The mention of specific companies or of certain manufacturers’ products does not imply that they are endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned.",
-      "basis": "Standard WHO commercial non-endorsement disclaimer on the imprint page (PDF p. 4); editorial front matter."
+      "signedOffAt": "2026-10-31"
     },
     {
+      "sectionId": "page-004",
       "location": "p4:s30",
       "page": 4,
       "text": "In no event shall WHO be liable for damages arising from its use.",
@@ -497,22 +867,10 @@
       "state": "excluded",
       "reason": "editorial",
       "signedOffBy": "litlfred",
-      "signedOffAt": "2026-10-31",
-      "printedPage": "iv",
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "primaryBlockId": "dth-sc",
-      "blockIds": [
-        "dth-sc"
-      ],
-      "blockLabels": [
-        "doc:dth-sc"
-      ],
-      "verbatimQuote": "In no event shall WHO be liable for damages arising from its use.",
-      "basis": "Standard WHO limitation of liability clause on the imprint page (PDF p. 4); editorial front matter."
+      "signedOffAt": "2026-10-31"
     },
     {
+      "sectionId": "page-008",
       "location": "p8:s9",
       "page": 8,
       "text": "Open-source software must have a license approved by the Open Source Initiative (9). vi Digital transformation handbook for health supply chain architecture",
@@ -520,22 +878,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "front-matter/p-front-page-008#p8:s9",
-      "printedPage": "viii",
-      "section": "page-008",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-008.md",
-      "category": "background-fact",
-      "primaryBlockId": "front-matter/p-front-page-008",
-      "blockIds": [
-        "front-matter/p-front-page-008"
-      ],
-      "blockLabels": [
-        "prose:front-page-008"
-      ],
-      "verbatimQuote": "Open-source software must have a license approved by the Open Source Initiative (9).",
-      "basis": "Captured verbatim in front-matter/p-front-page-008 (Glossary definition of open-source software, citing Open Source Initiative ref. 9)."
+      "node": "dth-sc"
     },
     {
+      "sectionId": "page-009",
       "location": "p9:s7",
       "page": 9,
       "text": "The SMART Guidelines provide a five-step pathway to advance the adoption of best clinical and data practices, even if a country is not yet fully digital (12, 13). stakeholder In the context of digital health transformation, anyone who is affected by or interested in the consequences of the efforts, including the planning team, end users, beneficiaries and funders. systems architecture A technical framework based on a conceptual model that defines how the system should be structured and how its elements should be connected. total cost of ownership The resources required to support a digital health intervention throughout its life cycle. traceability The ability to trace something.",
@@ -543,22 +889,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "front-matter/p-front-page-009#p9:s7",
-      "printedPage": "ix",
-      "section": "page-009",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-009.md",
-      "category": "background-fact",
-      "primaryBlockId": "front-matter/p-front-page-009",
-      "blockIds": [
-        "front-matter/p-front-page-009"
-      ],
-      "blockLabels": [
-        "prose:front-page-009"
-      ],
-      "verbatimQuote": "systems architecture A technical framework based on a conceptual model that defines how the system should be structured and how its elements should be connected.",
-      "basis": "Captured verbatim in front-matter/p-front-page-009 (Glossary definition of systems architecture, linked to dpi-h-ra/solution-architecture)."
+      "node": "front-matter/p-front-page-009"
     },
     {
+      "sectionId": "page-011",
       "location": "p11:s2",
       "page": 11,
       "text": "Supply chain processes such as forecasting and planning, sourcing, procurement, order management, warehouse management and dispensing must operate in harmony to facilitate the flow of health products from manufacturers to the individuals who need them.",
@@ -566,44 +900,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "introduction/p-introduction-page-011#p11:s2",
-      "printedPage": "1",
-      "section": "page-011",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-011.md",
-      "category": "captured",
-      "primaryBlockId": "introduction/p-introduction-page-011",
-      "blockIds": [
-        "introduction/p-introduction-page-011",
-        "introduction/bp-sc-bp-02-end-to-end-supply-chain-processes",
-        "introduction/pers-ministry-of-health",
-        "introduction/pers-procurer",
-        "introduction/pers-manufacturer-distributor",
-        "introduction/pers-regulatory-authority",
-        "introduction/pers-central-warehouse",
-        "introduction/pers-regional-district-warehouse",
-        "introduction/pers-logistics-provider",
-        "introduction/pers-health-facility",
-        "introduction/pers-community-health-worker",
-        "introduction/pers-health-service-user"
-      ],
-      "blockLabels": [
-        "prose:introduction-page-011",
-        "bp:sc-bp-02-end-to-end-supply-chain-processes",
-        "pers:ministry-of-health",
-        "pers:procurer",
-        "pers:manufacturer-distributor",
-        "pers:regulatory-authority",
-        "pers:central-warehouse",
-        "pers:regional-district-warehouse",
-        "pers:logistics-provider",
-        "pers:health-facility",
-        "pers:community-health-worker",
-        "pers:health-service-user"
-      ],
-      "verbatimQuote": "Supply chain processes such as forecasting and planning, sourcing, procurement, order management, warehouse management and dispensing must operate in harmony to facilitate the flow of health products from manufacturers to the individuals who need them.",
-      "basis": "Captured verbatim in introduction/p-introduction-page-011 and operationalized in BPMN process SC-BP-02 and the 10 supply chain partner personas."
+      "node": "introduction/p-introduction-page-011"
     },
     {
+      "sectionId": "page-012",
       "location": "p12:s1",
       "page": 12,
       "text": "INTRODUCTION IMPLEMENTATION STRATEGY TRACEABILITY ARCHITECTURE ANNEXES COUNTRY EXAMPLES Vital information such as order details, shipping details and inventory data must be exchanged among partners in the supply chain to enable seamless movement of health products.",
@@ -611,24 +911,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "introduction/p-introduction-page-012#p12:s1",
-      "printedPage": "2",
-      "section": "page-012",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-012.md",
-      "category": "captured",
-      "primaryBlockId": "introduction/p-introduction-page-012",
-      "blockIds": [
-        "introduction/p-introduction-page-012",
-        "introduction/bp-sc-bp-02-end-to-end-supply-chain-processes"
-      ],
-      "blockLabels": [
-        "prose:introduction-page-012",
-        "bp:sc-bp-02-end-to-end-supply-chain-processes"
-      ],
-      "verbatimQuote": "Vital information such as order details, shipping details and inventory data must be exchanged among partners in the supply chain to enable seamless movement of health products.",
-      "basis": "Captured verbatim in introduction/p-introduction-page-012 and modeled as cross-lane message flows in BPMN process SC-BP-02."
+      "node": "introduction/p-introduction-page-012"
     },
     {
+      "sectionId": "page-014",
       "location": "p14:s3",
       "page": 14,
       "text": "BEFORE USING THIS HANDBOOK Familiarity with resources such as the Digital Implementation Investment Guide (DIIG) (1), the Supply Chain Information System Maturity Model (SCISMM) (16), the OpenHIE framework (17) and The Open Group Architecture Framework (TOGAF®) (18) is highly recommended before using this handbook.",
@@ -636,24 +922,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "introduction/p-introduction-page-014#p14:s3",
-      "printedPage": "4",
-      "section": "page-014",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-014.md",
-      "category": "captured",
-      "primaryBlockId": "introduction/p-introduction-page-014",
-      "blockIds": [
-        "introduction/p-introduction-page-014",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:introduction-page-014",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "Familiarity with resources such as the Digital Implementation Investment Guide (DIIG) (1), the Supply Chain Information System Maturity Model (SCISMM) (16), the OpenHIE framework (17) and The Open Group Architecture Framework (TOGAF®) (18) is highly recommended before using this handbook.",
-      "basis": "Captured verbatim in introduction/p-introduction-page-014 and referenced by BPMN process SC-BP-01."
+      "node": "front-matter/t-front-abbreviations"
     },
     {
+      "sectionId": "page-015",
       "location": "p15:s7",
       "page": 15,
       "text": "ICT = information and communications technology ITU = International Telecommunication Union M&E = monitoring and evaluation SMART = Standards-based, Machine-readable, Adaptive, Requirements-based and Testable WHO core indicator sets Global digital health index WHO digital health atlas Digital health investment review tool HIS stages of continuous improvement + Conduct an inventory of existing or previously used software applications, ICT systems and other tools to better understand the requirements for reuse and interoperability + Develop a national digital health strategy outlining overarching needs, desired activities and outcomes + Define a vision for how the health system will be strengthened through the use of digital technology + Formulate a digital health investment roadmap to support the national digital health strategy + Plan and identify appropriate digital interventions, alongside the health and data content, to improve health system processes and address programmatic needs + Monitor implementation to ensure digital implementations are functioning as intended and having the desired effect + Foster data-driven adaptive change management within the overall health system + Identify validated health content appropriate for the implementation context + Ensure use of content aligned with identified standards for the future state + Maintain and sustain digital health implementations + Identify risks and appropriate mitigations ASSESSING THE CURRENT STATE AND ENABLING ENVIRONMENT PHASE 01 DEFINING THE FUTURE STATE PHASE 03 M&E OF DIGITAL HEALTH IMPLEMENTATIONS AND FOSTERING DATA USE PHASE 06 DETERMINING HEALTH CONTENT REQUIREMENTS PHASE 05 ESTABLISHING A SHARED UNDERSTANDING AND STRATEGIC PLANNING PHASE 02 IMPLEMENTING, MAINTAINING AND SCALING PHASE 07 PLANNING THE ENTERPRISE ARCHITECTURE PHASE 04 WHO–ITU national eHealth strategy toolkit WHO handbook for health supply chain architecture (this document) WHO classification of digital health interventions WHO guideline: recommendations on digital interventions for health system strengthening ITU digital health platform handbook UNICEF humancentred design toolkit World Bank digital identity toolkit WHO digital clearinghouse Digital implementation investment guide Asian Development Bank total cost of ownership tool WHO handbook for health supply chain architecture (this document) WHO MAPS toolkit: mHealth assessment and planning for scale WHO handbook for digitalizing primary health care Be He@lthy, Be Mobile handbooks for noncommunicable diseases PATH Defining and building a data use culture MEASURE data demand and use of resources WHO SCORE WHO M&E digital health interventions ITU SDG digital investment framework (eGov) Open Health Information Exchange (OpenHIE) PDF for print Online environment The Open Group Architecture Framework (TOGAF) Guidance for investing in digital health Digital Square global goods guidebook Principles for donor alignment Principles for digital development Machinereadable recommendations Digital adaptation kits WHO SMART guidelines STEPS Source: adapted from the 2020 WHO Digital Implementation Investment Guide (1). + Review the current state and develop an architecture blueprint for the design of the digital health implementations + Identify validated open standards to ensure data exchange, systems integration and future-proofing of digital health implementations Introduction 5",
@@ -661,24 +933,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "introduction/p-introduction-page-015#p15:s7",
-      "printedPage": "5",
-      "section": "page-015",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-015.md",
-      "category": "background-fact",
-      "primaryBlockId": "introduction/p-introduction-page-015",
-      "blockIds": [
-        "introduction/p-introduction-page-015",
-        "introduction/f-introduction-fig-5"
-      ],
-      "blockLabels": [
-        "prose:introduction-page-015",
-        "fig:5"
-      ],
-      "verbatimQuote": "WHO guideline: recommendations on digital interventions for health system strengthening",
-      "basis": "Captured verbatim in introduction/p-introduction-page-015 and f-introduction-fig-5 (Fig. 5 DIIG process diagram labels)."
+      "node": "annexes/p-annexes-page-068"
     },
     {
+      "sectionId": "page-016",
       "location": "p16:s3",
       "page": 16,
       "text": "The SMART Guidelines offer a step-by-step pathway that builds five progressive knowledge layers and associated products, to advance the adoption of best clinical and data practices: →L1 Narrative: enhanced guidelines and data recommendations →L2 Operational: digital adaptation kits →L3 Machine-readable: machine-readable recommendations →L4 Executable: reference applications and services →L5 Dynamic: precision health models.",
@@ -686,22 +944,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "introduction/p-introduction-page-016#p16:s3",
-      "printedPage": "6",
-      "section": "page-016",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-016.md",
-      "category": "background-fact",
-      "primaryBlockId": "introduction/p-introduction-page-016",
-      "blockIds": [
-        "introduction/p-introduction-page-016"
-      ],
-      "blockLabels": [
-        "prose:introduction-page-016"
-      ],
-      "verbatimQuote": "The SMART Guidelines offer a step-by-step pathway that builds five progressive knowledge layers and associated products, to advance the adoption of best clinical and data practices:",
-      "basis": "Captured verbatim in introduction/p-introduction-page-016 (background description of WHO SMART Guidelines L1–L5 knowledge layers)."
+      "node": "introduction/p-introduction-page-016"
     },
     {
+      "sectionId": "page-016",
       "location": "p16:s4",
       "page": 16,
       "text": "These steps help developers translate recommendations into specifications and standards, help technologists integrate recommendations into updatable digital systems and help countries localize, make interoperable, institutionalize and update digital systems consistent with evidence-based recommendations (13).",
@@ -709,22 +955,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "introduction/p-introduction-page-016#p16:s4",
-      "printedPage": "6",
-      "section": "page-016",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-016.md",
-      "category": "background-fact",
-      "primaryBlockId": "introduction/p-introduction-page-016",
-      "blockIds": [
-        "introduction/p-introduction-page-016"
-      ],
-      "blockLabels": [
-        "prose:introduction-page-016"
-      ],
-      "verbatimQuote": "These steps help developers translate recommendations into specifications and standards, help technologists integrate recommendations into updatable digital systems and help countries localize, make interoperable, institutionalize and update digital systems consistent with evidence-based recommendations (13).",
-      "basis": "Captured verbatim in introduction/p-introduction-page-016 (background description of WHO SMART Guidelines pathway)."
+      "node": "introduction/p-introduction-page-016"
     },
     {
+      "sectionId": "page-016",
       "location": "p16:s7",
       "page": 16,
       "text": "L1 Narrative Guideline and data recommendations: L2 Operational Semi-structured documentation of operational and functional requirments: L3 \u0007Machine - readable Structured, software-neutral specifications, code, terminology and interoperability standards: L4 \u0007Executable Software that is able to execute static algorithms and interoperable digital components and deliver operational and functional requirements: L5 Dynamic Executable dynamic algorithms that are trained and optimi zed with advance analytics to achieve prioriti ze outcomes: Data, evidence, and impact Research and evidence base Enhanced guidelines Digital adaptation kits Machine-readable recommendations Reference software Precision health models Localisation Evidence from digital implementations Knowledge layers and associated products Country implementation Fig 6.",
@@ -732,22 +966,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "introduction/p-introduction-page-016#p16:s7",
-      "printedPage": "6",
-      "section": "page-016",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-016.md",
-      "category": "background-fact",
-      "primaryBlockId": "introduction/p-introduction-page-016",
-      "blockIds": [
-        "introduction/p-introduction-page-016"
-      ],
-      "blockLabels": [
-        "prose:introduction-page-016"
-      ],
-      "verbatimQuote": "L1 Narrative Guideline and data recommendations:",
-      "basis": "Captured verbatim in introduction/p-introduction-page-016 (Fig. 6 SMART Guidelines knowledge layers caption/labels)."
+      "node": "introduction/p-introduction-page-016"
     },
     {
+      "sectionId": "page-017",
       "location": "p17:s3",
       "page": 17,
       "text": "In particular, they define recommended public health and clinical business processes that use structured, task-based workflows.",
@@ -755,22 +977,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "introduction/p-introduction-page-017#p17:s3",
-      "printedPage": "7",
-      "section": "page-017",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-017.md",
-      "category": "background-fact",
-      "primaryBlockId": "introduction/p-introduction-page-017",
-      "blockIds": [
-        "introduction/p-introduction-page-017"
-      ],
-      "blockLabels": [
-        "prose:introduction-page-017"
-      ],
-      "verbatimQuote": "In particular, they define recommended public health and clinical business processes that use structured, task-based workflows.",
-      "basis": "Captured verbatim in introduction/p-introduction-page-017 (background description of Digital Adaptation Kits)."
+      "node": "introduction/p-introduction-page-017"
     },
     {
+      "sectionId": "page-020",
       "location": "p20:s2",
       "page": 20,
       "text": "The DHSC strategy should align closely with the country’s IT strategy, health strategy, medicines and health product strategies, supply chain strategy and digital health strategy.",
@@ -778,26 +988,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch01-dhsc-strategy/p-ch01-page-020#p20:s2",
-      "printedPage": "10",
-      "section": "page-020",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-020.md",
-      "category": "captured",
-      "primaryBlockId": "ch01-dhsc-strategy/p-ch01-page-020",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-020",
-        "introduction/t-introduction-table-1",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch01-page-020",
-        "tbl:1",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The DHSC strategy should align closely with the country’s IT strategy, health strategy, medicines and health product strategies, supply chain strategy and digital health strategy.",
-      "basis": "Captured verbatim in ch01-dhsc-strategy/p-ch01-page-020 (Fig. 8 aligned national strategies) and summarized in Table 1 and BPMN process SC-BP-01."
+      "node": "ch01-dhsc-strategy/p-ch01-page-020"
     },
     {
+      "sectionId": "page-020",
       "location": "p20:s3",
       "page": 20,
       "text": "National priorities should be the driving force behind DHSC implementation initiatives.",
@@ -805,24 +999,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch01-dhsc-strategy/p-ch01-page-020#p20:s3",
-      "printedPage": "10",
-      "section": "page-020",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-020.md",
-      "category": "captured",
-      "primaryBlockId": "ch01-dhsc-strategy/p-ch01-page-020",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-020",
-        "ch01-dhsc-strategy/p-ch01-page-019"
-      ],
-      "blockLabels": [
-        "prose:ch01-page-020",
-        "prose:ch01-page-019"
-      ],
-      "verbatimQuote": "National priorities should be the driving force behind DHSC implementation initiatives.",
-      "basis": "Captured verbatim in ch01-dhsc-strategy/p-ch01-page-020 and linked to Ch 1 guiding principles (p-ch01-page-019)."
+      "node": "ch01-dhsc-strategy/p-ch01-page-020"
     },
     {
+      "sectionId": "page-022",
       "location": "p22:s9",
       "page": 22,
       "text": "The TWG should support the overall governance and planning of DHSC implementation activities, and the steering committee should provide leadership and oversight for all implementation activities. » DHSC stakeholder matrix » DHSC steering committee terms of reference » DHSC TWG terms of reference BEST PRACTICES Ð Secure upfront buy-in and support from key senior leaders within the MOH who will champion the cause.",
@@ -830,28 +1010,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch01-dhsc-strategy/p-ch01-page-022#p22:s9",
-      "printedPage": "12",
-      "section": "page-022",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-022.md",
-      "category": "captured",
-      "primaryBlockId": "ch01-dhsc-strategy/p-ch01-page-022",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-022",
-        "annexes/pers-steering-committee-sponsor",
-        "annexes/t-annexes-annex-2",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch01-page-022",
-        "pers:steering-committee-sponsor",
-        "tbl:annex-2",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The TWG should support the overall governance and planning of DHSC implementation activities, and the steering committee should provide leadership and oversight for all implementation activities.",
-      "basis": "Captured verbatim in ch01-dhsc-strategy/p-ch01-page-022 (Ch 1 Step 1), modeled in persona pers:steering-committee-sponsor, Annex 2 table tbl:annex-2, and BPMN process SC-BP-01."
+      "node": "ch01-dhsc-strategy/p-ch01-page-022"
     },
     {
+      "sectionId": "page-023",
       "location": "p23:s10",
       "page": 23,
       "text": "Prioritize challenges, problems and needs that should be addressed within a defined time frame (e.g., one year, three years or five years). » Health supply chain digital transformation priorities RESOURCES National Supply Chain Assessment (NSCA) Toolkit (22) Template for prioritizing DHSC challenges (Annex 3) Illustrative template that maps today’s challenges to future outcomes (Annex 4) Defining a holistic DHSC strategy 13",
@@ -859,28 +1021,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch01-dhsc-strategy/p-ch01-page-023#p23:s10",
-      "printedPage": "13",
-      "section": "page-023",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-023.md",
-      "category": "captured",
-      "primaryBlockId": "ch01-dhsc-strategy/p-ch01-page-023",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-023",
-        "annexes/t-annexes-annex-3",
-        "annexes/t-annexes-annex-4",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch01-page-023",
-        "tbl:annex-3",
-        "tbl:annex-4",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "Prioritize challenges, problems and needs that should be addressed within a defined time frame (e.g., one year, three years or five years).",
-      "basis": "Captured verbatim in ch01-dhsc-strategy/p-ch01-page-023 (Ch 1 Step 2), supported by Annex 3 (tbl:annex-3) and Annex 4 (tbl:annex-4) templates and BPMN process SC-BP-01."
+      "node": "annexes/t-annexes-annex-4"
     },
     {
+      "sectionId": "page-024",
       "location": "p24:s19",
       "page": 24,
       "text": "The goals should link to the DHSC implementation activities.",
@@ -888,26 +1032,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch01-dhsc-strategy/p-ch01-page-024#p24:s19",
-      "printedPage": "14",
-      "section": "page-024",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-024.md",
-      "category": "captured",
-      "primaryBlockId": "ch01-dhsc-strategy/p-ch01-page-024",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-024",
-        "ch02-dhsc-architecture/p-ch02-page-042",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch01-page-024",
-        "prose:ch02-page-042",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The goals should link to the DHSC implementation activities.",
-      "basis": "Captured verbatim in ch01-dhsc-strategy/p-ch01-page-024 (Ch 1 Step 3) and operationalized in Ch 2 Step 3 (p-ch02-page-042) and BPMN process SC-BP-01."
+      "node": "ch01-dhsc-strategy/p-ch01-page-024"
     },
     {
+      "sectionId": "page-028",
       "location": "p28:s2",
       "page": 28,
       "text": "The architecture should comprehensively support all the supply chain functions, their data requirements and the need for interoperability between not only various supply chain functions but also between the entire ecosystem and other digital health systems (including health financing and insurance systems and regulatory systems).",
@@ -915,24 +1043,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-028#p28:s2",
-      "printedPage": "18",
-      "section": "page-028",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-028.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-028",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-028",
-        "ch02-dhsc-architecture/f-ch02-fig-14"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-028",
-        "fig:14"
-      ],
-      "verbatimQuote": "The architecture should comprehensively support all the supply chain functions, their data requirements and the need for interoperability between not only various supply chain functions but also between the entire ecosystem and other digital health systems (including health financing and insurance systems and regulatory systems).",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-028 and modeled in Fig. 14 DHSC architecture framework (f-ch02-fig-14)."
+      "node": "ch02-dhsc-architecture/p-ch02-page-028"
     },
     {
+      "sectionId": "page-028",
       "location": "p28:s3",
       "page": 28,
       "text": "The DHSC architecture should align with the priorities of the country’s information and communications technology (ICT) architecture and the digital health architecture.",
@@ -940,24 +1054,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-028#p28:s3",
-      "printedPage": "18",
-      "section": "page-028",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-028.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-028",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-028",
-        "ch02-dhsc-architecture/f-ch02-fig-13"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-028",
-        "fig:13"
-      ],
-      "verbatimQuote": "The DHSC architecture should align with the priorities of the country’s information and communications technology (ICT) architecture and the digital health architecture.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-028 and aligned with DIIG enterprise architecture (f-ch02-fig-13)."
+      "node": "ch02-dhsc-architecture/p-ch02-page-028"
     },
     {
+      "sectionId": "page-028",
       "location": "p28:s9",
       "page": 28,
       "text": "Health supply chains should be able to quickly respond to exceptions such as stockouts and quality issues like product recalls.",
@@ -965,26 +1065,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-028#p28:s9",
-      "printedPage": "18",
-      "section": "page-028",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-028.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-028",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-028",
-        "ch02-dhsc-architecture/f-ch02-fig-11",
-        "ch04-traceability/bp-sc-bp-03-centralized-track-and-trace"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-028",
-        "fig:11",
-        "bp:sc-bp-03-centralized-track-and-trace"
-      ],
-      "verbatimQuote": "Health supply chains should be able to quickly respond to exceptions such as stockouts and quality issues like product recalls.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-028, illustrated in Fig. 11 (f-ch02-fig-11), and operationalized in BPMN recall workflow SC-BP-03."
+      "node": "ch02-dhsc-architecture/p-ch02-page-028"
     },
     {
+      "sectionId": "page-028",
       "location": "p28:s10",
       "page": 28,
       "text": "More importantly, they should support patient safety by ensuring that the products dispensed to and consumed by individuals are quality assured and are not falsified.",
@@ -992,26 +1076,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-028#p28:s10",
-      "printedPage": "18",
-      "section": "page-028",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-028.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-028",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-028",
-        "introduction/pers-health-service-user",
-        "ch04-traceability/bp-sc-bp-03-centralized-track-and-trace"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-028",
-        "pers:health-service-user",
-        "bp:sc-bp-03-centralized-track-and-trace"
-      ],
-      "verbatimQuote": "More importantly, they should support patient safety by ensuring that the products dispensed to and consumed by individuals are quality assured and are not falsified.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-028 and operationalized in persona pers:health-service-user and BPMN verification/recall process SC-BP-03."
+      "node": "ch02-dhsc-architecture/p-ch02-page-028"
     },
     {
+      "sectionId": "page-032",
       "location": "p32:s15",
       "page": 32,
       "text": "A key mandate of the TWG should be oversight in this area.",
@@ -1019,26 +1087,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-032#p32:s15",
-      "printedPage": "22",
-      "section": "page-032",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-032.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-032",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-032",
-        "annexes/pers-steering-committee-sponsor",
-        "annexes/pers-solution-architect"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-032",
-        "pers:steering-committee-sponsor",
-        "pers:solution-architect"
-      ],
-      "verbatimQuote": "A key mandate of the TWG should be oversight in this area.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-032 (Ch 2 Step 2 master data and standards governance oversight by the TWG)."
+      "node": "ch02-dhsc-architecture/p-ch02-page-032"
     },
     {
+      "sectionId": "page-032",
       "location": "p32:s18",
       "page": 32,
       "text": "However, actual consumption should include what is dispensed to individuals, product expiries, wastages and inventory shrinkage.",
@@ -1046,24 +1098,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-032#p32:s18",
-      "printedPage": "22",
-      "section": "page-032",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-032.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-032",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-032",
-        "introduction/pers-health-facility"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-032",
-        "pers:health-facility"
-      ],
-      "verbatimQuote": "However, actual consumption should include what is dispensed to individuals, product expiries, wastages and inventory shrinkage.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-032 (Ch 2 Step 2 actual consumption data requirements)."
+      "node": "ch02-dhsc-architecture/p-ch02-page-032"
     },
     {
+      "sectionId": "page-032",
       "location": "p32:s19",
       "page": 32,
       "text": "Systems, especially at the last mile of the supply chain, should have the ability to track and capture batch details and serial numbers, where available, as part of product expiries, wastages, inventory shrinkage and dispensation.",
@@ -1071,26 +1109,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-032#p32:s19",
-      "printedPage": "22",
-      "section": "page-032",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-032.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-032",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-032",
-        "introduction/pers-health-facility",
-        "ch04-traceability/bp-sc-bp-03-centralized-track-and-trace"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-032",
-        "pers:health-facility",
-        "bp:sc-bp-03-centralized-track-and-trace"
-      ],
-      "verbatimQuote": "Systems, especially at the last mile of the supply chain, should have the ability to track and capture batch details and serial numbers, where available, as part of product expiries, wastages, inventory shrinkage and dispensation.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-032 and modeled in last-mile dispensation and track-and-trace process SC-BP-03."
+      "node": "ch02-dhsc-architecture/p-ch02-page-032"
     },
     {
+      "sectionId": "page-033",
       "location": "p33:s3",
       "page": 33,
       "text": "13 SHARED SERVICES DATA SERVICES DATA SOURCES Institution-based health info. system and data sources Population-based health info system and data sources Analytics, dashboards, aids, repositories Digital health platform Shared services Business domain services Registry services Terminology services Health worker registry Client registry Product registry Facility registry Logistics mgmt info system Shared health record Health mgmt info system Digital and nondigital data sets sourced from processes that systematically record information within health institutions and facilities (e.g., Service Availability and Readiness Assessment) Provides software capabilities, or “services,” that are specific to health care and may be used by other applications across the digital health enterprise Provides software capabilities, or “services,” that are canonical/ master “lists” and are enforced by specified governance mechanisms Digital and nondigital data sets sourced from processes that systematically record information about members of a population (e.g., census, Demographic and Health Surveys) Data tools that are used to facilitate decision- making (e.g., GIS) INTER- OPERABILITY LAYER Enabling components Provides software capabilities to support managed data exchange and interoperability between applications and services across the digital health enterprise APPLICATIONS WITH INTERVENTIONS FOR: Health programme Use case Health programme Use case A B C D Point-of-service applications Applications that are reused within more than one use case or health programme area Applications that are uniquely used for only one use case or health programme area Investment in new software Funded software under development Investment in strengthening software Software for decommissioning Funded fully functional software Investment in scaling functional software LEGEND Reused point-ofservice application Unique point-ofservice application ENTERPRISE EXTERNAL SYSTEMS Nonhealth digital applications, services, interoperabilityenabling components and data sources with capabilities that can be used by the digital health enterprise (e.g., national unique identification system, national procurement system, national weather service data sources) Source: adapted from the 2020 WHO Digital Implementation Investment Guide (1).",
@@ -1098,24 +1120,10 @@
         "permission"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-033#p33:s3",
-      "printedPage": "23",
-      "section": "page-033",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-033.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-033",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-033",
-        "ch02-dhsc-architecture/f-ch02-fig-13"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-033",
-        "fig:13"
-      ],
-      "verbatimQuote": "Provides software capabilities, or “services,” that are specific to health care and may be used by other applications across the digital health enterprise",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-033 and Fig. 13 (f-ch02-fig-13 DIIG digital health enterprise architecture framework)."
+      "node": "annexes/p-annexes-page-068"
     },
     {
+      "sectionId": "page-034",
       "location": "p34:s7",
       "page": 34,
       "text": "EXTERNAL SYSTEMS Systems and data repositories (e.g., product master data and serialization data) that may be used by the DHSC enterprise.",
@@ -1123,24 +1131,10 @@
         "permission"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-034#p34:s7",
-      "printedPage": "24",
-      "section": "page-034",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-034.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-034",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-034",
-        "ch02-dhsc-architecture/f-ch02-fig-14"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-034",
-        "fig:14"
-      ],
-      "verbatimQuote": "EXTERNAL SYSTEMS Systems and data repositories (e.g., product master data and serialization data) that may be used by the DHSC enterprise.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-034 and modeled in Fig. 14 DHSC architecture framework (f-ch02-fig-14)."
+      "node": "ch02-dhsc-architecture/p-ch02-page-034"
     },
     {
+      "sectionId": "page-035",
       "location": "p35:s16",
       "page": 35,
       "text": "These resources specify what capabilities should be supported by each of the components within the “health supply chain information systems” layer. → Data services.",
@@ -1148,24 +1142,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-035#p35:s16",
-      "printedPage": "25",
-      "section": "page-035",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-035.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-035",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-035",
-        "ch02-dhsc-architecture/f-ch02-fig-14"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-035",
-        "fig:14"
-      ],
-      "verbatimQuote": "These resources specify what capabilities should be supported by each of the components within the “health supply chain information systems” layer.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-035 (HSCIS layer capability guidance from SCISMM and TSS v2)."
+      "node": "ch02-dhsc-architecture/p-ch02-page-035"
     },
     {
+      "sectionId": "page-035",
       "location": "p35:s24",
       "page": 35,
       "text": "Illustrative architectural approaches and governance options Countries often have a mixture of needs and capabilities that should be reflected in their DHSC architecture.",
@@ -1173,24 +1153,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-035#p35:s24",
-      "printedPage": "25",
-      "section": "page-035",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-035.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-035",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-035",
-        "ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-035",
-        "dt:sc-dt-01-scismm-architecture-selection"
-      ],
-      "verbatimQuote": "Countries often have a mixture of needs and capabilities that should be reflected in their DHSC architecture.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-035 and formalized as DMN 1.3 decision table SC-DT-01 (dt-sc-dt-01-scismm-architecture-selection)."
+      "node": "ch02-dhsc-architecture/p-ch02-page-035"
     },
     {
+      "sectionId": "page-040",
       "location": "p40:s7",
       "page": 40,
       "text": "19 In addition to the architectural approaches detailed above, SCISMM, TSS v2 and the IHE white paper (23) can provide guidance on the health supply chain functions that information systems should support to minimize manual tasks and improve data quality and availability.",
@@ -1198,26 +1164,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-040#p40:s7",
-      "printedPage": "30",
-      "section": "page-040",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-040.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-040",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-040",
-        "ch02-dhsc-architecture/f-ch02-fig-19",
-        "ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-040",
-        "fig:19",
-        "dt:sc-dt-01-scismm-architecture-selection"
-      ],
-      "verbatimQuote": "In addition to the architectural approaches detailed above, SCISMM, TSS v2 and the IHE white paper (23) can provide guidance on the health supply chain functions that information systems should support to minimize manual tasks and improve data quality and availability.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-040 and linked to DMN decision table SC-DT-01."
+      "node": "ch02-dhsc-architecture/p-ch02-page-040"
     },
     {
+      "sectionId": "page-040",
       "location": "p40:s9",
       "page": 40,
       "text": "As noted earlier, one benefit that the DHSC architecture should deliver is timely visibility of the end-to-end health supply chain so leaders can make informed decisions to deliver health products to individuals when and where they need them.",
@@ -1225,26 +1175,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch02-dhsc-architecture/p-ch02-page-040#p40:s9",
-      "printedPage": "30",
-      "section": "page-040",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-040.md",
-      "category": "captured",
-      "primaryBlockId": "ch02-dhsc-architecture/p-ch02-page-040",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-040",
-        "ch02-dhsc-architecture/p-ch02-page-041",
-        "ch02-dhsc-architecture/f-ch02-fig-20"
-      ],
-      "blockLabels": [
-        "prose:ch02-page-040",
-        "prose:ch02-page-041",
-        "fig:20"
-      ],
-      "verbatimQuote": "As noted earlier, one benefit that the DHSC architecture should deliver is timely visibility of the end-to-end health supply chain so leaders can make informed decisions to deliver health products to individuals when and where they need them.",
-      "basis": "Captured verbatim in ch02-dhsc-architecture/p-ch02-page-040 and illustrated in Fig. 20 (f-ch02-fig-20 cross-enterprise analytics services)."
+      "node": "ch02-dhsc-architecture/p-ch02-page-040"
     },
     {
+      "sectionId": "page-046",
       "location": "p46:s9",
       "page": 46,
       "text": "As outlined in the upcoming steps, each intervention should include a project implementation plan, an operational plan and a budget that considers the total cost of ownership.",
@@ -1252,26 +1186,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch03-implementation-and-operations/p-ch03-page-046#p46:s9",
-      "printedPage": "36",
-      "section": "page-046",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-046.md",
-      "category": "captured",
-      "primaryBlockId": "ch03-implementation-and-operations/p-ch03-page-046",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-046",
-        "ch03-implementation-and-operations/t-ch03-table-2",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch03-page-046",
-        "tbl:2",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "As outlined in the upcoming steps, each intervention should include a project implementation plan, an operational plan and a budget that considers the total cost of ownership.",
-      "basis": "Captured verbatim in ch03-implementation-and-operations/p-ch03-page-046 (accompanying Table 2, tbl:2) and modeled as Ch 3 Steps 1–3 in BPMN process SC-BP-01."
+      "node": "ch03-implementation-and-operations/p-ch03-page-046"
     },
     {
+      "sectionId": "page-047",
       "location": "p47:s1",
       "page": 47,
       "text": "IMPLEMENTATION INTRODUCTION TRACEABILITY ANNEXES STRATEGY ARCHITECTURE COUNTRY EXAMPLES The project charter should include details about the following: →scope →stakeholders →timeline →budget →risks →deliverables →quality criteria →governance mechanism.",
@@ -1279,28 +1197,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch03-implementation-and-operations/p-ch03-page-047#p47:s1",
-      "printedPage": "37",
-      "section": "page-047",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-047.md",
-      "category": "captured",
-      "primaryBlockId": "ch03-implementation-and-operations/p-ch03-page-047",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-047",
-        "annexes/pers-steering-committee-sponsor",
-        "annexes/pers-project-manager-ba",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch03-page-047",
-        "pers:steering-committee-sponsor",
-        "pers:project-manager-ba",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The project charter should include details about the following:",
-      "basis": "Captured verbatim in ch03-implementation-and-operations/p-ch03-page-047 (Ch 3 Step 1 project charter scope, stakeholders, timeline, budget, risks, deliverables, quality criteria, governance mechanism)."
+      "node": "ch03-implementation-and-operations/p-ch03-page-047"
     },
     {
+      "sectionId": "page-047",
       "location": "p47:s2",
       "page": 47,
       "text": "The project management plan should include the following: →detailed project implementation plan with activities, timelines and milestones for each phase (such as design, development, testing and deployment); →stakeholder matrix with responsibilities and accountabilities (such as a RACI matrix – responsible, accountable, consulted, informed); →resource details, including people, hardware and software; →budget details for phases; →communication plan, including frequency of project management and technical meetings, issue management and escalation process; →risk register with mitigations; →change control process; →change management plan (including training and rollout plan); and →quality management and closure plan.",
@@ -1308,28 +1208,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch03-implementation-and-operations/p-ch03-page-047#p47:s2",
-      "printedPage": "37",
-      "section": "page-047",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-047.md",
-      "category": "captured",
-      "primaryBlockId": "ch03-implementation-and-operations/p-ch03-page-047",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-047",
-        "annexes/pers-project-manager-ba",
-        "annexes/t-annexes-annex-6",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch03-page-047",
-        "pers:project-manager-ba",
-        "tbl:annex-6",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The project management plan should include the following:",
-      "basis": "Captured verbatim in ch03-implementation-and-operations/p-ch03-page-047 (Ch 3 Step 1 project management plan elements, linked to Annex 6 risk register tbl:annex-6 and persona pers:project-manager-ba)."
+      "node": "ch03-implementation-and-operations/p-ch03-page-047"
     },
     {
+      "sectionId": "page-047",
       "location": "p47:s3",
       "page": 47,
       "text": "The project performance monitoring and analysis framework should include the following: →project baseline (such as initial schedule, budget and indicators related to the supply chain process that is being digitalized); and →reporting schedule, mechanism and template that includes various aspects such as schedule, quality, budget and risks.",
@@ -1337,26 +1219,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch03-implementation-and-operations/p-ch03-page-047#p47:s3",
-      "printedPage": "37",
-      "section": "page-047",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-047.md",
-      "category": "captured",
-      "primaryBlockId": "ch03-implementation-and-operations/p-ch03-page-047",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-047",
-        "annexes/pers-project-manager-ba",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch03-page-047",
-        "pers:project-manager-ba",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The project performance monitoring and analysis framework should include the following:",
-      "basis": "Captured verbatim in ch03-implementation-and-operations/p-ch03-page-047 (Ch 3 Step 1 project performance baseline and reporting schedule)."
+      "node": "ch03-implementation-and-operations/p-ch03-page-047"
     },
     {
+      "sectionId": "page-048",
       "location": "p48:s1",
       "page": 48,
       "text": "IMPLEMENTATION INTRODUCTION STRATEGY TRACEABILITY ARCHITECTURE ANNEXES COUNTRY EXAMPLES The operations and sustainability plan should include the following: →details of stakeholders who will own and maintain the DHSC system/application; →required resources (such as maintenance personnel, hardware, network infrastructure and backup power); →recurring knowledge management needs (including training, job aid updates, recruitments and job rotations); →recurring costs for the required resources, system subscriptions, knowledge management, monitoring and evaluation, and efforts to maintain and operate the application; →plan for data backups and system redundancy to mitigate the impact of system failures; →change management and governance process for new requirements arising from evolving needs; and →financial strategy to cover all recurring operational costs.",
@@ -1364,28 +1230,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch03-implementation-and-operations/p-ch03-page-048#p48:s1",
-      "printedPage": "38",
-      "section": "page-048",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-048.md",
-      "category": "captured",
-      "primaryBlockId": "ch03-implementation-and-operations/p-ch03-page-048",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-048",
-        "annexes/pers-project-manager-ba",
-        "annexes/pers-system-administrator-support",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch03-page-048",
-        "pers:project-manager-ba",
-        "pers:system-administrator-support",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The operations and sustainability plan should include the following:",
-      "basis": "Captured verbatim in ch03-implementation-and-operations/p-ch03-page-048 (Ch 3 Step 2 operations and sustainability plan elements)."
+      "node": "ch03-implementation-and-operations/p-ch03-page-048"
     },
     {
+      "sectionId": "page-048",
       "location": "p48:s2",
       "page": 48,
       "text": "The operational performance monitoring and analysis framework should include the following: →baseline KPIs related to the supply chain process being digitalized; and →reporting schedule, mechanism and template that includes various aspects such as operational costs, risks, KPIs, and any constraints and issues.",
@@ -1393,28 +1241,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch03-implementation-and-operations/p-ch03-page-048#p48:s2",
-      "printedPage": "38",
-      "section": "page-048",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-048.md",
-      "category": "captured",
-      "primaryBlockId": "ch03-implementation-and-operations/p-ch03-page-048",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-048",
-        "annexes/pers-project-manager-ba",
-        "annexes/t-annexes-annex-5",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch03-page-048",
-        "pers:project-manager-ba",
-        "tbl:annex-5",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The operational performance monitoring and analysis framework should include the following:",
-      "basis": "Captured verbatim in ch03-implementation-and-operations/p-ch03-page-048 (Ch 3 Step 2 operational performance KPIs and reporting framework)."
+      "node": "ch03-implementation-and-operations/p-ch03-page-048"
     },
     {
+      "sectionId": "page-048",
       "location": "p48:s3",
       "page": 48,
       "text": "Develop an operational plan for each DHSC intervention 2 Step The operational plan should determine the necessary resources and the effort needed to effectively maintain and run the DHSC systems.",
@@ -1422,26 +1252,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch03-implementation-and-operations/p-ch03-page-048#p48:s3",
-      "printedPage": "38",
-      "section": "page-048",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-048.md",
-      "category": "captured",
-      "primaryBlockId": "ch03-implementation-and-operations/p-ch03-page-048",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-048",
-        "annexes/pers-system-administrator-support",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "blockLabels": [
-        "prose:ch03-page-048",
-        "pers:system-administrator-support",
-        "bp:sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "verbatimQuote": "The operational plan should determine the necessary resources and the effort needed to effectively maintain and run the DHSC systems.",
-      "basis": "Captured verbatim in ch03-implementation-and-operations/p-ch03-page-048 and operationalized in persona pers:system-administrator-support and BPMN process SC-BP-01."
+      "node": "ch03-implementation-and-operations/p-ch03-page-048"
     },
     {
+      "sectionId": "page-054",
       "location": "p54:s24",
       "page": 54,
       "text": "This handbook does not recommend a particular model because the best choice depends on the context and various other factors.",
@@ -1449,24 +1263,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "ch04-traceability/p-ch04-page-054#p54:s24",
-      "printedPage": "44",
-      "section": "page-054",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-054.md",
-      "category": "captured",
-      "primaryBlockId": "ch04-traceability/p-ch04-page-054",
-      "blockIds": [
-        "ch04-traceability/p-ch04-page-054",
-        "ch04-traceability/dt-sc-dt-02-traceability-model-selection"
-      ],
-      "blockLabels": [
-        "prose:ch04-page-054",
-        "dt:sc-dt-02-traceability-model-selection"
-      ],
-      "verbatimQuote": "This handbook does not recommend a particular model because the best choice depends on the context and various other factors.",
-      "basis": "Captured verbatim in ch04-traceability/p-ch04-page-054 and formalized as DMN 1.3 decision table SC-DT-02 (dt-sc-dt-02-traceability-model-selection)."
+      "node": "ch04-traceability/p-ch04-page-054"
     },
     {
+      "sectionId": "page-056",
       "location": "p56:s2",
       "page": 56,
       "text": "Traceability processes should be designed according to a structured architecture that is independent of the technology used to capture and share data.",
@@ -1474,26 +1274,10 @@
         "obligation"
       ],
       "state": "captured",
-      "node": "ch04-traceability/p-ch04-page-056#p56:s2",
-      "printedPage": "46",
-      "section": "page-056",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-056.md",
-      "category": "captured",
-      "primaryBlockId": "ch04-traceability/p-ch04-page-056",
-      "blockIds": [
-        "ch04-traceability/p-ch04-page-056",
-        "ch04-traceability/pers-system-dhsc-traceability-hub",
-        "ch04-traceability/bp-sc-bp-03-centralized-track-and-trace"
-      ],
-      "blockLabels": [
-        "prose:ch04-page-056",
-        "pers:system-dhsc-traceability-hub",
-        "bp:sc-bp-03-centralized-track-and-trace"
-      ],
-      "verbatimQuote": "Traceability processes should be designed according to a structured architecture that is independent of the technology used to capture and share data.",
-      "basis": "Captured verbatim in ch04-traceability/p-ch04-page-056 and operationalized in system persona pers:system-dhsc-traceability-hub and BPMN process SC-BP-03."
+      "node": "ch04-traceability/p-ch04-page-056"
     },
     {
+      "sectionId": "page-065",
       "location": "p65:s45",
       "page": 65,
       "text": "WHO SMART guidelines: optimising country-level use of guideline recommendations in the digital age.",
@@ -1501,22 +1285,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "references/p-references-page-065#p65:s45",
-      "printedPage": "55",
-      "section": "page-065",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-065.md",
-      "category": "editorial",
-      "primaryBlockId": "references/p-references-page-065",
-      "blockIds": [
-        "references/p-references-page-065"
-      ],
-      "blockLabels": [
-        "prose:references-page-065"
-      ],
-      "verbatimQuote": "WHO SMART guidelines: optimising country-level use of guideline recommendations in the digital age.",
-      "basis": "Captured verbatim in references/p-references-page-065 (Reference 12 bibliographic title containing the word 'recommendations')."
+      "node": "references/p-references-page-065"
     },
     {
+      "sectionId": "page-065",
       "location": "p65:s70",
       "page": 65,
       "text": "Digital adaptation kit for antenatal care: operational requirements for implementing WHO recommendations in digital systems.",
@@ -1524,22 +1296,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "references/p-references-page-065#p65:s70",
-      "printedPage": "55",
-      "section": "page-065",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-065.md",
-      "category": "editorial",
-      "primaryBlockId": "references/p-references-page-065",
-      "blockIds": [
-        "references/p-references-page-065"
-      ],
-      "blockLabels": [
-        "prose:references-page-065"
-      ],
-      "verbatimQuote": "Digital adaptation kit for antenatal care: operational requirements for implementing WHO recommendations in digital systems.",
-      "basis": "Captured verbatim in references/p-references-page-065 (Reference 19 bibliographic title containing the word 'recommendations')."
+      "node": "references/p-references-page-065"
     },
     {
+      "sectionId": "page-065",
       "location": "p65:s89",
       "page": 65,
       "text": "Recommendations on common technical denominators for traceability systems for medicines to allow for interoperability.",
@@ -1547,22 +1307,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "references/p-references-page-065#p65:s89",
-      "printedPage": "55",
-      "section": "page-065",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-065.md",
-      "category": "editorial",
-      "primaryBlockId": "references/p-references-page-065",
-      "blockIds": [
-        "references/p-references-page-065"
-      ],
-      "blockLabels": [
-        "prose:references-page-065"
-      ],
-      "verbatimQuote": "Recommendations on common technical denominators for traceability systems for medicines to allow for interoperability.",
-      "basis": "Captured verbatim in references/p-references-page-065 (Reference 24 ICMRA bibliographic title beginning with 'Recommendations')."
+      "node": "references/p-references-page-065"
     },
     {
+      "sectionId": "page-065",
       "location": "p65:s90",
       "page": 65,
       "text": "International Coalition of Medicines Regulatory Authorities (ICMRA); 2021 (https://www.icmra.info/drupal/sites/default/ files/2021-08/recommendations_on_common_technical_denominators_for_T&T_systems_to_allow_for_interoperability_final.pdf).",
@@ -1570,1843 +1318,10 @@
         "recommendation"
       ],
       "state": "captured",
-      "node": "references/p-references-page-065#p65:s90",
-      "printedPage": "55",
-      "section": "page-065",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-065.md",
-      "category": "editorial",
-      "primaryBlockId": "references/p-references-page-065",
-      "blockIds": [
-        "references/p-references-page-065"
-      ],
-      "blockLabels": [
-        "prose:references-page-065"
-      ],
-      "verbatimQuote": "recommendations_on_common_technical_denominators_for_T&T_systems_to_allow_for_interoperability_final.pdf",
-      "basis": "Captured verbatim in references/p-references-page-065 (Reference 24 ICMRA URL filename containing 'recommendations')."
+      "node": "references/p-references-page-065"
     }
   ],
-  "pages": [
-    {
-      "page": 1,
-      "printedPage": "cover",
-      "section": "page-001",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-001.md",
-      "category": "editorial",
-      "note": "Cover, half-title, blank divider, or back cover",
-      "blockIds": [],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 2,
-      "printedPage": "ii",
-      "section": "page-002",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-002.md",
-      "category": "editorial",
-      "note": "Cover, half-title, blank divider, or back cover",
-      "blockIds": [],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 3,
-      "printedPage": "iii",
-      "section": "page-003",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-003.md",
-      "category": "editorial",
-      "note": "Cover, half-title, blank divider, or back cover",
-      "blockIds": [],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 4,
-      "printedPage": "iv",
-      "section": "page-004",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-004.md",
-      "category": "editorial",
-      "note": "WHO imprint, copyright, and CC BY-NC-SA 3.0 IGO licence page",
-      "blockIds": [],
-      "normative": 6,
-      "captured": 0,
-      "excluded": 6,
-      "unaccounted": 0,
-      "capturedPct": 0,
-      "accountedForPct": 100
-    },
-    {
-      "page": 5,
-      "printedPage": "v",
-      "section": "page-005",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-005.md",
-      "category": "editorial",
-      "note": "Contents page (outline used by scripts/folio/seed_from_l1.py)",
-      "blockIds": [],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 6,
-      "printedPage": "vi",
-      "section": "page-006",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-006.md",
-      "category": "editorial",
-      "note": "Acknowledgements (front-matter/p-front-page-006)",
-      "blockIds": [
-        "front-matter/p-front-page-006"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 7,
-      "printedPage": "vii",
-      "section": "page-007",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-007.md",
-      "category": "background-fact",
-      "note": "Abbreviations and acronyms table (tbl:abbreviations)",
-      "blockIds": [
-        "front-matter/t-front-abbreviations"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 8,
-      "printedPage": "viii",
-      "section": "page-008",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-008.md",
-      "category": "background-fact",
-      "note": "Front-matter Glossary definitions",
-      "blockIds": [
-        "front-matter/p-front-page-008"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 9,
-      "printedPage": "ix",
-      "section": "page-009",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-009.md",
-      "category": "background-fact",
-      "note": "Front-matter Glossary definitions",
-      "blockIds": [
-        "front-matter/p-front-page-009"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 10,
-      "printedPage": "x",
-      "section": "page-010",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-010.md",
-      "category": "editorial",
-      "note": "Cover, half-title, blank divider, or back cover",
-      "blockIds": [],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 11,
-      "printedPage": "1",
-      "section": "page-011",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-011.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "introduction/pers-central-warehouse",
-        "introduction/p-introduction-page-011",
-        "introduction/pers-community-health-worker",
-        "introduction/pers-regulatory-authority",
-        "introduction/pers-ministry-of-health",
-        "introduction/pers-health-facility",
-        "introduction/pers-logistics-provider",
-        "introduction/pers-regional-district-warehouse",
-        "introduction/pers-manufacturer-distributor",
-        "introduction/bp-sc-bp-02-end-to-end-supply-chain-processes",
-        "introduction/pers-health-service-user",
-        "introduction/pers-procurer"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 12,
-      "printedPage": "2",
-      "section": "page-012",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-012.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "introduction/p-introduction-page-012"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 13,
-      "printedPage": "3",
-      "section": "page-013",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-013.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "introduction/p-introduction-page-013"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 14,
-      "printedPage": "4",
-      "section": "page-014",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-014.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "introduction/p-introduction-page-014",
-        "introduction/bp-sc-bp-01-stepwise-dhsc-transformation"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 15,
-      "printedPage": "5",
-      "section": "page-015",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-015.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "introduction/p-introduction-page-015",
-        "introduction/f-introduction-fig-5"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 16,
-      "printedPage": "6",
-      "section": "page-016",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-016.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "introduction/p-introduction-page-016"
-      ],
-      "normative": 3,
-      "captured": 3,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 17,
-      "printedPage": "7",
-      "section": "page-017",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-017.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "introduction/p-introduction-page-017"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 18,
-      "printedPage": "8",
-      "section": "page-018",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-018.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "introduction/p-introduction-page-018",
-        "introduction/t-introduction-table-1"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 19,
-      "printedPage": "9",
-      "section": "page-019",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-019.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-019"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 20,
-      "printedPage": "10",
-      "section": "page-020",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-020.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-020"
-      ],
-      "normative": 2,
-      "captured": 2,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 21,
-      "printedPage": "11",
-      "section": "page-021",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-021.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-021"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 22,
-      "printedPage": "12",
-      "section": "page-022",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-022.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-022"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 23,
-      "printedPage": "13",
-      "section": "page-023",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-023.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-023"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 24,
-      "printedPage": "14",
-      "section": "page-024",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-024.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-024"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 25,
-      "printedPage": "15",
-      "section": "page-025",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-025.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-025"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 26,
-      "printedPage": "16",
-      "section": "page-026",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-026.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch01-dhsc-strategy/p-ch01-page-026",
-        "ch01-dhsc-strategy/f-ch01-fig-10"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 27,
-      "printedPage": "17",
-      "section": "page-027",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-027.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-027"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 28,
-      "printedPage": "18",
-      "section": "page-028",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-028.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-028"
-      ],
-      "normative": 4,
-      "captured": 4,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 29,
-      "printedPage": "19",
-      "section": "page-029",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-029.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-029",
-        "ch02-dhsc-architecture/f-ch02-fig-11"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 30,
-      "printedPage": "20",
-      "section": "page-030",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-030.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-030"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 31,
-      "printedPage": "21",
-      "section": "page-031",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-031.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection",
-        "ch02-dhsc-architecture/p-ch02-page-031",
-        "ch02-dhsc-architecture/p-ch02-fig-12-third-party"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 32,
-      "printedPage": "22",
-      "section": "page-032",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-032.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-032"
-      ],
-      "normative": 3,
-      "captured": 3,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 33,
-      "printedPage": "23",
-      "section": "page-033",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-033.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-033",
-        "ch02-dhsc-architecture/f-ch02-fig-13"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 34,
-      "printedPage": "24",
-      "section": "page-034",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-034.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/f-ch02-fig-14",
-        "ch02-dhsc-architecture/p-ch02-page-034"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 35,
-      "printedPage": "25",
-      "section": "page-035",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-035.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-035"
-      ],
-      "normative": 2,
-      "captured": 2,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 36,
-      "printedPage": "26",
-      "section": "page-036",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-036.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection",
-        "ch02-dhsc-architecture/p-ch02-page-036",
-        "ch02-dhsc-architecture/f-ch02-fig-15"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 37,
-      "printedPage": "27",
-      "section": "page-037",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-037.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection",
-        "ch02-dhsc-architecture/p-ch02-page-037",
-        "ch02-dhsc-architecture/f-ch02-fig-16"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 38,
-      "printedPage": "28",
-      "section": "page-038",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-038.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-038",
-        "ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection",
-        "ch02-dhsc-architecture/f-ch02-fig-17"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 39,
-      "printedPage": "29",
-      "section": "page-039",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-039.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/f-ch02-fig-18",
-        "ch02-dhsc-architecture/p-ch02-page-039",
-        "ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 40,
-      "printedPage": "30",
-      "section": "page-040",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-040.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/dt-sc-dt-01-scismm-architecture-selection",
-        "ch02-dhsc-architecture/f-ch02-fig-19",
-        "ch02-dhsc-architecture/p-ch02-page-040"
-      ],
-      "normative": 2,
-      "captured": 2,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 41,
-      "printedPage": "31",
-      "section": "page-041",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-041.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/f-ch02-fig-20",
-        "ch02-dhsc-architecture/p-ch02-page-041"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 42,
-      "printedPage": "32",
-      "section": "page-042",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-042.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-042"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 43,
-      "printedPage": "33",
-      "section": "page-043",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-043.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch02-dhsc-architecture/p-ch02-page-043",
-        "ch02-dhsc-architecture/f-ch02-fig-21"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 44,
-      "printedPage": "34",
-      "section": "page-044",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-044.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-044"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 45,
-      "printedPage": "35",
-      "section": "page-045",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-045.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-045",
-        "ch03-implementation-and-operations/f-ch03-fig-22"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 46,
-      "printedPage": "36",
-      "section": "page-046",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-046.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/t-ch03-table-2",
-        "ch03-implementation-and-operations/p-ch03-page-046"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 47,
-      "printedPage": "37",
-      "section": "page-047",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-047.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-047"
-      ],
-      "normative": 3,
-      "captured": 3,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 48,
-      "printedPage": "38",
-      "section": "page-048",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-048.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-048"
-      ],
-      "normative": 3,
-      "captured": 3,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 49,
-      "printedPage": "39",
-      "section": "page-049",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-049.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/f-ch03-fig-23",
-        "ch03-implementation-and-operations/p-ch03-page-049"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 50,
-      "printedPage": "40",
-      "section": "page-050",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-050.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-050",
-        "ch03-implementation-and-operations/t-ch03-table-3"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 51,
-      "printedPage": "41",
-      "section": "page-051",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-051.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-051"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 52,
-      "printedPage": "42",
-      "section": "page-052",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-052.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch03-implementation-and-operations/p-ch03-page-052"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 53,
-      "printedPage": "43",
-      "section": "page-053",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-053.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch04-traceability/p-ch04-page-053"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 54,
-      "printedPage": "44",
-      "section": "page-054",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-054.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch04-traceability/dt-sc-dt-02-traceability-model-selection",
-        "ch04-traceability/p-ch04-page-054"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 55,
-      "printedPage": "45",
-      "section": "page-055",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-055.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch04-traceability/bp-sc-bp-03-centralized-track-and-trace",
-        "ch04-traceability/pers-system-dhsc-traceability-hub",
-        "ch04-traceability/f-ch04-fig-24",
-        "ch04-traceability/dt-sc-dt-02-traceability-model-selection",
-        "ch04-traceability/p-ch04-page-055"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 56,
-      "printedPage": "46",
-      "section": "page-056",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-056.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "ch04-traceability/p-ch04-page-056",
-        "ch04-traceability/f-ch04-fig-25",
-        "ch04-traceability/dt-sc-dt-02-traceability-model-selection"
-      ],
-      "normative": 1,
-      "captured": 1,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 57,
-      "printedPage": "47",
-      "section": "page-057",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-057.md",
-      "category": "source-example",
-      "note": "Chapter 5 country example (Overview): cited L1 source narrative and figures, not formal reference architecture",
-      "blockIds": [
-        "ch05-country-examples/p-ch05-page-057"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 58,
-      "printedPage": "48",
-      "section": "page-058",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-058.md",
-      "category": "source-example",
-      "note": "Chapter 5 country example (Ethiopia): cited L1 source narrative and figures, not formal reference architecture",
-      "blockIds": [
-        "ch05-country-examples/p-ch05-page-058"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 59,
-      "printedPage": "49",
-      "section": "page-059",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-059.md",
-      "category": "source-example",
-      "note": "Chapter 5 country example (Ethiopia): cited L1 source narrative and figures, not formal reference architecture",
-      "blockIds": [
-        "ch05-country-examples/f-ch05-fig-26-27",
-        "ch05-country-examples/p-ch05-page-059"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 60,
-      "printedPage": "50",
-      "section": "page-060",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-060.md",
-      "category": "source-example",
-      "note": "Chapter 5 country example (Malawi): cited L1 source narrative and figures, not formal reference architecture",
-      "blockIds": [
-        "ch05-country-examples/p-ch05-page-060"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 61,
-      "printedPage": "51",
-      "section": "page-061",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-061.md",
-      "category": "source-example",
-      "note": "Chapter 5 country example (Malawi): cited L1 source narrative and figures, not formal reference architecture",
-      "blockIds": [
-        "ch05-country-examples/p-ch05-page-061",
-        "ch05-country-examples/f-ch05-fig-28-29"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 62,
-      "printedPage": "52",
-      "section": "page-062",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-062.md",
-      "category": "source-example",
-      "note": "Chapter 5 country example (Malawi): cited L1 source narrative and figures, not formal reference architecture",
-      "blockIds": [
-        "ch05-country-examples/p-ch05-page-062",
-        "ch05-country-examples/f-ch05-fig-30"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 63,
-      "printedPage": "53",
-      "section": "page-063",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-063.md",
-      "category": "source-example",
-      "note": "Chapter 5 country example (Rwanda): cited L1 source narrative and figures, not formal reference architecture",
-      "blockIds": [
-        "ch05-country-examples/p-ch05-page-063"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 64,
-      "printedPage": "54",
-      "section": "page-064",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-064.md",
-      "category": "source-example",
-      "note": "Chapter 5 country example (Rwanda): cited L1 source narrative and figures, not formal reference architecture",
-      "blockIds": [
-        "ch05-country-examples/p-ch05-page-064",
-        "ch05-country-examples/f-ch05-fig-31-32"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 65,
-      "printedPage": "55",
-      "section": "page-065",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-065.md",
-      "category": "editorial",
-      "note": "References list (references/p-references-page-065)",
-      "blockIds": [
-        "references/p-references-page-065"
-      ],
-      "normative": 4,
-      "captured": 4,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": 100,
-      "accountedForPct": 100
-    },
-    {
-      "page": 66,
-      "printedPage": "56",
-      "section": "page-066",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-066.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "annexes/p-annexes-page-066"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 67,
-      "printedPage": "57",
-      "section": "page-067",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-067.md",
-      "category": "source-example",
-      "note": "Annex 2 template block (tbl:annex-2) with illustrative filled example rows classified as source-example",
-      "blockIds": [
-        "annexes/p-annexes-page-067",
-        "annexes/t-annexes-annex-2"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 68,
-      "printedPage": "58",
-      "section": "page-068",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-068.md",
-      "category": "source-example",
-      "note": "Annex 3 template block (tbl:annex-3) with illustrative filled example rows classified as source-example",
-      "blockIds": [
-        "annexes/p-annexes-page-068",
-        "annexes/t-annexes-annex-3"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 69,
-      "printedPage": "59",
-      "section": "page-069",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-069.md",
-      "category": "source-example",
-      "note": "Annex 4 template block (tbl:annex-4) with illustrative filled example rows classified as source-example",
-      "blockIds": [
-        "annexes/t-annexes-annex-4",
-        "annexes/p-annexes-page-069"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 70,
-      "printedPage": "60",
-      "section": "page-070",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-070.md",
-      "category": "source-example",
-      "note": "Annex 5 template block (tbl:annex-5) with illustrative filled example rows classified as source-example",
-      "blockIds": [
-        "annexes/t-annexes-annex-5",
-        "annexes/p-annexes-page-070"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 71,
-      "printedPage": "61",
-      "section": "page-071",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-071.md",
-      "category": "source-example",
-      "note": "Annex 6 template block (tbl:annex-6) with illustrative filled example rows classified as source-example",
-      "blockIds": [
-        "annexes/t-annexes-annex-6",
-        "annexes/p-annexes-page-071"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 72,
-      "printedPage": "62",
-      "section": "page-072",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-072.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "annexes/p-annexes-page-072",
-        "annexes/pers-project-manager-ba",
-        "annexes/t-annexes-annex-7",
-        "annexes/pers-steering-committee-sponsor",
-        "annexes/pers-solution-architect"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 73,
-      "printedPage": "63",
-      "section": "page-073",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-073.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "annexes/pers-developer-integrator",
-        "annexes/t-annexes-annex-7"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 74,
-      "printedPage": "64",
-      "section": "page-074",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-074.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "annexes/pers-system-administrator-support",
-        "annexes/t-annexes-annex-7"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 75,
-      "printedPage": "65",
-      "section": "page-075",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-075.md",
-      "category": "captured",
-      "note": "Normative and operational handbook content captured in folio/dth-sc blocks",
-      "blockIds": [
-        "annexes/t-annexes-annex-7"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 76,
-      "printedPage": "66",
-      "section": "page-076",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-076.md",
-      "category": "editorial",
-      "note": "Annex 7 continuation and People that Deliver reference list (annexes/t-annexes-annex-7, annexes/p-annexes-page-076)",
-      "blockIds": [
-        "annexes/p-annexes-page-076",
-        "annexes/t-annexes-annex-7"
-      ],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 77,
-      "printedPage": "blank",
-      "section": "page-077",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-077.md",
-      "category": "editorial",
-      "note": "Cover, half-title, blank divider, or back cover",
-      "blockIds": [],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    },
-    {
-      "page": 78,
-      "printedPage": "back-cover",
-      "section": "page-078",
-      "l1File": "who-iris/library/9789240101197-eng/sections/page-078.md",
-      "category": "editorial",
-      "note": "Cover, half-title, blank divider, or back cover",
-      "blockIds": [],
-      "normative": 0,
-      "captured": 0,
-      "excluded": 0,
-      "unaccounted": 0,
-      "capturedPct": null,
-      "accountedForPct": null
-    }
-  ],
-  "sourceAndTableBlocks": {
-    "chapter5CountryExamples": [
-      {
-        "blockId": "ch05-country-examples/f-ch05-fig-26-27",
-        "label": "fig:26-27",
-        "kind": "figure",
-        "category": "source-example",
-        "country": "Ethiopia",
-        "l1Section": "page-059",
-        "pdfPage": 59,
-        "sourceOnly": "country reporting: cited source figure, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/p-ch05-page-061",
-        "label": "prose:ch05-page-061",
-        "kind": "prose",
-        "category": "source-example",
-        "country": "Malawi",
-        "l1Section": "page-061",
-        "pdfPage": 61,
-        "sourceOnly": "country reporting: cited source text, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/p-ch05-page-064",
-        "label": "prose:ch05-page-064",
-        "kind": "prose",
-        "category": "source-example",
-        "country": "Rwanda",
-        "l1Section": "page-064",
-        "pdfPage": 64,
-        "sourceOnly": "country reporting: cited source text, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/p-ch05-page-060",
-        "label": "prose:ch05-page-060",
-        "kind": "prose",
-        "category": "source-example",
-        "country": "Malawi",
-        "l1Section": "page-060",
-        "pdfPage": 60,
-        "sourceOnly": "country reporting: cited source text, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/f-ch05-fig-28-29",
-        "label": "fig:28-29",
-        "kind": "figure",
-        "category": "source-example",
-        "country": "Malawi",
-        "l1Section": "page-061",
-        "pdfPage": 61,
-        "sourceOnly": "country reporting: cited source figure, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/p-ch05-page-057",
-        "label": "prose:ch05-page-057",
-        "kind": "prose",
-        "category": "source-example",
-        "country": [
-          "Ethiopia",
-          "Malawi",
-          "Rwanda"
-        ],
-        "l1Section": "page-057",
-        "pdfPage": 57,
-        "sourceOnly": "country reporting: cited source text, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/p-ch05-page-063",
-        "label": "prose:ch05-page-063",
-        "kind": "prose",
-        "category": "source-example",
-        "country": "Rwanda",
-        "l1Section": "page-063",
-        "pdfPage": 63,
-        "sourceOnly": "country reporting: cited source text, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/p-ch05-page-062",
-        "label": "prose:ch05-page-062",
-        "kind": "prose",
-        "category": "source-example",
-        "country": "Malawi",
-        "l1Section": "page-062",
-        "pdfPage": 62,
-        "sourceOnly": "country reporting: cited source text, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/p-ch05-page-059",
-        "label": "prose:ch05-page-059",
-        "kind": "prose",
-        "category": "source-example",
-        "country": "Ethiopia",
-        "l1Section": "page-059",
-        "pdfPage": 59,
-        "sourceOnly": "country reporting: cited source text, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/f-ch05-fig-30",
-        "label": "fig:30",
-        "kind": "figure",
-        "category": "source-example",
-        "country": "Malawi",
-        "l1Section": "page-062",
-        "pdfPage": 62,
-        "sourceOnly": "country reporting: cited source figure, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/p-ch05-page-058",
-        "label": "prose:ch05-page-058",
-        "kind": "prose",
-        "category": "source-example",
-        "country": "Ethiopia",
-        "l1Section": "page-058",
-        "pdfPage": 58,
-        "sourceOnly": "country reporting: cited source text, not formal content"
-      },
-      {
-        "blockId": "ch05-country-examples/f-ch05-fig-31-32",
-        "label": "fig:31-32",
-        "kind": "figure",
-        "category": "source-example",
-        "country": "Rwanda",
-        "l1Section": "page-064",
-        "pdfPage": 64,
-        "sourceOnly": "country reporting: cited source figure, not formal content"
-      }
-    ],
-    "annexes": [
-      {
-        "blockId": "annexes/p-annexes-page-072",
-        "label": "prose:annexes-page-072",
-        "kind": "prose",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-072",
-        "pdfPages": [
-          72
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/pers-project-manager-ba",
-        "label": "pers:project-manager-ba",
-        "kind": "persona",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-072",
-        "pdfPages": [
-          72
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/p-annexes-page-076",
-        "label": "prose:annexes-page-076",
-        "kind": "prose",
-        "category": "editorial",
-        "tableKind": null,
-        "l1Section": "page-076",
-        "pdfPages": [
-          76
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/p-annexes-page-066",
-        "label": "prose:annexes-page-066",
-        "kind": "prose",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-066",
-        "pdfPages": [
-          66
-        ],
-        "usedBySteps": [
-          "prose:ch01-page-019",
-          "prose:ch02-page-027",
-          "prose:ch02-page-032",
-          "prose:ch03-page-044"
-        ],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/p-annexes-page-067",
-        "label": "prose:annexes-page-067",
-        "kind": "prose",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-067",
-        "pdfPages": [
-          67
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/pers-developer-integrator",
-        "label": "pers:developer-integrator",
-        "kind": "persona",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-073",
-        "pdfPages": [
-          73
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/p-annexes-page-068",
-        "label": "prose:annexes-page-068",
-        "kind": "prose",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-068",
-        "pdfPages": [
-          68
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/t-annexes-annex-5",
-        "label": "tbl:annex-5",
-        "kind": "table",
-        "category": "source-example",
-        "tableKind": "template",
-        "l1Section": "page-070",
-        "pdfPages": [
-          70
-        ],
-        "usedBySteps": [
-          "prose:ch02-page-030",
-          "bp:sc-bp-01-stepwise-dhsc-transformation",
-          "bp:sc-bp-02-end-to-end-supply-chain-processes"
-        ],
-        "exampleRows": {
-          "category": "source-example",
-          "count": 12,
-          "description": "12 HSCIS functional rows across 7 supply chain partner columns with illustrative system entries (Planning system, OpenLMIS, ERP, RapidSMS, OpenClinic, Health analytics platform, NPC mobile app, NPC, Registration system)"
-        },
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/t-annexes-annex-4",
-        "label": "tbl:annex-4",
-        "kind": "table",
-        "category": "source-example",
-        "tableKind": "template",
-        "l1Section": "page-069",
-        "pdfPages": [
-          69
-        ],
-        "usedBySteps": [
-          "prose:ch01-page-023",
-          "bp:sc-bp-01-stepwise-dhsc-transformation"
-        ],
-        "exampleRows": {
-          "category": "source-example",
-          "count": 6,
-          "description": "6 illustrative challenge-to-outcome rows (Forecasting and planning 20% error; Procurement 3-4 weeks; Central warehouse 15% expiry/wastage; Regional warehouses 23% stockouts; Health facilities 30-50 hours manual entry; Patients lack of trust)"
-        },
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/p-annexes-page-069",
-        "label": "prose:annexes-page-069",
-        "kind": "prose",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-069",
-        "pdfPages": [
-          69
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/pers-system-administrator-support",
-        "label": "pers:system-administrator-support",
-        "kind": "persona",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-074",
-        "pdfPages": [
-          74
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/t-annexes-annex-7",
-        "label": "tbl:annex-7",
-        "kind": "table",
-        "category": "captured",
-        "tableKind": "resource-matrix",
-        "l1Section": "page-072",
-        "pdfPages": [
-          72,
-          73,
-          74,
-          75,
-          76
-        ],
-        "usedBySteps": [
-          "prose:ch03-page-051",
-          "pers:steering-committee-sponsor",
-          "pers:solution-architect",
-          "pers:project-manager-ba",
-          "pers:developer-integrator",
-          "pers:system-administrator-support",
-          "bp:sc-bp-01-stepwise-dhsc-transformation"
-        ],
-        "exampleRows": null,
-        "roleMappingsCount": 14
-      },
-      {
-        "blockId": "annexes/t-annexes-annex-3",
-        "label": "tbl:annex-3",
-        "kind": "table",
-        "category": "source-example",
-        "tableKind": "template",
-        "l1Section": "page-068",
-        "pdfPages": [
-          68
-        ],
-        "usedBySteps": [
-          "prose:ch01-page-023",
-          "bp:sc-bp-01-stepwise-dhsc-transformation"
-        ],
-        "exampleRows": {
-          "category": "source-example",
-          "count": 3,
-          "description": "3 hypothetical bottleneck scoring rows (unavailability of timely consumption data = 7 HIGHEST; aggregating data from paper forms = 6 MEDIUM; inability to track and trace using serial numbers = 4 LOW)"
-        },
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/pers-steering-committee-sponsor",
-        "label": "pers:steering-committee-sponsor",
-        "kind": "persona",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-072",
-        "pdfPages": [
-          72
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/t-annexes-annex-2",
-        "label": "tbl:annex-2",
-        "kind": "table",
-        "category": "source-example",
-        "tableKind": "template",
-        "l1Section": "page-067",
-        "pdfPages": [
-          67
-        ],
-        "usedBySteps": [
-          "prose:ch01-page-022",
-          "pers:steering-committee-sponsor",
-          "bp:sc-bp-01-stepwise-dhsc-transformation"
-        ],
-        "exampleRows": {
-          "category": "source-example",
-          "count": 5,
-          "description": "5 illustrative steering-committee governance tier rows (Executive chairperson, Secretariat, Technical representatives, Partner organizations, Technical working group – governance topics across Data, Process, Technology, and Risk)"
-        },
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/t-annexes-annex-6",
-        "label": "tbl:annex-6",
-        "kind": "table",
-        "category": "source-example",
-        "tableKind": "template",
-        "l1Section": "page-071",
-        "pdfPages": [
-          71
-        ],
-        "usedBySteps": [
-          "prose:ch03-page-047",
-          "pers:project-manager-ba",
-          "bp:sc-bp-01-stepwise-dhsc-transformation"
-        ],
-        "exampleRows": {
-          "category": "source-example",
-          "count": 1,
-          "description": "1 illustrative risk register row (#001 Inadequate training: Low priority, Low impact, Medium probability, Open status, with mitigation steps)"
-        },
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/pers-solution-architect",
-        "label": "pers:solution-architect",
-        "kind": "persona",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-072",
-        "pdfPages": [
-          72
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/p-annexes-page-070",
-        "label": "prose:annexes-page-070",
-        "kind": "prose",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-070",
-        "pdfPages": [
-          70
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      },
-      {
-        "blockId": "annexes/p-annexes-page-071",
-        "label": "prose:annexes-page-071",
-        "kind": "prose",
-        "category": "captured",
-        "tableKind": null,
-        "l1Section": "page-071",
-        "pdfPages": [
-          71
-        ],
-        "usedBySteps": [],
-        "exampleRows": null,
-        "roleMappingsCount": null
-      }
-    ]
-  },
-  "problems": []
+  "problems": [],
+  "l1Entry": "who-iris/library/9789240101197-eng",
+  "folio": "folio/dth-sc"
 }
