@@ -1,0 +1,29 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "who-2021-dak-antenatal-care",
+  "type": "book",
+  "title": "Digital adaptation kit for antenatal care: operational requirements for implementing WHO recommendations in digital systems",
+  "publisher-place": "Geneva",
+  "publisher": "WHO",
+  "issued": {
+    "date-parts": [
+      [
+        2021
+      ]
+    ]
+  },
+  "URL": "https://iris.who.int/handle/10665/339745",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "note": "Licence: CC BY-NC-SA 3.0 IGO.",
+  "provenance": "extracted",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 20 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: Digital adaptation kit for antenatal care: operational requirements for implementing WHO recommendations in digital systems. Geneva: WHO; 2021 (https://iris.who.int/handle/10665/339745). Licence: CC BY-NC-SA 3.0 IGO. `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}

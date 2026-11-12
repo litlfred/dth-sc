@@ -1,0 +1,38 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "ascm-2022-supply-chain-dictionary-17th-edition",
+  "type": "book",
+  "title": "ASCM supply chain dictionary, seventeenth edition",
+  "editor": [
+    {
+      "family": "Pittman",
+      "given": "PH"
+    },
+    {
+      "family": "Atwater",
+      "given": "JB"
+    }
+  ],
+  "publisher-place": "Chicago",
+  "publisher": "Association for Supply Chain Management",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "URL": "https://learn.ascm.org/s/ascm-dictionary",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "extracted",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 11 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: Pittman PH, Atwater JB, editors. ASCM supply chain dictionary, seventeenth edition. Chicago: Association for Supply Chain Management; 2022 (https://learn.ascm.org/s/ascm-dictionary). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}

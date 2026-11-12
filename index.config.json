@@ -254,8 +254,7 @@
             "dpi-h-ra": {
               "directories": [
                 "glossary",
-                "archimate",
-                "references"
+                "archimate"
               ]
             },
             "who-iris": {

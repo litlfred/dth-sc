@@ -1,0 +1,28 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "who-itu-2012-national-ehealth-strategy-toolkit",
+  "type": "book",
+  "title": "National eHealth strategy toolkit",
+  "publisher-place": "Geneva",
+  "publisher": "World Health Organization and International Telecommunication Union",
+  "issued": {
+    "date-parts": [
+      [
+        2012
+      ]
+    ]
+  },
+  "URL": "https://iris.who.int/handle/10665/75211",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "extracted",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 19 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: National eHealth strategy toolkit. Geneva: World Health Organization and International Telecommunication Union; 2012 (https://iris. who.int/handle/10665/75211). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}

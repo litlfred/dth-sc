@@ -1,0 +1,27 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "who-2024-promoting-national-medicines-policies",
+  "type": "webpage",
+  "title": "Promoting national medicines policies [website]",
+  "publisher": "World Health Organization",
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "URL": "https://www.who.int/activities/promoting-national-medicines-policies",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "extracted",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 21 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: Promoting national medicines policies [website]. World Health Organization; 2024 (https://www.who.int/activities/promoting- national-medicines-policies). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "usaid-ghsc-2022-nsca-toolkit",
+  "type": "document",
+  "title": "National supply chain assessment (NSCA) toolkit",
+  "publisher-place": "Washington (DC)",
+  "publisher": "USAID Global Health Supply Chain Program",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "URL": "https://www.ghsupplychain.org/key-initiatives/national-supply-chain-assessment-nsca-toolkit",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "provenance": "extracted",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 22 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: National supply chain assessment (NSCA) toolkit. Washington (DC): USAID Global Health Supply Chain Program; 2022 (https://www. ghsupplychain.org/key-initiatives/national-supply-chain-assessment-nsca-toolkit). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}

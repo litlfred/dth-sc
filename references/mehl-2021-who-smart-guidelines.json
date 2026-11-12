@@ -1,0 +1,58 @@
+{
+  "$schema": "folio-reference/v1",
+  "id": "mehl-2021-who-smart-guidelines",
+  "type": "article-journal",
+  "title": "WHO SMART guidelines: optimising country-level use of guideline recommendations in the digital age",
+  "author": [
+    {
+      "family": "Mehl",
+      "given": "G"
+    },
+    {
+      "family": "Tunçalp",
+      "given": "Ö"
+    },
+    {
+      "family": "Ratanaprayul",
+      "given": "N"
+    },
+    {
+      "family": "Tamrat",
+      "given": "T"
+    },
+    {
+      "family": "Barreix",
+      "given": "M"
+    },
+    {
+      "family": "Lowrance",
+      "given": "D"
+    }
+  ],
+  "container-title": "Lancet Digital Health",
+  "volume": "3",
+  "issue": "4",
+  "page": "e213–e216",
+  "issued": {
+    "date-parts": [
+      [
+        2021
+      ]
+    ]
+  },
+  "DOI": "10.1016/S2589-7500(21)00038-8",
+  "URL": "https://doi.org/10.1016/S2589-7500(21)00038-8",
+  "accessed": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        15
+      ]
+    ]
+  },
+  "note": "The author list is printed ending “et al.”",
+  "provenance": "extracted",
+  "derivedFrom": "folio/dth-sc/references/p-references-page-065.md",
+  "_comment": "Entry 13 of the References chapter (folio/dth-sc/references/p-references-page-065.md), as printed: Mehl G, Tunçalp Ö, Ratanaprayul N, Tamrat T, Barreix M, Lowrance D et al. WHO SMART guidelines: optimising country-level use of guideline recommendations in the digital age. Lancet Digital Health. 2021;3(4):e213–e216. (https://doi.org/10.1016/S2589- 7500(21)00038-8). `accessed` is from the chapter's own line \"All linked references were accessed on 15 October 2024.\""
+}
