@@ -29,7 +29,7 @@ Rebuild (deterministic ids, so a rebuild gives the same file):
 python3 -I scripts/archimate/build_variant_views.py dpi-h-ra/archimate/0.3.0-draft.1/WHOBaseFile.archimate 0.3.0-draft.1 archimate/0.1.0-draft.1/dth-sc-overlay.archimate
 ```
 
-The figure blocks for Figs 15-19 show SVGs drawn from these views (`folio/dth-sc/media/archimate-fig-NN.svg`), and link the printed PNG as evidence. Redraw them after a rebuild, or check that they match:
+The figure blocks for Figs 15-19 show SVGs drawn from these views, and Fig. 14 one drawn from smart-ra's Fig. 14 view (`folio/dth-sc/media/archimate-fig-NN.svg`); each links the printed PNG as evidence. Figs 1-3 and 24 keep their PNG: smart-ra's views summarise them and leave out part of what they show. Redraw them after a rebuild, or check that they match:
 
 ```sh
 bun run scripts/archimate/render_figures.ts          # write
