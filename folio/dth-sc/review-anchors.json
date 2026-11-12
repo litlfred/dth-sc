@@ -57,30 +57,25 @@
    "label": "chap:ch05-country-examples"
   },
   {
-   "dir": "references",
-   "title": "References",
-   "label": "chap:references"
-  },
-  {
    "dir": "annexes",
    "title": "Annexes",
    "label": "chap:annexes"
+  },
+  {
+   "dir": "glossary",
+   "title": "Glossary",
+   "label": "chap:glossary"
+  },
+  {
+   "dir": "references",
+   "title": "References",
+   "label": "chap:references"
   }
  ],
  "sections": [
   {
    "label": "sec:front-acknowledgements",
    "title": "Acknowledgements",
-   "chapter": "front-matter"
-  },
-  {
-   "label": "sec:front-abbreviations-and-acronyms",
-   "title": "Abbreviations and acronyms",
-   "chapter": "front-matter"
-  },
-  {
-   "label": "sec:front-glossary",
-   "title": "Glossary",
    "chapter": "front-matter"
   },
   {
@@ -234,11 +229,6 @@
    "chapter": "ch05-country-examples"
   },
   {
-   "label": "sec:references-references",
-   "title": "References",
-   "chapter": "references"
-  },
-  {
    "label": "sec:annexes-annex-1-principles-for-digital-developme",
    "title": "Annex 1. Principles for digital development",
    "chapter": "annexes"
@@ -272,6 +262,21 @@
    "label": "sec:annexes-annex-7-resource-matrix-for-dhsc-impleme",
    "title": "Annex 7. Resource matrix for DHSC implementation",
    "chapter": "annexes"
+  },
+  {
+   "label": "sec:front-glossary",
+   "title": "Glossary",
+   "chapter": "glossary"
+  },
+  {
+   "label": "sec:front-abbreviations-and-acronyms",
+   "title": "Abbreviations and acronyms",
+   "chapter": "glossary"
+  },
+  {
+   "label": "sec:references-references",
+   "title": "References",
+   "chapter": "references"
   }
  ],
  "blocks": [
@@ -285,43 +290,6 @@
    ],
    "hash": "e5c4c8d3a60e",
    "excerpt": "Acknowledgements The World Health Organization (WHO) is grateful for the contributions of many individuals and organizations in the development of this handbook",
-   "method": "folio-snapshot"
-  },
-  {
-   "label": "tbl:abbreviations",
-   "kind": "table",
-   "chapter": "front-matter",
-   "root": "t-front-abbreviations",
-   "sections": [
-    "sec:front-abbreviations-and-acronyms"
-   ],
-   "caption": "Abbreviations and acronyms",
-   "hash": "59826620f6b8",
-   "excerpt": "Abbreviations and acronyms Abbreviation Meaning --- --- DH&I WG Digital Health and Interoperability Working Group DHSC digital health supply chain DIIG Digital ",
-   "method": "folio-snapshot"
-  },
-  {
-   "label": "prose:front-page-008",
-   "kind": "prose",
-   "chapter": "front-matter",
-   "root": "p-front-page-008",
-   "sections": [
-    "sec:front-glossary"
-   ],
-   "hash": "a230e196810b",
-   "excerpt": "Glossary deployment Making a software system available for use beyond testing purposes. digital health The systematic application of information and communicati",
-   "method": "folio-snapshot"
-  },
-  {
-   "label": "prose:front-page-009",
-   "kind": "prose",
-   "chapter": "front-matter",
-   "root": "p-front-page-009",
-   "sections": [
-    "sec:front-glossary"
-   ],
-   "hash": "154917cf4bd0",
-   "excerpt": "open standards Standards that are documented and made freely available to the public. Open standards are developed, approved and maintained via a collaborative ",
    "method": "folio-snapshot"
   },
   {
@@ -589,8 +557,8 @@
     "sec:introduction-alignment-with-the-diig"
    ],
    "caption": "Fig. 5. DIIG process for planning and implementing a digital health enterprise",
-   "hash": "55d704d55a63",
-   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 15; rendered from the PDF's vector layer in the L1 entry.",
+   "hash": "73ffe0aae6b6",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, Fig. 5 (PDF page 15), adapted from the 2020 WHO Digital Implementation ",
    "method": "folio-snapshot"
   },
   {
@@ -614,8 +582,8 @@
     "sec:introduction-alignment-with-whos-smart-guidelines"
    ],
    "caption": "Fig. 6. WHO SMART Guidelines approach",
-   "hash": "1fb62f289869",
-   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 16; rendered from the PDF's vector layer in the L1 entry.",
+   "hash": "b176e52602c2",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, Fig. 6 (PDF page 16), adapted from WHO SMART Guidelines (Mehl et al., 2",
    "method": "folio-snapshot"
   },
   {
@@ -946,8 +914,8 @@
     "sec:ch02-step-2-define-a-target-dhsc-architecture"
    ],
    "caption": "Fig. 14. DHSC architecture framework",
-   "hash": "4ab4fc5b55b3",
-   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 34; rendered from the PDF's vector layer in the L1 entry.",
+   "hash": "0e86d9f66e4c",
+   "excerpt": "Source: WHO, Digital transformation handbook for health supply chain architecture, 2024, PDF page 34. Drawn from the smart-ra ArchiMate view \"DHSC Architecture ",
    "method": "folio-snapshot"
   },
   {
@@ -1580,18 +1548,6 @@
    "method": "folio-snapshot"
   },
   {
-   "label": "prose:references-page-065",
-   "kind": "prose",
-   "chapter": "references",
-   "root": "p-references-page-065",
-   "sections": [
-    "sec:references-references"
-   ],
-   "hash": "ee9589b2ec12",
-   "excerpt": "1. Digital implementation investment guide (DIIG): integrating digital interventions into health programmes. Geneva: World Health Organization; 2020 (https://ir",
-   "method": "folio-snapshot"
-  },
-  {
    "label": "prose:annexes-page-066",
    "kind": "prose",
    "chapter": "annexes",
@@ -1823,6 +1779,55 @@
    ],
    "hash": "4bc8255bb048",
    "excerpt": "References 1. Building human resources for supply chain management theory of change [website]. People that Deliver; 2024 (https://peoplethatdeliver. org/buildin",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:front-page-008",
+   "kind": "prose",
+   "chapter": "glossary",
+   "root": "p-front-page-008",
+   "sections": [
+    "sec:front-glossary"
+   ],
+   "hash": "a230e196810b",
+   "excerpt": "Glossary deployment Making a software system available for use beyond testing purposes. digital health The systematic application of information and communicati",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:front-page-009",
+   "kind": "prose",
+   "chapter": "glossary",
+   "root": "p-front-page-009",
+   "sections": [
+    "sec:front-glossary"
+   ],
+   "hash": "154917cf4bd0",
+   "excerpt": "open standards Standards that are documented and made freely available to the public. Open standards are developed, approved and maintained via a collaborative ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "tbl:abbreviations",
+   "kind": "table",
+   "chapter": "glossary",
+   "root": "t-front-abbreviations",
+   "sections": [
+    "sec:front-abbreviations-and-acronyms"
+   ],
+   "caption": "Abbreviations and acronyms",
+   "hash": "59826620f6b8",
+   "excerpt": "Abbreviations and acronyms Abbreviation Meaning --- --- DH&I WG Digital Health and Interoperability Working Group DHSC digital health supply chain DIIG Digital ",
+   "method": "folio-snapshot"
+  },
+  {
+   "label": "prose:references-page-065",
+   "kind": "prose",
+   "chapter": "references",
+   "root": "p-references-page-065",
+   "sections": [
+    "sec:references-references"
+   ],
+   "hash": "ee9589b2ec12",
+   "excerpt": "1. Digital implementation investment guide (DIIG): integrating digital interventions into health programmes. Geneva: World Health Organization; 2020 (https://ir",
    "method": "folio-snapshot"
   }
  ]

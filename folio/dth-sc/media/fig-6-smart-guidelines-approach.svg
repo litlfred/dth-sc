@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 931 617" width="931" height="617" font-family="'Source Sans Pro','Open Sans','Segoe UI',Helvetica,Arial,sans-serif" font-size="12" role="img" aria-labelledby="t">
+<title id="t">Fig. 5. WHO SMART Guidelines Approach</title>
+<rect x="64" y="0" width="867" height="299" fill="#EEF4FB"/>
+<rect x="64" y="383" width="867" height="234" fill="#EEF4FB"/>
+<path d="M116 581H40Q16 581 16 557V59Q16 43 40 43H109" fill="none" stroke="#8C94AC" stroke-width="1"/>
+<path d="M108 39.5L115 43L108 46.5Z" fill="#8C94AC"/>
+<rect x="3" y="129" width="26" height="358" rx="13" fill="#1F2854"/>
+<text transform="translate(21 308) rotate(-90)" text-anchor="middle" fill="#FFFFFF" font-weight="700" font-size="13" letter-spacing="0.3">EVIDENCE FROM DIGITAL IMPLEMENTATIONS</text>
+<g id="band-research"><rect x="116" y="29" width="786" height="28" rx="14" fill="#0D97D4"/><text x="509" y="48" text-anchor="middle" fill="#FFFFFF" font-weight="700" font-size="13.5">RESEARCH AND EVIDENCE BASE</text></g>
+<g id="band-localisation"><rect x="116" y="329" width="786" height="28" rx="14" fill="#0D97D4"/><text x="509" y="348" text-anchor="middle" fill="#FFFFFF" font-weight="700" font-size="13.5">LOCALISATION</text></g>
+<g id="band-impact"><rect x="116" y="567" width="786" height="28" rx="14" fill="#0D97D4"/><text x="509" y="586" text-anchor="middle" fill="#FFFFFF" font-weight="700" font-size="13.5">DATA, EVIDENCE, AND IMPACT</text></g>
+<text transform="translate(86 177.5) rotate(-90)" text-anchor="middle" fill="#1F2854" font-weight="700" font-size="11"><tspan x="0" dy="-6.5">Knowledge layers and</tspan><tspan x="0" dy="13">associated products</tspan></text>
+<line x1="188" y1="57" x2="188" y2="76" stroke="#8C94AC" stroke-width="1"/><path d="M184.5 75L188 82L191.5 75Z" fill="#8C94AC"/>
+<line x1="188" y1="273" x2="188" y2="329" stroke="#8C94AC" stroke-width="1"/>
+<g id="cell-l1-narrative"><rect x="116" y="82" width="144" height="191" fill="#FFFFFF"/><text x="127" y="102" font-weight="700">L1: Narrative</text><g fill="#1F2854"><text x="127" y="118">Guideline and data</text><text x="127" y="133.5">recommendations:</text><text x="127" y="149">Enhanced guidelines</text></g></g>
+<line x1="262" y1="177.5" x2="269" y2="177.5" stroke="#8C94AC" stroke-width="1"/><path d="M268 174L275 177.5L268 181Z" fill="#8C94AC"/>
+<line x1="349" y1="57" x2="349" y2="76" stroke="#8C94AC" stroke-width="1"/><path d="M345.5 75L349 82L352.5 75Z" fill="#8C94AC"/>
+<line x1="349" y1="273" x2="349" y2="329" stroke="#8C94AC" stroke-width="1"/>
+<g id="cell-l2-operational"><rect x="277" y="82" width="144" height="191" fill="#FFFFFF"/><text x="288" y="102" font-weight="700">L2: Operational</text><g fill="#1F2854"><text x="288" y="118">Semi-structured</text><text x="288" y="133.5">documentation of</text><text x="288" y="149">operational and</text><text x="288" y="164.5">functional</text><text x="288" y="180">requirements:</text><text x="288" y="195.5">Digital adaptation</text><text x="288" y="211">kits</text></g></g>
+<line x1="423" y1="177.5" x2="430" y2="177.5" stroke="#8C94AC" stroke-width="1"/><path d="M429 174L436 177.5L429 181Z" fill="#8C94AC"/>
+<line x1="510" y1="57" x2="510" y2="76" stroke="#8C94AC" stroke-width="1"/><path d="M506.5 75L510 82L513.5 75Z" fill="#8C94AC"/>
+<line x1="510" y1="273" x2="510" y2="329" stroke="#8C94AC" stroke-width="1"/>
+<g id="cell-l3-machine-readable"><rect x="438" y="82" width="144" height="191" fill="#FFFFFF"/><text x="449" y="102" font-weight="700">L3: Machine readable</text><g fill="#1F2854"><text x="449" y="118">Structured,</text><text x="449" y="133.5">software-neutral,</text><text x="449" y="149">specifications,</text><text x="449" y="164.5">code, terminology</text><text x="449" y="180">and</text><text x="449" y="195.5">interoperability</text><text x="449" y="211">standards:</text><text x="449" y="226.5">Machine-readable</text><text x="449" y="242">recommendations</text></g></g>
+<line x1="584" y1="177.5" x2="591" y2="177.5" stroke="#8C94AC" stroke-width="1"/><path d="M590 174L597 177.5L590 181Z" fill="#8C94AC"/>
+<line x1="671" y1="57" x2="671" y2="76" stroke="#8C94AC" stroke-width="1"/><path d="M667.5 75L671 82L674.5 75Z" fill="#8C94AC"/>
+<line x1="671" y1="273" x2="671" y2="329" stroke="#8C94AC" stroke-width="1"/>
+<g id="cell-l4-executable"><rect x="599" y="82" width="144" height="191" fill="#FFFFFF"/><text x="610" y="102" font-weight="700">L4: Executable</text><g fill="#1F2854"><text x="610" y="118">Software that is</text><text x="610" y="133.5">able to execute</text><text x="610" y="149">static algorithms</text><text x="610" y="164.5">and interoperable</text><text x="610" y="180">digital components</text><text x="610" y="195.5">and deliver</text><text x="610" y="211">operational and</text><text x="610" y="226.5">functional</text><text x="610" y="242">requirements:</text><text x="610" y="257.5">Reference software</text></g></g>
+<line x1="745" y1="177.5" x2="752" y2="177.5" stroke="#8C94AC" stroke-width="1"/><path d="M751 174L758 177.5L751 181Z" fill="#8C94AC"/>
+<line x1="832" y1="57" x2="832" y2="76" stroke="#8C94AC" stroke-width="1"/><path d="M828.5 75L832 82L835.5 75Z" fill="#8C94AC"/>
+<line x1="832" y1="273" x2="832" y2="329" stroke="#8C94AC" stroke-width="1"/>
+<g id="cell-l5-dynamic"><rect x="760" y="82" width="144" height="191" fill="#FFFFFF"/><text x="771" y="102" font-weight="700">L5: Dynamic</text><g fill="#1F2854"><text x="771" y="118">Executable dynamic</text><text x="771" y="133.5">algorithms that are</text><text x="771" y="149">trained and</text><text x="771" y="164.5">optimised with</text><text x="771" y="180">advanced analytics</text><text x="771" y="195.5">to achieve</text><text x="771" y="211">prioritise</text><text x="771" y="226.5">outcomes:</text><text x="771" y="242">Precision health</text><text x="771" y="257.5">models</text></g></g>
+<line x1="188" y1="357" x2="188" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M184.5 406L188 413L191.5 406Z" fill="#8C94AC"/>
+<line x1="349" y1="357" x2="349" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M345.5 406L349 413L352.5 406Z" fill="#8C94AC"/>
+<line x1="510" y1="357" x2="510" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M506.5 406L510 413L513.5 406Z" fill="#8C94AC"/>
+<line x1="671" y1="357" x2="671" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M667.5 406L671 413L674.5 406Z" fill="#8C94AC"/>
+<line x1="832" y1="357" x2="832" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M828.5 406L832 413L835.5 406Z" fill="#8C94AC"/>
+<text transform="translate(86 477.5) rotate(-90)" text-anchor="middle" fill="#1F2854" font-weight="700" font-size="11"><tspan x="0" dy="0">Country implementation</tspan></text>
+<line x1="188" y1="357" x2="188" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M184.5 406L188 413L191.5 406Z" fill="#8C94AC"/>
+<line x1="188" y1="542" x2="188" y2="567" stroke="#8C94AC" stroke-width="1"/>
+<line x1="188" y1="542" x2="188" y2="561" stroke="#8C94AC" stroke-width="1"/><path d="M184.5 560L188 567L191.5 560Z" fill="#8C94AC"/>
+<g id="cell-l1-adaptation"><rect x="116" y="413" width="144" height="129" fill="#FFFFFF"/><text x="127" y="433" font-weight="700">L1: Adaptation</text><g fill="#1F2854"><text x="127" y="449">National policies,</text><text x="127" y="464.5">guidelines, data,</text><text x="127" y="480">and operational</text><text x="127" y="495.5">procedures</text></g></g>
+<line x1="349" y1="357" x2="349" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M345.5 406L349 413L352.5 406Z" fill="#8C94AC"/>
+<line x1="349" y1="542" x2="349" y2="567" stroke="#8C94AC" stroke-width="1"/>
+<line x1="349" y1="542" x2="349" y2="561" stroke="#8C94AC" stroke-width="1"/><path d="M345.5 560L349 567L352.5 560Z" fill="#8C94AC"/>
+<g id="cell-l2-adaptation"><rect x="277" y="413" width="144" height="129" fill="#FFFFFF"/><text x="288" y="433" font-weight="700">L2: Adaptation</text><g fill="#1F2854"><text x="288" y="449">Localised</text><text x="288" y="464.5">requirements</text></g></g>
+<line x1="510" y1="357" x2="510" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M506.5 406L510 413L513.5 406Z" fill="#8C94AC"/>
+<line x1="510" y1="542" x2="510" y2="567" stroke="#8C94AC" stroke-width="1"/>
+<line x1="510" y1="542" x2="510" y2="561" stroke="#8C94AC" stroke-width="1"/><path d="M506.5 560L510 567L513.5 560Z" fill="#8C94AC"/>
+<g id="cell-l3-adaptation"><rect x="438" y="413" width="144" height="129" fill="#FFFFFF"/><text x="449" y="433" font-weight="700">L3: Adaptation</text><g fill="#1F2854"><text x="449" y="449">Localised machine</text><text x="449" y="464.5">readable code and</text><text x="449" y="480">standards</text></g></g>
+<line x1="671" y1="357" x2="671" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M667.5 406L671 413L674.5 406Z" fill="#8C94AC"/>
+<line x1="671" y1="542" x2="671" y2="567" stroke="#8C94AC" stroke-width="1"/>
+<line x1="671" y1="542" x2="671" y2="561" stroke="#8C94AC" stroke-width="1"/><path d="M667.5 560L671 567L674.5 560Z" fill="#8C94AC"/>
+<g id="cell-l4-adaptation"><rect x="599" y="413" width="144" height="129" fill="#FFFFFF"/><text x="610" y="433" font-weight="700">L4: Adaptation</text><g fill="#1F2854"><text x="610" y="449">Localised static</text><text x="610" y="464.5">digital services</text><text x="610" y="480">and applications</text><text x="610" y="495.5">within a digital</text><text x="610" y="511">health enterprise</text></g></g>
+<line x1="832" y1="357" x2="832" y2="407" stroke="#8C94AC" stroke-width="1"/><path d="M828.5 406L832 413L835.5 406Z" fill="#8C94AC"/>
+<line x1="832" y1="542" x2="832" y2="567" stroke="#8C94AC" stroke-width="1"/>
+<line x1="832" y1="542" x2="832" y2="561" stroke="#8C94AC" stroke-width="1"/><path d="M828.5 560L832 567L835.5 560Z" fill="#8C94AC"/>
+<g id="cell-l5-adaptation"><rect x="760" y="413" width="144" height="129" fill="#FFFFFF"/><text x="771" y="433" font-weight="700">L5: Adaptation</text><g fill="#1F2854"><text x="771" y="449">Dynamic digital</text><text x="771" y="464.5">applications and</text><text x="771" y="480">services trained</text><text x="771" y="495.5">and optimised for</text><text x="771" y="511">prioritised local</text><text x="771" y="526.5">outcomes</text></g></g>
+</svg>

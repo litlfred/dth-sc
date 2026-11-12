@@ -20,7 +20,16 @@
       "library": "9789240101197-eng",
       "file": "who-iris/library/9789240101197-eng/figures/vfig-p034.png",
       "page": 34,
-      "method": "l1-vector-figure"
+      "method": "generated",
+      "generated": {
+        "tool": "render-view (cat-harness-tools/archimate/scripts/render-view.ts)",
+        "script": "scripts/archimate/render_figures.ts",
+        "model": "dpi-h-ra/archimate/0.3.0-draft.1/WHOBaseFile.archimate (litlfred/smart-ra)",
+        "view": "id-92267636cc42566ca5d2cff0e81be8c9",
+        "viewName": "DHSC Architecture Framework (DTH SC Fig. 14)",
+        "output": "archimate-fig-14.svg",
+        "evidence": "media/vfig-p034.png"
+      }
     },
     "glossary": [
       {
