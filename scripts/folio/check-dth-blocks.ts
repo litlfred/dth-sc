@@ -155,7 +155,8 @@ if (ra) {
   let glosLinks = 0;
   for (const file of allTsFiles) {
     const src = readFileSync(file, "utf-8");
-    if (!src.includes('"archimate"') && !src.includes('"glossary"') && !src.includes('"glossaryTerms"')) continue;
+    // Match the meta KEYS, not any "glossary" string: a chapter dir named "glossary" is not a link.
+    if (!/"(archimate|glossary|glossaryTerms)"\s*:/.test(src)) continue;
     const m = src.match(/meta: (\{.*\}),\n/);
     if (!m) {
       console.error(`✗ ${file}: names "archimate" or "glossary" but its meta is not one line of JSON`);
