@@ -1,0 +1,12 @@
+{
+  "$schema": "diig-phases-adaptation/v1",
+  "adapts": "who-iris/library/9789240116191-eng/figure-data/fig-4-diig-phases.json",
+  "title": "Fig. 5. DIIG process for planning and implementing a digital health enterprise",
+  "thisDocument": {
+    "resource": "who-handbook-for-health-supply-chain-architecture",
+    "style": "dashed",
+    "color": "#1A8FD6",
+    "fill": "#E8F3FB",
+    "note": "(this document)"
+  }
+}
