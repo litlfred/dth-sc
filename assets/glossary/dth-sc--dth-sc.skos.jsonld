@@ -2,7 +2,10 @@
   "@context": {
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "dcterms": "http://purl.org/dc/terms/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#"
   },
   "_generated": "folio-assistant-core/scripts/glossary-page.ts — do not hand-edit; run `bun run cat glossary:page`",
   "@graph": [
@@ -10,7 +13,7 @@
       "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": "Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture",
-      "skos:definition": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140, #183). Every term is a candidate: only a person adopts a definition. Each term links via SKOS broadMatch/closeMatch/related to the dpi-h-ra concept it narrows or relates to (smart-ra#133 S1, dth-sc#2 SC2b). Concept labels are Capitalized (owner ruling, 2026-10-31, relayed from the dth-pc thread). Trade Item and Product Master Data are defined in dth-pc, not here (smart-ra#142).",
+      "skos:definition": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140, #183). Every term is a candidate: only a person adopts a definition. Each term links via SKOS broadMatch/closeMatch/related to the dpi-h-ra concept it narrows or relates to (smart-ra#133 S1, dth-sc#2 SC2b). Concept labels are Capitalized (owner ruling, 2026-10-31, relayed from the dth-pc thread). Trade Item and Product Master Data are defined in dth-pc, not here (smart-ra#142). Acronyms (owner, 2026-10-31): every acronym the handbook uses is a term here with the acronym as notation, unless smart-ra already holds it (FHIR). Organizations several handbooks name live once in smart-ra's organizations scheme and are listed under members; organizations only this handbook names (DH&I WG, DHI, USAID GHSC-PSM, HTSS, IHE, ICMRA, PtD, ASCM, BUFMAR, DAI) are terms here with a foaf:focus to a W3C ORG organization (litlfred/folio-assistant-core#411).",
       "dcterms:modified": "2026-10-31",
       "dcterms:source": "folio/dth-sc",
       "dcterms:license": "CC-BY-NC-SA-3.0-IGO"
@@ -34,6 +37,7 @@
           "@value": "The knowledge and practice of adopting digital technologies to improve health supply chains and enable the delivery of quality-assured health products to individuals when and where they need them."
         }
       ],
+      "skos:notation": "DHSC",
       "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Defined in the Introduction (PDF 12), not in the handbook's glossary.",
       "skos:related": [
         {
@@ -109,6 +113,7 @@
           "@value": "A paper-based or software tool that supports the management and/or operations of the health supply chain. Such software tools (e.g., for order management or warehouse management) are also commonly referred to as electronic logistics management information systems."
         }
       ],
+      "skos:notation": "HSCIS",
       "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. smart-ra models the individual systems as ArchiMate application components (sc-workplan.md section 4).",
       "skos:related": [
         {
@@ -162,11 +167,15 @@
           "@value": "Order Management System"
         }
       ],
+      "skos:altLabel": [
+        "OMS"
+      ],
       "skos:definition": [
         {
           "@value": "A paper-based or software tool that supports the processes for fulfilling requisition orders (e.g., a software tool that supports entry and processing of requisition orders from health facilities to regional or central warehouses to replenish inventory)."
         }
       ],
+      "skos:notation": "OMS",
       "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives.",
       "skos:broader": [
         {
@@ -208,6 +217,7 @@
           "@value": "A computer application that manages and optimizes workflows and the storage of goods within a warehouse. It often interfaces with automated data capture and enterprise resource planning systems."
         }
       ],
+      "skos:notation": "WMS",
       "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook cites its reference 11 for this definition.",
       "skos:broader": [
         {
@@ -442,6 +452,1562 @@
       ],
       "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-054.md",
       "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-implementation-investment-guide",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Digital Implementation Investment Guide"
+        }
+      ],
+      "skos:altLabel": [
+        "DIIG"
+      ],
+      "skos:notation": "DIIG",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-regulatory-information-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Electronic Regulatory Information System"
+        }
+      ],
+      "skos:altLabel": [
+        "eRIS"
+      ],
+      "skos:notation": "eRIS",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/enterprise-resource-planning",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Enterprise Resource Planning"
+        }
+      ],
+      "skos:altLabel": [
+        "ERP"
+      ],
+      "skos:notation": "ERP",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/full-time-equivalent",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Full-Time Equivalent"
+        }
+      ],
+      "skos:altLabel": [
+        "FTE"
+      ],
+      "skos:notation": "FTE",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/global-family-planning-visibility-and-analytics-network",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Global Family Planning Visibility and Analytics Network"
+        }
+      ],
+      "skos:altLabel": [
+        "GFPVAN"
+      ],
+      "skos:notation": "GFPVAN",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/information-and-communications-technology",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Information and Communications Technology"
+        }
+      ],
+      "skos:altLabel": [
+        "ICT"
+      ],
+      "skos:notation": "ICT",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/information-technology",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Information Technology"
+        }
+      ],
+      "skos:altLabel": [
+        "IT"
+      ],
+      "skos:notation": "IT",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/key-performance-indicator",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Key Performance Indicator"
+        }
+      ],
+      "skos:altLabel": [
+        "KPI"
+      ],
+      "skos:notation": "KPI",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/ministry-of-health",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Ministry of Health"
+        }
+      ],
+      "skos:altLabel": [
+        "MOH",
+        "MoH"
+      ],
+      "skos:notation": "MOH",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. A kind of organization (each country has one), so it has no focus.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/national-product-catalog",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "National Product Catalog"
+        }
+      ],
+      "skos:altLabel": [
+        "NPC"
+      ],
+      "skos:notation": "NPC",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/national-supply-chain-assessment",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "National Supply Chain Assessment"
+        }
+      ],
+      "skos:altLabel": [
+        "NSCA"
+      ],
+      "skos:notation": "NSCA",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/quality-assurance",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Quality Assurance"
+        }
+      ],
+      "skos:altLabel": [
+        "QA"
+      ],
+      "skos:notation": "QA",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-proposal",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Request for Proposal"
+        }
+      ],
+      "skos:altLabel": [
+        "RFP"
+      ],
+      "skos:notation": "RFP",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-quotation",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Request for Quotation"
+        }
+      ],
+      "skos:altLabel": [
+        "RFQ"
+      ],
+      "skos:notation": "RFQ",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/supply-chain-information-system-maturity-model",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Supply Chain Information System Maturity Model"
+        }
+      ],
+      "skos:altLabel": [
+        "SCISMM"
+      ],
+      "skos:notation": "SCISMM",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/supply-chain-systems-architecture",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Supply Chain Systems Architecture"
+        }
+      ],
+      "skos:altLabel": [
+        "SCSA"
+      ],
+      "skos:notation": "SCSA",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Malawi's national health supply chain architecture (Chapter 5, page 60).",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/smart",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Standards-based, Machine-readable, Adaptive, Requirements-based and Testable"
+        }
+      ],
+      "skos:altLabel": [
+        "SMART"
+      ],
+      "skos:notation": "SMART",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/smart-guidelines"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/togaf",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "The Open Group Architecture Framework"
+        }
+      ],
+      "skos:altLabel": [
+        "TOGAF"
+      ],
+      "skos:notation": "TOGAF",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/target-software-standards",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Target Software Standards"
+        }
+      ],
+      "skos:altLabel": [
+        "TSS"
+      ],
+      "skos:notation": "TSS",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/technical-working-group",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Technical Working Group"
+        }
+      ],
+      "skos:altLabel": [
+        "TWG"
+      ],
+      "skos:notation": "TWG",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/declaration-of-interests",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Declaration of Interests"
+        }
+      ],
+      "skos:altLabel": [
+        "DOI"
+      ],
+      "skos:notation": "DOI",
+      "skos:scopeNote": "Expanded in the acknowledgements ('WHO Declaration of Interests (DOI) form'). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-006.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/monitoring-and-evaluation",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Monitoring and Evaluation"
+        }
+      ],
+      "skos:altLabel": [
+        "M&E"
+      ],
+      "skos:notation": "M&E",
+      "skos:scopeNote": "Expanded in the Figure 5 legend. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-015.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/antenatal-care",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Antenatal Care"
+        }
+      ],
+      "skos:altLabel": [
+        "ANC"
+      ],
+      "skos:notation": "ANC",
+      "skos:scopeNote": "Expanded in Figure 6. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-017.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/rapid-assessment-and-management",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Rapid Assessment and Management"
+        }
+      ],
+      "skos:altLabel": [
+        "RAM"
+      ],
+      "skos:notation": "RAM",
+      "skos:scopeNote": "Expanded in Figure 6 ('Rapid assessment and management (RAM)', in the ANC clinical workflow). Note: in dth-sc RAM expands to Rapid Assessment and Management, not Responsibility Assignment Matrix as in dth-pc. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-017.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/raci",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Responsible, Accountable, Consulted, and Informed"
+        }
+      ],
+      "skos:altLabel": [
+        "RACI"
+      ],
+      "skos:notation": "RACI",
+      "skos:scopeNote": "Expanded in the text ('a RACI matrix – responsible, accountable, consulted, informed'). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-047.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-information",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Request for Information"
+        }
+      ],
+      "skos:altLabel": [
+        "RFI"
+      ],
+      "skos:notation": "RFI",
+      "skos:scopeNote": "Expanded in the Figure 23 legend. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-049.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/national-supply-chain-information-systems",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "National Supply Chain Information Systems"
+        }
+      ],
+      "skos:altLabel": [
+        "NSCIS"
+      ],
+      "skos:notation": "NSCIS",
+      "skos:scopeNote": "Expanded in Figure 30 (Malawi SCSA future-state architecture). A candidate: no definition has been written.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-062.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/facilities-supply-chain-information-systems",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Facilities' Supply Chain Information Systems"
+        }
+      ],
+      "skos:altLabel": [
+        "FSCIS"
+      ],
+      "skos:notation": "FSCIS",
+      "skos:scopeNote": "Expanded in Figure 30 (Malawi SCSA future-state architecture). A candidate: no definition has been written.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-062.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-supply-chain",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Digital Supply Chain"
+        }
+      ],
+      "skos:altLabel": [
+        "DSC"
+      ],
+      "skos:notation": "DSC",
+      "skos:scopeNote": "Expanded in the Rwanda country experience ('Rwanda's Digital Supply Chain (DSC) Strategy and Architecture'). A candidate: no definition has been written.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-063.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/ihe-pharmacy",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "IHE Pharmacy"
+        }
+      ],
+      "skos:altLabel": [
+        "PHARM"
+      ],
+      "skos:notation": "PHARM",
+      "skos:scopeNote": "Expanded in Reference 23 ('IHE Pharmacy (PHARM) white paper: supply of products for healthcare'). A candidate: no definition has been written.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/integrating-the-healthcare-enterprise"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-065.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-technology-officer",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Chief Technology Officer"
+        }
+      ],
+      "skos:altLabel": [
+        "CTO"
+      ],
+      "skos:notation": "CTO",
+      "skos:scopeNote": "Written out in Annex 7 (page 72) and abbreviated CTO in the folio's persona blocks. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-information-officer",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Chief Information Officer"
+        }
+      ],
+      "skos:altLabel": [
+        "CIO"
+      ],
+      "skos:notation": "CIO",
+      "skos:scopeNote": "Written out in Annex 7 (page 72) and abbreviated CIO in the folio's persona blocks. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-digital-officer",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Chief Digital Officer"
+        }
+      ],
+      "skos:altLabel": [
+        "CDO"
+      ],
+      "skos:notation": "CDO",
+      "skos:scopeNote": "Written out in Annex 7 (page 72) and abbreviated CDO in the folio's persona blocks. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/user-acceptance-testing",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "User Acceptance Testing"
+        }
+      ],
+      "skos:altLabel": [
+        "UAT"
+      ],
+      "skos:notation": "UAT",
+      "skos:scopeNote": "Written out in Annex 7 (page 75) and abbreviated UAT in the folio's business process blocks. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-075.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/total-cost-of-ownership",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Total Cost of Ownership"
+        }
+      ],
+      "skos:altLabel": [
+        "TCO"
+      ],
+      "skos:notation": "TCO",
+      "skos:scopeNote": "Written out in Figure 5 (page 15) and Chapter 3 (page 50), and abbreviated TCO in the folio's persona blocks. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-015.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/transportation-management-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Transportation Management System"
+        }
+      ],
+      "skos:altLabel": [
+        "TMS"
+      ],
+      "skos:notation": "TMS",
+      "skos:scopeNote": "Named as a health supply chain information system category in Figure 14 (page 34) and abbreviated TMS in the folio's business process blocks. A candidate: no definition has been written.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-034.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/community-health-worker",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Community Health Worker"
+        }
+      ],
+      "skos:altLabel": [
+        "CHW"
+      ],
+      "skos:notation": "CHW",
+      "skos:scopeNote": "Written out in the Introduction (page 11) and Annex 5 (page 70), and abbreviated CHW in the folio's business process blocks. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-011.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-facility-logistics-management-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Health Facility Logistics Management System"
+        }
+      ],
+      "skos:altLabel": [
+        "HFLMS"
+      ],
+      "skos:notation": "HFLMS",
+      "skos:scopeNote": "Written out in Figure 1 (page 11) and abbreviated HFLMS in the folio's business process blocks. A candidate: no definition has been written.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-011.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-logistics-management-information-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Electronic Logistics Management Information System"
+        }
+      ],
+      "skos:altLabel": [
+        "eLMIS"
+      ],
+      "skos:notation": "eLMIS",
+      "skos:scopeNote": "The handbook's glossary defines Health Supply Chain Information System as 'also commonly referred to as electronic logistics management information systems' (page 8), and Figures 9, 26, 27 and 31 use the acronym eLMIS without listing it in the abbreviations table. Linked as related to health-supply-chain-information-system. A candidate: no separate definition has been written.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-021.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/openlmis",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Open Logistics Management Information System"
+        }
+      ],
+      "skos:altLabel": [
+        "OpenLMIS"
+      ],
+      "skos:notation": "OpenLMIS",
+      "skos:scopeNote": "The handbook uses the acronym without expanding it (Figures 28–30 and Annex 5). The expansion is supplied, not quoted: check it in context before adopting.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/dhis2",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "District Health Information Software 2"
+        }
+      ],
+      "skos:altLabel": [
+        "DHIS2"
+      ],
+      "skos:notation": "DHIS2",
+      "skos:scopeNote": "The handbook uses the acronym without expanding it (Figures 26–32). The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-medical-record",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Electronic Medical Record"
+        }
+      ],
+      "skos:altLabel": [
+        "EMR"
+      ],
+      "skos:notation": "EMR",
+      "skos:scopeNote": "The handbook uses the acronym without expanding it (Figures 26–29, 31–32). The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/openhim",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Open Health Information Mediator"
+        }
+      ],
+      "skos:altLabel": [
+        "OpenHIM"
+      ],
+      "skos:notation": "OpenHIM",
+      "skos:scopeNote": "The handbook uses the acronym without expanding it (page 34 and Figures 26–32). The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-034.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/quantification-analytics-tool",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Quantification Analytics Tool"
+        }
+      ],
+      "skos:altLabel": [
+        "QAT"
+      ],
+      "skos:notation": "QAT",
+      "skos:scopeNote": "The handbook uses the acronym without expanding it (Figures 28–32). The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/dagu",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Dagu"
+        }
+      ],
+      "skos:altLabel": [
+        "DAGU"
+      ],
+      "skos:notation": "DAGU",
+      "skos:scopeNote": "Named in Figures 26 and 27 (Ethiopia facility-level logistics management system) without expansion. A candidate: check in context before adopting.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-government-procurement",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Electronic Government Procurement"
+        }
+      ],
+      "skos:altLabel": [
+        "e-GP",
+        "E-GP"
+      ],
+      "skos:notation": "e-GP",
+      "skos:scopeNote": "The handbook uses the acronym (written E-GP in Figure 29 and e-GP in Figure 30) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-health-information-network",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Electronic Health Information Network"
+        }
+      ],
+      "skos:altLabel": [
+        "eHIN"
+      ],
+      "skos:notation": "eHIN",
+      "skos:scopeNote": "The handbook uses the acronym in Figures 28–30 (Malawi dispensing system) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-information-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Health Information System"
+        }
+      ],
+      "skos:altLabel": [
+        "HIS"
+      ],
+      "skos:notation": "HIS",
+      "skos:scopeNote": "The handbook uses the acronym without expanding it (Figure 5 and page 31). The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-015.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/quantb",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "QuanTB"
+        }
+      ],
+      "skos:notation": "QuanTB",
+      "skos:scopeNote": "Named in Figures 28–30 (Malawi forecasting and planning tool) without expansion. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-061.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/vitas",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "VITAS"
+        }
+      ],
+      "skos:notation": "VITAS",
+      "skos:scopeNote": "Named in Figures 26 and 27 (Ethiopia warehouse and inventory management system) without expansion. A candidate: no definition has been written.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/eapts",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Electronic Auditable Pharmaceutical Transactions and Services"
+        }
+      ],
+      "skos:altLabel": [
+        "eAPTs"
+      ],
+      "skos:notation": "eAPTs",
+      "skos:scopeNote": "The handbook uses the acronym in Figures 26 and 27 (Ethiopia dispensing system) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/fanos",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "FANOS"
+        }
+      ],
+      "skos:notation": "FANOS",
+      "skos:scopeNote": "Named in Figures 26 and 27 (Ethiopia supply chain system) without expansion. A candidate: no definition has been written.",
+      "skos:broader": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-059.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/rapidsms",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "RapidSMS"
+        }
+      ],
+      "skos:notation": "RapidSMS",
+      "skos:scopeNote": "Named in Annex 5 (page 70) without expansion. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-070.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/sage",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Sage"
+        }
+      ],
+      "skos:altLabel": [
+        "SAGE"
+      ],
+      "skos:notation": "SAGE",
+      "skos:scopeNote": "Named in Figure 31 (Rwanda current-state supply chain systems) without expansion. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-064.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/geographic-information-system",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Geographic Information System"
+        }
+      ],
+      "skos:altLabel": [
+        "GIS"
+      ],
+      "skos:notation": "GIS",
+      "skos:scopeNote": "The handbook uses the acronym in Figure 13 (page 33) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-033.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/sustainable-development-goal",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Sustainable Development Goal"
+        }
+      ],
+      "skos:altLabel": [
+        "SDG"
+      ],
+      "skos:notation": "SDG",
+      "skos:scopeNote": "The handbook uses the acronym in Figure 5 (page 15) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-015.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/global-trade-item-number",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Global Trade Item Number"
+        }
+      ],
+      "skos:altLabel": [
+        "GTIN"
+      ],
+      "skos:notation": "GTIN",
+      "skos:scopeNote": "Used in the folio's traceability hub persona without expansion in the handbook. The expansion is supplied, not quoted: check it in context before adopting.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/global-location-number",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Global Location Number"
+        }
+      ],
+      "skos:altLabel": [
+        "GLN"
+      ],
+      "skos:notation": "GLN",
+      "skos:scopeNote": "Used in the folio's traceability hub persona without expansion in the handbook. The expansion is supplied, not quoted: check it in context before adopting.",
+      "skos:related": [
+        {
+          "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"
+        }
+      ],
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-and-interoperability-working-group",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Digital Health and Interoperability Working Group"
+        }
+      ],
+      "skos:altLabel": [
+        "DH&I WG",
+        "DH&I"
+      ],
+      "skos:notation": "DH&I WG",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel, and cited in Reference 2. A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-and-interoperability-working-group/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-and-interoperability-working-group/_focus",
+      "@type": "org:OrganizationalCollaboration",
+      "rdfs:label": [
+        {
+          "@value": "Digital Health and Interoperability Working Group"
+        }
+      ],
+      "foaf:homepage": {
+        "@id": "https://wiki.digitalsquare.io/index.php/Digital_Health_%26_Interoperability_Working_Group"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/who-department-of-digital-health-and-innovations",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Department of Digital Health and Innovations"
+        }
+      ],
+      "skos:altLabel": [
+        "DHI",
+        "WHO Department of Digital Health and Innovations"
+      ],
+      "skos:notation": "DHI",
+      "skos:scopeNote": "Expanded in the acknowledgements ('WHO Department of Digital Health and Innovations (DHI)'). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-006.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/who-department-of-digital-health-and-innovations/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/who-department-of-digital-health-and-innovations/_focus",
+      "@type": "org:OrganizationalUnit",
+      "rdfs:label": [
+        {
+          "@value": "Department of Digital Health and Innovations"
+        }
+      ],
+      "org:subOrganizationOf": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/who/_focus"
+        }
+      ]
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/usaid-ghsc-psm",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "USAID Global Health Supply Chain Program–Procurement and Supply Management"
+        }
+      ],
+      "skos:altLabel": [
+        "GHSC-PSM",
+        "USAID GHSC-PSM",
+        "Global Health Supply Chain Program–Procurement and Supply Management"
+      ],
+      "skos:notation": "GHSC-PSM",
+      "skos:scopeNote": "Named in the handbook's acknowledgements (page 6) and abbreviations table (page 7). A candidate: no definition has been written. A USAID programme.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/usaid-ghsc-psm/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/usaid-ghsc-psm/_focus",
+      "@type": "org:OrganizationalUnit",
+      "rdfs:label": [
+        {
+          "@value": "USAID Global Health Supply Chain Program–Procurement and Supply Management"
+        }
+      ],
+      "org:subOrganizationOf": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/usaid/_focus"
+        }
+      ]
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-technical-support-services",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Health Technical Support Services"
+        }
+      ],
+      "skos:altLabel": [
+        "HTSS"
+      ],
+      "skos:notation": "HTSS",
+      "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A division of the Ministry of Health of Malawi (page 60). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-007.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-technical-support-services/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-technical-support-services/_focus",
+      "@type": "org:OrganizationalUnit",
+      "rdfs:label": [
+        {
+          "@value": "Health Technical Support Services"
+        }
+      ]
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/integrating-the-healthcare-enterprise",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Integrating the Healthcare Enterprise"
+        }
+      ],
+      "skos:altLabel": [
+        "IHE",
+        "IHE International"
+      ],
+      "skos:notation": "IHE",
+      "skos:scopeNote": "Named on page 35 and expanded in Reference 23 (page 65). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-035.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/integrating-the-healthcare-enterprise/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/integrating-the-healthcare-enterprise/_focus",
+      "@type": "org:FormalOrganization",
+      "rdfs:label": [
+        {
+          "@value": "Integrating the Healthcare Enterprise"
+        }
+      ],
+      "foaf:homepage": {
+        "@id": "https://www.ihe.net/"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/icmra",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "International Coalition of Medicines Regulatory Authorities"
+        }
+      ],
+      "skos:altLabel": [
+        "ICMRA"
+      ],
+      "skos:notation": "ICMRA",
+      "skos:scopeNote": "Expanded in Chapter 4 (page 54) and Reference 26 (page 65). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-054.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/icmra/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/icmra/_focus",
+      "@type": "org:OrganizationalCollaboration",
+      "rdfs:label": [
+        {
+          "@value": "International Coalition of Medicines Regulatory Authorities"
+        }
+      ],
+      "foaf:homepage": {
+        "@id": "https://www.icmra.info/"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/people-that-deliver",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "People that Deliver"
+        }
+      ],
+      "skos:altLabel": [
+        "PtD"
+      ],
+      "skos:notation": "PtD",
+      "skos:scopeNote": "Expanded in Annex 7 (page 72). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-072.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/people-that-deliver/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/people-that-deliver/_focus",
+      "@type": "org:OrganizationalCollaboration",
+      "rdfs:label": [
+        {
+          "@value": "People that Deliver"
+        }
+      ],
+      "foaf:homepage": {
+        "@id": "https://peoplethatdeliver.org/"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/association-for-supply-chain-management",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Association for Supply Chain Management"
+        }
+      ],
+      "skos:altLabel": [
+        "ASCM"
+      ],
+      "skos:notation": "ASCM",
+      "skos:scopeNote": "Expanded in Reference 11 (page 65). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-065.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/association-for-supply-chain-management/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/association-for-supply-chain-management/_focus",
+      "@type": "org:FormalOrganization",
+      "rdfs:label": [
+        {
+          "@value": "Association for Supply Chain Management"
+        }
+      ],
+      "foaf:homepage": {
+        "@id": "https://www.ascm.org/"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/bufmar",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Bureau des Formations Médicales Agréées du Rwanda"
+        }
+      ],
+      "skos:altLabel": [
+        "BUFMAR"
+      ],
+      "skos:notation": "BUFMAR",
+      "skos:scopeNote": "The handbook uses the acronym in Figure 31 (page 64, Rwanda current-state supply chain systems) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-064.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/bufmar/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/bufmar/_focus",
+      "@type": "org:FormalOrganization",
+      "rdfs:label": [
+        {
+          "@value": "Bureau des Formations Médicales Agréées du Rwanda"
+        }
+      ]
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/dai",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "DAI"
+        }
+      ],
+      "skos:notation": "DAI",
+      "skos:scopeNote": "Named in the acknowledgements (page 6). A candidate: no definition has been written.",
+      "dcterms:source": "who-iris/library/9789240101197-eng/sections/page-006.md",
+      "skos:note": "candidate",
+      "foaf:focus": {
+        "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/dai/_focus"
+      }
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/dai/_focus",
+      "@type": "org:FormalOrganization",
+      "rdfs:label": [
+        {
+          "@value": "DAI"
+        }
+      ]
+    },
+    {
+      "@id": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc#members",
+      "@type": "skos:Collection",
+      "skos:prefLabel": "Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture: external terms",
+      "skos:member": [
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/un"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/who"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/paho"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/unicef"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/unido"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/itu"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/hl7"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/gs1"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/usaid"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/global-fund"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/gavi"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/giz"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/path"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/openhie"
+        },
+        {
+          "@id": "https://litlfred.github.io/smart-ra/v0/ns/glossary/organizations/gates-foundation"
+        }
+      ]
     }
   ]
 }
