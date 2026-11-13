@@ -7,4 +7,4 @@ permissions:
   contents: write
 jobs:
   move:
-    uses: litlfred/cat-harness-tools/.github/workflows/layer-layers-move.yml@46ec2840532f7715bbfe56bce8dde97dd6b727ff # index.lock.json
+    uses: litlfred/cat-harness-tools/.github/workflows/layer-layers-move.yml@fb81d3f21f88e870f503160ff99cacf9187f236b # index.lock.json

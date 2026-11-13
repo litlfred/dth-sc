@@ -32,7 +32,8 @@
         "site:glossary"
       ],
       "siteSteps": [
-        "site:node-kinds"
+        "site:node-kinds",
+        "site:export"
       ],
       "pre": [
         "check:dth-glossary",
