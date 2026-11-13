@@ -1,9 +1,9 @@
 {
  "$schema": "site-link-report/v1",
- "pages": 38788,
+ "pages": 780,
  "unresolved": [],
  "selfAddress": [],
  "content": [],
- "diagrams": 334,
+ "diagrams": 15,
  "inDiagrams": []
 }
