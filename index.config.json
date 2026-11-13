@@ -177,7 +177,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "fb81d3f21f88e870f503160ff99cacf9187f236b",
+          "ref": "4c4b180c77f706089f6cf59576bcd071f41bdadd",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -190,8 +190,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "fb81d3f21f88e870f503160ff99cacf9187f236b",
-              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+              "ref": "4c4b180c77f706089f6cf59576bcd071f41bdadd",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': refresh cat-harness-tools to its current main so every pin stays at main (litlfred/dth-sc#31); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
