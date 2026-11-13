@@ -14,7 +14,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "4bb03f64dadd2e984b3c847c27c21f11737acffb",
+          "ref": "cf722fb3f8623aa92872129a1788aa992a887e3f",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -38,9 +38,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-10",
-              "ref": "4bb03f64dadd2e984b3c847c27c21f11737acffb",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
+              "on": "2026-11-13",
+              "ref": "cf722fb3f8623aa92872129a1788aa992a887e3f",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -51,7 +51,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-base",
-          "ref": "49118332fb66ea355a3ee9429fd2e8031ff27a39",
+          "ref": "ec3d1cf7993b499e3362297f7fcbad2c79b66f80",
           "overrides": {
             "smart-base": {
               "path": "smart-base",
@@ -86,9 +86,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-10",
-              "ref": "49118332fb66ea355a3ee9429fd2e8031ff27a39",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
+              "on": "2026-11-13",
+              "ref": "ec3d1cf7993b499e3362297f7fcbad2c79b66f80",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -99,7 +99,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "0ec7fa69b2ed1315b1b59f8d3bef196f3185a8b6",
+          "ref": "d983238a48b267985b42c55dfc94b2a16a3109cf",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -108,9 +108,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-10",
-              "ref": "0ec7fa69b2ed1315b1b59f8d3bef196f3185a8b6",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
+              "on": "2026-11-13",
+              "ref": "d983238a48b267985b42c55dfc94b2a16a3109cf",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -121,7 +121,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "05f5525758184b4be66e7f1a4cd84107b210ec47",
+          "ref": "b0a2389d744bd92d905078ba8ffd6c77bcf31769",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -136,9 +136,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-10",
-              "ref": "05f5525758184b4be66e7f1a4cd84107b210ec47",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
+              "on": "2026-11-13",
+              "ref": "b0a2389d744bd92d905078ba8ffd6c77bcf31769",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': final refresh of every layer to its current main, the same nine commits for dth-hrh, dth-phc and dth-sc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -149,7 +149,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "df6a3c05e78c7e72aca044daecfcfeffc2b3d3dc",
+          "ref": "4de2e3b1409781f3c069bc14eac1c0bd65b52740",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -164,9 +164,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-10",
-              "ref": "df6a3c05e78c7e72aca044daecfcfeffc2b3d3dc",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
+              "on": "2026-11-13",
+              "ref": "4de2e3b1409781f3c069bc14eac1c0bd65b52740",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': final refresh of every layer to its current main, the same nine commits for dth-hrh, dth-phc and dth-sc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -177,7 +177,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "46ec2840532f7715bbfe56bce8dde97dd6b727ff",
+          "ref": "76c7d4ac263517d0ba87e346f953a9a106b78b0a",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -189,9 +189,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-12",
-              "ref": "46ec2840532f7715bbfe56bce8dde97dd6b727ff",
-              "evidence": "Owner litlfred, 2026-11-12: bean folio-assistant-m9ev ('cat-harness-tools#1952 fixes dth-sc#24: merges on green inside the window; then re-pin dth-sc and close #24'). Tools-only re-pin to 46ec284053."
+              "on": "2026-11-13",
+              "ref": "76c7d4ac263517d0ba87e346f953a9a106b78b0a",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': final refresh of every layer to its current main, the same nine commits for dth-hrh, dth-phc and dth-sc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -202,7 +202,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "9435037232a09950ffe442bb4b00cb7da54b5985",
+          "ref": "17204fe9ed49e87b165bf0a8b626b6c69329a2a6",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -211,9 +211,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-10",
-              "ref": "9435037232a09950ffe442bb4b00cb7da54b5985",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
+              "on": "2026-11-13",
+              "ref": "17204fe9ed49e87b165bf0a8b626b6c69329a2a6",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -224,7 +224,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "30c4585d5dfbf6960e3ecca86b18d131d6cd3921",
+          "ref": "0f88368db7560afac6d3e16fd905cbb974350f82",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -236,9 +236,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-10",
-              "ref": "30c4585d5dfbf6960e3ecca86b18d131d6cd3921",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main)."
+              "on": "2026-11-13",
+              "ref": "0f88368db7560afac6d3e16fd905cbb974350f82",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -249,7 +249,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-ra",
-          "ref": "7a3df32635d07b1ec95c4cd3730d938386a6a000",
+          "ref": "59b8f1b7b70e83b3c1578584f0cb81e9cb37cc30",
           "overrides": {
             "dpi-h-ra": {
               "directories": [
@@ -285,9 +285,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-10",
-              "ref": "7a3df32635d07b1ec95c4cd3730d938386a6a000",
-              "evidence": "Owner litlfred, 2026-11-10 19:54:37Z, first-hand tap on decision card \"Bring the gutter fix to the DTH sites how?\" in thread \"Remove left gutter on DTH sites\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4FVReTMWQNcJHJWxMVMtd): \"B: every layer to main\" (re-pin dth-hrh, dth-sc, dth-phc to every layer main). (also satisfies bean folio-assistant-y4pw: dpi-h-ra declared asset README.md)"
+              "on": "2026-11-13",
+              "ref": "59b8f1b7b70e83b3c1578584f0cb81e9cb37cc30",
+              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
