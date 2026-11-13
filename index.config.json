@@ -51,7 +51,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-base",
-          "ref": "ec3d1cf7993b499e3362297f7fcbad2c79b66f80",
+          "ref": "b18ec33a012dede86c5ef4ce54a9d1377acc20a0",
           "overrides": {
             "smart-base": {
               "path": "smart-base",
@@ -87,8 +87,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "ec3d1cf7993b499e3362297f7fcbad2c79b66f80",
-              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+              "ref": "b18ec33a012dede86c5ef4ce54a9d1377acc20a0",
+              "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -99,7 +99,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "d983238a48b267985b42c55dfc94b2a16a3109cf",
+          "ref": "5627fcb1f3f8e40824ecfd370dae4a23af1b8839",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -109,8 +109,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "d983238a48b267985b42c55dfc94b2a16a3109cf",
-              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+              "ref": "5627fcb1f3f8e40824ecfd370dae4a23af1b8839",
+              "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -121,7 +121,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "b0a2389d744bd92d905078ba8ffd6c77bcf31769",
+          "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -137,8 +137,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "b0a2389d744bd92d905078ba8ffd6c77bcf31769",
-              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': final refresh of every layer to its current main, the same nine commits for dth-hrh, dth-phc and dth-sc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+              "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
+              "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -149,7 +149,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "4de2e3b1409781f3c069bc14eac1c0bd65b52740",
+          "ref": "026a6d919add39221387dd0fba0faccf998be9ac",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -165,8 +165,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "4de2e3b1409781f3c069bc14eac1c0bd65b52740",
-              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': final refresh of every layer to its current main, the same nine commits for dth-hrh, dth-phc and dth-sc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+              "ref": "026a6d919add39221387dd0fba0faccf998be9ac",
+              "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }
@@ -177,7 +177,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "76c7d4ac263517d0ba87e346f953a9a106b78b0a",
+          "ref": "61bc08839398edb1aedb9e51b8338c976c46f167",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -190,8 +190,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "76c7d4ac263517d0ba87e346f953a9a106b78b0a",
-              "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': final refresh of every layer to its current main, the same nine commits for dth-hrh, dth-phc and dth-sc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+              "ref": "61bc08839398edb1aedb9e51b8338c976c46f167",
+              "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
             }
           }
         }

@@ -1,6 +1,6 @@
 {
   "$schema": "l1-coverage-report/v1",
-  "definitionVersion": "smart-kg/docs/COVERAGE.md (markers §1, reasons §2) — folio-assistant-core l1-coverage v1",
+  "definitionVersion": "folio-assistant-core/methodologies/l1-coverage.md (markers §1, reasons §2) — folio-assistant-core l1-coverage v1",
   "matchMethod": "normalised-substring",
   "totals": {
     "normative": 47,
