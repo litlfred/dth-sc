@@ -92,10 +92,10 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -276,7 +276,7 @@
   .da-page td:first-child { width: 20rem; }
   /* A repo-relative path is long and has no spaces, so it breaks mid-word
      unless the breakpoints are named. Slashes are where a reader expects it. */
-  .da-page .p { opacity: .9; font-size: .8rem; font-family: ui-monospace, monospace; word-break: normal; overflow-wrap: anywhere; line-break: anywhere; }
+  .da-page .p { opacity: .9; font-size: .8rem; font-family: var(--fa-font-mono,Menlo,Consolas,monospace); word-break: normal; overflow-wrap: anywhere; line-break: anywhere; }
   .da-page .none { opacity: .9; font-style: italic; }
   .da-page .f { margin-top: .35rem; font-size: .85rem; opacity: .9; }
   .da-page .f .k { display: inline-block; min-width: 5.2rem; font-weight: 600; }
@@ -458,6 +458,14 @@
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/contributions.ts"><code>contributions</code></a><br><span class="p">cat-harness-tools/schemas/content/contributions.ts</span></td>
   <td>Contribution registry — what a folio-assistant *dependency* may add to the root layer: block kinds, adapters and MCP tools, not only translations.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/document-errata.ts"><code>document-errata</code></a><br><span class="p">cat-harness-tools/schemas/content/document-errata.ts</span></td>
+  <td>Errata of a library document: places where the SOURCE's own text is wrong, recorded beside the L1 entry without changing that text.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/document-footnotes.ts"><code>document-footnotes</code></a><br><span class="p">cat-harness-tools/schemas/content/document-footnotes.ts</span></td>
+  <td>A document's footnotes and the marks in its text that call them, as <code>library/&lt;slug&gt;/footnotes.json</code> beside the L1 entry.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/document-image.ts"><code>document-image</code></a><br><span class="p">cat-harness-tools/schemas/content/document-image.ts</span></td>
@@ -728,12 +736,20 @@
   <td>Partitioned RDF N-Quads Dataset Distribution &amp; Named Query Manifest Schema.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/opt-in-roots.ts"><code>opt-in-roots</code></a><br><span class="p">cat-harness-tools/schemas/kg/opt-in-roots.ts</span></td>
+  <td>Where a layer's opt-in sub-graphs are on disk.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/opt-in-subgraphs.ts"><code>opt-in-subgraphs</code></a><br><span class="p">cat-harness-tools/schemas/kg/opt-in-subgraphs.ts</span></td>
   <td>Opt-in named sub-graphs: which are switched on for a folio, and whether a directory sits inside one that is switched off.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/portable-path.ts"><code>portable-path</code></a><br><span class="p">cat-harness-tools/schemas/kg/portable-path.ts</span></td>
   <td>Path segments a checkout can actually create — on every filesystem, not only the one that wrote them.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/portfolio.ts"><code>portfolio</code></a><br><span class="p">cat-harness-tools/schemas/kg/portfolio.ts</span></td>
+  <td>A portfolio: an umbrella knowledge graph that LINKS other graphs' libraries, level by level, and copies none of them.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/property-skills.ts"><code>property-skills</code></a><br><span class="p">cat-harness-tools/schemas/kg/property-skills.ts</span></td>
@@ -937,7 +953,7 @@
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/device-screen.ts"><code>device-screen</code></a><br><span class="p">cat-harness-tools/schemas/process/device-screen.ts</span></td>
-  <td>Device screens: what one person sees on one device at a moment of a journey, as data.</td>
+  <td><span class="none">no description in the artefact</span></td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/methodology.ts"><code>methodology</code></a><br><span class="p">cat-harness-tools/schemas/process/methodology.ts</span></td>
@@ -1272,6 +1288,10 @@
   <td>The number a graph tile shows, DECLARED BY THE PROJECTION.</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/web-app.ts"><code>web-app</code></a><br><span class="p">cat-harness-tools/schemas/ui/web-app.ts</span></td>
+  <td>A web app a layer holds as source and publishes as a page of its own: one <code>web-app.json</code> at the root of a directory of kind <code>web-app</code>.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/ui/webpage.ts"><code>webpage</code></a><br><span class="p">cat-harness-tools/schemas/ui/webpage.ts</span></td>
   <td><code>webpage</code> — a published documentation page, modelled as a graph node that composes other nodes.</td>
 </tr>
@@ -1322,6 +1342,10 @@
 <tr>
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/schemas/ig-releases.ts"><code>ig-releases</code></a><br><span class="p">fhir-harness/schemas/ig-releases.ts</span></td>
   <td>ig-releases.ts — an IG's GitHub releases, recorded as POINTERS to their binary assets (bean <code>b8ip</code>).</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/schemas/ig-trusted-scripts.ts"><code>ig-trusted-scripts</code></a><br><span class="p">fhir-harness/schemas/ig-trusted-scripts.ts</span></td>
+  <td>ig-trusted-scripts.ts — what a <code>contentTypes.ig.trustedScripts</code> entry may be.</td>
 </tr>
 <tr>
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/schemas/iti-108-consent-client.ts"><code>iti-108-consent-client</code></a><br><span class="p">fhir-harness/schemas/iti-108-consent-client.ts</span></td>
@@ -1446,6 +1470,14 @@
 <tr>
   <td><a href="https://github.com/litlfred/smart-base/blob/main/smart-base/schemas/dth-step-table.ts"><code>dth-step-table</code></a><br><span class="p">smart-base/schemas/dth-step-table.ts</span></td>
   <td>Shared DTH step-table schema (<code>INPUTS | STEPS | RESOURCES | OUTPUTS | RISKS | MITIGATION</code>), smart-base#242.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/smart-base/blob/main/smart-base/schemas/guideline-portfolio.ts"><code>guideline-portfolio</code></a><br><span class="p">smart-base/schemas/guideline-portfolio.ts</span></td>
+  <td>The WHO SMART Guidelines portfolio: the umbrella knowledge graph that links the libraries of every SMART level, from the narrative L1 publications to the L4 executable software, without copying them.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/smart-base/blob/main/smart-base/schemas/site-roots.ts"><code>site-roots</code></a><br><span class="p">smart-base/schemas/site-roots.ts</span></td>
+  <td>Where smart-base and the layers built on it (smart-*, dth-*) live on GitHub, and where their sites are served — in ONE place, so the move to the WHO GitHub org is a one-line change here (litlfred/cat-harness-tools#1917).</td>
 </tr>
 </tbody>
 </table></div>

@@ -210,7 +210,7 @@
     &quot;id&quot;: &quot;fhir-harness-processes&quot;,
     &quot;path&quot;: &quot;processes/&quot;,
     &quot;dependents&quot;: &quot;skip&quot;,
-    &quot;description&quot;: &quot;The BPMN this layer OWNS, grouped by concern as the harness groups its own (`processes/&lt;group&gt;/`): in `content/`, the FHIR IG pipeline (`l3-fhir-pipeline.bpmn`), its incremental build (`ig-incremental-build.bpmn`), the IG AST cache and delta review (`ig-ast-cache.bpmn`, `ig-ast-delta-review.bpmn`) and the Questionnaire wireframe review (`questionnaire-wireframe-review.bpmn`), beside the IG skills they bind.&quot;,
+    &quot;description&quot;: &quot;The BPMN this layer OWNS, grouped by concern as the harness groups its own (`processes/&lt;group&gt;/`): in `content/`, the FHIR IG pipeline (`l3-fhir-pipeline.bpmn`), its incremental build (`ig-incremental-build.bpmn`), the IG AST cache and delta review (`ig-ast-cache.bpmn`, `ig-ast-delta-review.bpmn`), the IG release, its owner&#39;s tag and its catch-up (`ig-release.bpmn`) and the Questionnaire wireframe review (`questionnaire-wireframe-review.bpmn`), beside the IG skills they bind.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;processes&quot;
     ]
@@ -219,7 +219,7 @@
     &quot;id&quot;: &quot;fhir-harness-caches&quot;,
     &quot;path&quot;: &quot;caches/&quot;,
     &quot;title&quot;: &quot;CI caches&quot;,
-    &quot;description&quot;: &quot;The caches this layer declares (cache-first CI, rule 6): one `cache/1.0.0` node per cache this layer&#39;s workflows and scripts hold. `fhir-ast.cache.json` is the IG AST branch store, whose component process is `processes/content/ig-ast-cache.bpmn`; `fhir-ig-tooling`, `fhir-cat-mount` and `ig-site-mount-template` are the Actions caches of the AST refresh and the IG site template. Staleness is computed by cat-harness-tools&#39; `caches:viz`, never stated here.&quot;,
+    &quot;description&quot;: &quot;The caches this layer declares (cache-first CI, rule 6): one `cache/1.0.0` node per cache this layer&#39;s workflows and scripts hold. `fhir-ast.cache.json` is the IG AST branch store, whose component process is `processes/content/ig-ast-cache.bpmn`; `fhir-ig-tooling` and `fhir-cat-mount` are the Actions caches of the AST refresh. Staleness is computed by cat-harness-tools&#39; `caches:viz`, never stated here.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;cache&quot;
     ]
@@ -365,6 +365,11 @@
       &quot;script&quot;: &quot;ingest:ig-chrome:check&quot;,
       &quot;kind&quot;: &quot;report&quot;,
       &quot;reason&quot;: &quot;CI CANNOT OBTAIN ITS INPUT, and here it needs THREE checkouts rather than one. It compares the committed `chrome.json` against the `fhir.template` chain the IG&#39;s `ig.ini` names — `fhir.base.template` and `who.template.root`, which are separate repositories (`HL7/ig-template-base`, `WorldHealthOrganization/smart-ig-template`) that this checkout does not contain and a runner cannot fetch. The wall the retired `ingest:ig-menu:check` met, one layer worse: an IG&#39;s appearance is declared in no file the IG owns. Built so a skip CANNOT be mistaken for a pass — with no `--ig`/`--layer` it exits **2**, printing `could not determine`, rather than the 0 a silent skip would give. What IS gated, on every run and without the network, is the committed chrome&#39;s EFFECT: `smart-trust:pages:check` regenerates all 681 pages from it and compares them byte for byte, and `check:kind-validators` parses the file against `folio-ig-chrome/v1`. Run this one by hand after cloning the IG and its templates, or from `/prepare-merge`. Bean `ajx9`&quot;
+    },
+    {
+      &quot;script&quot;: &quot;check:ig-content-qa&quot;,
+      &quot;kind&quot;: &quot;covered-by&quot;,
+      &quot;reason&quot;: &quot;RUNS AT EVERY IG SITE PUBLISH, not as a step of its own: `ig-site:compose` (`ig-repo-site.ts` `contentQaGate`) calls the same `runGate` before anything is staged, so a pattern hit, an open finding, or a missing or stale review refuses the publish, previews included (fhir-harness#330, card Q-INJ-1). It judges ONE IG checkout and its AST cache; at a checkout that is not an IG (a document folio, a platform or index root: no `contentTypes.ig`, no `sushi-config.yaml`) it exits 78 (NOT APPLICABLE, not counted, never a pass); at an IG checkout whose run built no AST (no `output-ast/manifest.json`, `--ast` not given: a PR gate that does not build the IG, smart-ra#244) it pattern-scans the pages and trusted SVGs, fails on a hit, and otherwise exits 78 too, since the review&#39;s digest names the AST&#39;s texts; `ig-site:compose` still refuses a missing AST, and a missing `--ast` still fails. Kept as a script to run the gate by hand on an IG checkout (skill `ig-content-qa`)&quot;
     }
   ]
 }</pre></dd>

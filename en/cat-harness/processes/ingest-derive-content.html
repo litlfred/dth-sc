@@ -92,10 +92,10 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../build.json"><link rel="stylesheet" href="../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../assets/js/harness-data.js" defer></script>
 <script src="../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../assets/js/kg-render.js" defer></script><script src="../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -273,20 +273,22 @@
 </h1>
     
 
-<p><code class="language-plaintext highlighter-rouge">Process_DeriveContent</code> · advisory · 6 step(s)</p>
+<p><code class="language-plaintext highlighter-rouge">Process_DeriveContent</code> · advisory · 8 step(s)</p>
 
-<p>Derive content from an ingested source’s assets: the archive, technical metadata, images, audio, tabular data and provenance.</p>
+<p>Derive content from an ingested source’s assets: the archive, technical metadata, figures and tables, images, audio, tabular data, footnotes and provenance. Every step is an arm of <code class="language-plaintext highlighter-rouge">bun run cat ingest</code> (cat-harness-tools scripts/ingest-document.ts), so a re-ingest re-derives all of them; none is a step somebody runs by hand afterwards.</p>
 <style>.pt-diagram{position:relative;width:100%}.pt-diagram>img{display:block;width:100%;height:auto}.pt-mark{position:absolute;transform:translate(-50%,-50%);width:1.35em;height:1.35em;padding:0;border-radius:50%;border:1px solid #1f6feb;background:#fff;color:#1f6feb;font:bold 0.8em/1 sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(0,0,0,.25)}.pt-layer{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:2}.pt-layer>*{pointer-events:auto}.pt-go{position:absolute;display:block;border-radius:3px;cursor:pointer}.pt-go:hover,.pt-go:focus-visible{outline:2px solid #1f6feb;outline-offset:1px;background:rgba(31,111,235,.07)}.pt-mark{z-index:1}.pt-mark:hover,.pt-mark[aria-expanded=true]{background:#1f6feb;color:#fff}.pt-mark:focus-visible{outline:2px solid #1f6feb;outline-offset:2px}.pt-panel{position:absolute;z-index:5;text-align:left;margin:0.9em 0 0 -0.6em;max-width:min(26em,90vw);min-width:14em;padding:0.6em 0.7em;background:#fff;color:#1b1f24;border:1px solid #8c959f;border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:0.85em;line-height:1.35}.pt-close{position:absolute;top:0.2em;right:0.35em;border:0;background:none;font-size:1.2em;cursor:pointer;color:inherit}.pt-obj{border:1px solid #57606a;border-radius:3px;margin:0.15em 0}.pt-head{border-bottom:1px solid #57606a;padding:0.15em 0.45em;background:#f6f8fa;text-decoration:underline}.pt-head .pt-st{text-decoration:none;display:inline-block;margin-right:0.35em}.pt-attr{padding:0.1em 0.45em}.pt-st,.pt-via{color:#57606a;font-size:0.9em}.pt-edge{color:#57606a;font-size:0.85em;padding-left:1em}.pt-role .pt-head{background:#fff8c5}.pt-skill .pt-head{background:#ddf4ff}.pt-task .pt-head{background:#f6f8fa}.pt-none{color:#57606a;font-style:italic;margin-top:0.3em}.pt-diagram [data-pt-hl]>[class$="djs-visual"]>:first-child{stroke:#d97706!important;stroke-width:4px!important;fill:#fff3d6!important}.pt-diagram [data-pt-hl]>[class$="djs-visual"]>path:first-child{fill:none!important}.pt-has-hl [class*="djs-shape"]:not([data-pt-hl])>[class$="djs-visual"]>:first-child{opacity:.75}</style>
 
 <div class="pt-diagram" data-panel="ingest-derive-content.tasks.json">
 <img src="../../../assets/img/workflows/ingest-derive-content.svg" alt="BPMN diagram: Ingestion subprocess — derive content from the assets" />
 <div class="pt-layer">
-<button type="button" class="pt-mark" data-task="Task_Archive" style="left:48.05%;top:1.28%" aria-expanded="false" aria-label="About step: Archive → greppable contents manifest" title="About: Archive → greppable contents manifest">i</button>
-<button type="button" class="pt-mark" data-task="Task_TechMeta" style="left:46.87%;top:27.64%" aria-expanded="false" aria-label="About step: File info, sizes, hashes, timestamps, mimetype" title="About: File info, sizes, hashes, timestamps, mimetype">i</button>
-<button type="button" class="pt-mark" data-task="Task_Image" style="left:45.69%;top:32.76%" aria-expanded="false" aria-label="About step: Narrative description per image, localized" title="About: Narrative description per image, localized">i</button>
-<button type="button" class="pt-mark" data-task="Task_Audio" style="left:48.05%;top:56.98%" aria-expanded="false" aria-label="About step: Transcribe and translate audio" title="About: Transcribe and translate audio">i</button>
-<button type="button" class="pt-mark" data-task="Task_Tabular" style="left:48.05%;top:75.21%" aria-expanded="false" aria-label="About step: Sheet names, headers, shape, narrative" title="About: Sheet names, headers, shape, narrative">i</button>
-<button type="button" class="pt-mark" data-task="Task_Provenance" style="left:75.6%;top:32.76%" aria-expanded="false" aria-label="About step: Cite the author of every narrative" title="About: Cite the author of every narrative">i</button>
+<button type="button" class="pt-mark" data-task="Task_Archive" style="left:40.76%;top:1.72%" aria-expanded="false" aria-label="About step: Archive → greppable contents manifest" title="About: Archive → greppable contents manifest">i</button>
+<button type="button" class="pt-mark" data-task="Task_TechMeta" style="left:40.76%;top:17.82%" aria-expanded="false" aria-label="About step: File info, sizes, hashes, timestamps, mimetype" title="About: File info, sizes, hashes, timestamps, mimetype">i</button>
+<button type="button" class="pt-mark" data-task="Task_Image" style="left:57.56%;top:33.91%" aria-expanded="false" aria-label="About step: Narrative description per image, localized" title="About: Narrative description per image, localized">i</button>
+<button type="button" class="pt-mark" data-task="Task_Audio" style="left:40.76%;top:50%" aria-expanded="false" aria-label="About step: Transcribe and translate audio" title="About: Transcribe and translate audio">i</button>
+<button type="button" class="pt-mark" data-task="Task_Tabular" style="left:40.76%;top:66.09%" aria-expanded="false" aria-label="About step: Sheet names, headers, shape, narrative" title="About: Sheet names, headers, shape, narrative">i</button>
+<button type="button" class="pt-mark" data-task="Task_FiguresTables" style="left:40.76%;top:33.91%" aria-expanded="false" aria-label="About step: Extract figures and tables" title="About: Extract figures and tables">i</button>
+<button type="button" class="pt-mark" data-task="Task_Footnotes" style="left:40.76%;top:82.18%" aria-expanded="false" aria-label="About step: Footnotes and the marks that call them" title="About: Footnotes and the marks that call them">i</button>
+<button type="button" class="pt-mark" data-task="Task_Provenance" style="left:86.13%;top:41.95%" aria-expanded="false" aria-label="About step: Cite the author of every narrative" title="About: Cite the author of every narrative">i</button>
 </div>
 <div class="pt-panel" role="dialog" aria-label="Task details" hidden=""></div>
 </div>
@@ -531,7 +533,7 @@
     <tr>
       <td><a id="lane-Lane_0"></a>Ingestion Engine (agent, runs unattended)</td>
       <td><code class="language-plaintext highlighter-rouge">ingestion-agent</code></td>
-      <td>The only lane in this subprocess, so nothing produced here is checked by a different party before it reaches the L1 graph. Three of these six tasks are NOT IMPLEMENTED; Task_Provenance’s citation of who or what wrote each narrative is what is meant to stand between a generated description and its being treated as source material.</td>
+      <td>The only lane in this subprocess, so nothing produced here is checked by a different party before it reaches the L1 graph. Two of these eight tasks (Task_Archive, Task_TechMeta) still say NOT IMPLEMENTED; Task_Provenance’s citation of who or what wrote each narrative is what is meant to stand between a generated description and its being treated as source material.</td>
     </tr>
   </tbody>
 </table></div>
@@ -544,7 +546,7 @@
 </h2>
     
 
-<p>Every one of the 6 step(s) is documented.</p>
+<p>Every one of the 8 step(s) is documented.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -572,7 +574,7 @@
       <td><a id="step-Task_Image"></a><strong>Narrative description per image, localized</strong><br /><code class="language-plaintext highlighter-rouge">Task_Image</code></td>
       <td>Ingestion Engine (agent, runs unattended)</td>
       <td><a href="../../../en/cat-harness/processes/skills/document-intake.html"><code class="language-plaintext highlighter-rouge">document-intake</code></a></td>
-      <td>NOT IMPLEMENTED; see docs/document-ingestion.md. Applies equally to an image EXTRACTED FROM A PDF, not only to an uploaded one.</td>
+      <td>Applies equally to an image EXTRACTED FROM A PDF (Task_FiguresTables), not only to an uploaded one. An agent opens every image and vector render and records a verdict in the library’s image-verdicts.json: role (figure, logo or decorative), the reason, and a draft description in English plus ar, zh, es, fr and ru, which the apply-image-verdicts.ts arm lays over images.json on every ingest. Images judged figure are kept as WebP, quality 80, at most 1600 px; logos, decorative fragments and page scans are not. Every description stays a draft until a person confirms it with <code class="language-plaintext highlighter-rouge">bun run cat narratives</code>. Method: skill document-intake, “Figures and captioned tables: describe, keep, transcribe”.</td>
     </tr>
     <tr>
       <td><a id="step-Task_Audio"></a><strong>Transcribe and translate audio</strong><br /><code class="language-plaintext highlighter-rouge">Task_Audio</code></td>
@@ -585,6 +587,18 @@
       <td>Ingestion Engine (agent, runs unattended)</td>
       <td><a href="../../../en/cat-harness/processes/skills/document-intake.html"><code class="language-plaintext highlighter-rouge">document-intake</code></a></td>
       <td>Tools tabular-csv and tabular-xlsx, as CSVW (skill tabular-metadata). CSV and spreadsheet: tabs, column and row headers, sizes, and what the dataset is about.</td>
+    </tr>
+    <tr>
+      <td><a id="step-Task_FiguresTables"></a><strong>Extract figures and tables</strong><br /><code class="language-plaintext highlighter-rouge">Task_FiguresTables</code></td>
+      <td>Ingestion Engine (agent, runs unattended)</td>
+      <td><a href="../../../en/cat-harness/processes/skills/document-intake.html"><code class="language-plaintext highlighter-rouge">document-intake</code></a></td>
+      <td>The pdf-images.py, pdf-vector-labels.py and pdf-vector-figures.py arms extract the raster images and the figures drawn as vectors (grouped and rendered). For every table the document’s structure declares, an agent reads the rendered page, checks cell text against the text layer, and writes tables/&lt;label&gt;.csv plus tables.csvw.json (folio-tabular-csvw/v1), with a draft description in the six UN languages; pdf-tables.py’s grid is a cross-check, not the answer. Owner, 2026-11-11 (who-iris): “actually extract the figures” and “any tables too”. Method: skill document-intake, “Figures and captioned tables: describe, keep, transcribe”.</td>
+    </tr>
+    <tr>
+      <td><a id="step-Task_Footnotes"></a><strong>Footnotes and the marks that call them</strong><br /><code class="language-plaintext highlighter-rouge">Task_Footnotes</code></td>
+      <td>Ingestion Engine (agent, runs unattended)</td>
+      <td><a href="../../../en/cat-harness/processes/skills/l1-document-ingestion.html"><code class="language-plaintext highlighter-rouge">l1-document-ingestion</code></a></td>
+      <td>The pdf-footnotes.py arm (owner, 2026-11-11, “also foot notes/marks”): from the page layout, each note at the foot of a page and every superscript mark in the text that calls it, written to footnotes.json (folio-document-footnotes/v1) with the block that holds the page. The section text is not changed. Only a called note is a footnote; uncalled foot-of-page lines and marks with no note are listed, never dropped. OCR’d pages have no fonts and are reported unread. Method: skill l1-document-ingestion, “Footnotes and their marks”.</td>
     </tr>
     <tr>
       <td><a id="step-Task_Provenance"></a><strong>Cite the author of every narrative</strong><br /><code class="language-plaintext highlighter-rouge">Task_Provenance</code></td>

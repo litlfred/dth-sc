@@ -92,10 +92,10 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -276,7 +276,7 @@
   .da-page td:first-child { width: 20rem; }
   /* A repo-relative path is long and has no spaces, so it breaks mid-word
      unless the breakpoints are named. Slashes are where a reader expects it. */
-  .da-page .p { opacity: .9; font-size: .8rem; font-family: ui-monospace, monospace; word-break: normal; overflow-wrap: anywhere; line-break: anywhere; }
+  .da-page .p { opacity: .9; font-size: .8rem; font-family: var(--fa-font-mono,Menlo,Consolas,monospace); word-break: normal; overflow-wrap: anywhere; line-break: anywhere; }
   .da-page .none { opacity: .9; font-style: italic; }
   .da-page .f { margin-top: .35rem; font-size: .85rem; opacity: .9; }
   .da-page .f .k { display: inline-block; min-width: 5.2rem; font-weight: 600; }
@@ -376,6 +376,10 @@
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-ast-cache.bpmn#Restore and judge the cached AST"><code>Restore and judge the cached AST</code></a><br><span class="p">fhir-harness/processes/content/ig-ast-cache.bpmn#Restore and judge the cached AST</span></td>
   <td>serviceTask in ig-ast-cache</td>
 </tr>
+<tr id="a-fhir-harness-processes-content-ig-ast-cache-bpmn-Review-the-site-s-size">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-ast-cache.bpmn#Review the site's size"><code>Review the site's size</code></a><br><span class="p">fhir-harness/processes/content/ig-ast-cache.bpmn#Review the site's size</span></td>
+  <td>task in ig-ast-cache</td>
+</tr>
 <tr id="a-fhir-harness-processes-content-ig-ast-cache-bpmn-Seed-the-cache-branch">
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-ast-cache.bpmn#Seed the cache branch"><code>Seed the cache branch</code></a><br><span class="p">fhir-harness/processes/content/ig-ast-cache.bpmn#Seed the cache branch</span></td>
   <td>serviceTask in ig-ast-cache</td>
@@ -471,6 +475,26 @@
 <tr id="a-fhir-harness-processes-content-ig-incremental-build-bpmn-Validate-the-cone-10-fhir_validate-">
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-incremental-build.bpmn#Validate the cone&amp;#10;(fhir_validate)"><code>Validate the cone&amp;#10;(fhir_validate)</code></a><br><span class="p">fhir-harness/processes/content/ig-incremental-build.bpmn#Validate the cone&amp;#10;(fhir_validate)</span></td>
   <td>serviceTask in ig-incremental-build</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Build-the-tag-in-full-and-make-the-draft-release">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Build the tag in full and make the draft release"><code>Build the tag in full and make the draft release</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Build the tag in full and make the draft release</span></td>
+  <td>serviceTask in ig-release</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Check-the-current-version-s-tag-and-release">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Check the current version's tag and release"><code>Check the current version's tag and release</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Check the current version's tag and release</span></td>
+  <td>serviceTask in ig-release</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Publish-the-draft-release">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Publish the draft release"><code>Publish the draft release</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Publish the draft release</span></td>
+  <td>userTask in ig-release</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Run-IG-release-draft-10-by-hand-for-the-tag">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Run IG release (draft)&amp;#10;by hand for the tag"><code>Run IG release (draft)&amp;#10;by hand for the tag</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Run IG release (draft)&amp;#10;by hand for the tag</span></td>
+  <td>userTask in ig-release</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Tag-the-IG-s-current-version">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Tag the IG's current version"><code>Tag the IG's current version</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Tag the IG's current version</span></td>
+  <td>userTask in ig-release</td>
 </tr>
 <tr id="a-fhir-harness-processes-content-l3-fhir-pipeline-bpmn-Author-FSH-profiles">
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/l3-fhir-pipeline.bpmn#Author FSH profiles"><code>Author FSH profiles</code></a><br><span class="p">fhir-harness/processes/content/l3-fhir-pipeline.bpmn#Author FSH profiles</span></td>

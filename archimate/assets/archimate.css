@@ -30,6 +30,24 @@ body { font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 
 .am-ends { font-size: 1.05rem; }
 .am-error { color: #b42318; font-weight: 600; }
 .am-links { margin-top: 2rem; font-size: .9rem; }
+/* The Contents card (contents-card.css, issue #1885) floats at the top right of a page's body, as on the IG sites; lists and headings beside it narrow round it. */
+.am-body>.igi-contents{float:right;width:18rem;margin:0 0 1rem 1.5rem}
+.am-body>.igi-contents~h2,.am-body>.igi-contents~ul,.am-body>.igi-contents~.am-text,.am-body>.igi-contents~table{display:flow-root}
+@media (max-width:50rem){.am-body>.igi-contents{float:none;width:auto;margin:1rem 0}}
+.am-from { margin-top: -.5rem; font-size: .95em; }
+/* The Contents card (`contents-card.js`, issue #1885): the IG sites' card
+   (fhir-harness#361), a neutral card at the top right that lists the page's
+   sections. Colours fall back to plain values where a page sets no IG tokens. */
+.igi-contents{border:1px solid var(--iga-line,rgba(128,128,128,.35));border-radius:8px;background:var(--iga-bg,transparent);box-shadow:0 1px 3px rgba(0,0,0,.08);padding:.75rem 1rem;font-size:.9rem;box-sizing:border-box}
+.igi-contents-title{margin:0 0 .5rem;font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;opacity:.75;color:var(--iga-muted,inherit)}
+.igi-contents ul{list-style:none;margin:0;padding:0}
+.igi-contents li{display:flex;align-items:baseline;gap:.5rem;margin:.2rem 0;padding:0}
+.igi-contents li::before{content:none;display:none}
+.igi-contents li[hidden]{display:none}
+.igi-contents li>a{flex:1;min-width:0;text-decoration:none;overflow-wrap:anywhere}
+.igi-contents li>a:hover{text-decoration:underline}
+.igi-n{font-size:.78rem;font-variant-numeric:tabular-nums;background:var(--iga-soft,rgba(128,128,128,.15));border-radius:1em;padding:0 .45em}
+@media print{.igi-contents{box-shadow:none}}
 @media (prefers-color-scheme: dark) { :root:not([data-fa-scheme="light"]) { color-scheme: dark; } }
   :root[data-fa-scheme="dark"] { color-scheme: dark; }
   :root[data-fa-scheme="light"] { color-scheme: light; } :root[data-fa-scheme="dark"] { color-scheme: dark; }

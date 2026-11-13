@@ -92,10 +92,10 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../build.json"><link rel="stylesheet" href="../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../assets/js/harness-data.js" defer></script>
 <script src="../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../assets/js/kg-render.js" defer></script><script src="../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -273,7 +273,7 @@
 </h1>
     
 
-<p><code class="language-plaintext highlighter-rouge">Process_IgAstCache</code> · advisory · 5 step(s)</p>
+<p><code class="language-plaintext highlighter-rouge">Process_IgAstCache</code> · advisory · 6 step(s)</p>
 
 <p>How an IG repository’s own site is published, and how the AST it is built from is kept current (skill <a href="../../../en/cat-harness/processes/skills/ig-build-pipeline.html"><code class="language-plaintext highlighter-rouge">ig-build-pipeline</code></a> §”The AST cache lifecycle”).</p>
 
@@ -287,11 +287,12 @@
 <div class="pt-diagram" data-panel="ig-ast-cache.tasks.json">
 <img src="../../../assets/img/workflows/ig-ast-cache.svg" alt="BPMN diagram: An IG site, built from the AST on its cache branch" />
 <div class="pt-layer">
-<button type="button" class="pt-mark" data-task="Task_Restore" style="left:25.65%;top:34.24%" aria-expanded="false" aria-label="About step: Restore and judge the cached AST" title="About: Restore and judge the cached AST">i</button>
-<button type="button" class="pt-mark" data-task="Task_BuildSite" style="left:56.09%;top:34.24%" aria-expanded="false" aria-label="About step: Build and publish the site from the AST" title="About: Build and publish the site from the AST">i</button>
-<button type="button" class="pt-mark" data-task="Task_Dispatch" style="left:41.74%;top:8.76%" aria-expanded="false" aria-label="About step: Dispatch AST refresh" title="About: Dispatch AST refresh">i</button>
-<button type="button" class="pt-mark" data-task="Task_Export" style="left:25.65%;top:62.9%" aria-expanded="false" aria-label="About step: Build the IG with the AST exporter" title="About: Build the IG with the AST exporter">i</button>
-<button type="button" class="pt-mark" data-task="Task_Seed" style="left:57.83%;top:66.08%" aria-expanded="false" aria-label="About step: Seed the cache branch" title="About: Seed the cache branch">i</button>
+<button type="button" class="pt-mark" data-task="Task_Restore" style="left:25.65%;top:39.09%" aria-expanded="false" aria-label="About step: Restore and judge the cached AST" title="About: Restore and judge the cached AST">i</button>
+<button type="button" class="pt-mark" data-task="Task_BuildSite" style="left:56.09%;top:39.09%" aria-expanded="false" aria-label="About step: Build and publish the site from the AST" title="About: Build and publish the site from the AST">i</button>
+<button type="button" class="pt-mark" data-task="Task_SizeReview" style="left:72.61%;top:39.09%" aria-expanded="false" aria-label="About step: Review the site's size" title="About: Review the site's size">i</button>
+<button type="button" class="pt-mark" data-task="Task_Dispatch" style="left:40%;top:6.36%" aria-expanded="false" aria-label="About step: Dispatch AST refresh" title="About: Dispatch AST refresh">i</button>
+<button type="button" class="pt-mark" data-task="Task_Export" style="left:25.65%;top:71.82%" aria-expanded="false" aria-label="About step: Build the IG with the AST exporter" title="About: Build the IG with the AST exporter">i</button>
+<button type="button" class="pt-mark" data-task="Task_Seed" style="left:56.09%;top:71.82%" aria-expanded="false" aria-label="About step: Seed the cache branch" title="About: Seed the cache branch">i</button>
 </div>
 <div class="pt-panel" role="dialog" aria-label="Task details" hidden=""></div>
 </div>
@@ -536,12 +537,12 @@
     <tr>
       <td><a id="lane-Lane_PubMgr"></a>Publication manager (owner, or the agent the owner delegates to)</td>
       <td><code class="language-plaintext highlighter-rouge">publication-manager</code></td>
-      <td>Starts the AST refresh; an agent never dispatches it on its own (<code class="language-plaintext highlighter-rouge">feature-staging</code> §”Agent-run repositories”). When the publish refuses, asks for the refresh rather than publishing around it.</td>
+      <td>Starts the AST refresh; an agent never dispatches it on its own (<a href="../../../en/cat-harness/processes/skills/feature-staging.html"><code class="language-plaintext highlighter-rouge">feature-staging</code></a> §”Agent-run repositories”). When the publish refuses, asks for the refresh rather than publishing around it.</td>
     </tr>
     <tr>
       <td><a id="lane-Lane_Site"></a>Site build (agent, stage-local)</td>
       <td><code class="language-plaintext highlighter-rouge">build-pipeline</code></td>
-      <td>Restores and judges the AST, then builds and publishes the site. A stale, cannot-tell or missing AST ends the publish.</td>
+      <td>Restores and judges the AST, builds and publishes the site, then reviews its size against the published one. A stale, cannot-tell or missing AST ends the publish; the size review warns and never refuses.</td>
     </tr>
     <tr>
       <td><a id="lane-Lane_Runner"></a>AST refresh (GitHub runner: IG Publisher with the AST exporter)</td>
@@ -559,7 +560,7 @@
 </h2>
     
 
-<p>Every one of the 5 step(s) is documented.</p>
+<p>Every one of the 6 step(s) is documented.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -581,7 +582,13 @@
       <td><a id="step-Task_BuildSite"></a><strong>Build and publish the site from the AST</strong><br /><code class="language-plaintext highlighter-rouge">Task_BuildSite</code></td>
       <td>Site build (agent, stage-local)</td>
       <td><a href="../../../en/cat-harness/processes/skills/ig-render-jekyll.html"><code class="language-plaintext highlighter-rouge">ig-render-jekyll</code></a><br /><a href="../../../en/cat-harness/processes/skills/ig-build-pipeline.html"><code class="language-plaintext highlighter-rouge">ig-build-pipeline</code></a></td>
-      <td>Runs the site route’s steps via <code class="language-plaintext highlighter-rouge">stage-local.ts</code> → <code class="language-plaintext highlighter-rouge">build-instance-site.ts</code>: <code class="language-plaintext highlighter-rouge">ig-site:sidecars</code> (IG API sidecars, if the landing layer has the step), <code class="language-plaintext highlighter-rouge">ig-site:compose</code> (artefact index and thin pages from the AST, the IG composed at the root), <code class="language-plaintext highlighter-rouge">ig-site:openapi</code> (if the IG holds OpenAPI pages), <code class="language-plaintext highlighter-rouge">ig-site:publisher-pages</code> (the AST’s resources as <code class="language-plaintext highlighter-rouge">&lt;Type&gt;-&lt;id&gt;.json</code> at the root, the build stamp), and last <code class="language-plaintext highlighter-rouge">ig-site:bar</code> (the IG’s slim bar on pages written after <code class="language-plaintext highlighter-rouge">publisher-pages</code>). Published at the root from the default branch, as a preview otherwise.</td>
+      <td>Runs the site route’s steps via <code class="language-plaintext highlighter-rouge">stage-local.ts</code> → <code class="language-plaintext highlighter-rouge">build-instance-site.ts</code>: <code class="language-plaintext highlighter-rouge">ig-site:sidecars</code> (IG API sidecars, if the landing layer has the step), <code class="language-plaintext highlighter-rouge">ig-site:compose</code> (artefact index and thin pages from the AST, the IG composed at the root), <code class="language-plaintext highlighter-rouge">ig-site:openapi</code> (if the IG holds OpenAPI pages), <code class="language-plaintext highlighter-rouge">ig-site:publisher-pages</code> (the AST’s resources as <code class="language-plaintext highlighter-rouge">&lt;Type&gt;-&lt;id&gt;.json</code> at the root, the build stamp), and last <code class="language-plaintext highlighter-rouge">ig-site:bar</code> (the IG’s slim bar on pages written after <code class="language-plaintext highlighter-rouge">publisher-pages</code>). Published at the root from the default branch, as a preview otherwise. When the restore recorded the cache commit, the site reads the AST from that commit by raw URL rather than copying it: the artefact pages draw each full resource there, the IG API sidecars are read from its <code class="language-plaintext highlighter-rouge">ig-api/</code> (fhir-harness#344), and the artefact index from its <code class="language-plaintext highlighter-rouge">fhir-artifact-index/index.json</code>, which the site points at with <code class="language-plaintext highlighter-rouge">fhir-artifact-index/index.ref.json</code> instead of serving (#358). The root <code class="language-plaintext highlighter-rouge">&lt;Type&gt;-&lt;id&gt;.json</code> copies are then reduced (minified, no narrative, no ELM data; #359), and the JSON-LD graph (<code class="language-plaintext highlighter-rouge">artifact/*.jsonld</code>) names each root file first and the cache copy as its mirror. The full resources are the cache commit’s and the release’s <code class="language-plaintext highlighter-rouge">package.tgz</code>.</td>
+    </tr>
+    <tr>
+      <td><a id="step-Task_SizeReview"></a><strong>Review the site’s size</strong><br /><code class="language-plaintext highlighter-rouge">Task_SizeReview</code></td>
+      <td>Site build (agent, stage-local)</td>
+      <td><a href="../../../en/cat-harness/processes/skills/ig-publication.html"><code class="language-plaintext highlighter-rouge">ig-publication</code></a></td>
+      <td>Read the size report the build printed before its push, and fix what it shows, or raise a decision card with the owner when no known fix applies (skill <a href="../../../en/cat-harness/processes/skills/ig-publication.html"><code class="language-plaintext highlighter-rouge">ig-publication</code></a> §”Size review”). The report is cat-harness-tools <code class="language-plaintext highlighter-rouge">site-size.ts</code> (<code class="language-plaintext highlighter-rouge">bun run cat site:size</code>), written as <code class="language-plaintext highlighter-rouge">site-size.json</code> beside the build, never into the site. It gives the total against the published <code class="language-plaintext highlighter-rouge">gh-pages</code> root, the top directories, the size by extension, the biggest files, byte-identical duplicates, source maps, the directories named after another layer of <code class="language-plaintext highlighter-rouge">index.lock.json</code>, and the directories the shared-assets host could serve. Growth over the budget (10% or 10 MB) is a warning. The review is advisory and never refuses a publish.</td>
     </tr>
     <tr>
       <td><a id="step-Task_Dispatch"></a><strong>Dispatch AST refresh</strong><br /><code class="language-plaintext highlighter-rouge">Task_Dispatch</code></td>
@@ -599,7 +606,7 @@
       <td><a id="step-Task_Seed"></a><strong>Seed the cache branch</strong><br /><code class="language-plaintext highlighter-rouge">Task_Seed</code></td>
       <td>AST refresh (GitHub runner: IG Publisher with the AST exporter)</td>
       <td><a href="../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"><code class="language-plaintext highlighter-rouge">compiled-artefact-cache</code></a></td>
-      <td><code class="language-plaintext highlighter-rouge">ig-cache.sh seed --ig-root . --push</code>: one commit holding the AST, the Publisher’s expansions and <code class="language-plaintext highlighter-rouge">txcache/</code>, its subject recording the package, counts, Publisher version and source commit. Refused when the candidate is under 90% of the incumbent’s resources or edges (the no-shrink gate).</td>
+      <td><code class="language-plaintext highlighter-rouge">ig-cache.sh seed --ig-root . --push</code>: one commit holding the AST, the Publisher’s expansions and <code class="language-plaintext highlighter-rouge">txcache/</code>, the IG API generated over that AST (<code class="language-plaintext highlighter-rouge">ig-api/</code>, <code class="language-plaintext highlighter-rouge">ig-api-cache.ts</code>) and the artefact index built from that tree (<code class="language-plaintext highlighter-rouge">fhir-artifact-index/index.json</code>, <code class="language-plaintext highlighter-rouge">ig-index-cache.ts</code>), which the site reads by raw URL; its subject recording the package, counts, Publisher version and source commit. Refused when the candidate is under 90% of the incumbent’s resources or edges (the no-shrink gate).</td>
     </tr>
   </tbody>
 </table></div>

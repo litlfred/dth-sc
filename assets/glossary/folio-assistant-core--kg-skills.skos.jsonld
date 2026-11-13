@@ -554,6 +554,26 @@
       "skos:note": "candidate"
     },
     {
+      "@id": "https://litlfred.github.io/folio-assistant-core/v0/ns/glossary/kg-skills/mesh-subject-indexing",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/folio-assistant-core/v0/ns/glossary/kg-skills"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "mesh-subject-indexing"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Assign Medical Subject Headings (MeSH) to a work as a DRAFT for a person to review, in the four stages of skill-pipeline-subject-indexing: over-generate concepts, filter them by NLM's own rules, validate every heading against NLM's MeSH authority with Tool `mesh-authority`, and write the reviewed list. Never emits a heading the authority does not hold."
+        }
+      ],
+      "skos:notation": "mesh-subject-indexing",
+      "dcterms:source": "folio-assistant-core/skills/library/cataloguing/mesh-subject-indexing.md",
+      "skos:note": "candidate"
+    },
+    {
       "@id": "https://litlfred.github.io/folio-assistant-core/v0/ns/glossary/kg-skills/normative-statements",
       "@type": "skos:Concept",
       "skos:inScheme": {

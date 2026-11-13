@@ -5,85 +5,85 @@
   {
    "id": "Task_AgreeReleaseDate",
    "name": "Agree the release date and comment period",
-   "left": 17.08,
-   "top": 6.04,
+   "left": 21.9,
+   "top": 4.35,
    "box": {
-    "left": 12.58,
-    "top": 21.74,
-    "width": 1.49,
-    "height": 5.8
+    "left": 16.61,
+    "top": 25,
+    "width": 1.75,
+    "height": 5.22
    }
   },
   {
    "id": "Task_BuildPcRelease",
    "name": "Build the public comment release",
-   "left": 27.64,
-   "top": 66.91,
+   "left": 32.48,
+   "top": 69.57,
    "box": {
-    "left": 23.14,
-    "top": 89.86,
-    "width": 1.49,
-    "height": 5.8
+    "left": 27.19,
+    "top": 90.22,
+    "width": 1.75,
+    "height": 5.22
    }
   },
   {
    "id": "Task_SetUpChannels",
    "name": "Set up the comment channels, with instructions and links",
-   "left": 40.06,
-   "top": 37.44,
+   "left": 43.07,
+   "top": 36.96,
    "box": {
-    "left": 34.32,
-    "top": 53.14,
-    "width": 1.49,
-    "height": 5.8
+    "left": 37.77,
+    "top": 57.61,
+    "width": 1.75,
+    "height": 5.22
    }
   },
   {
    "id": "Task_WriteAnnouncement",
    "name": "Write the announcement, with links",
-   "left": 50,
-   "top": 37.44,
+   "left": 53.65,
+   "top": 36.96,
    "box": {
-    "left": 45.5,
-    "top": 53.14,
-    "width": 1.49,
-    "height": 5.8
+    "left": 48.36,
+    "top": 57.61,
+    "width": 1.75,
+    "height": 5.22
    }
   },
   {
    "id": "Task_Distribute",
    "name": "Distribute to the public",
-   "left": 60.56,
-   "top": 6.04,
+   "left": 64.23,
+   "top": 4.35,
    "box": {
-    "left": 56.06,
-    "top": 21.74,
-    "width": 1.49,
-    "height": 5.8
+    "left": 58.94,
+    "top": 25,
+    "width": 1.75,
+    "height": 5.22
    }
   },
   {
    "id": "CallActivity_PublicComment",
    "name": "Public comment on the release",
-   "left": 72.98,
-   "top": 37.44,
+   "left": 74.82,
+   "top": 36.96,
    "box": {
-    "left": 67.24,
-    "top": 53.14,
-    "width": 1.49,
-    "height": 5.8
+    "left": 69.53,
+    "top": 57.61,
+    "width": 1.75,
+    "height": 5.22
    }
   },
   {
    "id": "Task_ArchiveRelease",
    "name": "Archive the release with the review",
-   "left": 82.92,
-   "top": 66.91,
+   "left": 85.4,
+   "top": 69.57,
    "box": {
-    "left": 78.42,
-    "top": 89.86,
-    "width": 1.49,
-    "height": 5.8
+    "left": 80.11,
+    "top": 90.22,
+    "width": 1.75,
+    "height": 5.22
    }
   }
  ],
@@ -115,7 +115,8 @@
       "href": "../../../en/cat-harness/processes/skills/review-heatmap.html"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
       "name": "visual-diff"
@@ -142,7 +143,8 @@
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
       "name": "compiled-artefact-cache",
@@ -157,7 +159,8 @@
       "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "feature-staging"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
       "name": "harness-projections",
@@ -168,7 +171,8 @@
       "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -199,7 +203,8 @@
       "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -249,6 +254,7 @@
      },
      {
       "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html",
       "via": "author"
      },
      {
@@ -268,6 +274,7 @@
      },
      {
       "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html",
       "via": "author"
      },
      {
@@ -318,6 +325,7 @@
      },
      {
       "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html",
       "via": "author"
      },
      {
@@ -337,6 +345,7 @@
      },
      {
       "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html",
       "via": "author"
      },
      {
@@ -375,7 +384,8 @@
       "href": "../../../en/cat-harness/processes/skills/review-heatmap.html"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
       "name": "visual-diff"
@@ -422,6 +432,7 @@
      },
      {
       "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html",
       "via": "author"
      },
      {
@@ -441,6 +452,7 @@
      },
      {
       "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html",
       "via": "author"
      },
      {
@@ -472,7 +484,8 @@
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
       "name": "compiled-artefact-cache",
@@ -487,7 +500,8 @@
       "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "feature-staging"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
       "name": "harness-projections",
@@ -498,7 +512,8 @@
       "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -529,7 +544,8 @@
       "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"

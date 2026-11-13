@@ -1,0 +1,97 @@
+{
+  "$schema": "document-export/v1",
+  "document": "dth-sc",
+  "title": "Digital Transformation Handbook for Health Supply Chain Architecture",
+  "commit": "7c006a42c26b153059b661ab7929938d7214d094",
+  "dirty": false,
+  "commitDate": "2026-11-13",
+  "date": "2026-11-13",
+  "blocks": 126,
+  "tools": {
+    "pandoc": "pandoc 3.1.3",
+    "soffice": "LibreOffice 24.2.7.2 420(Build:2)"
+  },
+  "files": [
+    {
+      "kind": "review-docx",
+      "file": "dth-sc-public-comment-7c006a4-2026-11-13.docx",
+      "latest": "dth-sc-public-comment-latest.docx",
+      "format": "Word (.docx)",
+      "mediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "purpose": "The public-comment draft as Word, with the same pages and line numbers as the PDF.",
+      "filters": [
+        "assembled from folio/dth-sc (one Markdown, as document_render_md writes it)",
+        "11 SVG figure(s) rasterised to PNG at 2×",
+        "pandoc with document-export.lua: one Word bookmark per chapter, section and block",
+        "styled from document-export-reference.docx (sha256 cdd45966a6ec…: Cambria body, Calibri headings)",
+        "Word line numbering"
+      ],
+      "parameters": {
+        "document": "dth-sc",
+        "export kind": "release",
+        "source commit": "7c006a4",
+        "date": "2026-11-13",
+        "line numbers": "on",
+        "track changes": "off"
+      },
+      "sha256": "ad4026cd5a738ffd85de78d6cf33607fe13a663a09279e10e822e69880a8640c",
+      "bytes": 5421698,
+      "bookmarks": 177
+    },
+    {
+      "kind": "pdf",
+      "file": "dth-sc-public-comment-7c006a4-2026-11-13.pdf",
+      "latest": "dth-sc-public-comment-latest.pdf",
+      "format": "PDF",
+      "mediaType": "application/pdf",
+      "purpose": "The frozen, line-numbered draft for public comment. Cite page and line.",
+      "filters": [
+        "assembled from folio/dth-sc (one Markdown, as document_render_md writes it)",
+        "11 SVG figure(s) rasterised to PNG at 2×",
+        "pandoc with document-export.lua: one Word bookmark per chapter, section and block",
+        "styled from document-export-reference.docx (sha256 cdd45966a6ec…: Cambria body, Calibri headings)",
+        "Word line numbering",
+        "LibreOffice: .docx laid out as PDF"
+      ],
+      "parameters": {
+        "document": "dth-sc",
+        "export kind": "release",
+        "source commit": "7c006a4",
+        "date": "2026-11-13",
+        "line numbers": "on",
+        "laid out from": "dth-sc-public-comment-7c006a4-2026-11-13.docx"
+      },
+      "sha256": "aecf5bd07234f32786b6fb2c9a28a0e1cea3850f651b8738b68c652a6715ed4c",
+      "bytes": 6758625,
+      "pages": 153,
+      "lines": 2079
+    },
+    {
+      "kind": "offline-docx",
+      "file": "dth-sc-offline-7c006a4.docx",
+      "latest": "dth-sc-offline-latest.docx",
+      "format": "Word (.docx)",
+      "mediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "purpose": "The offline editing copy. Edit with Track Changes on and send it back; the changes merge into the source.",
+      "filters": [
+        "assembled from folio/dth-sc (one Markdown, as document_render_md writes it)",
+        "11 SVG figure(s) rasterised to PNG at 2×",
+        "pandoc with document-export.lua: one Word bookmark per chapter, section and block",
+        "styled from document-export-reference.docx (sha256 cdd45966a6ec…: Cambria body, Calibri headings)",
+        "Word line numbering",
+        "Track Changes switched on"
+      ],
+      "parameters": {
+        "document": "dth-sc",
+        "export kind": "release",
+        "source commit": "7c006a4",
+        "date": "2026-11-13",
+        "line numbers": "on",
+        "track changes": "on"
+      },
+      "sha256": "5d78c268ce405daade7f369516700c90a839e8102c9360060f44e398279f25fc",
+      "bytes": 5421775,
+      "bookmarks": 177
+    }
+  ]
+}

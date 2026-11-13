@@ -92,10 +92,10 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -567,7 +567,12 @@ its IG sources may add the optional caller
   <li>restores and judges the cache for <code class="language-plaintext highlighter-rouge">ref</code> (default <code class="language-plaintext highlighter-rouge">main</code>);</li>
   <li>if the cache is not valid, or <code class="language-plaintext highlighter-rouge">force</code> is set, runs the caller’s
 <code class="language-plaintext highlighter-rouge">pre-export</code> command when it gives one, then builds the IG with
-<code class="language-plaintext highlighter-rouge">AstExportCli</code> (Tool <code class="language-plaintext highlighter-rouge">ig-ast-export</code>, pinned <code class="language-plaintext highlighter-rouge">ast-export-ref</code>);</li>
+<code class="language-plaintext highlighter-rouge">AstExportCli</code> (Tool <code class="language-plaintext highlighter-rouge">ig-ast-export</code>, pinned <code class="language-plaintext highlighter-rouge">ast-export-ref</code>). The
+exporter comes from its published bundle, the release
+<code class="language-plaintext highlighter-rouge">ast-export-&lt;commit&gt;</code> that <code class="language-plaintext highlighter-rouge">ast-export-bundle.yml</code> builds once per pinned
+commit, when its sha256 matches <code class="language-plaintext highlighter-rouge">scripts/ast-export-bundles.tsv</code>, and is
+built from source otherwise. The bundle, the pinned Jekyll gems and the
+FHIR packages are kept in the <code class="language-plaintext highlighter-rouge">fhir-ig-tooling</code> cache;</li>
   <li>puts back what <code class="language-plaintext highlighter-rouge">pre-export</code> changed in the inputs, and checks that the new
 AST is valid for its own commit;</li>
   <li>seeds the cache with <code class="language-plaintext highlighter-rouge">ig-cache.sh seed --push</code>, only when the commit is on
@@ -747,7 +752,7 @@ names, never naming a layer:</p>
       <td><code class="language-plaintext highlighter-rouge">ig-site:bar</code></td>
       <td>final</td>
       <td>this layer</td>
-      <td>the language picker and the IG’s slim bar on the pages the platform wrote after <code class="language-plaintext highlighter-rouge">publisher-pages</code> (<code class="language-plaintext highlighter-rouge">ig-repo-site.ts bar</code>)</td>
+      <td>the language picker and the IG’s slim bar on the pages the platform wrote after <code class="language-plaintext highlighter-rouge">publisher-pages</code> (<code class="language-plaintext highlighter-rouge">ig-repo-site.ts bar</code>); and it leaves out another IG layer’s served artefact index that the platform’s mount copied in (<code class="language-plaintext highlighter-rouge">dropForeignIndexes</code>; owner, 2026-11-10: another layer’s content is cross-referenced, not copied — that IG publishes its index on its own site)</td>
     </tr>
   </tbody>
 </table></div>
@@ -773,14 +778,59 @@ every other page.</li>
 descriptor’s <code class="language-plaintext highlighter-rouge">"placeholder"</code> marker is a shell around the layer’s content,
 and the layer’s page at the same path replaces it. No other page is
 replaced.</li>
+  <li><strong>In the AST cache commit</strong> (owner, 2026-11-10, card “A”):
+<code class="language-plaintext highlighter-rouge">ig-cache.sh seed</code> runs the same step over the AST it seeds
+(<code class="language-plaintext highlighter-rouge">ig-api-cache.ts</code>) and commits its <code class="language-plaintext highlighter-rouge">ig-api/</code> (<code class="language-plaintext highlighter-rouge">sidecars/</code>, <code class="language-plaintext highlighter-rouge">site/</code>,
+<code class="language-plaintext highlighter-rouge">ig-api.json</code>) beside the AST, so the generator’s flags stay the layer
+above’s. When <code class="language-plaintext highlighter-rouge">ast</code> recorded the cache commit and the restored AST holds
+<code class="language-plaintext highlighter-rouge">ig-api/</code>, the site binds that copy instead and copies none of it: the
+index records <code class="language-plaintext highlighter-rouge">sidecarBase</code> (<code class="language-plaintext highlighter-rouge">&lt;raw&gt;/ig-api/sidecars</code>), every API tab, view
+page, hub entry and OpenAPI embed reads <code class="language-plaintext highlighter-rouge">&lt;sidecarBase&gt;/&lt;file&gt;</code>, the hub’s
+documents are <code class="language-plaintext highlighter-rouge">&lt;raw&gt;/ig-api/site/&lt;file&gt;</code>, and only the site’s pages over
+them (the Swagger page) are served. An older cache with no <code class="language-plaintext highlighter-rouge">ig-api/</code> falls
+back to the step’s output in the work directory, served as above.</li>
+  <li><strong>The artefact index, too</strong> (owner, 2026-11-10, card “A”): the seed
+also commits <code class="language-plaintext highlighter-rouge">fhir-artifact-index/index.json</code>, built from the tree it
+commits (<code class="language-plaintext highlighter-rouge">ig-index-cache.ts</code>: <code class="language-plaintext highlighter-rouge">compose</code>’s flags, every <code class="language-plaintext highlighter-rouge">localPath</code> a path
+in that tree, the sidecars at <code class="language-plaintext highlighter-rouge">ig-api/sidecars/</code>, no <code class="language-plaintext highlighter-rouge">sidecarBase</code>). When
+the restored AST holds it, the site does not publish the index; it serves
+<code class="language-plaintext highlighter-rouge">fhir-artifact-index/index.ref.json</code> (<code class="language-plaintext highlighter-rouge">fhir-artifact-index-ref/v1</code>):
+<code class="language-plaintext highlighter-rouge">index</code> is the raw URL of the cache copy and <code class="language-plaintext highlighter-rouge">base</code> the commit’s tree,
+which its paths resolve against. An older cache: the site serves its own
+<code class="language-plaintext highlighter-rouge">index.json</code>, and the pointer says <code class="language-plaintext highlighter-rouge">"index": "index.json"</code>. A reader on
+another site finds the index with <code class="language-plaintext highlighter-rouge">locateArtefactIndex(&lt;site&gt;)</code>: the
+pointer, else the old path. The pages themselves read their index at build
+time; no page fetches it. <code class="language-plaintext highlighter-rouge">ast-history.json</code> stays on the site: it is
+written at build time from the commits behind the one restored.</li>
+  <li><strong>The Swagger page</strong> lists each spec at the address it is read from:
+<code class="language-plaintext highlighter-rouge">../fhir-artifact-index/sidecars/&lt;file&gt;</code>, or its raw URL
+(<code class="language-plaintext highlighter-rouge">rebaseSwaggerSpecs</code>); the generator’s <code class="language-plaintext highlighter-rouge">../&lt;file&gt;</code> named a root path
+where no sidecar is served.</li>
 </ul>
 
 <p><strong>What the site serves from the AST</strong>: each resource once, under the
-Publisher’s name <code class="language-plaintext highlighter-rouge">&lt;Type&gt;-&lt;id&gt;.json</code> at the root (the thin pages’ data,
-<code class="language-plaintext highlighter-rouge">gen-ig-pages --compiled-data .</code>, and the narrative’s links; no <code class="language-plaintext highlighter-rouge">ast-data/</code>
-mirror, owner 2026-11-08), the
-artefact index at <code class="language-plaintext highlighter-rouge">fhir-artifact-index/index.json</code>, and the AST as
-<code class="language-plaintext highlighter-rouge">site.data</code> for the IG’s own pages. The grouping of the IG’s committed
+Publisher’s name <code class="language-plaintext highlighter-rouge">&lt;Type&gt;-&lt;id&gt;.json</code> at the root, as FHIR’s convention and
+the IG Publisher have it (owner, 2026-11-10, card “C”; fhir-harness#359; no
+<code class="language-plaintext highlighter-rouge">ast-data/</code> mirror, owner 2026-11-08); the artefact index, or the pointer to
+the cache’s copy (above); and the AST as <code class="language-plaintext highlighter-rouge">site.data</code> for the IG’s own pages.
+When <code class="language-plaintext highlighter-rouge">ast</code> recorded the cache commit, the pages read each resource IN FULL by
+raw URL at that commit, and the root copy is <strong>reduced</strong>
+(<code class="language-plaintext highlighter-rouge">ig-repo-site.ts</code> <code class="language-plaintext highlighter-rouge">reduceForSite</code>): minified, without <code class="language-plaintext highlighter-rouge">text</code> (the pages
+render the narrative from the full copy), and each Library attachment whose
+contentType names <code class="language-plaintext highlighter-rouge">elm</code> without its <code class="language-plaintext highlighter-rouge">data</code>, its <code class="language-plaintext highlighter-rouge">url</code> set to the full
+resource in the cache; the CQL likewise becomes a <code class="language-plaintext highlighter-rouge">url</code> (the IG’s <code class="language-plaintext highlighter-rouge">.cql</code>
+source, or else the full resource). Measured on one IG of 756 resources: 47 MB
+verbatim, 13 MB reduced. The JSON-LD graph names the root file first (each
+node’s <code class="language-plaintext highlighter-rouge">local</code> encoding, each <code class="language-plaintext highlighter-rouge">artifact/index.jsonld</code> entry’s
+<code class="language-plaintext highlighter-rouge">schema:contentUrl</code>) and the cache copy second (<code class="language-plaintext highlighter-rouge">mirror</code>); <code class="language-plaintext highlighter-rouge">ig-artifact-jsonld.ts
+check</code> holds every local file to the built site. The full copy is the cache
+commit’s and the release’s <code class="language-plaintext highlighter-rouge">package.tgz</code> (<a href="ig-binary-artefacts.html"><code class="language-plaintext highlighter-rouge">ig-binary-artefacts</code></a>).
+The root name is read from the resource (<code class="language-plaintext highlighter-rouge">resourceType</code>, <code class="language-plaintext highlighter-rouge">id</code>), not the
+cache file’s name; two names that differ only by case are warned about, as
+they clash on a case-insensitive disk for the Publisher too.
+<code class="language-plaintext highlighter-rouge">SITE_ROOT_RESOURCES=0</code> serves no root copy when the pages read by URL;
+without a cache commit (or with <code class="language-plaintext highlighter-rouge">SITE_AST_BY_URL=0</code>) the root copy is the
+pages’ own and is served whole. The grouping of the IG’s committed
 <code class="language-plaintext highlighter-rouge">fhir-artifact-index/index.json</code> is kept when it holds one, since the AST
 stops before the Publisher assigns categories.</p>
 
@@ -820,6 +870,12 @@ each <code class="language-plaintext highlighter-rouge">x.html</code> must be a 
 build banner, the release-link fix, deleting files over 100 MB, and a deploy
 that retries on a ref conflict. Commenting on a pull request that a deploy
 finished belongs to cat-harness.</p>
+
+<p>Every build also prints a size review before its push: the site against the
+published one, and what weighs most. It is advisory and never refuses. What to
+look at and the usual fixes are in
+<a href="https://github.com/litlfred/fhir-harness/blob/main/skills/content/fhir-ig-authoring/ig-publication.md"><code class="language-plaintext highlighter-rouge">ig-publication</code></a> §”Size
+review”; the step is <code class="language-plaintext highlighter-rouge">Task_SizeReview</code> of <code class="language-plaintext highlighter-rouge">ig-ast-cache.bpmn</code>.</p>
 <h2 id="who-starts-a-build">
   
   

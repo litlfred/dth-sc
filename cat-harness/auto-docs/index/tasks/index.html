@@ -92,10 +92,10 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -276,7 +276,7 @@
   .da-page td:first-child { width: 20rem; }
   /* A repo-relative path is long and has no spaces, so it breaks mid-word
      unless the breakpoints are named. Slashes are where a reader expects it. */
-  .da-page .p { opacity: .9; font-size: .8rem; font-family: ui-monospace, monospace; word-break: normal; overflow-wrap: anywhere; line-break: anywhere; }
+  .da-page .p { opacity: .9; font-size: .8rem; font-family: var(--fa-font-mono,Menlo,Consolas,monospace); word-break: normal; overflow-wrap: anywhere; line-break: anywhere; }
   .da-page .none { opacity: .9; font-style: italic; }
   .da-page .f { margin-top: .35rem; font-size: .85rem; opacity: .9; }
   .da-page .f .k { display: inline-block; min-width: 5.2rem; font-weight: 600; }
@@ -656,8 +656,8 @@
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/sample-import.bpmn#Scope the sample: items, store, permanence"><code>Scope the sample: items, store, permanence</code></a><br><span class="p">cat-harness/library/processes/sample-import.bpmn#Scope the sample: items, store, permanence</span></td>
   <td>userTask in sample-import</td>
 </tr>
-<tr id="a-cat-harness-library-processes-subscribe-kg-bpmn-Choose-subgraphs-the-asset-policy-harnesses">
-  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/subscribe-kg.bpmn#Choose subgraphs, the asset policy, harnesses"><code>Choose subgraphs, the asset policy, harnesses</code></a><br><span class="p">cat-harness/library/processes/subscribe-kg.bpmn#Choose subgraphs, the asset policy, harnesses</span></td>
+<tr id="a-cat-harness-library-processes-subscribe-kg-bpmn-Choose-subgraphs-assets-harnesses">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/subscribe-kg.bpmn#Choose subgraphs, assets, harnesses"><code>Choose subgraphs, assets, harnesses</code></a><br><span class="p">cat-harness/library/processes/subscribe-kg.bpmn#Choose subgraphs, assets, harnesses</span></td>
   <td>userTask in subscribe-kg</td>
 </tr>
 <tr id="a-cat-harness-library-processes-subscribe-kg-bpmn-Fetch-and-validate-the-pinned-declaration">
@@ -854,7 +854,7 @@
 </tr>
 <tr id="a-cat-harness-processes-content-review-task-bpmn-Prose-and-the-code-10-it-describes">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/content/review-task.bpmn#Prose and the code&amp;#10;it describes"><code>Prose and the code&amp;#10;it describes</code></a><br><span class="p">cat-harness/processes/content/review-task.bpmn#Prose and the code&amp;#10;it describes</span></td>
-  <td>callActivity in review-task</td>
+  <td>task in review-task</td>
 </tr>
 <tr id="a-cat-harness-processes-content-voice-review-bpmn-Adjudicate-prose-scope-or-exception">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/content/voice-review.bpmn#Adjudicate: prose, scope, or exception"><code>Adjudicate: prose, scope, or exception</code></a><br><span class="p">cat-harness/processes/content/voice-review.bpmn#Adjudicate: prose, scope, or exception</span></td>
@@ -970,7 +970,7 @@
 </tr>
 <tr id="a-cat-harness-processes-kg-kg-separation-move-bpmn-Every-identifier-10-dereferences">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/kg/kg-separation-move.bpmn#Every identifier&amp;#10;dereferences"><code>Every identifier&amp;#10;dereferences</code></a><br><span class="p">cat-harness/processes/kg/kg-separation-move.bpmn#Every identifier&amp;#10;dereferences</span></td>
-  <td>callActivity in kg-separation-move</td>
+  <td>task in kg-separation-move</td>
 </tr>
 <tr id="a-cat-harness-processes-kg-kg-separation-move-bpmn-First-release">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/kg/kg-separation-move.bpmn#First release"><code>First release</code></a><br><span class="p">cat-harness/processes/kg/kg-separation-move.bpmn#First release</span></td>
@@ -978,7 +978,7 @@
 </tr>
 <tr id="a-cat-harness-processes-kg-kg-separation-move-bpmn-Parent-consumes-10-additively">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/kg/kg-separation-move.bpmn#Parent consumes,&amp;#10;additively"><code>Parent consumes,&amp;#10;additively</code></a><br><span class="p">cat-harness/processes/kg/kg-separation-move.bpmn#Parent consumes,&amp;#10;additively</span></td>
-  <td>callActivity in kg-separation-move</td>
+  <td>task in kg-separation-move</td>
 </tr>
 <tr id="a-cat-harness-processes-kg-kg-separation-move-bpmn-Re-point-livesAt-10-seam-mount-or-subscription">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/kg/kg-separation-move.bpmn#Re-point: livesAt,&amp;#10;seam, mount or subscription"><code>Re-point: livesAt,&amp;#10;seam, mount or subscription</code></a><br><span class="p">cat-harness/processes/kg/kg-separation-move.bpmn#Re-point: livesAt,&amp;#10;seam, mount or subscription</span></td>
@@ -1230,7 +1230,7 @@
 </tr>
 <tr id="a-cat-harness-processes-process-actor-role-administration-bpmn-Branch-gates-PR-and-review">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/actor-role-administration.bpmn#Branch, gates, PR and review"><code>Branch, gates, PR and review</code></a><br><span class="p">cat-harness/processes/process/actor-role-administration.bpmn#Branch, gates, PR and review</span></td>
-  <td>callActivity in actor-role-administration</td>
+  <td>task in actor-role-administration</td>
 </tr>
 <tr id="a-cat-harness-processes-process-actor-role-administration-bpmn-Grant-or-revoke-a-permission">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/actor-role-administration.bpmn#Grant or revoke a permission"><code>Grant or revoke a permission</code></a><br><span class="p">cat-harness/processes/process/actor-role-administration.bpmn#Grant or revoke a permission</span></td>
@@ -1243,6 +1243,18 @@
 <tr id="a-cat-harness-processes-process-actor-role-administration-bpmn-Retire-an-actor-never-delete-one">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/actor-role-administration.bpmn#Retire an actor — never delete one"><code>Retire an actor — never delete one</code></a><br><span class="p">cat-harness/processes/process/actor-role-administration.bpmn#Retire an actor — never delete one</span></td>
   <td>userTask in actor-role-administration</td>
+</tr>
+<tr id="a-cat-harness-processes-process-adjudication-bpmn-Adjudicate-the-disagreement">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/adjudication.bpmn#Adjudicate the disagreement"><code>Adjudicate the disagreement</code></a><br><span class="p">cat-harness/processes/process/adjudication.bpmn#Adjudicate the disagreement</span></td>
+  <td>task in adjudication</td>
+</tr>
+<tr id="a-cat-harness-processes-process-adjudication-bpmn-Dispatch-with-adjudicator_sees-never-the-artefact">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/adjudication.bpmn#Dispatch with adjudicator_sees — never the artefact"><code>Dispatch with adjudicator_sees — never the artefact</code></a><br><span class="p">cat-harness/processes/process/adjudication.bpmn#Dispatch with adjudicator_sees — never the artefact</span></td>
+  <td>task in adjudication</td>
+</tr>
+<tr id="a-cat-harness-processes-process-adjudication-bpmn-State-the-finding-and-what-it-read">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/adjudication.bpmn#State the finding and what it read"><code>State the finding and what it read</code></a><br><span class="p">cat-harness/processes/process/adjudication.bpmn#State the finding and what it read</span></td>
+  <td>task in adjudication</td>
 </tr>
 <tr id="a-cat-harness-processes-process-ask-the-person-bpmn-Compose-the-full-question">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/ask-the-person.bpmn#Compose the full question"><code>Compose the full question</code></a><br><span class="p">cat-harness/processes/process/ask-the-person.bpmn#Compose the full question</span></td>
@@ -1270,7 +1282,7 @@
 </tr>
 <tr id="a-cat-harness-processes-process-crdm-close-bpmn-Land-the-feature-s-PRs">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/crdm-close.bpmn#Land the feature's PRs"><code>Land the feature's PRs</code></a><br><span class="p">cat-harness/processes/process/crdm-close.bpmn#Land the feature's PRs</span></td>
-  <td>callActivity in crdm-close</td>
+  <td>task in crdm-close</td>
 </tr>
 <tr id="a-cat-harness-processes-process-crdm-close-bpmn-Record-the-sign-off-attestation">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/crdm-close.bpmn#Record the sign-off attestation"><code>Record the sign-off attestation</code></a><br><span class="p">cat-harness/processes/process/crdm-close.bpmn#Record the sign-off attestation</span></td>
@@ -1452,6 +1464,22 @@
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/crdm-signoff.bpmn#Sign off on&amp;#10;requirements"><code>Sign off on&amp;#10;requirements</code></a><br><span class="p">cat-harness/processes/process/crdm-signoff.bpmn#Sign off on&amp;#10;requirements</span></td>
   <td>callActivity in crdm-signoff</td>
 </tr>
+<tr id="a-cat-harness-processes-process-criterion-adjudication-bpmn-Adjudicate-the-criterion-disagreement">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/criterion-adjudication.bpmn#Adjudicate the criterion disagreement"><code>Adjudicate the criterion disagreement</code></a><br><span class="p">cat-harness/processes/process/criterion-adjudication.bpmn#Adjudicate the criterion disagreement</span></td>
+  <td>callActivity in criterion-adjudication</td>
+</tr>
+<tr id="a-cat-harness-processes-process-criterion-adjudication-bpmn-Grant-a-dispensation-with-its-reason">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/criterion-adjudication.bpmn#Grant a dispensation, with its reason"><code>Grant a dispensation, with its reason</code></a><br><span class="p">cat-harness/processes/process/criterion-adjudication.bpmn#Grant a dispensation, with its reason</span></td>
+  <td>task in criterion-adjudication</td>
+</tr>
+<tr id="a-cat-harness-processes-process-criterion-adjudication-bpmn-Scope-the-criterion-so-it-stops-applying-here">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/criterion-adjudication.bpmn#Scope the criterion so it stops applying here"><code>Scope the criterion so it stops applying here</code></a><br><span class="p">cat-harness/processes/process/criterion-adjudication.bpmn#Scope the criterion so it stops applying here</span></td>
+  <td>task in criterion-adjudication</td>
+</tr>
+<tr id="a-cat-harness-processes-process-criterion-adjudication-bpmn-Write-the-entry-that-LEADS-keeping-the-checker-s-beneath-it">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/criterion-adjudication.bpmn#Write the entry that LEADS — keeping the checker's beneath it"><code>Write the entry that LEADS — keeping the checker's beneath it</code></a><br><span class="p">cat-harness/processes/process/criterion-adjudication.bpmn#Write the entry that LEADS — keeping the checker's beneath it</span></td>
+  <td>task in criterion-adjudication</td>
+</tr>
 <tr id="a-cat-harness-processes-process-hand-back-to-discussion-bpmn-Act-on-the-answer">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/hand-back-to-discussion.bpmn#Act on the answer"><code>Act on the answer</code></a><br><span class="p">cat-harness/processes/process/hand-back-to-discussion.bpmn#Act on the answer</span></td>
   <td>task in hand-back-to-discussion</td>
@@ -1483,6 +1511,46 @@
 <tr id="a-cat-harness-processes-process-hand-back-to-discussion-bpmn-Route-the-answer-back-10-quoted">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/hand-back-to-discussion.bpmn#Route the answer back,&amp;#10;quoted"><code>Route the answer back,&amp;#10;quoted</code></a><br><span class="p">cat-harness/processes/process/hand-back-to-discussion.bpmn#Route the answer back,&amp;#10;quoted</span></td>
   <td>task in hand-back-to-discussion</td>
+</tr>
+<tr id="a-cat-harness-processes-process-options-analysis-bpmn-Apply-it-and-state-each-option-s-trade-offs">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/options-analysis.bpmn#Apply it, and state each option's trade-offs"><code>Apply it, and state each option's trade-offs</code></a><br><span class="p">cat-harness/processes/process/options-analysis.bpmn#Apply it, and state each option's trade-offs</span></td>
+  <td>task in options-analysis</td>
+</tr>
+<tr id="a-cat-harness-processes-process-options-analysis-bpmn-Check-the-selected-10-methodology-apos-s-evidence-base">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/options-analysis.bpmn#Check the selected&amp;#10;methodology&amp;apos;s evidence base"><code>Check the selected&amp;#10;methodology&amp;apos;s evidence base</code></a><br><span class="p">cat-harness/processes/process/options-analysis.bpmn#Check the selected&amp;#10;methodology&amp;apos;s evidence base</span></td>
+  <td>task in options-analysis</td>
+</tr>
+<tr id="a-cat-harness-processes-process-options-analysis-bpmn-Frame-the-decision-and-check-the-trigger">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/options-analysis.bpmn#Frame the decision and check the trigger"><code>Frame the decision and check the trigger</code></a><br><span class="p">cat-harness/processes/process/options-analysis.bpmn#Frame the decision and check the trigger</span></td>
+  <td>task in options-analysis</td>
+</tr>
+<tr id="a-cat-harness-processes-process-options-analysis-bpmn-Record-the-chosen-option-AND-the-rejected-ones">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/options-analysis.bpmn#Record the chosen option AND the rejected ones"><code>Record the chosen option AND the rejected ones</code></a><br><span class="p">cat-harness/processes/process/options-analysis.bpmn#Record the chosen option AND the rejected ones</span></td>
+  <td>task in options-analysis</td>
+</tr>
+<tr id="a-cat-harness-processes-process-options-analysis-bpmn-Select-the-methodology-by-context">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/options-analysis.bpmn#Select the methodology by context"><code>Select the methodology by context</code></a><br><span class="p">cat-harness/processes/process/options-analysis.bpmn#Select the methodology by context</span></td>
+  <td>task in options-analysis</td>
+</tr>
+<tr id="a-cat-harness-processes-process-related-work-bpmn-Categorize-and-summarize">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/related-work.bpmn#Categorize and summarize"><code>Categorize and summarize</code></a><br><span class="p">cat-harness/processes/process/related-work.bpmn#Categorize and summarize</span></td>
+  <td>task in related-work</td>
+</tr>
+<tr id="a-cat-harness-processes-process-related-work-bpmn-Coordinate-How-">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/related-work.bpmn#Coordinate? How?"><code>Coordinate? How?</code></a><br><span class="p">cat-harness/processes/process/related-work.bpmn#Coordinate? How?</span></td>
+  <td>callActivity in related-work</td>
+</tr>
+<tr id="a-cat-harness-processes-process-related-work-bpmn-Record-and-act-on-the-answer">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/related-work.bpmn#Record and act on the answer"><code>Record and act on the answer</code></a><br><span class="p">cat-harness/processes/process/related-work.bpmn#Record and act on the answer</span></td>
+  <td>task in related-work</td>
+</tr>
+<tr id="a-cat-harness-processes-process-related-work-bpmn-Search-beans-for-relevance">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/related-work.bpmn#Search beans for relevance"><code>Search beans for relevance</code></a><br><span class="p">cat-harness/processes/process/related-work.bpmn#Search beans for relevance</span></td>
+  <td>task in related-work</td>
+</tr>
+<tr id="a-cat-harness-processes-process-related-work-bpmn-Search-issues-and-open-PRs">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/related-work.bpmn#Search issues and open PRs"><code>Search issues and open PRs</code></a><br><span class="p">cat-harness/processes/process/related-work.bpmn#Search issues and open PRs</span></td>
+  <td>task in related-work</td>
 </tr>
 <tr id="a-cat-harness-processes-process-render-kg-to-cdn-bpmn-Determine-which-CDN-10-the-root-URL-and-10-the-Subgraphs">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/render-kg-to-cdn.bpmn#Determine which CDN,&amp;#10;the root URL and&amp;#10;the Subgraphs"><code>Determine which CDN,&amp;#10;the root URL and&amp;#10;the Subgraphs</code></a><br><span class="p">cat-harness/processes/process/render-kg-to-cdn.bpmn#Determine which CDN,&amp;#10;the root URL and&amp;#10;the Subgraphs</span></td>
@@ -1696,6 +1764,34 @@
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/theme-ui-review.bpmn#Raise findings&amp;#10;before the assets land"><code>Raise findings&amp;#10;before the assets land</code></a><br><span class="p">cat-harness/processes/ui/theme-ui-review.bpmn#Raise findings&amp;#10;before the assets land</span></td>
   <td>task in theme-ui-review</td>
 </tr>
+<tr id="a-cat-harness-processes-ui-web-app-publish-bpmn-Build-into-its-own-chrome-less-route">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/web-app-publish.bpmn#Build into its own chrome-less route"><code>Build into its own chrome-less route</code></a><br><span class="p">cat-harness/processes/ui/web-app-publish.bpmn#Build into its own chrome-less route</span></td>
+  <td>task in web-app-publish</td>
+</tr>
+<tr id="a-cat-harness-processes-ui-web-app-publish-bpmn-Check-the-declaration-and-translations">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/web-app-publish.bpmn#Check the declaration and translations"><code>Check the declaration and translations</code></a><br><span class="p">cat-harness/processes/ui/web-app-publish.bpmn#Check the declaration and translations</span></td>
+  <td>task in web-app-publish</td>
+</tr>
+<tr id="a-cat-harness-processes-ui-web-app-publish-bpmn-Declare-the-web-app-directory">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/web-app-publish.bpmn#Declare the web-app directory"><code>Declare the web-app directory</code></a><br><span class="p">cat-harness/processes/ui/web-app-publish.bpmn#Declare the web-app directory</span></td>
+  <td>task in web-app-publish</td>
+</tr>
+<tr id="a-cat-harness-processes-ui-web-app-publish-bpmn-Extract-the-app-s-translation-templates">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/web-app-publish.bpmn#Extract the app's translation templates"><code>Extract the app's translation templates</code></a><br><span class="p">cat-harness/processes/ui/web-app-publish.bpmn#Extract the app's translation templates</span></td>
+  <td>task in web-app-publish</td>
+</tr>
+<tr id="a-cat-harness-processes-ui-web-app-publish-bpmn-Fix-the-declaration-or-the-catalog">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/web-app-publish.bpmn#Fix the declaration or the catalog"><code>Fix the declaration or the catalog</code></a><br><span class="p">cat-harness/processes/ui/web-app-publish.bpmn#Fix the declaration or the catalog</span></td>
+  <td>task in web-app-publish</td>
+</tr>
+<tr id="a-cat-harness-processes-ui-web-app-publish-bpmn-Review-the-size-against-its-budget">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/web-app-publish.bpmn#Review the size against its budget"><code>Review the size against its budget</code></a><br><span class="p">cat-harness/processes/ui/web-app-publish.bpmn#Review the size against its budget</span></td>
+  <td>task in web-app-publish</td>
+</tr>
+<tr id="a-cat-harness-processes-ui-web-app-publish-bpmn-Translate-into-each-locale">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/web-app-publish.bpmn#Translate into each locale"><code>Translate into each locale</code></a><br><span class="p">cat-harness/processes/ui/web-app-publish.bpmn#Translate into each locale</span></td>
+  <td>callActivity in web-app-publish</td>
+</tr>
 <tr id="a-cat-harness-processes-ui-wireframe-design-review-bpmn-Adjudication">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/wireframe-design-review.bpmn#Adjudication"><code>Adjudication</code></a><br><span class="p">cat-harness/processes/ui/wireframe-design-review.bpmn#Adjudication</span></td>
   <td>callActivity in wireframe-design-review</td>
@@ -1735,6 +1831,10 @@
 <tr id="a-fhir-harness-processes-content-ig-ast-cache-bpmn-Restore-and-judge-the-cached-AST">
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-ast-cache.bpmn#Restore and judge the cached AST"><code>Restore and judge the cached AST</code></a><br><span class="p">fhir-harness/processes/content/ig-ast-cache.bpmn#Restore and judge the cached AST</span></td>
   <td>serviceTask in ig-ast-cache</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-ast-cache-bpmn-Review-the-site-s-size">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-ast-cache.bpmn#Review the site's size"><code>Review the site's size</code></a><br><span class="p">fhir-harness/processes/content/ig-ast-cache.bpmn#Review the site's size</span></td>
+  <td>task in ig-ast-cache</td>
 </tr>
 <tr id="a-fhir-harness-processes-content-ig-ast-cache-bpmn-Seed-the-cache-branch">
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-ast-cache.bpmn#Seed the cache branch"><code>Seed the cache branch</code></a><br><span class="p">fhir-harness/processes/content/ig-ast-cache.bpmn#Seed the cache branch</span></td>
@@ -1831,6 +1931,26 @@
 <tr id="a-fhir-harness-processes-content-ig-incremental-build-bpmn-Validate-the-cone-10-fhir_validate-">
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-incremental-build.bpmn#Validate the cone&amp;#10;(fhir_validate)"><code>Validate the cone&amp;#10;(fhir_validate)</code></a><br><span class="p">fhir-harness/processes/content/ig-incremental-build.bpmn#Validate the cone&amp;#10;(fhir_validate)</span></td>
   <td>serviceTask in ig-incremental-build</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Build-the-tag-in-full-and-make-the-draft-release">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Build the tag in full and make the draft release"><code>Build the tag in full and make the draft release</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Build the tag in full and make the draft release</span></td>
+  <td>serviceTask in ig-release</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Check-the-current-version-s-tag-and-release">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Check the current version's tag and release"><code>Check the current version's tag and release</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Check the current version's tag and release</span></td>
+  <td>serviceTask in ig-release</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Publish-the-draft-release">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Publish the draft release"><code>Publish the draft release</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Publish the draft release</span></td>
+  <td>userTask in ig-release</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Run-IG-release-draft-10-by-hand-for-the-tag">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Run IG release (draft)&amp;#10;by hand for the tag"><code>Run IG release (draft)&amp;#10;by hand for the tag</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Run IG release (draft)&amp;#10;by hand for the tag</span></td>
+  <td>userTask in ig-release</td>
+</tr>
+<tr id="a-fhir-harness-processes-content-ig-release-bpmn-Tag-the-IG-s-current-version">
+  <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-release.bpmn#Tag the IG's current version"><code>Tag the IG's current version</code></a><br><span class="p">fhir-harness/processes/content/ig-release.bpmn#Tag the IG's current version</span></td>
+  <td>userTask in ig-release</td>
 </tr>
 <tr id="a-fhir-harness-processes-content-l3-fhir-pipeline-bpmn-Author-FSH-profiles">
   <td><a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/l3-fhir-pipeline.bpmn#Author FSH profiles"><code>Author FSH profiles</code></a><br><span class="p">fhir-harness/processes/content/l3-fhir-pipeline.bpmn#Author FSH profiles</span></td>
@@ -2228,8 +2348,8 @@
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/content/contributor-feedback.bpmn#Propose a direction"><code>Propose a direction</code></a><br><span class="p">folio-assistant-core/processes/content/contributor-feedback.bpmn#Propose a direction</span></td>
   <td>serviceTask in contributor-feedback</td>
 </tr>
-<tr id="a-folio-assistant-core-processes-content-contributor-feedback-bpmn-QA-gate-review-dispositions-against-the-people-and-the-pull-request">
-  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/content/contributor-feedback.bpmn#QA gate: review dispositions against the people and the pull request"><code>QA gate: review dispositions against the people and the pull request</code></a><br><span class="p">folio-assistant-core/processes/content/contributor-feedback.bpmn#QA gate: review dispositions against the people and the pull request</span></td>
+<tr id="a-folio-assistant-core-processes-content-contributor-feedback-bpmn-QA-gate-check-dispositions-and-PR">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/content/contributor-feedback.bpmn#QA gate: check dispositions and PR"><code>QA gate: check dispositions and PR</code></a><br><span class="p">folio-assistant-core/processes/content/contributor-feedback.bpmn#QA gate: check dispositions and PR</span></td>
   <td>serviceTask in contributor-feedback</td>
 </tr>
 <tr id="a-folio-assistant-core-processes-content-contributor-feedback-bpmn-Review-the-preview-and-answer">
@@ -2596,12 +2716,16 @@
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-build-l1-kg.bpmn#Bind the folder to its bibliography slug"><code>Bind the folder to its bibliography slug</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-build-l1-kg.bpmn#Bind the folder to its bibliography slug</span></td>
   <td>serviceTask in ingest-build-l1-kg</td>
 </tr>
+<tr id="a-folio-assistant-core-processes-library-ingest-build-l1-kg-bpmn-Extract-reference-lists">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-build-l1-kg.bpmn#Extract reference lists"><code>Extract reference lists</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-build-l1-kg.bpmn#Extract reference lists</span></td>
+  <td>serviceTask in ingest-build-l1-kg</td>
+</tr>
 <tr id="a-folio-assistant-core-processes-library-ingest-build-l1-kg-bpmn-Link-L1-nodes-into-the-corpus-graph">
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-build-l1-kg.bpmn#Link L1 nodes into the corpus graph"><code>Link L1 nodes into the corpus graph</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-build-l1-kg.bpmn#Link L1 nodes into the corpus graph</span></td>
   <td>task in ingest-build-l1-kg</td>
 </tr>
-<tr id="a-folio-assistant-core-processes-library-ingest-build-l1-kg-bpmn-Read-glossary-and-abbreviations-into-candidate-terms">
-  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-build-l1-kg.bpmn#Read glossary and abbreviations into candidate terms"><code>Read glossary and abbreviations into candidate terms</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-build-l1-kg.bpmn#Read glossary and abbreviations into candidate terms</span></td>
+<tr id="a-folio-assistant-core-processes-library-ingest-build-l1-kg-bpmn-Read-glossary-into-candidate-terms">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-build-l1-kg.bpmn#Read glossary into candidate terms"><code>Read glossary into candidate terms</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-build-l1-kg.bpmn#Read glossary into candidate terms</span></td>
   <td>serviceTask in ingest-build-l1-kg</td>
 </tr>
 <tr id="a-folio-assistant-core-processes-library-ingest-build-l1-kg-bpmn-Record-assets-local-path-or-remote-URL">
@@ -2624,8 +2748,16 @@
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-derive-content.bpmn#Cite the author of every narrative"><code>Cite the author of every narrative</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-derive-content.bpmn#Cite the author of every narrative</span></td>
   <td>serviceTask in ingest-derive-content</td>
 </tr>
+<tr id="a-folio-assistant-core-processes-library-ingest-derive-content-bpmn-Extract-figures-and-tables">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-derive-content.bpmn#Extract figures and tables"><code>Extract figures and tables</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-derive-content.bpmn#Extract figures and tables</span></td>
+  <td>serviceTask in ingest-derive-content</td>
+</tr>
 <tr id="a-folio-assistant-core-processes-library-ingest-derive-content-bpmn-File-info-sizes-hashes-timestamps-mimetype">
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-derive-content.bpmn#File info, sizes, hashes, timestamps, mimetype"><code>File info, sizes, hashes, timestamps, mimetype</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-derive-content.bpmn#File info, sizes, hashes, timestamps, mimetype</span></td>
+  <td>serviceTask in ingest-derive-content</td>
+</tr>
+<tr id="a-folio-assistant-core-processes-library-ingest-derive-content-bpmn-Footnotes-and-the-marks-that-call-them">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-derive-content.bpmn#Footnotes and the marks that call them"><code>Footnotes and the marks that call them</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-derive-content.bpmn#Footnotes and the marks that call them</span></td>
   <td>serviceTask in ingest-derive-content</td>
 </tr>
 <tr id="a-folio-assistant-core-processes-library-ingest-derive-content-bpmn-Narrative-description-per-image-localized">
@@ -2639,6 +2771,10 @@
 <tr id="a-folio-assistant-core-processes-library-ingest-derive-content-bpmn-Transcribe-and-translate-audio">
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-derive-content.bpmn#Transcribe and translate audio"><code>Transcribe and translate audio</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-derive-content.bpmn#Transcribe and translate audio</span></td>
   <td>serviceTask in ingest-derive-content</td>
+</tr>
+<tr id="a-folio-assistant-core-processes-library-ingest-extract-structure-bpmn-Check-each-page-OCR-pages-that-fail">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-extract-structure.bpmn#Check each page; OCR pages that fail"><code>Check each page; OCR pages that fail</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-extract-structure.bpmn#Check each page; OCR pages that fail</span></td>
+  <td>serviceTask in ingest-extract-structure</td>
 </tr>
 <tr id="a-folio-assistant-core-processes-library-ingest-extract-structure-bpmn-Extract-claim-candidates">
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-extract-structure.bpmn#Extract claim candidates"><code>Extract claim candidates</code></a><br><span class="p">folio-assistant-core/processes/library/ingest-extract-structure.bpmn#Extract claim candidates</span></td>
@@ -2724,16 +2860,20 @@
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/l1-document-ingestion.bpmn#Open the bean"><code>Open the bean</code></a><br><span class="p">folio-assistant-core/processes/library/l1-document-ingestion.bpmn#Open the bean</span></td>
   <td>callActivity in l1-document-ingestion</td>
 </tr>
-<tr id="a-folio-assistant-core-processes-library-l1-document-ingestion-bpmn-Publish-the-extracted-statements-with-source-links">
-  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/l1-document-ingestion.bpmn#Publish the extracted statements with source links"><code>Publish the extracted statements with source links</code></a><br><span class="p">folio-assistant-core/processes/library/l1-document-ingestion.bpmn#Publish the extracted statements with source links</span></td>
+<tr id="a-folio-assistant-core-processes-library-l1-document-ingestion-bpmn-Publish-the-extracted-statements">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/l1-document-ingestion.bpmn#Publish the extracted statements"><code>Publish the extracted statements</code></a><br><span class="p">folio-assistant-core/processes/library/l1-document-ingestion.bpmn#Publish the extracted statements</span></td>
   <td>callActivity in l1-document-ingestion</td>
 </tr>
-<tr id="a-folio-assistant-core-processes-library-l1-document-ingestion-bpmn-Queue-prose-blocks-for-summary">
-  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/l1-document-ingestion.bpmn#Queue prose blocks for summary"><code>Queue prose blocks for summary</code></a><br><span class="p">folio-assistant-core/processes/library/l1-document-ingestion.bpmn#Queue prose blocks for summary</span></td>
+<tr id="a-folio-assistant-core-processes-library-l1-document-ingestion-bpmn-Record-errata-in-the-source-s-own-text">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/l1-document-ingestion.bpmn#Record errata in the source's own text"><code>Record errata in the source's own text</code></a><br><span class="p">folio-assistant-core/processes/library/l1-document-ingestion.bpmn#Record errata in the source's own text</span></td>
   <td>serviceTask in l1-document-ingestion</td>
 </tr>
 <tr id="a-folio-assistant-core-processes-library-l1-document-ingestion-bpmn-Record-the-gap-as-a-bean">
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/l1-document-ingestion.bpmn#Record the gap as a bean"><code>Record the gap as a bean</code></a><br><span class="p">folio-assistant-core/processes/library/l1-document-ingestion.bpmn#Record the gap as a bean</span></td>
+  <td>serviceTask in l1-document-ingestion</td>
+</tr>
+<tr id="a-folio-assistant-core-processes-library-l1-document-ingestion-bpmn-Summarise-prose-blocks-in-every-language">
+  <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/l1-document-ingestion.bpmn#Summarise prose blocks, in every language"><code>Summarise prose blocks, in every language</code></a><br><span class="p">folio-assistant-core/processes/library/l1-document-ingestion.bpmn#Summarise prose blocks, in every language</span></td>
   <td>serviceTask in l1-document-ingestion</td>
 </tr>
 <tr id="a-folio-assistant-core-processes-library-publish-extracted-statements-bpmn-Check-pages-are-current-links-resolve">

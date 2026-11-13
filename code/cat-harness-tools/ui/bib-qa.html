@@ -6,9 +6,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bibliography QA</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     /* ── Theme ──────────────────────────────────────────── */
     :root { --ease: cubic-bezier(0.4,0,0.2,1); }
@@ -31,7 +28,7 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       background: var(--bg); color: var(--fg);
-      font-family: 'Inter','Helvetica Neue',sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
       font-size: 14px; line-height: 1.5;
       min-height: 100vh; padding: 0;
     }
@@ -51,12 +48,12 @@
     }
     .top-bar .spacer { flex: 1; }
     .top-bar .meta {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .65rem; color: var(--fg-d);
     }
     .top-bar button {
       background: var(--bg-r); border: 1px solid var(--brd);
-      color: var(--fg-d); font-family: 'JetBrains Mono', monospace;
+      color: var(--fg-d); font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .6rem; padding: .2rem .6rem; border-radius: 3px;
       cursor: pointer; transition: all .15s;
     }
@@ -73,7 +70,7 @@
     }
     .card .num { font-size: 1.6rem; font-weight: 600; }
     .card .lbl {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .6rem; color: var(--fg-d); margin-top: .15rem;
     }
     .card.green .num { color: var(--grn); }
@@ -94,7 +91,7 @@
     }
     .controls input:focus { outline: none; border-color: var(--ac); }
     .filter-btn {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .6rem; padding: .25rem .6rem; border-radius: 3px;
       border: 1px solid var(--brd); background: var(--bg-r);
       color: var(--fg-d); cursor: pointer; transition: all .15s;
@@ -133,7 +130,7 @@
 
     .ref-info { min-width: 0; }
     .ref-id {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .7rem; color: var(--ac); font-weight: 500;
     }
     .ref-title {
@@ -144,7 +141,7 @@
       font-size: .75rem; color: var(--fg-d); margin-top: .1rem;
     }
     .ref-venue {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .6rem; color: var(--fg-d); margin-top: .1rem;
     }
 
@@ -153,7 +150,7 @@
       justify-content: flex-end; align-self: center;
     }
     .tag {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .55rem; padding: .15rem .4rem;
       border-radius: 3px; white-space: nowrap;
       border: 1px solid var(--brd); background: var(--bg-r);
@@ -199,7 +196,7 @@
     .tag-detail-text { color: var(--fg-d); font-size: .7rem; }
 
     .cite-list {
-      list-style: none; font-family: 'JetBrains Mono', monospace;
+      list-style: none; font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .65rem;
     }
     .cite-list li { padding: .15rem 0; color: var(--fg-d); }
@@ -209,7 +206,7 @@
       font-size: .75rem; align-items: baseline;
     }
     .meta-key {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
       font-size: .65rem; color: var(--fg-d); min-width: 60px;
     }
     .meta-val { color: var(--fg); word-break: break-all; }
@@ -246,7 +243,7 @@
     .error { text-align: center; padding: 4rem; color: var(--red); }
   </style>
 <link rel="stylesheet" href="../../../assets/css/navbar.css"><script src="../../../assets/navbar/rail-1ftyula0dvm.js" defer></script><script src="../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../assets/css/navbar-row.css"><script src="../../../assets/js/navbar-row.js" defer></script><meta name="fa-search-exclude" content="true"><script src="../../../assets/js/vendor/lunr.min.js" defer></script><script src="../../../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../../../assets/page-layout.css" data-fa-page-layout><script src="../../../assets/page-layout.js" defer data-fa-page-layout></script><script type="application/json" id="fa-translation-meta">{"lang":"en","translationStatus":"","translationSource":"","supportedLocales":["ar","zh","en","fr","ru","es"],"availableLocales":[]}</script></head>
-<body><script type="application/json" id="fa-navbar-row" data-fa-root="../../..">{"icons":["close","todos","beans","fsh-guts","qr","launcher"],"hrefs":{"todos":"/en/cat-harness/todos/","beans":"/en/cat-harness/beans/dth-sc/"},"notes":{},"folders":[{"kind":"archimate","label":"Archimate","note":"no viewer yet"},{"kind":"beans","label":"Plans and work","path":"/en/cat-harness/beans/dth-sc/"},{"kind":"folio","label":"Folio","path":"/en/dth-sc/"},{"kind":"glossary","label":"Glossary","note":"no viewer yet"},{"kind":"todos","label":"Todos","path":"/en/cat-harness/todos/"},{"kind":"uploads","label":"Uploads","path":"/en/cat-harness/uploads/dth-sc/"}]}</script><script type="application/json" id="fa-rail" data-fa-root="../../.." data-fa-to-root="../../..">{"data":"rail-1ftyula0dvm"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../">Digital Transformation Handbook for Health Supply Chain Architecture</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../../../">Digital Transformation Handbook for Health Supply Chain Architecture</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
+<body><script type="application/json" id="fa-navbar-row" data-fa-root="../../..">{"icons":["close","todos","beans","fsh-guts","qr","launcher"],"hrefs":{"todos":"/en/cat-harness/todos/","beans":"/en/cat-harness/beans/dth-sc/"},"notes":{},"folders":[{"kind":"archimate","label":"Archimate","note":"no viewer yet"},{"kind":"beans","label":"Plans and work","path":"/en/cat-harness/beans/dth-sc/"},{"kind":"folio","label":"Folio","path":"/en/dth-sc/"},{"kind":"glossary","label":"Glossary","note":"no viewer yet"},{"kind":"references","label":"References","note":"no viewer yet"},{"kind":"todos","label":"Todos","path":"/en/cat-harness/todos/"},{"kind":"uploads","label":"Uploads","path":"/en/cat-harness/uploads/dth-sc/"}]}</script><script type="application/json" id="fa-rail" data-fa-root="../../.." data-fa-to-root="../../..">{"data":"rail-1ftyula0dvm"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../">Digital Transformation Handbook for Health Supply Chain Architecture</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../../../">Digital Transformation Handbook for Health Supply Chain Architecture</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
   <div class="top-bar">
     <h1>📚 Bibliography QA</h1>
     <div class="spacer"></div>

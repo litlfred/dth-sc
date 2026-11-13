@@ -91,11 +91,11 @@
 <meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content=""><meta name="fa-search-exclude" content="true">
 
-<link rel="alternate" type="application/ld+json" href="../../../../../assets/library/jsonld/smart-base/smart-trust/manifest.jsonld"><meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
+<link rel="alternate" type="application/ld+json" href="../../../../../assets/library/jsonld/smart-base/source/smart-trust.jsonld"><meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -239,12 +239,13 @@
 -->
 
 <link rel="stylesheet" href="../../../../../assets/library/viewer.css">
-<div class="lib-page" data-fa-no-filter>
+<div class="lib-page" data-fa-no-filter prefix="cat-harness: https://litlfred.github.io/cat-harness/v0/ns/" resource="https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/source/smart-trust" typeof="cat-harness:SourceDocument" data-kg-data="../../../../../assets/library/index.json" data-kg-scope="smart-base" data-kg-lib-root="../../" data-kg-entry="smart-trust">
+<script type="application/ld+json">{"@context":{"cat-harness":"https://litlfred.github.io/cat-harness/v0/ns/"},"@id":"https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/source/smart-trust","@type":"cat-harness:SourceDocument"}</script>
 <div class="lib-head">
   <h1 id="lib-title">
   
   
-    <a href="#lib-title" class="anchor-heading" aria-labelledby="lib-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Library — the L1 corpus
+    <a href="#lib-title" class="anchor-heading" aria-labelledby="lib-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> WHO SMART Trust
   
   
 </h1>
@@ -252,6 +253,12 @@
   <p class="empty" id="status" style="padding:0">loading…</p>
   <div class="badges" id="badges"></div>
 </div>
+<div class="lib-main">
+  <section id="document" class="wrap" hidden aria-live="polite"></section>
+  <section id="blocks" class="wrap" hidden aria-live="polite"></section>
+</div>
+<details class="lib-all">
+<summary>The whole library</summary>
 <div class="toolbar">
   <input id="q" type="search" placeholder="Search entries…" aria-label="Search entries">
   <span class="seg" role="group" aria-label="View">
@@ -262,8 +269,6 @@
 <div class="lib-main">
   <section id="listing" class="wrap"></section>
   <section id="desktop" hidden></section>
-  <section id="document" class="wrap" hidden aria-live="polite"></section>
-  <section id="blocks" class="wrap" hidden aria-live="polite"></section>
 <h2>
   
   
@@ -276,6 +281,7 @@
     Queues are counted per declaring instance and never merged.</p>
   <section id="queue" class="wrap"></section>
 </div>
+</details>
 <section class="lib-sources" id="lib-sources">
 <h2>
   
@@ -287,14 +293,13 @@
     
 <p class="note">The published files this page is a rendering of.</p>
 <ul>
-<li><a href="../../../../../assets/library/jsonld/smart-base/smart-trust/manifest.jsonld">manifest.jsonld</a> <span class="note">the entry&#39;s JSON-LD</span></li>
+<li><a href="../../../../../assets/library/jsonld/smart-base/source/smart-trust.jsonld">manifest.jsonld</a> <span class="note">the entry&#39;s JSON-LD</span></li>
 <li><a href="../../../../../assets/library/entries/smart-trust.doc.json">smart-trust.doc.json</a> <span class="note">document projection (JSON)</span></li>
 <li><a href="../../../../../assets/library/entries/smart-trust.json">smart-trust.json</a> <span class="note">block projection (JSON)</span></li>
 </ul>
 </section>
 </div>
-<noscript><p class="note">This page loads its entries from <a href="../../../../../assets/library/index.json">the library projection</a> and this entry from <a href="../../../../../assets/library/jsonld/smart-base/smart-trust/manifest.jsonld">its JSON-LD</a>; it needs JavaScript to draw them.</p></noscript>
-<script type="application/json" id="fa-library-config">{"data":"../../../../../assets/library/index.json","scope":"smart-base","libRoot":"../../","entry":"smart-trust"}</script>
+<noscript><p class="note">This page loads its entries from <a href="../../../../../assets/library/index.json">the library projection</a> and this entry from <a href="../../../../../assets/library/jsonld/smart-base/source/smart-trust.jsonld">its JSON-LD</a>; it needs JavaScript to draw them.</p></noscript>
 <script src="../../../../../assets/library/viewer.js"></script>
 
 

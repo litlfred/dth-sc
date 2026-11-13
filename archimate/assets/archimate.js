@@ -1,27 +1,79 @@
-// The ArchiMate pages' one loader, published once at `assets/archimate.js`
-// and loaded by every page `gen-archimate-pages.ts` writes. The page holds
-// identity and a pointer; this fetches the SERVED model (`model.json`, the
-// model normalised) and draws the page from it: a model's views and elements
-// by layer; a view's drawing and what it shows; an element's or a
-// relationship's documentation, properties, relationships and views
-// (`visualizer-loading`).
+// The Contents card: a neutral card listing a page's `<h2>` headings, the
+// same card the IG sites draw at the top right of a page (fhir-harness#361,
+// owner 2026-11-10: "like how IGs have TOC on RHS ... not yellow, but more
+// like a card"). Shared here so every generator in or above this layer draws
+// the same card (issue #1885); the class names are the IG card's, so its
+// stylesheet (`contents-card.css`) is the one both use.
+//
+// `faContentsCard(scope)` builds the card from the headings inside `scope`
+// and puts it first in `scope`. A heading ending in "(n)" shows n as a count.
+// Fewer than two headings, or a card already there, and it does nothing.
+// Every string is set as text, never as markup.
+(function () {
+  function card(scope) {
+    if (!scope || scope.querySelector(".igi-contents")) return null;
+    var hs = Array.prototype.filter.call(scope.querySelectorAll("h2"), function (h) {
+      return !h.closest(".igi-contents") && h.textContent.trim();
+    });
+    if (hs.length < 2) return null;
+    var used = {};
+    function slug(t) {
+      var b = t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "section", s = b, i = 1;
+      while (used[s] || document.getElementById(s)) s = b + "-" + (++i);
+      used[s] = 1;
+      return s;
+    }
+    var nav = document.createElement("nav");
+    nav.className = "igi-contents";
+    nav.setAttribute("aria-label", "Contents");
+    var t = document.createElement("p");
+    t.className = "igi-contents-title";
+    t.textContent = "Contents";
+    nav.appendChild(t);
+    var ul = document.createElement("ul");
+    hs.forEach(function (h) {
+      var label = h.textContent.replace(/\s+/g, " ").trim();
+      var count = /^(.*\S)\s*\((\d+)\)$/.exec(label);
+      if (!h.id) h.id = slug(count ? count[1] : label);
+      var li = document.createElement("li"), a = document.createElement("a");
+      a.href = "#" + h.id;
+      a.textContent = count ? count[1] : label;
+      li.appendChild(a);
+      if (count) {
+        var n = document.createElement("span");
+        n.className = "igi-n";
+        n.textContent = count[2];
+        li.appendChild(n);
+      }
+      ul.appendChild(li);
+    });
+    nav.appendChild(ul);
+    scope.insertBefore(nav, scope.firstChild);
+    return nav;
+  }
+  window.faContentsCard = card;
+})();
+
+// The ArchiMate renderer, published once at `assets/archimate.js` and loaded
+// by every page `gen-archimate-pages.ts` writes, after the generic renderer
+// (`assets/kg-render.js`, issue #1830). The page DECLARES its node in RDFa —
+// `resource` = IRI, `typeof` = an `archimate:` class — and this registers for
+// the ArchiMate namespace, so the generic renderer hands it the element. It
+// fetches the SERVED model (`data-kg-model`, the model normalised) and draws
+// from it: a model's views and elements by layer; a view's drawing and what
+// it shows; an element's or a relationship's documentation, properties,
+// relationships and views (`visualizer-loading`). Which of those a node is
+// comes from its class and, for elements and relationships, from the kind in
+// its IRI (`…/element/<id>`, `…/relationship/<id>`).
 //
 // No dependencies, and no `innerHTML` of anything read from the model: every
 // string it shows is set as text, because the model is its authors'. A view's
 // drawing is an <object>, never inlined, so its markup stays its own document.
 (function () {
-  // PRINT AND PDF: count in and out; the last loader to finish marks
-  // <html data-kg-loaded>, on success or failure (`visualizer-loading`).
-  var kg = (window.__kgLoads = window.__kgLoads || {
-    pending: 0,
-    done: function () {
-      if (--this.pending === 0) document.documentElement.setAttribute("data-kg-loaded", "");
-    },
-  });
-  var cfgEl = document.getElementById("archimate-page");
-  var host = document.querySelector(".am-body");
-  if (!cfgEl || !host) return;
-  var cfg = JSON.parse(cfgEl.textContent);
+  var NS = "http://www.opengroup.org/xsd/archimate/3.0/";
+  // What the page drawing now is — set by `render`, one node per page. PRINT
+  // AND PDF: the generic renderer counts this page's load in and out.
+  var cfg, host;
 
   var LAYERS = ["Strategy", "Business", "Application", "Technology", "Physical", "Motivation", "Implementation & Migration", "Other"];
 
@@ -50,12 +102,12 @@
   // Hrefs, relative to the page that is drawing.
   // A view's or an element's page is at its slug where the model gives one
   // (`slugs`, from the layer's slug ledger), else at its id.
-  var root = cfg.kind === "model" ? "./" : "../../";
+  var root = "../../";
   var slugs = {};
   function seg(id) { return encodeURIComponent(Object.prototype.hasOwnProperty.call(slugs, id) ? slugs[id] : id); }
-  function elHref(id) { return root + "elements/" + seg(id) + "/"; }
-  function relHref(id) { return root + "relationships/" + encodeURIComponent(id) + "/"; }
-  function viewHref(id) { return root + "views/" + seg(id) + "/"; }
+  function elHref(id) { return root + "element/" + seg(id) + "/"; }
+  function relHref(id) { return root + "relationship/" + encodeURIComponent(id) + "/"; }
+  function viewHref(id) { return root + "view/" + seg(id) + "/"; }
 
   function index(m) {
     var ix = { el: {}, rel: {}, view: {}, out: {}, inc: {} };
@@ -183,21 +235,41 @@
     return out;
   }
 
-  var draw = { model: drawModel, view: drawView, element: drawElement, relationship: drawRelationship }[cfg.kind];
-  if (!draw) return;
-  kg.pending++;
-  getJson(cfg.model)
-    .then(function (m) {
-      slugs = m.slugs || {};
-      var parts = draw(m);
-      host.textContent = "";
-      parts.forEach(function (p) { if (p) host.appendChild(p); });
-    })
-    .catch(function (e) {
-      host.textContent = "";
-      host.appendChild(el("p", { class: "am-error" }, ["Could not load " + cfg.model + ": " + e.message]));
-    })
-    .finally(function () {
-      kg.done();
-    });
+  function kindOf(c) {
+    if (c.types.some(function (t) { return t === NS + "Model"; })) return "model";
+    if (c.types.some(function (t) { return t === NS + "Diagram"; })) return "view";
+    return { element: "element", relationship: "relationship" }[c.kind];
+  }
+
+  function render(c) {
+    var kind = kindOf(c);
+    var draw = { model: drawModel, view: drawView, element: drawElement, relationship: drawRelationship }[kind];
+    var body = c.element.querySelector(".am-body");
+    // The metamodel page declares its model but is drawn at build time: no body to fill.
+    if (!draw || !body) return;
+    host = body;
+    cfg = {
+      kind: kind,
+      id: c.id,
+      node: c.alternates["application/ld+json"],
+      model: c.element.getAttribute("data-kg-model"),
+      svg: c.element.getAttribute("data-kg-svg"),
+    };
+    root = kind === "model" ? "./" : "../../";
+    return getJson(cfg.model)
+      .then(function (m) {
+        slugs = m.slugs || {};
+        var parts = draw(m);
+        host.textContent = "";
+        parts.forEach(function (p) { if (p) host.appendChild(p); });
+        // The IG sites' Contents card over the sections just drawn (issue #1885), bundled ahead of this file.
+        if (window.faContentsCard) window.faContentsCard(host);
+      })
+      .catch(function (e) {
+        host.textContent = "";
+        host.appendChild(el("p", { class: "am-error" }, ["Could not load " + cfg.model + ": " + e.message]));
+      });
+  }
+
+  (window.kgRenderers = window.kgRenderers || []).push({ match: NS, render: render });
 })();

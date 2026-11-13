@@ -92,10 +92,10 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -301,7 +301,7 @@ produces changes nobody authorised.</p>
     <tr>
       <td><strong>process instance</strong></td>
       <td>which run of which process is this?</td>
-      <td><code class="language-plaintext highlighter-rouge">beans/workflows/</code> (<code class="language-plaintext highlighter-rouge">workflow-state</code> graph in <a href="https://github.com/litlfred/cat-harness/blob/main/work-plan/skills/work-plan/work-plan-store.md"><code class="language-plaintext highlighter-rouge">work-plan-store</code></a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">beans/workflows/</code> (<code class="language-plaintext highlighter-rouge">workflow-state</code> graph in <code class="language-plaintext highlighter-rouge">work-plan-store</code> (opt-in <code class="language-plaintext highlighter-rouge">cat-harness.work-plan</code>))</td>
     </tr>
     <tr>
       <td><strong>swimlane / role</strong></td>
@@ -618,7 +618,7 @@ what it needs to avoid re-deriving the same mistake.</p>
 
 <p>A work item tidied to show only the correct conclusion reads as though the work had
 always been aimed there. That is why
-<a href="https://github.com/litlfred/cat-harness/blob/main/work-plan/skills/work-plan/bean-coordination.md"><code class="language-plaintext highlighter-rouge">bean-coordination.md</code></a> has unwanted work
+<code class="language-plaintext highlighter-rouge">bean-coordination.md</code> has unwanted work
 <code class="language-plaintext highlighter-rouge">scrapped</code> <strong>with its reasons</strong> rather than deleted: a record that shows only
 outcomes cannot distinguish a dead end somebody ruled out from one nobody tried.</p>
 <h2 id="what-not-to-do">
@@ -650,7 +650,7 @@ the system telling you your model of where you are is wrong.</li>
 </h2>
     
 
-<p>The brief you open a turn with (<a href="https://github.com/litlfred/cat-harness/blob/main/sdlc/skills/sdlc-core/turn-reporting.md"><code class="language-plaintext highlighter-rouge">turn-reporting.md</code></a>)
+<p>The brief you open a turn with (<code class="language-plaintext highlighter-rouge">turn-reporting.md</code> (opt-in <code class="language-plaintext highlighter-rouge">cat-harness.sdlc</code>))
 is what makes detector 5 usable: without a stated plan there is nothing for the
 current work to have diverged <em>from</em>. The two skills are one loop — brief the
 route, notice the divergence, confirm the recovery.</p>

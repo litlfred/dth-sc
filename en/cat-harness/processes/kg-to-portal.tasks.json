@@ -5,121 +5,121 @@
   {
    "id": "D_Constraints",
    "name": "State the constraints, with denominators",
-   "left": 18.79,
-   "top": 56.71,
+   "left": 21.17,
+   "top": 51.18,
    "box": {
-    "left": 13.73,
-    "top": 62.62,
-    "width": 1.39,
-    "height": 2.58
+    "left": 15.88,
+    "top": 62.35,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "E_Scope",
    "name": "Decide what may leave the repository",
-   "left": 30.35,
-   "top": 42.75,
+   "left": 21.17,
+   "top": 34.71,
    "box": {
-    "left": 25.29,
-    "top": 48.66,
-    "width": 1.39,
-    "height": 2.58
+    "left": 15.88,
+    "top": 45.88,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "A_Select",
    "name": "Cut the subgraph that leaves",
-   "left": 29.48,
-   "top": 1.83,
+   "left": 21.17,
+   "top": 1.76,
    "box": {
-    "left": 25.29,
-    "top": 12.03,
-    "width": 1.39,
-    "height": 2.58
+    "left": 15.88,
+    "top": 12.94,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "A_Serialize",
    "name": "Serialize to JSON-LD",
-   "left": 40.46,
-   "top": 1.83,
+   "left": 33.58,
+   "top": 1.76,
    "box": {
-    "left": 36.27,
-    "top": 12.03,
-    "width": 1.39,
-    "height": 2.58
+    "left": 28.28,
+    "top": 12.94,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "A_Package",
    "name": "Package with digests",
-   "left": 52.31,
-   "top": 3.76,
+   "left": 46.72,
+   "top": 1.76,
    "box": {
-    "left": 47.25,
-    "top": 9.67,
-    "width": 1.39,
-    "height": 2.58
+    "left": 41.42,
+    "top": 12.94,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "S_Sign",
    "name": "Sign the package and/or each asset",
-   "left": 68.21,
-   "top": 22.72,
+   "left": 67.88,
+   "top": 18.24,
    "box": {
-    "left": 64.02,
-    "top": 32.92,
-    "width": 1.39,
-    "height": 2.58
+    "left": 62.59,
+    "top": 29.41,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "E_HumanEyes",
    "name": "Human eyes on the rendered artefact",
-   "left": 69.08,
-   "top": 42.75,
+   "left": 67.88,
+   "top": 34.71,
    "box": {
-    "left": 64.02,
-    "top": 48.66,
-    "width": 1.39,
-    "height": 2.58
+    "left": 62.59,
+    "top": 45.88,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "D_Undetermined",
    "name": "Record the decision as still open",
-   "left": 88.73,
-   "top": 56.71,
+   "left": 83.21,
+   "top": 51.18,
    "box": {
-    "left": 83.67,
-    "top": 62.62,
-    "width": 1.39,
-    "height": 2.58
+    "left": 77.92,
+    "top": 62.35,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "A_Distribute",
    "name": "Publish to the origin (a cache may front it)",
-   "left": 77.17,
-   "top": 69.82,
+   "left": 67.88,
+   "top": 67.65,
    "box": {
-    "left": 72.98,
-    "top": 80.02,
-    "width": 1.39,
-    "height": 2.58
+    "left": 62.59,
+    "top": 78.82,
+    "width": 1.75,
+    "height": 2.82
    }
   },
   {
    "id": "P_Verify",
    "name": "Verify what arrived against what was signed",
-   "left": 77.17,
-   "top": 85.28,
+   "left": 67.88,
+   "top": 84.12,
    "box": {
-    "left": 72.98,
-    "top": 95.49,
-    "width": 1.39,
-    "height": 2.58
+    "left": 62.59,
+    "top": 95.29,
+    "width": 1.75,
+    "height": 2.82
    }
   }
  ],
@@ -148,7 +148,8 @@
       "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "instance-publication",
@@ -168,7 +169,8 @@
       "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      }
     ]
    }
@@ -207,6 +209,7 @@
      },
      {
       "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html",
       "via": "author"
      },
      {
@@ -226,6 +229,7 @@
      },
      {
       "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html",
       "via": "author"
      },
      {
@@ -257,7 +261,8 @@
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
       "name": "compiled-artefact-cache",
@@ -272,7 +277,8 @@
       "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "feature-staging"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
       "name": "harness-projections",
@@ -283,7 +289,8 @@
       "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -314,7 +321,8 @@
       "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -341,7 +349,8 @@
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
       "name": "compiled-artefact-cache",
@@ -356,7 +365,8 @@
       "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "feature-staging"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
       "name": "harness-projections",
@@ -367,7 +377,8 @@
       "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -398,7 +409,8 @@
       "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -425,7 +437,8 @@
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
       "name": "compiled-artefact-cache",
@@ -440,7 +453,8 @@
       "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "feature-staging"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
       "name": "harness-projections",
@@ -451,7 +465,8 @@
       "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -482,7 +497,8 @@
       "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -526,7 +542,8 @@
    "laneHref": "kg-to-portal.html#lane-Lane_Editorial",
    "skills": [
     {
-     "name": "continual-progress"
+     "name": "continual-progress",
+     "href": "../../../en/cat-harness/processes/skills/continual-progress.html"
     }
    ],
    "role": {
@@ -550,6 +567,7 @@
      },
      {
       "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html",
       "via": "author"
      },
      {
@@ -569,6 +587,7 @@
      },
      {
       "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html",
       "via": "author"
      },
      {
@@ -590,7 +609,8 @@
    "laneHref": "kg-to-portal.html#lane-Lane_Deployment",
    "skills": [
     {
-     "name": "decision-audit"
+     "name": "decision-audit",
+     "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
     }
    ],
    "role": {
@@ -603,7 +623,8 @@
       "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "instance-publication",
@@ -623,7 +644,8 @@
       "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      }
     ]
    }

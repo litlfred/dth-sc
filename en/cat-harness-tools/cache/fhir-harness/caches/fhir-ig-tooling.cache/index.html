@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FHIR IG tooling: FHIR packages, Maven repository and SUSHI for the AST refresh — cache</title>
+<title>FHIR IG tooling: FHIR packages, Maven repository, SUSHI, Jekyll gems and the compiled AST exporter for the AST refresh — cache</title>
 <style>
   :root { color-scheme: light dark; --fg:#1b1b1b; --bg:#fdfdfb; --muted:#5b5b5b; --line:#d6d6d0; --link:#0b5cad; --panel:#f3f4f2; }
   @media (prefers-color-scheme: dark) { :root:not([data-fa-scheme="light"]) { --fg:#e8e8e6; --bg:#161616; --muted:#a8a8a4; --line:#3a3a38; --link:#7db4ff; --panel:#1f2124; } }
@@ -113,18 +113,18 @@
 </head>
 <body data-fa-node-kind-page><script type="application/json" id="fa-rail" data-fa-root="../../../../../.." data-fa-to-root="../../../../../..">{"data":"rail-2axz83kp2oz","here":"/en/cat-harness-tools/cache/fhir-harness/caches/fhir-ig-tooling.cache/"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../../../">folio-assistant</a></nav>
 <main>
-<h1 id="nk-title">FHIR IG tooling: FHIR packages, Maven repository and SUSHI for the AST refresh</h1>
+<h1 id="nk-title">FHIR IG tooling: FHIR packages, Maven repository, SUSHI, Jekyll gems and the compiled AST exporter for the AST refresh</h1>
 <p class="m">A <a href="../../../">cache</a> node held by <a href="../../">fhir-harness</a>, at <code>fhir-harness/caches/fhir-ig-tooling.cache.json</code>.</p>
 
 <h2 id="fields">Fields</h2>
 <dl>
 <dt>$schema</dt><dd>cache/1.0.0</dd>
 <dt>id</dt><dd>fhir-ig-tooling</dd>
-<dt>title</dt><dd>FHIR IG tooling: FHIR packages, Maven repository and SUSHI for the AST refresh</dd>
+<dt>title</dt><dd>FHIR IG tooling: FHIR packages, Maven repository, SUSHI, Jekyll gems and the compiled AST exporter for the AST refresh</dd>
 <dt>instance</dt><dd>fhir-harness</dd>
 <dt>kind</dt><dd>actions-cache</dd>
 <dt>trustClass</dt><dd>c</dd>
-<dt>location</dt><dd>fhir-ig-tooling-v2-&lt;ast-export-ref&gt;-&lt;pins hash&gt;-&lt;IG hash&gt;, in the calling IG repository&#39;s Actions cache</dd>
+<dt>location</dt><dd>fhir-ig-tooling-v3-&lt;ast-export-ref&gt;-&lt;pins hash&gt;-&lt;IG hash&gt;, in the calling IG repository&#39;s Actions cache</dd>
 <dt>keyRecipe</dt><dd><pre>{
   &quot;source&quot;: &quot;hashFiles&quot;,
   &quot;files&quot;: [
@@ -132,10 +132,10 @@
     &quot;sushi-config.yaml&quot;,
     &quot;ig.ini&quot;
   ],
-  &quot;expression&quot;: &quot;fhir-ig-tooling-v2-${{ inputs.ast-export-ref }}-${{ hashFiles(&#39;fhir-harness/scripts/ig-toolchain.env&#39;) }}-${{ hashFiles(&#39;sushi-config.yaml&#39;, &#39;ig.ini&#39;) }}&quot;
+  &quot;expression&quot;: &quot;fhir-ig-tooling-v3-${{ inputs.ast-export-ref }}-${{ hashFiles(&#39;fhir-harness/scripts/ig-toolchain.env&#39;) }}-${{ hashFiles(&#39;sushi-config.yaml&#39;, &#39;ig.ini&#39;) }}&quot;
 }</pre></dd>
-<dt>derivedInputs</dt><dd>the toolchain pins (scripts/ig-toolchain.env: Java, Node and SUSHI versions), the IG&#39;s sushi-config.yaml (its FHIR package dependencies) and ig.ini, and the AST exporter ref</dd>
-<dt>holds</dt><dd>~/.fhir/packages, ~/.m2/repository, ~/.npm-global (SUSHI)</dd>
+<dt>derivedInputs</dt><dd>the toolchain pins (scripts/ig-toolchain.env: Java, Node, SUSHI, Ruby and Jekyll versions), the IG&#39;s sushi-config.yaml (its FHIR package dependencies) and ig.ini, and the AST exporter ref</dd>
+<dt>holds</dt><dd>~/.fhir/packages, ~/.m2/repository, ~/.npm-global (SUSHI), ~/.ig-toolchain (Jekyll gems per Ruby version; the AST exporter&#39;s classes and jars per commit, from its published bundle when its sha256 matches scripts/ast-export-bundles.tsv, else built from source)</dd>
 <dt>producer</dt><dd>ig-ast-refresh.yml on the default branch only: a successful rebuild that missed the key saves it (actions/cache/save)</dd>
 <dt>consumers</dt><dd><pre>[
   &quot;the same workflow&#39;s rebuild: SUSHI and the IG Publisher with the AST exporter&quot;
@@ -143,7 +143,8 @@
 <dt>materializes</dt><dd><pre>[
   &quot;~/.fhir/packages/&quot;,
   &quot;~/.m2/repository/&quot;,
-  &quot;~/.npm-global/&quot;
+  &quot;~/.npm-global/&quot;,
+  &quot;~/.ig-toolchain/&quot;
 ]</pre></dd>
 <dt>stateInputs</dt><dd><pre>{
   &quot;reads&quot;: &quot;unmeasured&quot;,
@@ -155,7 +156,7 @@
   &quot;how&quot;: &quot;a missed key on the default branch saves a new entry; the one restore-key keeps the pins hash, so a fallback entry has the same toolchain and only the IG&#39;s packages may differ&quot;
 }</pre></dd>
 <dt>savePolicy</dt><dd>default branch only, after a successful build that missed the key</dd>
-<dt>verify</dt><dd>the toolchain is part of the key, so an entry built with another Java, Node or SUSHI is never restored; SUSHI is also checked by version before use (`sushi --version` against the pin, reinstalled on mismatch). FHIR packages are versioned by name</dd>
+<dt>verify</dt><dd>the toolchain is part of the key, so an entry built with another Java, Node, SUSHI, Ruby or Jekyll is never restored; SUSHI is also checked by version before use (`sushi --version` against the pin, reinstalled on mismatch). FHIR packages are versioned by name. The AST exporter directory is keyed by its commit and only used once its `ok` marker is written; a downloaded bundle is used only when its sha256 matches the pin</dd>
 <dt>owner</dt><dd>fhir-harness (skill ig-build-pipeline)</dd>
 <dt>uses</dt><dd><pre>[
   &quot;.github/workflows/ig-ast-refresh.yml:179 the toolchain pins&quot;,

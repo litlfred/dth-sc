@@ -92,10 +92,10 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=bc069af02094"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=bd8c73337b01"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=05433996459b"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=cb9e7e1bb264" defer></script><script src="../../../../assets/js/edit-links.js?v=fa88b59b0bd5" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -417,13 +417,18 @@ graph, unless a build passes <code class="language-plaintext highlighter-rouge">
 
 <ul>
   <li><strong>Page address:</strong> <code class="language-plaintext highlighter-rouge">artifact/&lt;Type&gt;-&lt;id&gt;.html</code>, self-canonical.</li>
-  <li><strong>The asset is a JSON-LD node</strong>, <code class="language-plaintext highlighter-rouge">artifact/&lt;Type&gt;-&lt;id&gt;.jsonld</code> with a
-<code class="language-plaintext highlighter-rouge">.json</code> twin, written by <code class="language-plaintext highlighter-rouge">ig-artifact-jsonld.ts</code> from the index (kind
+  <li><strong>The asset is a JSON-LD node</strong>, <code class="language-plaintext highlighter-rouge">artifact/&lt;Type&gt;-&lt;id&gt;.jsonld</code>, with no
+<code class="language-plaintext highlighter-rouge">.json</code> twin (every reader fetches the <code class="language-plaintext highlighter-rouge">.jsonld</code>), written by
+<code class="language-plaintext highlighter-rouge">ig-artifact-jsonld.ts</code> from the index (kind
 <code class="language-plaintext highlighter-rouge">ig-artifact-jsonld</code>; QA <code class="language-plaintext highlighter-rouge">ig-artifact-jsonld.ts check</code> over the built site).
 It uses the FHIR RDF class, dcterms, schema.org and PROV, and mints nothing.
-The page names the node as <code class="language-plaintext highlighter-rouge">alternate</code>.</li>
+The page names the node as <code class="language-plaintext highlighter-rouge">alternate</code>. Its encodings list the reduced
+<code class="language-plaintext highlighter-rouge">&lt;Type&gt;-&lt;id&gt;.json</code> at the site root first (<code class="language-plaintext highlighter-rouge">local</code>), then the full copy in
+the AST cache by raw URL (<code class="language-plaintext highlighter-rouge">mirror</code>), then the IG’s published file
+(<code class="language-plaintext highlighter-rouge">upstream</code>); <code class="language-plaintext highlighter-rouge">artifact/index.jsonld</code> names each root file on its entry
+(<code class="language-plaintext highlighter-rouge">schema:contentUrl</code>; fhir-harness#359).</li>
   <li><strong>One shared renderer.</strong> <code class="language-plaintext highlighter-rouge">assets/ig-artifact.js</code> fetches the node, then
-the resource’s local copy, draws the description, facts, identity table and
+the resource’s full copy (the <code class="language-plaintext highlighter-rouge">mirror</code>, else the <code class="language-plaintext highlighter-rouge">local</code> one), draws the description, facts, identity table and
 elements, concepts or includes, and hands the narrative and JSON to
 <code class="language-plaintext highlighter-rouge">ast-resource.js</code>. The page carries only its title, key and a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code>
 link to the node and resource.</li>
@@ -579,6 +584,20 @@ with no IG bar keeps the picker in docs-ui’s band.</li>
 <code class="language-plaintext highlighter-rouge">publisher-pages</code> writes (cat-harness-tools <code class="language-plaintext highlighter-rouge">lib/translation-meta.ts</code>) into
 every built page lacking one, from the IG checkout’s translation
 declaration; <code class="language-plaintext highlighter-rouge">set-html-lang.ts</code> reads it afterwards.</li>
+  <li>Translated pages (fhir-harness#382). When the IG declares <code class="language-plaintext highlighter-rouge">translations/</code>
+in <code class="language-plaintext highlighter-rouge">contentTypes.ig.include</code>, each catalogue
+<code class="language-plaintext highlighter-rouge">translations/&lt;locale&gt;/pagecontent/&lt;page&gt;.po</code> is injected into its page
+(cat-harness-tools <code class="language-plaintext highlighter-rouge">injectMarkdown</code>, the segmentation the catalogue was
+extracted with) and staged at <code class="language-plaintext highlighter-rouge">&lt;locale&gt;/&lt;page&gt;.md</code>, the path the picker
+opens. The page and its translations carry <code class="language-plaintext highlighter-rouge">lang</code>, <code class="language-plaintext highlighter-rouge">available_locales</code> and,
+on a translation, <code class="language-plaintext highlighter-rouge">translation_status</code> and <code class="language-plaintext highlighter-rouge">translation_source</code>; the thin
+layout writes the picker’s block from them, so the picker links each
+language that exists. A span with no translation stays in English. A locale
+is <code class="language-plaintext highlighter-rouge">verified</code> only when <code class="language-plaintext highlighter-rouge">translations/&lt;locale&gt;/status.json</code> records a
+sign-off; otherwise <code class="language-plaintext highlighter-rouge">unverified</code>, and docs-ui shows its notice. Translated
+pages are out of the menu, and relative links climb out of the locale
+folder unless they point at a page translated into the same locale
+(<code class="language-plaintext highlighter-rouge">scripts/ig-page-translations.ts</code>).</li>
 </ul>
 
 <p>The root parity guard (cat-harness-tools <code class="language-plaintext highlighter-rouge">site-parity.ts</code>) refuses to publish

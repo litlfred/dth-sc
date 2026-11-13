@@ -280,6 +280,14 @@
     ]
   },
   {
+    &quot;id&quot;: &quot;who-iris-references&quot;,
+    &quot;path&quot;: &quot;references/&quot;,
+    &quot;description&quot;: &quot;The reference lists of the held IRIS documents, one `folio-reference/v1` node per cited work. Owner, 2026-11-11: \&quot;i want all who-iris docs that have references put into their own biblio\&quot;. Written by the Tool `references-extract` (step `Task_References` of folio-assistant-core&#39;s `ingest-build-l1-kg.bpmn`) from each library entry&#39;s L1 sections: keyed `&lt;doc-id&gt;.&lt;section&gt;.&lt;n&gt;`, `provenance: extracted`, `derivedFrom` the section file, `printed` the entry verbatim. The bibliography page lists them under the document they came from (`bibliography/library/&lt;doc-id&gt;/`). Regenerated, not hand-edited: re-run the tool after a section is re-derived.&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;references&quot;
+    ]
+  },
+  {
     &quot;id&quot;: &quot;who-iris-sources&quot;,
     &quot;path&quot;: &quot;sources/&quot;,
     &quot;description&quot;: &quot;Source descriptors (`folio-source-descriptor/v1`): how to ENUMERATE WHO IRIS and ask it for a SUBSET, so an agent asked for part of it is not told the API by a human every time. Moved here from large-datasets&#39; `sources/` on 2026-10-01 (owner ruling: large-datasets dissolves into cat-harness; bean `j7ql`), because a descriptor is ABOUT one corpus and the instance that holds or catalogues that corpus owns it — the schema stays in cat-harness. Its far-apart sibling, Lean mathlib, is in folio-assistant-sci: IRIS items stand alone (`subsetIsSelfContained: true`), three identifier systems, paged REST.&quot;,
