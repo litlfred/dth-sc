@@ -41,6 +41,13 @@
               "on": "2026-11-13",
               "ref": "cf722fb3f8623aa92872129a1788aa992a887e3f",
               "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
@@ -89,6 +96,13 @@
               "on": "2026-11-13",
               "ref": "b18ec33a012dede86c5ef4ce54a9d1377acc20a0",
               "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
@@ -111,6 +125,13 @@
               "on": "2026-11-13",
               "ref": "5627fcb1f3f8e40824ecfd370dae4a23af1b8839",
               "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
@@ -139,6 +160,13 @@
               "on": "2026-11-13",
               "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
               "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
@@ -167,6 +195,13 @@
               "on": "2026-11-13",
               "ref": "026a6d919add39221387dd0fba0faccf998be9ac",
               "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
@@ -192,6 +227,13 @@
               "on": "2026-11-13",
               "ref": "61bc08839398edb1aedb9e51b8338c976c46f167",
               "evidence": "owner message 2026-11-13 'do the refresh of all handbooks': re-pin every layer to its current main, the same nine commits for dth-hrh, dth-phc, dth-sc and dth-pc; Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
@@ -214,6 +256,13 @@
               "on": "2026-11-13",
               "ref": "17204fe9ed49e87b165bf0a8b626b6c69329a2a6",
               "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
@@ -239,6 +288,13 @@
               "on": "2026-11-13",
               "ref": "0f88368db7560afac6d3e16fd905cbb974350f82",
               "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
@@ -288,6 +344,13 @@
               "on": "2026-11-13",
               "ref": "59b8f1b7b70e83b3c1578584f0cb81e9cb37cc30",
               "evidence": "owner message 2026-11-13 'do the same for dth-phc and dth-sc ... make sure all up to date and building... that all equivalent': re-pin every layer to its current main (the same nine commits as dth-hrh) with the document download links (litlfred/folio-assistant-core#771); Claude Code session https://claude.ai/code/session_01EucfRo1h2EWuvUzmajrc2W"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12 09:07Z, project thread 'Nest bibliography entries under Bibliography' (Q-BIBNAV-2): 'B' = re-pin now and switch on standing re-pin so platform fixes reach the site by themselves (cat-harness-tools standing-repin.yml)."
             }
           }
         }
