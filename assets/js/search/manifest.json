@@ -2,9 +2,9 @@
   "$schema": "folio-search-manifest/v1",
   "source": {
     "path": "assets/js/search-data.json",
-    "sha256": "7f37ecf63e9e607446b231db9ea8fe3b6b44f2ddbe4286a206f216e25a197d47",
-    "entries": 156,
-    "bytes": 180327
+    "sha256": "44ee07bb234526c6ff806d8258c03e0413c5d59279ffff477fbd869785ec7ee4",
+    "entries": 582,
+    "bytes": 431224
   },
   "scopes": [
     {
@@ -25,8 +25,43 @@
       "id": "folio-assistant-core",
       "kind": "instance",
       "path": "assets/js/search/folio-assistant-core.json",
-      "entries": 23,
-      "bytes": 77236
+      "entries": 419,
+      "bytes": 300414
+    },
+    {
+      "id": "locale-ar",
+      "kind": "locale",
+      "path": "assets/js/search/locale-ar.json",
+      "entries": 6,
+      "bytes": 3307
+    },
+    {
+      "id": "locale-es",
+      "kind": "locale",
+      "path": "assets/js/search/locale-es.json",
+      "entries": 6,
+      "bytes": 2840
+    },
+    {
+      "id": "locale-fr",
+      "kind": "locale",
+      "path": "assets/js/search/locale-fr.json",
+      "entries": 6,
+      "bytes": 2830
+    },
+    {
+      "id": "locale-ru",
+      "kind": "locale",
+      "path": "assets/js/search/locale-ru.json",
+      "entries": 6,
+      "bytes": 3613
+    },
+    {
+      "id": "locale-zh",
+      "kind": "locale",
+      "path": "assets/js/search/locale-zh.json",
+      "entries": 6,
+      "bytes": 2754
     }
   ],
   "remote": [
