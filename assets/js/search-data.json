@@ -232,823 +232,858 @@
   },"33": {
     "doc": "folio — who-iris",
     "title": "folio — who-iris",
-    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. This page is who-iris's folio graph alone; the full view is cat-harness's. loading… . var DATA_HREF = \"../../../../assets/folio/who-iris/index.json\"; // Bean \"qgjh\": a node's links are LINKS. An absolute http(s) href is used as // it is; a site-rooted one (\"/concepts/agentic-harness.html\") is resolved against this // site's root, found from where the page reads its data, so it works under the // bare site, the project baseurl and a staging preview alike. Anything else // stays text rather than becoming a link that 404s. var SITE_ROOT = (function (h) { var i = h.lastIndexOf(\"assets/\"); return i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } fetch(DATA_HREF).then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.json(); }) .then(function(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. This page is who-iris's folio graph alone; the full view is cat-harness's. loading… . var DATA_HREF = \"../../../../assets/folio/who-iris/index.json\"; var INSTANCE = \"who-iris\"; /* The reader's folio, the store docs-ui's glass reads and writes (R30 j2if). */ var FOLIO_KEY = \"fa-folio-assets\"; var mergeFolio = function mergeFolio(published, local, instance) { const CONTENT = { title: 1, summary: 1, href: 1, links: 1, anchor: 1, theme: 1, declaredIn: 1, chars: 1, file: 1, id: 1 }, DESCRIBE = { kind: 1, nodeKind: 1, avatar: 1, source: 1, shown: 1, geom: 1 }, pub = Array.isArray(published) ? published.filter(function(n) { return n && typeof n.id === \"string\" && n.id; }) : [], loc = local && typeof local === \"object\" && !Array.isArray(local) ? local : {}, str = function(v) { return v == null ? \"\" : String(v); }, bare = function(k) { return k.replace(/^(pin|bookmark):/, \"\"); }, byId = {}; for (let i = 0;i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } /* BOTH SOURCES, LOADED DYNAMICALLY (owner, 2026-11-13). The published projection and the reader's folio in this browser are read on every load and merged by mergeFolio (scripts/folio-merge.ts): a union keyed by id, the published copy wins for content, the local copy for the reader's own state, and a local-only item is kept and marked unsynced. The projection is fetched with no-store and a stamp, so a cached copy cannot hide what was published since; it is fetched again when the tab comes back, and the merge is redrawn whenever the reader's folio changes (this tab or another). */ var published = null, publishedError = null, publishedText = null; function readLocalFolio() { try { var raw = localStorage.getItem(FOLIO_KEY); var parsed = raw ? JSON.parse(raw) : {}; return parsed && typeof parsed === \"object\" && !Array.isArray(parsed) ? parsed : {}; } catch (_e) { return {}; } } function stamped(h) { return h + (h.indexOf(\"?\") published, in this browser', published: 'published', unsynced: 'this browser only, unsynced' }; var head = ' ",
     "url": "/dth-sc/en/cat-harness/folio/who-iris/#fo-title",
     
     "relUrl": "/en/cat-harness/folio/who-iris/#fo-title"
   },"34": {
+    "doc": "folio — who-iris",
+    "title": "Folio: published and in this browser",
+    "content": "' + '' + (published ? \"\" + c.published + \" published\" : publishedError ? 'published copy could not be read' : \"published copy loading…\") + \" · \" + c.local + \" in this browser\" + \" · \" + c.unsynced + \" unsynced. Your own items stay in this browser; \" + \"the site cannot see them. \"; if (M.rows.length === 0) { $(\"merged\").innerHTML = head + 'Nothing published and nothing in this browser’s folio. '; return; } $(\"merged\").innerHTML = head + '' + \"Folio: published and in this browser\" + \" | item | source | on your glass | from | . | \" + M.rows.map(function(r){ /* A published link is site-rooted (linkHref resolves it); a local one is the address docs-ui stored after its own safeHref, used as it is when it is http(s), rooted or relative, and text otherwise. */ var h = r.hrefFrom === \"published\" ? linkHref(r.href) : (/^https?:[/][/]|^[/.#]/.test(r.href) ? r.href : \"\"); var name = h ? '' + esc(r.title) + \"\" : esc(r.title); return '' + \" | \" + name + '' + esc(r.id) + \" | \" + \" | \" + STATUS[r.status] + \" | \" + \" | \" + (r.shown === null ? 'not in your folio' : r.shown ? \"on the glass\" : 'shelved') + \" | \" + ' | ' + esc(r.source || r.declaredIn || \"\") + \" | . \"; }).join(\"\") + \"\"; } function loadPublished() { return fetch(stamped(DATA_HREF), { cache: \"no-store\" }) .then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.text(); }) .then(function(t){ publishedError = null; if (t === publishedText) return; var G = JSON.parse(t); publishedText = t; published = G; renderPublished(G); }) .catch(function(e){ publishedError = e; if (published) return; /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio — it is a folio that could not be loaded. \"; }) .then(renderMerged); } renderMerged(); loadPublished(); window.addEventListener(\"storage\", function(ev){ if (ev.key === null || ev.key === FOLIO_KEY) renderMerged(); }); document.addEventListener(\"fa:folio-changed\", renderMerged); document.addEventListener(\"visibilitychange\", function(){ if (document.visibilityState === \"visible\") loadPublished(); }); window.addEventListener(\"pageshow\", function(ev){ if (ev.persisted) loadPublished(); }); function renderPublished(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "url": "/dth-sc/en/cat-harness/folio/who-iris/#fo-merged-head",
+    
+    "relUrl": "/en/cat-harness/folio/who-iris/#fo-merged-head"
+  },"35": {
     "doc": "folio — who-iris",
     "title": "Declared folio directories",
     "content": "' + '' + 'Declared folio directories' + ' | declared directory | state | stickies | . | ' + G.directories.map(function(d){ return \" | \" + esc(d.dir) + \" | \" + (d.present ? \"present\" : 'declared, absent') + \" | \" + d.nodes + \" | . \"; }).join(\"\") + \"\"; /* THE 'LIST' VIEW (bean ohx6): the folio as the files it holds, the same list the harness's own page (folio/index.md) renders. Drawn before the node table so it shows even when the folio has no stickies. */ $(\"files\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/who-iris/#fo-dirs-head",
     
     "relUrl": "/en/cat-harness/folio/who-iris/#fo-dirs-head"
-  },"35": {
+  },"36": {
     "doc": "folio — who-iris",
     "title": "List view: files",
     "content": "' + G.directories.map(function(d){ var files = d.files || []; if (!d.present) return '' + esc(d.dir) + \" is declared but absent, so it holds no files. \"; if (files.length === 0) return '' + esc(d.dir) + \" holds no files. \"; return '' + \"Files in \" + esc(d.dir) + \"\" + \" | file | size | . | \" + files.map(function(f){ return \" | \" + esc(f.path) + ' | ' + esc(f.size) + \" | . \"; }).join(\"\") + \"\"; }).join(\"\"); if (G.nodes.length === 0) { $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/who-iris/#fo-files-head",
     
     "relUrl": "/en/cat-harness/folio/who-iris/#fo-files-head"
-  },"36": {
+  },"37": {
     "doc": "folio — who-iris",
     "title": "Folio nodes",
     "content": "' + 'No stickies. That is a folio graph with no nodes, ' + \"not a graph that could not be read \\u2014 the directories above say which were found. \"; return; } $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/who-iris/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/who-iris/#fo-nodes-head"
-  },"37": {
+  },"38": {
     "doc": "folio — who-iris",
     "title": "Folio nodes",
-    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; }) .catch(function(e){ /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio \\u2014 it is a folio that could not be loaded. \"; }); ",
+    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; } ",
     "url": "/dth-sc/en/cat-harness/folio/who-iris/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/who-iris/#fo-nodes-head"
-  },"38": {
+  },"39": {
     "doc": "folio — who-iris",
     "title": "folio — who-iris",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/folio/who-iris/",
     
     "relUrl": "/en/cat-harness/folio/who-iris/"
-  },"39": {
+  },"40": {
     "doc": "folio — dpi-h-ra",
     "title": "folio — dpi-h-ra",
-    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. This page is dpi-h-ra's folio graph alone; the full view is cat-harness's. loading… . var DATA_HREF = \"../../../../assets/folio/dpi-h-ra/index.json\"; // Bean \"qgjh\": a node's links are LINKS. An absolute http(s) href is used as // it is; a site-rooted one (\"/concepts/agentic-harness.html\") is resolved against this // site's root, found from where the page reads its data, so it works under the // bare site, the project baseurl and a staging preview alike. Anything else // stays text rather than becoming a link that 404s. var SITE_ROOT = (function (h) { var i = h.lastIndexOf(\"assets/\"); return i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } fetch(DATA_HREF).then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.json(); }) .then(function(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. This page is dpi-h-ra's folio graph alone; the full view is cat-harness's. loading… . var DATA_HREF = \"../../../../assets/folio/dpi-h-ra/index.json\"; var INSTANCE = \"dpi-h-ra\"; /* The reader's folio, the store docs-ui's glass reads and writes (R30 j2if). */ var FOLIO_KEY = \"fa-folio-assets\"; var mergeFolio = function mergeFolio(published, local, instance) { const CONTENT = { title: 1, summary: 1, href: 1, links: 1, anchor: 1, theme: 1, declaredIn: 1, chars: 1, file: 1, id: 1 }, DESCRIBE = { kind: 1, nodeKind: 1, avatar: 1, source: 1, shown: 1, geom: 1 }, pub = Array.isArray(published) ? published.filter(function(n) { return n && typeof n.id === \"string\" && n.id; }) : [], loc = local && typeof local === \"object\" && !Array.isArray(local) ? local : {}, str = function(v) { return v == null ? \"\" : String(v); }, bare = function(k) { return k.replace(/^(pin|bookmark):/, \"\"); }, byId = {}; for (let i = 0;i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } /* BOTH SOURCES, LOADED DYNAMICALLY (owner, 2026-11-13). The published projection and the reader's folio in this browser are read on every load and merged by mergeFolio (scripts/folio-merge.ts): a union keyed by id, the published copy wins for content, the local copy for the reader's own state, and a local-only item is kept and marked unsynced. The projection is fetched with no-store and a stamp, so a cached copy cannot hide what was published since; it is fetched again when the tab comes back, and the merge is redrawn whenever the reader's folio changes (this tab or another). */ var published = null, publishedError = null, publishedText = null; function readLocalFolio() { try { var raw = localStorage.getItem(FOLIO_KEY); var parsed = raw ? JSON.parse(raw) : {}; return parsed && typeof parsed === \"object\" && !Array.isArray(parsed) ? parsed : {}; } catch (_e) { return {}; } } function stamped(h) { return h + (h.indexOf(\"?\") published, in this browser', published: 'published', unsynced: 'this browser only, unsynced' }; var head = ' ",
     "url": "/dth-sc/en/cat-harness/folio/dpi-h-ra/#fo-title",
     
     "relUrl": "/en/cat-harness/folio/dpi-h-ra/#fo-title"
-  },"40": {
+  },"41": {
+    "doc": "folio — dpi-h-ra",
+    "title": "Folio: published and in this browser",
+    "content": "' + '' + (published ? \"\" + c.published + \" published\" : publishedError ? 'published copy could not be read' : \"published copy loading…\") + \" · \" + c.local + \" in this browser\" + \" · \" + c.unsynced + \" unsynced. Your own items stay in this browser; \" + \"the site cannot see them. \"; if (M.rows.length === 0) { $(\"merged\").innerHTML = head + 'Nothing published and nothing in this browser’s folio. '; return; } $(\"merged\").innerHTML = head + '' + \"Folio: published and in this browser\" + \" | item | source | on your glass | from | . | \" + M.rows.map(function(r){ /* A published link is site-rooted (linkHref resolves it); a local one is the address docs-ui stored after its own safeHref, used as it is when it is http(s), rooted or relative, and text otherwise. */ var h = r.hrefFrom === \"published\" ? linkHref(r.href) : (/^https?:[/][/]|^[/.#]/.test(r.href) ? r.href : \"\"); var name = h ? '' + esc(r.title) + \"\" : esc(r.title); return '' + \" | \" + name + '' + esc(r.id) + \" | \" + \" | \" + STATUS[r.status] + \" | \" + \" | \" + (r.shown === null ? 'not in your folio' : r.shown ? \"on the glass\" : 'shelved') + \" | \" + ' | ' + esc(r.source || r.declaredIn || \"\") + \" | . \"; }).join(\"\") + \"\"; } function loadPublished() { return fetch(stamped(DATA_HREF), { cache: \"no-store\" }) .then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.text(); }) .then(function(t){ publishedError = null; if (t === publishedText) return; var G = JSON.parse(t); publishedText = t; published = G; renderPublished(G); }) .catch(function(e){ publishedError = e; if (published) return; /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio — it is a folio that could not be loaded. \"; }) .then(renderMerged); } renderMerged(); loadPublished(); window.addEventListener(\"storage\", function(ev){ if (ev.key === null || ev.key === FOLIO_KEY) renderMerged(); }); document.addEventListener(\"fa:folio-changed\", renderMerged); document.addEventListener(\"visibilitychange\", function(){ if (document.visibilityState === \"visible\") loadPublished(); }); window.addEventListener(\"pageshow\", function(ev){ if (ev.persisted) loadPublished(); }); function renderPublished(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "url": "/dth-sc/en/cat-harness/folio/dpi-h-ra/#fo-merged-head",
+    
+    "relUrl": "/en/cat-harness/folio/dpi-h-ra/#fo-merged-head"
+  },"42": {
     "doc": "folio — dpi-h-ra",
     "title": "Declared folio directories",
     "content": "' + '' + 'Declared folio directories' + ' | declared directory | state | stickies | . | ' + G.directories.map(function(d){ return \" | \" + esc(d.dir) + \" | \" + (d.present ? \"present\" : 'declared, absent') + \" | \" + d.nodes + \" | . \"; }).join(\"\") + \"\"; /* THE 'LIST' VIEW (bean ohx6): the folio as the files it holds, the same list the harness's own page (folio/index.md) renders. Drawn before the node table so it shows even when the folio has no stickies. */ $(\"files\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/dpi-h-ra/#fo-dirs-head",
     
     "relUrl": "/en/cat-harness/folio/dpi-h-ra/#fo-dirs-head"
-  },"41": {
+  },"43": {
     "doc": "folio — dpi-h-ra",
     "title": "List view: files",
     "content": "' + G.directories.map(function(d){ var files = d.files || []; if (!d.present) return '' + esc(d.dir) + \" is declared but absent, so it holds no files. \"; if (files.length === 0) return '' + esc(d.dir) + \" holds no files. \"; return '' + \"Files in \" + esc(d.dir) + \"\" + \" | file | size | . | \" + files.map(function(f){ return \" | \" + esc(f.path) + ' | ' + esc(f.size) + \" | . \"; }).join(\"\") + \"\"; }).join(\"\"); if (G.nodes.length === 0) { $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/dpi-h-ra/#fo-files-head",
     
     "relUrl": "/en/cat-harness/folio/dpi-h-ra/#fo-files-head"
-  },"42": {
+  },"44": {
     "doc": "folio — dpi-h-ra",
     "title": "Folio nodes",
     "content": "' + 'No stickies. That is a folio graph with no nodes, ' + \"not a graph that could not be read \\u2014 the directories above say which were found. \"; return; } $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/dpi-h-ra/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/dpi-h-ra/#fo-nodes-head"
-  },"43": {
+  },"45": {
     "doc": "folio — dpi-h-ra",
     "title": "Folio nodes",
-    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; }) .catch(function(e){ /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio \\u2014 it is a folio that could not be loaded. \"; }); ",
+    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; } ",
     "url": "/dth-sc/en/cat-harness/folio/dpi-h-ra/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/dpi-h-ra/#fo-nodes-head"
-  },"44": {
+  },"46": {
     "doc": "folio — dpi-h-ra",
     "title": "folio — dpi-h-ra",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/folio/dpi-h-ra/",
     
     "relUrl": "/en/cat-harness/folio/dpi-h-ra/"
-  },"45": {
+  },"47": {
     "doc": "folio — folio-assistant-core",
     "title": "folio — folio-assistant-core",
-    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. This page is folio-assistant-core's folio graph alone; the full view is cat-harness's. loading… . var DATA_HREF = \"../../../../assets/folio/folio-assistant-core/index.json\"; // Bean \"qgjh\": a node's links are LINKS. An absolute http(s) href is used as // it is; a site-rooted one (\"/concepts/agentic-harness.html\") is resolved against this // site's root, found from where the page reads its data, so it works under the // bare site, the project baseurl and a staging preview alike. Anything else // stays text rather than becoming a link that 404s. var SITE_ROOT = (function (h) { var i = h.lastIndexOf(\"assets/\"); return i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } fetch(DATA_HREF).then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.json(); }) .then(function(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. This page is folio-assistant-core's folio graph alone; the full view is cat-harness's. loading… . var DATA_HREF = \"../../../../assets/folio/folio-assistant-core/index.json\"; var INSTANCE = \"folio-assistant-core\"; /* The reader's folio, the store docs-ui's glass reads and writes (R30 j2if). */ var FOLIO_KEY = \"fa-folio-assets\"; var mergeFolio = function mergeFolio(published, local, instance) { const CONTENT = { title: 1, summary: 1, href: 1, links: 1, anchor: 1, theme: 1, declaredIn: 1, chars: 1, file: 1, id: 1 }, DESCRIBE = { kind: 1, nodeKind: 1, avatar: 1, source: 1, shown: 1, geom: 1 }, pub = Array.isArray(published) ? published.filter(function(n) { return n && typeof n.id === \"string\" && n.id; }) : [], loc = local && typeof local === \"object\" && !Array.isArray(local) ? local : {}, str = function(v) { return v == null ? \"\" : String(v); }, bare = function(k) { return k.replace(/^(pin|bookmark):/, \"\"); }, byId = {}; for (let i = 0;i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } /* BOTH SOURCES, LOADED DYNAMICALLY (owner, 2026-11-13). The published projection and the reader's folio in this browser are read on every load and merged by mergeFolio (scripts/folio-merge.ts): a union keyed by id, the published copy wins for content, the local copy for the reader's own state, and a local-only item is kept and marked unsynced. The projection is fetched with no-store and a stamp, so a cached copy cannot hide what was published since; it is fetched again when the tab comes back, and the merge is redrawn whenever the reader's folio changes (this tab or another). */ var published = null, publishedError = null, publishedText = null; function readLocalFolio() { try { var raw = localStorage.getItem(FOLIO_KEY); var parsed = raw ? JSON.parse(raw) : {}; return parsed && typeof parsed === \"object\" && !Array.isArray(parsed) ? parsed : {}; } catch (_e) { return {}; } } function stamped(h) { return h + (h.indexOf(\"?\") published, in this browser', published: 'published', unsynced: 'this browser only, unsynced' }; var head = ' ",
     "url": "/dth-sc/en/cat-harness/folio/folio-assistant-core/#fo-title",
     
     "relUrl": "/en/cat-harness/folio/folio-assistant-core/#fo-title"
-  },"46": {
+  },"48": {
+    "doc": "folio — folio-assistant-core",
+    "title": "Folio: published and in this browser",
+    "content": "' + '' + (published ? \"\" + c.published + \" published\" : publishedError ? 'published copy could not be read' : \"published copy loading…\") + \" · \" + c.local + \" in this browser\" + \" · \" + c.unsynced + \" unsynced. Your own items stay in this browser; \" + \"the site cannot see them. \"; if (M.rows.length === 0) { $(\"merged\").innerHTML = head + 'Nothing published and nothing in this browser’s folio. '; return; } $(\"merged\").innerHTML = head + '' + \"Folio: published and in this browser\" + \" | item | source | on your glass | from | . | \" + M.rows.map(function(r){ /* A published link is site-rooted (linkHref resolves it); a local one is the address docs-ui stored after its own safeHref, used as it is when it is http(s), rooted or relative, and text otherwise. */ var h = r.hrefFrom === \"published\" ? linkHref(r.href) : (/^https?:[/][/]|^[/.#]/.test(r.href) ? r.href : \"\"); var name = h ? '' + esc(r.title) + \"\" : esc(r.title); return '' + \" | \" + name + '' + esc(r.id) + \" | \" + \" | \" + STATUS[r.status] + \" | \" + \" | \" + (r.shown === null ? 'not in your folio' : r.shown ? \"on the glass\" : 'shelved') + \" | \" + ' | ' + esc(r.source || r.declaredIn || \"\") + \" | . \"; }).join(\"\") + \"\"; } function loadPublished() { return fetch(stamped(DATA_HREF), { cache: \"no-store\" }) .then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.text(); }) .then(function(t){ publishedError = null; if (t === publishedText) return; var G = JSON.parse(t); publishedText = t; published = G; renderPublished(G); }) .catch(function(e){ publishedError = e; if (published) return; /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio — it is a folio that could not be loaded. \"; }) .then(renderMerged); } renderMerged(); loadPublished(); window.addEventListener(\"storage\", function(ev){ if (ev.key === null || ev.key === FOLIO_KEY) renderMerged(); }); document.addEventListener(\"fa:folio-changed\", renderMerged); document.addEventListener(\"visibilitychange\", function(){ if (document.visibilityState === \"visible\") loadPublished(); }); window.addEventListener(\"pageshow\", function(ev){ if (ev.persisted) loadPublished(); }); function renderPublished(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "url": "/dth-sc/en/cat-harness/folio/folio-assistant-core/#fo-merged-head",
+    
+    "relUrl": "/en/cat-harness/folio/folio-assistant-core/#fo-merged-head"
+  },"49": {
     "doc": "folio — folio-assistant-core",
     "title": "Declared folio directories",
     "content": "' + '' + 'Declared folio directories' + ' | declared directory | state | stickies | . | ' + G.directories.map(function(d){ return \" | \" + esc(d.dir) + \" | \" + (d.present ? \"present\" : 'declared, absent') + \" | \" + d.nodes + \" | . \"; }).join(\"\") + \"\"; /* THE 'LIST' VIEW (bean ohx6): the folio as the files it holds, the same list the harness's own page (folio/index.md) renders. Drawn before the node table so it shows even when the folio has no stickies. */ $(\"files\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/folio-assistant-core/#fo-dirs-head",
     
     "relUrl": "/en/cat-harness/folio/folio-assistant-core/#fo-dirs-head"
-  },"47": {
+  },"50": {
     "doc": "folio — folio-assistant-core",
     "title": "List view: files",
     "content": "' + G.directories.map(function(d){ var files = d.files || []; if (!d.present) return '' + esc(d.dir) + \" is declared but absent, so it holds no files. \"; if (files.length === 0) return '' + esc(d.dir) + \" holds no files. \"; return '' + \"Files in \" + esc(d.dir) + \"\" + \" | file | size | . | \" + files.map(function(f){ return \" | \" + esc(f.path) + ' | ' + esc(f.size) + \" | . \"; }).join(\"\") + \"\"; }).join(\"\"); if (G.nodes.length === 0) { $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/folio-assistant-core/#fo-files-head",
     
     "relUrl": "/en/cat-harness/folio/folio-assistant-core/#fo-files-head"
-  },"48": {
+  },"51": {
     "doc": "folio — folio-assistant-core",
     "title": "Folio nodes",
     "content": "' + 'No stickies. That is a folio graph with no nodes, ' + \"not a graph that could not be read \\u2014 the directories above say which were found. \"; return; } $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/folio-assistant-core/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/folio-assistant-core/#fo-nodes-head"
-  },"49": {
+  },"52": {
     "doc": "folio — folio-assistant-core",
     "title": "Folio nodes",
-    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; }) .catch(function(e){ /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio \\u2014 it is a folio that could not be loaded. \"; }); ",
+    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; } ",
     "url": "/dth-sc/en/cat-harness/folio/folio-assistant-core/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/folio-assistant-core/#fo-nodes-head"
-  },"50": {
+  },"53": {
     "doc": "folio — folio-assistant-core",
     "title": "folio — folio-assistant-core",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/folio/folio-assistant-core/",
     
     "relUrl": "/en/cat-harness/folio/folio-assistant-core/"
-  },"51": {
+  },"54": {
     "doc": "folio — dth-sc",
     "title": "folio — dth-sc",
-    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. This page is dth-sc's folio graph alone; the full view is cat-harness's. loading… . var DATA_HREF = \"../../../../assets/folio/dth-sc/index.json\"; // Bean \"qgjh\": a node's links are LINKS. An absolute http(s) href is used as // it is; a site-rooted one (\"/concepts/agentic-harness.html\") is resolved against this // site's root, found from where the page reads its data, so it works under the // bare site, the project baseurl and a staging preview alike. Anything else // stays text rather than becoming a link that 404s. var SITE_ROOT = (function (h) { var i = h.lastIndexOf(\"assets/\"); return i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } fetch(DATA_HREF).then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.json(); }) .then(function(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. This page is dth-sc's folio graph alone; the full view is cat-harness's. loading… . var DATA_HREF = \"../../../../assets/folio/dth-sc/index.json\"; var INSTANCE = \"dth-sc\"; /* The reader's folio, the store docs-ui's glass reads and writes (R30 j2if). */ var FOLIO_KEY = \"fa-folio-assets\"; var mergeFolio = function mergeFolio(published, local, instance) { const CONTENT = { title: 1, summary: 1, href: 1, links: 1, anchor: 1, theme: 1, declaredIn: 1, chars: 1, file: 1, id: 1 }, DESCRIBE = { kind: 1, nodeKind: 1, avatar: 1, source: 1, shown: 1, geom: 1 }, pub = Array.isArray(published) ? published.filter(function(n) { return n && typeof n.id === \"string\" && n.id; }) : [], loc = local && typeof local === \"object\" && !Array.isArray(local) ? local : {}, str = function(v) { return v == null ? \"\" : String(v); }, bare = function(k) { return k.replace(/^(pin|bookmark):/, \"\"); }, byId = {}; for (let i = 0;i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } /* BOTH SOURCES, LOADED DYNAMICALLY (owner, 2026-11-13). The published projection and the reader's folio in this browser are read on every load and merged by mergeFolio (scripts/folio-merge.ts): a union keyed by id, the published copy wins for content, the local copy for the reader's own state, and a local-only item is kept and marked unsynced. The projection is fetched with no-store and a stamp, so a cached copy cannot hide what was published since; it is fetched again when the tab comes back, and the merge is redrawn whenever the reader's folio changes (this tab or another). */ var published = null, publishedError = null, publishedText = null; function readLocalFolio() { try { var raw = localStorage.getItem(FOLIO_KEY); var parsed = raw ? JSON.parse(raw) : {}; return parsed && typeof parsed === \"object\" && !Array.isArray(parsed) ? parsed : {}; } catch (_e) { return {}; } } function stamped(h) { return h + (h.indexOf(\"?\") published, in this browser', published: 'published', unsynced: 'this browser only, unsynced' }; var head = ' ",
     "url": "/dth-sc/en/cat-harness/folio/dth-sc/#fo-title",
     
     "relUrl": "/en/cat-harness/folio/dth-sc/#fo-title"
-  },"52": {
+  },"55": {
+    "doc": "folio — dth-sc",
+    "title": "Folio: published and in this browser",
+    "content": "' + '' + (published ? \"\" + c.published + \" published\" : publishedError ? 'published copy could not be read' : \"published copy loading…\") + \" · \" + c.local + \" in this browser\" + \" · \" + c.unsynced + \" unsynced. Your own items stay in this browser; \" + \"the site cannot see them. \"; if (M.rows.length === 0) { $(\"merged\").innerHTML = head + 'Nothing published and nothing in this browser’s folio. '; return; } $(\"merged\").innerHTML = head + '' + \"Folio: published and in this browser\" + \" | item | source | on your glass | from | . | \" + M.rows.map(function(r){ /* A published link is site-rooted (linkHref resolves it); a local one is the address docs-ui stored after its own safeHref, used as it is when it is http(s), rooted or relative, and text otherwise. */ var h = r.hrefFrom === \"published\" ? linkHref(r.href) : (/^https?:[/][/]|^[/.#]/.test(r.href) ? r.href : \"\"); var name = h ? '' + esc(r.title) + \"\" : esc(r.title); return '' + \" | \" + name + '' + esc(r.id) + \" | \" + \" | \" + STATUS[r.status] + \" | \" + \" | \" + (r.shown === null ? 'not in your folio' : r.shown ? \"on the glass\" : 'shelved') + \" | \" + ' | ' + esc(r.source || r.declaredIn || \"\") + \" | . \"; }).join(\"\") + \"\"; } function loadPublished() { return fetch(stamped(DATA_HREF), { cache: \"no-store\" }) .then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.text(); }) .then(function(t){ publishedError = null; if (t === publishedText) return; var G = JSON.parse(t); publishedText = t; published = G; renderPublished(G); }) .catch(function(e){ publishedError = e; if (published) return; /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio — it is a folio that could not be loaded. \"; }) .then(renderMerged); } renderMerged(); loadPublished(); window.addEventListener(\"storage\", function(ev){ if (ev.key === null || ev.key === FOLIO_KEY) renderMerged(); }); document.addEventListener(\"fa:folio-changed\", renderMerged); document.addEventListener(\"visibilitychange\", function(){ if (document.visibilityState === \"visible\") loadPublished(); }); window.addEventListener(\"pageshow\", function(ev){ if (ev.persisted) loadPublished(); }); function renderPublished(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "url": "/dth-sc/en/cat-harness/folio/dth-sc/#fo-merged-head",
+    
+    "relUrl": "/en/cat-harness/folio/dth-sc/#fo-merged-head"
+  },"56": {
     "doc": "folio — dth-sc",
     "title": "Declared folio directories",
     "content": "' + '' + 'Declared folio directories' + ' | declared directory | state | stickies | . | ' + G.directories.map(function(d){ return \" | \" + esc(d.dir) + \" | \" + (d.present ? \"present\" : 'declared, absent') + \" | \" + d.nodes + \" | . \"; }).join(\"\") + \"\"; /* THE 'LIST' VIEW (bean ohx6): the folio as the files it holds, the same list the harness's own page (folio/index.md) renders. Drawn before the node table so it shows even when the folio has no stickies. */ $(\"files\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/dth-sc/#fo-dirs-head",
     
     "relUrl": "/en/cat-harness/folio/dth-sc/#fo-dirs-head"
-  },"53": {
+  },"57": {
     "doc": "folio — dth-sc",
     "title": "List view: files",
     "content": "' + G.directories.map(function(d){ var files = d.files || []; if (!d.present) return '' + esc(d.dir) + \" is declared but absent, so it holds no files. \"; if (files.length === 0) return '' + esc(d.dir) + \" holds no files. \"; return '' + \"Files in \" + esc(d.dir) + \"\" + \" | file | size | . | \" + files.map(function(f){ return \" | \" + esc(f.path) + ' | ' + esc(f.size) + \" | . \"; }).join(\"\") + \"\"; }).join(\"\"); if (G.nodes.length === 0) { $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/dth-sc/#fo-files-head",
     
     "relUrl": "/en/cat-harness/folio/dth-sc/#fo-files-head"
-  },"54": {
+  },"58": {
     "doc": "folio — dth-sc",
     "title": "Folio nodes",
     "content": "' + 'No stickies. That is a folio graph with no nodes, ' + \"not a graph that could not be read \\u2014 the directories above say which were found. \"; return; } $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/dth-sc/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/dth-sc/#fo-nodes-head"
-  },"55": {
+  },"59": {
     "doc": "folio — dth-sc",
     "title": "Folio nodes",
-    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; }) .catch(function(e){ /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio \\u2014 it is a folio that could not be loaded. \"; }); ",
+    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; } ",
     "url": "/dth-sc/en/cat-harness/folio/dth-sc/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/dth-sc/#fo-nodes-head"
-  },"56": {
+  },"60": {
     "doc": "folio — dth-sc",
     "title": "folio — dth-sc",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/folio/dth-sc/",
     
     "relUrl": "/en/cat-harness/folio/dth-sc/"
-  },"57": {
+  },"61": {
     "doc": "folio — the graph",
     "title": "folio — the graph",
-    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. loading… . var DATA_HREF = \"../../../assets/folio/index.json\"; // Bean \"qgjh\": a node's links are LINKS. An absolute http(s) href is used as // it is; a site-rooted one (\"/concepts/agentic-harness.html\") is resolved against this // site's root, found from where the page reads its data, so it works under the // bare site, the project baseurl and a staging preview alike. Anything else // stays text rather than becoming a link that 404s. var SITE_ROOT = (function (h) { var i = h.lastIndexOf(\"assets/\"); return i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } fetch(DATA_HREF).then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.json(); }) .then(function(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "content": "Every node the folio graph holds: what it anchors to, the theme it claims, where it was declared, and the links it carries. The folio's content renders as the landing board; this is a view of the graph behind it. loading… . var DATA_HREF = \"../../../assets/folio/index.json\"; var INSTANCE = \"\"; /* The reader's folio, the store docs-ui's glass reads and writes (R30 j2if). */ var FOLIO_KEY = \"fa-folio-assets\"; var mergeFolio = function mergeFolio(published, local, instance) { const CONTENT = { title: 1, summary: 1, href: 1, links: 1, anchor: 1, theme: 1, declaredIn: 1, chars: 1, file: 1, id: 1 }, DESCRIBE = { kind: 1, nodeKind: 1, avatar: 1, source: 1, shown: 1, geom: 1 }, pub = Array.isArray(published) ? published.filter(function(n) { return n && typeof n.id === \"string\" && n.id; }) : [], loc = local && typeof local === \"object\" && !Array.isArray(local) ? local : {}, str = function(v) { return v == null ? \"\" : String(v); }, bare = function(k) { return k.replace(/^(pin|bookmark):/, \"\"); }, byId = {}; for (let i = 0;i /g,\"&gt;\").replace(/\"/g,\"&quot;\"); } /* BOTH SOURCES, LOADED DYNAMICALLY (owner, 2026-11-13). The published projection and the reader's folio in this browser are read on every load and merged by mergeFolio (scripts/folio-merge.ts): a union keyed by id, the published copy wins for content, the local copy for the reader's own state, and a local-only item is kept and marked unsynced. The projection is fetched with no-store and a stamp, so a cached copy cannot hide what was published since; it is fetched again when the tab comes back, and the merge is redrawn whenever the reader's folio changes (this tab or another). */ var published = null, publishedError = null, publishedText = null; function readLocalFolio() { try { var raw = localStorage.getItem(FOLIO_KEY); var parsed = raw ? JSON.parse(raw) : {}; return parsed && typeof parsed === \"object\" && !Array.isArray(parsed) ? parsed : {}; } catch (_e) { return {}; } } function stamped(h) { return h + (h.indexOf(\"?\") published, in this browser', published: 'published', unsynced: 'this browser only, unsynced' }; var head = ' ",
     "url": "/dth-sc/en/cat-harness/folio/#fo-title",
     
     "relUrl": "/en/cat-harness/folio/#fo-title"
-  },"58": {
+  },"62": {
+    "doc": "folio — the graph",
+    "title": "Folio: published and in this browser",
+    "content": "' + '' + (published ? \"\" + c.published + \" published\" : publishedError ? 'published copy could not be read' : \"published copy loading…\") + \" · \" + c.local + \" in this browser\" + \" · \" + c.unsynced + \" unsynced. Your own items stay in this browser; \" + \"the site cannot see them. \"; if (M.rows.length === 0) { $(\"merged\").innerHTML = head + 'Nothing published and nothing in this browser’s folio. '; return; } $(\"merged\").innerHTML = head + '' + \"Folio: published and in this browser\" + \" | item | source | on your glass | from | . | \" + M.rows.map(function(r){ /* A published link is site-rooted (linkHref resolves it); a local one is the address docs-ui stored after its own safeHref, used as it is when it is http(s), rooted or relative, and text otherwise. */ var h = r.hrefFrom === \"published\" ? linkHref(r.href) : (/^https?:[/][/]|^[/.#]/.test(r.href) ? r.href : \"\"); var name = h ? '' + esc(r.title) + \"\" : esc(r.title); return '' + \" | \" + name + '' + esc(r.id) + \" | \" + \" | \" + STATUS[r.status] + \" | \" + \" | \" + (r.shown === null ? 'not in your folio' : r.shown ? \"on the glass\" : 'shelved') + \" | \" + ' | ' + esc(r.source || r.declaredIn || \"\") + \" | . \"; }).join(\"\") + \"\"; } function loadPublished() { return fetch(stamped(DATA_HREF), { cache: \"no-store\" }) .then(function(r){ if(!r.ok) throw new Error(r.status + \" \" + r.statusText); return r.text(); }) .then(function(t){ publishedError = null; if (t === publishedText) return; var G = JSON.parse(t); publishedText = t; published = G; renderPublished(G); }) .catch(function(e){ publishedError = e; if (published) return; /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio — it is a folio that could not be loaded. \"; }) .then(renderMerged); } renderMerged(); loadPublished(); window.addEventListener(\"storage\", function(ev){ if (ev.key === null || ev.key === FOLIO_KEY) renderMerged(); }); document.addEventListener(\"fa:folio-changed\", renderMerged); document.addEventListener(\"visibilitychange\", function(){ if (document.visibilityState === \"visible\") loadPublished(); }); window.addEventListener(\"pageshow\", function(ev){ if (ev.persisted) loadPublished(); }); function renderPublished(G){ $(\"badges\").innerHTML = '' + G.nodes.length + \" stick\" + (G.nodes.length===1?\"y\":\"ies\") + \"\" + '' + G.directories.length + \" declared director\" + (G.directories.length===1?\"y\":\"ies\") + \"\"; /* A DECLARED-BUT-ABSENT DIRECTORY GETS A ROW. Omitting it is the dh4f shape: a consumer scans nothing and reports a clean run over it. */ $(\"dirs\").innerHTML = ' ",
+    "url": "/dth-sc/en/cat-harness/folio/#fo-merged-head",
+    
+    "relUrl": "/en/cat-harness/folio/#fo-merged-head"
+  },"63": {
     "doc": "folio — the graph",
     "title": "Declared folio directories",
     "content": "' + '' + 'Declared folio directories' + ' | declared directory | state | stickies | . | ' + G.directories.map(function(d){ return \" | \" + esc(d.dir) + \" | \" + (d.present ? \"present\" : 'declared, absent') + \" | \" + d.nodes + \" | . \"; }).join(\"\") + \"\"; /* THE 'LIST' VIEW (bean ohx6): the folio as the files it holds, the same list the harness's own page (folio/index.md) renders. Drawn before the node table so it shows even when the folio has no stickies. */ $(\"files\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/#fo-dirs-head",
     
     "relUrl": "/en/cat-harness/folio/#fo-dirs-head"
-  },"59": {
+  },"64": {
     "doc": "folio — the graph",
     "title": "List view: files",
     "content": "' + G.directories.map(function(d){ var files = d.files || []; if (!d.present) return '' + esc(d.dir) + \" is declared but absent, so it holds no files. \"; if (files.length === 0) return '' + esc(d.dir) + \" holds no files. \"; return '' + \"Files in \" + esc(d.dir) + \"\" + \" | file | size | . | \" + files.map(function(f){ return \" | \" + esc(f.path) + ' | ' + esc(f.size) + \" | . \"; }).join(\"\") + \"\"; }).join(\"\"); if (G.nodes.length === 0) { $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/#fo-files-head",
     
     "relUrl": "/en/cat-harness/folio/#fo-files-head"
-  },"60": {
+  },"65": {
     "doc": "folio — the graph",
     "title": "Folio nodes",
     "content": "' + 'No stickies. That is a folio graph with no nodes, ' + \"not a graph that could not be read \\u2014 the directories above say which were found. \"; return; } $(\"nodes\").innerHTML = ' ",
     "url": "/dth-sc/en/cat-harness/folio/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/#fo-nodes-head"
-  },"61": {
+  },"66": {
     "doc": "folio — the graph",
     "title": "Folio nodes",
-    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; }) .catch(function(e){ /* COULD NOT LOAD IS NOT EMPTY, and the page says which. */ $(\"nodes\").innerHTML = 'The projection at ' + esc(DATA_HREF) + \" could not be read: \" + esc(e.message) + \". That is not an empty folio \\u2014 it is a folio that could not be loaded. \"; }); ",
+    "content": "' + '' + 'Folio nodes' + ' | id | summary | anchor | ' + \" | theme | declared in | links | prose | . | \" + G.nodes.map(function(n){ return \"\" + \" | \" + esc(n.id) + \" | \" + \" | \" + esc(n.summary) + \" | \" + \" | \" + (n.anchor ? \"\" + esc(n.anchor) + \"\" : 'none') + \" | \" + \" | \" + (n.theme ? esc(n.theme) : 'none') + \" | \" + ' | ' + esc(n.declaredIn || \"\\u2014\") + \" | \" + \" | \" + (n.links.length ? '' + n.links.map(function(l){ var h = linkHref(l.href); return h ? '' + esc(l.label) + \"\" : '' + esc(l.label) + \"\"; }).join(\"\") + \"\" : 'none') + \" | \" + ' | ' + n.chars.toLocaleString() + \" chars | \" + \" . \"; }).join(\"\") + \"\"; } ",
     "url": "/dth-sc/en/cat-harness/folio/#fo-nodes-head",
     
     "relUrl": "/en/cat-harness/folio/#fo-nodes-head"
-  },"62": {
+  },"67": {
     "doc": "folio — the graph",
     "title": "folio — the graph",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/folio/",
     
     "relUrl": "/en/cat-harness/folio/"
-  },"63": {
+  },"68": {
     "doc": "Code lists",
     "title": "Code lists",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/code-lists/#code-lists",
     
     "relUrl": "/en/cat-harness/code-lists/#code-lists"
-  },"64": {
+  },"69": {
     "doc": "Code lists",
     "title": "Code lists",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/code-lists/",
     
     "relUrl": "/en/cat-harness/code-lists/"
-  },"65": {
+  },"70": {
     "doc": "health — state",
     "title": "health",
     "content": "test/health/results/ · health . This graph is rendered elsewhere. Nothing publishes a projection at this generator's own path, but the declaration names a visualiser for it: cat-harness/docs/en/cat-harness/health/cat-harness/index.html (not published by this site). The directory is test/health/results/. ",
     "url": "/dth-sc/en/cat-harness/health/#health",
     
     "relUrl": "/en/cat-harness/health/#health"
-  },"66": {
+  },"71": {
     "doc": "health — state",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/health/",
     
     "relUrl": "/en/cat-harness/health/"
-  },"67": {
+  },"72": {
     "doc": "health — state",
     "title": "health — state",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/health/",
     
     "relUrl": "/en/cat-harness/health/"
-  },"68": {
+  },"73": {
     "doc": "Graph typologies",
     "title": "Graph typologies",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/graph-typologies/#graph-typologies",
     
     "relUrl": "/en/cat-harness/graph-typologies/#graph-typologies"
-  },"69": {
+  },"74": {
     "doc": "Graph typologies",
     "title": "Graph typologies",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/graph-typologies/",
     
     "relUrl": "/en/cat-harness/graph-typologies/"
-  },"70": {
+  },"75": {
     "doc": "Substrate snapshots",
     "title": "Substrate snapshots",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/substrate-snapshots/#substrate-snapshots",
     
     "relUrl": "/en/cat-harness/substrate-snapshots/#substrate-snapshots"
-  },"71": {
+  },"76": {
     "doc": "Substrate snapshots",
     "title": "Substrate snapshots",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/substrate-snapshots/",
     
     "relUrl": "/en/cat-harness/substrate-snapshots/"
-  },"72": {
+  },"77": {
     "doc": "Scenarios",
     "title": "Scenarios",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/scenarios/#scenarios",
     
     "relUrl": "/en/cat-harness/scenarios/#scenarios"
-  },"73": {
+  },"78": {
     "doc": "Scenarios",
     "title": "Scenarios",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/scenarios/",
     
     "relUrl": "/en/cat-harness/scenarios/"
-  },"74": {
+  },"79": {
     "doc": "qa — state",
     "title": "qa",
     "content": "test/results/ · qa . This graph is rendered elsewhere. Nothing publishes a projection at this generator's own path, but the declaration names a visualiser for it: cat-harness/docs/en/cat-harness/lsi/index.html (not published by this site). The directory is test/results/. ",
     "url": "/dth-sc/en/cat-harness/qa/#qa",
     
     "relUrl": "/en/cat-harness/qa/#qa"
-  },"75": {
+  },"80": {
     "doc": "qa — state",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/qa/",
     
     "relUrl": "/en/cat-harness/qa/"
-  },"76": {
+  },"81": {
     "doc": "qa — state",
     "title": "qa — state",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/qa/",
     
     "relUrl": "/en/cat-harness/qa/"
-  },"77": {
+  },"82": {
     "doc": "Pipeline plugins",
     "title": "Pipeline plugins",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/pipeline-plugins/#pipeline-plugins",
     
     "relUrl": "/en/cat-harness/pipeline-plugins/#pipeline-plugins"
-  },"78": {
+  },"83": {
     "doc": "Pipeline plugins",
     "title": "Pipeline plugins",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/pipeline-plugins/",
     
     "relUrl": "/en/cat-harness/pipeline-plugins/"
-  },"79": {
+  },"84": {
     "doc": "swimlane-glossary — state",
     "title": "swimlane-glossary",
     "content": "glossary/ · swimlane-glossary . This graph is rendered elsewhere. Nothing publishes a projection at this generator's own path, but the declaration names a visualiser for it: cat-harness/docs/en/cat-harness/swimlane-glossary/index.html (not published by this site). The directory is glossary/. ",
     "url": "/dth-sc/en/cat-harness/swimlane-glossary/#swimlane-glossary",
     
     "relUrl": "/en/cat-harness/swimlane-glossary/#swimlane-glossary"
-  },"80": {
+  },"85": {
     "doc": "swimlane-glossary — state",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/swimlane-glossary/",
     
     "relUrl": "/en/cat-harness/swimlane-glossary/"
-  },"81": {
+  },"86": {
     "doc": "swimlane-glossary — state",
     "title": "swimlane-glossary — state",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/swimlane-glossary/",
     
     "relUrl": "/en/cat-harness/swimlane-glossary/"
-  },"82": {
+  },"87": {
     "doc": "Merge reviews",
     "title": "Merge reviews",
     "content": "merge-reviews/ · merge-reviews . merge-reviews/ is not mounted in this build, so its verdicts are unknown, not none. bun run cat state:mount mounts it. ",
     "url": "/dth-sc/en/cat-harness/merge-reviews/#merge-reviews",
     
     "relUrl": "/en/cat-harness/merge-reviews/#merge-reviews"
-  },"83": {
+  },"88": {
     "doc": "Merge reviews",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/merge-reviews/",
     
     "relUrl": "/en/cat-harness/merge-reviews/"
-  },"84": {
+  },"89": {
     "doc": "Merge reviews",
     "title": "Merge reviews",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/merge-reviews/",
     
     "relUrl": "/en/cat-harness/merge-reviews/"
-  },"85": {
+  },"90": {
     "doc": "Content adapters",
     "title": "Content adapters",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/content-adapters/#content-adapters",
     
     "relUrl": "/en/cat-harness/content-adapters/#content-adapters"
-  },"86": {
+  },"91": {
     "doc": "Content adapters",
     "title": "Content adapters",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/content-adapters/",
     
     "relUrl": "/en/cat-harness/content-adapters/"
-  },"87": {
+  },"92": {
     "doc": "todos — state",
     "title": "todos",
     "content": "todos/ · todos . This graph is rendered elsewhere. Nothing publishes a projection at this generator's own path, but the declaration names a visualiser for it: cat-harness/docs/en/cat-harness/todos/index.html (not published by this site). The directory is todos/. ",
     "url": "/dth-sc/en/cat-harness/todos/#todos",
     
     "relUrl": "/en/cat-harness/todos/#todos"
-  },"88": {
+  },"93": {
     "doc": "todos — state",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/todos/",
     
     "relUrl": "/en/cat-harness/todos/"
-  },"89": {
+  },"94": {
     "doc": "todos — state",
     "title": "todos — state",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/todos/",
     
     "relUrl": "/en/cat-harness/todos/"
-  },"90": {
+  },"95": {
     "doc": "Policies",
     "title": "Policies",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/policies/#policies",
     
     "relUrl": "/en/cat-harness/policies/#policies"
-  },"91": {
+  },"96": {
     "doc": "Policies",
     "title": "Policies",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/policies/",
     
     "relUrl": "/en/cat-harness/policies/"
-  },"92": {
+  },"97": {
     "doc": "issue-marks — state",
     "title": "issue-marks",
     "content": "issue-marks/ · issue-marks . This graph is rendered elsewhere. Nothing publishes a projection at this generator's own path, but the declaration names a visualiser for it: cat-harness/docs/en/cat-harness/issue-marks/index.html (not published by this site). The directory is issue-marks/. ",
     "url": "/dth-sc/en/cat-harness/issue-marks/#issue-marks",
     
     "relUrl": "/en/cat-harness/issue-marks/#issue-marks"
-  },"93": {
+  },"98": {
     "doc": "issue-marks — state",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/issue-marks/",
     
     "relUrl": "/en/cat-harness/issue-marks/"
-  },"94": {
+  },"99": {
     "doc": "issue-marks — state",
     "title": "issue-marks — state",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/issue-marks/",
     
     "relUrl": "/en/cat-harness/issue-marks/"
-  },"95": {
+  },"100": {
     "doc": "Vocab mappings",
     "title": "Vocab mappings",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/vocab-mappings/#vocab-mappings",
     
     "relUrl": "/en/cat-harness/vocab-mappings/#vocab-mappings"
-  },"96": {
+  },"101": {
     "doc": "Vocab mappings",
     "title": "Vocab mappings",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/vocab-mappings/",
     
     "relUrl": "/en/cat-harness/vocab-mappings/"
-  },"97": {
+  },"102": {
     "doc": "uploads — state",
     "title": "uploads",
     "content": "uploads/ · uploads . This graph is rendered elsewhere. Nothing publishes a projection at this generator's own path, but the declaration names a visualiser for it: cat-harness/docs/en/cat-harness/uploads/cat-harness/index.html (not published by this site). The directory is uploads/. ",
     "url": "/dth-sc/en/cat-harness/uploads-queue/#uploads",
     
     "relUrl": "/en/cat-harness/uploads-queue/#uploads"
-  },"98": {
+  },"103": {
     "doc": "uploads — state",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/uploads-queue/",
     
     "relUrl": "/en/cat-harness/uploads-queue/"
-  },"99": {
+  },"104": {
     "doc": "uploads — state",
     "title": "uploads — state",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/uploads-queue/",
     
     "relUrl": "/en/cat-harness/uploads-queue/"
-  },"100": {
+  },"105": {
     "doc": "attestations — state",
     "title": "attestations",
     "content": "test/attestations/ · attestations . This graph is rendered elsewhere. Nothing publishes a projection at this generator's own path, but the declaration names a visualiser for it: cat-harness/docs/en/cat-harness/attestations/cat-harness/index.html (not published by this site). The directory is test/attestations/. ",
     "url": "/dth-sc/en/cat-harness/attestations/#attestations",
     
     "relUrl": "/en/cat-harness/attestations/#attestations"
-  },"101": {
+  },"106": {
     "doc": "attestations — state",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/attestations/",
     
     "relUrl": "/en/cat-harness/attestations/"
-  },"102": {
+  },"107": {
     "doc": "attestations — state",
     "title": "attestations — state",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/attestations/",
     
     "relUrl": "/en/cat-harness/attestations/"
-  },"103": {
+  },"108": {
     "doc": "beans — state",
     "title": "beans",
     "content": "beans/ · beans . This graph is rendered elsewhere. Nothing publishes a projection at this generator's own path, but the declaration names a visualiser for it: cat-harness/docs/en/cat-harness/beans/index.html (not published by this site). The directory is beans/. ",
     "url": "/dth-sc/en/cat-harness/beans/#beans",
     
     "relUrl": "/en/cat-harness/beans/#beans"
-  },"104": {
+  },"109": {
     "doc": "beans — state",
     "title": "State graphs this harness declares",
     "content": ". | attestations elsewhere . The JUDGEMENT half of every QA verdict this layer carries across runs, split out of test/results/ by owner ruling D2 (a), 2026-10-01 (bean 2gst, arc 3fva): derived script verdicts move to the qa-reports branch; anything a reviewer judged stays HERE, on . | beans elsewhere . The work plan. | health elsewhere . Repository health reports — what the daily sweep under test/health/ wrote. | issue-marks elsewhere . How far an agent has read an issue: lastCommentId, lastUpdatedAt and checkedAt, one file per issue — the marks say what was seen, never the comments. | merge-reviews elsewhere . The adversarial review verdict on each pull request's head: &lt;head sha&gt;.json, one merge-review/v1 file per head. | qa elsewhere . Everything a QA process produced, in one declared tree. | swimlane-glossary elsewhere . The swimlane glossary's retirement ledger. | todos elsewhere . A PERSON's outstanding items — the human half of memory, as against beans/, which is the agent's workflow management. | uploads elsewhere . The incoming queue of the document-ingestion pipeline — raw files as dropped, before ingestion. | . ",
     "url": "/dth-sc/en/cat-harness/beans/",
     
     "relUrl": "/en/cat-harness/beans/"
-  },"105": {
+  },"110": {
     "doc": "beans — state",
     "title": "beans — state",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/beans/",
     
     "relUrl": "/en/cat-harness/beans/"
-  },"106": {
+  },"111": {
     "doc": "QA checkers",
     "title": "QA checkers",
     "content": "One page per instance in this checkout holding a directory of this kind. ",
     "url": "/dth-sc/en/cat-harness/qa-checkers/#qa-checkers",
     
     "relUrl": "/en/cat-harness/qa-checkers/#qa-checkers"
-  },"107": {
+  },"112": {
     "doc": "QA checkers",
     "title": "QA checkers",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/qa-checkers/",
     
     "relUrl": "/en/cat-harness/qa-checkers/"
-  },"108": {
+  },"113": {
     "doc": "Processes — dth-sc",
     "title": "Processes — dth-sc",
     "content": "The diagrams dth-sc holds in its declared processes directories — one sub-graph’s slice of every instance’s processes. The skills, lanes and findings below count these diagrams only. Generated by cat-harness-tools/scripts/gen-processes-viz.ts. Every number here is counted from the directory, never carried in prose — bpmn-processes’ own rule, and the bean that asked for this page had two different counts in its title and its body. 3 diagram(s), 3 parsed, 0 that would not load. | where | diagrams | . | folio/dth-sc/introduction/ | 2 | . | folio/dth-sc/ch04-traceability/ | 1 | . ",
     "url": "/dth-sc/en/cat-harness/processes/dth-sc/",
     
     "relUrl": "/en/cat-harness/processes/dth-sc/"
-  },"109": {
+  },"114": {
     "doc": "Processes — dth-sc",
     "title": "Every process — one page each",
-    "content": "Each page shows the diagram, what it is for, who acts in it, every step with the skill it runs, and which processes call it. kg:audit’s process-diagram-published fails a diagram no page shows — 45 of 62 were in that state before these pages existed (bean ooq3). Running instances links each workflow instance’s own page — the diagram with its token, its stuck states, its beans and todos — for every instance running this process or calling it as a subprocess. Links and counts only: where an instance IS lives in its file under beans/workflows/. | process | steps | undocumented steps | running instances | . | Centralized medical product track-and-trace, verification and recall workflow | 9 | 9 | none recorded | . | Stepwise DHSC strategy, architecture and implementation transformation method | 10 | 10 | none recorded | . | End-to-end health supply chain core processes and information flow | 12 | 12 | none recorded | . Instances of cat-harness, dpi-h-ra could not be read in this build, so “none recorded” above does not cover them. ",
+    "content": "Each page shows the diagram, what it is for, who acts in it, every step with the skill it runs, and which processes call it. kg:audit’s process-diagram-published fails a diagram no page shows — 45 of 62 were in that state before these pages existed (bean ooq3). Running instances links each workflow instance’s own page — the diagram with its token, its stuck states, its beans and todos — for every instance running this process or calling it as a subprocess. Links and counts only: where an instance IS lives in its file under beans/workflows/. | process | steps | undocumented steps | running instances | . | Centralized medical product track-and-trace, verification and recall workflow · IRI · JSON-LD | 9 | 9 | none recorded | . | Stepwise DHSC strategy, architecture and implementation transformation method · IRI · JSON-LD | 10 | 10 | none recorded | . | End-to-end health supply chain core processes and information flow · IRI · JSON-LD | 12 | 12 | none recorded | . Instances of cat-harness, dpi-h-ra could not be read in this build, so “none recorded” above does not cover them. ",
     "url": "/dth-sc/en/cat-harness/processes/dth-sc/#every-process--one-page-each",
     
     "relUrl": "/en/cat-harness/processes/dth-sc/#every-process--one-page-each"
-  },"110": {
+  },"115": {
     "doc": "Processes — dth-sc",
     "title": "What runs this skill?",
-    "content": "The reverse of &lt;bootstrap.processes:skill ref&gt;, which is the join nothing else exposes: a skill says what to do, and until now nothing said which processes ask for it. 0 distinct skill(s) are named by an activity. | skill | run by |—|—| . Names an ⓘ task panel shows without a link are listed on Task panel links: QA. ",
+    "content": "The reverse of &lt;bootstrap.processes:skill ref&gt;, which is the join nothing else exposes: a skill says what to do, and until now nothing said which processes ask for it. 0 distinct skill(s) are named by an activity. No activity names a skill. Names an ⓘ task panel shows without a link are listed on Task panel links: QA. ",
     "url": "/dth-sc/en/cat-harness/processes/dth-sc/#what-runs-this-skill",
     
     "relUrl": "/en/cat-harness/processes/dth-sc/#what-runs-this-skill"
-  },"111": {
+  },"116": {
     "doc": "Processes — dth-sc",
     "title": "Who appears in a process?",
     "content": "A lane NAMES the Role its tasks are performed in; it is not itself a Role. The NAME is free text — process-model.ts notes that sixty lanes spell two dozen positions — so the lane’s partitionElementRef (or the legacy &lt;bootstrap.processes:role ref&gt;) is the join that does not depend on spelling, and it is reported separately below rather than merged into the name. 18 distinct lane name(s). | lane | in | . | Central warehouse | 2 | . | Health facility | 2 | . | Patient / individual | 2 | . | Regional warehouse | 2 | . | Regulatory authority | 2 | . | Community health | 1 | . | Developer, integrator &amp; QA | 1 | . | DHSC traceability hub | 1 | . | Enterprise &amp; solution architect | 1 | . | Logistics provider | 1 | . | Manufacturer | 1 | . | Manufacturer &amp; distributor | 1 | . | Ministry of health | 1 | . | Ministry of health (MOH) | 1 | . | Procurement agency | 1 | . | Project manager &amp; analyst | 1 | . | Steering committee &amp; sponsor | 1 | . | Sysadmin, support &amp; trainer | 1 | . ",
     "url": "/dth-sc/en/cat-harness/processes/dth-sc/#who-appears-in-a-process",
     
     "relUrl": "/en/cat-harness/processes/dth-sc/#who-appears-in-a-process"
-  },"112": {
+  },"117": {
     "doc": "Processes — dth-sc",
     "title": "Which steps touch the work plan?",
-    "content": "&lt;cat-harness.processes:bean op&gt; — the audit trail for who reserves and resolves work. | op | diagrams |—|—| . ",
+    "content": "&lt;cat-harness.processes:bean op&gt; — the audit trail for who reserves and resolves work. No step names a bean op. ",
     "url": "/dth-sc/en/cat-harness/processes/dth-sc/#which-steps-touch-the-work-plan",
     
     "relUrl": "/en/cat-harness/processes/dth-sc/#which-steps-touch-the-work-plan"
-  },"113": {
+  },"118": {
     "doc": "Processes — dth-sc",
     "title": "Strict, advisory — and nobody said",
     "content": "Three states, not two. loadProcessModel reads an undeclared policy as strict, which is right for the engine — “a process that forgot to say is governed, not exempt” — and hides a fact a reader wants. Somebody chose strict and nobody said, so the engine assumed strict are different, and the second is 3 of 3 here. | enforcement | declared | defaulted | . | strict | 0 | 3 | . | advisory | 0 | 0 | . ",
     "url": "/dth-sc/en/cat-harness/processes/dth-sc/#strict-advisory--and-nobody-said",
     
     "relUrl": "/en/cat-harness/processes/dth-sc/#strict-advisory--and-nobody-said"
-  },"114": {
+  },"119": {
     "doc": "Processes — dth-sc",
     "title": "Findings",
     "content": "3 diagram(s) have no rendered SVG. bun run cat render:bpmn. | folio/dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.bpmn | folio/dth-sc/introduction/bp-sc-bp-01-stepwise-dhsc-transformation.bpmn | folio/dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.bpmn | . Activities carrying no &lt;bootstrap.processes:skill ref&gt; — a census, not a gap list . 31 across 3 diagram(s). This section reported them as defects in its first version, and that was wrong: beans luke and uuhu worked this corpus from 90 down to this remainder and settled what is left. luke: “coverage is deliberately NOT gated — a human sign-off step has no skill”. uuhu added the call-activity exemption and recorded that its own remainder “are not gaps”. 0 are call activities, which delegate to a subprocess — the skill is named there, and naming it twice would be one fact in two places. The other 31 are listed by lane, because the lane is what says whether a person, a pipeline or an agent performs the step, and only the last of those has a skill to run. | lane | steps | . | Central warehouse | 3 | . | Enterprise &amp; solution architect | 3 | . | Health facility | 3 | . | Patient / individual | 3 | . | DHSC traceability hub | 2 | . | Project manager &amp; analyst | 2 | . | Regional warehouse | 2 | . | Regulatory authority | 2 | . | Steering committee &amp; sponsor | 2 | . | Community health | 1 | . | Developer, integrator &amp; QA | 1 | . | Logistics provider | 1 | . | Manufacturer | 1 | . | Manufacturer &amp; distributor | 1 | . | Ministry of health | 1 | . | Ministry of health (MOH) | 1 | . | Procurement agency | 1 | . | Sysadmin, support &amp; trainer | 1 | . No verdict is offered on which of these is a gap, and that is the honest state rather than a hedge: distinguishing a person’s judgement step from an agent step somebody forgot needs the lane’s actor KIND, which a free-text lane name does not give — process-model.ts notes sixty lanes spell two dozen positions. The lane’s partitionElementRef is the join that would answer it, and it is present on 31 of these 31 steps — which is the measurement, not an impression. An earlier draft of this sentence said few of these and was counting whether the lane had a NAME, a different question with a different answer. ",
     "url": "/dth-sc/en/cat-harness/processes/dth-sc/#findings",
     
     "relUrl": "/en/cat-harness/processes/dth-sc/#findings"
-  },"115": {
+  },"120": {
     "doc": "Processes",
     "title": "Processes — every executable diagram, searchable",
     "content": "Generated by cat-harness-tools/scripts/gen-processes-viz.ts. Every number here is counted from the directory, never carried in prose — bpmn-processes’ own rule, and the bean that asked for this page had two different counts in its title and its body. 3 diagram(s), 3 parsed, 0 that would not load. | where | diagrams | . | folio/dth-sc/introduction/ | 2 | . | folio/dth-sc/ch04-traceability/ | 1 | . ",
     "url": "/dth-sc/en/cat-harness/processes/#processes--every-executable-diagram-searchable",
     
     "relUrl": "/en/cat-harness/processes/#processes--every-executable-diagram-searchable"
-  },"116": {
+  },"121": {
     "doc": "Processes",
     "title": "By subgraph",
     "content": "Each instance that holds diagrams has its own page, listing only its processes. | subgraph | diagrams | . | dth-sc | 3 | . ",
     "url": "/dth-sc/en/cat-harness/processes/#by-subgraph",
     
     "relUrl": "/en/cat-harness/processes/#by-subgraph"
-  },"117": {
+  },"122": {
     "doc": "Processes",
     "title": "Every process — one page each",
-    "content": "Each page shows the diagram, what it is for, who acts in it, every step with the skill it runs, and which processes call it. kg:audit’s process-diagram-published fails a diagram no page shows — 45 of 62 were in that state before these pages existed (bean ooq3). Running instances links each workflow instance’s own page — the diagram with its token, its stuck states, its beans and todos — for every instance running this process or calling it as a subprocess. Links and counts only: where an instance IS lives in its file under beans/workflows/. | process | steps | undocumented steps | running instances | . | Centralized medical product track-and-trace, verification and recall workflow | 9 | 9 | none recorded | . | Stepwise DHSC strategy, architecture and implementation transformation method | 10 | 10 | none recorded | . | End-to-end health supply chain core processes and information flow | 12 | 12 | none recorded | . Instances of cat-harness, dpi-h-ra could not be read in this build, so “none recorded” above does not cover them. ",
+    "content": "Each page shows the diagram, what it is for, who acts in it, every step with the skill it runs, and which processes call it. kg:audit’s process-diagram-published fails a diagram no page shows — 45 of 62 were in that state before these pages existed (bean ooq3). Running instances links each workflow instance’s own page — the diagram with its token, its stuck states, its beans and todos — for every instance running this process or calling it as a subprocess. Links and counts only: where an instance IS lives in its file under beans/workflows/. | process | steps | undocumented steps | running instances | . | Centralized medical product track-and-trace, verification and recall workflow · IRI · JSON-LD | 9 | 9 | none recorded | . | Stepwise DHSC strategy, architecture and implementation transformation method · IRI · JSON-LD | 10 | 10 | none recorded | . | End-to-end health supply chain core processes and information flow · IRI · JSON-LD | 12 | 12 | none recorded | . Instances of cat-harness, dpi-h-ra could not be read in this build, so “none recorded” above does not cover them. ",
     "url": "/dth-sc/en/cat-harness/processes/#every-process--one-page-each",
     
     "relUrl": "/en/cat-harness/processes/#every-process--one-page-each"
-  },"118": {
+  },"123": {
     "doc": "Processes",
     "title": "What runs this skill?",
-    "content": "The reverse of &lt;bootstrap.processes:skill ref&gt;, which is the join nothing else exposes: a skill says what to do, and until now nothing said which processes ask for it. 0 distinct skill(s) are named by an activity. | skill | run by |—|—| . Names an ⓘ task panel shows without a link are listed on Task panel links: QA. ",
+    "content": "The reverse of &lt;bootstrap.processes:skill ref&gt;, which is the join nothing else exposes: a skill says what to do, and until now nothing said which processes ask for it. 0 distinct skill(s) are named by an activity. No activity names a skill. Names an ⓘ task panel shows without a link are listed on Task panel links: QA. ",
     "url": "/dth-sc/en/cat-harness/processes/#what-runs-this-skill",
     
     "relUrl": "/en/cat-harness/processes/#what-runs-this-skill"
-  },"119": {
+  },"124": {
     "doc": "Processes",
     "title": "Who appears in a process?",
     "content": "A lane NAMES the Role its tasks are performed in; it is not itself a Role. The NAME is free text — process-model.ts notes that sixty lanes spell two dozen positions — so the lane’s partitionElementRef (or the legacy &lt;bootstrap.processes:role ref&gt;) is the join that does not depend on spelling, and it is reported separately below rather than merged into the name. 18 distinct lane name(s). | lane | in | . | Central warehouse | 2 | . | Health facility | 2 | . | Patient / individual | 2 | . | Regional warehouse | 2 | . | Regulatory authority | 2 | . | Community health | 1 | . | Developer, integrator &amp; QA | 1 | . | DHSC traceability hub | 1 | . | Enterprise &amp; solution architect | 1 | . | Logistics provider | 1 | . | Manufacturer | 1 | . | Manufacturer &amp; distributor | 1 | . | Ministry of health | 1 | . | Ministry of health (MOH) | 1 | . | Procurement agency | 1 | . | Project manager &amp; analyst | 1 | . | Steering committee &amp; sponsor | 1 | . | Sysadmin, support &amp; trainer | 1 | . ",
     "url": "/dth-sc/en/cat-harness/processes/#who-appears-in-a-process",
     
     "relUrl": "/en/cat-harness/processes/#who-appears-in-a-process"
-  },"120": {
+  },"125": {
     "doc": "Processes",
     "title": "Which steps touch the work plan?",
-    "content": "&lt;cat-harness.processes:bean op&gt; — the audit trail for who reserves and resolves work. | op | diagrams |—|—| . ",
+    "content": "&lt;cat-harness.processes:bean op&gt; — the audit trail for who reserves and resolves work. No step names a bean op. ",
     "url": "/dth-sc/en/cat-harness/processes/#which-steps-touch-the-work-plan",
     
     "relUrl": "/en/cat-harness/processes/#which-steps-touch-the-work-plan"
-  },"121": {
+  },"126": {
     "doc": "Processes",
     "title": "Strict, advisory — and nobody said",
     "content": "Three states, not two. loadProcessModel reads an undeclared policy as strict, which is right for the engine — “a process that forgot to say is governed, not exempt” — and hides a fact a reader wants. Somebody chose strict and nobody said, so the engine assumed strict are different, and the second is 3 of 3 here. | enforcement | declared | defaulted | . | strict | 0 | 3 | . | advisory | 0 | 0 | . ",
     "url": "/dth-sc/en/cat-harness/processes/#strict-advisory--and-nobody-said",
     
     "relUrl": "/en/cat-harness/processes/#strict-advisory--and-nobody-said"
-  },"122": {
+  },"127": {
     "doc": "Processes",
     "title": "Findings",
     "content": "3 diagram(s) have no rendered SVG. bun run cat render:bpmn. | folio/dth-sc/ch04-traceability/bp-sc-bp-03-centralized-track-and-trace.bpmn | folio/dth-sc/introduction/bp-sc-bp-01-stepwise-dhsc-transformation.bpmn | folio/dth-sc/introduction/bp-sc-bp-02-end-to-end-supply-chain-processes.bpmn | . Activities carrying no &lt;bootstrap.processes:skill ref&gt; — a census, not a gap list . 31 across 3 diagram(s). This section reported them as defects in its first version, and that was wrong: beans luke and uuhu worked this corpus from 90 down to this remainder and settled what is left. luke: “coverage is deliberately NOT gated — a human sign-off step has no skill”. uuhu added the call-activity exemption and recorded that its own remainder “are not gaps”. 0 are call activities, which delegate to a subprocess — the skill is named there, and naming it twice would be one fact in two places. The other 31 are listed by lane, because the lane is what says whether a person, a pipeline or an agent performs the step, and only the last of those has a skill to run. | lane | steps | . | Central warehouse | 3 | . | Enterprise &amp; solution architect | 3 | . | Health facility | 3 | . | Patient / individual | 3 | . | DHSC traceability hub | 2 | . | Project manager &amp; analyst | 2 | . | Regional warehouse | 2 | . | Regulatory authority | 2 | . | Steering committee &amp; sponsor | 2 | . | Community health | 1 | . | Developer, integrator &amp; QA | 1 | . | Logistics provider | 1 | . | Manufacturer | 1 | . | Manufacturer &amp; distributor | 1 | . | Ministry of health | 1 | . | Ministry of health (MOH) | 1 | . | Procurement agency | 1 | . | Sysadmin, support &amp; trainer | 1 | . No verdict is offered on which of these is a gap, and that is the honest state rather than a hedge: distinguishing a person’s judgement step from an agent step somebody forgot needs the lane’s actor KIND, which a free-text lane name does not give — process-model.ts notes sixty lanes spell two dozen positions. The lane’s partitionElementRef is the join that would answer it, and it is present on 31 of these 31 steps — which is the measurement, not an impression. An earlier draft of this sentence said few of these and was counting whether the lane had a NAME, a different question with a different answer. ",
     "url": "/dth-sc/en/cat-harness/processes/#findings",
     
     "relUrl": "/en/cat-harness/processes/#findings"
-  },"123": {
+  },"128": {
     "doc": "Processes",
     "title": "Processes",
     "content": " ",
     "url": "/dth-sc/en/cat-harness/processes/",
     
     "relUrl": "/en/cat-harness/processes/"
-  },"124": {
+  },"129": {
     "doc": "Glossary: dth-sc",
     "title": "Glossary: dth-sc",
     "content": "The glossaries dth-sc owns: Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture (80 terms, SKOS). Every other instance’s terms, the counts and the sources are on the glossary index. Size: this page holds 80 terms and is 123 KB before compression, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it. Filter terms . 80 shown . A B C D E F G H I K M N O P Q R S T U V W ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#glossary-dth-sc",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#glossary-dth-sc"
-  },"125": {
+  },"130": {
     "doc": "Glossary: dth-sc",
     "title": "A",
     "content": "Antenatal Care ANC candidate No definition yet. Expanded in Figure 6. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/antenatal-care · source who-iris/library/9789240101197-eng/sections/page-017.md . Association for Supply Chain Management ASCM candidate No definition yet. Expanded in Reference 11 (page 65). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/association-for-supply-chain-management · source who-iris/library/9789240101197-eng/sections/page-065.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-A",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-A"
-  },"126": {
+  },"131": {
     "doc": "Glossary: dth-sc",
     "title": "B",
     "content": "Bureau des Formations Médicales Agréées du Rwanda BUFMAR candidate No definition yet. The handbook uses the acronym in Figure 31 (page 64, Rwanda current-state supply chain systems) without expanding it. The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/bufmar · source who-iris/library/9789240101197-eng/sections/page-064.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-B",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-B"
-  },"127": {
+  },"132": {
     "doc": "Glossary: dth-sc",
     "title": "C",
     "content": "Centralized Traceability Model candidate A traceability model that involves a single database or repository for storing all traceability data. The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted. Candidate definitions (2) . | Traceability (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term. | Interoperability (Glossary of the Reference Architecture and Guidance for DPI-H)Interoperability is the standards-based capability of heterogeneous information systems to communicate, exchange data, and use the exchanged information to execute functions effectively. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Substantive and internal alternatives across the DTH corpus (smart-ra#133 S1, smart-ra#139, smart-ra#140, smart-ra#142): (1) PHC handbook glossary (who-iris/library/9789240093362-eng/sections/sec-002-glossary.md, p. 9), PC handbook glossary (who-iris/library/9789240116191-eng/sections/page-008.md, p. 8), and SFP handbook glossary (who-iris/library/9789240120747-eng/sections/page-010.md, p. 10): &quot;Ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner through the use of shared application interfaces, value sets, concepts and standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes.&quot; (2) SC handbook glossary (who-iris/library/9789240101197-eng/sections/page-008.md, p. 8, citing DIIG): &quot;The ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner, through the use of shared application interfaces, value sets, concepts and standards within and across organizational, regional and national boundaries. In the health context, this provides timely, safe and seamless portability of information to help ensure good health outcomes (1).&quot; (3) PHC handbook §4.4 body (who-iris/library/9789240093362-eng/sections/sec-023-44-design-system-architecture.md, §4.4, pp. 56-60): &quot;Interoperability is the ability of different applications to access, exchange, integrate and use data in a coordinated manner through the use of shared application interfaces and standards, which should be defined by the EA and independent of a particular solution’s system architecture (22).&quot; (4) PHC handbook §4.4.2 body (who-iris/library/9789240093362-eng/sections/sec-023-44-design-system-architecture.md, pp. 56-60): &quot;Interoperability is the ability of different applications to access, exchange, integrate and use data in a coordinated manner through the use of shared application interfaces and data representation standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes.&quot; All are recorded as candidates; none is chosen. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/centralized-traceability-model · source who-iris/library/9789240101197-eng/sections/page-054.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/repository | . Chief Digital Officer CDO candidate No definition yet. Written out in Annex 7 (page 72) and abbreviated CDO in the folio's persona blocks. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-digital-officer · source who-iris/library/9789240101197-eng/sections/page-072.md . Chief Information Officer CIO candidate No definition yet. Written out in Annex 7 (page 72) and abbreviated CIO in the folio's persona blocks. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-information-officer · source who-iris/library/9789240101197-eng/sections/page-072.md . Chief Technology Officer CTO candidate No definition yet. Written out in Annex 7 (page 72) and abbreviated CTO in the folio's persona blocks. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-technology-officer · source who-iris/library/9789240101197-eng/sections/page-072.md . Community Health Worker CHW candidate No definition yet. Written out in the Introduction (page 11) and Annex 5 (page 70), and abbreviated CHW in the folio's business process blocks. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/community-health-worker · source who-iris/library/9789240101197-eng/sections/page-011.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-C",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-C"
-  },"128": {
+  },"133": {
     "doc": "Glossary: dth-sc",
     "title": "D",
     "content": "Dagu DAGU candidate No definition yet. Named in Figures 26 and 27 (Ethiopia facility-level logistics management system) without expansion. A candidate: check in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/dagu · source who-iris/library/9789240101197-eng/sections/page-059.md . DAI candidate No definition yet. Named in the acknowledgements (page 6). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/dai · source who-iris/library/9789240101197-eng/sections/page-006.md . Declaration of Interests DOI candidate No definition yet. Expanded in the acknowledgements ('WHO Declaration of Interests (DOI) form'). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/declaration-of-interests · source who-iris/library/9789240101197-eng/sections/page-006.md . Department of Digital Health and Innovations DHI candidate No definition yet. Expanded in the acknowledgements ('WHO Department of Digital Health and Innovations (DHI)'). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/who-department-of-digital-health-and-innovations · source who-iris/library/9789240101197-eng/sections/page-006.md . Digital Health and Interoperability Working Group DH&amp;I WG candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel, and cited in Reference 2. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-and-interoperability-working-group · source who-iris/library/9789240101197-eng/sections/page-007.md . Digital Health Supply Chain DHSC candidate The knowledge and practice of adopting digital technologies to improve health supply chains and enable the delivery of quality-assured health products to individuals when and where they need them. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Defined in the Introduction (PDF 12), not in the handbook's glossary. Candidate definitions (2) . | Health Digital Public Infrastructure (Glossary of the Reference Architecture and Guidance for DPI-H)Health Digital Public Infrastructure (DPI-H) refers to digital resources that are built as a shared means for fulfilling multiple health agency functions. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Wording alternative in RA §1.1.2 body (library/who-dpi-h-reference-architecture-draft-v1/sections/sec-002-112-understanding-digital-public-infrastructure.md), which adds a second defining sentence: &quot;Health Digital Public Infrastructure (DPI-H) refers to digital resources that are built as a shared means for fulfilling multiple health agency functions. These digital resources for health — encompassing both systems and specifications — leverage foundational DPI, are interoperable, reusable, publicly governed and built on open standards.&quot; Both are recorded as candidates; neither is chosen (smart-ra#133 S1). | Enterprise Architecture (Glossary of the Reference Architecture and Guidance for DPI-H)The organising logic for business processes and IT infrastructure reflecting the integration and standardisation requirements of the organisation's operating model. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md); the draft marks this entry [Under review]. Substantive alternatives across the DTH corpus (smart-ra#133 S1, smart-ra#139, smart-ra#140): (1) PHC handbook glossary (who-iris/library/9789240093362-eng/sections/sec-002-glossary.md, p. 9, citing DIIG): &quot;A blueprint of business processes, data, systems and technologies used to help planners, software developers and managers design increasingly complex systems to support the workflow and roles of people in a large enterprise, such as a health system (11).&quot; (2) SC handbook glossary (who-iris/library/9789240101197-eng/sections/page-008.md, p. 8, citing DIIG): &quot;A blueprint of business processes, data, systems and technologies that helps planners, software developers and managers design increasingly complex systems to support the workflow and roles of people in a large enterprise such as a health system (1).&quot; (3) SFP handbook glossary (who-iris/library/9789240120747-eng/sections/page-009.md, p. 9, citing DIIG): &quot;A blueprint of business processes, data, systems and technologies used to help implementers design increasingly complex systems to support the workflow and roles of people in a large enterprise, such as a health system (3).&quot; All four are recorded as candidates; none is chosen. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain · source who-iris/library/9789240101197-eng/sections/page-012.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digital-health | . Digital Health Supply Chain Intervention candidate An intervention that involves the use of digital technologies to improve the management and operation of health supply chains. It aims to enhance the efficiency and effectiveness of health supply chain processes such as planning, procurement, distribution and warehouse management. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Candidate definitions (2) . | Capability (Glossary of the Reference Architecture and Guidance for DPI-H)A high-level ability the health system possesses or needs in order to achieve its goals. It expresses what the health system is able to do, independently of how that ability is implemented. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Wording alternative in RA Table 3.1 (library/who-dpi-h-reference-architecture-draft-v1/sections/sec-026-31-the-architecture-description-approach.md): &quot;An ability that an organisation, person, or system possesses — expressed in terms of what can be done, not how or by whom.&quot; Both are recorded as candidates; neither is chosen (smart-ra#133 S1). | Application Component (Glossary of the Reference Architecture and Guidance for DPI-H)A deployable, modular piece of software that provides a defined set of functionality and holds the data it manages, exposing both through services. The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain-intervention · source who-iris/library/9789240101197-eng/sections/page-008.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digital-health | . Digital Implementation Investment Guide DIIG candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-implementation-investment-guide · source who-iris/library/9789240101197-eng/sections/page-007.md . Digital Supply Chain DSC candidate No definition yet. Expanded in the Rwanda country experience ('Rwanda's Digital Supply Chain (DSC) Strategy and Architecture'). A candidate: no definition has been written. Candidate definitions (1) . | Digital Health Supply Chain (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)The knowledge and practice of adopting digital technologies to improve health supply chains and enable the delivery of quality-assured health products to individuals when and where they need them. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Defined in the Introduction (PDF 12), not in the handbook's glossary. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-supply-chain · source who-iris/library/9789240101197-eng/sections/page-063.md . Distributed Traceability Model candidate A traceability model in which traceability data are maintained separately by each supply chain partner. The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted. Candidate definitions (2) . | Traceability (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term. | Interoperability (Glossary of the Reference Architecture and Guidance for DPI-H)Interoperability is the standards-based capability of heterogeneous information systems to communicate, exchange data, and use the exchanged information to execute functions effectively. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Substantive and internal alternatives across the DTH corpus (smart-ra#133 S1, smart-ra#139, smart-ra#140, smart-ra#142): (1) PHC handbook glossary (who-iris/library/9789240093362-eng/sections/sec-002-glossary.md, p. 9), PC handbook glossary (who-iris/library/9789240116191-eng/sections/page-008.md, p. 8), and SFP handbook glossary (who-iris/library/9789240120747-eng/sections/page-010.md, p. 10): &quot;Ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner through the use of shared application interfaces, value sets, concepts and standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes.&quot; (2) SC handbook glossary (who-iris/library/9789240101197-eng/sections/page-008.md, p. 8, citing DIIG): &quot;The ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner, through the use of shared application interfaces, value sets, concepts and standards within and across organizational, regional and national boundaries. In the health context, this provides timely, safe and seamless portability of information to help ensure good health outcomes (1).&quot; (3) PHC handbook §4.4 body (who-iris/library/9789240093362-eng/sections/sec-023-44-design-system-architecture.md, §4.4, pp. 56-60): &quot;Interoperability is the ability of different applications to access, exchange, integrate and use data in a coordinated manner through the use of shared application interfaces and standards, which should be defined by the EA and independent of a particular solution’s system architecture (22).&quot; (4) PHC handbook §4.4.2 body (who-iris/library/9789240093362-eng/sections/sec-023-44-design-system-architecture.md, pp. 56-60): &quot;Interoperability is the ability of different applications to access, exchange, integrate and use data in a coordinated manner through the use of shared application interfaces and data representation standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes.&quot; All are recorded as candidates; none is chosen. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/distributed-traceability-model · source who-iris/library/9789240101197-eng/sections/page-054.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/repository | . District Health Information Software 2 DHIS2 candidate No definition yet. The handbook uses the acronym without expanding it (Figures 26–32). The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/dhis2 · source who-iris/library/9789240101197-eng/sections/page-059.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-D",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-D"
-  },"129": {
+  },"134": {
     "doc": "Glossary: dth-sc",
     "title": "E",
     "content": "Electronic Auditable Pharmaceutical Transactions and Services eAPTs candidate No definition yet. The handbook uses the acronym in Figures 26 and 27 (Ethiopia dispensing system) without expanding it. The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/eapts · source who-iris/library/9789240101197-eng/sections/page-059.md . Electronic Government Procurement e-GP candidate No definition yet. The handbook uses the acronym (written E-GP in Figure 29 and e-GP in Figure 30) without expanding it. The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-government-procurement · source who-iris/library/9789240101197-eng/sections/page-061.md . Electronic Health Information Network eHIN candidate No definition yet. The handbook uses the acronym in Figures 28–30 (Malawi dispensing system) without expanding it. The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-health-information-network · source who-iris/library/9789240101197-eng/sections/page-061.md . Electronic Logistics Management Information System eLMIS candidate No definition yet. The handbook's glossary defines Health Supply Chain Information System as 'also commonly referred to as electronic logistics management information systems' (page 8), and Figures 9, 26, 27 and 31 use the acronym eLMIS without listing it in the abbreviations table. Linked as related to health-supply-chain-information-system. A candidate: no separate definition has been written. Candidate definitions (1) . | Health Supply Chain Information System (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)A paper-based or software tool that supports the management and/or operations of the health supply chain. Such software tools (e.g., for order management or warehouse management) are also commonly referred to as electronic logistics management information systems. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. smart-ra models the individual systems as ArchiMate application components (sc-workplan.md section 4). | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-logistics-management-information-system · source who-iris/library/9789240101197-eng/sections/page-021.md . Electronic Medical Record EMR candidate No definition yet. The handbook uses the acronym without expanding it (Figures 26–29, 31–32). The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-medical-record · source who-iris/library/9789240101197-eng/sections/page-059.md . Depicted in ArchiMate dpi-h-ra 0.2.0-draft.3: Electronic Medical Record (ApplicationComponent), Electronic Medical Record (ApplicationComponent), Electronic Medical Record (ApplicationComponent); views: Sub-goal #1 Layered View, Sub-goal #2 Layered View, Sub-goal #3 Layered View . Electronic Regulatory Information System eRIS candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-regulatory-information-system · source who-iris/library/9789240101197-eng/sections/page-007.md . Enterprise Resource Planning ERP candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/enterprise-resource-planning · source who-iris/library/9789240101197-eng/sections/page-007.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-E",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-E"
-  },"130": {
+  },"135": {
     "doc": "Glossary: dth-sc",
     "title": "F",
     "content": "Facilities' Supply Chain Information Systems FSCIS candidate No definition yet. Expanded in Figure 30 (Malawi SCSA future-state architecture). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/facilities-supply-chain-information-systems · source who-iris/library/9789240101197-eng/sections/page-062.md . FANOS candidate No definition yet. Named in Figures 26 and 27 (Ethiopia supply chain system) without expansion. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/fanos · source who-iris/library/9789240101197-eng/sections/page-059.md . Full-Time Equivalent FTE candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/full-time-equivalent · source who-iris/library/9789240101197-eng/sections/page-007.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-F",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-F"
-  },"131": {
+  },"136": {
     "doc": "Glossary: dth-sc",
     "title": "G",
     "content": "Geographic Information System GIS candidate No definition yet. The handbook uses the acronym in Figure 13 (page 33) without expanding it. The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/geographic-information-system · source who-iris/library/9789240101197-eng/sections/page-033.md . Global Family Planning Visibility and Analytics Network GFPVAN candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/global-family-planning-visibility-and-analytics-network · source who-iris/library/9789240101197-eng/sections/page-007.md . Global Location Number GLN candidate No definition yet. Used in the folio's traceability hub persona without expansion in the handbook. The expansion is supplied, not quoted: check it in context before adopting. Candidate definitions (1) . | Traceability (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/global-location-number · source who-iris/library/9789240101197-eng/sections/page-054.md . Global Trade Item Number GTIN candidate No definition yet. Used in the folio's traceability hub persona without expansion in the handbook. The expansion is supplied, not quoted: check it in context before adopting. Candidate definitions (1) . | Traceability (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/global-trade-item-number · source who-iris/library/9789240101197-eng/sections/page-054.md . Governance (Health Supply Chain) candidate In the context of the health supply chain, the process of establishing and implementing policies, procedures and mechanisms to ensure that the supply chain processes and the systems to manage those processes are managed effectively, ethically and in alignment with established objectives and stakeholders' interests. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Boxed definition in Chapter 3 (PDF 45). Differs substantively from the draft RA's 'governance'; both are recorded as alternatives in litlfred/smart-ra#140. Candidate definitions (2) . | Stakeholder (Glossary of the Reference Architecture and Guidance for DPI-H)An individual, role, or organisation with an interest in the outcomes of the architecture. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Substantive and wording alternatives across the corpus (smart-ra#133 S1, smart-ra#140): (1) RA Table 3.1 (library/who-dpi-h-reference-architecture-draft-v1/sections/sec-026-31-the-architecture-description-approach.md): &quot;An individual, team, or organisation with interests in, or concerns relative to, the architecture.&quot; (2) SC handbook glossary (who-iris/library/9789240101197-eng/sections/page-009.md, p. 9): &quot;In the context of digital health transformation, anyone who is affected by or interested in the consequences of the efforts, including the planning team, end users, beneficiaries and funders.&quot; (4) DIIG Annex 1.1 Glossary (who-iris/library/9789240010567-eng/sections/page-141.md, p. 129): &quot;Any person who is affected by or interested in the consequences of the digital health implementation; stakeholders include the planning team, end-users, beneficiaries and funders.&quot; (Also enumerated in SFP handbook §1.1, who-iris/library/9789240120747-eng/sections/sec-009-11-analyse-key-stakeholders.md, page-020.md, p. 8.) All are recorded as candidates; none is chosen. | Enterprise Architecture (Glossary of the Reference Architecture and Guidance for DPI-H)The organising logic for business processes and IT infrastructure reflecting the integration and standardisation requirements of the organisation's operating model. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md); the draft marks this entry [Under review]. Substantive alternatives across the DTH corpus (smart-ra#133 S1, smart-ra#139, smart-ra#140): (1) PHC handbook glossary (who-iris/library/9789240093362-eng/sections/sec-002-glossary.md, p. 9, citing DIIG): &quot;A blueprint of business processes, data, systems and technologies used to help planners, software developers and managers design increasingly complex systems to support the workflow and roles of people in a large enterprise, such as a health system (11).&quot; (2) SC handbook glossary (who-iris/library/9789240101197-eng/sections/page-008.md, p. 8, citing DIIG): &quot;A blueprint of business processes, data, systems and technologies that helps planners, software developers and managers design increasingly complex systems to support the workflow and roles of people in a large enterprise such as a health system (1).&quot; (3) SFP handbook glossary (who-iris/library/9789240120747-eng/sections/page-009.md, p. 9, citing DIIG): &quot;A blueprint of business processes, data, systems and technologies used to help implementers design increasingly complex systems to support the workflow and roles of people in a large enterprise, such as a health system (3).&quot; All four are recorded as candidates; none is chosen. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/governance-health-supply-chain · source who-iris/library/9789240101197-eng/sections/page-045.md . | closeMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/data-governance | . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-G",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-G"
-  },"132": {
+  },"137": {
     "doc": "Glossary: dth-sc",
     "title": "H",
     "content": "Health Facility Logistics Management System HFLMS candidate No definition yet. Written out in Figure 1 (page 11) and abbreviated HFLMS in the folio's business process blocks. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-facility-logistics-management-system · source who-iris/library/9789240101197-eng/sections/page-011.md . Depicted in ArchiMate dpi-h-ra 0.3.0-draft.1: Health Facility Logistics Management System (ApplicationComponent); views: Components draft, Components, Track and Trace through DHSC Components (DTH SC Fig. 24) . Health Information System HIS candidate No definition yet. The handbook uses the acronym without expanding it (Figure 5 and page 31). The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-information-system · source who-iris/library/9789240101197-eng/sections/page-015.md . Health Supply Chain Information System HSCIS candidate A paper-based or software tool that supports the management and/or operations of the health supply chain. Such software tools (e.g., for order management or warehouse management) are also commonly referred to as electronic logistics management information systems. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. smart-ra models the individual systems as ArchiMate application components (sc-workplan.md section 4). Candidate definitions (2) . | Functional Application (Glossary of the Reference Architecture and Guidance for DPI-H)Functional applications are application components that deliver a specific operational function within a defined domain. They are context-specific, reflecting the operational requirements of a programme, scheme, or institution that procures them. The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. | Point-of-Service Applications (Glossary of the Reference Architecture and Guidance for DPI-H)Point-of-service applications are end-user application components (IT systems or software tools) used by individuals directly engaged in healthcare—such as clinicians, community health workers, and patients—that enable interaction with the broader healthcare ecosystem. The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. The draft marks this entry [Under review]. Also categorized in SFP handbook §3.2 Fig. 3 (who-iris/library/9789240120747-eng/sections/sec-020-32-link-to-the-enterprise-architecture.md, page-034.md, p. 22, citing DIIG) into reused POS applications and unique POS applications. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system · source who-iris/library/9789240101197-eng/sections/page-008.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/application-component | . Health Technical Support Services HTSS candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A division of the Ministry of Health of Malawi (page 60). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-technical-support-services · source who-iris/library/9789240101197-eng/sections/page-007.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-H",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-H"
-  },"133": {
+  },"138": {
     "doc": "Glossary: dth-sc",
     "title": "I",
     "content": "IHE Pharmacy PHARM candidate No definition yet. Expanded in Reference 23 ('IHE Pharmacy (PHARM) white paper: supply of products for healthcare'). A candidate: no definition has been written. Candidate definitions (1) . | Integrating the Healthcare Enterprise (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)Named on page 35 and expanded in Reference 23 (page 65). A candidate: no definition has been written. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/ihe-pharmacy · source who-iris/library/9789240101197-eng/sections/page-065.md . Information and Communications Technology ICT candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/information-and-communications-technology · source who-iris/library/9789240101197-eng/sections/page-007.md . Information Technology IT candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/information-technology · source who-iris/library/9789240101197-eng/sections/page-007.md . Integrating the Healthcare Enterprise IHE candidate No definition yet. Named on page 35 and expanded in Reference 23 (page 65). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/integrating-the-healthcare-enterprise · source who-iris/library/9789240101197-eng/sections/page-035.md . International Coalition of Medicines Regulatory Authorities ICMRA candidate No definition yet. Expanded in Chapter 4 (page 54) and Reference 26 (page 65). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/icmra · source who-iris/library/9789240101197-eng/sections/page-054.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-I",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-I"
-  },"134": {
+  },"139": {
     "doc": "Glossary: dth-sc",
     "title": "K",
     "content": "Key Performance Indicator KPI candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/key-performance-indicator · source who-iris/library/9789240101197-eng/sections/page-007.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-K",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-K"
-  },"135": {
+  },"140": {
     "doc": "Glossary: dth-sc",
     "title": "M",
     "content": "Ministry of Health MOH candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. A kind of organization (each country has one), so it has no focus. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/ministry-of-health · source who-iris/library/9789240101197-eng/sections/page-007.md . Depicted in ArchiMate dpi-h-ra 0.3.0-draft.1: Ministry of Health (Stakeholder); views: DPI-H Reference Architecture — Integrated View (Fig. 3.2), 1. Central Health Workforce Registry, ALL HRH Conceptual View - Stakeholder, SUB-GOAL 1. Central Health Workforce Registry , Health Supply Chain Partners and Processes (DTH SC Figs. 1-3), National Product Catalogue (DTH PC Fig. 2, Ch. 2-3) . Monitoring and Evaluation M&amp;E candidate No definition yet. Expanded in the Figure 5 legend. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/monitoring-and-evaluation · source who-iris/library/9789240101197-eng/sections/page-015.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-M",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-M"
-  },"136": {
+  },"141": {
     "doc": "Glossary: dth-sc",
     "title": "N",
     "content": "National Product Catalog NPC candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/national-product-catalog · source who-iris/library/9789240101197-eng/sections/page-007.md . National Supply Chain Assessment NSCA candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/national-supply-chain-assessment · source who-iris/library/9789240101197-eng/sections/page-007.md . National Supply Chain Information Systems NSCIS candidate No definition yet. Expanded in Figure 30 (Malawi SCSA future-state architecture). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/national-supply-chain-information-systems · source who-iris/library/9789240101197-eng/sections/page-062.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-N",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-N"
-  },"137": {
+  },"142": {
     "doc": "Glossary: dth-sc",
     "title": "O",
     "content": "Open Health Information Mediator OpenHIM candidate No definition yet. The handbook uses the acronym without expanding it (page 34 and Figures 26–32). The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/openhim · source who-iris/library/9789240101197-eng/sections/page-034.md . Open Logistics Management Information System OpenLMIS candidate No definition yet. The handbook uses the acronym without expanding it (Figures 28–30 and Annex 5). The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/openlmis · source who-iris/library/9789240101197-eng/sections/page-061.md . Order Management candidate The planning, directing, monitoring and controlling of the processes related to customer or requisition orders. Order management includes order promising; order entry; order pick, pack and ship; billing; and reconciliation of the customer account. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook cites its reference 11 for this definition. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management · source who-iris/library/9789240101197-eng/sections/page-009.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/capability | . Depicted in ArchiMate dpi-h-ra 0.3.0-draft.1: Order Management (Capability); views: Components draft, Capabilities-Goals, Components, Health Supply Chain Partners and Processes (DTH SC Figs. 1-3), National Product Catalogue (DTH PC Fig. 2, Ch. 2-3) . Order Management System OMS candidate A paper-based or software tool that supports the processes for fulfilling requisition orders (e.g., a software tool that supports entry and processing of requisition orders from health facilities to regional or central warehouses to replenish inventory). Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Candidate definitions (2) . | Order Management (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)The planning, directing, monitoring and controlling of the processes related to customer or requisition orders. Order management includes order promising; order entry; order pick, pack and ship; billing; and reconciliation of the customer account. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook cites its reference 11 for this definition. | Functional Application (Glossary of the Reference Architecture and Guidance for DPI-H)Functional applications are application components that deliver a specific operational function within a defined domain. They are context-specific, reflecting the operational requirements of a programme, scheme, or institution that procures them. The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management-system · source who-iris/library/9789240101197-eng/sections/page-009.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/application-component | . Depicted in ArchiMate dpi-h-ra 0.3.0-draft.1: Order Management System (ApplicationComponent); views: Components draft, Components, DHSC Architecture Framework (DTH SC Fig. 14) . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-O",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-O"
-  },"138": {
+  },"143": {
     "doc": "Glossary: dth-sc",
     "title": "P",
     "content": "People that Deliver PtD candidate No definition yet. Expanded in Annex 7 (page 72). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/people-that-deliver · source who-iris/library/9789240101197-eng/sections/page-072.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-P",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-P"
-  },"139": {
+  },"144": {
     "doc": "Glossary: dth-sc",
     "title": "Q",
     "content": "Quality Assurance QA candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/quality-assurance · source who-iris/library/9789240101197-eng/sections/page-007.md . QuanTB candidate No definition yet. Named in Figures 28–30 (Malawi forecasting and planning tool) without expansion. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/quantb · source who-iris/library/9789240101197-eng/sections/page-061.md . Quantification Analytics Tool QAT candidate No definition yet. The handbook uses the acronym without expanding it (Figures 28–32). The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/quantification-analytics-tool · source who-iris/library/9789240101197-eng/sections/page-061.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-Q",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-Q"
-  },"140": {
+  },"145": {
     "doc": "Glossary: dth-sc",
     "title": "R",
     "content": "Rapid Assessment and Management RAM candidate No definition yet. Expanded in Figure 6 ('Rapid assessment and management (RAM)', in the ANC clinical workflow). Note: in dth-sc RAM expands to Rapid Assessment and Management, not Responsibility Assignment Matrix as in dth-pc. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/rapid-assessment-and-management · source who-iris/library/9789240101197-eng/sections/page-017.md . RapidSMS candidate No definition yet. Named in Annex 5 (page 70) without expansion. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/rapidsms · source who-iris/library/9789240101197-eng/sections/page-070.md . Request for Information RFI candidate No definition yet. Expanded in the Figure 23 legend. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-information · source who-iris/library/9789240101197-eng/sections/page-049.md . Request for Proposal RFP candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-proposal · source who-iris/library/9789240101197-eng/sections/page-007.md . Request for Quotation RFQ candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-quotation · source who-iris/library/9789240101197-eng/sections/page-007.md . Responsible, Accountable, Consulted, and Informed RACI candidate No definition yet. Expanded in the text ('a RACI matrix – responsible, accountable, consulted, informed'). A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/raci · source who-iris/library/9789240101197-eng/sections/page-047.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-R",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-R"
-  },"141": {
+  },"146": {
     "doc": "Glossary: dth-sc",
     "title": "S",
     "content": "Sage SAGE candidate No definition yet. Named in Figure 31 (Rwanda current-state supply chain systems) without expansion. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/sage · source who-iris/library/9789240101197-eng/sections/page-064.md . Semi-Centralized Traceability Model candidate A traceability model in which the traceability data are spread across multiple databases or repositories. The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted. Candidate definitions (2) . | Traceability (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term. | Interoperability (Glossary of the Reference Architecture and Guidance for DPI-H)Interoperability is the standards-based capability of heterogeneous information systems to communicate, exchange data, and use the exchanged information to execute functions effectively. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Substantive and internal alternatives across the DTH corpus (smart-ra#133 S1, smart-ra#139, smart-ra#140, smart-ra#142): (1) PHC handbook glossary (who-iris/library/9789240093362-eng/sections/sec-002-glossary.md, p. 9), PC handbook glossary (who-iris/library/9789240116191-eng/sections/page-008.md, p. 8), and SFP handbook glossary (who-iris/library/9789240120747-eng/sections/page-010.md, p. 10): &quot;Ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner through the use of shared application interfaces, value sets, concepts and standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes.&quot; (2) SC handbook glossary (who-iris/library/9789240101197-eng/sections/page-008.md, p. 8, citing DIIG): &quot;The ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner, through the use of shared application interfaces, value sets, concepts and standards within and across organizational, regional and national boundaries. In the health context, this provides timely, safe and seamless portability of information to help ensure good health outcomes (1).&quot; (3) PHC handbook §4.4 body (who-iris/library/9789240093362-eng/sections/sec-023-44-design-system-architecture.md, §4.4, pp. 56-60): &quot;Interoperability is the ability of different applications to access, exchange, integrate and use data in a coordinated manner through the use of shared application interfaces and standards, which should be defined by the EA and independent of a particular solution’s system architecture (22).&quot; (4) PHC handbook §4.4.2 body (who-iris/library/9789240093362-eng/sections/sec-023-44-design-system-architecture.md, pp. 56-60): &quot;Interoperability is the ability of different applications to access, exchange, integrate and use data in a coordinated manner through the use of shared application interfaces and data representation standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes.&quot; All are recorded as candidates; none is chosen. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/semi-centralized-traceability-model · source who-iris/library/9789240101197-eng/sections/page-054.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/repository | . Standards-based, Machine-readable, Adaptive, Requirements-based and Testable SMART candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Candidate definitions (1) . | SMART Guidelines (Glossary of the Reference Architecture and Guidance for DPI-H)Standards-based, Machine-readable, Adaptive, Requirements-based, Testable Guidelines are a comprehensive set of reusable digital health components (e.g., interoperability standards, code libraries, algorithms, technical and operational specifications) that transform the guideline adaptation and implementation process to preserve fidelity and accelerate uptake. SMART Guidelines provide a five-step pathway to advance the adoption of best clinical and data practices, even if a country is not yet fully digital. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Substantive and wording alternatives across the DTH corpus (smart-ra#133 S1, smart-ra#139, smart-ra#140, smart-ra#142): (1) PHC handbook glossary (who-iris/library/9789240093362-eng/sections/sec-002-glossary.md, p. 11) and SFP handbook glossary (who-iris/library/9789240120747-eng/sections/page-011.md, p. 11): &quot;Standards-based, Machine-readable, Adaptive, Requirements-based, and Testable Guidelines are recommended digital capabilities, health and data content aligned with normative recommendations. They represent packages of comprehensive documentation and reusable digital health components (e.g. health content, interoperability standards, code libraries, algorithms, technical and operational specifications) that facilitate country adaptation and adoption of clinical and public health protocols, health systems strengthening recommendations, and data and interoperability standards into digital health information systems with fidelity. SMART Guidelines serve as a starting point and as foundational specifications to advance the development of robust person-centred digital systems. These specifications are software-agnostic, context-agnostic, and are applicable to all levels of digital maturity (10,23).&quot; (2) SC handbook glossary (who-iris/library/9789240101197-eng/sections/page-009.md, p. 9): &quot;The WHO guidelines for developing Standards-based, Machine-readable, Adaptive, Requirements-based and Testable components for implementing digital health capabilities. The components include interoperability standards, code libraries, algorithms, and technical and operational specifications. The SMART Guidelines provide a five-step pathway to advance the adoption of best clinical and data practices, even if a country is not yet fully digital (12, 13).&quot; (3) PC handbook glossary (who-iris/library/9789240116191-eng/sections/page-009.md, p. 9): &quot;WHO standards-based, machine-readable, adaptive, requirements-based, and testable Guidelines are recommended digital capabilities, health and data content. They represent a comprehensive set of reusable digital health components (e.g., interoperability standards, code libraries, algorithms, technical and operational specifications) that transform the guideline adaptation and implementation process to preserve fidelity and accelerate uptake. SMART Guidelines provide a five-step pathway to advance the adoption of best clinical and data practices, even if a country is not yet fully digital.11, 12&quot; All are recorded as candidates; none is chosen. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/smart · source who-iris/library/9789240101197-eng/sections/page-007.md . Supply Chain Information System Maturity Model SCISMM candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/supply-chain-information-system-maturity-model · source who-iris/library/9789240101197-eng/sections/page-007.md . Supply Chain Systems Architecture SCSA candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Malawi's national health supply chain architecture (Chapter 5, page 60). Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/supply-chain-systems-architecture · source who-iris/library/9789240101197-eng/sections/page-007.md . Sustainable Development Goal SDG candidate No definition yet. The handbook uses the acronym in Figure 5 (page 15) without expanding it. The expansion is supplied, not quoted: check it in context before adopting. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/sustainable-development-goal · source who-iris/library/9789240101197-eng/sections/page-015.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-S",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-S"
-  },"142": {
+  },"147": {
     "doc": "Glossary: dth-sc",
     "title": "T",
     "content": "Target Software Standards TSS candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/target-software-standards · source who-iris/library/9789240101197-eng/sections/page-007.md . Technical Working Group TWG candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/technical-working-group · source who-iris/library/9789240101197-eng/sections/page-007.md . The Open Group Architecture Framework TOGAF candidate No definition yet. Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/togaf · source who-iris/library/9789240101197-eng/sections/page-007.md . Total Cost of Ownership TCO candidate No definition yet. Written out in Figure 5 (page 15) and Chapter 3 (page 50), and abbreviated TCO in the folio's persona blocks. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/total-cost-of-ownership · source who-iris/library/9789240101197-eng/sections/page-015.md . Traceability candidate The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term. Candidate definitions (2) . | Application Service (Glossary of the Reference Architecture and Guidance for DPI-H)An explicitly defined unit of application behaviour. Anch application service exposes the functionality of an application component to its environment. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Wording alternative in RA Table 3.1 (library/who-dpi-h-reference-architecture-draft-v1/sections/sec-026-31-the-architecture-description-approach.md): &quot;An externally visible unit of functionality provided by one or more components, exposed through well-defined interfaces.&quot; Both are recorded as candidates; neither is chosen (smart-ra#133 S1). | Data Object (Glossary of the Reference Architecture and Guidance for DPI-H)A defined unit of structured data used or produced by an application component. The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability · source who-iris/library/9789240101197-eng/sections/page-009.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/capability | . Traceability Model candidate One of the three main models for implementing traceability (centralized, semi-centralized, distributed), which differ mostly in how they store traceability data and share them with the relevant health authority and across actors in the supply chain. Assembled from two sentences of Chapter 4 (PDF 54): 'The three main models for implementing traceability are the centralized, semi-centralized and distributed models. They differ mostly in how they store the data and share them with the relevant health authority and across actors in the supply chain.' The handbook does not state it as a definition, and recommends none of the models. Open: not adopted. Related terms (3) . | Traceability (Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture)The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term. | Repository (Glossary of the Reference Architecture and Guidance for DPI-H) | Interoperability (Glossary of the Reference Architecture and Guidance for DPI-H)Interoperability is the standards-based capability of heterogeneous information systems to communicate, exchange data, and use the exchanged information to execute functions effectively. The RA draft's own glossary wording, verbatim (folio/dpi-h-ra/glossary/t-glossary-lead-a31853.md). Substantive and internal alternatives across the DTH corpus (smart-ra#133 S1, smart-ra#139, smart-ra#140, smart-ra#142): (1) PHC handbook glossary (who-iris/library/9789240093362-eng/sections/sec-002-glossary.md, p. 9), PC handbook glossary (who-iris/library/9789240116191-eng/sections/page-008.md, p. 8), and SFP handbook glossary (who-iris/library/9789240120747-eng/sections/page-010.md, p. 10): &quot;Ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner through the use of shared application interfaces, value sets, concepts and standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes.&quot; (2) SC handbook glossary (who-iris/library/9789240101197-eng/sections/page-008.md, p. 8, citing DIIG): &quot;The ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner, through the use of shared application interfaces, value sets, concepts and standards within and across organizational, regional and national boundaries. In the health context, this provides timely, safe and seamless portability of information to help ensure good health outcomes (1).&quot; (3) PHC handbook §4.4 body (who-iris/library/9789240093362-eng/sections/sec-023-44-design-system-architecture.md, §4.4, pp. 56-60): &quot;Interoperability is the ability of different applications to access, exchange, integrate and use data in a coordinated manner through the use of shared application interfaces and standards, which should be defined by the EA and independent of a particular solution’s system architecture (22).&quot; (4) PHC handbook §4.4.2 body (who-iris/library/9789240093362-eng/sections/sec-023-44-design-system-architecture.md, pp. 56-60): &quot;Interoperability is the ability of different applications to access, exchange, integrate and use data in a coordinated manner through the use of shared application interfaces and data representation standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes.&quot; All are recorded as candidates; none is chosen. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability-model · source who-iris/library/9789240101197-eng/sections/page-054.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/solution-architecture | . Transportation Management System TMS candidate No definition yet. Named as a health supply chain information system category in Figure 14 (page 34) and abbreviated TMS in the folio's business process blocks. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/transportation-management-system · source who-iris/library/9789240101197-eng/sections/page-034.md . Depicted in ArchiMate dpi-h-ra 0.3.0-draft.1: Transportation Management System (ApplicationComponent); views: Components draft, Components, DHSC Architecture Framework (DTH SC Fig. 14), Track and Trace through DHSC Components (DTH SC Fig. 24) . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-T",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-T"
-  },"143": {
+  },"148": {
     "doc": "Glossary: dth-sc",
     "title": "U",
     "content": "USAID Global Health Supply Chain Program–Procurement and Supply Management GHSC-PSM candidate No definition yet. Named in the handbook's acknowledgements (page 6) and abbreviations table (page 7). A candidate: no definition has been written. A USAID programme. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/usaid-ghsc-psm · source who-iris/library/9789240101197-eng/sections/page-007.md . User Acceptance Testing UAT candidate No definition yet. Written out in Annex 7 (page 75) and abbreviated UAT in the folio's business process blocks. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/user-acceptance-testing · source who-iris/library/9789240101197-eng/sections/page-075.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-U",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-U"
-  },"144": {
+  },"149": {
     "doc": "Glossary: dth-sc",
     "title": "V",
     "content": "VITAS candidate No definition yet. Named in Figures 26 and 27 (Ethiopia warehouse and inventory management system) without expansion. A candidate: no definition has been written. Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/vitas · source who-iris/library/9789240101197-eng/sections/page-059.md . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-V",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-V"
-  },"145": {
+  },"150": {
     "doc": "Glossary: dth-sc",
     "title": "W",
     "content": "Warehouse Management System WMS candidate A computer application that manages and optimizes workflows and the storage of goods within a warehouse. It often interfaces with automated data capture and enterprise resource planning systems. Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook cites its reference 11 for this definition. Candidate definitions (1) . | Functional Application (Glossary of the Reference Architecture and Guidance for DPI-H)Functional applications are application components that deliver a specific operational function within a defined domain. They are context-specific, reflecting the operational requirements of a programme, scheme, or institution that procures them. The RA draft's own wording, verbatim. A candidate until the RA editors adopt it through the public review. | . Term page · Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture · https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/warehouse-management-system · source who-iris/library/9789240101197-eng/sections/page-009.md . | broadMatch: litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/application-component | . Depicted in ArchiMate dpi-h-ra 0.3.0-draft.1: Warehouse Management System (ApplicationComponent); views: Components draft, Components, DHSC Architecture Framework (DTH SC Fig. 14), Track and Trace through DHSC Components (DTH SC Fig. 24) . ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/#letter-W",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/#letter-W"
-  },"146": {
+  },"151": {
     "doc": "Glossary: dth-sc",
     "title": "Glossary: dth-sc",
     "content": " ",
     "url": "/dth-sc/en/folio-assistant-core/glossary/instance/dth-sc/",
     
     "relUrl": "/en/folio-assistant-core/glossary/instance/dth-sc/"
-  },"147": {
+  },"152": {
     "doc": "Documents",
     "title": "Documents",
     "content": "What changed from main . | Digital Transformation Handbook for Health Supply Chain Architecture - seeded from L1; structured tables (SC1b), 16 personas, 3 BPMN 2.0 business processes, 2 DMN 1.3 decision tables, and links to dth-sc / dpi-h-ra glossaries and dpi-h-ra ArchiMate 0.3.0-draft.1 views and elements (SC1b, SC2b, SC4, dth-sc#2) · structured assets · download Word (.docx) or PDF | . ",
     "url": "/dth-sc/",
     
     "relUrl": "/"
-  },"148": {
+  },"153": {
     "doc": "Documents",
     "title": "Documents",
     "content": " ",
     "url": "/dth-sc/",
     
     "relUrl": "/"
-  },"149": {
+  },"154": {
     "doc": "Task panel links: QA",
     "title": "Task panel links: QA",
     "content": "Every name an ⓘ task panel shows as plain text, with the tooltip “no page for this one”, because nothing it could link to was found: no instruction page or source file for a skill, no page for a role, methodology, lane or step. Every name in every panel links to a page. ",
     "url": "/dth-sc/en/cat-harness/processes/panel-links-qa.html#task-panel-links-qa",
     
     "relUrl": "/en/cat-harness/processes/panel-links-qa.html#task-panel-links-qa"
-  },"150": {
+  },"155": {
     "doc": "Task panel links: QA",
     "title": "Task panel links: QA",
     "content": "Generated by gen-processes-viz.ts from the ⓘ task panels’ data — do not edit here. All processes . ",

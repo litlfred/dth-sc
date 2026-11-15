@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../assets/translation-status/index.json"
+  "statusSrc":"../../assets/translation-status/index.json",
+  "reviewSrc":"../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/dth-sc/","jsonld":"https://litlfred.github.io/folio-assistant/dth-sc/dth-sc.jsonld","source":"https://github.com/litlfred/dth-sc"}</script><meta name="fa-site-index-src" content="../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../todos.jsonld"><meta name="fa-zoom-src" content="../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content=""><meta name="fa-search-exclude" content="true">
 
-<meta name="fa-beans-src" content="../../assets/beans/index.json"><meta name="fa-processes-src" content="../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../build.json"><link rel="stylesheet" href="../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../assets/js/harness-data.js" defer></script>
-<script src="../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../assets/js/kg-render.js" defer></script><script src="../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../assets/js/work-plan.js" defer></script><script src="../../assets/js/process-index.js" defer></script><style>
+<meta name="fa-beans-src" content="../../assets/beans/index.json"><meta name="fa-processes-src" content="../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../build.json"><link rel="stylesheet" href="../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["archimate","beans","folio","glossary","references","todos","uploads"]</script><script src="../../assets/js/harness-data.js" defer></script><script src="../../assets/js/kg-render.js" defer></script><script src="../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -4287,6 +4286,11 @@ open standards Standards that are documented and made freely available to the pu
     // A standalone page (an IG's thin layout) has no .main-content-wrap to
     // pad, so its column leaves the same gutter itself.
     "html.fa-bp .fa-page-main.main-content:has(>.fa-sec-actions){margin-right:2.5rem}}" +
+    // Below 50rem there is no gutter, so a section's box sits in the text
+    // column under its heading. Owner, 2026-11-13 ("phone first"): there it is
+    // ONE row, right-aligned, not the gutter's column, which left two icon
+    // heights of empty space under every heading on a phone.
+    "@media (max-width:49.99rem){html.fa-bp .main-content .fa-sec-actions{flex-direction:row;justify-content:flex-end;align-items:center;gap:8px}}" +
     // A section's QA / TR chips, under its 📣 and 🔖 in the gutter; pressed,
     // they open the section's panel, where each badge says what it found.
     "html.fa-bp .main-content .fa-sec-actions>.fa-sec-qa{order:9;margin:0;display:flex;flex-direction:column;align-items:center;gap:2px}" +
@@ -4554,11 +4558,21 @@ open standards Standards that are documented and made freely available to the pu
     if (!d) return null;
     try { const m = JSON.parse(d.textContent); return m && m.blob ? m : null; } catch { return null; }
   };
+  // A docs page says the same of ITSELF in <script id="fa-page-source">,
+  // written by head_custom.html from compose-docs' _data/page_sources.json
+  // (owner, 2026-11-13). Only the headings its own Markdown writes are listed,
+  // so a section an include draws keeps its 📣 alone: "own-text sections only".
+  const pageLines = () => {
+    const d = document.getElementById("fa-page-source");
+    if (!d) return null;
+    try { const m = JSON.parse(d.textContent); return m && m.blob ? m : null; } catch { return null; }
+  };
   const norm = (s) => String(s).toLowerCase().replace(/&[a-z]+;/g, " ").replace(/[^a-z0-9]+/g, " ").trim();
   const sectionBoxes = () => {
     const main = document.querySelector(".main-content");
     if (!main || main.querySelector(".fa-doc, .block-actions")) return;
     const ig = igLines();
+    const own = ig ? null : pageLines();
     const ghRepo = ig ? (/^https:\/\/github\.com\/([^/]+\/[^/]+)/.exec(ig.blob) || [])[1] || "" : "";
     const site = ig ? (ig.repo || ghRepo) : siteRepo();
     const used = {};
@@ -4592,18 +4606,20 @@ open standards Standards that are documented and made freely available to the pu
         if (qa) box.append(el("p", { className: "fa-sec-qa" }, [qa]));
         nx.remove();
       }
-      if (ig) {
+      const lm = ig || (from ? null : own);
+      if (lm) {
         const k = norm(sec);
-        const lines = Array.isArray(ig.lines) ? ig.lines : [];
+        const lines = Array.isArray(lm.lines) ? lm.lines : [];
         for (let i = 0; i < lines.length; i++) if (!used[i] && norm(lines[i].t) === k) {
           used[i] = 1;
-          src = (lines[i].b || ig.blob) + "#L" + lines[i].l;
+          src = (lines[i].b || lm.blob) + "#L" + lines[i].l;
           break;
         }
         if (src) {
           const e = el("a", { className: "ba-edit", href: src, textContent: "\u270e edit", title: "Edit this section's source on GitHub" });
           e.dataset.faLink = "edit";
           box.append(e);
+          if (!ig) addSuggest(box);
         }
       }
       const repo = (from && from.dataset.repo) || site;

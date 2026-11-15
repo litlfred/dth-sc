@@ -210,9 +210,21 @@
     &quot;id&quot;: &quot;fhir-harness-processes&quot;,
     &quot;path&quot;: &quot;processes/&quot;,
     &quot;dependents&quot;: &quot;skip&quot;,
-    &quot;description&quot;: &quot;The BPMN this layer OWNS, grouped by concern as the harness groups its own (`processes/&lt;group&gt;/`): in `content/`, the FHIR IG pipeline (`l3-fhir-pipeline.bpmn`), its incremental build (`ig-incremental-build.bpmn`), the IG AST cache and delta review (`ig-ast-cache.bpmn`, `ig-ast-delta-review.bpmn`), the IG release, its owner&#39;s tag and its catch-up (`ig-release.bpmn`) and the Questionnaire wireframe review (`questionnaire-wireframe-review.bpmn`), beside the IG skills they bind.&quot;,
+    &quot;description&quot;: &quot;The BPMN this layer OWNS, grouped by concern as the harness groups its own (`processes/&lt;group&gt;/`): in `content/`, the IG AST cache (`ig-ast-cache.bpmn`), the IG release, its owner&#39;s tag and its catch-up (`ig-release.bpmn`) and the Questionnaire wireframe review (`questionnaire-wireframe-review.bpmn`), beside the IG skills they bind. The FHIR IG pipeline, its incremental build and the IG AST delta review keep the work plan, so they are in the opt-in `collab/` (owner, 2026-11-13).&quot;,
     &quot;graphTypologies&quot;: [
       &quot;processes&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;collab&quot;,
+    &quot;path&quot;: &quot;collab/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;requires&quot;: [
+      &quot;cat-harness.sdlc&quot;
+    ],
+    &quot;description&quot;: &quot;The collaborative-development sub-graph — a NAMED SUB-GRAPH of this layer, OPT-IN: off in every layer, this one included, unless that layer lists `fhir-harness.collab` in its own `enableSubgraphs` (owner, 2026-11-13, check:optin-refs follow-up). It holds the FHIR IG processes that keep the work plan — the L3 pipeline (`l3-fhir-pipeline.bpmn`), the incremental build (`ig-incremental-build.bpmn`) and the IG AST delta review (`ig-ast-delta-review.bpmn`), each of which names `todo-manager`. It `requires` `cat-harness.sdlc`, which requires `cat-harness.work-plan`, so switching it on switches both on. The graph inside it is declared FROM WITHIN, in `collab/graph.json`.&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
     ]
   },
   {
@@ -273,6 +285,15 @@
     ]
   },
   {
+    &quot;id&quot;: &quot;fhir-core-definitions&quot;,
+    &quot;path&quot;: &quot;fhir-core/&quot;,
+    &quot;title&quot;: &quot;FHIR core definitions&quot;,
+    &quot;description&quot;: &quot;The FHIR core specification&#39;s StructureDefinitions for each STABLE release, one graph per release keyed by canonical URL (http://hl7.org/fhir/StructureDefinition/&lt;id&gt;): R4 from `hl7.fhir.r4.core#4.0.1`, R4B from `hl7.fhir.r4b.core#4.3.0`, R5 from `hl7.fhir.r5.core#5.0.0`, each pinned in `pins.json` by its packages.fhir.org URL, sha1 and sha512. `&lt;release&gt;/manifest.json` lists every resource, complex and primitive type and root type (Base in R5; Element, BackboneElement, DomainResource, Resource) with its kind, base and the sha256 of its bytes; constraint profiles, extension definitions and logical models are left out and counted. The bodies are the package&#39;s own files, written beside the manifest by `fhir-core.ts materialise` and not committed (12 MB); `fhir-core.ts check` holds them to the manifests and `resolve` answers which file a canonical is kept in. A release whose package could not be read is `unread` with the reason, never an empty graph (owner, 2026-11-14).&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;fhir-core-definitions&quot;
+    ]
+  },
+  {
     &quot;id&quot;: &quot;glossary&quot;,
     &quot;path&quot;: &quot;glossary/&quot;,
     &quot;description&quot;: &quot;FHIR Harness&#39;s generated glossary (`glossary/generated/fhir-harness/`): candidate `folio-glossary/v1` schemes extracted from this layer&#39;s tools, skills, BPMN activities and schema fields by core&#39;s `glossary:page`. A scheme is keyed by (instance, scheme), and each layer holds its own glossary.&quot;,
@@ -307,6 +328,9 @@
 <dt>_needs_comment</dt><dd>It sits directly on core. NOT on cat-harness: the harness layer is inherited through core rather than declared twice, in the same shape folio-assistant-core uses. Owner&#39;s ordering, 2026-09-20: bootstrap, cat-harness, f-a-core, then the layers above.</dd>
 <dt>needs</dt><dd><pre>[
   &quot;folio-assistant-core&quot;
+]</pre></dd>
+<dt>enableSubgraphs</dt><dd><pre>[
+  &quot;fhir-harness.collab&quot;
 ]</pre></dd>
 <dt>liquid</dt><dd><pre>{
   &quot;prefix&quot;: &quot;site.data&quot;,

@@ -35,11 +35,11 @@
       "links": [
         {
           "label": "Content",
-          "href": "/docs/cat-harness/concepts/content-types.html"
+          "href": "https://litlfred.github.io/folio-assistant/docs/cat-harness/concepts/content-types.html"
         },
         {
           "label": "Skills",
-          "href": "/docs/cat-harness/concepts/skills.html"
+          "href": "https://litlfred.github.io/folio-assistant/docs/cat-harness/concepts/skills.html"
         },
         {
           "label": "Processes",
@@ -47,7 +47,7 @@
         },
         {
           "label": "Tools",
-          "href": "/docs/cat-harness/concepts/architecture.html"
+          "href": "https://litlfred.github.io/folio-assistant/docs/cat-harness/concepts/architecture.html"
         },
         {
           "label": "Acquisition",

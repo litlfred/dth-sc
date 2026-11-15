@@ -284,7 +284,7 @@
   {
     &quot;id&quot;: &quot;core-pipeline-plugins&quot;,
     &quot;path&quot;: &quot;pipeline-plugins/&quot;,
-    &quot;description&quot;: &quot;The generic pipeline slots this layer fills, one `folio-pipeline-plugin/v1` node per slot, naming `PIPELINE_IMPLEMENTATIONS` in `pipeline/plugin-slots.ts`, registered for a folio through its dependency tree by `loadContributions`. One: `tabular-csvw`, through which cat-harness-tools&#39; `ingest-document.ts` reaches this layer&#39;s CSVW extractors (`scripts/tabular-csv.ts`, `scripts/tabular-xlsx.ts`) without naming this layer.&quot;,
+    &quot;description&quot;: &quot;The generic pipeline slots this layer fills, one `folio-pipeline-plugin/v1` node per slot, naming `PIPELINE_IMPLEMENTATIONS` in `pipeline/plugin-slots.ts`, registered for a folio through its dependency tree by `loadContributions`. Two: `tabular-csvw`, through which cat-harness-tools&#39; `ingest-document.ts` reaches this layer&#39;s CSVW extractors (`scripts/tabular-csv.ts`, `scripts/tabular-xlsx.ts`) without naming this layer, and `library-entry-arms`, through which it runs this layer&#39;s reference-list and glossary readers (`scripts/references-extract.ts`, `scripts/glossary-from-source.ts`) over each promoted library entry and records each one&#39;s step in the entry&#39;s `extraction.json`.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;pipeline-plugins&quot;
     ]
@@ -295,7 +295,7 @@
     &quot;graphTypologies&quot;: [
       &quot;code&quot;
     ],
-    &quot;description&quot;: &quot;`pipeline/qa-checkers-recommendation.ts` and `pipeline/qa-checkers-acronyms.ts`, the automated checkers `qa-checkers/recommendation-strength-resolves.json` and `qa-checkers/acronym-in-glossary.json` name (`RECOMMENDATION_CHECKERS`, `ACRONYM_CHECKERS`), and `pipeline/plugin-slots.ts`, the table `pipeline-plugins/tabular-csvw.json` names (`PIPELINE_IMPLEMENTATIONS`). Under `pipeline/` because that is where the harness&#39;s `imports` input-site looks for a contributed checker, as for every layer.&quot;
+    &quot;description&quot;: &quot;`pipeline/qa-checkers-recommendation.ts` and `pipeline/qa-checkers-acronyms.ts`, the automated checkers `qa-checkers/recommendation-strength-resolves.json` and `qa-checkers/acronym-in-glossary.json` name (`RECOMMENDATION_CHECKERS`, `ACRONYM_CHECKERS`), and `pipeline/plugin-slots.ts`, the table `pipeline-plugins/tabular-csvw.json` and `pipeline-plugins/library-entry-arms.json` name (`PIPELINE_IMPLEMENTATIONS`). Under `pipeline/` because that is where the harness&#39;s `imports` input-site looks for a contributed checker, as for every layer.&quot;
   },
   {
     &quot;id&quot;: &quot;folio-assistant-core-typologies&quot;,
@@ -410,7 +410,22 @@
     &quot;id&quot;: &quot;dsa&quot;,
     &quot;path&quot;: &quot;dsa/&quot;,
     &quot;optIn&quot;: true,
-    &quot;description&quot;: &quot;The Data Sharing Agreement sub-graph — a NAMED SUB-GRAPH of this layer on the pattern of cat-harness&#39;s `work-plan/`, and OPT-IN: off in every layer, this one included, unless that layer lists `folio-assistant-core.dsa` in its own `enableSubgraphs` (owner, 2026-11-10, card Q-SG-1 C, wave 1). It holds the four DSA skills and the DSA document life cycle; the graphs inside it are declared FROM WITHIN, in `dsa/graph.json`. The `dsa` typology and `check:dsa-hash` stay outside it.&quot;,
+    &quot;requires&quot;: [
+      &quot;cat-harness.sdlc&quot;
+    ],
+    &quot;description&quot;: &quot;The Data Sharing Agreement sub-graph — a NAMED SUB-GRAPH of this layer on the pattern of cat-harness&#39;s `work-plan/`, and OPT-IN: off in every layer, this one included, unless that layer lists `folio-assistant-core.dsa` in its own `enableSubgraphs` (owner, 2026-11-10, card Q-SG-1 C, wave 1). It holds the four DSA skills and the DSA document life cycle; the graphs inside it are declared FROM WITHIN, in `dsa/graph.json`. The `dsa` typology, `check:dsa-hash` and the `dsa-checksum` skill it satisfies stay outside it. It `requires` `cat-harness.sdlc` (and so the work plan): its life cycle opens and closes a bean and cuts a release (owner, 2026-11-13).&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;cat-harness&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;collab&quot;,
+    &quot;path&quot;: &quot;collab/&quot;,
+    &quot;optIn&quot;: true,
+    &quot;requires&quot;: [
+      &quot;cat-harness.sdlc&quot;
+    ],
+    &quot;description&quot;: &quot;The collaborative-development sub-graph — a NAMED SUB-GRAPH of this layer on the pattern of `dsa/`, and OPT-IN: off in every layer, this one included, unless that layer lists `folio-assistant-core.collab` in its own `enableSubgraphs` (owner, 2026-11-13, check:optin-refs follow-up). It holds the content processes that run on the work plan and the delivery process — they claim and close a bean (cat-harness&#39;s `Process_BeanOpen` / `Process_BeanClose`), seed the work plan, or stage, preview and merge a change — with the processes that call them: getting started, document authoring, the content life cycle, editing and evidence retrieval, the content change review, guideline updates, public comment and L1 document ingestion, their decision tables, and the `folio-block-screenshots` Tool. It `requires` `cat-harness.sdlc`, which requires `cat-harness.work-plan`, so switching it on switches both on. The graphs inside it are declared FROM WITHIN, in `collab/graph.json`.&quot;,
     &quot;graphTypologies&quot;: [
       &quot;cat-harness&quot;
     ]
@@ -665,7 +680,8 @@
   &quot;folio-assistant-core.library&quot;,
   &quot;folio-assistant-core.dsa&quot;,
   &quot;folio-assistant-core.board&quot;,
-  &quot;folio-assistant-core.library-extras&quot;
+  &quot;folio-assistant-core.library-extras&quot;,
+  &quot;folio-assistant-core.collab&quot;
 ]</pre></dd>
 </dl>
 </main>

@@ -1986,8 +1986,8 @@
         },
         {
           "path": "dth-sc/l1-coverage.json",
-          "bytes": 45292,
-          "size": "44.2 KB"
+          "bytes": 40783,
+          "size": "39.8 KB"
         },
         {
           "path": "dth-sc/l1-coverage.quotes.json",
@@ -2246,23 +2246,23 @@
         },
         {
           "label": "RTFM — the cat-harness docs",
-          "href": "/docs/cat-harness/concepts/agentic-harness.html"
+          "href": "https://litlfred.github.io/folio-assistant/docs/cat-harness/concepts/agentic-harness.html"
         },
         {
           "label": "The work plan is where you say what you are doing",
-          "href": "/docs/cat-harness/guides/beans-and-todos.html"
+          "href": "https://litlfred.github.io/folio-assistant/docs/cat-harness/guides/beans-and-todos.html"
         },
         {
           "label": "Make your first folio",
-          "href": "/docs/cat-harness/start/getting-started.html"
+          "href": "https://litlfred.github.io/folio-assistant/docs/cat-harness/start/getting-started.html"
         },
         {
           "label": "Know which kind of thing you are writing",
-          "href": "/docs/cat-harness/concepts/content-types.html"
+          "href": "https://litlfred.github.io/folio-assistant/docs/cat-harness/concepts/content-types.html"
         },
         {
           "label": "The documentation you will never read",
-          "href": "/docs/cat-harness/guides/index.html"
+          "href": "https://litlfred.github.io/folio-assistant/docs/cat-harness/guides/index.html"
         }
       ],
       "chars": 431,
