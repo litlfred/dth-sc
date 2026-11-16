@@ -211,7 +211,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "8dbf8023d8563ea023be0d8c153f7a0d39e888c0",
+          "ref": "14c90e1fe3a73b423ac57e16a91e349473f41beb",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -224,8 +224,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-16",
-              "ref": "8dbf8023d8563ea023be0d8c153f7a0d39e888c0",
-              "evidence": "litlfred 2026-11-16: merge-and-repin window to 23:17Z (owner 17:17Z in session session_01EucfRnjwjC8CPYgVnsFuHS, 'merge window 6 hrs'); re-pin cascade wave 3 catch-up"
+              "ref": "14c90e1fe3a73b423ac57e16a91e349473f41beb",
+              "evidence": "litlfred 2026-11-16: merge-and-repin window to 23:17Z (owner 17:17Z in session session_01EucfRnjwjC8CPYgVnsFuHS, 'merge window 6 hrs'); cat-harness-tools >=14c90e1 (cat-harness-tools#2377) re-pin requested by coordinator session_01EucfRma19tJrg21PkQeXaF"
             },
             "standing": {
               "follows": "main",
