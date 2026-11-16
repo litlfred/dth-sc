@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://litlfred.github.io/dth-sc/en/cat-harness/harness/dpi-h-ra/",
+  "url": "https://litlfred.github.io/dth-sc/en/cat-harness/harness/dpi-h-ra/",
+  "@type": "WebPage",
+  "name": "Reference Architecture and Guidance for Digital Public Infrastructure for the Health Sector on Digital Transformation Handbook for Health Supply Chain Architecture",
+  "about": {
+    "@id": "https://litlfred.github.io/smart-ra/",
+    "@type": "SoftwareSourceCode",
+    "identifier": "dpi-h-ra",
+    "name": "Reference Architecture and Guidance for Digital Public Infrastructure for the Health Sector",
+    "description": "The DPI-H Reference Architecture guidance (WHO/ITU), an L1 document: the draft for public comment as an editable document folio, its frozen review version in the library, and the public-comment adjudication record.",
+    "version": "0.1.0",
+    "codeRepository": "https://github.com/litlfred/smart-ra",
+    "isBasedOn": [
+      {
+        "@id": "https://litlfred.github.io/smart-base/"
+      }
+    ],
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "name": "pinnedCommit",
+      "value": "4ff3621433dae8e6a44f303c043845f52d3f7fe8"
+    }
+  },
+  "isPartOf": {
+    "@id": "https://litlfred.github.io/dth-sc/",
+    "name": "Digital Transformation Handbook for Health Supply Chain Architecture"
+  },
+  "significantLink": [
+    "https://litlfred.github.io/folio-assistant/#harness-dpi-h-ra",
+    "https://github.com/litlfred/smart-ra/tree/4ff3621433dae8e6a44f303c043845f52d3f7fe8",
+    "https://github.com/litlfred/smart-ra/blob/4ff3621433dae8e6a44f303c043845f52d3f7fe8/README.md",
+    "https://github.com/litlfred/smart-ra/blob/4ff3621433dae8e6a44f303c043845f52d3f7fe8/AGENTS.md"
+  ]
+}

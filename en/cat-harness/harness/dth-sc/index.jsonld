@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://litlfred.github.io/dth-sc/en/cat-harness/harness/dth-sc/",
+  "url": "https://litlfred.github.io/dth-sc/en/cat-harness/harness/dth-sc/",
+  "@type": "WebPage",
+  "name": "Digital Transformation Handbook for Health Supply Chain Architecture on Digital Transformation Handbook for Health Supply Chain Architecture",
+  "about": {
+    "@id": "https://litlfred.github.io/dth-sc/",
+    "@type": "SoftwareSourceCode",
+    "identifier": "dth-sc",
+    "name": "Digital Transformation Handbook for Health Supply Chain Architecture",
+    "description": "WHO Digital transformation handbook for health supply chain architecture (ISBN 9789240101197), as an L2 DTH on smart-ra: the working document folio seeded from its L1 entry in who-iris, and its supply chain glossary linked to the smart-ra glossary and ArchiMate model. dth-pc and dth-sfp depend on it.",
+    "version": "0.1.0",
+    "isBasedOn": [
+      {
+        "@id": "https://litlfred.github.io/smart-base/"
+      },
+      {
+        "@id": "https://litlfred.github.io/smart-ra/"
+      }
+    ]
+  },
+  "isPartOf": {
+    "@id": "https://litlfred.github.io/dth-sc/",
+    "name": "Digital Transformation Handbook for Health Supply Chain Architecture"
+  },
+  "significantLink": []
+}
