@@ -18,6 +18,9 @@
     "check:review-anchors": "bun run folio-assistant-core/scripts/review-anchors-from-folio.ts --document dth-sc --library 9789240101197-eng --source who-iris/uploads/9789240101197-eng/9789240101197-eng.pdf --source-label \"the WHO handbook (2024, ISBN 9789240101197) it was seeded from\" --check",
     "l1:coverage:write": "bun run folio-assistant-core/scripts/folio-l1-coverage.ts --document dth-sc --l1 who-iris/library/9789240101197-eng",
     "check:page-furniture": "bun run scripts/folio/check_page_furniture.ts",
+    "figures:as-drawn": "python3 -I scripts/figures/pdf_as_drawn.py && bun run scripts/figures/as-drawn-svg.ts",
+    "check:as-drawn": "bun run scripts/figures/as-drawn-svg.ts --check",
+    "check:figure-coverage": "bun run folio-assistant-core/scripts/figure-coverage.ts --entry who-iris/library/9789240101197-eng --folio folio/dth-sc --exclusions folio/dth-sc/figure-coverage.exclusions.json",
     "site:export": "sh -c 'bun run folio-assistant-core/scripts/document-export.ts release --document dth-sc --out \"$0/en/dth-sc/export\"'",
     "export:release": "bun run folio-assistant-core/scripts/document-export.ts release --document dth-sc --out build/export"
   },
