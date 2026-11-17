@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    {
+      "@base": "https://litlfred.github.io/folio/",
+      "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns/"
+    }
+  ],
+  "@id": "papers/dth-sc/blocks/fig-cover",
+  "@type": [
+    "folio-assistant-core:Figure",
+    "doco:Figure"
+  ],
+  "label": "fig:cover",
+  "kind": "figure",
+  "text": "f-front-cover.md",
+  "meta": {
+    "title": "Cover",
+    "source": {
+      "library": "9789240101197-eng",
+      "file": "who-iris/library/9789240101197-eng/cover.png",
+      "page": 1,
+      "method": "cited",
+      "generator": "scripts/figures/cover.py",
+      "citation": "Digital transformation handbook for health supply chain architecture. Geneva: World Health Organization; 2024 (SMART Guidelines collection). ISBN 978-92-4-010119-7. Licence: CC BY-NC-SA 3.0 IGO.",
+      "decision": "owner card 2026-11-17 (covers for the dth-* folios, B): the original cover, unchanged and cited, as in dth-phc#62"
+    }
+  },
+  "provenance": "authored"
+}

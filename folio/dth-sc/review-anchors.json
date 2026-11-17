@@ -74,6 +74,11 @@
  ],
  "sections": [
   {
+   "label": "sec:front-cover",
+   "title": "Cover",
+   "chapter": "front-matter"
+  },
+  {
    "label": "sec:front-acknowledgements",
    "title": "Acknowledgements",
    "chapter": "front-matter"
@@ -280,6 +285,19 @@
   }
  ],
  "blocks": [
+  {
+   "label": "fig:cover",
+   "kind": "figure",
+   "chapter": "front-matter",
+   "root": "f-front-cover",
+   "sections": [
+    "sec:front-cover"
+   ],
+   "caption": "Cover of the WHO publication this folio transcribes: Digital transformation handbook for health supply chain architecture. Geneva: World Health Organization; 2024. ISBN 978-92-4-010119-7",
+   "hash": "c6dacdf5df6b",
+   "excerpt": "Cover of the original publication: Digital transformation handbook for health supply chain architecture . Geneva: World Health Organization; 2024 (SMART Guideli",
+   "method": "folio-snapshot"
+  },
   {
    "label": "prose:front-page-006",
    "kind": "prose",
