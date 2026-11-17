@@ -20,7 +20,22 @@
       "library": "9789240101197-eng",
       "file": "who-iris/library/9789240101197-eng/figures/vfig-p029.png",
       "page": 29,
-      "method": "l1-vector-figure"
+      "method": "generated",
+      "section": {
+        "id": "sec-012-what-are-the-risks-of-forgoing-a-dhsc-architectu",
+        "title": "What are the risks of forgoing a DHSC architecture?",
+        "file": "who-iris/library/9789240101197-eng/sections/sec-012-what-are-the-risks-of-forgoing-a-dhsc-architectu.md"
+      },
+      "generated": {
+        "tool": "as-drawn-svg",
+        "data": "figure-data/as-drawn/fig-11.json",
+        "schema": "as-drawn-figure/v1 (folio-assistant-core schemas/figure-data.ts)",
+        "extractor": "folio-assistant-core/scripts/pdf-as-drawn.py",
+        "generator": "folio-assistant-core/scripts/as-drawn-svg.ts",
+        "basis": "transcribed from the source PDF's vector layer: every path, text run and image in the L1 figure region, at its printed position, colour and size",
+        "output": "as-drawn-fig-11.svg",
+        "evidence": "media/vfig-p029.png"
+      }
     },
     "glossary": [
       {

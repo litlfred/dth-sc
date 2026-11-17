@@ -22,13 +22,29 @@
       "page": 34,
       "method": "generated",
       "generated": {
+        "tool": "as-drawn-svg",
+        "data": "figure-data/as-drawn/fig-14.json",
+        "schema": "as-drawn-figure/v1 (folio-assistant-core schemas/figure-data.ts)",
+        "extractor": "folio-assistant-core/scripts/pdf-as-drawn.py",
+        "generator": "folio-assistant-core/scripts/as-drawn-svg.ts",
+        "basis": "transcribed from the source PDF's vector layer: every path, text run and image in the L1 figure region, at its printed position, colour and size",
+        "output": "as-drawn-fig-14.svg",
+        "evidence": "media/vfig-p034.png"
+      },
+      "section": {
+        "id": "sec-015-step-2-define-a-target-dhsc-architecture",
+        "title": "Step 2. Define a target DHSC architecture",
+        "file": "who-iris/library/9789240101197-eng/sections/sec-015-step-2-define-a-target-dhsc-architecture.md"
+      },
+      "archimateView": {
+        "method": "archimate-view",
+        "svg": "media/archimate-fig-14.svg",
         "tool": "render-view (cat-harness-tools/archimate/scripts/render-view.ts)",
         "script": "scripts/archimate/render_figures.ts",
         "model": "dpi-h-ra/archimate/0.3.0-draft.1/WHOBaseFile.archimate (litlfred/smart-ra)",
         "view": "id-92267636cc42566ca5d2cff0e81be8c9",
         "viewName": "DHSC Architecture Framework (DTH SC Fig. 14)",
-        "output": "archimate-fig-14.svg",
-        "evidence": "media/vfig-p034.png"
+        "output": "archimate-fig-14.svg"
       }
     },
     "glossary": [

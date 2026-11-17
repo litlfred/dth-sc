@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 543.75 404.97" width="543.75" height="404.97" role="img" aria-labelledby="t">
+<title id="t">Fig 22. Building blocks of digital health and DHSC implementation</title>
+<desc>Redrawn as drawn from 9789240101197-eng, PDF page 45 (vfig-p045), by folio-assistant-core scripts/as-drawn-svg.ts from its as-drawn-figure/v1 data.</desc>
+<g fill="none" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M15.33 9.46C10.77 9.46 7.07 13.16 7.07 17.71L7.07 236.27L506.85 236.27C511.41 236.27 515.1 232.57 515.1 228.02L515.1 17.71C515.1 13.16 511.41 9.46 506.85 9.46Z" fill="#E9E9E9"/>
+<path d="M0 235.87L0 14.4C0 9.7 3.81 5.9 8.51 5.9L514.7 5.9" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M522.47 18.76L522.47 230.2" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.4 1.6" stroke-linecap="round"/>
+<path d="M522.03 234.63C521.26 236.66 519.54 238.22 517.42 238.79" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.19 1.39" stroke-linecap="round"/>
+<path d="M512.86 239.02L9.63 239.02" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.4 1.6" stroke-linecap="round"/>
+<path d="M522.47 15.96L522.47 17.16M522.47 231L522.47 232.2C522.47 232.57 522.44 232.94 522.39 233.29M516.74 238.94C516.39 238.99 516.03 239.02 515.66 239.02L514.45 239.02M8.84 239.02L7.63 239.02" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M528.64 27.38C522.75 32.67 513.68 32.19 508.39 26.29C503.1 20.4 503.59 11.34 509.48 6.05C515.37 0.76 524.44 1.24 529.73 7.14C535.02 13.03 534.53 22.09 528.64 27.38" fill="#FFFFFF"/>
+<path d="M528.64 27.38C522.75 32.67 513.68 32.19 508.39 26.29C503.1 20.4 503.59 11.34 509.48 6.05C515.37 0.76 524.44 1.24 529.73 7.14C535.02 13.03 534.53 22.09 528.64 27.38Z" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M15.37 56.57L497.46 56.57L497.46 92.15L15.37 92.15ZM15.37 92.15L117.42 92.15L117.42 214.37L15.37 214.37ZM117.42 92.15L293.36 92.15L293.36 132.89L117.42 132.89ZM293.36 92.15L395.41 92.15L395.41 214.37L293.36 214.37ZM395.41 92.15L497.46 92.15L497.46 214.37L395.41 214.37ZM117.42 132.89L293.36 132.89L293.36 173.63L117.42 173.63ZM117.42 173.63L293.36 173.63L293.36 214.37L117.42 214.37Z" fill="#A4138C"/>
+<path d="M497.46 92.15L497.46 57.57" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M14.37 214.37L117.42 214.37" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M293.36 214.37L395.41 214.37" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M395.41 214.37L498.46 214.37" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M15.37 132.89L15.37 92.15" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M15.37 173.63L15.37 132.89" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M15.37 213.37L15.37 173.63" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M117.42 131.89L117.42 92.65" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M293.36 131.89L293.36 92.65" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M395.41 132.89L395.41 92.65" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M497.46 132.89L497.46 92.15" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M395.41 173.63L395.41 132.89" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M497.46 173.63L497.46 132.89" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M395.41 213.37L395.41 173.63" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M497.46 213.37L497.46 173.63" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M116.42 132.89L294.36 132.89" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M117.42 172.63L117.42 133.89" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M293.36 172.63L293.36 133.89" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M116.42 173.63L294.36 173.63" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M117.42 213.37L117.42 174.63" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M293.36 213.37L293.36 174.63" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M117.42 214.37L293.36 214.37" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M14.37 56.57L117.42 56.57" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M15.37 92.15L15.37 57.57" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M117.42 56.57L293.36 56.57" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M293.36 56.57L395.41 56.57" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M395.41 56.57L498.46 56.57" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M16.37 92.15L117.42 92.15" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+<path d="M117.42 92.15L293.36 92.15" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+<path d="M293.36 92.15L395.41 92.15" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+<path d="M395.41 92.15L496.46 92.15" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+<path d="M0.45 404.97L522.88 404.97L522.88 309.39L0.45 309.39Z" fill="#F0F9E5"/>
+</g>
+<g font-family="'Source Sans Pro','Source Sans 3','Helvetica Neue',Arial,sans-serif" fill="#000000">
+<text x="512.65" y="14.81" font-size="8" fill="#1C254E" textLength="11.94" lengthAdjust="spacingAndGlyphs">Fig.</text>
+<text x="511.43" y="26.81" font-size="14" font-weight="700" fill="#1C254E" textLength="14.39" lengthAdjust="spacingAndGlyphs">22</text>
+<text x="21.04" y="78.07" font-size="10" font-weight="700" fill="#FFFFFF" textLength="138.83" lengthAdjust="spacingAndGlyphs">LEADERSHIP AND GOVERNANCE</text>
+<text x="21.04" y="115.15" font-size="10" font-weight="700" fill="#FFFFFF" textLength="65.37" lengthAdjust="spacingAndGlyphs">STRATEGY AND</text>
+<text x="21.04" y="126.15" font-size="10" font-weight="700" fill="#FFFFFF" textLength="56.93" lengthAdjust="spacingAndGlyphs">INVESTMENT</text>
+<text x="123.09" y="116.23" font-size="10" font-weight="700" fill="#FFFFFF" textLength="129.48" lengthAdjust="spacingAndGlyphs">SERVICES AND APPLICATIONS</text>
+<text x="299.03" y="110.9" font-size="10" font-weight="700" fill="#FFFFFF" textLength="60.79" lengthAdjust="spacingAndGlyphs">LEGISLATION,</text>
+<text x="299.03" y="121.9" font-size="10" font-weight="700" fill="#FFFFFF" textLength="54.51" lengthAdjust="spacingAndGlyphs">POLICY, AND</text>
+<text x="299.03" y="132.9" font-size="10" font-weight="700" fill="#FFFFFF" textLength="57.74" lengthAdjust="spacingAndGlyphs">COMPLIANCE</text>
+<text x="401.08" y="110.9" font-size="10" font-weight="700" fill="#FFFFFF" textLength="56.65" lengthAdjust="spacingAndGlyphs">WORKFORCE</text>
+<text x="123.09" y="156.97" font-size="10" font-weight="700" fill="#FFFFFF" textLength="160.42" lengthAdjust="spacingAndGlyphs">STANDARDS AND INTEROPERABILITY</text>
+<text x="123.09" y="197.71" font-size="10" font-weight="700" fill="#FFFFFF" textLength="79.9" lengthAdjust="spacingAndGlyphs">INFRASTRUCTURE</text>
+<text x="-0.4" y="269.13" font-size="10" fill="#231F20" textLength="477.93" lengthAdjust="spacingAndGlyphs">Table 2 provides illustrative considerations for each building block to help ensure successful DHSC implementation.</text>
+<text x="237.43" y="226.87" font-size="8" font-style="italic" fill="#231F20" textLength="22.22" lengthAdjust="spacingAndGlyphs">Source</text>
+<text x="259.65" y="226.87" font-size="8" fill="#231F20" textLength="111.58" lengthAdjust="spacingAndGlyphs">: adapted from the 2012 WHO-ITU</text>
+<text x="372.84" y="226.87" font-size="8" font-style="italic" fill="#231F20" textLength="108.68" lengthAdjust="spacingAndGlyphs">National eHealth Strategy Toolkit</text>
+<text x="483.11" y="226.87" font-size="8" font-style="italic" fill="#231F20" textLength="12.35" lengthAdjust="spacingAndGlyphs">(19)</text>
+<text x="495.47" y="226.87" font-size="8" fill="#231F20" textLength="1.99" lengthAdjust="spacingAndGlyphs">.</text>
+<text x="6.12" y="325.3" font-size="10" font-weight="700" fill="#1C254E" textLength="107.75" lengthAdjust="spacingAndGlyphs">WHAT IS GOVERNANCE?</text>
+<text x="6.12" y="339.3" font-size="10" fill="#231F20" textLength="169.05" lengthAdjust="spacingAndGlyphs">In the context of the health supply chain,</text>
+<a href="https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/governance"><title>https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/governance</title><text x="177.17" y="339.3" font-size="10" font-style="italic" fill="#231F20" textLength="47.93" lengthAdjust="spacingAndGlyphs">governance</text></a>
+<text x="227.1" y="339.3" font-size="10" fill="#231F20" textLength="283.83" lengthAdjust="spacingAndGlyphs">is the process of establishing and implementing policies, procedures</text>
+<text x="6.12" y="353.3" font-size="10" fill="#231F20" textLength="485.89" lengthAdjust="spacingAndGlyphs">and mechanisms to ensure that the supply chain processes and the systems to manage those processes are managed</text>
+<text x="6.12" y="367.3" font-size="10" fill="#231F20" textLength="504.21" lengthAdjust="spacingAndGlyphs">effectively, ethically and in alignment with established objectives and stakeholders’ interests. It involves decision-making,</text>
+<text x="6.12" y="381.3" font-size="10" fill="#231F20" textLength="505.55" lengthAdjust="spacingAndGlyphs">defining roles and responsibilities, setting goals and objectives, and monitoring performance to ensure accountability and</text>
+<text x="6.12" y="395.3" font-size="10" fill="#231F20" textLength="181.9" lengthAdjust="spacingAndGlyphs">compliance with regulations and standards.</text>
+</g>
+</svg>

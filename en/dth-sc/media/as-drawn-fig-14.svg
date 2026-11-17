@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 543.74 535.43" width="543.74" height="535.43" role="img" aria-labelledby="t">
+<title id="t">Fig 14. DHSC architecture framework</title>
+<desc>Redrawn as drawn from 9789240101197-eng, PDF page 34 (vfig-p034), by folio-assistant-core scripts/as-drawn-svg.ts from its as-drawn-figure/v1 data.</desc>
+<g fill="none" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M15.32 12.76C10.76 12.76 7.07 16.45 7.07 21.01L7.07 526.74L506.84 526.74C511.4 526.74 515.1 523.05 515.1 518.49L515.1 21.01C515.1 16.45 511.4 12.76 506.84 12.76Z" fill="#E9E9E9"/>
+<path d="M-0 526.34L-0 14.4C-0 9.7 3.8 5.89 8.5 5.89L514.69 5.89" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M522.47 29.78L522.47 526.6" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.41 1.61" stroke-linecap="round"/>
+<path d="M522.03 531.04C521.25 533.07 519.54 534.63 517.42 535.2" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.19 1.39" stroke-linecap="round"/>
+<path d="M512.85 535.43L9.63 535.43" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.4 1.6" stroke-linecap="round"/>
+<path d="M522.47 26.97L522.47 28.17M522.47 527.41L522.47 528.61C522.47 528.98 522.44 529.35 522.38 529.7M516.74 535.34C516.39 535.4 516.02 535.43 515.65 535.43L514.45 535.43M8.83 535.43L7.63 535.43" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M528.63 27.38C522.74 32.67 513.67 32.18 508.38 26.29C503.09 20.4 503.58 11.33 509.47 6.04C515.37 0.75 524.43 1.24 529.72 7.13C535.01 13.03 534.53 22.09 528.63 27.38" fill="#FFFFFF"/>
+<path d="M528.63 27.38C522.74 32.67 513.67 32.18 508.38 26.29C503.09 20.4 503.58 11.33 509.47 6.04C515.37 0.75 524.43 1.24 529.72 7.13C535.01 13.03 534.53 22.09 528.63 27.38Z" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M27.2 98.3C24.58 98.3 22.45 100.42 22.45 103.05L22.45 497.8C22.45 500.42 24.58 502.55 27.2 502.55L497.04 502.55C499.67 502.55 501.79 500.42 501.79 497.8L501.79 103.05C501.79 100.42 499.67 98.3 497.04 98.3Z" fill="#F4F9F9"/>
+<path d="M27.2 98.3C24.58 98.3 22.45 100.42 22.45 103.05L22.45 497.8C22.45 500.42 24.58 502.55 27.2 502.55L497.04 502.55C499.67 502.55 501.79 500.42 501.79 497.8L501.79 103.05C501.79 100.42 499.67 98.3 497.04 98.3L27.2 98.3Z" fill="none" stroke="#3899A1" stroke-width="0.42"/>
+<path d="M44.24 205.28C41.62 205.28 39.49 207.4 39.49 210.03L39.49 305.12C39.49 307.75 41.62 309.88 44.24 309.88L487.09 309.88C489.71 309.88 491.84 307.75 491.84 305.12L491.84 210.03C491.84 207.4 489.71 205.28 487.09 205.28Z" fill="#3899A1"/>
+<path d="M100.64 219.56C98.02 219.56 95.89 221.69 95.89 224.31L95.89 229.33C95.89 231.96 98.02 234.08 100.64 234.08L144.38 234.08C147.01 234.08 149.14 231.96 149.14 229.33L149.14 224.31C149.14 221.69 147.01 219.56 144.38 219.56Z" fill="#FFFFFF"/>
+<path d="M100.64 236.64C98.02 236.64 95.89 238.77 95.89 241.39L95.89 246.41C95.89 249.03 98.02 251.16 100.64 251.16L144.38 251.16C147.01 251.16 149.14 249.03 149.14 246.41L149.14 241.39C149.14 238.77 147.01 236.64 144.38 236.64Z" fill="#FFFFFF"/>
+<path d="M158.31 219.56C155.69 219.56 153.56 221.69 153.56 224.31L153.56 229.33C153.56 231.96 155.69 234.08 158.31 234.08L202.06 234.08C204.68 234.08 206.81 231.96 206.81 229.33L206.81 224.31C206.81 221.69 204.68 219.56 202.06 219.56Z" fill="#FFFFFF"/>
+<path d="M158.31 236.64C155.69 236.64 153.56 238.77 153.56 241.39L153.56 246.41C153.56 249.03 155.69 251.16 158.31 251.16L202.06 251.16C204.68 251.16 206.81 249.03 206.81 246.41L206.81 241.39C206.81 238.77 204.68 236.64 202.06 236.64Z" fill="#FFFFFF"/>
+<path d="M215.99 219.56C213.36 219.56 211.23 221.69 211.23 224.31L211.23 229.33C211.23 231.96 213.36 234.08 215.99 234.08L259.73 234.08C262.35 234.08 264.48 231.96 264.48 229.33L264.48 224.31C264.48 221.69 262.35 219.56 259.73 219.56Z" fill="#FFFFFF"/>
+<path d="M215.99 236.64C213.36 236.64 211.23 238.77 211.23 241.39L211.23 246.41C211.23 249.03 213.36 251.16 215.99 251.16L259.73 251.16C262.35 251.16 264.48 249.03 264.48 246.41L264.48 241.39C264.48 238.77 262.35 236.64 259.73 236.64Z" fill="#FFFFFF"/>
+<path d="M95.19 258.82C92.57 258.82 90.44 260.94 90.44 263.57L90.44 285.66C90.44 288.29 92.57 290.42 95.19 290.42L326.38 290.42C329.01 290.42 331.14 288.29 331.14 285.66L331.14 263.57C331.14 260.94 329.01 258.82 326.38 258.82Z" fill="#FEEAC6"/>
+<path d="M58.65 301.45C56.02 301.45 53.89 303.58 53.89 306.21L53.89 467.75C53.89 470.38 56.02 472.51 58.65 472.51L367.99 472.51C370.61 472.51 372.74 470.38 372.74 467.75L372.74 306.21C372.74 303.58 370.61 301.45 367.99 301.45Z" fill="#E9E9E9"/>
+<path d="M58.65 301.45C56.02 301.45 53.89 303.58 53.89 306.21L53.89 467.75C53.89 470.38 56.02 472.51 58.65 472.51L367.99 472.51C370.61 472.51 372.74 470.38 372.74 467.75L372.74 306.21C372.74 303.58 370.61 301.45 367.99 301.45L58.65 301.45Z" fill="none" stroke="#3899A1" stroke-width="1.68"/>
+<path d="M67.84 327.19C65.21 327.19 63.08 329.31 63.08 331.94L63.08 386.19C63.08 388.81 65.21 390.94 67.84 390.94L128.78 390.94C131.4 390.94 133.53 388.81 133.53 386.19L133.53 331.94C133.53 329.31 131.4 327.19 128.78 327.19Z" fill="#FFFFFF"/>
+<path d="M67.84 327.19C65.21 327.19 63.08 329.31 63.08 331.94L63.08 386.19C63.08 388.81 65.21 390.94 67.84 390.94L128.78 390.94C131.4 390.94 133.53 388.81 133.53 386.19L133.53 331.94C133.53 329.31 131.4 327.19 128.78 327.19L67.84 327.19Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M67.84 400.07C65.21 400.07 63.08 402.2 63.08 404.82L63.08 459.07C63.08 461.69 65.21 463.82 67.84 463.82L128.78 463.82C131.4 463.82 133.53 461.69 133.53 459.07L133.53 404.82C133.53 402.2 131.4 400.07 128.78 400.07Z" fill="#FFFFFF"/>
+<path d="M67.84 400.07C65.21 400.07 63.08 402.2 63.08 404.82L63.08 459.07C63.08 461.69 65.21 463.82 67.84 463.82L128.78 463.82C131.4 463.82 133.53 461.69 133.53 459.07L133.53 404.82C133.53 402.2 131.4 400.07 128.78 400.07L67.84 400.07Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M144.78 327.19C142.15 327.19 140.03 329.31 140.03 331.94L140.03 386.19C140.03 388.81 142.15 390.94 144.78 390.94L205.72 390.94C208.35 390.94 210.47 388.81 210.47 386.19L210.47 331.94C210.47 329.31 208.35 327.19 205.72 327.19Z" fill="#FFFFFF"/>
+<path d="M144.78 327.19C142.15 327.19 140.03 329.31 140.03 331.94L140.03 386.19C140.03 388.81 142.15 390.94 144.78 390.94L205.72 390.94C208.35 390.94 210.47 388.81 210.47 386.19L210.47 331.94C210.47 329.31 208.35 327.19 205.72 327.19L144.78 327.19Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M144.78 400.07C142.15 400.07 140.03 402.2 140.03 404.82L140.03 459.07C140.03 461.69 142.15 463.82 144.78 463.82L205.72 463.82C208.35 463.82 210.47 461.69 210.47 459.07L210.47 404.82C210.47 402.2 208.35 400.07 205.72 400.07Z" fill="#FFFFFF"/>
+<path d="M144.78 400.07C142.15 400.07 140.03 402.2 140.03 404.82L140.03 459.07C140.03 461.69 142.15 463.82 144.78 463.82L205.72 463.82C208.35 463.82 210.47 461.69 210.47 459.07L210.47 404.82C210.47 402.2 208.35 400.07 205.72 400.07L144.78 400.07Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M221.72 327.19C219.09 327.19 216.97 329.31 216.97 331.94L216.97 386.19C216.97 388.81 219.09 390.94 221.72 390.94L282.66 390.94C285.29 390.94 287.42 388.81 287.42 386.19L287.42 331.94C287.42 329.31 285.29 327.19 282.66 327.19Z" fill="#FFFFFF"/>
+<path d="M221.72 327.19C219.09 327.19 216.97 329.31 216.97 331.94L216.97 386.19C216.97 388.81 219.09 390.94 221.72 390.94L282.66 390.94C285.29 390.94 287.42 388.81 287.42 386.19L287.42 331.94C287.42 329.31 285.29 327.19 282.66 327.19L221.72 327.19Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M221.72 400.07C219.09 400.07 216.97 402.2 216.97 404.82L216.97 459.07C216.97 461.69 219.09 463.82 221.72 463.82L282.66 463.82C285.29 463.82 287.42 461.69 287.42 459.07L287.42 404.82C287.42 402.2 285.29 400.07 282.66 400.07Z" fill="#FFFFFF"/>
+<path d="M221.72 400.07C219.09 400.07 216.97 402.2 216.97 404.82L216.97 459.07C216.97 461.69 219.09 463.82 221.72 463.82L282.66 463.82C285.29 463.82 287.42 461.69 287.42 459.07L287.42 404.82C287.42 402.2 285.29 400.07 282.66 400.07L221.72 400.07Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M298.66 327.19C296.04 327.19 293.91 329.31 293.91 331.94L293.91 386.19C293.91 388.81 296.04 390.94 298.66 390.94L359.6 390.94C362.23 390.94 364.36 388.81 364.36 386.19L364.36 331.94C364.36 329.31 362.23 327.19 359.6 327.19Z" fill="#FFFFFF"/>
+<path d="M298.66 327.19C296.04 327.19 293.91 329.31 293.91 331.94L293.91 386.19C293.91 388.81 296.04 390.94 298.66 390.94L359.6 390.94C362.23 390.94 364.36 388.81 364.36 386.19L364.36 331.94C364.36 329.31 362.23 327.19 359.6 327.19L298.66 327.19Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M298.66 400.07C296.04 400.07 293.91 402.2 293.91 404.82L293.91 459.07C293.91 461.69 296.04 463.82 298.66 463.82L359.6 463.82C362.23 463.82 364.36 461.69 364.36 459.07L364.36 404.82C364.36 402.2 362.23 400.07 359.6 400.07Z" fill="#FFFFFF"/>
+<path d="M298.66 400.07C296.04 400.07 293.91 402.2 293.91 404.82L293.91 459.07C293.91 461.69 296.04 463.82 298.66 463.82L359.6 463.82C362.23 463.82 364.36 461.69 364.36 459.07L364.36 404.82C364.36 402.2 362.23 400.07 359.6 400.07L298.66 400.07Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M77.35 377.39C74.72 377.39 72.6 379.52 72.6 382.14L72.6 407.62C72.6 410.25 74.72 412.37 77.35 412.37L344.23 412.37C346.85 412.37 348.98 410.25 348.98 407.62L348.98 382.14C348.98 379.52 346.85 377.39 344.23 377.39Z" fill="#FEEAC6"/>
+<path d="M391.55 285.23C388.92 285.23 386.8 287.36 386.8 289.99L386.8 415.56C386.8 418.18 388.92 420.31 391.55 420.31L480.85 420.31C483.47 420.31 485.6 418.18 485.6 415.56L485.6 289.99C485.6 287.36 483.47 285.23 480.85 285.23Z" fill="#FFFFFF"/>
+<path d="M389.09 285.92C388.23 286.44 387.55 287.23 387.16 288.17" fill="none" stroke="#3899A1" stroke-width="0.84" stroke-dasharray="2.29 1.45"/>
+<path d="M386.8 292.92L386.8 413.47" fill="none" stroke="#3899A1" stroke-width="0.84" stroke-dasharray="2.51 1.67"/>
+<path d="M387.48 418.02C388.01 418.88 388.79 419.56 389.73 419.95" fill="none" stroke="#3899A1" stroke-width="0.84" stroke-dasharray="2.29 1.45"/>
+<path d="M394.53 420.31L478.72 420.31" fill="none" stroke="#3899A1" stroke-width="0.84" stroke-dasharray="2.54 1.71"/>
+<path d="M483.31 419.63C484.17 419.1 484.85 418.32 485.24 417.38" fill="none" stroke="#3899A1" stroke-width="0.84" stroke-dasharray="2.29 1.45"/>
+<path d="M485.6 412.63L485.6 292.08" fill="none" stroke="#3899A1" stroke-width="0.84" stroke-dasharray="2.51 1.67"/>
+<path d="M484.91 287.52C484.39 286.66 483.6 285.98 482.67 285.6" fill="none" stroke="#3899A1" stroke-width="0.84" stroke-dasharray="2.29 1.45"/>
+<path d="M477.87 285.23L393.67 285.23" fill="none" stroke="#3899A1" stroke-width="0.84" stroke-dasharray="2.54 1.71"/>
+<path d="M386.93 288.86C386.84 289.22 386.8 289.6 386.8 289.99L386.8 291.24M386.8 414.3L386.8 415.56C386.8 415.95 386.84 416.33 386.93 416.69M390.42 420.18C390.78 420.27 391.16 420.31 391.55 420.31L392.82 420.31M479.57 420.31L480.85 420.31C481.24 420.31 481.61 420.27 481.98 420.18M485.46 416.69C485.55 416.33 485.6 415.95 485.6 415.56L485.6 414.3M485.6 291.24L485.6 289.99C485.6 289.6 485.55 289.22 485.46 288.86M481.98 285.37C481.61 285.28 481.24 285.23 480.85 285.23L479.57 285.23M392.82 285.23L391.55 285.23C391.16 285.23 390.78 285.28 390.42 285.37" fill="none" stroke="#3899A1" stroke-width="0.84"/>
+<path d="M402.04 367.56C399.41 367.56 397.29 369.68 397.29 372.31L397.29 444.33C397.29 446.95 399.41 449.08 402.04 449.08L470.95 449.08C473.57 449.08 475.7 446.95 475.7 444.33L475.7 372.31C475.7 369.68 473.57 367.56 470.95 367.56Z" fill="#FEEAC6"/>
+<path d="M58.65 116.81C56.02 116.81 53.89 118.94 53.89 121.56L53.89 204.24C53.89 206.86 56.02 208.99 58.65 208.99L164.46 208.99C167.09 208.99 169.21 206.86 169.21 204.24L169.21 121.56C169.21 118.94 167.09 116.81 164.46 116.81Z" fill="#EAF3F2"/>
+<path d="M58.65 116.81C56.02 116.81 53.89 118.94 53.89 121.56L53.89 204.24C53.89 206.86 56.02 208.99 58.65 208.99L164.46 208.99C167.09 208.99 169.21 206.86 169.21 204.24L169.21 121.56C169.21 118.94 167.09 116.81 164.46 116.81L58.65 116.81Z" fill="none" stroke="#3899A1" stroke-width="1.68"/>
+<path d="M64.37 138.03C61.75 138.03 59.62 140.16 59.62 142.79L59.62 197.03C59.62 199.66 61.75 201.79 64.37 201.79L158.73 201.79C161.36 201.79 163.49 199.66 163.49 197.03L163.49 142.79C163.49 140.16 161.36 138.03 158.73 138.03Z" fill="#FFFFFF"/>
+<path d="M64.37 138.03C61.75 138.03 59.62 140.16 59.62 142.79L59.62 197.03C59.62 199.66 61.75 201.79 64.37 201.79L158.73 201.79C161.36 201.79 163.49 199.66 163.49 197.03L163.49 142.79C163.49 140.16 161.36 138.03 158.73 138.03L64.37 138.03Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M80.54 168.46C77.62 168.46 75.25 170.83 75.25 173.75C75.25 176.68 77.62 179.05 80.54 179.05L142.57 179.05C145.49 179.05 147.86 176.68 147.86 173.75C147.86 170.83 145.49 168.46 142.57 168.46Z" fill="#E9E9E9"/>
+<path d="M80.54 184.64C77.62 184.64 75.25 187.01 75.25 189.93C75.25 192.85 77.62 195.22 80.54 195.22L142.57 195.22C145.49 195.22 147.86 192.85 147.86 189.93C147.86 187.01 145.49 184.64 142.57 184.64Z" fill="#E9E9E9"/>
+<path d="M80.54 152.29C77.62 152.29 75.25 154.65 75.25 157.58C75.25 160.5 77.62 162.87 80.54 162.87L142.57 162.87C145.49 162.87 147.86 160.5 147.86 157.58C147.86 154.65 145.49 152.29 142.57 152.29Z" fill="#E9E9E9"/>
+<path d="M391.44 138.03C388.82 138.03 386.69 140.16 386.69 142.79L386.69 246.1C386.69 248.72 388.82 250.85 391.44 250.85L480.95 250.85C483.58 250.85 485.7 248.72 485.7 246.1L485.7 142.79C485.7 140.16 483.58 138.03 480.95 138.03Z" fill="#FFFFFF"/>
+<path d="M391.44 138.03C388.82 138.03 386.69 140.16 386.69 142.79L386.69 246.1C386.69 248.72 388.82 250.85 391.44 250.85L480.95 250.85C483.58 250.85 485.7 248.72 485.7 246.1L485.7 142.79C485.7 140.16 483.58 138.03 480.95 138.03L391.44 138.03Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M180.84 116.81C178.22 116.81 176.09 118.94 176.09 121.56L176.09 204.24C176.09 206.86 178.22 208.99 180.84 208.99L367.99 208.99C370.61 208.99 372.74 206.86 372.74 204.24L372.74 121.56C372.74 118.94 370.61 116.81 367.99 116.81Z" fill="#EAF3F2"/>
+<path d="M180.84 116.81C178.22 116.81 176.09 118.94 176.09 121.56L176.09 204.24C176.09 206.86 178.22 208.99 180.84 208.99L367.99 208.99C370.61 208.99 372.74 206.86 372.74 204.24L372.74 121.56C372.74 118.94 370.61 116.81 367.99 116.81L180.84 116.81Z" fill="none" stroke="#3899A1" stroke-width="1.68"/>
+<path d="M187.59 138.03C184.97 138.03 182.84 140.16 182.84 142.79L182.84 189.91C182.84 192.54 184.97 194.67 187.59 194.67L266.48 194.67C269.11 194.67 271.24 192.54 271.24 189.91L271.24 142.79C271.24 140.16 269.11 138.03 266.48 138.03Z" fill="#FFFFFF"/>
+<path d="M187.59 138.03C184.97 138.03 182.84 140.16 182.84 142.79L182.84 189.91C182.84 192.54 184.97 194.67 187.59 194.67L266.48 194.67C269.11 194.67 271.24 192.54 271.24 189.91L271.24 142.79C271.24 140.16 269.11 138.03 266.48 138.03L187.59 138.03Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M283.19 138.03C280.56 138.03 278.44 140.16 278.44 142.79L278.44 189.91C278.44 192.54 280.56 194.67 283.19 194.67L362.08 194.67C364.71 194.67 366.83 192.54 366.83 189.91L366.83 142.79C366.83 140.16 364.71 138.03 362.08 138.03Z" fill="#FFFFFF"/>
+<path d="M283.19 138.03C280.56 138.03 278.44 140.16 278.44 142.79L278.44 189.91C278.44 192.54 280.56 194.67 283.19 194.67L362.08 194.67C364.71 194.67 366.83 192.54 366.83 189.91L366.83 142.79C366.83 140.16 364.71 138.03 362.08 138.03L283.19 138.03Z" fill="none" stroke="#3899A1" stroke-width="0.63"/>
+<path d="M255.12 96.1C252.5 96.1 250.37 98.23 250.37 100.86L250.37 126.34C250.37 128.96 252.5 131.09 255.12 131.09L381.63 131.09C384.25 131.09 386.38 128.96 386.38 126.34L386.38 100.86C386.38 98.23 384.25 96.1 381.63 96.1Z" fill="#FEEAC6"/>
+<path d="M349.17 217.87C346.55 217.87 344.42 220 344.42 222.62L344.42 248.1C344.42 250.73 346.55 252.85 349.17 252.85L475.67 252.85C478.3 252.85 480.43 250.73 480.43 248.1L480.43 222.62C480.43 220 478.3 217.87 475.67 217.87Z" fill="#FEEAC6"/>
+<path d="M199.03 165.67C196.11 165.67 193.74 168.03 193.74 170.96C193.74 173.88 196.11 176.25 199.03 176.25L255.04 176.25C257.97 176.25 260.34 173.88 260.34 170.96C260.34 168.03 257.97 165.67 255.04 165.67Z" fill="#E9E9E9"/>
+<path d="M293.02 165.67C290.1 165.67 287.73 168.03 287.73 170.96C287.73 173.88 290.1 176.25 293.02 176.25L349.03 176.25C351.96 176.25 354.33 173.88 354.33 170.96C354.33 168.03 351.96 165.67 349.03 165.67Z" fill="#E9E9E9"/>
+<path d="M199.03 149.49C196.11 149.49 193.74 151.86 193.74 154.78C193.74 157.7 196.11 160.07 199.03 160.07L255.04 160.07C257.97 160.07 260.34 157.7 260.34 154.78C260.34 151.86 257.97 149.49 255.04 149.49Z" fill="#E9E9E9"/>
+<path d="M293.02 149.49C290.1 149.49 287.73 151.86 287.73 154.78C287.73 157.7 290.1 160.07 293.02 160.07L349.03 160.07C351.96 160.07 354.33 157.7 354.33 154.78C354.33 151.86 351.96 149.49 349.03 149.49Z" fill="#E9E9E9"/>
+<path d="M404.95 321.58C402.03 321.58 399.66 323.95 399.66 326.87C399.66 329.79 402.03 332.16 404.95 332.16L466.98 332.16C469.9 332.16 472.27 329.79 472.27 326.87C472.27 323.95 469.9 321.58 466.98 321.58Z" fill="#E9E9E9"/>
+<path d="M396.79 183.12C393.87 183.12 391.5 185.49 391.5 188.41C391.5 191.33 393.87 193.7 396.79 193.7L475.13 193.7C478.06 193.7 480.43 191.33 480.43 188.41C480.43 185.49 478.06 183.12 475.13 183.12Z" fill="#E9E9E9"/>
+<path d="M404.95 337.76C402.03 337.76 399.66 340.12 399.66 343.05C399.66 345.97 402.03 348.34 404.95 348.34L466.98 348.34C469.9 348.34 472.27 345.97 472.27 343.05C472.27 340.12 469.9 337.76 466.98 337.76Z" fill="#E9E9E9"/>
+<path d="M396.79 199.3C393.87 199.3 391.5 201.66 391.5 204.59C391.5 207.51 393.87 209.88 396.79 209.88L475.13 209.88C478.06 209.88 480.43 207.51 480.43 204.59C480.43 201.66 478.06 199.3 475.13 199.3Z" fill="#E9E9E9"/>
+<path d="M404.95 305.4C402.03 305.4 399.66 307.77 399.66 310.69C399.66 313.62 402.03 315.98 404.95 315.98L466.98 315.98C469.9 315.98 472.27 313.62 472.27 310.69C472.27 307.77 469.9 305.4 466.98 305.4Z" fill="#E9E9E9"/>
+<path d="M396.79 166.94C393.87 166.94 391.5 169.31 391.5 172.23C391.5 175.16 393.87 177.52 396.79 177.52L475.13 177.52C478.06 177.52 480.43 175.16 480.43 172.23C480.43 169.31 478.06 166.94 475.13 166.94Z" fill="#E9E9E9"/>
+<path d="M396.79 150.07C393.87 150.07 391.5 152.43 391.5 155.36C391.5 158.28 393.87 160.65 396.79 160.65L475.13 160.65C478.06 160.65 480.43 158.28 480.43 155.36C480.43 152.43 478.06 150.07 475.13 150.07Z" fill="#E9E9E9"/>
+<path d="M19.12 51.09C16.5 51.09 14.37 53.22 14.37 55.84L14.37 126.34C14.37 128.96 16.5 131.09 19.12 131.09L93.56 131.09C96.18 131.09 98.31 128.96 98.31 126.34L98.31 55.84C98.31 53.22 96.18 51.09 93.56 51.09Z" fill="#FEEAC6"/>
+</g>
+<g font-family="'Source Sans Pro','Source Sans 3','Helvetica Neue',Arial,sans-serif" fill="#000000">
+<text x="512.64" y="14.81" font-size="8" fill="#1C254E" textLength="11.94" lengthAdjust="spacingAndGlyphs">Fig.</text>
+<text x="511.42" y="26.81" font-size="14" font-weight="700" fill="#1C254E" textLength="14.39" lengthAdjust="spacingAndGlyphs">14</text>
+<text x="44.28" y="247.44" font-size="7.54" font-weight="700" fill="#FFFFFF" textLength="22.72" lengthAdjust="spacingAndGlyphs">INTER-</text>
+<text x="44.28" y="253.31" font-size="7.54" font-weight="700" fill="#FFFFFF" textLength="44.61" lengthAdjust="spacingAndGlyphs">OPERABILITY</text>
+<text x="44.28" y="259.18" font-size="7.54" font-weight="700" fill="#FFFFFF" textLength="20.66" lengthAdjust="spacingAndGlyphs">LAYER</text>
+<text x="44.24" y="267.42" font-size="7.54" font-weight="300" fill="#FFFFFF" textLength="27.17" lengthAdjust="spacingAndGlyphs">Enabling</text>
+<text x="44.24" y="273.29" font-size="7.54" font-weight="300" fill="#FFFFFF" textLength="39.38" lengthAdjust="spacingAndGlyphs">components</text>
+<text x="100.76" y="229.3" font-size="6.71" font-weight="300" fill="#3899A1" textLength="43.26" lengthAdjust="spacingAndGlyphs">Authentication</text>
+<text x="102.49" y="246.38" font-size="6.71" font-weight="300" fill="#3899A1" textLength="39.81" lengthAdjust="spacingAndGlyphs">Orchestration</text>
+<text x="164.51" y="229.3" font-size="6.71" font-weight="300" fill="#3899A1" textLength="31.11" lengthAdjust="spacingAndGlyphs">Encryption</text>
+<text x="165.73" y="246.38" font-size="6.71" font-weight="300" fill="#3899A1" textLength="28.66" lengthAdjust="spacingAndGlyphs">Validation</text>
+<text x="215.97" y="229.3" font-size="6.71" font-weight="300" fill="#3899A1" textLength="43.53" lengthAdjust="spacingAndGlyphs">Transformation</text>
+<text x="221.96" y="246.38" font-size="6.71" font-weight="300" fill="#3899A1" textLength="31.55" lengthAdjust="spacingAndGlyphs">Translation</text>
+<text x="97.57" y="269.47" font-size="9.7" font-weight="300" fill="#393536" textLength="222.41" lengthAdjust="spacingAndGlyphs">Components that support data exchange and interoperability</text>
+<text x="97.57" y="278.2" font-size="9.7" font-weight="300" fill="#393536" textLength="223.4" lengthAdjust="spacingAndGlyphs">across the DHSC enterprise. OpenHIM is a useful open-source</text>
+<text x="97.57" y="286.93" font-size="9.7" font-weight="300" fill="#393536" textLength="169.17" lengthAdjust="spacingAndGlyphs">reference when planning for these capabilities.</text>
+<text x="59.52" y="313.63" font-size="7.54" font-weight="700" fill="#3899A1" textLength="161.21" lengthAdjust="spacingAndGlyphs">HEALTH SUPPLY CHAIN INFORMATION SYSTEMS</text>
+<text x="77.92" y="335.84" font-size="6.71" font-weight="300" fill="#3899A1" textLength="39.71" lengthAdjust="spacingAndGlyphs">Forecasting &amp;</text>
+<text x="85.89" y="341.71" font-size="6.71" font-weight="300" fill="#3899A1" textLength="24.77" lengthAdjust="spacingAndGlyphs">planning</text>
+<text x="79.32" y="460.63" font-size="6.71" font-weight="300" fill="#3899A1" textLength="36.9" lengthAdjust="spacingAndGlyphs">Procurement</text>
+<a href="https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management"><title>https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management</title><text x="146.85" y="335.84" font-size="6.71" font-weight="300" fill="#3899A1" textLength="55.74" lengthAdjust="spacingAndGlyphs">Order management</text></a>
+<text x="144.18" y="454.76" font-size="6.71" font-weight="300" fill="#3899A1" textLength="62.08" lengthAdjust="spacingAndGlyphs">Supplier and contract</text>
+<text x="155.93" y="460.63" font-size="6.71" font-weight="300" fill="#3899A1" textLength="37.57" lengthAdjust="spacingAndGlyphs">management</text>
+<text x="236.01" y="335.84" font-size="6.71" font-weight="300" fill="#3899A1" textLength="31.29" lengthAdjust="spacingAndGlyphs">Warehouse</text>
+<text x="233.37" y="341.71" font-size="6.71" font-weight="300" fill="#3899A1" textLength="37.57" lengthAdjust="spacingAndGlyphs">management</text>
+<text x="231.12" y="454.76" font-size="6.71" font-weight="300" fill="#3899A1" textLength="42.07" lengthAdjust="spacingAndGlyphs">Transportation</text>
+<text x="232.87" y="460.63" font-size="6.71" font-weight="300" fill="#3899A1" textLength="37.57" lengthAdjust="spacingAndGlyphs">management</text>
+<text x="313.53" y="335.84" font-size="6.71" font-weight="300" fill="#3899A1" textLength="30.14" lengthAdjust="spacingAndGlyphs">Cold chain</text>
+<text x="310.31" y="341.71" font-size="6.71" font-weight="300" fill="#3899A1" textLength="37.57" lengthAdjust="spacingAndGlyphs">management</text>
+<text x="312.82" y="460.63" font-size="6.71" font-weight="300" fill="#3899A1" textLength="31.55" lengthAdjust="spacingAndGlyphs">Dispensing</text>
+<text x="79.73" y="389.74" font-size="9.7" font-weight="300" fill="#393536" textLength="223.73" lengthAdjust="spacingAndGlyphs">Software capabilities that support various health supply chain</text>
+<text x="79.73" y="398.47" font-size="9.7" font-weight="300" fill="#393536" textLength="248.21" lengthAdjust="spacingAndGlyphs">services. SCISMM and TSS v2 can be useful resources in planning and</text>
+<text x="79.73" y="407.2" font-size="9.7" font-weight="300" fill="#393536" textLength="118.93" lengthAdjust="spacingAndGlyphs">implementing these capabilities.</text>
+<text x="402.32" y="295.99" font-size="7.54" font-weight="700" fill="#3899A1" textLength="67.76" lengthAdjust="spacingAndGlyphs">EXTERNAL SYSTEMS</text>
+<text x="404.41" y="381.35" font-size="9.7" font-weight="300" fill="#393536" textLength="46.37" lengthAdjust="spacingAndGlyphs">Systems and</text>
+<text x="404.41" y="390.08" font-size="9.7" font-weight="300" fill="#393536" textLength="60.84" lengthAdjust="spacingAndGlyphs">data repositories</text>
+<text x="404.41" y="398.81" font-size="9.7" font-weight="300" fill="#393536" textLength="47.22" lengthAdjust="spacingAndGlyphs">(e.g., product</text>
+<text x="404.41" y="407.54" font-size="9.7" font-weight="300" fill="#393536" textLength="59.13" lengthAdjust="spacingAndGlyphs">master data and</text>
+<text x="404.41" y="416.27" font-size="9.7" font-weight="300" fill="#393536" textLength="64.22" lengthAdjust="spacingAndGlyphs">serialization data)</text>
+<text x="404.41" y="425" font-size="9.7" font-weight="300" fill="#393536" textLength="62.88" lengthAdjust="spacingAndGlyphs">that may be used</text>
+<text x="404.41" y="433.73" font-size="9.7" font-weight="300" fill="#393536" textLength="46.21" lengthAdjust="spacingAndGlyphs">by the DHSC</text>
+<text x="404.41" y="442.46" font-size="9.7" font-weight="300" fill="#393536" textLength="39.07" lengthAdjust="spacingAndGlyphs">enterprise.</text>
+<text x="28.82" y="183.95" font-size="7.54" font-weight="700" fill="#3899A1" textLength="149.75" lengthAdjust="spacingAndGlyphs" transform="rotate(90 28.82 183.95)">DIGITAL HEALTH SUPPLY CHAIN ENTERPRISE</text>
+<text x="102.43" y="126.8" font-size="7.54" font-weight="700" fill="#3899A1" textLength="61.83" lengthAdjust="spacingAndGlyphs">SHARED SERVICES</text>
+<text x="73.67" y="146.69" font-size="6.71" font-weight="300" fill="#3899A1" textLength="75.28" lengthAdjust="spacingAndGlyphs">Foundational components</text>
+<a href="https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/product-registry"><title>https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/product-registry</title><text x="92.46" y="176.09" font-size="6.3" font-weight="300" fill="#231F20" textLength="37.59" lengthAdjust="spacingAndGlyphs">Product registry</text></a>
+<a href="https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/supplier-registry"><title>https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/supplier-registry</title><text x="91.93" y="192.26" font-size="6.3" font-weight="300" fill="#231F20" textLength="38.64" lengthAdjust="spacingAndGlyphs">Supplier registry</text></a>
+<a href="https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/health-facility-registry"><title>https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/health-facility-registry</title><text x="93.35" y="159.91" font-size="6.3" font-weight="300" fill="#231F20" textLength="35.81" lengthAdjust="spacingAndGlyphs">Facility registry</text></a>
+<text x="408.79" y="145.69" font-size="6.71" font-weight="300" fill="#3899A1" textLength="54.19" lengthAdjust="spacingAndGlyphs">Digital ecosystems</text>
+<text x="180.53" y="126.8" font-size="7.54" font-weight="700" fill="#3899A1" textLength="51.52" lengthAdjust="spacingAndGlyphs">DATA SERVICES</text>
+<text x="213.44" y="145.69" font-size="6.71" font-weight="300" fill="#3899A1" textLength="26.17" lengthAdjust="spacingAndGlyphs">Analytics</text>
+<a href="https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"><title>https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability</title><text x="305.64" y="145.69" font-size="6.71" font-weight="300" fill="#3899A1" textLength="32.97" lengthAdjust="spacingAndGlyphs">Traceability</text></a>
+<text x="257.5" y="108.46" font-size="9.7" font-weight="300" fill="#393536" textLength="125.21" lengthAdjust="spacingAndGlyphs">Data tools that help aggregate and</text>
+<text x="257.5" y="117.19" font-size="9.7" font-weight="300" fill="#393536" textLength="120.38" lengthAdjust="spacingAndGlyphs">analyse data to support decision-</text>
+<text x="257.5" y="125.92" font-size="9.7" font-weight="300" fill="#393536" textLength="86.39" lengthAdjust="spacingAndGlyphs">making and traceability.</text>
+<text x="351.55" y="230.22" font-size="9.7" font-weight="300" fill="#393536" textLength="112.12" lengthAdjust="spacingAndGlyphs">Other digital systems that may</text>
+<text x="351.55" y="238.95" font-size="9.7" font-weight="300" fill="#393536" textLength="122.42" lengthAdjust="spacingAndGlyphs">interoperate with DHSC to enable</text>
+<text x="351.55" y="247.68" font-size="9.7" font-weight="300" fill="#393536" textLength="95.61" lengthAdjust="spacingAndGlyphs">a collaborative ecosystem.</text>
+<text x="207.59" y="173.29" font-size="6.3" font-weight="300" fill="#231F20" textLength="38.3" lengthAdjust="spacingAndGlyphs">Data warehouse</text>
+<text x="297.55" y="173.29" font-size="6.3" font-weight="300" fill="#231F20" textLength="46.35" lengthAdjust="spacingAndGlyphs">Product verification</text>
+<text x="202.5" y="157.11" font-size="6.3" font-weight="300" fill="#231F20" textLength="48.48" lengthAdjust="spacingAndGlyphs">Supply chain reports</text>
+<text x="303.05" y="157.11" font-size="6.3" font-weight="300" fill="#231F20" textLength="35.36" lengthAdjust="spacingAndGlyphs">Track and trace</text>
+<text x="409.19" y="329.2" font-size="6.3" font-weight="300" fill="#231F20" textLength="52.94" lengthAdjust="spacingAndGlyphs">Manufacturer systems</text>
+<text x="412.52" y="190.74" font-size="6.3" font-weight="300" fill="#231F20" textLength="45.97" lengthAdjust="spacingAndGlyphs">Regulatory systems</text>
+<text x="415.54" y="345.38" font-size="6.3" font-weight="300" fill="#231F20" textLength="40.25" lengthAdjust="spacingAndGlyphs">Data repositories</text>
+<text x="398.89" y="206.92" font-size="6.3" font-weight="300" fill="#231F20" textLength="73.23" lengthAdjust="spacingAndGlyphs">Finance and insurance systems</text>
+<text x="415.85" y="313.03" font-size="6.3" font-weight="300" fill="#231F20" textLength="39.61" lengthAdjust="spacingAndGlyphs">Global platforms</text>
+<text x="403.59" y="174.57" font-size="6.3" font-weight="300" fill="#231F20" textLength="63.83" lengthAdjust="spacingAndGlyphs">Health mgmt. info systems</text>
+<text x="416.56" y="157.69" font-size="6.3" font-weight="300" fill="#231F20" textLength="37.88" lengthAdjust="spacingAndGlyphs">Quality systems</text>
+<text x="21.5" y="64.12" font-size="9.7" font-weight="300" fill="#393536" textLength="47.23" lengthAdjust="spacingAndGlyphs">Services that</text>
+<text x="21.5" y="72.85" font-size="9.7" font-weight="300" fill="#393536" textLength="30.92" lengthAdjust="spacingAndGlyphs">organize</text>
+<text x="21.5" y="81.58" font-size="9.7" font-weight="300" fill="#393536" textLength="44.74" lengthAdjust="spacingAndGlyphs">and manage</text>
+<text x="21.5" y="90.31" font-size="9.7" font-weight="300" fill="#393536" textLength="47.15" lengthAdjust="spacingAndGlyphs">standardized</text>
+<text x="21.5" y="99.04" font-size="9.7" font-weight="300" fill="#393536" textLength="73.57" lengthAdjust="spacingAndGlyphs">master lists that will</text>
+<text x="21.5" y="107.77" font-size="9.7" font-weight="300" fill="#393536" textLength="59.62" lengthAdjust="spacingAndGlyphs">be referred to by</text>
+<text x="21.5" y="116.5" font-size="9.7" font-weight="300" fill="#393536" textLength="68.67" lengthAdjust="spacingAndGlyphs">systems across the</text>
+<text x="21.5" y="125.23" font-size="9.7" font-weight="300" fill="#393536" textLength="62.48" lengthAdjust="spacingAndGlyphs">DHSC enterprise.</text>
+</g>
+</svg>

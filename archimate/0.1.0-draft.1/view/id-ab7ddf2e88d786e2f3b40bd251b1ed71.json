@@ -96,5 +96,11 @@
       "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-370b6bdcb29449c9be74644ffacc94aa"
     }
   ],
+  "schema:subjectOf": [
+    {
+      "schema:name": "Figure 15",
+      "schema:url": "https://litlfred.github.io/dth-sc/folio/dth-sc/ch02-dhsc-architecture/f-ch02-fig-15.md"
+    }
+  ],
   "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

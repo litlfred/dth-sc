@@ -22,13 +22,29 @@
       "page": 36,
       "method": "generated",
       "generated": {
+        "tool": "as-drawn-svg",
+        "data": "figure-data/as-drawn/fig-15.json",
+        "schema": "as-drawn-figure/v1 (folio-assistant-core schemas/figure-data.ts)",
+        "extractor": "folio-assistant-core/scripts/pdf-as-drawn.py",
+        "generator": "folio-assistant-core/scripts/as-drawn-svg.ts",
+        "basis": "transcribed from the source PDF's vector layer: every path, text run and image in the L1 figure region, at its printed position, colour and size",
+        "output": "as-drawn-fig-15.svg",
+        "evidence": "media/vfig-p036.png"
+      },
+      "section": {
+        "id": "sec-016-illustrative-architectural-approaches-and-govern",
+        "title": "Illustrative architectural approaches and governance options",
+        "file": "who-iris/library/9789240101197-eng/sections/sec-016-illustrative-architectural-approaches-and-govern.md"
+      },
+      "archimateView": {
+        "method": "archimate-view",
+        "svg": "media/archimate-fig-15.svg",
         "tool": "render-view (cat-harness-tools/archimate/scripts/render-view.ts)",
         "script": "scripts/archimate/render_figures.ts",
         "model": "archimate/0.1.0-draft.1/dth-sc-overlay.archimate",
         "view": "id-ab7ddf2e88d786e2f3b40bd251b1ed71",
         "viewName": "Maturity-based Architecture: SCISMM Level 3 to Level 4 (DTH SC Fig. 15)",
-        "output": "archimate-fig-15.svg",
-        "evidence": "media/vfig-p036.png"
+        "output": "archimate-fig-15.svg"
       }
     },
     "glossary": [

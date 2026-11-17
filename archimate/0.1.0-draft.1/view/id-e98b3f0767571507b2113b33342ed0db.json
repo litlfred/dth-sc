@@ -129,5 +129,11 @@
       "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-a5808a3c23e755509c26c634b21cda83"
     }
   ],
+  "schema:subjectOf": [
+    {
+      "schema:name": "Figure 17",
+      "schema:url": "https://litlfred.github.io/dth-sc/folio/dth-sc/ch02-dhsc-architecture/f-ch02-fig-17.md"
+    }
+  ],
   "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
 }
