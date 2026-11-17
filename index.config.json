@@ -112,7 +112,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "4f1a2ade78a923fedcd6a9b38b907891ee7395d4",
+          "ref": "1b9db9fa961d4790c76f6db69e81f7199c10af00",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -122,8 +122,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "4f1a2ade78a923fedcd6a9b38b907891ee7395d4",
-              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
+              "ref": "1b9db9fa961d4790c76f6db69e81f7199c10af00",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin to current mains after folio-assistant-core#840 (763b8b59) and regenerate the DIIG phases figure"
             },
             "standing": {
               "follows": "main",
@@ -141,7 +141,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "54a22454274f345ea0b4117aa5862f7e071b927e",
+          "ref": "763b8b59dce5a32e7e37d133271abbf64fa47f84",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -157,8 +157,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "54a22454274f345ea0b4117aa5862f7e071b927e",
-              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
+              "ref": "763b8b59dce5a32e7e37d133271abbf64fa47f84",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin to current mains after folio-assistant-core#840 (763b8b59) and regenerate the DIIG phases figure"
             },
             "standing": {
               "follows": "main",
@@ -176,7 +176,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81",
+          "ref": "72b0bc13606ea3ca2e1ec0a064a36a04835eb7bb",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -192,8 +192,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81",
-              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin during the layer freeze"
+              "ref": "72b0bc13606ea3ca2e1ec0a064a36a04835eb7bb",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin to current mains after folio-assistant-core#840 (763b8b59) and regenerate the DIIG phases figure"
             },
             "standing": {
               "follows": "main",
@@ -211,7 +211,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "73e1c9a8f80fa706e7fcaf20a1189e44434f6224",
+          "ref": "7f2b29c89ce3c7a8dfadab99739d1d97a9f41b2d",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -224,8 +224,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "73e1c9a8f80fa706e7fcaf20a1189e44434f6224",
-              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin during the layer freeze"
+              "ref": "7f2b29c89ce3c7a8dfadab99739d1d97a9f41b2d",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin to current mains after folio-assistant-core#840 (763b8b59) and regenerate the DIIG phases figure"
             },
             "standing": {
               "follows": "main",
