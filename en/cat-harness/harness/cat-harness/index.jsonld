@@ -22,7 +22,7 @@
     "additionalProperty": {
       "@type": "PropertyValue",
       "name": "pinnedCommit",
-      "value": "e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81"
+      "value": "72b0bc13606ea3ca2e1ec0a064a36a04835eb7bb"
     },
     "keywords": [
       "docs"
@@ -34,8 +34,8 @@
   },
   "significantLink": [
     "https://litlfred.github.io/folio-assistant/#harness-cat-harness",
-    "https://github.com/litlfred/cat-harness/tree/e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81",
-    "https://github.com/litlfred/cat-harness/blob/e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81/README.md",
-    "https://github.com/litlfred/cat-harness/blob/e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81/AGENTS.md"
+    "https://github.com/litlfred/cat-harness/tree/72b0bc13606ea3ca2e1ec0a064a36a04835eb7bb",
+    "https://github.com/litlfred/cat-harness/blob/72b0bc13606ea3ca2e1ec0a064a36a04835eb7bb/README.md",
+    "https://github.com/litlfred/cat-harness/blob/72b0bc13606ea3ca2e1ec0a064a36a04835eb7bb/AGENTS.md"
   ]
 }

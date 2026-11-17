@@ -22,7 +22,7 @@
     "additionalProperty": {
       "@type": "PropertyValue",
       "name": "pinnedCommit",
-      "value": "4f1a2ade78a923fedcd6a9b38b907891ee7395d4"
+      "value": "1b9db9fa961d4790c76f6db69e81f7199c10af00"
     },
     "keywords": [
       "ig"
@@ -34,8 +34,8 @@
   },
   "significantLink": [
     "https://litlfred.github.io/folio-assistant/fhir-harness/",
-    "https://github.com/litlfred/fhir-harness/tree/4f1a2ade78a923fedcd6a9b38b907891ee7395d4",
-    "https://github.com/litlfred/fhir-harness/blob/4f1a2ade78a923fedcd6a9b38b907891ee7395d4/README.md",
-    "https://github.com/litlfred/fhir-harness/blob/4f1a2ade78a923fedcd6a9b38b907891ee7395d4/AGENTS.md"
+    "https://github.com/litlfred/fhir-harness/tree/1b9db9fa961d4790c76f6db69e81f7199c10af00",
+    "https://github.com/litlfred/fhir-harness/blob/1b9db9fa961d4790c76f6db69e81f7199c10af00/README.md",
+    "https://github.com/litlfred/fhir-harness/blob/1b9db9fa961d4790c76f6db69e81f7199c10af00/AGENTS.md"
   ]
 }
