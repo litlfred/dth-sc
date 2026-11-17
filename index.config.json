@@ -141,7 +141,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "ff45c94570075215bb128d386ef00feacf0bbd61",
+          "ref": "08a4c3ea648a5731135850bf9844638985791267",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -157,8 +157,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "ff45c94570075215bb128d386ef00feacf0bbd61",
-              "evidence": "litlfred 2026-11-17: merge-and-repin window to 09:18Z (owner ~06:18Z in session session_01EucfRnjwjC8CPYgVnsFuHS, 'merge what green and ready')"
+              "ref": "08a4c3ea648a5731135850bf9844638985791267",
+              "evidence": "litlfred 2026-11-17 07:01Z in session session_01EucfRphCaNHx7nJZPH7ZPJ: 'send to merge/repin manager whats green and ready for next 6hrs'; dth-sc re-pin to cat-harness-tools main (>=87cf0f35, #2393) requested by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS"
             },
             "standing": {
               "follows": "main",
@@ -211,7 +211,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "777d5c7f4acf6a590f576c4475234d0adfb53779",
+          "ref": "4a96ee15dd9acf5f8d203ede34e8d07106c621f8",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -224,8 +224,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "777d5c7f4acf6a590f576c4475234d0adfb53779",
-              "evidence": "litlfred 2026-11-17 07:01Z in session session_01EucfRphCaNHx7nJZPH7ZPJ: 'send to merge/repin manager whats green and ready for next 6hrs'; re-pin to cat-harness-tools#2386 requested by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS"
+              "ref": "4a96ee15dd9acf5f8d203ede34e8d07106c621f8",
+              "evidence": "litlfred 2026-11-17 07:01Z in session session_01EucfRphCaNHx7nJZPH7ZPJ: 'send to merge/repin manager whats green and ready for next 6hrs'; dth-sc re-pin to cat-harness-tools main (>=87cf0f35, #2393) requested by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS"
             },
             "standing": {
               "follows": "main",
