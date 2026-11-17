@@ -123,6 +123,30 @@
 <dt>title</dt><dd>Digital Transformation Handbook for Health Supply Chain Architecture</dd>
 <dt>version</dt><dd>0.1.0</dd>
 <dt>iriBase</dt><dd>https://litlfred.github.io/dth-sc/</dd>
+<dt>avatar</dt><dd><pre>{
+  &quot;glyph&quot;: &quot;M3 5h6a3 3 0 013 3v11a2 2 0 00-2-2H3zM21 5h-6a3 3 0 00-3 3v11a2 2 0 012-2h7zM14 10h5m-2-2l2 2-2 2&quot;,
+  &quot;tone&quot;: 198,
+  &quot;reads&quot;: &quot;an open handbook with an arrow along its page, in WHO blue — goods moving through a supply chain; the glyph behind the cover, for a surface that draws marks rather than images&quot;
+}</pre></dd>
+<dt>_avatar_comment</dt><dd>The handbook&#39;s front page is this layer&#39;s avatar (owner, 2026-11-17: &quot;Use the front page of the handbook&quot;). `icon` names the cover, page 1 of the published WHO handbook (ISBN 9789240101197, iris.who.int handle 10665/379506) rendered at 400 px wide; `avatarRegion` is a square of its illustration. `avatar` is the glyph that check:avatar-instances reads and that a glyph-only surface draws.</dd>
+<dt>images</dt><dd><pre>[
+  {
+    &quot;id&quot;: &quot;cover&quot;,
+    &quot;src&quot;: &quot;docs/assets/img/cover.jpg&quot;,
+    &quot;role&quot;: &quot;cover&quot;,
+    &quot;width&quot;: 400,
+    &quot;height&quot;: 566,
+    &quot;avatarRegion&quot;: {
+      &quot;x&quot;: 0,
+      &quot;y&quot;: 0.212,
+      &quot;w&quot;: 1,
+      &quot;h&quot;: 0.7067
+    },
+    &quot;title&quot;: &quot;Digital transformation handbook for health supply chain architecture: cover&quot;,
+    &quot;description&quot;: &quot;Page 1 of Digital transformation handbook for health supply chain architecture. Geneva: World Health Organization; 2024. Licence: CC BY-NC-SA 3.0 IGO (https://creativecommons.org/licenses/by-nc-sa/3.0/igo). Rendered from the PDF at iris.who.int (handle 10665/379506), unaltered apart from scaling.&quot;
+  }
+]</pre></dd>
+<dt>icon</dt><dd>cover</dd>
 <dt>directories</dt><dd><pre>[
   {
     &quot;id&quot;: &quot;folio&quot;,
@@ -212,6 +236,14 @@
     &quot;graphTypologies&quot;: [
       &quot;references&quot;
     ]
+  },
+  {
+    &quot;id&quot;: &quot;dth-sc-docs&quot;,
+    &quot;path&quot;: &quot;docs/&quot;,
+    &quot;graphTypologies&quot;: [
+      &quot;docs&quot;
+    ],
+    &quot;description&quot;: &quot;This layer&#39;s site directory, and under assets/img/ the handbook&#39;s cover, which `icon` names as the layer&#39;s avatar. Declaring it is what gives the cover a published path.&quot;
   }
 ]</pre></dd>
 <dt>description</dt><dd>WHO Digital transformation handbook for health supply chain architecture (ISBN 9789240101197), as an L2 DTH on smart-ra: the working document folio seeded from its L1 entry in who-iris, and its supply chain glossary linked to the smart-ra glossary and ArchiMate model. dth-pc and dth-sfp depend on it.</dd>

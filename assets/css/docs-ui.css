@@ -9410,17 +9410,21 @@ table[data-fa-filtered] tr[hidden] { display: none !important; }
  * should be centered", "above also applies to tables".
  *
  * Hover and a fine pointer means a laptop or desktop: there the controls
- * float over the figure's top-right corner, take no row of their own, and
- * show while the pointer is over the figure or focus is inside it (so the
+ * sit in a strip of space reserved above the drawing (owner, 2026-11-17:
+ * the toolbar must not cover the figure), at its top-right corner, and show
+ * while the pointer is over the figure or focus is inside it (so the
  * keyboard still reaches them). A touch screen has no hover, so it keeps the
  * row above the figure. */
 .fa-figure-host {
   position: relative;
 }
 @media (hover: hover) and (pointer: fine) {
+  .fa-figure-host {
+    padding-top: 2.1rem;
+  }
   .fa-figure-host > .fa-figure-tools {
     position: absolute;
-    top: 0.3rem;
+    top: 0;
     right: 0.3rem;
     z-index: 3;
     margin: 0;
@@ -9443,14 +9447,18 @@ table[data-fa-filtered] tr[hidden] { display: none !important; }
 
 /* Every figure, diagram and table block of a document sits in one frame
  * (render-markdown.ts, `.fa-numbered`), so all document sites share this
- * look: the drawing centred, and its title and caption lines centred at no
- * more than two thirds of the column. Tables are the exception (below). */
+ * look: the drawing centred, and its title and caption lines below it,
+ * centred at no more than 67% of the column (owner, 2026-11-17). Tables are
+ * the exception (below). */
 .fa-numbered {
   margin: 0.75em 0;
 }
 .fa-numbered > p {
-  max-width: 66%;
-  margin: 0.2em auto;
+  max-width: 67%;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 .fa-numbered > p:has(> img),
