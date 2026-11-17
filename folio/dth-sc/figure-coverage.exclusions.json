@@ -1,0 +1,9 @@
+[
+  {
+    "figure": "12",
+    "scope": "block",
+    "reason": "Fig. 12 (SCISMM maturity levels for HSCISs) is reproduced in the handbook by permission of the publisher, Digital Square (SCISMM, reference 16). It is not covered by the handbook's CC BY-NC-SA 3.0 IGO licence, so the folio holds no copy of it, neither the crop nor a redraw (scripts/folio/seed_from_l1.py THIRD_PARTY); the page-31 prose block says what the figure was.",
+    "signedOffBy": "litlfred (owner), by card in session https://claude.ai/code/session_01EucfRqFN6eWnvhY2vF1tbA",
+    "signedOffAt": "2026-11-16"
+  }
+]

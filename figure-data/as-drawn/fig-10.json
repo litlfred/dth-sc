@@ -1,0 +1,1153 @@
+{
+ "$schema": "as-drawn-figure/v1",
+ "figure": {
+  "library": "9789240101197-eng",
+  "labels": [
+   "Fig. 10"
+  ],
+  "caption": "Fig 10. Example of outputs from this chapter",
+  "page": 26,
+  "file": "who-iris/library/9789240101197-eng/figures/vfig-p026.png",
+  "render": "vfig-p026",
+  "section": {
+   "id": "sec-009-step-4-define-a-strategic-roadmap-and-performanc",
+   "title": "Step 4. Define a strategic roadmap and performance indicators",
+   "file": "who-iris/library/9789240101197-eng/sections/sec-009-step-4-define-a-strategic-roadmap-and-performanc.md"
+  }
+ },
+ "basis": "transcribed from the source PDF's vector layer by folio-assistant-core scripts/pdf-as-drawn.py: every path, text run and image inside the L1 figure region, in paint order, with coordinates relative to the region's top-left corner, in PDF points",
+ "region": [
+  0.0,
+  38.0,
+  595.28,
+  841.89
+ ],
+ "canvas": {
+  "width": 595.28,
+  "height": 803.89
+ },
+ "clips": [],
+ "shapes": [
+  {
+   "d": "M0 803.89L595.27 803.89L595.27 -38L0 -38Z",
+   "fill": "#EAF4FB"
+  },
+  {
+   "d": "M37.36 488.9L37.36 217.13C37.36 212.43 41.17 208.62 45.87 208.62L532.78 208.62",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "cap": "round"
+  },
+  {
+   "d": "M37.36 163.89L37.36 53.68C37.36 48.98 41.17 45.17 45.87 45.17L543.79 45.17",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "cap": "round"
+  },
+  {
+   "d": "M553.87 223.66L553.87 491.36",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.4,
+    1.6
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M553.42 495.79C552.65 497.82 550.94 499.38 548.81 499.95",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.19,
+    1.39
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M544.25 500.18L49.44 500.18",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.4,
+    1.6
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M553.87 220.85L553.87 222.05M553.87 492.16L553.87 493.36C553.87 493.73 553.84 494.1 553.78 494.45M548.14 500.1C547.78 500.15 547.42 500.18 547.05 500.18L545.85 500.18M48.64 500.18L47.44 500.18",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "cap": "round"
+  },
+  {
+   "d": "M553.87 50.76L553.87 168.39",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.38,
+    1.57
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M553.42 172.78C552.65 174.81 550.94 176.38 548.81 176.95",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.19,
+    1.39
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M544.25 177.18L45.48 177.18",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.4,
+    1.6
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M553.87 48L553.87 49.18M553.87 169.17L553.87 170.36C553.87 170.73 553.84 171.09 553.78 171.45M548.14 177.09C547.78 177.15 547.42 177.18 547.05 177.18L545.85 177.18M44.68 177.18L43.48 177.18",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "cap": "round"
+  },
+  {
+   "d": "M156.06 56.11L43.08 56.11L54.36 44.77L43.08 33.43L156.06 33.43L167.35 44.77Z",
+   "fill": "#4299DA"
+  },
+  {
+   "d": "M145.44 240.05L541.65 240.05L541.65 296.74L145.44 296.74ZM145.44 296.74L277.51 296.74L277.51 353.43L145.44 353.43ZM277.51 296.74L409.58 296.74L409.58 353.43L277.51 353.43ZM409.58 296.74L541.65 296.74L541.65 353.43L409.58 353.43ZM145.44 353.43L211.47 353.43L211.47 413.62L145.44 413.62ZM211.47 353.43L277.51 353.43L277.51 413.62L211.47 413.62ZM277.51 353.43L343.54 353.43L343.54 413.62L277.51 413.62ZM343.54 353.43L409.58 353.43L409.58 413.62L343.54 413.62ZM409.58 353.43L475.61 353.43L475.61 413.62L409.58 413.62ZM475.61 353.43L541.65 353.43L541.65 413.62L475.61 413.62ZM145.44 413.62L211.47 413.62L211.47 484.49L145.44 484.49ZM211.47 413.62L277.51 413.62L277.51 484.49L211.47 484.49ZM277.51 413.62L343.54 413.62L343.54 484.49L277.51 484.49ZM343.54 413.62L409.58 413.62L409.58 484.49L343.54 484.49ZM409.58 413.62L475.61 413.62L475.61 484.49L409.58 484.49ZM475.61 413.62L541.65 413.62L541.65 484.49L475.61 484.49Z",
+   "fill": "#FFFFFF"
+  },
+  {
+   "d": "M46.49 240.05L145.44 240.05",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 240.05L211.47 240.05",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 296.49L145.44 240.3",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M211.47 240.05L277.51 240.05",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M277.51 240.05L343.54 240.05",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M343.54 240.05L409.58 240.05",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M409.58 240.05L475.61 240.05",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M475.61 240.05L541.65 240.05",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M46.49 296.74L145.44 296.74",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 296.74L211.47 296.74",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 353.18L145.44 296.99",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M211.47 296.74L277.51 296.74",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M277.51 296.74L343.54 296.74",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M277.51 353.18L277.51 296.99",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M343.54 296.74L409.58 296.74",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M409.58 296.74L475.61 296.74",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M409.58 353.18L409.58 296.99",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M475.61 296.74L541.65 296.74",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M46.49 353.43L145.44 353.43",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 353.43L211.47 353.43",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 413.37L145.44 353.68",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M211.47 353.43L277.51 353.43",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M211.47 413.37L211.47 353.68",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M277.51 353.43L343.54 353.43",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M277.51 413.37L277.51 353.68",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M343.54 353.43L409.58 353.43",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M343.54 413.37L343.54 353.68",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M409.58 353.43L475.61 353.43",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M409.58 413.37L409.58 353.68",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M475.61 353.43L541.65 353.43",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M475.61 413.37L475.61 353.68",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M46.49 413.62L145.44 413.62",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 413.62L211.47 413.62",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 484.24L145.44 413.87",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M211.47 413.62L277.51 413.62",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M277.51 413.62L343.54 413.62",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M343.54 413.62L409.58 413.62",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M409.58 413.62L475.61 413.62",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M475.61 413.62L541.65 413.62",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M46.49 484.49L145.44 484.49",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M145.44 484.49L211.47 484.49",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M211.47 484.49L277.51 484.49",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M277.51 484.49L343.54 484.49",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M343.54 484.49L409.58 484.49",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M409.58 484.49L475.61 484.49",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M475.61 484.49L541.65 484.49",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.5
+  },
+  {
+   "d": "M561.04 222.29C555.15 227.58 546.08 227.09 540.79 221.2C535.5 215.3 535.99 206.24 541.88 200.95C547.77 195.66 556.84 196.15 562.13 202.04C567.42 207.93 566.93 217 561.04 222.29",
+   "fill": "#FFFFFF"
+  },
+  {
+   "d": "M561.04 222.29C555.15 227.58 546.08 227.09 540.79 221.2C535.5 215.3 535.99 206.24 541.88 200.95C547.77 195.66 556.84 196.15 562.13 202.04C567.42 207.93 566.93 217 561.04 222.29Z",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "cap": "round"
+  },
+  {
+   "d": "M153.76 469.98C152.03 469.98 150.64 471.38 150.64 473.1C150.64 474.82 152.03 476.22 153.76 476.22L533.5 476.22C535.22 476.22 536.61 474.82 536.61 473.1C536.61 471.38 535.22 469.98 533.5 469.98Z",
+   "fill": "#4299DA"
+  },
+  {
+   "d": "M154.98 469.55L154.98 423.75",
+   "stroke": "#4299DA",
+   "strokeWidth": 1.0
+  },
+  {
+   "d": "M154.98 425.75C156.08 425.75 156.98 424.85 156.98 423.75C156.98 422.64 156.08 421.75 154.98 421.75C153.87 421.75 152.98 422.64 152.98 423.75C152.98 424.85 153.87 425.75 154.98 425.75",
+   "fill": "#4299DA"
+  },
+  {
+   "d": "M353.83 469.55L353.83 423.75",
+   "stroke": "#4299DA",
+   "strokeWidth": 1.0
+  },
+  {
+   "d": "M353.83 425.75C354.93 425.75 355.83 424.85 355.83 423.75C355.83 422.64 354.93 421.75 353.83 421.75C352.72 421.75 351.83 422.64 351.83 423.75C351.83 424.85 352.72 425.75 353.83 425.75",
+   "fill": "#4299DA"
+  },
+  {
+   "d": "M221.93 469.55L221.93 423.75",
+   "stroke": "#4299DA",
+   "strokeWidth": 1.0
+  },
+  {
+   "d": "M221.93 425.75C223.03 425.75 223.93 424.85 223.93 423.75C223.93 422.64 223.03 421.75 221.93 421.75C220.82 421.75 219.93 422.64 219.93 423.75C219.93 424.85 220.82 425.75 221.93 425.75",
+   "fill": "#4299DA"
+  },
+  {
+   "d": "M418.77 469.55L418.77 423.75",
+   "stroke": "#4299DA",
+   "strokeWidth": 1.0
+  },
+  {
+   "d": "M418.77 425.75C419.88 425.75 420.77 424.85 420.77 423.75C420.77 422.64 419.88 421.75 418.77 421.75C417.67 421.75 416.77 422.64 416.77 423.75C416.77 424.85 417.67 425.75 418.77 425.75",
+   "fill": "#4299DA"
+  },
+  {
+   "d": "M286.88 469.55L286.88 423.75",
+   "stroke": "#4299DA",
+   "strokeWidth": 1.0
+  },
+  {
+   "d": "M286.88 425.75C287.98 425.75 288.88 424.85 288.88 423.75C288.88 422.64 287.98 421.75 286.88 421.75C285.77 421.75 284.88 422.64 284.88 423.75C284.88 424.85 285.77 425.75 286.88 425.75",
+   "fill": "#4299DA"
+  },
+  {
+   "d": "M483.72 469.55L483.72 423.75",
+   "stroke": "#4299DA",
+   "strokeWidth": 1.0
+  },
+  {
+   "d": "M483.72 425.75C484.83 425.75 485.72 424.85 485.72 423.75C485.72 422.64 484.83 421.75 483.72 421.75C482.62 421.75 481.72 422.64 481.72 423.75C481.72 424.85 482.62 425.75 483.72 425.75",
+   "fill": "#4299DA"
+  }
+ ],
+ "texts": [
+  {
+   "x": 48.54,
+   "y": 76.03,
+   "size": 8.0,
+   "text": "The steps outlined in this chapter will result in the following outputs (Fig. 10):",
+   "color": "#231F20",
+   "width": 255.79
+  },
+  {
+   "x": 48.54,
+   "y": 93.7,
+   "size": 11.0,
+   "text": "▶",
+   "weight": 700,
+   "color": "#1C254E",
+   "width": 6.6
+  },
+  {
+   "x": 59.88,
+   "y": 93.7,
+   "size": 11.0,
+   "text": "DHSC vision",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 56.97
+  },
+  {
+   "x": 48.54,
+   "y": 111.36,
+   "size": 11.0,
+   "text": "▶",
+   "weight": 700,
+   "color": "#1C254E",
+   "width": 6.6
+  },
+  {
+   "x": 59.88,
+   "y": 111.36,
+   "size": 11.0,
+   "text": "DHSC strategic goals",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 96.7
+  },
+  {
+   "x": 48.54,
+   "y": 129.03,
+   "size": 11.0,
+   "text": "▶",
+   "weight": 700,
+   "color": "#1C254E",
+   "width": 6.6
+  },
+  {
+   "x": 59.88,
+   "y": 129.03,
+   "size": 11.0,
+   "text": "DHSC strategic objectives",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 120.16
+  },
+  {
+   "x": 48.54,
+   "y": 146.7,
+   "size": 11.0,
+   "text": "▶",
+   "weight": 700,
+   "color": "#1C254E",
+   "width": 6.6
+  },
+  {
+   "x": 59.88,
+   "y": 146.7,
+   "size": 11.0,
+   "text": "DHSC strategic roadmap.",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 117.78
+  },
+  {
+   "x": 73.54,
+   "y": 49.2,
+   "size": 9.62,
+   "text": "Progress check",
+   "weight": 700,
+   "color": "#FFFFFF",
+   "width": 63.86
+  },
+  {
+   "x": 107.48,
+   "y": 274.02,
+   "size": 11.0,
+   "text": "Vision",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 29.46
+  },
+  {
+   "x": 149.44,
+   "y": 266.99,
+   "size": 8.0,
+   "text": "Consistent and timely access to quality medicines and medical products for the population, through seamless",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 374.87
+  },
+  {
+   "x": 149.44,
+   "y": 277.99,
+   "size": 8.0,
+   "text": "supply chain enabled by technologies that provide efficient tools for providers",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 267.68
+  },
+  {
+   "x": 93.59,
+   "y": 325.22,
+   "size": 11.0,
+   "text": "Strategic",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 43.34
+  },
+  {
+   "x": 111.46,
+   "y": 336.22,
+   "size": 11.0,
+   "text": "goals",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 25.48
+  },
+  {
+   "x": 149.44,
+   "y": 310.6,
+   "size": 8.0,
+   "text": "1.",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 6.34
+  },
+  {
+   "x": 149.44,
+   "y": 321.6,
+   "size": 8.0,
+   "text": "Implement system-driven processes",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 124.07
+  },
+  {
+   "x": 149.44,
+   "y": 332.6,
+   "size": 8.0,
+   "text": "to provide timely access to quality",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 117.15
+  },
+  {
+   "x": 149.44,
+   "y": 343.6,
+   "size": 8.0,
+   "text": "data",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 15.38
+  },
+  {
+   "x": 281.51,
+   "y": 310.6,
+   "size": 8.0,
+   "text": "2.",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 6.34
+  },
+  {
+   "x": 281.51,
+   "y": 321.6,
+   "size": 8.0,
+   "text": "Achieve interoperability of systems",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 120.35
+  },
+  {
+   "x": 281.51,
+   "y": 332.6,
+   "size": 8.0,
+   "text": "to enable effortless exchange of",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 108.84
+  },
+  {
+   "x": 281.51,
+   "y": 343.6,
+   "size": 8.0,
+   "text": "data",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 15.38
+  },
+  {
+   "x": 413.58,
+   "y": 310.6,
+   "size": 8.0,
+   "text": "3.",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 6.34
+  },
+  {
+   "x": 413.58,
+   "y": 321.6,
+   "size": 8.0,
+   "text": "Enable traceability of all health",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 106.79
+  },
+  {
+   "x": 413.58,
+   "y": 332.6,
+   "size": 8.0,
+   "text": "products to ensure patient safety",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 113.56
+  },
+  {
+   "x": 93.59,
+   "y": 383.66,
+   "size": 11.0,
+   "text": "Strategic",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 43.34
+  },
+  {
+   "x": 87.26,
+   "y": 394.66,
+   "size": 11.0,
+   "text": "objectives",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 49.68
+  },
+  {
+   "x": 149.44,
+   "y": 365.62,
+   "size": 8.0,
+   "text": "Automate",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 33.68
+  },
+  {
+   "x": 149.44,
+   "y": 376.62,
+   "size": 8.0,
+   "text": "80% of central",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 49.14
+  },
+  {
+   "x": 149.44,
+   "y": 387.62,
+   "size": 8.0,
+   "text": "warehouse",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 37.87
+  },
+  {
+   "x": 149.44,
+   "y": 398.62,
+   "size": 8.0,
+   "text": "operations",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 37.12
+  },
+  {
+   "x": 215.47,
+   "y": 365.62,
+   "size": 8.0,
+   "text": "Automate",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 33.68
+  },
+  {
+   "x": 215.47,
+   "y": 376.62,
+   "size": 8.0,
+   "text": "receiving and",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 46.14
+  },
+  {
+   "x": 215.47,
+   "y": 387.62,
+   "size": 8.0,
+   "text": "dispensing in",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 45.56
+  },
+  {
+   "x": 215.47,
+   "y": 398.62,
+   "size": 8.0,
+   "text": "75% of health",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 47.2
+  },
+  {
+   "x": 215.47,
+   "y": 409.62,
+   "size": 8.0,
+   "text": "facilities",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 29.13
+  },
+  {
+   "x": 281.51,
+   "y": 365.62,
+   "size": 8.0,
+   "text": "Standardize",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 41.25
+  },
+  {
+   "x": 281.51,
+   "y": 376.62,
+   "size": 8.0,
+   "text": "product, facility,",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 56.45
+  },
+  {
+   "x": 281.51,
+   "y": 387.62,
+   "size": 8.0,
+   "text": "and other",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 33.4
+  },
+  {
+   "x": 281.51,
+   "y": 398.62,
+   "size": 8.0,
+   "text": "master data",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 41.02
+  },
+  {
+   "x": 347.54,
+   "y": 365.62,
+   "size": 8.0,
+   "text": "Deploy interop",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 50.96
+  },
+  {
+   "x": 347.54,
+   "y": 376.62,
+   "size": 8.0,
+   "text": "layer and",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 32.04
+  },
+  {
+   "x": 347.54,
+   "y": 387.62,
+   "size": 8.0,
+   "text": "integrate central",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 56.82
+  },
+  {
+   "x": 347.54,
+   "y": 398.62,
+   "size": 8.0,
+   "text": "and regional",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 43.1
+  },
+  {
+   "x": 347.54,
+   "y": 409.62,
+   "size": 8.0,
+   "text": "HSCISs",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 24.39
+  },
+  {
+   "x": 413.58,
+   "y": 365.62,
+   "size": 8.0,
+   "text": "Deploy a data",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 46.8
+  },
+  {
+   "x": 413.58,
+   "y": 376.62,
+   "size": 8.0,
+   "text": "warehouse",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 37.87
+  },
+  {
+   "x": 413.58,
+   "y": 387.62,
+   "size": 8.0,
+   "text": "to aggregate",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 43.01
+  },
+  {
+   "x": 413.58,
+   "y": 398.62,
+   "size": 8.0,
+   "text": "supply chain",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 43.6
+  },
+  {
+   "x": 413.58,
+   "y": 409.62,
+   "size": 8.0,
+   "text": "data",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 15.38
+  },
+  {
+   "x": 479.61,
+   "y": 365.62,
+   "size": 8.0,
+   "text": "Enable national-",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 56.54
+  },
+  {
+   "x": 479.61,
+   "y": 376.62,
+   "size": 8.0,
+   "text": "level batch",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 37.38
+  },
+  {
+   "x": 479.61,
+   "y": 387.62,
+   "size": 8.0,
+   "text": "traceability",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 39.2,
+   "link": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"
+  },
+  {
+   "x": 93.59,
+   "y": 449.19,
+   "size": 11.0,
+   "text": "Strategic",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 43.34
+  },
+  {
+   "x": 93.05,
+   "y": 460.19,
+   "size": 11.0,
+   "text": "roadmap",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 43.88
+  },
+  {
+   "x": 545.05,
+   "y": 209.71,
+   "size": 8.0,
+   "text": "Fig.",
+   "color": "#1C254E",
+   "width": 11.94
+  },
+  {
+   "x": 543.83,
+   "y": 221.71,
+   "size": 14.0,
+   "text": "10",
+   "weight": 700,
+   "color": "#1C254E",
+   "width": 14.39
+  },
+  {
+   "x": 160.75,
+   "y": 426.98,
+   "size": 6.0,
+   "text": "Year 1",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 15.78
+  },
+  {
+   "x": 160.75,
+   "y": 438.81,
+   "size": 8.0,
+   "text": "Digitalization",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 45.82,
+   "link": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digitalization"
+  },
+  {
+   "x": 160.75,
+   "y": 447.81,
+   "size": 8.0,
+   "text": "of central",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 32.57
+  },
+  {
+   "x": 160.75,
+   "y": 456.81,
+   "size": 8.0,
+   "text": "warehouse",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 37.87
+  },
+  {
+   "x": 228.14,
+   "y": 426.98,
+   "size": 6.0,
+   "text": "Year 2",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 15.78
+  },
+  {
+   "x": 228.14,
+   "y": 438.81,
+   "size": 8.0,
+   "text": "Digitalization",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 45.82,
+   "link": "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digitalization"
+  },
+  {
+   "x": 228.14,
+   "y": 447.81,
+   "size": 8.0,
+   "text": "of health",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 30.63
+  },
+  {
+   "x": 228.14,
+   "y": 456.81,
+   "size": 8.0,
+   "text": "facilities",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 29.13
+  },
+  {
+   "x": 291.97,
+   "y": 426.98,
+   "size": 6.0,
+   "text": "Year 2",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 15.78
+  },
+  {
+   "x": 291.97,
+   "y": 438.81,
+   "size": 8.0,
+   "text": "Data stan-",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 34.7
+  },
+  {
+   "x": 291.97,
+   "y": 447.81,
+   "size": 8.0,
+   "text": "dardization",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 39.5
+  },
+  {
+   "x": 359.63,
+   "y": 426.98,
+   "size": 6.0,
+   "text": "Year 3",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 15.78
+  },
+  {
+   "x": 359.63,
+   "y": 438.81,
+   "size": 8.0,
+   "text": "System",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 25.24
+  },
+  {
+   "x": 359.63,
+   "y": 447.81,
+   "size": 8.0,
+   "text": "integrations",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 41.66
+  },
+  {
+   "x": 422.69,
+   "y": 426.98,
+   "size": 6.0,
+   "text": "Year 3",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 15.78
+  },
+  {
+   "x": 422.69,
+   "y": 438.81,
+   "size": 8.0,
+   "text": "Data",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 15.87
+  },
+  {
+   "x": 422.69,
+   "y": 447.81,
+   "size": 8.0,
+   "text": "aggregation",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 41.29
+  },
+  {
+   "x": 488.56,
+   "y": 426.98,
+   "size": 6.0,
+   "text": "Year 4",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 15.78
+  },
+  {
+   "x": 488.56,
+   "y": 438.81,
+   "size": 8.0,
+   "text": "Batch",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 19.73
+  },
+  {
+   "x": 488.56,
+   "y": 447.81,
+   "size": 8.0,
+   "text": "traceability",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 39.2,
+   "link": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"
+  },
+  {
+   "x": 36.0,
+   "y": 777.07,
+   "size": 12.0,
+   "text": "16",
+   "weight": 700,
+   "color": "#1C254E",
+   "width": 13.7
+  },
+  {
+   "x": 319.57,
+   "y": 777.58,
+   "size": 8.0,
+   "text": "Digital transformation handbook for health supply chain architecture",
+   "color": "#1C254E",
+   "width": 240.01
+  }
+ ],
+ "omitted": {
+  "softMasked": 1,
+  "why": "soft-masked paints (drop shadows) are not transcribed: their luminosity mask is not read"
+ }
+}

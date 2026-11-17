@@ -1,0 +1,273 @@
+{
+ "$schema": "as-drawn-figure/v1",
+ "figure": {
+  "library": "9789240101197-eng",
+  "labels": [
+   "Fig. 8"
+  ],
+  "caption": "Fig 8. Alignment of national strategies",
+  "page": 20,
+  "file": "who-iris/library/9789240101197-eng/figures/vfig-p020.png",
+  "render": "vfig-p020",
+  "section": {
+   "id": "sec-005-why-is-a-strategy-necessary",
+   "title": "Why is a strategy necessary?",
+   "file": "who-iris/library/9789240101197-eng/sections/sec-005-why-is-a-strategy-necessary.md"
+  }
+ },
+ "basis": "transcribed from the source PDF's vector layer by folio-assistant-core scripts/pdf-as-drawn.py: every path, text run and image inside the L1 figure region, in paint order, with coordinates relative to the region's top-left corner, in PDF points",
+ "region": [
+  36.94,
+  522.44,
+  580.68,
+  784.8
+ ],
+ "canvas": {
+  "width": 543.74,
+  "height": 262.36
+ },
+ "clips": [],
+ "shapes": [
+  {
+   "d": "M15.32 12.23C10.77 12.23 7.07 15.93 7.07 20.49L7.07 256.01L506.85 256.01C511.4 256.01 515.1 252.32 515.1 247.76L515.1 20.49C515.1 15.93 511.4 12.23 506.85 12.23Z",
+   "fill": "#E9E9E9"
+  },
+  {
+   "d": "M442.59 141.87L46.32 141.87L78.89 97.99L46.32 54.11L442.59 54.11L475.17 97.99Z",
+   "fill": "#1C254E"
+  },
+  {
+   "d": "M442.59 141.87L46.32 141.87L78.89 97.99L46.32 54.11L442.59 54.11L475.17 97.99L442.59 141.87Z",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.25
+  },
+  {
+   "d": "M442.59 235.03L46.32 235.03L78.89 191.15L46.32 147.27L442.59 147.27L475.17 191.15Z",
+   "fill": "#71C22C"
+  },
+  {
+   "d": "M442.59 235.03L46.32 235.03L78.89 191.15L46.32 147.27L442.59 147.27L475.17 191.15L442.59 235.03Z",
+   "stroke": "#71C22C",
+   "strokeWidth": 0.25
+  },
+  {
+   "d": "M414.31 127.33L85.2 127.33L105.68 99.77L85.2 72.22L414.31 72.22L434.79 99.77Z",
+   "fill": "#82B8E6"
+  },
+  {
+   "d": "M414.31 127.33L85.2 127.33L105.68 99.77L85.2 72.22L414.31 72.22L434.79 99.77L414.31 127.33Z",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.25
+  },
+  {
+   "d": "M414.31 187.09L85.2 187.09L105.68 159.53L85.2 131.98L414.31 131.98L434.79 159.53Z",
+   "fill": "#A3D769"
+  },
+  {
+   "d": "M414.31 187.09L85.2 187.09L105.68 159.53L85.2 131.98L414.31 131.98L434.79 159.53L414.31 187.09Z",
+   "stroke": "#4299DA",
+   "strokeWidth": 0.25
+  },
+  {
+   "d": "M379.49 120.51L111.86 120.51L123.16 105.45L111.86 90.38L379.49 90.38L390.79 105.45Z",
+   "fill": "#FFFFFF"
+  },
+  {
+   "d": "M379.49 120.51L111.86 120.51L123.16 105.45L111.86 90.38L379.49 90.38L390.79 105.45L379.49 120.51Z",
+   "stroke": "#4299DA",
+   "strokeWidth": 1.0
+  },
+  {
+   "d": "M379.49 152.99L111.86 152.99L123.16 137.93L111.86 122.87L379.49 122.87L390.79 137.93Z",
+   "fill": "#FFFFFF"
+  },
+  {
+   "d": "M379.49 152.99L111.86 152.99L123.16 137.93L111.86 122.87L379.49 122.87L390.79 137.93L379.49 152.99Z",
+   "stroke": "#71C22C",
+   "strokeWidth": 1.0
+  },
+  {
+   "d": "M-0 257.03L-0 14.4C-0 9.7 3.81 5.89 8.5 5.89L514.7 5.89",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "cap": "round"
+  },
+  {
+   "d": "M522.47 31.86L522.47 253.51",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.42,
+    1.62
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M522.03 257.96C521.26 259.99 519.54 261.56 517.42 262.13",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.19,
+    1.39
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M512.85 262.36L9.63 262.36",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "dash": [
+    2.4,
+    1.6
+   ],
+   "cap": "round"
+  },
+  {
+   "d": "M522.47 29.03L522.47 30.24M522.47 254.33L522.47 255.54C522.47 255.91 522.44 256.27 522.39 256.63M516.74 262.27C516.39 262.33 516.02 262.36 515.65 262.36L514.45 262.36M8.83 262.36L7.63 262.36",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "cap": "round"
+  },
+  {
+   "d": "M528.64 27.38C522.74 32.67 513.68 32.18 508.39 26.29C503.1 20.4 503.59 11.33 509.48 6.04C515.37 0.75 524.44 1.24 529.73 7.13C535.02 13.02 534.53 22.09 528.64 27.38",
+   "fill": "#FFFFFF"
+  },
+  {
+   "d": "M528.64 27.38C522.74 32.67 513.68 32.18 508.39 26.29C503.1 20.4 503.59 11.33 509.48 6.04C515.37 0.75 524.44 1.24 529.73 7.13C535.02 13.02 534.53 22.09 528.64 27.38Z",
+   "stroke": "#878291",
+   "strokeWidth": 0.8,
+   "cap": "round"
+  }
+ ],
+ "texts": [
+  {
+   "x": 512.65,
+   "y": 14.8,
+   "size": 8.0,
+   "text": "Fig.",
+   "color": "#1C254E",
+   "width": 11.94
+  },
+  {
+   "x": 515.02,
+   "y": 26.8,
+   "size": 14.0,
+   "text": "8",
+   "weight": 700,
+   "color": "#1C254E",
+   "width": 7.2
+  },
+  {
+   "x": 61.44,
+   "y": 63.24,
+   "size": 7.33,
+   "text": "Health strategy",
+   "weight": 700,
+   "color": "#FFFFFF",
+   "width": 48.11
+  },
+  {
+   "x": 62.27,
+   "y": 231.29,
+   "size": 7.33,
+   "text": "Digital/IT strategy",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 56.23
+  },
+  {
+   "x": 99.92,
+   "y": 81.93,
+   "size": 7.33,
+   "text": "Health supply chain strategy",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 89.51
+  },
+  {
+   "x": 100.75,
+   "y": 178.41,
+   "size": 7.33,
+   "text": "Digital health strategy",
+   "weight": 700,
+   "color": "#231F20",
+   "width": 69.34
+  },
+  {
+   "x": 131.11,
+   "y": 107.37,
+   "size": 9.0,
+   "text": "Medicines and health product strategy",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 147.87
+  },
+  {
+   "x": 130.27,
+   "y": 140.44,
+   "size": 9.0,
+   "text": "Digital health supply chain strategy",
+   "weight": 700,
+   "color": "#71C22C",
+   "width": 136.03
+  },
+  {
+   "x": 359.85,
+   "y": 107.59,
+   "size": 6.0,
+   "text": "VISION",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 17.9
+  },
+  {
+   "x": 402.74,
+   "y": 101.36,
+   "size": 6.0,
+   "text": "VISION",
+   "weight": 700,
+   "color": "#FFFFFF",
+   "width": 17.9
+  },
+  {
+   "x": 402.74,
+   "y": 161.0,
+   "size": 6.0,
+   "text": "VISION",
+   "weight": 700,
+   "color": "#FFFFFF",
+   "width": 17.9
+  },
+  {
+   "x": 445.23,
+   "y": 100.22,
+   "size": 6.0,
+   "text": "VISION",
+   "weight": 700,
+   "color": "#4299DA",
+   "width": 17.9
+  },
+  {
+   "x": 445.23,
+   "y": 194.09,
+   "size": 6.0,
+   "text": "VISION",
+   "weight": 700,
+   "color": "#FFFFFF",
+   "width": 17.9
+  },
+  {
+   "x": 359.85,
+   "y": 139.28,
+   "size": 6.0,
+   "text": "VISION",
+   "weight": 700,
+   "color": "#71C22C",
+   "width": 17.9
+  }
+ ],
+ "omitted": {
+  "softMasked": 1,
+  "why": "soft-masked paints (drop shadows) are not transcribed: their luminosity mask is not read"
+ }
+}

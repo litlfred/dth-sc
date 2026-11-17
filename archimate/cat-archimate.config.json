@@ -9,5 +9,46 @@
       "description": "The dth-sc overlay on the smart-ra (DPI-H RA) ArchiMate model 0.3.0-draft.1: the five architecture variants of the supply chain DTH (Figs 15-19). Elements tagged overlay:base copy a smart-ra element and name it by IRI; elements tagged overlay:owner=dth-sc are this DTH's own (dth-sc#2 SC3)."
     }
   ],
-  "figures": []
+  "figures": [
+    {
+      "block": "folio/dth-sc/ch02-dhsc-architecture/f-ch02-fig-15.md",
+      "label": "Figure 15",
+      "model": "0.1.0-draft.1",
+      "view": "id-ab7ddf2e88d786e2f3b40bd251b1ed71",
+      "basis": "same-elements",
+      "asDrawn": "folio/dth-sc/media/as-drawn-fig-15.svg"
+    },
+    {
+      "block": "folio/dth-sc/ch02-dhsc-architecture/f-ch02-fig-16.md",
+      "label": "Figure 16",
+      "model": "0.1.0-draft.1",
+      "view": "id-fa02287de9e115eac00f1c5feb4fca0c",
+      "basis": "same-elements",
+      "asDrawn": "folio/dth-sc/media/as-drawn-fig-16.svg"
+    },
+    {
+      "block": "folio/dth-sc/ch02-dhsc-architecture/f-ch02-fig-17.md",
+      "label": "Figure 17",
+      "model": "0.1.0-draft.1",
+      "view": "id-e98b3f0767571507b2113b33342ed0db",
+      "basis": "same-elements",
+      "asDrawn": "folio/dth-sc/media/as-drawn-fig-17.svg"
+    },
+    {
+      "block": "folio/dth-sc/ch02-dhsc-architecture/f-ch02-fig-18.md",
+      "label": "Figure 18",
+      "model": "0.1.0-draft.1",
+      "view": "id-548ef5cca9e14b658dd086a42f0440c5",
+      "basis": "same-elements",
+      "asDrawn": "folio/dth-sc/media/as-drawn-fig-18.svg"
+    },
+    {
+      "block": "folio/dth-sc/ch02-dhsc-architecture/f-ch02-fig-19.md",
+      "label": "Figure 19",
+      "model": "0.1.0-draft.1",
+      "view": "id-2ddd2da649fce7285cf1b7f4dfe0f954",
+      "basis": "same-elements",
+      "asDrawn": "folio/dth-sc/media/as-drawn-fig-19.svg"
+    }
+  ]
 }

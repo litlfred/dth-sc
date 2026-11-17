@@ -2,8 +2,8 @@ import { figure } from "../../schema/builders";
 
 export default figure({
   label: "fig:23",
-  file: "media/vfig-p049.png",
+  file: "media/as-drawn-fig-23.svg",
   caption: "Fig. 23. Cost components to determine the total cost of ownership",
   page: 49,
-  meta: {"title": "Step 3. Develop a budget for each DHSC intervention", "source": {"library": "9789240101197-eng", "file": "who-iris/library/9789240101197-eng/figures/vfig-p049.png", "page": 49, "method": "l1-vector-figure"}, "glossary": [{"iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain", "prefLabel": "Digital Health Supply Chain"}, {"iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain-intervention", "prefLabel": "Digital Health Supply Chain Intervention"}]},
+  meta: {"title": "Step 3. Develop a budget for each DHSC intervention", "source": {"library": "9789240101197-eng", "file": "who-iris/library/9789240101197-eng/figures/vfig-p049.png", "page": 49, "method": "generated", "section": {"id": "sec-021-step-3-develop-a-budget-for-each-dhsc-interventi", "title": "Step 3. Develop a budget for each DHSC intervention", "file": "who-iris/library/9789240101197-eng/sections/sec-021-step-3-develop-a-budget-for-each-dhsc-interventi.md"}, "generated": {"tool": "as-drawn-svg", "data": "figure-data/as-drawn/fig-23.json", "schema": "as-drawn-figure/v1 (folio-assistant-core schemas/figure-data.ts)", "extractor": "folio-assistant-core/scripts/pdf-as-drawn.py", "generator": "folio-assistant-core/scripts/as-drawn-svg.ts", "basis": "transcribed from the source PDF's vector layer: every path, text run and image in the L1 figure region, at its printed position, colour and size", "output": "as-drawn-fig-23.svg", "evidence": "media/vfig-p049.png"}}, "glossary": [{"iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain", "prefLabel": "Digital Health Supply Chain"}, {"iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain-intervention", "prefLabel": "Digital Health Supply Chain Intervention"}]},
 });

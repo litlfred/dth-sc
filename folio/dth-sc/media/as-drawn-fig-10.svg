@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 803.89" width="595.28" height="803.89" role="img" aria-labelledby="t">
+<title id="t">Fig 10. Example of outputs from this chapter</title>
+<desc>Redrawn as drawn from 9789240101197-eng, PDF page 26 (vfig-p026), by folio-assistant-core scripts/as-drawn-svg.ts from its as-drawn-figure/v1 data.</desc>
+<g fill="none" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M0 803.89L595.27 803.89L595.27 -38L0 -38Z" fill="#EAF4FB"/>
+<path d="M37.36 488.9L37.36 217.13C37.36 212.43 41.17 208.62 45.87 208.62L532.78 208.62" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M37.36 163.89L37.36 53.68C37.36 48.98 41.17 45.17 45.87 45.17L543.79 45.17" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M553.87 223.66L553.87 491.36" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.4 1.6" stroke-linecap="round"/>
+<path d="M553.42 495.79C552.65 497.82 550.94 499.38 548.81 499.95" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.19 1.39" stroke-linecap="round"/>
+<path d="M544.25 500.18L49.44 500.18" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.4 1.6" stroke-linecap="round"/>
+<path d="M553.87 220.85L553.87 222.05M553.87 492.16L553.87 493.36C553.87 493.73 553.84 494.1 553.78 494.45M548.14 500.1C547.78 500.15 547.42 500.18 547.05 500.18L545.85 500.18M48.64 500.18L47.44 500.18" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M553.87 50.76L553.87 168.39" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.38 1.57" stroke-linecap="round"/>
+<path d="M553.42 172.78C552.65 174.81 550.94 176.38 548.81 176.95" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.19 1.39" stroke-linecap="round"/>
+<path d="M544.25 177.18L45.48 177.18" fill="none" stroke="#878291" stroke-width="0.8" stroke-dasharray="2.4 1.6" stroke-linecap="round"/>
+<path d="M553.87 48L553.87 49.18M553.87 169.17L553.87 170.36C553.87 170.73 553.84 171.09 553.78 171.45M548.14 177.09C547.78 177.15 547.42 177.18 547.05 177.18L545.85 177.18M44.68 177.18L43.48 177.18" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M156.06 56.11L43.08 56.11L54.36 44.77L43.08 33.43L156.06 33.43L167.35 44.77Z" fill="#4299DA"/>
+<path d="M145.44 240.05L541.65 240.05L541.65 296.74L145.44 296.74ZM145.44 296.74L277.51 296.74L277.51 353.43L145.44 353.43ZM277.51 296.74L409.58 296.74L409.58 353.43L277.51 353.43ZM409.58 296.74L541.65 296.74L541.65 353.43L409.58 353.43ZM145.44 353.43L211.47 353.43L211.47 413.62L145.44 413.62ZM211.47 353.43L277.51 353.43L277.51 413.62L211.47 413.62ZM277.51 353.43L343.54 353.43L343.54 413.62L277.51 413.62ZM343.54 353.43L409.58 353.43L409.58 413.62L343.54 413.62ZM409.58 353.43L475.61 353.43L475.61 413.62L409.58 413.62ZM475.61 353.43L541.65 353.43L541.65 413.62L475.61 413.62ZM145.44 413.62L211.47 413.62L211.47 484.49L145.44 484.49ZM211.47 413.62L277.51 413.62L277.51 484.49L211.47 484.49ZM277.51 413.62L343.54 413.62L343.54 484.49L277.51 484.49ZM343.54 413.62L409.58 413.62L409.58 484.49L343.54 484.49ZM409.58 413.62L475.61 413.62L475.61 484.49L409.58 484.49ZM475.61 413.62L541.65 413.62L541.65 484.49L475.61 484.49Z" fill="#FFFFFF"/>
+<path d="M46.49 240.05L145.44 240.05" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 240.05L211.47 240.05" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 296.49L145.44 240.3" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M211.47 240.05L277.51 240.05" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M277.51 240.05L343.54 240.05" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M343.54 240.05L409.58 240.05" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M409.58 240.05L475.61 240.05" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M475.61 240.05L541.65 240.05" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M46.49 296.74L145.44 296.74" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 296.74L211.47 296.74" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 353.18L145.44 296.99" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M211.47 296.74L277.51 296.74" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M277.51 296.74L343.54 296.74" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M277.51 353.18L277.51 296.99" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M343.54 296.74L409.58 296.74" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M409.58 296.74L475.61 296.74" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M409.58 353.18L409.58 296.99" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M475.61 296.74L541.65 296.74" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M46.49 353.43L145.44 353.43" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 353.43L211.47 353.43" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 413.37L145.44 353.68" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M211.47 353.43L277.51 353.43" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M211.47 413.37L211.47 353.68" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M277.51 353.43L343.54 353.43" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M277.51 413.37L277.51 353.68" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M343.54 353.43L409.58 353.43" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M343.54 413.37L343.54 353.68" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M409.58 353.43L475.61 353.43" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M409.58 413.37L409.58 353.68" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M475.61 353.43L541.65 353.43" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M475.61 413.37L475.61 353.68" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M46.49 413.62L145.44 413.62" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 413.62L211.47 413.62" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 484.24L145.44 413.87" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M211.47 413.62L277.51 413.62" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M277.51 413.62L343.54 413.62" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M343.54 413.62L409.58 413.62" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M409.58 413.62L475.61 413.62" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M475.61 413.62L541.65 413.62" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M46.49 484.49L145.44 484.49" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M145.44 484.49L211.47 484.49" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M211.47 484.49L277.51 484.49" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M277.51 484.49L343.54 484.49" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M343.54 484.49L409.58 484.49" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M409.58 484.49L475.61 484.49" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M475.61 484.49L541.65 484.49" fill="none" stroke="#4299DA" stroke-width="0.5"/>
+<path d="M561.04 222.29C555.15 227.58 546.08 227.09 540.79 221.2C535.5 215.3 535.99 206.24 541.88 200.95C547.77 195.66 556.84 196.15 562.13 202.04C567.42 207.93 566.93 217 561.04 222.29" fill="#FFFFFF"/>
+<path d="M561.04 222.29C555.15 227.58 546.08 227.09 540.79 221.2C535.5 215.3 535.99 206.24 541.88 200.95C547.77 195.66 556.84 196.15 562.13 202.04C567.42 207.93 566.93 217 561.04 222.29Z" fill="none" stroke="#878291" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M153.76 469.98C152.03 469.98 150.64 471.38 150.64 473.1C150.64 474.82 152.03 476.22 153.76 476.22L533.5 476.22C535.22 476.22 536.61 474.82 536.61 473.1C536.61 471.38 535.22 469.98 533.5 469.98Z" fill="#4299DA"/>
+<path d="M154.98 469.55L154.98 423.75" fill="none" stroke="#4299DA" stroke-width="1"/>
+<path d="M154.98 425.75C156.08 425.75 156.98 424.85 156.98 423.75C156.98 422.64 156.08 421.75 154.98 421.75C153.87 421.75 152.98 422.64 152.98 423.75C152.98 424.85 153.87 425.75 154.98 425.75" fill="#4299DA"/>
+<path d="M353.83 469.55L353.83 423.75" fill="none" stroke="#4299DA" stroke-width="1"/>
+<path d="M353.83 425.75C354.93 425.75 355.83 424.85 355.83 423.75C355.83 422.64 354.93 421.75 353.83 421.75C352.72 421.75 351.83 422.64 351.83 423.75C351.83 424.85 352.72 425.75 353.83 425.75" fill="#4299DA"/>
+<path d="M221.93 469.55L221.93 423.75" fill="none" stroke="#4299DA" stroke-width="1"/>
+<path d="M221.93 425.75C223.03 425.75 223.93 424.85 223.93 423.75C223.93 422.64 223.03 421.75 221.93 421.75C220.82 421.75 219.93 422.64 219.93 423.75C219.93 424.85 220.82 425.75 221.93 425.75" fill="#4299DA"/>
+<path d="M418.77 469.55L418.77 423.75" fill="none" stroke="#4299DA" stroke-width="1"/>
+<path d="M418.77 425.75C419.88 425.75 420.77 424.85 420.77 423.75C420.77 422.64 419.88 421.75 418.77 421.75C417.67 421.75 416.77 422.64 416.77 423.75C416.77 424.85 417.67 425.75 418.77 425.75" fill="#4299DA"/>
+<path d="M286.88 469.55L286.88 423.75" fill="none" stroke="#4299DA" stroke-width="1"/>
+<path d="M286.88 425.75C287.98 425.75 288.88 424.85 288.88 423.75C288.88 422.64 287.98 421.75 286.88 421.75C285.77 421.75 284.88 422.64 284.88 423.75C284.88 424.85 285.77 425.75 286.88 425.75" fill="#4299DA"/>
+<path d="M483.72 469.55L483.72 423.75" fill="none" stroke="#4299DA" stroke-width="1"/>
+<path d="M483.72 425.75C484.83 425.75 485.72 424.85 485.72 423.75C485.72 422.64 484.83 421.75 483.72 421.75C482.62 421.75 481.72 422.64 481.72 423.75C481.72 424.85 482.62 425.75 483.72 425.75" fill="#4299DA"/>
+</g>
+<g font-family="'Source Sans Pro','Source Sans 3','Helvetica Neue',Arial,sans-serif" fill="#000000">
+<text x="48.54" y="76.03" font-size="8" fill="#231F20" textLength="255.79" lengthAdjust="spacingAndGlyphs">The steps outlined in this chapter will result in the following outputs (Fig. 10):</text>
+<text x="48.54" y="93.7" font-size="11" font-weight="700" fill="#1C254E" textLength="6.6" lengthAdjust="spacingAndGlyphs">▶</text>
+<text x="59.88" y="93.7" font-size="11" font-weight="700" fill="#4299DA" textLength="56.97" lengthAdjust="spacingAndGlyphs">DHSC vision</text>
+<text x="48.54" y="111.36" font-size="11" font-weight="700" fill="#1C254E" textLength="6.6" lengthAdjust="spacingAndGlyphs">▶</text>
+<text x="59.88" y="111.36" font-size="11" font-weight="700" fill="#4299DA" textLength="96.7" lengthAdjust="spacingAndGlyphs">DHSC strategic goals</text>
+<text x="48.54" y="129.03" font-size="11" font-weight="700" fill="#1C254E" textLength="6.6" lengthAdjust="spacingAndGlyphs">▶</text>
+<text x="59.88" y="129.03" font-size="11" font-weight="700" fill="#4299DA" textLength="120.16" lengthAdjust="spacingAndGlyphs">DHSC strategic objectives</text>
+<text x="48.54" y="146.7" font-size="11" font-weight="700" fill="#1C254E" textLength="6.6" lengthAdjust="spacingAndGlyphs">▶</text>
+<text x="59.88" y="146.7" font-size="11" font-weight="700" fill="#4299DA" textLength="117.78" lengthAdjust="spacingAndGlyphs">DHSC strategic roadmap.</text>
+<text x="73.54" y="49.2" font-size="9.62" font-weight="700" fill="#FFFFFF" textLength="63.86" lengthAdjust="spacingAndGlyphs">Progress check</text>
+<text x="107.48" y="274.02" font-size="11" font-weight="700" fill="#4299DA" textLength="29.46" lengthAdjust="spacingAndGlyphs">Vision</text>
+<text x="149.44" y="266.99" font-size="8" font-weight="700" fill="#231F20" textLength="374.87" lengthAdjust="spacingAndGlyphs">Consistent and timely access to quality medicines and medical products for the population, through seamless</text>
+<text x="149.44" y="277.99" font-size="8" font-weight="700" fill="#231F20" textLength="267.68" lengthAdjust="spacingAndGlyphs">supply chain enabled by technologies that provide efficient tools for providers</text>
+<text x="93.59" y="325.22" font-size="11" font-weight="700" fill="#4299DA" textLength="43.34" lengthAdjust="spacingAndGlyphs">Strategic</text>
+<text x="111.46" y="336.22" font-size="11" font-weight="700" fill="#4299DA" textLength="25.48" lengthAdjust="spacingAndGlyphs">goals</text>
+<text x="149.44" y="310.6" font-size="8" font-weight="700" fill="#231F20" textLength="6.34" lengthAdjust="spacingAndGlyphs">1.</text>
+<text x="149.44" y="321.6" font-size="8" font-weight="700" fill="#231F20" textLength="124.07" lengthAdjust="spacingAndGlyphs">Implement system-driven processes</text>
+<text x="149.44" y="332.6" font-size="8" font-weight="700" fill="#231F20" textLength="117.15" lengthAdjust="spacingAndGlyphs">to provide timely access to quality</text>
+<text x="149.44" y="343.6" font-size="8" font-weight="700" fill="#231F20" textLength="15.38" lengthAdjust="spacingAndGlyphs">data</text>
+<text x="281.51" y="310.6" font-size="8" font-weight="700" fill="#231F20" textLength="6.34" lengthAdjust="spacingAndGlyphs">2.</text>
+<text x="281.51" y="321.6" font-size="8" font-weight="700" fill="#231F20" textLength="120.35" lengthAdjust="spacingAndGlyphs">Achieve interoperability of systems</text>
+<text x="281.51" y="332.6" font-size="8" font-weight="700" fill="#231F20" textLength="108.84" lengthAdjust="spacingAndGlyphs">to enable effortless exchange of</text>
+<text x="281.51" y="343.6" font-size="8" font-weight="700" fill="#231F20" textLength="15.38" lengthAdjust="spacingAndGlyphs">data</text>
+<text x="413.58" y="310.6" font-size="8" font-weight="700" fill="#231F20" textLength="6.34" lengthAdjust="spacingAndGlyphs">3.</text>
+<text x="413.58" y="321.6" font-size="8" font-weight="700" fill="#231F20" textLength="106.79" lengthAdjust="spacingAndGlyphs">Enable traceability of all health</text>
+<text x="413.58" y="332.6" font-size="8" font-weight="700" fill="#231F20" textLength="113.56" lengthAdjust="spacingAndGlyphs">products to ensure patient safety</text>
+<text x="93.59" y="383.66" font-size="11" font-weight="700" fill="#4299DA" textLength="43.34" lengthAdjust="spacingAndGlyphs">Strategic</text>
+<text x="87.26" y="394.66" font-size="11" font-weight="700" fill="#4299DA" textLength="49.68" lengthAdjust="spacingAndGlyphs">objectives</text>
+<text x="149.44" y="365.62" font-size="8" font-weight="700" fill="#231F20" textLength="33.68" lengthAdjust="spacingAndGlyphs">Automate</text>
+<text x="149.44" y="376.62" font-size="8" font-weight="700" fill="#231F20" textLength="49.14" lengthAdjust="spacingAndGlyphs">80% of central</text>
+<text x="149.44" y="387.62" font-size="8" font-weight="700" fill="#231F20" textLength="37.87" lengthAdjust="spacingAndGlyphs">warehouse</text>
+<text x="149.44" y="398.62" font-size="8" font-weight="700" fill="#231F20" textLength="37.12" lengthAdjust="spacingAndGlyphs">operations</text>
+<text x="215.47" y="365.62" font-size="8" font-weight="700" fill="#231F20" textLength="33.68" lengthAdjust="spacingAndGlyphs">Automate</text>
+<text x="215.47" y="376.62" font-size="8" font-weight="700" fill="#231F20" textLength="46.14" lengthAdjust="spacingAndGlyphs">receiving and</text>
+<text x="215.47" y="387.62" font-size="8" font-weight="700" fill="#231F20" textLength="45.56" lengthAdjust="spacingAndGlyphs">dispensing in</text>
+<text x="215.47" y="398.62" font-size="8" font-weight="700" fill="#231F20" textLength="47.2" lengthAdjust="spacingAndGlyphs">75% of health</text>
+<text x="215.47" y="409.62" font-size="8" font-weight="700" fill="#231F20" textLength="29.13" lengthAdjust="spacingAndGlyphs">facilities</text>
+<text x="281.51" y="365.62" font-size="8" font-weight="700" fill="#231F20" textLength="41.25" lengthAdjust="spacingAndGlyphs">Standardize</text>
+<text x="281.51" y="376.62" font-size="8" font-weight="700" fill="#231F20" textLength="56.45" lengthAdjust="spacingAndGlyphs">product, facility,</text>
+<text x="281.51" y="387.62" font-size="8" font-weight="700" fill="#231F20" textLength="33.4" lengthAdjust="spacingAndGlyphs">and other</text>
+<text x="281.51" y="398.62" font-size="8" font-weight="700" fill="#231F20" textLength="41.02" lengthAdjust="spacingAndGlyphs">master data</text>
+<text x="347.54" y="365.62" font-size="8" font-weight="700" fill="#231F20" textLength="50.96" lengthAdjust="spacingAndGlyphs">Deploy interop</text>
+<text x="347.54" y="376.62" font-size="8" font-weight="700" fill="#231F20" textLength="32.04" lengthAdjust="spacingAndGlyphs">layer and</text>
+<text x="347.54" y="387.62" font-size="8" font-weight="700" fill="#231F20" textLength="56.82" lengthAdjust="spacingAndGlyphs">integrate central</text>
+<text x="347.54" y="398.62" font-size="8" font-weight="700" fill="#231F20" textLength="43.1" lengthAdjust="spacingAndGlyphs">and regional</text>
+<text x="347.54" y="409.62" font-size="8" font-weight="700" fill="#231F20" textLength="24.39" lengthAdjust="spacingAndGlyphs">HSCISs</text>
+<text x="413.58" y="365.62" font-size="8" font-weight="700" fill="#231F20" textLength="46.8" lengthAdjust="spacingAndGlyphs">Deploy a data</text>
+<text x="413.58" y="376.62" font-size="8" font-weight="700" fill="#231F20" textLength="37.87" lengthAdjust="spacingAndGlyphs">warehouse</text>
+<text x="413.58" y="387.62" font-size="8" font-weight="700" fill="#231F20" textLength="43.01" lengthAdjust="spacingAndGlyphs">to aggregate</text>
+<text x="413.58" y="398.62" font-size="8" font-weight="700" fill="#231F20" textLength="43.6" lengthAdjust="spacingAndGlyphs">supply chain</text>
+<text x="413.58" y="409.62" font-size="8" font-weight="700" fill="#231F20" textLength="15.38" lengthAdjust="spacingAndGlyphs">data</text>
+<text x="479.61" y="365.62" font-size="8" font-weight="700" fill="#231F20" textLength="56.54" lengthAdjust="spacingAndGlyphs">Enable national-</text>
+<text x="479.61" y="376.62" font-size="8" font-weight="700" fill="#231F20" textLength="37.38" lengthAdjust="spacingAndGlyphs">level batch</text>
+<a href="https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"><title>https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability</title><text x="479.61" y="387.62" font-size="8" font-weight="700" fill="#231F20" textLength="39.2" lengthAdjust="spacingAndGlyphs">traceability</text></a>
+<text x="93.59" y="449.19" font-size="11" font-weight="700" fill="#4299DA" textLength="43.34" lengthAdjust="spacingAndGlyphs">Strategic</text>
+<text x="93.05" y="460.19" font-size="11" font-weight="700" fill="#4299DA" textLength="43.88" lengthAdjust="spacingAndGlyphs">roadmap</text>
+<text x="545.05" y="209.71" font-size="8" fill="#1C254E" textLength="11.94" lengthAdjust="spacingAndGlyphs">Fig.</text>
+<text x="543.83" y="221.71" font-size="14" font-weight="700" fill="#1C254E" textLength="14.39" lengthAdjust="spacingAndGlyphs">10</text>
+<text x="160.75" y="426.98" font-size="6" font-weight="700" fill="#4299DA" textLength="15.78" lengthAdjust="spacingAndGlyphs">Year 1</text>
+<a href="https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digitalization"><title>https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digitalization</title><text x="160.75" y="438.81" font-size="8" font-weight="700" fill="#231F20" textLength="45.82" lengthAdjust="spacingAndGlyphs">Digitalization</text></a>
+<text x="160.75" y="447.81" font-size="8" font-weight="700" fill="#231F20" textLength="32.57" lengthAdjust="spacingAndGlyphs">of central</text>
+<text x="160.75" y="456.81" font-size="8" font-weight="700" fill="#231F20" textLength="37.87" lengthAdjust="spacingAndGlyphs">warehouse</text>
+<text x="228.14" y="426.98" font-size="6" font-weight="700" fill="#4299DA" textLength="15.78" lengthAdjust="spacingAndGlyphs">Year 2</text>
+<a href="https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digitalization"><title>https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/digitalization</title><text x="228.14" y="438.81" font-size="8" font-weight="700" fill="#231F20" textLength="45.82" lengthAdjust="spacingAndGlyphs">Digitalization</text></a>
+<text x="228.14" y="447.81" font-size="8" font-weight="700" fill="#231F20" textLength="30.63" lengthAdjust="spacingAndGlyphs">of health</text>
+<text x="228.14" y="456.81" font-size="8" font-weight="700" fill="#231F20" textLength="29.13" lengthAdjust="spacingAndGlyphs">facilities</text>
+<text x="291.97" y="426.98" font-size="6" font-weight="700" fill="#4299DA" textLength="15.78" lengthAdjust="spacingAndGlyphs">Year 2</text>
+<text x="291.97" y="438.81" font-size="8" font-weight="700" fill="#231F20" textLength="34.7" lengthAdjust="spacingAndGlyphs">Data stan-</text>
+<text x="291.97" y="447.81" font-size="8" font-weight="700" fill="#231F20" textLength="39.5" lengthAdjust="spacingAndGlyphs">dardization</text>
+<text x="359.63" y="426.98" font-size="6" font-weight="700" fill="#4299DA" textLength="15.78" lengthAdjust="spacingAndGlyphs">Year 3</text>
+<text x="359.63" y="438.81" font-size="8" font-weight="700" fill="#231F20" textLength="25.24" lengthAdjust="spacingAndGlyphs">System</text>
+<text x="359.63" y="447.81" font-size="8" font-weight="700" fill="#231F20" textLength="41.66" lengthAdjust="spacingAndGlyphs">integrations</text>
+<text x="422.69" y="426.98" font-size="6" font-weight="700" fill="#4299DA" textLength="15.78" lengthAdjust="spacingAndGlyphs">Year 3</text>
+<text x="422.69" y="438.81" font-size="8" font-weight="700" fill="#231F20" textLength="15.87" lengthAdjust="spacingAndGlyphs">Data</text>
+<text x="422.69" y="447.81" font-size="8" font-weight="700" fill="#231F20" textLength="41.29" lengthAdjust="spacingAndGlyphs">aggregation</text>
+<text x="488.56" y="426.98" font-size="6" font-weight="700" fill="#4299DA" textLength="15.78" lengthAdjust="spacingAndGlyphs">Year 4</text>
+<text x="488.56" y="438.81" font-size="8" font-weight="700" fill="#231F20" textLength="19.73" lengthAdjust="spacingAndGlyphs">Batch</text>
+<a href="https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"><title>https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability</title><text x="488.56" y="447.81" font-size="8" font-weight="700" fill="#231F20" textLength="39.2" lengthAdjust="spacingAndGlyphs">traceability</text></a>
+<text x="36" y="777.07" font-size="12" font-weight="700" fill="#1C254E" textLength="13.7" lengthAdjust="spacingAndGlyphs">16</text>
+<text x="319.57" y="777.58" font-size="8" fill="#1C254E" textLength="240.01" lengthAdjust="spacingAndGlyphs">Digital transformation handbook for health supply chain architecture</text>
+</g>
+</svg>
