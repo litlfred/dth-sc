@@ -24,7 +24,7 @@
     "additionalProperty": {
       "@type": "PropertyValue",
       "name": "pinnedCommit",
-      "value": "4a96ee15dd9acf5f8d203ede34e8d07106c621f8"
+      "value": "8ef53a35c3b735dda6082dd69280aa1a711ef994"
     }
   },
   "isPartOf": {
@@ -32,9 +32,9 @@
     "name": "Digital Transformation Handbook for Health Supply Chain Architecture"
   },
   "significantLink": [
-    "https://litlfred.github.io/folio-assistant/#harness-cat-harness-tools",
-    "https://github.com/litlfred/cat-harness-tools/tree/4a96ee15dd9acf5f8d203ede34e8d07106c621f8",
-    "https://github.com/litlfred/cat-harness-tools/blob/4a96ee15dd9acf5f8d203ede34e8d07106c621f8/README.md",
-    "https://github.com/litlfred/cat-harness-tools/blob/4a96ee15dd9acf5f8d203ede34e8d07106c621f8/AGENTS.md"
+    "https://litlfred.github.io/folio-assistant/cat-harness-tools/",
+    "https://github.com/litlfred/cat-harness-tools/tree/8ef53a35c3b735dda6082dd69280aa1a711ef994",
+    "https://github.com/litlfred/cat-harness-tools/blob/8ef53a35c3b735dda6082dd69280aa1a711ef994/README.md",
+    "https://github.com/litlfred/cat-harness-tools/blob/8ef53a35c3b735dda6082dd69280aa1a711ef994/AGENTS.md"
   ]
 }
