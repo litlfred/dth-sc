@@ -5,6 +5,11 @@ export default chapter({
   label: "chap:front-matter",
   sections: [
     section({
+      title: "Cover",
+      label: "sec:front-cover",
+      blocks: ["f-front-cover"],
+    }),
+    section({
       title: "Acknowledgements",
       label: "sec:front-acknowledgements",
       blocks: ["p-front-page-006"],
