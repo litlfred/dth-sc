@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-7d5e19176af61d61219aeb1f5bef1fce",
+  "@type": "archimate:Grouping",
+  "schema:identifier": "id-7d5e19176af61d61219aeb1f5bef1fce",
+  "schema:name": "Facility Level",
+  "schema:description": "Health supply chain information systems run at the facility level (DTH SC Figs 18-19).",
+  "schema:category": "Other",
+  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+}

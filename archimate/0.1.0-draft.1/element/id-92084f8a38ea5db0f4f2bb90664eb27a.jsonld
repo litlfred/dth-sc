@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-92084f8a38ea5db0f4f2bb90664eb27a",
+  "@type": "archimate:Grouping",
+  "schema:identifier": "id-92084f8a38ea5db0f4f2bb90664eb27a",
+  "schema:name": "District Level",
+  "schema:description": "Health supply chain information systems run at the district level (DTH SC Fig. 19).",
+  "schema:category": "Other",
+  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+}

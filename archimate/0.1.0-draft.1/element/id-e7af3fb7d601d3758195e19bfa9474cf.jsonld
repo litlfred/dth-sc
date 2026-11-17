@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "archimate": "http://www.opengroup.org/xsd/archimate/3.0/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-e7af3fb7d601d3758195e19bfa9474cf",
+  "@type": "archimate:ApplicationComponent",
+  "schema:identifier": "id-e7af3fb7d601d3758195e19bfa9474cf",
+  "schema:name": "Inventory Management System",
+  "schema:description": "Inventory management below the central warehouse, at district and facility level (DTH SC Figs 18-19). Close to smart-ra's Health Facility Logistics Management System; kept as its own element until the owner decides (dth-sc#2).",
+  "schema:category": "Application",
+  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+}

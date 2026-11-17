@@ -11,12 +11,12 @@
 (function () {
   var row = document.getElementById("fa-navbar-row");
   if (row && row.getAttribute("data-fa-row-src") === "harness-data" && !row.textContent) {
-    row.textContent = "{\"icons\":[\"close\",\"qr\",\"launcher\"],\"hrefs\":{},\"notes\":{},\"folders\":[{\"kind\":\"archimate\",\"label\":\"Archimate\",\"note\":\"no viewer yet\"},{\"kind\":\"beans\",\"label\":\"Plans and work\",\"note\":\"dth-sc's beans graph is not published on this site\"},{\"kind\":\"folio\",\"label\":\"Folio\",\"path\":\"/en/dth-sc/\"},{\"kind\":\"glossary\",\"label\":\"Glossary\",\"note\":\"no viewer yet\"},{\"kind\":\"references\",\"label\":\"References\",\"note\":\"no viewer yet\"},{\"kind\":\"todos\",\"label\":\"Todos\",\"note\":\"dth-sc's todos graph is not published on this site\"},{\"kind\":\"uploads\",\"label\":\"Uploads\",\"note\":\"dth-sc's uploads graph is not published on this site\"}]}";
+    row.textContent = "{\"icons\":[\"close\",\"qr\",\"launcher\"],\"hrefs\":{},\"notes\":{},\"folders\":[{\"kind\":\"archimate\",\"label\":\"Archimate\",\"path\":\"/en/dth-sc/archimate/\"},{\"kind\":\"beans\",\"label\":\"Plans and work\",\"note\":\"dth-sc's beans graph is not published on this site\"},{\"kind\":\"folio\",\"label\":\"Folio\",\"path\":\"/en/dth-sc/\"},{\"kind\":\"glossary\",\"label\":\"Glossary\",\"note\":\"no viewer yet\"},{\"kind\":\"references\",\"label\":\"References\",\"note\":\"no viewer yet\"},{\"kind\":\"todos\",\"label\":\"Todos\",\"note\":\"dth-sc's todos graph is not published on this site\"},{\"kind\":\"uploads\",\"label\":\"Uploads\",\"note\":\"dth-sc's uploads graph is not published on this site\"}]}";
     row.removeAttribute("data-fa-row-src");
   }
   var tiles = document.querySelector('meta[name="fa-tiles"][data-fa-src="harness-data"]');
   if (tiles && !tiles.getAttribute("content")) {
-    tiles.setAttribute("content", "[{\"id\":\"folio\",\"directory\":\"folio\",\"title\":\"Working document\",\"qualifier\":\"Digital Transformation Handbook for Health Supply Chain Architecture\",\"ref\":\"en/dth-sc/index.html\",\"surfaces\":[\"navbar\",\"board\",\"glass\"],\"hidden\":false}]");
+    tiles.setAttribute("content", "[{\"id\":\"archimate\",\"directory\":\"archimate\",\"title\":\"ArchiMate overlay\",\"qualifier\":\"Digital Transformation Handbook for Health Supply Chain Architecture\",\"ref\":\"docs/en/dth-sc/archimate/index.html\",\"surfaces\":[\"navbar\",\"board\",\"glass\"],\"hidden\":false},{\"id\":\"folio\",\"directory\":\"folio\",\"title\":\"Working document\",\"qualifier\":\"Digital Transformation Handbook for Health Supply Chain Architecture\",\"ref\":\"en/dth-sc/index.html\",\"surfaces\":[\"navbar\",\"board\",\"glass\"],\"hidden\":false}]");
     tiles.removeAttribute("data-fa-src");
   }
 })();
