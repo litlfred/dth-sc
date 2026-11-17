@@ -35,6 +35,17 @@
     {
       "id": "archimate",
       "path": "archimate/",
+      "coverage": {
+        "visualiser": [
+          {
+            "ref": "en/dth-sc/archimate/index.html",
+            "title": "ArchiMate models",
+            "writer": [
+              "cat-harness-tools/archimate/scripts/gen-archimate-pages.ts"
+            ]
+          }
+        ]
+      },
       "graphTypologies": [
         "archimate"
       ],
@@ -90,6 +101,19 @@
     "dpi-h-ra"
   ],
   "_needs_comment": "An L2 DTH on smart-ra (owner, 2026-10-31, option A; dth-hrh#47, dth-sc#2): its glossary terms and narrative link to dpi-h-ra (litlfred/smart-ra) glossary concepts and ArchiMate 0.3.0-draft.1 elements and views (smart-ra#147, #148). smart-base stays, because the DAK block kinds reach this folio through smart-base content-adapters/dak.json.",
+  "visualisers": [
+    {
+      "id": "archimate",
+      "title": "ArchiMate overlay",
+      "renderedBy": "archimate-pages",
+      "covers": [
+        "archimate"
+      ],
+      "writer": [
+        "cat-harness-tools/archimate/scripts/gen-archimate-pages.ts"
+      ]
+    }
+  ],
   "enableSubgraphs": [
     "folio-assistant-core.collab",
     "smart-base.collab",
