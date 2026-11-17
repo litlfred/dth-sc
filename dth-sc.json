@@ -4,6 +4,30 @@
   "title": "Digital Transformation Handbook for Health Supply Chain Architecture",
   "version": "0.1.0",
   "iriBase": "https://litlfred.github.io/dth-sc/",
+  "avatar": {
+    "glyph": "M3 5h6a3 3 0 013 3v11a2 2 0 00-2-2H3zM21 5h-6a3 3 0 00-3 3v11a2 2 0 012-2h7zM14 10h5m-2-2l2 2-2 2",
+    "tone": 198,
+    "reads": "an open handbook with an arrow along its page, in WHO blue — goods moving through a supply chain; the glyph behind the cover, for a surface that draws marks rather than images"
+  },
+  "_avatar_comment": "The handbook's front page is this layer's avatar (owner, 2026-11-17: \"Use the front page of the handbook\"). `icon` names the cover, page 1 of the published WHO handbook (ISBN 9789240101197, iris.who.int handle 10665/379506) rendered at 400 px wide; `avatarRegion` is a square of its illustration. `avatar` is the glyph that check:avatar-instances reads and that a glyph-only surface draws.",
+  "images": [
+    {
+      "id": "cover",
+      "src": "docs/assets/img/cover.jpg",
+      "role": "cover",
+      "width": 400,
+      "height": 566,
+      "avatarRegion": {
+        "x": 0,
+        "y": 0.212,
+        "w": 1,
+        "h": 0.7067
+      },
+      "title": "Digital transformation handbook for health supply chain architecture: cover",
+      "description": "Page 1 of Digital transformation handbook for health supply chain architecture. Geneva: World Health Organization; 2024. Licence: CC BY-NC-SA 3.0 IGO (https://creativecommons.org/licenses/by-nc-sa/3.0/igo). Rendered from the PDF at iris.who.int (handle 10665/379506), unaltered apart from scaling."
+    }
+  ],
+  "icon": "cover",
   "directories": [
     {
       "id": "folio",
@@ -93,6 +117,14 @@
       "graphTypologies": [
         "references"
       ]
+    },
+    {
+      "id": "docs",
+      "path": "docs/",
+      "graphTypologies": [
+        "docs"
+      ],
+      "description": "This layer's site directory, and under assets/img/ the handbook's cover, which `icon` names as the layer's avatar. Declaring it is what gives the cover a published path."
     }
   ],
   "description": "WHO Digital transformation handbook for health supply chain architecture (ISBN 9789240101197), as an L2 DTH on smart-ra: the working document folio seeded from its L1 entry in who-iris, and its supply chain glossary linked to the smart-ra glossary and ArchiMate model. dth-pc and dth-sfp depend on it.",
