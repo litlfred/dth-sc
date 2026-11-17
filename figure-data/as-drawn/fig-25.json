@@ -15,7 +15,7 @@
    "file": "who-iris/library/9789240101197-eng/sections/sec-026-traceability-models.md"
   }
  },
- "basis": "transcribed from the source PDF's vector layer by scripts/figures/pdf_as_drawn.py: every path, text run and image inside the L1 figure region, in paint order, with coordinates relative to the region's top-left corner, in PDF points",
+ "basis": "transcribed from the source PDF's vector layer by folio-assistant-core scripts/pdf-as-drawn.py: every path, text run and image inside the L1 figure region, in paint order, with coordinates relative to the region's top-left corner, in PDF points",
  "region": [
   36.4,
   44.72,
