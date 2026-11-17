@@ -58,7 +58,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-base",
-          "ref": "03a14eab0ac5dd7fb812b2c6b04eee45df74db2d",
+          "ref": "6485bbf6c0ef6550796c27cf3dd921230db3c60d",
           "overrides": {
             "smart-base": {
               "path": "smart-base",
@@ -93,8 +93,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "03a14eab0ac5dd7fb812b2c6b04eee45df74db2d",
-              "evidence": "litlfred 2026-11-17 ~12:20Z in session session_01EucfRnjwjC8CPYgVnsFuHS: 'merge + repin window + 6hrs'; window to ~18:20Z"
+              "ref": "6485bbf6c0ef6550796c27cf3dd921230db3c60d",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
             },
             "standing": {
               "follows": "main",
@@ -112,7 +112,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "dcaa72c0f2cd4ce02e5a8ee313abd22272180d9f",
+          "ref": "4f1a2ade78a923fedcd6a9b38b907891ee7395d4",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -122,8 +122,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "dcaa72c0f2cd4ce02e5a8ee313abd22272180d9f",
-              "evidence": "litlfred 2026-11-17 ~12:20Z in session session_01EucfRnjwjC8CPYgVnsFuHS: 'merge + repin window + 6hrs'; window to ~18:20Z"
+              "ref": "4f1a2ade78a923fedcd6a9b38b907891ee7395d4",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
             },
             "standing": {
               "follows": "main",
@@ -141,7 +141,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "d5c1446610d3bde42010cf6ceb0849dea2b8e255",
+          "ref": "54a22454274f345ea0b4117aa5862f7e071b927e",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -157,8 +157,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "d5c1446610d3bde42010cf6ceb0849dea2b8e255",
-              "evidence": "litlfred 2026-11-17 ~12:20Z in session session_01EucfRnjwjC8CPYgVnsFuHS: 'merge + repin window + 6hrs'; window to ~18:20Z"
+              "ref": "54a22454274f345ea0b4117aa5862f7e071b927e",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
             },
             "standing": {
               "follows": "main",
@@ -176,7 +176,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "f972f72133f5273e590aa6f8ce70b5fe3187a52f",
+          "ref": "131bc003192e4a3fa0e509accc479961102581f3",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -192,8 +192,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "f972f72133f5273e590aa6f8ce70b5fe3187a52f",
-              "evidence": "litlfred 2026-11-17 ~12:20Z in session session_01EucfRnjwjC8CPYgVnsFuHS: 'merge + repin window + 6hrs'; window to ~18:20Z"
+              "ref": "131bc003192e4a3fa0e509accc479961102581f3",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
             },
             "standing": {
               "follows": "main",
@@ -211,7 +211,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "f847cd533abfa95c955cfb111ba5b8de4cd0e131",
+          "ref": "f753755f2ec07c41dac67e21dc817a0eb75781a1",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -224,8 +224,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "f847cd533abfa95c955cfb111ba5b8de4cd0e131",
-              "evidence": "litlfred 2026-11-17 ~12:20Z in session session_01EucfRnjwjC8CPYgVnsFuHS: 'merge + repin window + 6hrs'; window to ~18:20Z"
+              "ref": "f753755f2ec07c41dac67e21dc817a0eb75781a1",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
             },
             "standing": {
               "follows": "main",
@@ -243,7 +243,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "7db8457701ebb9b99284d639128f3c82ad4fc6ea",
+          "ref": "417192bef3ca2b9d6f3481b41c39f1f747cae57f",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -252,9 +252,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-15",
-              "ref": "7db8457701ebb9b99284d639128f3c82ad4fc6ea",
-              "evidence": "standing consent by litlfred 2026-11-12 (Q-BIBNAV-2 B: follow main); hand re-pin of every layer to main after cat-harness-tools#2278 (standing re-pin could not mount smart-base), Claude Code session https://claude.ai/code/session_01Qmmkt9PKt17La22a63e6zg"
+              "on": "2026-11-17",
+              "ref": "417192bef3ca2b9d6f3481b41c39f1f747cae57f",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
             },
             "standing": {
               "follows": "main",
@@ -272,7 +272,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "174a567db34db10b007a45b13f960f218a6b04f5",
+          "ref": "60e5ffc23b88137c0d9eaef00601da89237df094",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -284,9 +284,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-15",
-              "ref": "174a567db34db10b007a45b13f960f218a6b04f5",
-              "evidence": "standing consent by litlfred 2026-11-12 (Q-BIBNAV-2 B: follow main); hand re-pin of every layer to main after cat-harness-tools#2278 (standing re-pin could not mount smart-base), Claude Code session https://claude.ai/code/session_01Qmmkt9PKt17La22a63e6zg"
+              "on": "2026-11-17",
+              "ref": "60e5ffc23b88137c0d9eaef00601da89237df094",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
             },
             "standing": {
               "follows": "main",
