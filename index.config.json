@@ -58,7 +58,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/smart-base",
-          "ref": "311389598499785d2add24e0db54caed770ffec1",
+          "ref": "03a14eab0ac5dd7fb812b2c6b04eee45df74db2d",
           "overrides": {
             "smart-base": {
               "path": "smart-base",
@@ -93,8 +93,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "311389598499785d2add24e0db54caed770ffec1",
-              "evidence": "litlfred 2026-11-17 07:01Z in session session_01EucfRphCaNHx7nJZPH7ZPJ: 'send to merge/repin manager whats green and ready for next 6hrs'; re-pin to cat-harness-tools#2386 requested by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS"
+              "ref": "03a14eab0ac5dd7fb812b2c6b04eee45df74db2d",
+              "evidence": "litlfred 2026-11-17 ~12:20Z in session session_01EucfRnjwjC8CPYgVnsFuHS: 'merge + repin window + 6hrs'; window to ~18:20Z"
             },
             "standing": {
               "follows": "main",
@@ -112,7 +112,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "b36c50cdb9baeb5f2d33bfed4ee320c6845f29e7",
+          "ref": "dcaa72c0f2cd4ce02e5a8ee313abd22272180d9f",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -122,8 +122,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "b36c50cdb9baeb5f2d33bfed4ee320c6845f29e7",
-              "evidence": "litlfred 2026-11-17: merge-and-repin window to 09:18Z (owner ~06:18Z in session session_01EucfRnjwjC8CPYgVnsFuHS, 'merge what green and ready')"
+              "ref": "dcaa72c0f2cd4ce02e5a8ee313abd22272180d9f",
+              "evidence": "litlfred 2026-11-17 ~12:20Z in session session_01EucfRnjwjC8CPYgVnsFuHS: 'merge + repin window + 6hrs'; window to ~18:20Z"
             },
             "standing": {
               "follows": "main",
@@ -211,7 +211,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "17a9da7fc47c6b6f43853891c828ac8f69d62929",
+          "ref": "8ef53a35c3b735dda6082dd69280aa1a711ef994",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -224,7 +224,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "17a9da7fc47c6b6f43853891c828ac8f69d62929",
+              "ref": "8ef53a35c3b735dda6082dd69280aa1a711ef994",
               "evidence": "litlfred 2026-11-17 ~12:20Z in session session_01EucfRnjwjC8CPYgVnsFuHS: 'merge + repin window + 6hrs'; window to ~18:20Z"
             },
             "standing": {
