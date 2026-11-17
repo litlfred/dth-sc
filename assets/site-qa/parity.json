@@ -4,16 +4,17 @@
  "shortfall": [],
  "droppedByRuling": [],
  "current": {
-  "pages": 1224,
+  "pages": 1375,
   "counts": {
    "siteNav": 0,
-   "search": 157,
-   "navbarRow": 157,
-   "rail": 1088,
+   "search": 208,
+   "navbarRow": 208,
+   "rail": 1139,
    "translationMeta": 143
   },
   "dirs": [
    "ar",
+   "archimate",
    "assets",
    "cat-harness",
    "dth-sc",
@@ -96,6 +97,6 @@
     "translationMeta"
    ]
   },
-  "from": "7f6ea2dca289"
+  "from": "6005a2704077"
  }
 }
