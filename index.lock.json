@@ -24,12 +24,12 @@
     {
       "harness": "cat-harness",
       "repository": "litlfred/cat-harness",
-      "ref": "131bc003192e4a3fa0e509accc479961102581f3"
+      "ref": "e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81"
     },
     {
       "harness": "cat-harness-tools",
       "repository": "litlfred/cat-harness-tools",
-      "ref": "f753755f2ec07c41dac67e21dc817a0eb75781a1"
+      "ref": "73e1c9a8f80fa706e7fcaf20a1189e44434f6224"
     },
     {
       "harness": "bootstrap",
@@ -109,21 +109,21 @@
     {
       "instance": "cat-harness",
       "repository": "litlfred/cat-harness",
-      "sha": "131bc003192e4a3fa0e509accc479961102581f3",
+      "sha": "e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81",
       "upstreamRoot": "",
       "path": "cat-harness",
       "via": "cat-harness",
       "pinnedBy": "declared",
       "declaration": {
         "file": "cat-harness.json",
-        "sha256": "8a576042626196190cd64c04f43d8196c604d90ca7d3ab0759e635ffee1f5be5"
+        "sha256": "6a1ea907872a02969d5219297d3adc992dc58542671ea9fb9871d240925f887a"
       },
       "directories": [
         {
           "id": "*",
           "path": "cat-harness",
           "upstreamPath": ".",
-          "treeDigest": "c8f04e2b103269490e29e2646cf49bdf3c4c943297b3cdc77396ede0d7ecf603",
+          "treeDigest": "964bcf18ee7a7c863a78fb30150311c30b936ef2324e6a3df530f011ee5c6b39",
           "files": 2937,
           "except": [
             "docs/proposals",
@@ -140,14 +140,14 @@
         "basis": "consent",
         "by": "litlfred",
         "on": "2026-11-17",
-        "ref": "131bc003192e4a3fa0e509accc479961102581f3",
+        "ref": "e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81",
         "approver": "unverified"
       }
     },
     {
       "instance": "cat-harness-tools",
       "repository": "litlfred/cat-harness-tools",
-      "sha": "f753755f2ec07c41dac67e21dc817a0eb75781a1",
+      "sha": "73e1c9a8f80fa706e7fcaf20a1189e44434f6224",
       "upstreamRoot": "",
       "path": "cat-harness-tools",
       "via": "cat-harness-tools",
@@ -161,15 +161,15 @@
           "id": "*",
           "path": "cat-harness-tools",
           "upstreamPath": ".",
-          "treeDigest": "2a33013f5889a092451be20064c72c8677a4f255be2d3629a34aa57b8880f83f",
-          "files": 5006
+          "treeDigest": "1b3f4b2a41693e1018c5f7c7f8ea0b988d491929d572f103bf17ad7587b7c5e5",
+          "files": 5007
         }
       ],
       "trust": {
         "basis": "consent",
         "by": "litlfred",
         "on": "2026-11-17",
-        "ref": "f753755f2ec07c41dac67e21dc817a0eb75781a1",
+        "ref": "73e1c9a8f80fa706e7fcaf20a1189e44434f6224",
         "approver": "unverified"
       }
     },

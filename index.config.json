@@ -176,7 +176,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "131bc003192e4a3fa0e509accc479961102581f3",
+          "ref": "e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -192,8 +192,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "131bc003192e4a3fa0e509accc479961102581f3",
-              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
+              "ref": "e3e7b2dd2b6d2e2f7a547fbb7fc6141443e1ae81",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin during the layer freeze"
             },
             "standing": {
               "follows": "main",
@@ -211,7 +211,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "f753755f2ec07c41dac67e21dc817a0eb75781a1",
+          "ref": "73e1c9a8f80fa706e7fcaf20a1189e44434f6224",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -224,8 +224,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-17",
-              "ref": "f753755f2ec07c41dac67e21dc817a0eb75781a1",
-              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin after cat-harness#1372"
+              "ref": "73e1c9a8f80fa706e7fcaf20a1189e44434f6224",
+              "evidence": "litlfred 2026-11-17 window to ~23:35Z (owner extension relayed by the merge manager session_01EucfRnjwjC8CPYgVnsFuHS); re-pin during the layer freeze"
             },
             "standing": {
               "follows": "main",
