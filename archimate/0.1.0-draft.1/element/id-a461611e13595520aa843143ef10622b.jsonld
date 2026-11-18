@@ -4,7 +4,7 @@
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-a461611e13595520aa843143ef10622b",
+  "@id": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-a461611e13595520aa843143ef10622b",
   "@type": "archimate:Grouping",
   "schema:identifier": "id-a461611e13595520aa843143ef10622b",
   "schema:name": "Data Services",
@@ -13,5 +13,5 @@
   "dcterms:source": {
     "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-a461611e13595520aa843143ef10622b"
   },
-  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+  "dcterms:isPartOf": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

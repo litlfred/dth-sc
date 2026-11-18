@@ -4,7 +4,7 @@
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-43460361d71e57d2b0bb644b1ac6904d",
+  "@id": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-43460361d71e57d2b0bb644b1ac6904d",
   "@type": "archimate:Grouping",
   "schema:identifier": "id-43460361d71e57d2b0bb644b1ac6904d",
   "schema:name": "Shared Services",
@@ -13,5 +13,5 @@
   "dcterms:source": {
     "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-43460361d71e57d2b0bb644b1ac6904d"
   },
-  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+  "dcterms:isPartOf": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

@@ -4,7 +4,7 @@
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-ba1ec21bae4641378c56f714f72042d7",
+  "@id": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-ba1ec21bae4641378c56f714f72042d7",
   "@type": "archimate:ApplicationComponent",
   "schema:identifier": "id-ba1ec21bae4641378c56f714f72042d7",
   "schema:name": "Transportation Management System",
@@ -13,5 +13,5 @@
   "dcterms:source": {
     "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-ba1ec21bae4641378c56f714f72042d7"
   },
-  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+  "dcterms:isPartOf": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

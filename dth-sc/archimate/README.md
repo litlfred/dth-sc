@@ -19,7 +19,7 @@ smart-ra holds the framework itself, "DHSC Architecture Framework (DTH SC Fig. 1
 Each element carries one of two tags:
 
 - `overlay:base`: a reference copy of a smart-ra element, under the same id, with its smart-ra IRI as the value. It is there only so the overlay's views can draw it. The folio links it by that smart-ra IRI.
-- `overlay:owner` = `dth-sc`: an element this DTH adds (the three level groupings and Inventory Management System). The folio links it with a `https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/elements/…` IRI.
+- `overlay:owner` = `dth-sc`: an element this DTH adds (the three level groupings and Inventory Management System). The folio links it with a `https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/…` IRI.
 
 Only membership is drawn, as in the figures; no other relationships are asserted.
 

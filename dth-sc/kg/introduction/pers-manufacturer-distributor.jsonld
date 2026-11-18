@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
@@ -50,44 +50,44 @@
       "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-66d0f91175c154b48413d57e9f952a34.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-66d0f91175c154b48413d57e9f952a34",
           "name": "Manufacturer / Distributor",
           "type": "BusinessRole"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f8c43d85b20e5671b613d723483217a8.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-f8c43d85b20e5671b613d723483217a8",
           "name": "Manufacturer Systems",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-815bef20a55f5f59b409a76a9a6545f8.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-815bef20a55f5f59b409a76a9a6545f8",
           "name": "Product Master Data",
           "type": "DataObject"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-5dc77dae1bce5d11b288830795b31bdf.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-5dc77dae1bce5d11b288830795b31bdf",
           "name": "Traceability Event",
           "type": "DataObject"
         }
       ],
       "views": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-2d524cffba25509e82684f47d624cc42",
           "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-bea56e01c8345fbc803dee47a17ccfd3.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-bea56e01c8345fbc803dee47a17ccfd3",
           "name": "Track and Trace through DHSC Components (DTH SC Fig. 24)"
         }
       ]
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       },
       {
@@ -96,8 +96,8 @@
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
       "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/product"
     ],
     "relatedBlocks": [

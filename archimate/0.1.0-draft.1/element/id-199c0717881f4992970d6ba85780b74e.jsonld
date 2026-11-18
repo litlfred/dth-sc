@@ -4,7 +4,7 @@
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-199c0717881f4992970d6ba85780b74e",
+  "@id": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-199c0717881f4992970d6ba85780b74e",
   "@type": "archimate:ApplicationComponent",
   "schema:identifier": "id-199c0717881f4992970d6ba85780b74e",
   "schema:name": "Supplier registry",
@@ -12,5 +12,5 @@
   "dcterms:source": {
     "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-199c0717881f4992970d6ba85780b74e"
   },
-  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+  "dcterms:isPartOf": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

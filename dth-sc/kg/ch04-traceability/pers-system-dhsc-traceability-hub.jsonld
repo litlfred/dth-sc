@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
@@ -46,63 +46,63 @@
       "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3398a2d96e915055bf5e7aef22f9fbf8.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-3398a2d96e915055bf5e7aef22f9fbf8",
           "name": "Interoperability Layer",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3c5d846710034c4595e206e748d65e36.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-3c5d846710034c4595e206e748d65e36",
           "name": "DPI-F Information Mediator",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-2158ff0de2f95b2cbe005c3bf6fc9c01.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-2158ff0de2f95b2cbe005c3bf6fc9c01",
           "name": "Data Warehouse",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-fdce32337758449aab42701096622582.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-fdce32337758449aab42701096622582",
           "name": "Traceability Services",
           "type": "ApplicationService"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-975c5567001151299672c0341a733111.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-975c5567001151299672c0341a733111",
           "name": "Product Verification",
           "type": "ApplicationService"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-bc68171ed2615dad80e6f7d8199f4057.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-bc68171ed2615dad80e6f7d8199f4057",
           "name": "Track and Trace",
           "type": "ApplicationService"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-5dc77dae1bce5d11b288830795b31bdf.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-5dc77dae1bce5d11b288830795b31bdf",
           "name": "Traceability Event",
           "type": "DataObject"
         }
       ],
       "views": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-92267636cc42566ca5d2cff0e81be8c9",
           "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-bea56e01c8345fbc803dee47a17ccfd3.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-bea56e01c8345fbc803dee47a17ccfd3",
           "name": "Track and Trace through DHSC Components (DTH SC Fig. 24)"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-8c5dd12b8d4e425184f6003d0513d569.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-8c5dd12b8d4e425184f6003d0513d569",
           "name": "Interoperability Layer"
         }
       ]
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/centralized-traceability-model",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/centralized-traceability-model",
         "prefLabel": "Centralized Traceability Model"
       },
       {
@@ -115,8 +115,8 @@
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/centralized-traceability-model",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/centralized-traceability-model",
       "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/interoperability",
       "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/health-information-exchange"
     ],

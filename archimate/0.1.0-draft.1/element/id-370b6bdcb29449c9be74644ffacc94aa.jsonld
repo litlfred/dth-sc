@@ -4,7 +4,7 @@
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-370b6bdcb29449c9be74644ffacc94aa",
+  "@id": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-370b6bdcb29449c9be74644ffacc94aa",
   "@type": "archimate:ApplicationComponent",
   "schema:identifier": "id-370b6bdcb29449c9be74644ffacc94aa",
   "schema:name": "Dispensing System",
@@ -13,5 +13,5 @@
   "dcterms:source": {
     "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-370b6bdcb29449c9be74644ffacc94aa"
   },
-  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+  "dcterms:isPartOf": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

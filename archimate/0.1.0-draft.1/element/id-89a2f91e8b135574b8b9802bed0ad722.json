@@ -4,7 +4,7 @@
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-89a2f91e8b135574b8b9802bed0ad722",
+  "@id": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-89a2f91e8b135574b8b9802bed0ad722",
   "@type": "archimate:Grouping",
   "schema:identifier": "id-89a2f91e8b135574b8b9802bed0ad722",
   "schema:name": "External Systems",
@@ -13,5 +13,5 @@
   "dcterms:source": {
     "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-89a2f91e8b135574b8b9802bed0ad722"
   },
-  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+  "dcterms:isPartOf": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

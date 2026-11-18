@@ -4,7 +4,7 @@
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-4f7d1037d878435aa3a0fbdcee0c685b",
+  "@id": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-4f7d1037d878435aa3a0fbdcee0c685b",
   "@type": "archimate:ApplicationComponent",
   "schema:identifier": "id-4f7d1037d878435aa3a0fbdcee0c685b",
   "schema:name": "Forecasting & Supply Planning System",
@@ -13,5 +13,5 @@
   "dcterms:source": {
     "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-4f7d1037d878435aa3a0fbdcee0c685b"
   },
-  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+  "dcterms:isPartOf": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

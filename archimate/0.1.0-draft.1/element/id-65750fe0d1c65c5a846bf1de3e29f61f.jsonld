@@ -4,7 +4,7 @@
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-65750fe0d1c65c5a846bf1de3e29f61f",
+  "@id": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1/element/id-65750fe0d1c65c5a846bf1de3e29f61f",
   "@type": "archimate:ApplicationService",
   "schema:identifier": "id-65750fe0d1c65c5a846bf1de3e29f61f",
   "schema:name": "Supply Chain Reports",
@@ -13,5 +13,5 @@
   "dcterms:source": {
     "@id": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-65750fe0d1c65c5a846bf1de3e29f61f"
   },
-  "dcterms:isPartOf": "https://litlfred.github.io/dth-sc/archimate/0.1.0-draft.1"
+  "dcterms:isPartOf": "https://worldhealthorganization.github.io/dth-sc/archimate/0.1.0-draft.1"
 }

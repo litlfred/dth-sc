@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
@@ -48,46 +48,46 @@
       "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-13c797002a665825a4b5714349580da7.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-13c797002a665825a4b5714349580da7",
           "name": "Health Supply Chain Processes",
           "type": "BusinessProcess"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ef2ed03c5fd958cbae67247b253bcba0.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-ef2ed03c5fd958cbae67247b253bcba0",
           "name": "Health Supply Chain Information Systems",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-88a90dfa38904fba930a49add401e660.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-88a90dfa38904fba930a49add401e660",
           "name": "Governance, Policy, and Legislation",
           "type": "Capability"
         }
       ],
       "views": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-92267636cc42566ca5d2cff0e81be8c9",
           "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
         }
       ]
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain-intervention",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain-intervention",
         "prefLabel": "Digital Health Supply Chain Intervention"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
         "prefLabel": "Health Supply Chain Information System"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/governance-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/governance-health-supply-chain",
         "prefLabel": "Governance (Health Supply Chain)"
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain-intervention",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/governance-health-supply-chain"
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain-intervention",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/governance-health-supply-chain"
     ],
     "relatedBlocks": [
       "bp:sc-bp-01-stepwise-dhsc-transformation",
