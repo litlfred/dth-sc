@@ -221,7 +221,7 @@ for i in sorted(used - set(owned_ids.values()), key=lambda i: (by_id[i].get(T), 
         e.remove(p)
     pos = 1 if e.find("documentation") is not None else 0
     e.insert(pos, ET.Element("property", {"key": "overlay:base", "value":
-             f"https://litlfred.github.io/smart-ra/archimate/{base_ver}/elements/{i}.jsonld"}))
+             f"https://litlfred.github.io/smart-ra/archimate/{base_ver}/element/{i}"}))
     base_folder(top_type[i]).append(e)
     counts["base"] += 1
 for v in views:

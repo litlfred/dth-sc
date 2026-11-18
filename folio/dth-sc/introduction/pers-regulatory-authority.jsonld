@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
@@ -51,49 +51,49 @@
       "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-8e67c8e9e1195cdc857b03a2c640e7fe.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-8e67c8e9e1195cdc857b03a2c640e7fe",
           "name": "National Regulatory Authority",
           "type": "BusinessRole"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-22eff58eae365a4f8d0e0368d8c3497e.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-22eff58eae365a4f8d0e0368d8c3497e",
           "name": "Regulatory Systems",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-59c26d672a4248e0bb83cf4d26cba10c.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-59c26d672a4248e0bb83cf4d26cba10c",
           "name": "Product Registry",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-975c5567001151299672c0341a733111.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-975c5567001151299672c0341a733111",
           "name": "Product Verification",
           "type": "ApplicationService"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-a9c92f8fa2924d4180e8f5512b0d0097.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-a9c92f8fa2924d4180e8f5512b0d0097",
           "name": "Recall",
           "type": "BusinessProcess"
         }
       ],
       "views": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-2d524cffba25509e82684f47d624cc42",
           "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-bea56e01c8345fbc803dee47a17ccfd3.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-bea56e01c8345fbc803dee47a17ccfd3",
           "name": "Track and Trace through DHSC Components (DTH SC Fig. 24)"
         }
       ]
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       },
       {
@@ -102,8 +102,8 @@
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
       "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/registry"
     ],
     "relatedBlocks": [

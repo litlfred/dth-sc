@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
@@ -43,49 +43,49 @@
       "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-2bfebc1bb917583cbc21e7d1bfac3164.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-2bfebc1bb917583cbc21e7d1bfac3164",
           "name": "Procurer",
           "type": "BusinessRole"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-9825f8c281d74fa5a9ec0171e246fb27.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-9825f8c281d74fa5a9ec0171e246fb27",
           "name": "Procurement Management",
           "type": "Capability"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f3331a72444d4cc49391c25e0f7745fd.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-f3331a72444d4cc49391c25e0f7745fd",
           "name": "Supplier & Contracts Management",
           "type": "Capability"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-58832f74225140c38ddc4ebaa5fef90c.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-58832f74225140c38ddc4ebaa5fef90c",
           "name": "Procurement Management System",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-566242a824b24ede92c7b6593b827b94.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-566242a824b24ede92c7b6593b827b94",
           "name": "Supplier & Contract Management System",
           "type": "ApplicationComponent"
         }
       ],
       "views": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-2d524cffba25509e82684f47d624cc42",
           "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-92267636cc42566ca5d2cff0e81be8c9",
           "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
         }
       ]
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
         "prefLabel": "Health Supply Chain Information System"
       },
       {
@@ -94,8 +94,8 @@
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
       "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/stakeholder"
     ],
     "relatedBlocks": [

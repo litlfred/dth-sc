@@ -4,7 +4,7 @@
                   xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
                   id="Definitions_SC_BP_03"
-                  targetNamespace="https://litlfred.github.io/dth-sc/bpmn">
+                  targetNamespace="https://worldhealthorganization.github.io/dth-sc/bpmn">
 
   <bpmn:resource id="pers:manufacturer-distributor" name="Manufacturer and distributor"/>
   <bpmn:resource id="pers:central-warehouse" name="Central warehouse (central medical store)"/>

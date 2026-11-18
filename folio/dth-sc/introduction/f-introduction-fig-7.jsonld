@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns/"
@@ -39,7 +39,7 @@
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       },
       {
@@ -56,19 +56,19 @@
       "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC4, smart-ra#147)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-370b6bdcb29449c9be74644ffacc94aa.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-370b6bdcb29449c9be74644ffacc94aa",
           "name": "Dispensing System"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-35d0806bcb5c46fab5102d75de09558f.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-35d0806bcb5c46fab5102d75de09558f",
           "name": "Warehouse Management System"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-f6022dce920d4f828581dd2f7e15280f.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-f6022dce920d4f828581dd2f7e15280f",
           "name": "Order Management System"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-d626508a7dc55b1fb11bf34f57f8ddd9.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-d626508a7dc55b1fb11bf34f57f8ddd9",
           "name": "Health Management Information System"
         }
       ]

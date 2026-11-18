@@ -136,7 +136,7 @@
 <text x="259.71" y="228.52" font-size="7.52" font-weight="700" textLength="75.38" lengthAdjust="spacingAndGlyphs">Interoperability Layer</text>
 <text x="196.15" y="86.73" font-size="5.85" fill="#FFFFFF" textLength="31.82" lengthAdjust="spacingAndGlyphs">Dashboards</text>
 <text x="262.9" y="86.73" font-size="5.85" fill="#FFFFFF" textLength="20.97" lengthAdjust="spacingAndGlyphs">Reports</text>
-<a href="https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"><title>https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability</title><text x="319.1" y="86.73" font-size="5.85" fill="#FFFFFF" textLength="31.22" lengthAdjust="spacingAndGlyphs">Traceability</text></a>
+<a href="https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"><title>https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability</title><text x="319.1" y="86.73" font-size="5.85" fill="#FFFFFF" textLength="31.22" lengthAdjust="spacingAndGlyphs">Traceability</text></a>
 <text x="382.42" y="78.11" font-size="6.68" fill="#FFFFFF" textLength="29.48" lengthAdjust="spacingAndGlyphs">Returns &amp;</text>
 <text x="386.36" y="86.33" font-size="6.68" fill="#FFFFFF" textLength="21.63" lengthAdjust="spacingAndGlyphs">Recalls</text>
 <text x="443.72" y="85.92" font-size="6.68" fill="#FFFFFF" textLength="33.94" lengthAdjust="spacingAndGlyphs">Verification</text>
@@ -156,7 +156,7 @@
 <text x="160.05" y="127.38" font-size="7.52" font-weight="700" textLength="80.11" lengthAdjust="spacingAndGlyphs">Interoperability Layer -</text>
 <text x="241.77" y="127.38" font-size="7.52" textLength="189.96" lengthAdjust="spacingAndGlyphs">Data Transformation, Data Orchestration &amp; Data Exchange</text>
 <text x="278.4" y="135.79" font-size="6.68" font-weight="700" textLength="2.26" lengthAdjust="spacingAndGlyphs">(</text>
-<a href="https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/openhim"><title>https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/openhim</title><text x="280.63" y="135.79" font-size="6.68" textLength="28.69" lengthAdjust="spacingAndGlyphs">OpenHIM</text></a>
+<a href="https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/openhim"><title>https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/openhim</title><text x="280.63" y="135.79" font-size="6.68" textLength="28.69" lengthAdjust="spacingAndGlyphs">OpenHIM</text></a>
 <text x="309.28" y="135.79" font-size="6.68" font-weight="700" textLength="2.26" lengthAdjust="spacingAndGlyphs">)</text>
 <text x="35.57" y="166.43" font-size="7.52" font-weight="700" fill="#084F6A" textLength="22.48" lengthAdjust="spacingAndGlyphs">Global</text>
 <text x="28.49" y="218.9" font-size="5.01" font-weight="700" fill="#084F6A" textLength="36.21" lengthAdjust="spacingAndGlyphs">Manufacturers</text>

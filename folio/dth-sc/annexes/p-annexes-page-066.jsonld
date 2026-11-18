@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns/"
@@ -33,11 +33,11 @@
     ],
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/governance-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/governance-health-supply-chain",
         "prefLabel": "Governance (Health Supply Chain)"
       },
       {
@@ -62,12 +62,12 @@
       "basis": "Annex 1 Principles for Digital Development aligned with DIIG and smart-ra governance, interoperability, and data governance capabilities (dth-sc#2 SC5)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-88a90dfa38904fba930a49add401e660.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-88a90dfa38904fba930a49add401e660",
           "name": "Governance, Policy, and Legislation",
           "type": "Capability"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-3398a2d96e915055bf5e7aef22f9fbf8.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-3398a2d96e915055bf5e7aef22f9fbf8",
           "name": "Interoperability Layer",
           "type": "ApplicationComponent"
         }

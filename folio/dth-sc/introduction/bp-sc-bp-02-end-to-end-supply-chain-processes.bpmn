@@ -4,7 +4,7 @@
                   xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
                   id="Definitions_SC_BP_02"
-                  targetNamespace="https://litlfred.github.io/dth-sc/bpmn">
+                  targetNamespace="https://worldhealthorganization.github.io/dth-sc/bpmn">
 
   <bpmn:resource id="pers:ministry-of-health" name="Ministry of health (MOH)"/>
   <bpmn:resource id="pers:regulatory-authority" name="National regulatory authority"/>

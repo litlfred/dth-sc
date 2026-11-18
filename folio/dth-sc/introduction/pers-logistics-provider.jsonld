@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "smart-base": "https://litlfred.github.io/smart-base/v0/ns/"
@@ -44,55 +44,55 @@
       "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2, smart-ra#147)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-158e2821549e588ca4fe4bb2a839547a.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-158e2821549e588ca4fe4bb2a839547a",
           "name": "Logistics Provider",
           "type": "BusinessRole"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-b37bf4947ec9430197f9056d283eb5b0.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-b37bf4947ec9430197f9056d283eb5b0",
           "name": "Transportation Management",
           "type": "Capability"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-ba1ec21bae4641378c56f714f72042d7.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-ba1ec21bae4641378c56f714f72042d7",
           "name": "Transportation Management System",
           "type": "ApplicationComponent"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-57be342b728e5ac08fa2143faba83984.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-57be342b728e5ac08fa2143faba83984",
           "name": "Cold Chain Management System",
           "type": "ApplicationComponent"
         }
       ],
       "views": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-2d524cffba25509e82684f47d624cc42.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-2d524cffba25509e82684f47d624cc42",
           "name": "Health Supply Chain Partners and Processes (DTH SC Figs. 1-3)"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-92267636cc42566ca5d2cff0e81be8c9.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-92267636cc42566ca5d2cff0e81be8c9",
           "name": "DHSC Architecture Framework (DTH SC Fig. 14)"
         }
       ]
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
         "prefLabel": "Health Supply Chain Information System"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       }
     ],
     "glossaryTerms": [
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
-      "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
+      "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability"
     ],
     "relatedBlocks": [
       "bp:sc-bp-02-end-to-end-supply-chain-processes",

@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://litlfred.github.io/dth-sc/ns/context/v1.jsonld",
+    "https://worldhealthorganization.github.io/dth-sc/ns/context/v1.jsonld",
     {
       "@base": "https://litlfred.github.io/folio/",
       "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/v0/ns/"
@@ -25,11 +25,11 @@
     },
     "glossary": [
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
         "prefLabel": "Digital Health Supply Chain"
       },
       {
-        "iri": "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+        "iri": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
         "prefLabel": "Traceability"
       }
     ],
@@ -38,25 +38,25 @@
       "basis": "agent-proposed by name and figure mapping, for working-group review (dth-sc#2 SC4, smart-ra#147)",
       "elements": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-65d5884fa08c526e91d56c6f8a2f6391.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-65d5884fa08c526e91d56c6f8a2f6391",
           "name": "Traceability"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-e88f6d077d31407bb1af5f2ecfd3b48a.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-e88f6d077d31407bb1af5f2ecfd3b48a",
           "name": "Traceability"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-bc68171ed2615dad80e6f7d8199f4057.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-bc68171ed2615dad80e6f7d8199f4057",
           "name": "Track and Trace"
         },
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/elements/id-975c5567001151299672c0341a733111.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/element/id-975c5567001151299672c0341a733111",
           "name": "Product Verification"
         }
       ],
       "views": [
         {
-          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/views/id-bea56e01c8345fbc803dee47a17ccfd3.jsonld",
+          "iri": "https://litlfred.github.io/smart-ra/archimate/0.3.0-draft.1/view/id-bea56e01c8345fbc803dee47a17ccfd3",
           "name": "Track and Trace through DHSC Components (DTH SC Fig. 24)"
         }
       ]

@@ -147,7 +147,9 @@ if (ra) {
   // This DTH's own overlay on smart-ra (archimate/, dth-sc#2 SC3): its views and the elements it adds.
   const own = loadModels(".");
   const raElements = new Set([...ids.values()].flatMap((m) => [...m.elements]));
-  const iriRe = /\/archimate\/([^/]+)\/(elements|views)\/([^/]+)\.jsonld$/;
+  // A node's IRI, `…/archimate/<model>/element/<id>` or `…/view/<id>` (cat-harness-tools Q-THIN-2 A,
+  // issue #1830); the plural `…/elements/<id>.jsonld` paths are no longer written.
+  const iriRe = /\/archimate\/([^/]+)\/(element|view)\/([^/.]+)$/;
   let archBlocks = 0;
   let archLinks = 0;
   let figMappings = 0;
@@ -185,10 +187,10 @@ if (ra) {
         const iri = String(x.iri);
         const models = iri.startsWith("https://litlfred.github.io/smart-ra/")
           ? ids
-          : iri.startsWith("https://litlfred.github.io/dth-sc/")
+          : iri.startsWith("https://worldhealthorganization.github.io/dth-sc/")
             ? own
             : undefined;
-        const ok = hit && models?.get(hit[1])?.[hit[2] as "elements" | "views"].has(hit[3]);
+        const ok = hit && models?.get(hit[1])?.[`${hit[2]}s` as "elements" | "views"].has(hit[3]);
         if (!ok) {
           console.error(`✗ ${file}: ${x.iri} (${x.name}) is not in the mounted dpi-h-ra model or the dth-sc overlay`);
           bad++;
