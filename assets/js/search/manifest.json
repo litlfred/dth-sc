@@ -2,7 +2,7 @@
   "$schema": "folio-search-manifest/v1",
   "source": {
     "path": "assets/js/search-data.json",
-    "sha256": "d7bc20d10d0aa6cade53875586cb632a12e7b69c2ad6ba6401265b5d5e75f90b",
+    "sha256": "dce7fd6ae07b449abd8f9e06ede663290447c5d10778256c592663938ad13b39",
     "entries": 583,
     "bytes": 434214
   },
@@ -11,57 +11,8 @@
       "id": "_platform",
       "kind": "platform",
       "path": "assets/js/search/_platform.json",
-      "entries": 3,
-      "bytes": 727
-    },
-    {
-      "id": "cat-harness",
-      "kind": "instance",
-      "path": "assets/js/search/cat-harness.json",
-      "entries": 131,
-      "bytes": 97959
-    },
-    {
-      "id": "folio-assistant-core",
-      "kind": "instance",
-      "path": "assets/js/search/folio-assistant-core.json",
-      "entries": 419,
-      "bytes": 303243
-    },
-    {
-      "id": "locale-ar",
-      "kind": "locale",
-      "path": "assets/js/search/locale-ar.json",
-      "entries": 6,
-      "bytes": 3307
-    },
-    {
-      "id": "locale-es",
-      "kind": "locale",
-      "path": "assets/js/search/locale-es.json",
-      "entries": 6,
-      "bytes": 2840
-    },
-    {
-      "id": "locale-fr",
-      "kind": "locale",
-      "path": "assets/js/search/locale-fr.json",
-      "entries": 6,
-      "bytes": 2830
-    },
-    {
-      "id": "locale-ru",
-      "kind": "locale",
-      "path": "assets/js/search/locale-ru.json",
-      "entries": 6,
-      "bytes": 3613
-    },
-    {
-      "id": "locale-zh",
-      "kind": "locale",
-      "path": "assets/js/search/locale-zh.json",
-      "entries": 6,
-      "bytes": 2754
+      "entries": 583,
+      "bytes": 417266
     }
   ],
   "remote": [
@@ -71,5 +22,17 @@
       "href": "id-lookup/?index=who-iris/",
       "entries": 53
     }
-  ]
+  ],
+  "layers": [
+    "bootstrap",
+    "bootstrap-tools",
+    "cat-harness",
+    "cat-harness-tools",
+    "dpi-h-ra",
+    "fhir-harness",
+    "folio-assistant-core",
+    "smart-base",
+    "who-iris"
+  ],
+  "kgSearch": "slices/search.html?slice=kg"
 }

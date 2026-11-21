@@ -1,0 +1,689 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "isDefinedBy": {
+      "@id": "rdfs:isDefinedBy",
+      "@type": "@id"
+    },
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "prefLabel": "skos:prefLabel",
+    "definition": "skos:definition",
+    "inScheme": {
+      "@id": "skos:inScheme",
+      "@type": "@id"
+    }
+  },
+  "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+  "@type": "owl:Ontology",
+  "label": "dth-sc namespace",
+  "@graph": [
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "@type": "skos:ConceptScheme",
+      "prefLabel": "Glossary of the Digital Transformation Handbook for Health Supply Chain Architecture",
+      "definition": "The handbook's supply chain terms, one concept per term, each quoting the handbook's own definition with its L1 page. General digital terms (digital health, interoperability, registry, enterprise architecture and the rest of the handbook's glossary) are NOT minted here: they are held once in smart-ra, with this handbook's wording as a cited alternative (litlfred/smart-ra#140, #183). Every term is a candidate: only a person adopts a definition. Each term links via SKOS broadMatch/closeMatch/related to the dpi-h-ra concept it narrows or relates to (smart-ra#133 S1, dth-sc#2 SC2b). Concept labels are Capitalized (owner ruling, 2026-10-31, relayed from the dth-pc thread). Trade Item and Product Master Data are defined in dth-pc, not here (smart-ra#142). Acronyms (owner, 2026-10-31): every acronym the handbook uses is a term here with the acronym as notation, unless smart-ra already holds it (FHIR). Organizations several handbooks name live once in smart-ra's organizations scheme and are listed under members; organizations only this handbook names (DH&I WG, DHI, USAID GHSC-PSM, HTSS, IHE, ICMRA, PtD, ASCM, BUFMAR, DAI) are terms here with a foaf:focus to a W3C ORG organization (litlfred/folio-assistant-core#411).",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../assets/glossary/dth-sc--dth-sc.skos.jsonld"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Digital Health Supply Chain",
+      "definition": "The knowledge and practice of adopting digital technologies to improve health supply chains and enable the delivery of quality-assured health products to individuals when and where they need them.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/digital-health-supply-chain/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-supply-chain-intervention",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Digital Health Supply Chain Intervention",
+      "definition": "An intervention that involves the use of digital technologies to improve the management and operation of health supply chains. It aims to enhance the efficiency and effectiveness of health supply chain processes such as planning, procurement, distribution and warehouse management.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/digital-health-supply-chain-intervention/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-supply-chain-information-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Health Supply Chain Information System",
+      "definition": "A paper-based or software tool that supports the management and/or operations of the health supply chain. Such software tools (e.g., for order management or warehouse management) are also commonly referred to as electronic logistics management information systems.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/health-supply-chain-information-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Order Management",
+      "definition": "The planning, directing, monitoring and controlling of the processes related to customer or requisition orders. Order management includes order promising; order entry; order pick, pack and ship; billing; and reconciliation of the customer account.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/order-management/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/order-management-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Order Management System",
+      "definition": "A paper-based or software tool that supports the processes for fulfilling requisition orders (e.g., a software tool that supports entry and processing of requisition orders from health facilities to regional or central warehouses to replenish inventory).",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/order-management-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/warehouse-management-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Warehouse Management System",
+      "definition": "A computer application that manages and optimizes workflows and the storage of goods within a warehouse. It often interfaces with automated data capture and enterprise resource planning systems.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/warehouse-management-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/governance-health-supply-chain",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Governance (Health Supply Chain)",
+      "definition": "In the context of the health supply chain, the process of establishing and implementing policies, procedures and mechanisms to ensure that the supply chain processes and the systems to manage those processes are managed effectively, ethically and in alignment with established objectives and stakeholders' interests.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/governance-health-supply-chain/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Traceability",
+      "definition": "The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/traceability/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/traceability-model",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Traceability Model",
+      "definition": "One of the three main models for implementing traceability (centralized, semi-centralized, distributed), which differ mostly in how they store traceability data and share them with the relevant health authority and across actors in the supply chain.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/traceability-model/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/centralized-traceability-model",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Centralized Traceability Model",
+      "definition": "A traceability model that involves a single database or repository for storing all traceability data.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/centralized-traceability-model/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/semi-centralized-traceability-model",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Semi-Centralized Traceability Model",
+      "definition": "A traceability model in which the traceability data are spread across multiple databases or repositories.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/semi-centralized-traceability-model/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/distributed-traceability-model",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Distributed Traceability Model",
+      "definition": "A traceability model in which traceability data are maintained separately by each supply chain partner.",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/distributed-traceability-model/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-implementation-investment-guide",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Digital Implementation Investment Guide",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/digital-implementation-investment-guide/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-regulatory-information-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Electronic Regulatory Information System",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/electronic-regulatory-information-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/enterprise-resource-planning",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Enterprise Resource Planning",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/enterprise-resource-planning/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/full-time-equivalent",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Full-Time Equivalent",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/full-time-equivalent/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/global-family-planning-visibility-and-analytics-network",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Global Family Planning Visibility and Analytics Network",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/global-family-planning-visibility-and-analytics-network/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/information-and-communications-technology",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Information and Communications Technology",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/information-and-communications-technology/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/information-technology",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Information Technology",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/information-technology/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/key-performance-indicator",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Key Performance Indicator",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/key-performance-indicator/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/ministry-of-health",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Ministry of Health",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/ministry-of-health/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/national-product-catalog",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "National Product Catalog",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/national-product-catalog/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/national-supply-chain-assessment",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "National Supply Chain Assessment",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/national-supply-chain-assessment/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/quality-assurance",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Quality Assurance",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/quality-assurance/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-proposal",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Request for Proposal",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/request-for-proposal/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-quotation",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Request for Quotation",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/request-for-quotation/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/supply-chain-information-system-maturity-model",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Supply Chain Information System Maturity Model",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/supply-chain-information-system-maturity-model/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/supply-chain-systems-architecture",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Supply Chain Systems Architecture",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/supply-chain-systems-architecture/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/smart",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Standards-based, Machine-readable, Adaptive, Requirements-based and Testable",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/smart/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/togaf",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "The Open Group Architecture Framework",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/togaf/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/target-software-standards",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Target Software Standards",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/target-software-standards/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/technical-working-group",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Technical Working Group",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/technical-working-group/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/declaration-of-interests",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Declaration of Interests",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/declaration-of-interests/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/monitoring-and-evaluation",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Monitoring and Evaluation",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/monitoring-and-evaluation/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/antenatal-care",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Antenatal Care",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/antenatal-care/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/rapid-assessment-and-management",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Rapid Assessment and Management",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/rapid-assessment-and-management/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/raci",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Responsible, Accountable, Consulted, and Informed",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/raci/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/request-for-information",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Request for Information",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/request-for-information/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/national-supply-chain-information-systems",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "National Supply Chain Information Systems",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/national-supply-chain-information-systems/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/facilities-supply-chain-information-systems",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Facilities' Supply Chain Information Systems",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/facilities-supply-chain-information-systems/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-supply-chain",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Digital Supply Chain",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/digital-supply-chain/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/ihe-pharmacy",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "IHE Pharmacy",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/ihe-pharmacy/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-technology-officer",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Chief Technology Officer",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/chief-technology-officer/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-information-officer",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Chief Information Officer",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/chief-information-officer/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/chief-digital-officer",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Chief Digital Officer",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/chief-digital-officer/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/user-acceptance-testing",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "User Acceptance Testing",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/user-acceptance-testing/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/total-cost-of-ownership",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Total Cost of Ownership",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/total-cost-of-ownership/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/transportation-management-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Transportation Management System",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/transportation-management-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/community-health-worker",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Community Health Worker",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/community-health-worker/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-facility-logistics-management-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Health Facility Logistics Management System",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/health-facility-logistics-management-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-logistics-management-information-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Electronic Logistics Management Information System",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/electronic-logistics-management-information-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/openlmis",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Open Logistics Management Information System",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/openlmis/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/dhis2",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "District Health Information Software 2",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/dhis2/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-medical-record",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Electronic Medical Record",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/electronic-medical-record/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/openhim",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Open Health Information Mediator",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/openhim/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/quantification-analytics-tool",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Quantification Analytics Tool",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/quantification-analytics-tool/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/dagu",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Dagu",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/dagu/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-government-procurement",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Electronic Government Procurement",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/electronic-government-procurement/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/electronic-health-information-network",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Electronic Health Information Network",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/electronic-health-information-network/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-information-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Health Information System",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/health-information-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/quantb",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "QuanTB",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/quantb/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/vitas",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "VITAS",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/vitas/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/eapts",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Electronic Auditable Pharmaceutical Transactions and Services",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/eapts/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/fanos",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "FANOS",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/fanos/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/rapidsms",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "RapidSMS",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/rapidsms/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/sage",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Sage",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/sage/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/geographic-information-system",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Geographic Information System",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/geographic-information-system/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/sustainable-development-goal",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Sustainable Development Goal",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/sustainable-development-goal/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/global-trade-item-number",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Global Trade Item Number",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/global-trade-item-number/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/global-location-number",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Global Location Number",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/global-location-number/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/digital-health-and-interoperability-working-group",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Digital Health and Interoperability Working Group",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/digital-health-and-interoperability-working-group/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/who-department-of-digital-health-and-innovations",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Department of Digital Health and Innovations",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/who-department-of-digital-health-and-innovations/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/usaid-ghsc-psm",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "USAID Global Health Supply Chain Program–Procurement and Supply Management",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/usaid-ghsc-psm/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/health-technical-support-services",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Health Technical Support Services",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/health-technical-support-services/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/integrating-the-healthcare-enterprise",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Integrating the Healthcare Enterprise",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/integrating-the-healthcare-enterprise/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/icmra",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "International Coalition of Medicines Regulatory Authorities",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/icmra/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/people-that-deliver",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "People that Deliver",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/people-that-deliver/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/association-for-supply-chain-management",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Association for Supply Chain Management",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/association-for-supply-chain-management/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/bufmar",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "Bureau des Formations Médicales Agréées du Rwanda",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/bufmar/"
+    },
+    {
+      "@id": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc/dai",
+      "@type": "skos:Concept",
+      "inScheme": "https://worldhealthorganization.github.io/dth-sc/v0/ns/glossary/dth-sc",
+      "prefLabel": "DAI",
+      "isDefinedBy": "https://worldhealthorganization.github.io/dth-sc/v0/ns/",
+      "seeAlso": "../../en/folio-assistant-core/glossary/instance/dth-sc/dth-sc/dai/"
+    }
+  ]
+}

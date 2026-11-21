@@ -7,7 +7,7 @@
   "@type": "WebPage",
   "name": "Reference Architecture and Guidance for Digital Public Infrastructure for the Health Sector on Digital Transformation Handbook for Health Supply Chain Architecture",
   "about": {
-    "@id": "https://litlfred.github.io/smart-ra/",
+    "@id": "https://worldhealthorganization.github.io/smart-ra/",
     "@type": "SoftwareSourceCode",
     "identifier": "dpi-h-ra",
     "name": "Reference Architecture and Guidance for Digital Public Infrastructure for the Health Sector",
@@ -22,7 +22,7 @@
     "additionalProperty": {
       "@type": "PropertyValue",
       "name": "pinnedCommit",
-      "value": "4ff3621433dae8e6a44f303c043845f52d3f7fe8"
+      "value": "0ce33a4603dbb9fb86906720e8305fc36904ec48"
     }
   },
   "isPartOf": {
@@ -31,8 +31,8 @@
   },
   "significantLink": [
     "https://litlfred.github.io/folio-assistant/#harness-dpi-h-ra",
-    "https://github.com/litlfred/smart-ra/tree/4ff3621433dae8e6a44f303c043845f52d3f7fe8",
-    "https://github.com/litlfred/smart-ra/blob/4ff3621433dae8e6a44f303c043845f52d3f7fe8/README.md",
-    "https://github.com/litlfred/smart-ra/blob/4ff3621433dae8e6a44f303c043845f52d3f7fe8/AGENTS.md"
+    "https://github.com/litlfred/smart-ra/tree/0ce33a4603dbb9fb86906720e8305fc36904ec48",
+    "https://github.com/litlfred/smart-ra/blob/0ce33a4603dbb9fb86906720e8305fc36904ec48/README.md",
+    "https://github.com/litlfred/smart-ra/blob/0ce33a4603dbb9fb86906720e8305fc36904ec48/AGENTS.md"
   ]
 }

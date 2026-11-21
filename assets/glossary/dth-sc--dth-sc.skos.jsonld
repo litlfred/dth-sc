@@ -26,15 +26,20 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Digital Health Supply Chain"
+          "@value": "Digital Health Supply Chain",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "DHSC"
+        {
+          "@value": "DHSC",
+          "@language": "en"
+        }
       ],
       "skos:definition": [
         {
-          "@value": "The knowledge and practice of adopting digital technologies to improve health supply chains and enable the delivery of quality-assured health products to individuals when and where they need them."
+          "@value": "The knowledge and practice of adopting digital technologies to improve health supply chains and enable the delivery of quality-assured health products to individuals when and where they need them.",
+          "@language": "en"
         }
       ],
       "skos:notation": "DHSC",
@@ -63,12 +68,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Digital Health Supply Chain Intervention"
+          "@value": "Digital Health Supply Chain Intervention",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "An intervention that involves the use of digital technologies to improve the management and operation of health supply chains. It aims to enhance the efficiency and effectiveness of health supply chain processes such as planning, procurement, distribution and warehouse management."
+          "@value": "An intervention that involves the use of digital technologies to improve the management and operation of health supply chains. It aims to enhance the efficiency and effectiveness of health supply chain processes such as planning, procurement, distribution and warehouse management.",
+          "@language": "en"
         }
       ],
       "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives.",
@@ -101,16 +108,24 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Health Supply Chain Information System"
+          "@value": "Health Supply Chain Information System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "HSCIS",
-        "electronic logistics management information system"
+        {
+          "@value": "HSCIS",
+          "@language": "en"
+        },
+        {
+          "@value": "electronic logistics management information system",
+          "@language": "en"
+        }
       ],
       "skos:definition": [
         {
-          "@value": "A paper-based or software tool that supports the management and/or operations of the health supply chain. Such software tools (e.g., for order management or warehouse management) are also commonly referred to as electronic logistics management information systems."
+          "@value": "A paper-based or software tool that supports the management and/or operations of the health supply chain. Such software tools (e.g., for order management or warehouse management) are also commonly referred to as electronic logistics management information systems.",
+          "@language": "en"
         }
       ],
       "skos:notation": "HSCIS",
@@ -139,12 +154,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Order Management"
+          "@value": "Order Management",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The planning, directing, monitoring and controlling of the processes related to customer or requisition orders. Order management includes order promising; order entry; order pick, pack and ship; billing; and reconciliation of the customer account."
+          "@value": "The planning, directing, monitoring and controlling of the processes related to customer or requisition orders. Order management includes order promising; order entry; order pick, pack and ship; billing; and reconciliation of the customer account.",
+          "@language": "en"
         }
       ],
       "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook cites its reference 11 for this definition.",
@@ -164,15 +181,20 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Order Management System"
+          "@value": "Order Management System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "OMS"
+        {
+          "@value": "OMS",
+          "@language": "en"
+        }
       ],
       "skos:definition": [
         {
-          "@value": "A paper-based or software tool that supports the processes for fulfilling requisition orders (e.g., a software tool that supports entry and processing of requisition orders from health facilities to regional or central warehouses to replenish inventory)."
+          "@value": "A paper-based or software tool that supports the processes for fulfilling requisition orders (e.g., a software tool that supports entry and processing of requisition orders from health facilities to regional or central warehouses to replenish inventory).",
+          "@language": "en"
         }
       ],
       "skos:notation": "OMS",
@@ -206,15 +228,20 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Warehouse Management System"
+          "@value": "Warehouse Management System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "WMS"
+        {
+          "@value": "WMS",
+          "@language": "en"
+        }
       ],
       "skos:definition": [
         {
-          "@value": "A computer application that manages and optimizes workflows and the storage of goods within a warehouse. It often interfaces with automated data capture and enterprise resource planning systems."
+          "@value": "A computer application that manages and optimizes workflows and the storage of goods within a warehouse. It often interfaces with automated data capture and enterprise resource planning systems.",
+          "@language": "en"
         }
       ],
       "skos:notation": "WMS",
@@ -245,12 +272,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Governance (Health Supply Chain)"
+          "@value": "Governance (Health Supply Chain)",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "In the context of the health supply chain, the process of establishing and implementing policies, procedures and mechanisms to ensure that the supply chain processes and the systems to manage those processes are managed effectively, ethically and in alignment with established objectives and stakeholders' interests."
+          "@value": "In the context of the health supply chain, the process of establishing and implementing policies, procedures and mechanisms to ensure that the supply chain processes and the systems to manage those processes are managed effectively, ethically and in alignment with established objectives and stakeholders' interests.",
+          "@language": "en"
         }
       ],
       "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. Boxed definition in Chapter 3 (PDF 45). Differs substantively from the draft RA's 'governance'; both are recorded as alternatives in litlfred/smart-ra#140.",
@@ -278,12 +307,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Traceability"
+          "@value": "Traceability",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification."
+          "@value": "The ability to trace something. In some cases, it is interpreted as the ability to verify the history, location or application of an item by means of documented identification.",
+          "@language": "en"
         }
       ],
       "skos:scopeNote": "Handbook definition, quoted. Open: not adopted, nothing chosen between alternatives. The handbook gives a second definition in Chapter 4 (PDF 54), citing GS1: the ability 'to see the movement of health products across the supply chain'. Both are kept as alternatives; neither is chosen (litlfred/smart-ra#140). dth-pc and dth-sfp link to this term.",
@@ -311,12 +342,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Traceability Model"
+          "@value": "Traceability Model",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "One of the three main models for implementing traceability (centralized, semi-centralized, distributed), which differ mostly in how they store traceability data and share them with the relevant health authority and across actors in the supply chain."
+          "@value": "One of the three main models for implementing traceability (centralized, semi-centralized, distributed), which differ mostly in how they store traceability data and share them with the relevant health authority and across actors in the supply chain.",
+          "@language": "en"
         }
       ],
       "skos:scopeNote": "Assembled from two sentences of Chapter 4 (PDF 54): 'The three main models for implementing traceability are the centralized, semi-centralized and distributed models. They differ mostly in how they store the data and share them with the relevant health authority and across actors in the supply chain.' The handbook does not state it as a definition, and recommends none of the models. Open: not adopted.",
@@ -347,12 +380,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Centralized Traceability Model"
+          "@value": "Centralized Traceability Model",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "A traceability model that involves a single database or repository for storing all traceability data."
+          "@value": "A traceability model that involves a single database or repository for storing all traceability data.",
+          "@language": "en"
         }
       ],
       "skos:scopeNote": "The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted.",
@@ -385,12 +420,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Semi-Centralized Traceability Model"
+          "@value": "Semi-Centralized Traceability Model",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "A traceability model in which the traceability data are spread across multiple databases or repositories."
+          "@value": "A traceability model in which the traceability data are spread across multiple databases or repositories.",
+          "@language": "en"
         }
       ],
       "skos:scopeNote": "The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted.",
@@ -423,12 +460,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Distributed Traceability Model"
+          "@value": "Distributed Traceability Model",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "A traceability model in which traceability data are maintained separately by each supply chain partner."
+          "@value": "A traceability model in which traceability data are maintained separately by each supply chain partner.",
+          "@language": "en"
         }
       ],
       "skos:scopeNote": "The handbook's sentence (PDF 54), with 'A traceability model' put in front so it reads as a definition. Open: not adopted.",
@@ -461,11 +500,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Digital Implementation Investment Guide"
+          "@value": "Digital Implementation Investment Guide",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "DIIG"
+        {
+          "@value": "DIIG",
+          "@language": "en"
+        }
       ],
       "skos:notation": "DIIG",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -480,11 +523,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Electronic Regulatory Information System"
+          "@value": "Electronic Regulatory Information System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "eRIS"
+        {
+          "@value": "eRIS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "eRIS",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -499,11 +546,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Enterprise Resource Planning"
+          "@value": "Enterprise Resource Planning",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "ERP"
+        {
+          "@value": "ERP",
+          "@language": "en"
+        }
       ],
       "skos:notation": "ERP",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -518,11 +569,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Full-Time Equivalent"
+          "@value": "Full-Time Equivalent",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "FTE"
+        {
+          "@value": "FTE",
+          "@language": "en"
+        }
       ],
       "skos:notation": "FTE",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -537,11 +592,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Global Family Planning Visibility and Analytics Network"
+          "@value": "Global Family Planning Visibility and Analytics Network",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "GFPVAN"
+        {
+          "@value": "GFPVAN",
+          "@language": "en"
+        }
       ],
       "skos:notation": "GFPVAN",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -556,11 +615,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Information and Communications Technology"
+          "@value": "Information and Communications Technology",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "ICT"
+        {
+          "@value": "ICT",
+          "@language": "en"
+        }
       ],
       "skos:notation": "ICT",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -575,11 +638,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Information Technology"
+          "@value": "Information Technology",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "IT"
+        {
+          "@value": "IT",
+          "@language": "en"
+        }
       ],
       "skos:notation": "IT",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -594,11 +661,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Key Performance Indicator"
+          "@value": "Key Performance Indicator",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "KPI"
+        {
+          "@value": "KPI",
+          "@language": "en"
+        }
       ],
       "skos:notation": "KPI",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -613,12 +684,19 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Ministry of Health"
+          "@value": "Ministry of Health",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "MOH",
-        "MoH"
+        {
+          "@value": "MOH",
+          "@language": "en"
+        },
+        {
+          "@value": "MoH",
+          "@language": "en"
+        }
       ],
       "skos:notation": "MOH",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. A kind of organization (each country has one), so it has no focus.",
@@ -633,11 +711,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "National Product Catalog"
+          "@value": "National Product Catalog",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "NPC"
+        {
+          "@value": "NPC",
+          "@language": "en"
+        }
       ],
       "skos:notation": "NPC",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -652,11 +734,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "National Supply Chain Assessment"
+          "@value": "National Supply Chain Assessment",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "NSCA"
+        {
+          "@value": "NSCA",
+          "@language": "en"
+        }
       ],
       "skos:notation": "NSCA",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -671,11 +757,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Quality Assurance"
+          "@value": "Quality Assurance",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "QA"
+        {
+          "@value": "QA",
+          "@language": "en"
+        }
       ],
       "skos:notation": "QA",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -690,11 +780,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Request for Proposal"
+          "@value": "Request for Proposal",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "RFP"
+        {
+          "@value": "RFP",
+          "@language": "en"
+        }
       ],
       "skos:notation": "RFP",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -709,11 +803,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Request for Quotation"
+          "@value": "Request for Quotation",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "RFQ"
+        {
+          "@value": "RFQ",
+          "@language": "en"
+        }
       ],
       "skos:notation": "RFQ",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -728,11 +826,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Supply Chain Information System Maturity Model"
+          "@value": "Supply Chain Information System Maturity Model",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "SCISMM"
+        {
+          "@value": "SCISMM",
+          "@language": "en"
+        }
       ],
       "skos:notation": "SCISMM",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -747,11 +849,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Supply Chain Systems Architecture"
+          "@value": "Supply Chain Systems Architecture",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "SCSA"
+        {
+          "@value": "SCSA",
+          "@language": "en"
+        }
       ],
       "skos:notation": "SCSA",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written. Malawi's national health supply chain architecture (Chapter 5, page 60).",
@@ -766,11 +872,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Standards-based, Machine-readable, Adaptive, Requirements-based and Testable"
+          "@value": "Standards-based, Machine-readable, Adaptive, Requirements-based and Testable",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "SMART"
+        {
+          "@value": "SMART",
+          "@language": "en"
+        }
       ],
       "skos:notation": "SMART",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -790,11 +900,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "The Open Group Architecture Framework"
+          "@value": "The Open Group Architecture Framework",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "TOGAF"
+        {
+          "@value": "TOGAF",
+          "@language": "en"
+        }
       ],
       "skos:notation": "TOGAF",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -809,11 +923,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Target Software Standards"
+          "@value": "Target Software Standards",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "TSS"
+        {
+          "@value": "TSS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "TSS",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -828,11 +946,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Technical Working Group"
+          "@value": "Technical Working Group",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "TWG"
+        {
+          "@value": "TWG",
+          "@language": "en"
+        }
       ],
       "skos:notation": "TWG",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A candidate: no definition has been written.",
@@ -847,11 +969,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Declaration of Interests"
+          "@value": "Declaration of Interests",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "DOI"
+        {
+          "@value": "DOI",
+          "@language": "en"
+        }
       ],
       "skos:notation": "DOI",
       "skos:scopeNote": "Expanded in the acknowledgements ('WHO Declaration of Interests (DOI) form'). A candidate: no definition has been written.",
@@ -866,11 +992,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Monitoring and Evaluation"
+          "@value": "Monitoring and Evaluation",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "M&E"
+        {
+          "@value": "M&E",
+          "@language": "en"
+        }
       ],
       "skos:notation": "M&E",
       "skos:scopeNote": "Expanded in the Figure 5 legend. A candidate: no definition has been written.",
@@ -885,11 +1015,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Antenatal Care"
+          "@value": "Antenatal Care",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "ANC"
+        {
+          "@value": "ANC",
+          "@language": "en"
+        }
       ],
       "skos:notation": "ANC",
       "skos:scopeNote": "Expanded in Figure 6. A candidate: no definition has been written.",
@@ -904,11 +1038,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Rapid Assessment and Management"
+          "@value": "Rapid Assessment and Management",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "RAM"
+        {
+          "@value": "RAM",
+          "@language": "en"
+        }
       ],
       "skos:notation": "RAM",
       "skos:scopeNote": "Expanded in Figure 6 ('Rapid assessment and management (RAM)', in the ANC clinical workflow). Note: in dth-sc RAM expands to Rapid Assessment and Management, not Responsibility Assignment Matrix as in dth-pc. A candidate: no definition has been written.",
@@ -923,11 +1061,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Responsible, Accountable, Consulted, and Informed"
+          "@value": "Responsible, Accountable, Consulted, and Informed",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "RACI"
+        {
+          "@value": "RACI",
+          "@language": "en"
+        }
       ],
       "skos:notation": "RACI",
       "skos:scopeNote": "Expanded in the text ('a RACI matrix – responsible, accountable, consulted, informed'). A candidate: no definition has been written.",
@@ -942,11 +1084,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Request for Information"
+          "@value": "Request for Information",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "RFI"
+        {
+          "@value": "RFI",
+          "@language": "en"
+        }
       ],
       "skos:notation": "RFI",
       "skos:scopeNote": "Expanded in the Figure 23 legend. A candidate: no definition has been written.",
@@ -961,11 +1107,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "National Supply Chain Information Systems"
+          "@value": "National Supply Chain Information Systems",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "NSCIS"
+        {
+          "@value": "NSCIS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "NSCIS",
       "skos:scopeNote": "Expanded in Figure 30 (Malawi SCSA future-state architecture). A candidate: no definition has been written.",
@@ -985,11 +1135,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Facilities' Supply Chain Information Systems"
+          "@value": "Facilities' Supply Chain Information Systems",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "FSCIS"
+        {
+          "@value": "FSCIS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "FSCIS",
       "skos:scopeNote": "Expanded in Figure 30 (Malawi SCSA future-state architecture). A candidate: no definition has been written.",
@@ -1009,11 +1163,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Digital Supply Chain"
+          "@value": "Digital Supply Chain",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "DSC"
+        {
+          "@value": "DSC",
+          "@language": "en"
+        }
       ],
       "skos:notation": "DSC",
       "skos:scopeNote": "Expanded in the Rwanda country experience ('Rwanda's Digital Supply Chain (DSC) Strategy and Architecture'). A candidate: no definition has been written.",
@@ -1033,11 +1191,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "IHE Pharmacy"
+          "@value": "IHE Pharmacy",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "PHARM"
+        {
+          "@value": "PHARM",
+          "@language": "en"
+        }
       ],
       "skos:notation": "PHARM",
       "skos:scopeNote": "Expanded in Reference 23 ('IHE Pharmacy (PHARM) white paper: supply of products for healthcare'). A candidate: no definition has been written.",
@@ -1057,11 +1219,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Chief Technology Officer"
+          "@value": "Chief Technology Officer",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "CTO"
+        {
+          "@value": "CTO",
+          "@language": "en"
+        }
       ],
       "skos:notation": "CTO",
       "skos:scopeNote": "Written out in Annex 7 (page 72) and abbreviated CTO in the folio's persona blocks. A candidate: no definition has been written.",
@@ -1076,11 +1242,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Chief Information Officer"
+          "@value": "Chief Information Officer",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "CIO"
+        {
+          "@value": "CIO",
+          "@language": "en"
+        }
       ],
       "skos:notation": "CIO",
       "skos:scopeNote": "Written out in Annex 7 (page 72) and abbreviated CIO in the folio's persona blocks. A candidate: no definition has been written.",
@@ -1095,11 +1265,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Chief Digital Officer"
+          "@value": "Chief Digital Officer",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "CDO"
+        {
+          "@value": "CDO",
+          "@language": "en"
+        }
       ],
       "skos:notation": "CDO",
       "skos:scopeNote": "Written out in Annex 7 (page 72) and abbreviated CDO in the folio's persona blocks. A candidate: no definition has been written.",
@@ -1114,11 +1288,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "User Acceptance Testing"
+          "@value": "User Acceptance Testing",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "UAT"
+        {
+          "@value": "UAT",
+          "@language": "en"
+        }
       ],
       "skos:notation": "UAT",
       "skos:scopeNote": "Written out in Annex 7 (page 75) and abbreviated UAT in the folio's business process blocks. A candidate: no definition has been written.",
@@ -1133,11 +1311,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Total Cost of Ownership"
+          "@value": "Total Cost of Ownership",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "TCO"
+        {
+          "@value": "TCO",
+          "@language": "en"
+        }
       ],
       "skos:notation": "TCO",
       "skos:scopeNote": "Written out in Figure 5 (page 15) and Chapter 3 (page 50), and abbreviated TCO in the folio's persona blocks. A candidate: no definition has been written.",
@@ -1152,11 +1334,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Transportation Management System"
+          "@value": "Transportation Management System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "TMS"
+        {
+          "@value": "TMS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "TMS",
       "skos:scopeNote": "Named as a health supply chain information system category in Figure 14 (page 34) and abbreviated TMS in the folio's business process blocks. A candidate: no definition has been written.",
@@ -1176,11 +1362,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Community Health Worker"
+          "@value": "Community Health Worker",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "CHW"
+        {
+          "@value": "CHW",
+          "@language": "en"
+        }
       ],
       "skos:notation": "CHW",
       "skos:scopeNote": "Written out in the Introduction (page 11) and Annex 5 (page 70), and abbreviated CHW in the folio's business process blocks. A candidate: no definition has been written.",
@@ -1195,11 +1385,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Health Facility Logistics Management System"
+          "@value": "Health Facility Logistics Management System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "HFLMS"
+        {
+          "@value": "HFLMS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "HFLMS",
       "skos:scopeNote": "Written out in Figure 1 (page 11) and abbreviated HFLMS in the folio's business process blocks. A candidate: no definition has been written.",
@@ -1219,11 +1413,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Electronic Logistics Management Information System"
+          "@value": "Electronic Logistics Management Information System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "eLMIS"
+        {
+          "@value": "eLMIS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "eLMIS",
       "skos:scopeNote": "The handbook's glossary defines Health Supply Chain Information System as 'also commonly referred to as electronic logistics management information systems' (page 8), and Figures 9, 26, 27 and 31 use the acronym eLMIS without listing it in the abbreviations table. Linked as related to health-supply-chain-information-system. A candidate: no separate definition has been written.",
@@ -1243,11 +1441,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Open Logistics Management Information System"
+          "@value": "Open Logistics Management Information System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "OpenLMIS"
+        {
+          "@value": "OpenLMIS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "OpenLMIS",
       "skos:scopeNote": "The handbook uses the acronym without expanding it (Figures 28–30 and Annex 5). The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1267,11 +1469,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "District Health Information Software 2"
+          "@value": "District Health Information Software 2",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "DHIS2"
+        {
+          "@value": "DHIS2",
+          "@language": "en"
+        }
       ],
       "skos:notation": "DHIS2",
       "skos:scopeNote": "The handbook uses the acronym without expanding it (Figures 26–32). The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1286,11 +1492,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Electronic Medical Record"
+          "@value": "Electronic Medical Record",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "EMR"
+        {
+          "@value": "EMR",
+          "@language": "en"
+        }
       ],
       "skos:notation": "EMR",
       "skos:scopeNote": "The handbook uses the acronym without expanding it (Figures 26–29, 31–32). The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1305,11 +1515,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Open Health Information Mediator"
+          "@value": "Open Health Information Mediator",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "OpenHIM"
+        {
+          "@value": "OpenHIM",
+          "@language": "en"
+        }
       ],
       "skos:notation": "OpenHIM",
       "skos:scopeNote": "The handbook uses the acronym without expanding it (page 34 and Figures 26–32). The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1324,11 +1538,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Quantification Analytics Tool"
+          "@value": "Quantification Analytics Tool",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "QAT"
+        {
+          "@value": "QAT",
+          "@language": "en"
+        }
       ],
       "skos:notation": "QAT",
       "skos:scopeNote": "The handbook uses the acronym without expanding it (Figures 28–32). The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1343,11 +1561,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Dagu"
+          "@value": "Dagu",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "DAGU"
+        {
+          "@value": "DAGU",
+          "@language": "en"
+        }
       ],
       "skos:notation": "DAGU",
       "skos:scopeNote": "Named in Figures 26 and 27 (Ethiopia facility-level logistics management system) without expansion. A candidate: check in context before adopting.",
@@ -1367,12 +1589,19 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Electronic Government Procurement"
+          "@value": "Electronic Government Procurement",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "e-GP",
-        "E-GP"
+        {
+          "@value": "e-GP",
+          "@language": "en"
+        },
+        {
+          "@value": "E-GP",
+          "@language": "en"
+        }
       ],
       "skos:notation": "e-GP",
       "skos:scopeNote": "The handbook uses the acronym (written E-GP in Figure 29 and e-GP in Figure 30) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1387,11 +1616,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Electronic Health Information Network"
+          "@value": "Electronic Health Information Network",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "eHIN"
+        {
+          "@value": "eHIN",
+          "@language": "en"
+        }
       ],
       "skos:notation": "eHIN",
       "skos:scopeNote": "The handbook uses the acronym in Figures 28–30 (Malawi dispensing system) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1406,11 +1639,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Health Information System"
+          "@value": "Health Information System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "HIS"
+        {
+          "@value": "HIS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "HIS",
       "skos:scopeNote": "The handbook uses the acronym without expanding it (Figure 5 and page 31). The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1425,7 +1662,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "QuanTB"
+          "@value": "QuanTB",
+          "@language": "en"
         }
       ],
       "skos:notation": "QuanTB",
@@ -1441,7 +1679,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "VITAS"
+          "@value": "VITAS",
+          "@language": "en"
         }
       ],
       "skos:notation": "VITAS",
@@ -1462,11 +1701,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Electronic Auditable Pharmaceutical Transactions and Services"
+          "@value": "Electronic Auditable Pharmaceutical Transactions and Services",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "eAPTs"
+        {
+          "@value": "eAPTs",
+          "@language": "en"
+        }
       ],
       "skos:notation": "eAPTs",
       "skos:scopeNote": "The handbook uses the acronym in Figures 26 and 27 (Ethiopia dispensing system) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1486,7 +1729,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "FANOS"
+          "@value": "FANOS",
+          "@language": "en"
         }
       ],
       "skos:notation": "FANOS",
@@ -1507,7 +1751,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "RapidSMS"
+          "@value": "RapidSMS",
+          "@language": "en"
         }
       ],
       "skos:notation": "RapidSMS",
@@ -1523,11 +1768,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Sage"
+          "@value": "Sage",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "SAGE"
+        {
+          "@value": "SAGE",
+          "@language": "en"
+        }
       ],
       "skos:notation": "SAGE",
       "skos:scopeNote": "Named in Figure 31 (Rwanda current-state supply chain systems) without expansion. A candidate: no definition has been written.",
@@ -1542,11 +1791,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Geographic Information System"
+          "@value": "Geographic Information System",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "GIS"
+        {
+          "@value": "GIS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "GIS",
       "skos:scopeNote": "The handbook uses the acronym in Figure 13 (page 33) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1561,11 +1814,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Sustainable Development Goal"
+          "@value": "Sustainable Development Goal",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "SDG"
+        {
+          "@value": "SDG",
+          "@language": "en"
+        }
       ],
       "skos:notation": "SDG",
       "skos:scopeNote": "The handbook uses the acronym in Figure 5 (page 15) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1580,11 +1837,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Global Trade Item Number"
+          "@value": "Global Trade Item Number",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "GTIN"
+        {
+          "@value": "GTIN",
+          "@language": "en"
+        }
       ],
       "skos:notation": "GTIN",
       "skos:scopeNote": "Used in the folio's traceability hub persona without expansion in the handbook. The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1604,11 +1865,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Global Location Number"
+          "@value": "Global Location Number",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "GLN"
+        {
+          "@value": "GLN",
+          "@language": "en"
+        }
       ],
       "skos:notation": "GLN",
       "skos:scopeNote": "Used in the folio's traceability hub persona without expansion in the handbook. The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1628,12 +1893,19 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Digital Health and Interoperability Working Group"
+          "@value": "Digital Health and Interoperability Working Group",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "DH&I WG",
-        "DH&I"
+        {
+          "@value": "DH&I WG",
+          "@language": "en"
+        },
+        {
+          "@value": "DH&I",
+          "@language": "en"
+        }
       ],
       "skos:notation": "DH&I WG",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel, and cited in Reference 2. A candidate: no definition has been written.",
@@ -1648,7 +1920,8 @@
       "@type": "org:OrganizationalCollaboration",
       "rdfs:label": [
         {
-          "@value": "Digital Health and Interoperability Working Group"
+          "@value": "Digital Health and Interoperability Working Group",
+          "@language": "en"
         }
       ],
       "foaf:homepage": {
@@ -1663,12 +1936,19 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Department of Digital Health and Innovations"
+          "@value": "Department of Digital Health and Innovations",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "DHI",
-        "WHO Department of Digital Health and Innovations"
+        {
+          "@value": "DHI",
+          "@language": "en"
+        },
+        {
+          "@value": "WHO Department of Digital Health and Innovations",
+          "@language": "en"
+        }
       ],
       "skos:notation": "DHI",
       "skos:scopeNote": "Expanded in the acknowledgements ('WHO Department of Digital Health and Innovations (DHI)'). A candidate: no definition has been written.",
@@ -1683,7 +1963,8 @@
       "@type": "org:OrganizationalUnit",
       "rdfs:label": [
         {
-          "@value": "Department of Digital Health and Innovations"
+          "@value": "Department of Digital Health and Innovations",
+          "@language": "en"
         }
       ],
       "org:subOrganizationOf": [
@@ -1700,13 +1981,23 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "USAID Global Health Supply Chain Program–Procurement and Supply Management"
+          "@value": "USAID Global Health Supply Chain Program–Procurement and Supply Management",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "GHSC-PSM",
-        "USAID GHSC-PSM",
-        "Global Health Supply Chain Program–Procurement and Supply Management"
+        {
+          "@value": "GHSC-PSM",
+          "@language": "en"
+        },
+        {
+          "@value": "USAID GHSC-PSM",
+          "@language": "en"
+        },
+        {
+          "@value": "Global Health Supply Chain Program–Procurement and Supply Management",
+          "@language": "en"
+        }
       ],
       "skos:notation": "GHSC-PSM",
       "skos:scopeNote": "Named in the handbook's acknowledgements (page 6) and abbreviations table (page 7). A candidate: no definition has been written. A USAID programme.",
@@ -1721,7 +2012,8 @@
       "@type": "org:OrganizationalUnit",
       "rdfs:label": [
         {
-          "@value": "USAID Global Health Supply Chain Program–Procurement and Supply Management"
+          "@value": "USAID Global Health Supply Chain Program–Procurement and Supply Management",
+          "@language": "en"
         }
       ],
       "org:subOrganizationOf": [
@@ -1738,11 +2030,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Health Technical Support Services"
+          "@value": "Health Technical Support Services",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "HTSS"
+        {
+          "@value": "HTSS",
+          "@language": "en"
+        }
       ],
       "skos:notation": "HTSS",
       "skos:scopeNote": "Named in the handbook's abbreviations table, which gives the expansion used as prefLabel. A division of the Ministry of Health of Malawi (page 60). A candidate: no definition has been written.",
@@ -1757,7 +2053,8 @@
       "@type": "org:OrganizationalUnit",
       "rdfs:label": [
         {
-          "@value": "Health Technical Support Services"
+          "@value": "Health Technical Support Services",
+          "@language": "en"
         }
       ]
     },
@@ -1769,12 +2066,19 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Integrating the Healthcare Enterprise"
+          "@value": "Integrating the Healthcare Enterprise",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "IHE",
-        "IHE International"
+        {
+          "@value": "IHE",
+          "@language": "en"
+        },
+        {
+          "@value": "IHE International",
+          "@language": "en"
+        }
       ],
       "skos:notation": "IHE",
       "skos:scopeNote": "Named on page 35 and expanded in Reference 23 (page 65). A candidate: no definition has been written.",
@@ -1789,7 +2093,8 @@
       "@type": "org:FormalOrganization",
       "rdfs:label": [
         {
-          "@value": "Integrating the Healthcare Enterprise"
+          "@value": "Integrating the Healthcare Enterprise",
+          "@language": "en"
         }
       ],
       "foaf:homepage": {
@@ -1804,11 +2109,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "International Coalition of Medicines Regulatory Authorities"
+          "@value": "International Coalition of Medicines Regulatory Authorities",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "ICMRA"
+        {
+          "@value": "ICMRA",
+          "@language": "en"
+        }
       ],
       "skos:notation": "ICMRA",
       "skos:scopeNote": "Expanded in Chapter 4 (page 54) and Reference 26 (page 65). A candidate: no definition has been written.",
@@ -1823,7 +2132,8 @@
       "@type": "org:OrganizationalCollaboration",
       "rdfs:label": [
         {
-          "@value": "International Coalition of Medicines Regulatory Authorities"
+          "@value": "International Coalition of Medicines Regulatory Authorities",
+          "@language": "en"
         }
       ],
       "foaf:homepage": {
@@ -1838,11 +2148,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "People that Deliver"
+          "@value": "People that Deliver",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "PtD"
+        {
+          "@value": "PtD",
+          "@language": "en"
+        }
       ],
       "skos:notation": "PtD",
       "skos:scopeNote": "Expanded in Annex 7 (page 72). A candidate: no definition has been written.",
@@ -1857,7 +2171,8 @@
       "@type": "org:OrganizationalCollaboration",
       "rdfs:label": [
         {
-          "@value": "People that Deliver"
+          "@value": "People that Deliver",
+          "@language": "en"
         }
       ],
       "foaf:homepage": {
@@ -1872,11 +2187,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Association for Supply Chain Management"
+          "@value": "Association for Supply Chain Management",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "ASCM"
+        {
+          "@value": "ASCM",
+          "@language": "en"
+        }
       ],
       "skos:notation": "ASCM",
       "skos:scopeNote": "Expanded in Reference 11 (page 65). A candidate: no definition has been written.",
@@ -1891,7 +2210,8 @@
       "@type": "org:FormalOrganization",
       "rdfs:label": [
         {
-          "@value": "Association for Supply Chain Management"
+          "@value": "Association for Supply Chain Management",
+          "@language": "en"
         }
       ],
       "foaf:homepage": {
@@ -1906,11 +2226,15 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Bureau des Formations Médicales Agréées du Rwanda"
+          "@value": "Bureau des Formations Médicales Agréées du Rwanda",
+          "@language": "en"
         }
       ],
       "skos:altLabel": [
-        "BUFMAR"
+        {
+          "@value": "BUFMAR",
+          "@language": "en"
+        }
       ],
       "skos:notation": "BUFMAR",
       "skos:scopeNote": "The handbook uses the acronym in Figure 31 (page 64, Rwanda current-state supply chain systems) without expanding it. The expansion is supplied, not quoted: check it in context before adopting.",
@@ -1925,7 +2249,8 @@
       "@type": "org:FormalOrganization",
       "rdfs:label": [
         {
-          "@value": "Bureau des Formations Médicales Agréées du Rwanda"
+          "@value": "Bureau des Formations Médicales Agréées du Rwanda",
+          "@language": "en"
         }
       ]
     },
@@ -1937,7 +2262,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "DAI"
+          "@value": "DAI",
+          "@language": "en"
         }
       ],
       "skos:notation": "DAI",
@@ -1953,7 +2279,8 @@
       "@type": "org:FormalOrganization",
       "rdfs:label": [
         {
-          "@value": "DAI"
+          "@value": "DAI",
+          "@language": "en"
         }
       ]
     },
