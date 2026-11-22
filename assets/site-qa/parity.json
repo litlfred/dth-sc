@@ -4,12 +4,12 @@
  "shortfall": [],
  "droppedByRuling": [],
  "current": {
-  "pages": 1375,
+  "pages": 1589,
   "counts": {
    "siteNav": 0,
-   "search": 208,
-   "navbarRow": 208,
-   "rail": 1139,
+   "search": 417,
+   "navbarRow": 417,
+   "rail": 1353,
    "translationMeta": 143
   },
   "dirs": [
@@ -23,8 +23,11 @@
    "folio-assistant-core",
    "fr",
    "id-lookup",
+   "payload",
    "ru",
+   "slices",
    "smart-base",
+   "v0",
    "zh"
   ],
   "index": [
@@ -103,6 +106,6 @@
     "translationMeta"
    ]
   },
-  "from": "c6b8fc5c983a"
+  "from": "bf86518e088f"
  }
 }
