@@ -2,7 +2,7 @@
   "$schema": "folio-search-manifest/v1",
   "source": {
     "path": "assets/js/search-data.json",
-    "sha256": "dce7fd6ae07b449abd8f9e06ede663290447c5d10778256c592663938ad13b39",
+    "sha256": "2725581e50ccdd3b7bd35ec8df0581e69f0a0bd519985ebbb51ab9c74245143d",
     "entries": 583,
     "bytes": 434214
   },
